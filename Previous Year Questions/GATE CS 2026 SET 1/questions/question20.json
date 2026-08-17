@@ -1,0 +1,21 @@
+{
+  "id": 20,
+  "year": 2026,
+  "set": 1,
+  "topics": ["Engineering Mathematics", "Linear Algebra"],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Let $n > 1$. Consider an $n \\times n$ matrix $M$ with its elements from $\\mathbb{R}$. Let the vector $(0, 1, 0, 0, \\dots, 0) \\in \\mathbb{R}^n$ be in the null space of $M$.<br><br>Which of the following options is/are always correct?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Determinant of $M$ is 1",
+    "Determinant of $M$ is 0",
+    "Rank of $M$ is 1",
+    "There are at least two non-zero vectors in the null space of $M$"
+  ],
+  "answer": ["B", "D"],
+  "explanation": "<strong>Step 1: Analyze non-zero vector in null space</strong><br>Given that $v = (0, 1, 0, 0, \\dots, 0)^T \\in \\mathbb{R}^n$ is in the null space of $M$, we have $M v = \\mathbf{0}$. Since $v \\neq \\mathbf{0}$, $\\lambda = 0$ is an eigenvalue of $M$.<br><br><strong>Step 2: Evaluate Determinant (Option B)</strong><br>The determinant of a matrix is equal to the product of its eigenvalues. Since at least one eigenvalue is $0$, $\\det(M) = 0$. Thus, <strong>Option B</strong> is correct and <strong>Option A</strong> is incorrect.<br><br><strong>Step 3: Evaluate Rank (Option C)</strong><br>Since the null space has dimension at least $1$ (nullity $\\ge 1$), by the Rank-Nullity Theorem, $\\text{Rank}(M) = n - \\text{Nullity} \\le n - 1$. For $n > 1$, the rank can be any value between $0$ and $n - 1$, so it is not necessarily $1$. Thus, <strong>Option C</strong> is incorrect.<br><br><strong>Step 4: Evaluate vectors in null space (Option D)</strong><br>If a non-zero vector $v$ is in the null space, then any scalar multiple $c v$ (for $c \\in \\mathbb{R}, c \\neq 0$) is also in the null space. For example, both $v$ and $2v$ are distinct non-zero vectors in the null space. Hence, there are infinitely many (and thus at least two) non-zero vectors in the null space of $M$. Thus, <strong>Option D</strong> is correct.<br><br>Therefore, the correct options are <strong>B and D</strong>.",
+  "videoUrl": null
+}

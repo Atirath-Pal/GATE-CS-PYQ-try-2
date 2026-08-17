@@ -1,0 +1,22 @@
+{
+  "id": 57,
+  "year": 2026,
+  "set": 1,
+  "topics": [
+    "Discrete Mathematics",
+    "Graph Theory"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Let $G$ be an undirected graph, which is a path on 8 vertices. The number of matchings in $G$ is ________. <i>(answer in integer)</i>",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 34,
+    "max": 34
+  },
+  "explanation": "<strong>Step 1: Understand matching in a path graph.</strong><br>A matching in a graph is a set of edges without common vertices. Let $M(n)$ denote the number of matchings in a path graph $P_n$ with $n$ vertices.<br><br><strong>Step 2: Derive the recurrence relation.</strong><br>For a path $P_n$ with vertices $v_1, v_2, \\dots, v_n$:<br>- If the edge $(v_{n-1}, v_n)$ is <strong>not</strong> included in the matching, the number of matchings is $M(n-1)$.<br>- If the edge $(v_{n-1}, v_n)$ is <strong>included</strong> in the matching, then no other edge incident to $v_{n-1}$ or $v_n$ can be included. This leaves a path $P_{n-2}$, giving $M(n-2)$ matchings.<br><br>Thus, $M(n) = M(n-1) + M(n-2)$, which follows the Fibonacci sequence recurrence.<br><br><strong>Step 3: Calculate values for $n = 0$ to $8$.</strong><br>- $M(0) = 1$ (empty matching)<br>- $M(1) = 1$<br>- $M(2) = 2$<br>- $M(3) = 3$<br>- $M(4) = 5$<br>- $M(5) = 8$<br>- $M(6) = 13$<br>- $M(7) = 21$<br>- $M(8) = 34$<br><br>Therefore, the total number of matchings in $G$ is <strong>34</strong>.",
+  "videoUrl": null
+}

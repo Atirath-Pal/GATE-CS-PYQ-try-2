@@ -1,0 +1,26 @@
+{
+  "id": 38,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Algorithms",
+    "Asymptotic Analysis"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider an array $A$ of integers of size $n$. The indices of $A$ run from $1$ to $n$. An algorithm is to be designed to check whether $A$ satisfies the condition given below.<br><br>$$\\forall i, j \\in \\{1, \\dots, n - 1\\} \\text{ such that } i > j, (A[i + 1] - A[i]) > (A[j + 1] - A[j])$$<br><br>Which one of the following gives the worst case time complexity of the fastest algorithm that can be designed for the problem?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\Theta(n)$",
+    "$\\Theta(\\log(n))$",
+    "$\\Theta(n \\log(n))$",
+    "$\\Theta(n^2)$"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. <strong>Understand the Condition:</strong><br>Let $D[k] = A[k + 1] - A[k]$ represent the difference between adjacent elements for $k \\in \\{1, 2, \\dots, n - 1\\}$.<br>The condition states that for all $i > j$, $D[i] > D[j]$. This means the sequence of differences $D[1], D[2], \\dots, D[n - 1]$ must be strictly increasing.<br><br>2. <strong>Checking Increasing Order:</strong><br>To check if a sequence of length $n - 1$ is strictly increasing, we only need to verify if $D[k] > D[k - 1]$ for all $k$ from $2$ to $n - 1$.<br>This requires comparing adjacent differences, which can be done in a single linear pass of time $O(n)$.<br><br>3. <strong>Lower Bound:</strong><br>Since any deterministic algorithm must read the elements of array $A$ of size $n$ to verify the condition in the worst case, the time lower bound is $\\Omega(n)$.<br><br>Combining the upper and lower bounds, the worst-case time complexity of the fastest algorithm is <strong>$\\Theta(n)$</strong>.",
+  "videoUrl": null
+}

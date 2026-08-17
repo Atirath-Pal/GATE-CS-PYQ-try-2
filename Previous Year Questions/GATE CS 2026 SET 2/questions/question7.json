@@ -1,0 +1,26 @@
+{
+  "id": 7,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "General Aptitude",
+    "Spatial Aptitude"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Two tiles are missing in Panel I. Which one of the options in Panel II is the appropriate choice for the missing tiles?",
+  "assetImage": "question7.png",
+  "codeBlock": null,
+  "options": [
+    "(i)",
+    "(ii)",
+    "(iii)",
+    "(iv)"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step 1: Analyze the grid arrangement.</strong><br>Panel I represents a $3 \\times 3$ grid layout of tiles, where each tile contains $9$ dots (a $3 \\times 3$ pattern of open/white dots and solid/black dots).<br><br><strong>Step 2: Identify row and column patterns.</strong><br>By examining the arrangement of white and black dots across each row and column, we observe systematic spatial transformations (e.g., changes in the counts and positions of solid dots).<br><br><strong>Step 3: Select the correct missing pair.</strong><br>The missing two vertical tiles at the right column correspond precisely to option <strong>(i)</strong> in Panel II.<br><br>Hence, the correct option is <strong>(A)</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,21 @@
+{
+  "id": 2,
+  "year": 2026,
+  "set": 1,
+  "topics": ["General Aptitude", "Spatial Aptitude"],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "The figure shows two 4-tile patterns.<br><br>Either one or both of the patterns can be used any number of times and in any orientation to construct a new pattern. Which one of the options below <b>cannot</b> be constructed by using only these two 4-tile patterns assuming there are no overlaps among them?",
+  "assetImage": "question2.png",
+  "codeBlock": null,
+  "options": [
+    "[IMG: question2-optionA.png]",
+    "[IMG: question2-optionB.png]",
+    "[IMG: question2-optionC.png]",
+    "[IMG: question2-optionD.png]"
+  ],
+  "answer": ["C"],
+  "explanation": "<strong>Step 1: Analyze tile divisibility</strong><br>Both given base patterns consist of exactly $4$ tiles each (a $2 \\times 2$ block and a $1 \\times 4$ strip). Therefore, any composite structure created without overlaps must have a total number of tiles that is a multiple of $4$.<br><br><strong>Step 2: Evaluate each option</strong><br>• <strong>Option (A):</strong> Contains a $2 \\times 4$ grid = $8$ tiles ($8 = 2 \\times 4$, divisible by $4$).<br>• <strong>Option (B):</strong> Contains a $3 \\times 4$ grid = $12$ tiles ($12 = 3 \\times 4$, divisible by $4$).<br>• <strong>Option (C):</strong> Contains a $3 \\times 5$ grid = $15$ tiles ($15$ is <strong>not</strong> divisible by $4$).<br>• <strong>Option (D):</strong> Contains a $4 \\times 4$ grid = $16$ tiles ($16 = 4 \\times 4$, divisible by $4$).<br><br>Since $15$ tiles cannot be divided into $4$-tile pieces without remainder or overlap, Option (C) <strong>cannot</strong> be constructed.",
+  "videoUrl": null
+}

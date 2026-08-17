@@ -1,0 +1,21 @@
+{
+  "id": 39,
+  "year": 2026,
+  "set": 1,
+  "topics": ["Programming", "Data Structures"],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the following code snippet in C language that computes the number of nodes in a non-empty singly linked list pointed to by the pointer variable <code>head</code>.<br><br>Which one of the following options gives the correct replacements for the expressions <b>E1</b> and <b>E2</b>?",
+  "assetImage": null,
+  "codeBlock": "struct node{\n    int elt;\n    struct node *next;\n};\n\nint getListSize (struct node *head)\n{\n    if( E1 ) return 1;\n    return E2;\n}",
+  "options": [
+    "<b>E1</b>: head == NULL<br><b>E2</b>: 1 + getListSize(head)",
+    "<b>E1</b>: head->next == NULL<br><b>E2</b>: 1 + getListSize(head->next)",
+    "<b>E1</b>: head == NULL<br><b>E2</b>: 1 + getListSize(head->next)",
+    "<b>E1</b>: head->next == NULL<br><b>E2</b>: 1 + getListSize(head)"
+  ],
+  "answer": ["B"],
+  "explanation": "<strong>Step 1: Analyze the Base Case</strong><br>The question states that the singly linked list is non-empty. When the list has exactly one node, <code>head->next == NULL</code>. In this base case, the function should return $1$. Therefore, expression <b>E1</b> is <code>head->next == NULL</code>.<br><br><strong>Step 2: Analyze the Recursive Step</strong><br>To recursively count the nodes, the function adds $1$ for the current node and recursively calls <code>getListSize</code> on the remaining sublist pointed to by <code>head->next</code>. Thus, expression <b>E2</b> is <code>1 + getListSize(head->next)</code>.<br><br>Therefore, the correct option is <strong>B</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 41,
+  "year": 2026,
+  "set": 1,
+  "topics": [
+    "Algorithms",
+    "Graph Theory"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Let $G(V, E)$ be an undirected, edge-weighted graph with integer weights. The weight of a path is the sum of the weights of the edges in that path. The length of a path is the number of edges in that path.<br><br>Let $s \\in V$ be a vertex in $G$. For every $u \\in V$ and for every $k \\ge 0$, let $d_k(u)$ denote the weight of a shortest path (in terms of weight) from $s$ to $u$ of length at most $k$. If there is no path from $s$ to $u$ of length at most $k$, then $d_k(u) = \\infty$.<br><br>Consider the statements:<br><br>S1: For every $k \\ge 0$ and $u \\in V$, $d_{k+1}(u) \\le d_k(u)$.<br><br>S2: For every $(u, v) \\in E$, if $(u, v)$ is part of a shortest path (in terms of weight) from $s$ to $v$, then for every $k \\ge 0, d_k(u) \\le d_k(v)$.<br><br>Which one of the following options is correct?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Only S1 is true",
+    "Only S2 is true",
+    "Both S1 and S2 are true",
+    "Neither S1 nor S2 is true"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Analysis of Statement S1:</strong><br>By definition, $d_k(u)$ represents the weight of a shortest path from $s$ to $u$ of length at most $k$. Any path using at most $k$ edges is also a valid path using at most $k+1$ edges. Since $d_{k+1}(u)$ minimizes path weight over a superset of candidate paths, its minimum value cannot be strictly greater than $d_k(u)$. Therefore, $d_{k+1}(u) \\le d_k(u)$ holds for all $k \\ge 0$ and $u \\in V$. Thus, <strong>S1 is true</strong>.<br><br><strong>Analysis of Statement S2:</strong><br>Consider a graph where a direct edge $(s, v)$ exists with a large weight of $100$ (path length 1). Suppose the overall shortest path to $v$ goes through $u$ via a path of length 3 (e.g., $s \\rightarrow w \\rightarrow u \\rightarrow v$). For $k = 1$, $d_1(v) = 100$ via the direct edge $(s, v)$, whereas $d_1(u) = \\infty$ because $u$ cannot be reached from $s$ in $\\le 1$ edge. Here, $d_1(u) > d_1(v)$, which violates $d_k(u) \\le d_k(v)$. Thus, <strong>S2 is false</strong>.<br><br>Hence, option <strong>A</strong> (Only S1 is true) is the correct answer.",
+  "videoUrl": null
+}

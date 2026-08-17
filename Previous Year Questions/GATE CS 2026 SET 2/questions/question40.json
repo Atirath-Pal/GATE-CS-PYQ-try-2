@@ -1,0 +1,26 @@
+{
+  "id": 40,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Digital Logic",
+    "Boolean Algebra"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the following 4-variable Boolean function<br><br>$$F(A, B, C, D) = \\Sigma m(0, 1, 2, 3, 8, 9, 10, 11)$$<br><br>Consider $A$ as MSB, $D$ as LSB. Which one of the following options represents the minimal sum of products form for the above function?<br><br><i>Note:</i> $+$ is OR operation, $.$ is AND operation, $'$ is NOT operation",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$A' + B' + C' + D'$",
+    "$B'$",
+    "$A'.B' + A.B$",
+    "$A'$"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. <strong>Binary Representation of Minterms:</strong><br>Representing minterms in binary form $(A, B, C, D)$:<br>- $m_0 = 0000$<br>- $m_1 = 0001$<br>- $m_2 = 0010$<br>- $m_3 = 0011$<br>- $m_8 = 1000$<br>- $m_9 = 1001$<br>- $m_{10} = 1010$<br>- $m_{11} = 1011$<br><br>2. <strong>Grouping Minterms:</strong><br>- Minterms $m_0, m_1, m_2, m_3$ combine to give $A'B'$.<br>- Minterms $m_8, m_9, m_{10}, m_{11}$ combine to give $AB'$.<br><br>3. <strong>Boolean Simplification:</strong><br>$$F(A, B, C, D) = A'B' + AB' = (A' + A)B' = 1 \\cdot B' = B'$$<br><br>Therefore, the minimal sum of products form is <strong>$B'$</strong>.",
+  "videoUrl": null
+}

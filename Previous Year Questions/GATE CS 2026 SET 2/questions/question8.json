@@ -1,0 +1,26 @@
+{
+  "id": 8,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "General Aptitude",
+    "Analytical Aptitude"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Figures (i) and (ii) represent intercity highway systems. The black dots represent cities and the line segments between them represent intercity highways.<br><br>A salesperson needs to make a trip. She needs to start from a city, visit each of the remaining cities exactly once, and finally return to the same city from which she started.<br><br>Which one of the following options is then true?",
+  "assetImage": "question8.png",
+  "codeBlock": null,
+  "options": [
+    "Such a trip is possible for (i), but not for (ii).",
+    "Such a trip is possible for (ii), but not for (i).",
+    "Such a trip is possible for both (i) and (ii).",
+    "Such a trip is possible neither for (i) nor for (ii)."
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step 1: Understand the problem requirement.</strong><br>The salesperson needs a closed tour that starts at a vertex, visits every other vertex in the graph exactly once, and returns to the start. In graph theory, this is defined as a <strong>Hamiltonian Cycle</strong>.<br><br><strong>Step 2: Analyze Figure (i).</strong><br>Figure (i) is a $4 \\times 4$ grid graph containing $16$ vertices. Since a grid graph with an even number of rows and columns always contains a Hamiltonian cycle (e.g., following a serpentine path across the grid and returning along the border), such a trip is <strong>possible for (i)</strong>.<br><br><strong>Step 3: Analyze Figure (ii).</strong><br>Figure (ii) contains $5$ vertices. Due to the vertex degree constraints and structural connectivity, no closed loop can be formed that visits all $5$ vertices without repeating a vertex. Thus, no Hamiltonian cycle exists, meaning such a trip is <strong>not possible for (ii)</strong>.<br><br>Hence, the correct option is <strong>(A)</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,22 @@
+{
+  "id": 62,
+  "year": 2026,
+  "set": 1,
+  "topics": [
+    "Data Structures",
+    "Trees"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "The following sequence corresponds to the preorder traversal of a binary search tree $T$:\n\n$$50, 25, 13, 40, 30, 47, 75, 60, 70, 80, 77$$\n\nThe position of the element 60 in the postorder traversal of $T$ is ________. <i>(answer in integer)</i><br><br><i>Note: The position begins with 1.</i>",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 7,
+    "max": 7
+  },
+  "explanation": "<strong>Step 1: Reconstruct the Binary Search Tree (BST) from the given preorder traversal.</strong><br>The preorder traversal is given as: $50, 25, 13, 40, 30, 47, 75, 60, 70, 80, 77$.<br><br>Since the inorder traversal of a BST is always sorted in ascending order:<br>$$\\text{Inorder traversal} = 13, 25, 30, 40, 47, 50, 60, 70, 75, 77, 80$$<br><br><strong>Step 2: Construct the tree hierarchy.</strong><br>- Root = 50<br>- Left subtree of 50 (values $< 50$): Preorder = $[25, 13, 40, 30, 47]$<br>  - Root = 25<br>  - Left child = 13<br>  - Right subtree of 25 = $[40, 30, 47]$ (Root = 40, Left child = 30, Right child = 47)<br>- Right subtree of 50 (values $> 50$): Preorder = $[75, 60, 70, 80, 77]$<br>  - Root = 75<br>  - Left subtree of 75 = $[60, 70]$ (Root = 60, Right child = 70)<br>  - Right subtree of 75 = $[80, 77]$ (Root = 80, Left child = 77)<br><br><strong>Step 3: Determine the postorder traversal (Left, Right, Root).</strong><br>- Left subtree of 50: $13, 30, 47, 40, 25$<br>- Right subtree of 50: $70, 60, 77, 80, 75$<br>- Root: $50$<br><br>Combining these gives the complete postorder traversal:<br>$$\\text{Postorder} = [13, 30, 47, 40, 25, 70, 60, 77, 80, 75, 50]$$<br><br><strong>Step 4: Find the position of element 60.</strong><br>- Position 1: 13<br>- Position 2: 30<br>- Position 3: 47<br>- Position 4: 40<br>- Position 5: 25<br>- Position 6: 70<br>- <strong>Position 7: 60</strong><br><br>Therefore, the position of element 60 in the postorder traversal is <strong>7</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,21 @@
+{
+  "id": 18,
+  "year": 2026,
+  "set": 1,
+  "topics": ["Computer Networks", "Transport Layer"],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "With respect to a TCP connection between a client and a server, which one of the following statements is true?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "The client and server use a two-way handshake mechanism before the start of data transmission",
+    "The server cannot initiate closing of the connection before the client initiates closing of the connection",
+    "The TCP connection is half-duplex",
+    "The client and server can initiate closing of the connection at the same time"
+  ],
+  "answer": ["D"],
+  "explanation": "<strong>Step 1: Evaluate Option (A)</strong><br>TCP connection establishment uses a 3-way handshake mechanism (SYN, SYN-ACK, ACK) before data transmission begins, not a two-way handshake. Thus, statement (A) is false.<br><br><strong>Step 2: Evaluate Option (B)</strong><br>Either host (client or server) can initiate connection closure by sending a FIN segment. Thus, statement (B) is false.<br><br><strong>Step 3: Evaluate Option (C)</strong><br>TCP is a full-duplex protocol, allowing simultaneous bidirectional data transmission. Thus, statement (C) is false.<br><br><strong>Step 4: Evaluate Option (D)</strong><br>TCP supports simultaneous close, where both the client and server can independently send FIN segments at the same time to initiate connection termination. Thus, statement (D) is true.<br><br>Therefore, the correct option is <strong>Option D</strong>.",
+  "videoUrl": null
+}

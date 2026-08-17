@@ -1,0 +1,74 @@
+You are an expert GATE Computer Science exam content digitizer.
+
+I am providing a screenshot of a GATE CS question. Extract the question details and output ONLY a single, strictly valid JSON object following this exact schema:
+
+```json
+{
+  "id": question number get from the screen shot,
+  "year": as the previous one,
+  "set": as the previous one,
+  "topics": ["Topic 1", "Topic 2"],
+  "type": "MCQ / MSQ / NAT understand by yourself", 
+  "correct marks": 1/2,
+  "negative marks": "0.33 / 0 / 0.66",
+  "questionText": "Transcribed text...",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Option A",
+    "Option B",
+    "Option C",
+    "Option D"
+  ],
+  "answer": ["A"],
+  "explanation": "Step-by-step explanation...",
+  "videoUrl": null
+}
+
+```
+
+### Detailed Extraction Rules:
+
+1. **Strict JSON Syntax & Double Escaping**:
+* Output raw, valid JSON inside a standard ```json code block. Do NOT include introductory setup, greetings, or conversational text.
+* All backslashes in LaTeX equations MUST be doubly escaped for JSON compatibility (e.g., write `\\Theta`, `\\frac`, `\\le`, `\\sum`, `\\text{...}`).
+
+
+2. **Question Text, Code & Formatting**:
+* Wrap inline LaTeX math in `$ ... $` and display/block math in `$$ ... $$`.
+* Use `<br><br>` for paragraph breaks and line formatting within `questionText`.
+* If the question contains code, set `codeBlock` to the exact code string and keep `questionText` for the main question instructions. If there is no code block, set `codeBlock`: `null`.
+
+
+3. **Image Handling**:
+* If the main question contains a graph, diagram, table image, or circuit, set `"assetImage": "question1.png"`. Otherwise, set `"assetImage": null`.
+* If individual options contain diagrams or images, use the syntax `"[IMG: option_a.png]"` for that specific option string.
+
+
+4. **Question Metadata**:
+* `type`: Must be `"MCQ"` (Single Select), `"MSQ"` (Multiple Select), or `"NAT"` (Numerical Answer Type).
+* `topics`: Provide an array of 1 to 2 precise GATE CS syllabus topics (e.g., `["Algorithms", "Graph Theory"]`, `["Operating Systems", "Process Sync"]`, `["Computer Networks", "IP Addressing"]`).
+* `correct marks`: Standard GATE weightage (`1` or `2`).
+* `negative marks`: `"0.33"` for 1-mark MCQ, `"0.66"` for 2-mark MCQ, and `"0"` for MSQ or NAT questions.
+
+
+5. **Options Setup**:
+* For MCQ/MSQ: Provide an array of 4 option strings.
+* For NAT: Set `"options": []`.
+
+
+6. **Answer Formats**:
+* **MCQ**: Array containing a single option key, e.g., `["B"]`.
+* **MSQ**: Array containing all correct option keys, e.g., `["A", "C"]`.
+* **NAT**: Object defining the acceptable numerical range, e.g., `{"min": 42.0, "max": 42.5}` or `{"min": 5, "max": 5}` for exact integers.
+
+
+7. **Explanation Format**:
+* Write a complete, clear step-by-step solution.
+* Format using explicit HTML `<br>` tags for newlines and `<strong>` tags for bolding. Wrap all math in single `$` LaTeX delimiters.
+
+
+
+Digitize the attached screenshot into the defined JSON structure.
+
+year 2026 , set 1 

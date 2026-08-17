@@ -1,0 +1,22 @@
+{
+  "id": 32,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Algorithms",
+    "Sorting"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider an array $A = [10, 7, 8, 19, 41, 35, 25, 31]$. Suppose the merge sort algorithm is executed on array $A$ to sort it in increasing order. The merge sort algorithm will carry out a total of 7 merge operations.<br><br>A merge operation on sorted left array $L$ and sorted right array $R$ is said to be void if the output of the merge operation is the elements of array $L$ followed by the elements of array $R$.<br><br>The number of void merge operations among these 7 merge operations is __________. (<em>answer in integer</em>)",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 3,
+    "max": 3
+  },
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. <strong>Definition of a Void Merge Operation:</strong><br>A merge operation combining sorted array $L$ and sorted array $R$ is void if the result is simply $L$ followed by $R$. This occurs if and only if $\\max(L) \\le \\min(R)$.<br><br>2. <strong>Trace the 7 Merge Operations:</strong><br>- <strong>Merge 1 ($[10]$ and $[7]$):</strong> $\\max(L) = 10 > \\min(R) = 7$. Output: $[7, 10] \\neq L + R$. (Not void)<br>- <strong>Merge 2 ($[8]$ and $[19]$):</strong> $\\max(L) = 8 \\le \\min(R) = 19$. Output: $[8, 19] = L + R$. (<strong>Void 1</strong>)<br>- <strong>Merge 3 ($[7, 10]$ and $[8, 19]$):</strong> $\\max(L) = 10 > \\min(R) = 8$. Output: $[7, 8, 10, 19] \\neq L + R$. (Not void)<br>- <strong>Merge 4 ($[41]$ and $[35]$):</strong> $\\max(L) = 41 > \\min(R) = 35$. Output: $[35, 41] \\neq L + R$. (Not void)<br>- <strong>Merge 5 ($[25]$ and $[31]$):</strong> $\\max(L) = 25 \\le \\min(R) = 31$. Output: $[25, 31] = L + R$. (<strong>Void 2</strong>)<br>- <strong>Merge 6 ($[35, 41]$ and $[25, 31]$):</strong> $\\max(L) = 41 > \\min(R) = 25$. Output: $[25, 31, 35, 41] \\neq L + R$. (Not void)<br>- <strong>Merge 7 ($[7, 8, 10, 19]$ and $[25, 31, 35, 41]$):</strong> $\\max(L) = 19 \\le \\min(R) = 25$. Output: $[7, 8, 10, 19, 25, 31, 35, 41] = L + R$. (<strong>Void 3</strong>)<br><br>3. <strong>Conclusion:</strong><br>The total number of void merge operations is <strong>3</strong>.",
+  "videoUrl": null
+}

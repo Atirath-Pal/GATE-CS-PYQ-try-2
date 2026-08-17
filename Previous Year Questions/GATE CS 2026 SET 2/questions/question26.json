@@ -1,0 +1,28 @@
+{
+  "id": 26,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Discrete Mathematics",
+    "Relations"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Let $R$ be a binary relation on the set $\\{1, 2, \\dots, 10\\}$, where $(x, y) \\in R$ if the product of $x$ and $y$ is square of an integer. Which of the following properties is/are satisfied by $R$?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Reflexive",
+    "Symmetric",
+    "Transitive",
+    "Antisymmetric"
+  ],
+  "answer": [
+    "A",
+    "B",
+    "C"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. <strong>Reflexive:</strong> For any $x \\in \\{1, 2, \\dots, 10\\}$, $x \\cdot x = x^2$, which is the square of an integer. Thus, $(x, x) \\in R$ for all $x$, so $R$ is <strong>reflexive</strong>.<br><br>2. <strong>Symmetric:</strong> If $(x, y) \\in R$, then $x \\cdot y = k^2$ for some integer $k$. Since $y \\cdot x = x \\cdot y = k^2$, $(y, x) \\in R$. Thus, $R$ is <strong>symmetric</strong>.<br><br>3. <strong>Transitive:</strong> If $(x, y) \\in R$ and $(y, z) \\in R$, then for each prime factor $p_i$, the sum of exponent powers in $x \\cdot y$ (i.e., $e_i + f_i$) is even, and in $y \\cdot z$ (i.e., $f_i + g_i$) is even. The sum $(e_i + f_i) + (f_i + g_i) = e_i + 2f_i + g_i$ is even, which implies $e_i + g_i$ must be even. Thus, $x \\cdot z$ is a square of an integer, so $(x, z) \\in R$. Hence, $R$ is <strong>transitive</strong>.<br><br>4. <strong>Antisymmetric:</strong> Consider $x = 1$ and $y = 4$. Here $1 \\cdot 4 = 4 = 2^2$, so $(1, 4) \\in R$ and $(4, 1) \\in R$, but $1 \\neq 4$. Thus, $R$ is <strong>not antisymmetric</strong>.<br><br>Therefore, the properties satisfied by $R$ are <strong>(A), (B), and (C)</strong>.",
+  "videoUrl": null
+}

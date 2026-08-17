@@ -1,0 +1,21 @@
+{
+  "id": 9,
+  "year": 2026,
+  "set": 1,
+  "topics": ["General Aptitude", "Analytical Reasoning"],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "In the 2020 summer Olympics’ Javelin throw finals, Neeraj Chopra exhibited a spectacular performance to win the gold medal. The silver medal was won by Jakub Vadlejch and the bronze medal was won by Vitezlav Vesely. There were six rounds of throws with each athlete having one throw per round. The best of all the throws of each athlete is considered for the medal. Following were the observations about the throws:<br><br>i. The first and second rounds were dominated by Neeraj Chopra with a gold medal performance in his second throw, while the other two athletes did not have any medal winning throws in these rounds.<br><br>ii. The throws in the last round by both Jakub Vadlejch and Vitezlav Vesely were fouls and were not considered for scoring.<br><br>iii. After four rounds, Vitezlav Vesely was in the second position and could not improve upon his best throw in the succeeding rounds.<br><br>iv. In the fourth round, the throw by Jakub Vadlejch was the best in that round.<br><br>In which round did Vitezlav Vesely have his best throw?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Third",
+    "Fourth",
+    "Fifth",
+    "Sixth"
+  ],
+  "answer": ["A"],
+  "explanation": "<strong>Step 1: Eliminate Rounds 1 and 2</strong><br>Observation (i) states that neither Jakub Vadlejch nor Vitezlav Vesely had any medal-winning throws in the first two rounds. Thus, Vesely's best throw was not in Round 1 or Round 2.<br><br><strong>Step 2: Eliminate Rounds 5 and 6</strong><br>Observation (iii) states that Vesely could not improve upon his best throw in the succeeding rounds after Round 4 (Rounds 5 and 6). Thus, his best throw was not in Round 5 or Round 6.<br><br><strong>Step 3: Compare Round 3 and Round 4</strong><br>Observation (iii) notes that after four rounds, Vesely was in 2nd position overall (ahead of Jakub Vadlejch).<br>Observation (iv) states that in Round 4, Jakub Vadlejch had the best throw of that round. If Vesely had achieved his best throw in Round 4, Jakub's throw in Round 4 (being better than Vesely's) would have placed Jakub ahead of Vesely after Round 4. Since Vesely was in 2nd position after Round 4, Vesely's best throw must have been achieved prior to Round 4 and was superior to Jakub's Round 4 throw.<br><br><strong>Conclusion:</strong><br>Vitezlav Vesely achieved his best throw in the <strong>Third</strong> round (Option A).",
+  "videoUrl": null
+}

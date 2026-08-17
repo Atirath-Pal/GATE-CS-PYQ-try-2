@@ -1,0 +1,21 @@
+{
+  "id": 3,
+  "year": 2026,
+  "set": 1,
+  "topics": ["General Aptitude", "Quantitative Aptitude"],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider a knock-out women’s badminton singles tournament where there are no ties. The loser in each game is eliminated from the tournament. Every player plays until she is defeated or remains the last undefeated player. The last undefeated player is declared the winner of the tournament. If there are 64 players in the beginning of the tournament, how many games should be played in total to declare the winner of the tournament?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "127",
+    "64",
+    "63",
+    "32"
+  ],
+  "answer": ["C"],
+  "explanation": "<strong>Step 1: Understand the elimination principle</strong><br>In a single-elimination (knock-out) tournament, every match played results in exactly one player being eliminated.<br><br><strong>Step 2: Calculate total required eliminations</strong><br>To declare $1$ winner out of $N = 64$ initial players, exactly $N - 1 = 64 - 1 = 63$ players must be eliminated.<br><br><strong>Step 3: Determine the total number of games</strong><br>Since $1$ game eliminates $1$ player, the number of games required to eliminate $63$ players is equal to $63$.<br><br>Therefore, the total number of games played is <strong>63</strong>.",
+  "videoUrl": null
+}

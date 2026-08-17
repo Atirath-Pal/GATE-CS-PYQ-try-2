@@ -1,0 +1,22 @@
+{
+  "id": 35,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Compiler Design",
+    "Lexical Analysis"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "A lexical analyzer uses the following token definitions<br><br>• $letter \\rightarrow [A-Za-z]$<br>• $digit \\rightarrow [0-9]$<br>• $id \\rightarrow letter\\,(letter \\mid digit)^*$<br>• $number \\rightarrow digit^+$<br>• $ws \\rightarrow (blank \\mid tab \\mid newline)^+$<br><br>For the string given below,<br><br>$$x1 \\quad 23mm \\quad 78 \\quad y \\quad 7z \\quad zz5 \\quad 14A \\quad 8H \\quad AaYcD$$<br><br>the number of tokens (excluding $ws$) that will be produced by the lexical analyzer is __________. (<em>answer in integer</em>)",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 13,
+    "max": 13
+  },
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. <strong>Understand Lexical Analysis Rules:</strong><br>Lexical analyzers use the <strong>Maximal Munch (longest match)</strong> principle to partition an input string into tokens:<br>- $id$: Begins with a letter, followed by zero or more letters or digits.<br>- $number$: One or more digits.<br>- $ws$: Whitespace characters (skipped).<br><br>2. <strong>Tokenize Each Component:</strong><br>- <code>x1</code>: Matches $id \\rightarrow$ <strong>1 token</strong> (<code>x1</code>)<br>- <code>23mm</code>: Starts with digits <code>23</code> ($number$), followed by <code>mm</code> ($id$) $\\rightarrow$ <strong>2 tokens</strong> (<code>23</code>, <code>mm</code>)<br>- <code>78</code>: Matches $number \\rightarrow$ <strong>1 token</strong> (<code>78</code>)<br>- <code>y</code>: Matches $id \\rightarrow$ <strong>1 token</strong> (<code>y</code>)<br>- <code>7z</code>: Starts with digit <code>7</code> ($number$), followed by <code>z</code> ($id$) $\\rightarrow$ <strong>2 tokens</strong> (<code>7</code>, <code>z</code>)<br>- <code>zz5</code>: Matches $id \\rightarrow$ <strong>1 token</strong> (<code>zz5</code>)<br>- <code>14A</code>: Starts with digits <code>14</code> ($number$), followed by <code>A</code> ($id$) $\\rightarrow$ <strong>2 tokens</strong> (<code>14</code>, <code>A</code>)<br>- <code>8H</code>: Starts with digit <code>8</code> ($number$), followed by <code>H</code> ($id$) $\\rightarrow$ <strong>2 tokens</strong> (<code>8</code>, <code>H</code>)<br>- <code>AaYcD</code>: Matches $id \\rightarrow$ <strong>1 token</strong> (<code>AaYcD</code>)<br><br>3. <strong>Calculate Total Token Count:</strong><br>$$\\text{Total Tokens} = 1 + 2 + 1 + 1 + 2 + 1 + 2 + 2 + 1 = 13$$<br><br>Hence, the number of tokens produced is <strong>13</strong>.",
+  "videoUrl": null
+}

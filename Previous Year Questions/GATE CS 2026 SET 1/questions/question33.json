@@ -1,0 +1,19 @@
+{
+  "id": 33,
+  "year": 2026,
+  "set": 1,
+  "topics": ["Data Structures", "Trees"],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "The height of a binary tree is the number of edges in the longest path from the root to a leaf in the tree. The maximum possible height of a full binary tree with 23 nodes is ________. (answer in integer)",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 11,
+    "max": 11
+  },
+  "explanation": "<strong>Step 1: Understand full binary tree properties</strong><br>A full binary tree (or proper binary tree) is a tree in which every node has either $0$ or $2$ children.<br><br><strong>Step 2: Relation between nodes and height</strong><br>To maximize the height $h$ for a given number of nodes $N$, each level from level $1$ to level $h-1$ should contain exactly $1$ internal node (having $2$ children) and $1$ leaf node.<br><br>The minimum number of nodes $N$ required to achieve a height of $h$ in a full binary tree is given by:<br>$$N_{\\min} = 2h + 1$$<br><br><strong>Step 3: Solve for maximum height</strong><br>Given $N = 23$ nodes:<br>$$23 \\ge 2h + 1$$<br>$$22 \\ge 2h$$<br>$$h \\le 11$$<br><br>Therefore, the maximum possible height of a full binary tree with $23$ nodes is <strong>11</strong>.",
+  "videoUrl": null
+}

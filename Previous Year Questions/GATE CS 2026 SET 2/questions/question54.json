@@ -1,0 +1,22 @@
+{
+  "id": 54,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Operating Systems",
+    "Memory Management"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "A system has a Translation Lookaside Buffer (TLB) that has a reach of 1 MB. TLB reach is defined as the total amount of physical memory that can be accessed through the TLB entries. The paging system uses pages of size 4 KB. The virtual address space is 64 GB and physical address space is 1 GB. If each TLB entry stores a 4-bit process id, page number, frame number, and a 2-bit control field, then the size of the TLB (in bytes) is ____________. (answer in integer)<br><br><i>Note:</i> 1K=$2^{10}$, 1M=$2^{20}$, 1G=$2^{30}$",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 1536,
+    "max": 1536
+  },
+  "explanation": "<strong>Step 1: Calculate the number of entries in the TLB.</strong><br>• $\\text{TLB Reach} = 1\\text{ MB} = 2^{20}\\text{ bytes}$<br>• $\\text{Page Size} = 4\\text{ KB} = 2^{12}\\text{ bytes}$<br>• $\\text{Number of TLB Entries} = \\frac{\\text{TLB Reach}}{\\text{Page Size}} = \\frac{2^{20}}{2^{12}} = 2^8 = 256\\text{ entries}$<br><br><strong>Step 2: Calculate bits required for Page Number and Frame Number.</strong><br>• $\\text{Virtual Address Space} = 64\\text{ GB} = 2^{36}\\text{ bytes} \\Rightarrow 36\\text{-bit Virtual Address}$<br>• $\\text{Page Offset} = \\log_2(4\\text{ KB}) = 12\\text{ bits}$<br>• $\\text{Page Number Bits} = 36 - 12 = 24\\text{ bits}$<br><br>• $\\text{Physical Address Space} = 1\\text{ GB} = 2^{30}\\text{ bytes} \\Rightarrow 30\\text{-bit Physical Address}$<br>• $\\text{Frame Offset} = \\log_2(4\\text{ KB}) = 12\\text{ bits}$<br>• $\\text{Frame Number Bits} = 30 - 12 = 18\\text{ bits}$<br><br><strong>Step 3: Calculate the size of a single TLB entry.</strong><br>• $\\text{Size of 1 TLB Entry} = \\text{Process ID} + \\text{Page Number} + \\text{Frame Number} + \\text{Control Field}$<br>• $\\text{Size of 1 TLB Entry} = 4\\text{ bits} + 24\\text{ bits} + 18\\text{ bits} + 2\\text{ bits} = 48\\text{ bits} = 6\\text{ bytes}$<br><br><strong>Step 4: Calculate the total TLB size in bytes.</strong><br>• $\\text{Total TLB Size} = 256\\text{ entries} \\times 6\\text{ bytes/entry} = 1536\\text{ bytes}$",
+  "videoUrl": null
+}

@@ -1,0 +1,27 @@
+{
+  "id": 49,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Data Structures",
+    "Binary Search Trees"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a binary search tree (BST) with $n$ leaf nodes ($n > 0$). Given any node $V$, the key present in the node is denoted as $Val(V)$. All the keys present in the given BST are distinct. The keys belong to the set of real numbers.<br><br>For a node $V$, let $Suc(V)$ denote the node that is its inorder successor. If a node $V$ does not have an inorder successor, then $Suc(V)$ is $NULL$. As there are no duplicates, if $Suc(V)$ is not $NULL$, then $Val(V) < Val(Suc(V))$.<br><br>Corresponding to every leaf node $L_i$ that has a non-NULL $Suc(L_i)$, a new key $k_i$ with the following property is to be inserted into the BST.<br><br>$$Val(L_i) < k_i < Val(Suc(L_i))$$<br><br>Let $K$ represent the list of all such new keys to be inserted into the BST.<br><br>Which of the following statements is/are true?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$K$ cannot have any duplicates",
+    "$K$ will have at least one element",
+    "After inserting all keys from $K$, the height of the BST can increase at most by one",
+    "Number of nodes in the BST will double after inserting all keys from $K$"
+  ],
+  "answer": [
+    "A",
+    "C"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. <strong>Analysis of Statement (A):</strong><br>For any leaf $L_i$, $Suc(L_i)$ is its immediate inorder successor, meaning no key in the BST lies strictly between $Val(L_i)$ and $Val(Suc(L_i))$. Ordering the leaf nodes $L_1, L_2, \\dots, L_m$ by key value yields disjoint open intervals $(Val(L_i), Val(Suc(L_i)))$. Since each key $k_i \\in K$ belongs to a distinct disjoint interval, all elements in $K$ are distinct. Thus, $K$ cannot contain duplicates. Statement (A) is <strong>TRUE</strong>.<br><br>2. <strong>Analysis of Statement (B):</strong><br>Consider a right-skewed tree where the only leaf node is the maximum element in the entire BST. For this leaf $L$, $Suc(L) = NULL$. Therefore, no leaf node has a non-NULL successor, resulting in $K = \\emptyset$. Thus, $K$ is not guaranteed to have at least one element. Statement (B) is <strong>FALSE</strong>.<br><br>3. <strong>Analysis of Statement (C):</strong><br>Since $Val(L_i) < k_i < Val(Suc(L_i))$ and $L_i$ is a leaf node (with no left or right child), searching for $k_i$ in the BST will traverse down to $L_i$ and attach $k_i$ directly as the right child of $L_i$. Because every new key attaches as a child of an existing leaf, the maximum depth of the tree increases by at most 1. Statement (C) is <strong>TRUE</strong>.<br><br>4. <strong>Analysis of Statement (D):</strong><br>In a full binary tree with 7 nodes (4 leaves), exactly 3 leaves have a non-NULL successor. Inserting 3 keys yields $7 + 3 = 10$ nodes, which does not double the original node count. Statement (D) is <strong>FALSE</strong>.<br><br>Hence, statements <strong>(A) and (C)</strong> are true.",
+  "videoUrl": null
+}

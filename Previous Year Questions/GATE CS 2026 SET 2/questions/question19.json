@@ -1,0 +1,26 @@
+{
+  "id": 19,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Programming and Data Structures",
+    "C Programming"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the following three ANSI-C programs, P1, P2, and P3.<br><br><table border=\"1\" style=\"border-collapse: collapse; border: 1px solid white;\"><thead><tr><th style=\"border: 1px solid white; padding: 8px; text-align: center;\">P1</th><th style=\"border: 1px solid white; padding: 8px; text-align: center;\">P2</th><th style=\"border: 1px solid white; padding: 8px; text-align: center;\">P3</th></tr></thead><tbody><tr><td style=\"border: 1px solid white; padding: 8px; vertical-align: top;\"><code>#include &lt;stdio.h&gt;<br><br>int a=5;<br>int main(){<br>&nbsp;&nbsp;int a=7;<br>&nbsp;&nbsp;return(0);<br>}</code></td><td style=\"border: 1px solid white; padding: 8px; vertical-align: top;\"><code>#include &lt;stdio.h&gt;<br><br>int main(){<br>&nbsp;&nbsp;int a=5;<br>&nbsp;&nbsp;int a=7;<br>&nbsp;&nbsp;return(0);<br>}</code></td><td style=\"border: 1px solid white; padding: 8px; vertical-align: top;\"><code>#include &lt;stdio.h&gt;<br><br>int main(){<br>&nbsp;&nbsp;int a=5;<br>&nbsp;&nbsp;float a=7;<br>&nbsp;&nbsp;return(0);<br>}</code></td></tr></tbody></table><br>Which one of the following statements is true?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Only P1 will compile without any error",
+    "Only P2 will compile without any error",
+    "Only P3 will compile without any error",
+    "All three programs P1, P2, and P3 will compile without any error"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. <strong>Program P1:</strong> Declares a global variable <code>a</code> and a local variable <code>a</code> inside the <code>main()</code> function. The local variable shadows the global variable, which is completely valid C syntax. Hence, P1 compiles without any error.<br><br>2. <strong>Program P2:</strong> Attempts to declare the variable <code>a</code> twice within the same block scope (inside <code>main()</code>). Redefining a variable in the same scope causes a compile-time redeclaration error.<br><br>3. <strong>Program P3:</strong> Attempts to declare the variable <code>a</code> twice with conflicting data types (<code>int</code> and <code>float</code>) within the same block scope. This also causes a compile-time redeclaration error.<br><br>Therefore, <strong>only P1 will compile without any error</strong>, corresponding to Option <strong>(A)</strong>.",
+  "videoUrl": null
+}

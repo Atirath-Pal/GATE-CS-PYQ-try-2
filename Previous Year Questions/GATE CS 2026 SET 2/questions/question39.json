@@ -1,0 +1,26 @@
+{
+  "id": 39,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Algorithms",
+    "Dynamic Programming"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider a table $T$, where the elements $T[i][j], 0 \\le i, j \\le n$, represent the cost of the optimal solutions of different subproblems of a problem that is being solved using a dynamic programming algorithm. The recursive formulation to compute the table entries is as follows:<br><br>$$T[0][k] = T[k][0] = 1 \\quad \\text{for } k = 0, 1, 2, \\dots, n$$<br>$$T[i][j] = 2T[i - 1][j] + 3T[i][j - 1] \\quad \\text{for } 1 \\le i, j \\le n$$<br><br>Consider the following two algorithms to compute entries of $T$. Assume that for both the algorithms, for all $0 \\le i, j \\le n$, $T[i][j]$ has been initialized to 1.<br><br>Algorithm $B_1$: For $i = 1, 2, \\dots, n$<br>$$\\text{For } j = 1, 2, \\dots, n$$<br>$$T[i][j] = 2T[i - 1][j] + 3T[i][j - 1]$$<br><br>Algorithm $B_2$: For $s = 2, 3, \\dots, 2n$<br>$$\\text{For } i = 1, 2, \\dots, n$$<br>$$\\text{For } j = 1, 2, \\dots, n$$<br>$$\\text{If } (i + j == s)$$<br>$$T[i][j] = 2T[i - 1][j] + 3T[i][j - 1]$$<br><br>Algorithm $B_k, k \\in \\{1,2\\}$ is said to be correct if and only if it calculates the correct values of $T[i][j]$, for all $0 \\le i, j \\le n$, (as per the recursive formulation) at the end of the execution of the algorithm $B_k$.<br><br>Which one of the following statements is true?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Both algorithms $B_1$ and $B_2$ are correct",
+    "Algorithm $B_1$ is correct, but algorithm $B_2$ is incorrect",
+    "Algorithm $B_2$ is correct, but algorithm $B_1$ is incorrect",
+    "Both algorithms $B_1$ and $B_2$ are incorrect"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. <strong>Dependency Analysis:</strong><br>To correctly compute $T[i][j]$, the values of $T[i-1][j]$ and $T[i][j-1]$ must be computed prior to $T[i][j]$.<br><br>2. <strong>Analysis of Algorithm $B_1$:</strong><br>- Algorithm $B_1$ computes the table row by row (outer loop $i$, inner loop $j$).<br>- When computing $T[i][j]$, $T[i-1][j]$ was computed in the previous row iteration, and $T[i][j-1]$ was computed in the previous column iteration.<br>- Thus, all required subproblems are already solved before computing $T[i][j]$. Therefore, <strong>Algorithm $B_1$ is correct</strong>.<br><br>3. <strong>Analysis of Algorithm $B_2$:</strong><br>- Algorithm $B_2$ computes the table diagonal by diagonal, where $s = i + j$ ranges from $2$ to $2n$.<br>- When computing $T[i][j]$ with $i + j = s$, the dependencies are $T[i-1][j]$ and $T[i][j-1]$.<br>- The index sum for $T[i-1][j]$ is $(i-1) + j = s - 1$.<br>- The index sum for $T[i][j-1]$ is $i + (j-1) = s - 1$.<br>- Since all entries with index sum $s - 1$ were computed in the previous iteration of the outer loop ($s - 1$), both dependencies are already available.<br>- Therefore, <strong>Algorithm $B_2$ is also correct</strong>.<br><br>Hence, <strong>Both algorithms $B_1$ and $B_2$ are correct</strong>.",
+  "videoUrl": null
+}

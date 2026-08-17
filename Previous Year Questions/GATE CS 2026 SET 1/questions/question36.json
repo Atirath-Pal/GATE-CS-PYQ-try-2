@@ -1,0 +1,21 @@
+{
+  "id": 36,
+  "year": 2026,
+  "set": 1,
+  "topics": ["Computer Organization", "Data Representation"],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the real valued variables $X, Y$ and $Z$ represented using the IEEE 754 single-precision floating-point format. The binary representations of $X$ and $Y$ in hexadecimal notation are as follows:<br><br>$$X\\text{: } 35\\text{C}00000 \\qquad Y\\text{: } 34\\text{A}00000$$<br><br>Let $Z = X + Y$.<br><br>Which one of the following is the binary representation of $Z$, in hexadecimal notation?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "35C80000",
+    "35CC0000",
+    "35E80000",
+    "35EC0000"
+  ],
+  "answer": ["C"],
+  "explanation": "<strong>Step 1: Decode $X = 35\\text{C}00000_{16}$</strong><br>In binary:<br>$0011\\;0101\\;1100\\;0000\\;0000\\;0000\\;0000\\;0000_2$<br>• Sign bit ($S_X$) = $0$<br>• Biased Exponent ($E_X$) = $01101011_2 = 107_{10}$<br>• Actual Exponent = $107 - 127 = -20$<br>• Mantissa ($M_X$) = $10000000000000000000000_2 \\implies \\text{Significand} = 1.1_2 = 1.5$<br>• $X = 1.5 \\times 2^{-20}$<br><br><strong>Step 2: Decode $Y = 34\\text{A}00000_{16}$</strong><br>In binary:<br>$0011\\;0100\\;1010\\;0000\\;0000\\;0000\\;0000\\;0000_2$<br>• Sign bit ($S_Y$) = $0$<br>• Biased Exponent ($E_Y$) = $01101001_2 = 105_{10}$<br>• Actual Exponent = $105 - 127 = -22$<br>• Mantissa ($M_Y$) = $01000000000000000000000_2 \\implies \\text{Significand} = 1.01_2 = 1.25$<br>• $Y = 1.25 \\times 2^{-22} = 0.3125 \\times 2^{-20}$<br><br><strong>Step 3: Perform Addition $Z = X + Y$</strong><br>$Z = (1.5 + 0.3125) \\times 2^{-20} = 1.8125 \\times 2^{-20}$<br>• $1.8125_{10} = 1.1101_2$ in binary.<br>• Actual Exponent = $-20 \\implies$ Biased Exponent ($E_Z$) = $-20 + 127 = 107_{10} = 01101011_2$<br>• Mantissa ($M_Z$) = $11010000000000000000000_2$<br><br><strong>Step 4: Construct IEEE 754 Representation for $Z$</strong><br>32-bit binary:<br>$0\\;01101011\\;11010000000000000000000_2$<br>Group into 4-bit nibbles for hexadecimal conversion:<br>$0011\\;0101\\;1110\\;1000\\;0000\\;0000\\;0000\\;0000_2 = 35\\text{E}80000_{16}$<br><br>Therefore, the correct option is <strong>C</strong>.",
+  "videoUrl": null
+}

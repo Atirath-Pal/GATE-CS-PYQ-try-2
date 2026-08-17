@@ -1,0 +1,22 @@
+{
+  "id": 58,
+  "year": 2026,
+  "set": 1,
+  "topics": [
+    "Engineering Mathematics",
+    "Probability"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Let $X$ be a random variable which takes values in the set $\\{1, 2, 3, 4, 5, 6, 7, 8\\}$. Further, $\\Pr(X = 1) = \\Pr(X = 2) = \\Pr(X = 5) = \\Pr(X = 7) = \\frac{1}{6}$ and $\\Pr(X = 3) = \\Pr(X = 4) = \\Pr(X = 6) = \\Pr(X = 8) = \\frac{1}{12}$.<br><br>The expected value of $X$, denoted by $E[X]$, is equal to ________. <i>(rounded off to two decimal places)</i>",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 4.24,
+    "max": 4.26
+  },
+  "explanation": "<strong>Step 1: Formula for expected value.</strong><br>The expected value of a discrete random variable $X$ is given by:<br>$$E[X] = \\sum x \\cdot \\Pr(X = x)$$<br><br><strong>Step 2: Group the terms by their probabilities.</strong><br>For values $x \\in \\{1, 2, 5, 7\\}$, $\\Pr(X = x) = \\frac{1}{6}$.<br>$$\\text{Contribution} = (1 + 2 + 5 + 7) \\times \\frac{1}{6} = 15 \\times \\frac{1}{6} = 2.5$$<br><br>For values $x \\in \\{3, 4, 6, 8\\}$, $\\Pr(X = x) = \\frac{1}{12}$.<br>$$\\text{Contribution} = (3 + 4 + 6 + 8) \\times \\frac{1}{12} = 21 \\times \\frac{1}{12} = 1.75$$<br><br><strong>Step 3: Sum the contributions.</strong><br>$$E[X] = 2.5 + 1.75 = 4.25$$<br><br>Thus, $E[X] = 4.25$.",
+  "videoUrl": null
+}

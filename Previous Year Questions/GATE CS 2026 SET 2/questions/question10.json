@@ -1,0 +1,26 @@
+{
+  "id": 10,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Engineering Mathematics",
+    "Probability"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "An unbiased six-faced dice whose faces are marked with numbers 1, 2, 3, 4, 5, and 6 is rolled twice in succession and the number on the top face is recorded each time. The probability that the sum of the two recorded numbers is a prime number is ________",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\frac{3}{36}$",
+    "$\\frac{13}{36}$",
+    "$\\frac{15}{36}$",
+    "$\\frac{19}{36}$"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Determine the total number of outcomes.</strong><br>When an unbiased six-faced dice is rolled twice, the total number of sample space outcomes is:<br>$$N = 6 \\times 6 = 36$$<br><br><strong>Step 2: Identify all possible prime sums.</strong><br>The sum of the two rolled numbers ranges from $1+1 = 2$ to $6+6 = 12$. The prime numbers in this range are $2, 3, 5, 7,$ and $11$.<br><br><strong>Step 3: Count favorable outcomes for each prime sum.</strong><br>• Sum = $2$: $(1, 1)$ → $1$ outcome<br>• Sum = $3$: $(1, 2), (2, 1)$ → $2$ outcomes<br>• Sum = $5$: $(1, 4), (2, 3), (3, 2), (4, 1)$ → $4$ outcomes<br>• Sum = $7$: $(1, 6), (2, 5), (3, 4), (4, 3), (5, 2), (6, 1)$ → $6$ outcomes<br>• Sum = $11$: $(5, 6), (6, 5)$ → $2$ outcomes<br><br>Total favorable outcomes $= 1 + 2 + 4 + 6 + 2 = 15$.<br><br><strong>Step 4: Calculate the required probability.</strong><br>$$P(\\text{Sum is prime}) = \\frac{15}{36}$$<br><br>Hence, the correct option is <strong>(C)</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,21 @@
+{
+  "id": 23,
+  "year": 2026,
+  "set": 1,
+  "topics": ["Data Structures", "Heaps"],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Let $n$ be an odd number greater than 100. Consider a binary minheap with $n$ elements stored in an array $P$ whose index starts from 1.<br><br>Which of the following indices of $P$ do/does NOT correspond to any leaf node of the minheap?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\frac{n + 1}{2}$",
+    "$\\frac{n - 1}{2}$",
+    "$\\frac{n - 3}{2}$",
+    "$n$"
+  ],
+  "answer": ["B", "C"],
+  "explanation": "<strong>Step 1: Determine the Range of Leaf and Non-Leaf Nodes</strong><br>In a 1-indexed binary heap array of size $n$, the left child of a node at index $i$ is located at $2i$. A node is an internal (non-leaf) node if it has at least one child, meaning $2i \\le n$, which simplifies to $i \\le \\lfloor n/2 \\rfloor$.<br><br><strong>Step 2: Simplify for Odd $n$</strong><br>Since $n$ is an odd number, $\\lfloor n/2 \\rfloor = \\frac{n - 1}{2}$.<br><br>• <strong>Internal (Non-leaf) Node Indices:</strong> $1, 2, \\dots, \\frac{n - 1}{2}$<br>• <strong>Leaf Node Indices:</strong> $\\frac{n + 1}{2}, \\frac{n + 3}{2}, \\dots, n$<br><br><strong>Step 3: Evaluate the Options</strong><br>• <strong>Option (A) $\\frac{n + 1}{2}$:</strong> Corresponds to the first leaf node.<br>• <strong>Option (B) $\\frac{n - 1}{2}$:</strong> Corresponds to the last internal node, so it is <strong>NOT</strong> a leaf node.<br>• <strong>Option (C) $\\frac{n - 3}{2}$:</strong> Since $\\frac{n - 3}{2} < \\frac{n - 1}{2}$, this is an internal node, so it is <strong>NOT</strong> a leaf node.<br>• <strong>Option (D) $n$:</strong> Corresponds to the last leaf node.<br><br>Therefore, the options that do <strong>NOT</strong> correspond to a leaf node are <strong>B and C</strong>.",
+  "videoUrl": null
+}

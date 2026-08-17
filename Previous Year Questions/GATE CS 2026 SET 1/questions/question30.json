@@ -1,0 +1,21 @@
+{
+  "id": 30,
+  "year": 2026,
+  "set": 1,
+  "topics": ["Databases", "Functional Dependencies"],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Let $P, Q, R$ and $S$ be the attributes of a relation in a relational schema. Let $X \\rightarrow Y$ indicate functional dependency in the context of a relational database, where $X, Y \\subseteq \\{P, Q, R, S\\}$.<br><br>Which of the following options is/are always true?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "If $(\\{P, Q\\} \\rightarrow \\{R\\}$ and $\\{P\\} \\rightarrow \\{R\\})$, then $\\{Q\\} \\rightarrow \\{R\\}$",
+    "If $\\{P, Q\\} \\rightarrow \\{R\\}$, then $(\\{P\\} \\rightarrow \\{R\\}$ or $\\{Q\\} \\rightarrow \\{R\\})$",
+    "If $(\\{P\\} \\rightarrow \\{R\\}$ and $\\{Q\\} \\rightarrow \\{S\\})$, then $\\{P, Q\\} \\rightarrow \\{R, S\\}$",
+    "If $\\{P\\} \\rightarrow \\{R\\}$, then $\\{P, Q\\} \\rightarrow \\{R\\}$"
+  ],
+  "answer": ["C", "D"],
+  "explanation": "<strong>Step 1: Analyze Option (A)</strong><br>Counterexample: Suppose $P \\rightarrow R$ holds. By augmentation, $P, Q \\rightarrow R$ automatically holds. However, $Q \\rightarrow R$ does not necessarily hold because $R$ may depend solely on $P$ and not on $Q$. Hence, Statement (A) is not always true.<br><br><strong>Step 2: Analyze Option (B)</strong><br>Counterexample: Suppose $R$ is determined only by the combination of $P$ and $Q$ together (i.e., $P, Q$ is a composite key determining $R$). In this case, neither $P \\rightarrow R$ nor $Q \\rightarrow R$ holds individually. Hence, Statement (B) is not always true.<br><br><strong>Step 3: Analyze Option (C)</strong><br>Using Armstrong's Axioms (Composition Rule):<br>• Augment $P \\rightarrow R$ with $Q$: $\\{P, Q\\} \\rightarrow \\{R, Q\\}$<br>• Augment $Q \\rightarrow S$ with $R$: $\\{R, Q\\} \\rightarrow \\{R, S\\}$<br>• By Transitivity: $\\{P, Q\\} \\rightarrow \\{R, S\\}$<br>Hence, Statement (C) is <strong>always true</strong>.<br><br><strong>Step 4: Analyze Option (D)</strong><br>Using Armstrong's Axiom of Augmentation:<br>If $X \\rightarrow Y$, then $XZ \\rightarrow YZ$. Thus, adding $Q$ to both sides gives $\\{P, Q\\} \\rightarrow \\{R, Q\\}$. By decomposition/reflexivity, $\\{P, Q\\} \\rightarrow \\{R\\}$.<br>Hence, Statement (D) is <strong>always true</strong>.<br><br>Therefore, the correct options are <strong>C and D</strong>.",
+  "videoUrl": null
+}

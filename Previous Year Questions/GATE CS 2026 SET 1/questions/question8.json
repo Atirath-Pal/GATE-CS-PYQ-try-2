@@ -1,0 +1,21 @@
+{
+  "id": 8,
+  "year": 2026,
+  "set": 1,
+  "topics": ["General Aptitude", "Quantitative Aptitude"],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "For positive real numbers $S$ and $K$, the function $H_K(S)$ is defined as: $H_K(S) = \\max(S - K, 0)$. The max function is defined as:<br><br>$$\\max(a, b) = \\begin{cases} a, & \\text{when } a > b \\\\ b, & \\text{when } a \\le b \\end{cases}$$<br><br>The graph below shows the plot of a function $N(S)$ versus $S$.<br><br>$N(S)$ can be expressed as ________.",
+  "assetImage": "question8.png",
+  "codeBlock": null,
+  "options": [
+    "$H_{10}(S) - H_{20}(S)$",
+    "$H_{10}(S) - 2H_{20}(S)$",
+    "$-H_{10}(S) + H_{20}(S)$",
+    "$H_{15}(S) - H_{20}(S)$"
+  ],
+  "answer": ["A"],
+  "explanation": "<strong>Step 1: Definition of the base function $H_K(S)$</strong><br>For $H_K(S) = \\max(S - K, 0)$:<br>• $H_K(S) = 0$ for $S \\le K$<br>• $H_K(S) = S - K$ for $S > K$<br><br><strong>Step 2: Analyze Option (A): $N(S) = H_{10}(S) - H_{20}(S)$ across different intervals</strong><br>• <strong>Interval 1: $S \\le 10$</strong><br>$H_{10}(S) = 0$ and $H_{20}(S) = 0 \\implies N(S) = 0 - 0 = 0$.<br><br>• <strong>Interval 2: $10 < S \\le 20$</strong><br>$H_{10}(S) = S - 10$ and $H_{20}(S) = 0 \\implies N(S) = (S - 10) - 0 = S - 10$.<br>At $S = 20$, $N(20) = 20 - 10 = 10$, which creates a line rising from $(10, 0)$ to $(20, 10)$.<br><br>• <strong>Interval 3: $S > 20$</strong><br>$H_{10}(S) = S - 10$ and $H_{20}(S) = S - 20 \\implies N(S) = (S - 10) - (S - 20) = 10$.<br>This creates a horizontal line at $N(S) = 10$ for $S > 20$.<br><br><strong>Step 3: Conclusion</strong><br>The piecewise behavior of $H_{10}(S) - H_{20}(S)$ matches the given graph exactly.<br><br>Therefore, $N(S) = H_{10}(S) - H_{20}(S)$ (Option A).",
+  "videoUrl": null
+}

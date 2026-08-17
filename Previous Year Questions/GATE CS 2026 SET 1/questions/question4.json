@@ -1,0 +1,21 @@
+{
+  "id": 4,
+  "year": 2026,
+  "set": 1,
+  "topics": ["General Aptitude", "Quantitative Aptitude"],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "A student needs to enroll for a minimum of 60 credits and at most 70 credits. The credits are divided among a project and three distinct sets of courses: core courses, specialization courses, and elective courses. A student must enroll for exactly 15 credits of core courses and exactly 20 credits of project. Additionally, a student must enroll for at least 10 credits of specialization courses. The maximum credits of elective courses that a student can enroll for is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "10",
+    "15",
+    "20",
+    "25"
+  ],
+  "answer": ["D"],
+  "explanation": "<strong>Step 1: Set up the equation and constraints</strong><br>Let total credits be $T = \\text{Core} + \\text{Project} + \\text{Specialization} + \\text{Elective}$.<br>Given constraints:<br>• Total credits: $60 \\le T \\le 70$<br>• Core courses = $15$<br>• Project = $20$<br>• Specialization courses $\\ge 10$<br><br><strong>Step 2: Formulate expression for Elective credits</strong><br>$$15 + 20 + \\text{Specialization} + \\text{Elective} \\le 70$$<br>$$35 + \\text{Specialization} + \\text{Elective} \\le 70$$<br>$$\\text{Elective} \\le 35 - \\text{Specialization}$$<br><br><strong>Step 3: Maximize Elective credits</strong><br>To maximize $\\text{Elective}$, we minimize $\\text{Specialization}$ to its minimum allowed value of $10$ while taking the upper limit for total credits ($70$):<br>$$\\text{Elective}_{\\text{max}} = 35 - 10 = 25$$<br><br>Therefore, the maximum elective course credits possible is <strong>25</strong>.",
+  "videoUrl": null
+}

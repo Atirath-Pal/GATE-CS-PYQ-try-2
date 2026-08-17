@@ -1,0 +1,21 @@
+{
+  "id": 24,
+  "year": 2026,
+  "set": 1,
+  "topics": ["Data Structures", "Hashing"],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider a hash table $P[0, 1, \\dots, 10]$ that is initially empty. The hash table is maintained using open addressing with linear probing. The hash function used is $h(x) = (x + 7) \\bmod 11$.<br><br>Consider the following sequence of insertions performed on $P$:<br><br>$$1, 13, 22, 15, 11, 24$$<br><br>Which of the following positions in the hash table is/are empty after these insertions are performed?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "0",
+    "10",
+    "2",
+    "1"
+  ],
+  "answer": ["C"],
+  "explanation": "<strong>Step 1: Understand the Hash Function and Collision Resolution</strong><br>The hash function is $h(x) = (x + 7) \\bmod 11$. Linear probing checks consecutive indices $(h(x) + i) \\bmod 11$ for $i = 0, 1, 2, \\dots$ until an empty slot is found.<br><br><strong>Step 2: Trace the Insertions</strong><br>1. <strong>Insert 1:</strong> $h(1) = (1 + 7) \\bmod 11 = 8$. Slot 8 is empty $\\rightarrow P[8] = 1$.<br>2. <strong>Insert 13:</strong> $h(13) = (13 + 7) \\bmod 11 = 9$. Slot 9 is empty $\\rightarrow P[9] = 13$.<br>3. <strong>Insert 22:</strong> $h(22) = (22 + 7) \\bmod 11 = 7$. Slot 7 is empty $\\rightarrow P[7] = 22$.<br>4. <strong>Insert 15:</strong> $h(15) = (15 + 7) \\bmod 11 = 0$. Slot 0 is empty $\\rightarrow P[0] = 15$.<br>5. <strong>Insert 11:</strong> $h(11) = (11 + 7) \\bmod 11 = 7$. Slot 7 is occupied (22). Probing 8 (1) and 9 (13) shows they are also occupied. Next open slot is 10 $\\rightarrow P[10] = 11$.<br>6. <strong>Insert 24:</strong> $h(24) = (24 + 7) \\bmod 11 = 9$. Slot 9 is occupied (13). Probing 10 (11) and 0 (15) shows they are occupied. Next open slot is 1 $\\rightarrow P[1] = 24$.<br><br><strong>Step 3: Check Occupied vs. Empty Positions</strong><br>• Occupied positions: $0, 1, 7, 8, 9, 10$<br>• Empty positions: $2, 3, 4, 5, 6$<br><br>Checking the given choices:<br>• Position 0 (Option A) is occupied.<br>• Position 10 (Option B) is occupied.<br>• Position 2 (Option C) is <strong>empty</strong>.<br>• Position 1 (Option D) is occupied.<br><br>Therefore, the correct option is <strong>C</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,21 @@
+{
+  "id": 7,
+  "year": 2026,
+  "set": 1,
+  "topics": ["General Aptitude", "Spatial Aptitude"],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "In Panel I of the figure below, the front view and top view of a structure are shown. Which one of the 3D structures shown in Panel II possesses the views shown in Panel I?",
+  "assetImage": "question7.png",
+  "codeBlock": null,
+  "options": [
+    "(i)",
+    "(ii)",
+    "(iii)",
+    "(iv)"
+  ],
+  "answer": ["D"],
+  "explanation": "<strong>Step 1: Analyze the Front View</strong><br>Looking at Panel I, the Front View shows:<br>• A left section of height $2$ units.<br>• A right section of height $1$ unit with a vertical dividing line.<br><br><strong>Step 2: Analyze the Top View</strong><br>The Top View shows:<br>• A footprint spanning a $2 \\times 2$ grid with three visible segments arranged in an inverted L-shape.<br><br><strong>Step 3: Match with 3D structures in Panel II</strong><br>• Structure <strong>(iv)</strong> has a tall $2$-unit block at the back-left, extending forward and to the right by $1$ unit each.<br>• Looking from the direction of the <strong>Front View</strong> arrow, structure (iv) forms the exact profile shown in Panel I.<br>• Looking from the direction of the <strong>Top View</strong> arrow, structure (iv) projects the exact 2D footprint shown in Panel I.<br><br>Therefore, the correct structure is <strong>(iv)</strong> (Option D).",
+  "videoUrl": null
+}

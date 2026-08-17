@@ -1,0 +1,22 @@
+{
+  "id": 63,
+  "year": 2026,
+  "set": 1,
+  "topics": [
+    "Operating Systems",
+    "Process Management"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the following program snippet. Assume that the program compiles and runs successfully. Further, assume that the `fork()` system call is always successful in creating a process.<br><br>The total number of times that the `printf` statement gets executed is ________. <i>(answer in integer)</i>",
+  "assetImage": null,
+  "codeBlock": "int main () {\n    int i;\n    for (i = 0; i < 3; i++){\n        if (fork() == 0){\n            continue;\n        }\n        break;\n    }\n    printf(\"Hello!\");\n    return 0;\n}",
+  "options": [],
+  "answer": {
+    "min": 4,
+    "max": 4
+  },
+  "explanation": "<strong>Step 1: Understand the behavior of fork() inside the loop.</strong><br>The `fork()` call creates a new child process:<br>- In the <strong>child process</strong>, `fork()` returns $0$, so `if (fork() == 0)` evaluates to true. The child executes `continue;` to move to the next iteration of the loop.<br>- In the <strong>parent process</strong>, `fork()` returns the non-zero PID of the child, so `if (fork() == 0)` evaluates to false. The parent executes `break;` which breaks out of the loop and proceeds to execute `printf(\"Hello!\");`.<br><br><strong>Step 2: Trace the execution for each iteration.</strong><br>- <strong>Iteration $i = 0$:</strong> Initial process $P_0$ calls `fork()`. <br>  - Parent $P_0$ breaks out of the loop and prints \"Hello!\" (Count = 1).<br>  - Child $C_1$ continues to $i = 1$.<br><br>- <strong>Iteration $i = 1$:</strong> Process $C_1$ calls `fork()`.<br>  - Parent $C_1$ breaks out of the loop and prints \"Hello!\" (Count = 2).<br>  - Child $C_2$ continues to $i = 2$.<br><br>- <strong>Iteration $i = 2$:</strong> Process $C_2$ calls `fork()`.<br>  - Parent $C_2$ breaks out of the loop and prints \"Hello!\" (Count = 3).<br>  - Child $C_3$ executes `continue;` and increments $i$ to 3.<br><br><strong>Step 3: Handle the final loop exit for the child process.</strong><br>For $C_3$, $i = 3$ fails the loop condition ($3 < 3$). $C_3$ exits the loop naturally and executes `printf(\"Hello!\");` (Count = 4).<br><br><strong>Step 4: Total calculation.</strong><br>Total processes that execute `printf(\"Hello!\")` $= 3 \\text{ (parent processes that break)} + 1 \\text{ (last child process that completes the loop)} = 4$.<br><br>Thus, the total number of times the `printf` statement gets executed is <strong>4</strong>.",
+  "videoUrl": null
+}

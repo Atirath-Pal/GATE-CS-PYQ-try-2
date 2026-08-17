@@ -1,0 +1,22 @@
+{
+  "id": 31,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Engineering Mathematics",
+    "Linear Algebra"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider the system of linear equations given below.<br><br>$$ax + y = b$$<br>$$16x + ay = 24$$<br><br>Suppose the values of $a$ and $b$ are chosen such that the system of linear equations produce multiple solutions. Then the product of $a$ and $b$ is __________. (<em>answer in integer</em>)",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 24,
+    "max": 24
+  },
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. <strong>Condition for Multiple Solutions:</strong><br>For a system of two linear equations in two variables to have multiple (infinitely many) solutions, the coefficients and constants must be proportional:<br>$\\frac{a}{16} = \\frac{1}{a} = \\frac{b}{24}$<br><br>2. <strong>Solve for $a$:</strong><br>$\\frac{a}{16} = \\frac{1}{a} \\implies a^2 = 16 \\implies a = \\pm 4$<br><br>3. <strong>Solve for $b$ and calculate $a \\times b$:</strong><br>- If $a = 4$:<br>$\\frac{4}{16} = \\frac{b}{24} \\implies b = 6 \\implies a \\times b = 4 \\times 6 = 24$<br>- If $a = -4$:<br>$\\frac{-4}{16} = \\frac{b}{24} \\implies b = -6 \\implies a \\times b = (-4) \\times (-6) = 24$<br><br>In both cases, the product of $a$ and $b$ is <strong>24</strong>.",
+  "videoUrl": null
+}

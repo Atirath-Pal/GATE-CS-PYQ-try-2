@@ -1,0 +1,21 @@
+{
+  "id": 38,
+  "year": 2026,
+  "set": 1,
+  "topics": ["Computer Organization", "Cache Memory"],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "The size of the physical address space of a processor is $2^{32}$ bytes. The capacity of a cache memory unit is $2^{23}$ bytes. The cache block size is 128 bytes. The cache memory unit can be built as a direct mapped cache or as a $K$-way set-associative cache, where $K = 2^L$ and $L \\in \\{1, 2, 3\\}$. Let the length of the TAG field be $M$ bits for the direct mapped cache, and $N$ bits for the set-associative cache.<br><br>Which one of the following options is true?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$N = M + L$",
+    "$N = M - L$",
+    "$N = M + K$",
+    "$N = M - K$"
+  ],
+  "answer": ["A"],
+  "explanation": "<strong>Step 1: Determine Physical Address Breakdown</strong><br>• Physical Address space = $2^{32}$ bytes $\\implies 32$ bits total.<br>• Cache capacity = $2^{23}$ bytes.<br>• Block size = $128 = 2^7$ bytes $\\implies 7$ bits for Block Offset.<br><br><strong>Step 2: Calculate TAG bits ($M$) for Direct-Mapped Cache</strong><br>• Number of cache lines = $\\frac{2^{23}}{2^7} = 2^{16} \\implies 16$ bits for Line Index.<br>• $M = \\text{Total PA bits} - \\text{Line Index bits} - \\text{Block Offset bits} = 32 - 16 - 7 = 9$ bits.<br>*(Alternatively, $M = 32 - \\log_2(2^{23}) = 32 - 23 = 9$ bits)*.<br><br><strong>Step 3: Calculate TAG bits ($N$) for $K$-Way Set-Associative Cache</strong><br>• $K = 2^L$<br>• Number of sets = $\\frac{\\text{Total lines}}{K} = \\frac{2^{16}}{2^L} = 2^{16-L} \\implies (16 - L)$ bits for Set Index.<br>• $N = \\text{Total PA bits} - \\text{Set Index bits} - \\text{Block Offset bits} = 32 - (16 - L) - 7 = 9 + L$ bits.<br><br><strong>Step 4: Express $N$ in terms of $M$</strong><br>Since $M = 9$, substituting $9$ with $M$ gives:<br>$N = M + L$<br><br>Therefore, the correct option is <strong>A</strong>.",
+  "videoUrl": null
+}

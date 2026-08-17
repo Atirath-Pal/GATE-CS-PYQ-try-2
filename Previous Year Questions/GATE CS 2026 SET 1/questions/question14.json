@@ -1,0 +1,21 @@
+{
+  "id": 14,
+  "year": 2026,
+  "set": 1,
+  "topics": ["Computer Organization", "Addressing Modes"],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Match each addressing mode in <b>List I</b> with a data element or an element of a data structure (in a high-level language) in <b>List II</b>:<br><br><table style=\"width: 100%; border-collapse: collapse; border: 1px solid #ffffff;\"><thead><tr><th style=\"border: 1px solid #ffffff; padding: 8px; text-align: left;\">List I</th><th style=\"border: 1px solid #ffffff; padding: 8px; text-align: left;\">List II</th></tr></thead><tbody><tr><td style=\"border: 1px solid #ffffff; padding: 8px;\">P. Immediate</td><td style=\"border: 1px solid #ffffff; padding: 8px;\">1. Element of an array</td></tr><tr><td style=\"border: 1px solid #ffffff; padding: 8px;\">Q. Indirect</td><td style=\"border: 1px solid #ffffff; padding: 8px;\">2. Pointer</td></tr><tr><td style=\"border: 1px solid #ffffff; padding: 8px;\">R. Base with index</td><td style=\"border: 1px solid #ffffff; padding: 8px;\">3. Element of a record</td></tr><tr><td style=\"border: 1px solid #ffffff; padding: 8px;\">S. Base with offset/displacement</td><td style=\"border: 1px solid #ffffff; padding: 8px;\">4. Constant</td></tr></tbody></table>",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "P–4, Q–3, R–1, S–2",
+    "P–4, Q–2, R–1, S–3",
+    "P–1, Q–4, R–3, S–2",
+    "P–2, Q–3, R–1, S–4"
+  ],
+  "answer": ["B"],
+  "explanation": "<strong>Step 1: Match P (Immediate Addressing)</strong><br>In Immediate Addressing, the value itself is provided inside the instruction. This corresponds to a <strong>Constant</strong> in high-level languages (P $\\rightarrow$ 4).<br><br><strong>Step 2: Match Q (Indirect Addressing)</strong><br>In Indirect Addressing, the address of the operand is stored in a memory location/register. This corresponds to a <strong>Pointer</strong> dereference (Q $\\rightarrow$ 2).<br><br><strong>Step 3: Match R (Base with Index)</strong><br>Base with Index addressing mode calculates the address as $\\text{Base Address} + \\text{Index}$, which is used to access an <strong>Element of an array</strong> where elements are indexed (R $\\rightarrow$ 1).<br><br><strong>Step 4: Match S (Base with offset/displacement)</strong><br>Base with offset/displacement uses a fixed base pointer to the structure and an offset to access a specific field, representing an <strong>Element of a record</strong> or structure (S $\\rightarrow$ 3).<br><br>Therefore, the correct matching is <strong>P–4, Q–2, R–1, S–3</strong> (Option B).",
+  "videoUrl": null
+}

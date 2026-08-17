@@ -1,0 +1,21 @@
+{
+  "id": 28,
+  "year": 2026,
+  "set": 1,
+  "topics": ["Compiler Design", "Parsing"],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Which of the following statements is/are true?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "LL(1) parser uses backtracking",
+    "For a grammar to be LL(1), it must be left-recursive",
+    "For a grammar to be LL(1), it must be left-factored",
+    "The LL(1) parsers are more powerful than the SLR parsers"
+  ],
+  "answer": ["C"],
+  "explanation": "<strong>Step 1: Analyze Statement (A)</strong><br>An $LL(1)$ parser is a deterministic, predictive top-down parser that uses a parsing table and a stack to parse input without backtracking. Hence, Statement (A) is false.<br><br><strong>Step 2: Analyze Statement (B)</strong><br>Left-recursive grammars cause infinite loops in top-down parsing and create FIRST/FOLLOW conflicts in $LL(1)$ parsing tables. Therefore, an $LL(1)$ grammar must <em>not</em> be left-recursive. Statement (B) is false.<br><br><strong>Step 3: Analyze Statement (C)</strong><br>If a grammar contains common prefixes among productions of a non-terminal, the parser cannot uniquely decide which production to choose using $1$ lookahead symbol. Thus, a grammar must be left-factored to be $LL(1)$. Statement (C) is true.<br><br><strong>Step 4: Analyze Statement (D)</strong><br>$SLR(1)$ parsers are strictly more powerful than $LL(1)$ parsers. Every $LL(1)$ grammar is $SLR(1)$, but not all $SLR(1)$ grammars are $LL(1)$. Statement (D) is false.<br><br>Therefore, the correct option is <strong>C</strong>.",
+  "videoUrl": null
+}

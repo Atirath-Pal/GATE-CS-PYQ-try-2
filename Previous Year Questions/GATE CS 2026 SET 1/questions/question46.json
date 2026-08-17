@@ -1,0 +1,28 @@
+{
+  "id": 46,
+  "year": 2026,
+  "set": 1,
+  "topics": [
+    "Engineering Mathematics",
+    "Calculus"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Let $f: \\mathbb{R} \\rightarrow \\mathbb{R}$ be defined as follows:<br><br>$$f(x) = \\left( \\frac{|x|}{2} - x \\right) \\left( x - \\frac{|x|}{2} \\right)$$<br><br>Which of the following statements is/are true?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$f$ has a local maximum",
+    "$f$ has a local minimum",
+    "$f'$ is continuous over $\\mathbb{R}$",
+    "$f'$ is not differentiable over $\\mathbb{R}$"
+  ],
+  "answer": [
+    "A",
+    "C",
+    "D"
+  ],
+  "explanation": "<strong>Step 1: Simplify the function $f(x)$.</strong><br>The function can be written as:<br>$f(x) = -\\left(x - \\frac{|x|}{2}\\right)^2$<br><br>Evaluating for different ranges of $x$:<br>- For $x \\ge 0$, $|x| = x \\implies f(x) = -\\left(x - \\frac{x}{2}\\right)^2 = -\\frac{x^2}{4}$<br>- For $x < 0$, $|x| = -x \\implies f(x) = -\\left(x - \\left(-\\frac{x}{2}\\right)\\right)^2 = -\\left(\\frac{3x}{2}\\right)^2 = -\\frac{9x^2}{4}$<br><br>Thus:<br>$$f(x) = \\begin{cases} -\\frac{x^2}{4} & \\text{if } x \\ge 0 \\\\[6pt] -\\frac{9x^2}{4} & \\text{if } x < 0 \\end{cases}$$<br><br><strong>Step 2: Check for Local Extrema (Statements A and B).</strong><br>For all $x \\neq 0$, $f(x) < 0$, and at $x = 0$, $f(0) = 0$.<br>Since $f(x) \\le f(0)$ for all $x \\in \\mathbb{R}$, $f(x)$ achieves its maximum value $0$ at $x = 0$.<br>Therefore, <strong>Statement A is true</strong> and <strong>Statement B is false</strong>.<br><br><strong>Step 3: Analyze $f'(x)$ and continuity (Statement C).</strong><br>Differentiating $f(x)$:<br>- For $x > 0$: $f'(x) = -\\frac{x}{2}$<br>- For $x < 0$: $f'(x) = -\\frac{9x}{2}$<br>- At $x = 0$: $\\lim_{x \\to 0^+} f'(x) = 0$ and $\\lim_{x \\to 0^-} f'(x) = 0$, giving $f'(0) = 0$.<br><br>Since $\\lim_{x \\to 0} f'(x) = f'(0) = 0$, $f'(x)$ is continuous at $x = 0$ and across all of $\\mathbb{R}$.<br>Therefore, <strong>Statement C is true</strong>.<br><br><strong>Step 4: Check differentiability of $f'(x)$ (Statement D).</strong><br>Check the left-hand and right-hand derivatives of $f'(x)$ at $x = 0$:<br>- Right derivative: $\\lim_{h \\to 0^+} \\frac{f'(h) - f'(0)}{h} = \\lim_{h \\to 0^+} \\frac{-h/2}{h} = -\\frac{1}{2}$<br>- Left derivative: $\\lim_{h \\to 0^-} \\frac{f'(h) - f'(0)}{h} = \\lim_{h \\to 0^-} \\frac{-9h/2}{h} = -\\frac{9}{2}$<br><br>Since the right and left derivatives of $f'$ at $x = 0$ are unequal ($-\\frac{1}{2} \\neq -\\frac{9}{2}$), $f'$ is not differentiable at $x = 0$.<br>Therefore, <strong>Statement D is true</strong>.<br><br>Hence, the correct statements are <strong>A, C, and D</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 51,
+  "year": 2026,
+  "set": 1,
+  "topics": [
+    "Theory of Computation",
+    "Regular Languages"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Let $L_1$ and $L_2$ be two languages over a finite alphabet, such that $L_1 \\cap L_2$ and $L_2$ are regular languages.<br><br>Which of the following statements is/are always true?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$L_1$ is regular",
+    "$L_1 \\cup L_2$ is regular",
+    "$\\overline{L_2}$ is context-free",
+    "$L_1$ is context-free"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Analyze Statement C ($\\overline{L_2}$ is context-free).</strong><br>Since $L_2$ is a regular language, its complement $\\overline{L_2}$ is also a regular language because regular languages are closed under complementation. Furthermore, every regular language is a context-free language. Therefore, $\\overline{L_2}$ is always context-free. Thus, <strong>Statement C is always true</strong>.<br><br><strong>Step 2: Analyze Statements A, B, and D with a counterexample.</strong><br>Let $L_2 = \\emptyset$ (the empty language), which is a regular language.<br>Then $L_1 \\cap L_2 = \\emptyset$, which is also regular, satisfying the given hypothesis regardless of $L_1$.<br><br>Now, choose $L_1 = \\{a^n b^n c^n \\mid n \\ge 0\\}$, which is a non-context-free (and non-regular) language.<br>- $L_1$ is not regular $\\implies$ <strong>Statement A is false</strong>.<br>- $L_1 \\cup L_2 = L_1 \\cup \\emptyset = L_1$, which is not regular $\\implies$ <strong>Statement B is false</strong>.<br>- $L_1$ is not context-free $\\implies$ <strong>Statement D is false</strong>.<br><br>Hence, only <strong>C</strong> is always true.",
+  "videoUrl": null
+}

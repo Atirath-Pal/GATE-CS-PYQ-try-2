@@ -1,0 +1,26 @@
+{
+  "id": 24,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Algorithms",
+    "Asymptotic Analysis"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the following functions, where $n$ is a positive integer.<br><br>$$n^{1/3}, \\quad \\log(n), \\quad \\log(n!), \\quad 2^{\\log(n)}$$<br><br>Which one of the following options lists the functions in increasing order of asymptotic growth rate?<br><br><em>Note:</em> Assume the base of log to be 2.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\log(n), \\quad n^{1/3}, \\quad 2^{\\log(n)}, \\quad \\log(n!)$",
+    "$n^{1/3}, \\quad \\log(n), \\quad \\log(n!), \\quad 2^{\\log(n)}$",
+    "$\\log(n), \\quad n^{1/3}, \\quad \\log(n!), \\quad 2^{\\log(n)}$",
+    "$2^{\\log(n)}, \\quad n^{1/3}, \\quad \\log(n), \\quad \\log(n!)$"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. <strong>Analyze the asymptotic growth rate of each given function:</strong><br>- $\\log(n) = \\Theta(\\log n)$<br>- $n^{1/3} = \\Theta(n^{1/3})$<br>- $2^{\\log_2(n)} = n = \\Theta(n)$<br>- $\\log(n!) = \\Theta(n \\log n)$ (by Stirling's approximation)<br><br>2. <strong>Compare the growth rates:</strong><br>- Logarithmic growth is slower than polynomial growth: $\\log(n) < n^{1/3}$.<br>- Fractional polynomial growth is slower than linear growth: $n^{1/3} < 2^{\\log(n)}$.<br>- Linear growth is slower than linearithmic growth: $2^{\\log(n)} < \\log(n!)$.<br><br>3. <strong>Increasing order of growth rates:</strong><br>$$\\log(n), \\quad n^{1/3}, \\quad 2^{\\log(n)}, \\quad \\log(n!)$$<br><br>Hence, the correct option is <strong>(A)</strong>.",
+  "videoUrl": null
+}

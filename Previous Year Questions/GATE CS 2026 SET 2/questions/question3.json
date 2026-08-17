@@ -1,0 +1,26 @@
+{
+  "id": 3,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "General Aptitude",
+    "Probability"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "A day can only be cloudy or sunny. The probability of a day being cloudy is 0.5, independent of the condition on other days. What is the probability that in any given four days, there will be three cloudy days and one sunny day?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "1/4",
+    "3/4",
+    "2/3",
+    "3/8"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. This problem follows a Binomial Distribution with:<br>- Number of trials ($n$) = $4$ days<br>- Number of cloudy days ($k$) = $3$<br>- Probability of a cloudy day ($p$) = $0.5 = \\frac{1}{2}$<br>- Probability of a sunny day ($q$) = $1 - 0.5 = 0.5 = \\frac{1}{2}$<br><br>2. Using the binomial probability formula $P(X = k) = \\binom{n}{k} p^k q^{n-k}$:<br>$P(\\text{3 cloudy days}) = \\binom{4}{3} \\left(\\frac{1}{2}\\right)^3 \\left(\\frac{1}{2}\\right)^{1}$<br><br>3. Simplify the expression:<br>$P(\\text{3 cloudy days}) = 4 \\times \\frac{1}{8} \\times \\frac{1}{2} = \\frac{4}{16} = \\frac{1}{4}$<br><br>Hence, the correct option is <strong>(A)</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 1,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "General Aptitude",
+    "Verbal Ability"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Expedite, Hasten, Hurry, ________<br><br>Fill the blank by choosing a word with a meaning similar to that of the words given above.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Accelerate",
+    "Retard",
+    "Provide",
+    "Disable"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. The words <strong>Expedite</strong>, <strong>Hasten</strong>, and <strong>Hurry</strong> are all synonyms that mean to cause something to happen more quickly or to speed up a process.<br><br>2. <strong>Accelerate</strong> means to increase in speed or rate, which shares the exact same meaning as the given words.<br><br>3. Evaluating the other choices:<br>- <strong>Retard</strong>: to delay or slow down progress (opposite meaning).<br>- <strong>Provide</strong>: to supply or make available.<br>- <strong>Disable</strong>: to deactivate or limit the functioning of something.<br><br>Therefore, <strong>(A) Accelerate</strong> is the correct answer.",
+  "videoUrl": null
+}

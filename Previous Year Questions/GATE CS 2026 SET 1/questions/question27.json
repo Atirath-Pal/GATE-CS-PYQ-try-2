@@ -1,0 +1,23 @@
+{
+  "id": 27,
+  "year": 2026,
+  "set": 1,
+  "topics": ["C Programming", "Compiler Design"],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider the following C statements:<br><br>Which of the following options is/are correct?",
+  "assetImage": null,
+  "codeBlock": "char *str1 = \"Hello;    /* Statement S1 */\nchar *str2 = \"Hello;\";   /* Statement S2 */\nint *str3 = \"Hello\";     /* Statement S3 */",
+  "options": [
+    "S1 and S2 have syntactic errors",
+    "S2 has a lexical error and S3 has a syntactic error",
+    "S1 has a lexical error and S3 has a semantic error",
+    "S1 has a syntactic error and S3 has a semantic error"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Analyze Statement S1</strong><br>In $S1$, the string literal is not closed with a matching double quote. The lexical analyzer fails to tokenize this unterminated string literal, resulting in a <strong>lexical error</strong>.<br><br><strong>Step 2: Analyze Statement S2</strong><br>In $S2$, the string literal is properly enclosed and the statement is syntactically and semantically correct. There are no errors in $S2$.<br><br><strong>Step 3: Analyze Statement S3</strong><br>In $S3$, the statement follows proper syntactic structure, but attempts to assign a string literal of type $char *$ to a pointer of type $int *$. Since type checking and type compatibility are handled during semantic analysis, this type mismatch results in a <strong>semantic error</strong>.<br><br>Therefore, $S1$ has a lexical error and $S3$ has a semantic error. The correct option is <strong>C</strong>.",
+  "videoUrl": null
+}

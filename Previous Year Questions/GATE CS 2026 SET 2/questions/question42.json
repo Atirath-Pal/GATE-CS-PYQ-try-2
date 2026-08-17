@@ -1,0 +1,26 @@
+{
+  "id": 42,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Database Management Systems",
+    "Functional Dependencies"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "In the context of schema normalization in relational DBMS, consider a set $F$ of functional dependencies. The set of all functional dependencies implied by $F$ is called the closure of $F$. To compute the closure of $F$, Armstrong's Axioms can be applied. Consider $X, Y,$ and $Z$ as sets of attributes over a relational schema. The three rules of Armstrong's Axioms are described as follows.<br><br>Reflexivity: If $Y \\subseteq X$, then $X \\rightarrow Y$<br>Augmentation: If $X \\rightarrow Y$, then $XZ \\rightarrow YZ$ for any $Z$<br>Transitivity: If $X \\rightarrow Y$ and $Y \\rightarrow Z$, then $X \\rightarrow Z$<br><br>The additional rule of Union is defined as follows.<br><br>Union: If $X \\rightarrow Y$ and $X \\rightarrow Z$, then $X \\rightarrow YZ$<br><br>It can be proved that the additional rule of Union is also implied by the three rules of Armstrong's Axioms. Listed below are four combinations of these three rules. Which one of these combinations is both necessary and sufficient for the proof ?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Reflexivity, Augmentation, and Transitivity",
+    "Reflexivity and Augmentation",
+    "Transitivity",
+    "Augmentation and Transitivity"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. <strong>Given Functional Dependencies:</strong><br>- $X \\rightarrow Y$<br>- $X \\rightarrow Z$<br><br>2. <strong>Proof of Union Rule ($X \\rightarrow YZ$):</strong><br>- Apply <strong>Augmentation</strong> to $X \\rightarrow Y$ by augmenting both sides with $Z$:<br>  $$XZ \\rightarrow YZ$$<br>- Apply <strong>Augmentation</strong> to $X \\rightarrow Z$ by augmenting both sides with $X$:<br>  $$XX \\rightarrow XZ \\implies X \\rightarrow XZ$$<br>- Apply <strong>Transitivity</strong> to $X \\rightarrow XZ$ and $XZ \\rightarrow YZ$:<br>  $$X \\rightarrow YZ$$<br><br>3. <strong>Conclusion:</strong><br>The proof requires only the rules of <strong>Augmentation</strong> and <strong>Transitivity</strong>. Reflexivity is not needed.<br><br>Therefore, the combination that is both necessary and sufficient for the proof is <strong>Augmentation and Transitivity</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,22 @@
+{
+  "id": 30,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Data Structures",
+    "Hashing"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "The keys 5, 28, 19, 15, 26, 33, 12, 17, 10 are inserted into a hash table using the hash function $h(k) = k \\bmod 9$. The collisions are resolved by chaining. After all the keys are inserted, the length of the longest chain is __________. (<em>answer in integer</em>)",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 3,
+    "max": 3
+  },
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. <strong>Compute Hash Values for Each Key:</strong><br>Using the hash function $h(k) = k \\bmod 9$:<br>- $h(5) = 5 \\bmod 9 = 5$<br>- $h(28) = 28 \\bmod 9 = 1$<br>- $h(19) = 19 \\bmod 9 = 1$<br>- $h(15) = 15 \\bmod 9 = 6$<br>- $h(26) = 26 \\bmod 9 = 8$<br>- $h(33) = 33 \\bmod 9 = 6$<br>- $h(12) = 12 \\bmod 9 = 3$<br>- $h(17) = 17 \\bmod 9 = 8$<br>- $h(10) = 10 \\bmod 9 = 1$<br><br>2. <strong>Determine Chain Lengths at Each Slot:</strong><br>- Slot 1: $\\{28, 19, 10\\}$ (Length = 3)<br>- Slot 3: $\\{12\\}$ (Length = 1)<br>- Slot 5: $\\{5\\}$ (Length = 1)<br>- Slot 6: $\\{15, 33\\}$ (Length = 2)<br>- Slot 8: $\\{26, 17\\}$ (Length = 2)<br><br>3. <strong>Find Longest Chain:</strong><br>The maximum number of keys mapped to a single slot is 3 (at slot 1).<br><br>Hence, the length of the longest chain is <strong>3</strong>.",
+  "videoUrl": null
+}

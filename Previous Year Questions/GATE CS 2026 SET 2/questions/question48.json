@@ -1,0 +1,28 @@
+{
+  "id": 48,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Theory of Computation",
+    "Context Free Languages"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Let $\\Sigma = \\{a, b, c, d\\}$ and let $L = \\{a^i b^j c^k d^\\ell \\mid i, j, k, \\ell \\ge 0\\}$.<br><br>Which of the following constraints ensure(s) that the language $L$ is context-free?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$i + k = j + \\ell$",
+    "$i = k \\text{ and } j = \\ell$",
+    "$i = \\ell \\text{ and } j = k$",
+    "$i + j = k + \\ell$"
+  ],
+  "answer": [
+    "A",
+    "C",
+    "D"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. <strong>Analyzing Option (A): $i + k = j + \\ell$</strong><br>The constraint can be rewritten as $(i - j) + (k - \\ell) = 0$. A Pushdown Automaton (PDA) can track this counter: push $a$'s onto the stack, pop for $b$'s (or track negative count if $j > i$), adjust for $c$'s, and pop for $d$'s. Since a single stack can track $i - j + k - \\ell = 0$, the language is <strong>context-free</strong>.<br><br>2. <strong>Analyzing Option (B): $i = k$ and $j = \\ell$</strong><br>This gives $L = \\{a^i b^j c^i d^j \\mid i, j \\ge 0\\}$. This language has cross-serial dependencies ($a$'s match $c$'s and $b$'s match $d$'s). A single stack cannot verify both dependencies simultaneously. By the Pumping Lemma for CFLs, this language is <strong>not context-free</strong>.<br><br>3. <strong>Analyzing Option (C): $i = \\ell$ and $j = k$</strong><br>This gives $L = \\{a^i b^j c^j d^i \\mid i, j \\ge 0\\}$. Here, the dependencies are nested ($a$'s match $d$'s, and $b$'s match $c$'s). A PDA pushes $a$'s, pushes $b$'s, pops $b$'s against $c$'s, and then pops $a$'s against $d$'s. Thus, $L$ is <strong>context-free</strong>.<br><br>4. <strong>Analyzing Option (D): $i + j = k + \\ell$</strong><br>This requires the total number of $a$'s and $b$'s to equal the total number of $c$'s and $d$'s. A PDA can push all $a$'s and $b$'s onto the stack, then pop a symbol for each $c$ and $d$. Thus, $L$ is <strong>context-free</strong>.<br><br>Therefore, options <strong>(A), (C), and (D)</strong> are correct.",
+  "videoUrl": null
+}

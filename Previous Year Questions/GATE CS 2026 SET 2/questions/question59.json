@@ -1,0 +1,22 @@
+{
+  "id": 59,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Digital Logic",
+    "Combinational Circuits"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the digital circuit shown below with two input lines A and B, two select lines S0 and S1, and an output line Y. The blocks Q and M represent active high 2:4 decoder and 4-to-1 multiplexer, respectively. Out of 16 possible input combinations, the number of combinations that produce $Y=1$ is ____________.<br>(answer in integer)<br><br><i>Note:</i> One input combination is an instance of [A B S1 S0].",
+  "assetImage": "question59.png",
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "max": 6,
+    "min": 6
+  },
+  "explanation": "<strong>Step 1: Multiplexer M Output Expression</strong><br>For a 4-to-1 multiplexer with select lines $(S_1, S_0)$, the output $Y$ is:<br>$Y = \\overline{S_1}\\ \\overline{S_0} \\cdot I_0 + \\overline{S_1} S_0 \\cdot I_1 + S_1 \\overline{S_0} \\cdot I_2 + S_1 S_0 \\cdot I_3$<br><br>From the given circuit diagram:<br>• $I_0 = D_0$<br>• $I_1 = 0$<br>• $I_2 = 1$<br>• $I_3 = D_3$<br><br>Substituting the input values into $Y$ gives:<br>$Y = \\overline{S_1}\\ \\overline{S_0} \\cdot D_0 + S_1 \\overline{S_0} \\cdot 1 + S_1 S_0 \\cdot D_3$<br><br><strong>Step 2: Decoder Q Output Expressions</strong><br>For an active-high 2:4 decoder with inputs $A$ and $B$:<br>• $D_0 = \\overline{A}\\ \\overline{B}$<br>• $D_3 = A B$<br><br><strong>Step 3: Analyze Combinations for $(S_1, S_0)$</strong><br>• <strong>Case 1: $(S_1, S_0) = (0, 0)$</strong><br>$Y = D_0 = \\overline{A}\\ \\overline{B}$. Output $Y=1$ only when $A=0, B=0$ (1 combination: [0 0 0 0]).<br><br>• <strong>Case 2: $(S_1, S_0) = (0, 1)$</strong><br>$Y = 0$ for all input combinations of $A, B$ (0 combinations).<br><br>• <strong>Case 3: $(S_1, S_0) = (1, 0)$</strong><br>$Y = 1$ for all 4 input combinations of $A, B$ (4 combinations: [0 0 1 0], [0 1 1 0], [1 0 1 0], [1 1 1 0]).<br><br>• <strong>Case 4: $(S_1, S_0) = (1, 1)$</strong><br>$Y = D_3 = A B$. Output $Y=1$ only when $A=1, B=1$ (1 combination: [1 1 1 1]).<br><br><strong>Step 4: Total Count</strong><br>Total combinations giving $Y = 1$ are $1 + 0 + 4 + 1 = 6$.<br><br>Hence, the number of input combinations that produce $Y=1$ is <strong>6</strong>.",
+  "videoUrl": null
+}

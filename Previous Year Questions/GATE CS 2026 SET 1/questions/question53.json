@@ -1,0 +1,28 @@
+{
+  "id": 53,
+  "year": 2026,
+  "set": 1,
+  "topics": [
+    "Compiler Design",
+    "Syntax Directed Translation"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the following two syntax-directed definitions SDD1 and SDD2 for type declarations.<br><br><table border=\"0\" style=\"width:100%; border-collapse: collapse;\"><tr><td style=\"vertical-align: top; width: 48%;\"><table style=\"width:100%; border-collapse: collapse; border: 1px solid white;\"><tr><th colspan=\"2\" style=\"border: 1px solid white; padding: 6px; text-align: center;\">SDD1</th></tr><tr><th style=\"border: 1px solid white; border-bottom: 3px double white; padding: 6px; text-align: center;\">Grammar (G1)</th><th style=\"border: 1px solid white; border-bottom: 3px double white; padding: 6px; text-align: center;\">Semantic Rules</th></tr><tr><td style=\"border: 1px solid white; padding: 6px;\">$D \\rightarrow T\\,V$</td><td style=\"border: 1px solid white; padding: 6px;\">$D.type = T.type$<br>$V.type = T.type$</td></tr><tr><td style=\"border: 1px solid white; padding: 6px;\">$T \\rightarrow \\text{int}$</td><td style=\"border: 1px solid white; padding: 6px;\">$T.type = \\text{int}$</td></tr><tr><td style=\"border: 1px solid white; padding: 6px;\">$T \\rightarrow \\text{float}$</td><td style=\"border: 1px solid white; padding: 6px;\">$T.type = \\text{float}$</td></tr><tr><td style=\"border: 1px solid white; padding: 6px;\">$V \\rightarrow V_1\\,\\text{id}$</td><td style=\"border: 1px solid white; padding: 6px;\">$V_1.type = V.type$<br>$\\text{put}(\\text{id.entry}, V.type)$</td></tr><tr><td style=\"border: 1px solid white; padding: 6px;\">$V \\rightarrow \\text{id}$</td><td style=\"border: 1px solid white; padding: 6px;\">$\\text{put}(\\text{id.entry}, V.type)$</td></tr></table></td><td style=\"width: 4%;\"></td><td style=\"vertical-align: top; width: 48%;\"><table style=\"width:100%; border-collapse: collapse; border: 1px solid white;\"><tr><th colspan=\"2\" style=\"border: 1px solid white; padding: 6px; text-align: center;\">SDD2</th></tr><tr><th style=\"border: 1px solid white; border-bottom: 3px double white; padding: 6px; text-align: center;\">Grammar (G2)</th><th style=\"border: 1px solid white; border-bottom: 3px double white; padding: 6px; text-align: center;\">Semantic Rules</th></tr><tr><td style=\"border: 1px solid white; padding: 6px;\">$D \\rightarrow D_1\\,\\text{id}$</td><td style=\"border: 1px solid white; padding: 6px;\">$D.type = D_1.type$<br>$\\text{put}(\\text{id.entry}, D_1.type)$</td></tr><tr><td style=\"border: 1px solid white; padding: 6px;\">$D \\rightarrow T\\,\\text{id}$</td><td style=\"border: 1px solid white; padding: 6px;\">$D.type = T.type$<br>$\\text{put}(\\text{id.entry}, T.type)$</td></tr><tr><td style=\"border: 1px solid white; padding: 6px;\">$T \\rightarrow \\text{int}$</td><td style=\"border: 1px solid white; padding: 6px;\">$T.type = \\text{int}$</td></tr><tr><td style=\"border: 1px solid white; padding: 6px;\">$T \\rightarrow \\text{float}$</td><td style=\"border: 1px solid white; padding: 6px;\">$T.type = \\text{float}$</td></tr></table></td></tr></table><br><br>$D$ is the start symbol, and $\\text{int}$, $\\text{float}$ and $\\text{id}$ are the three terminals. The non-terminal $V_1$ is the same as $V$ and the non-terminal $D_1$ is the same as $D$. Here, the subscript is used to differentiate the grammar symbols on the two sides of a production. The function $\\text{put}$ updates the symbol table with the type information for an identifier.<br><br>Let P and Q be the languages specified by grammars G1 and G2, respectively.<br><br>Which of the following statements is/are true?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "The languages P and Q are the same",
+    "SDD2 is S-attributed and contains only synthesized attributes",
+    "SDD1 is L-attributed and contains only inherited attributes",
+    "The specifications of SDD1 and SDD2 are such that the same entries get added to the symbol table"
+  ],
+  "answer": [
+    "A",
+    "B",
+    "D"
+  ],
+  "explanation": "<strong>Step 1: Analyze Option A.</strong><br>Both grammars $G_1$ and $G_2$ generate sequences consisting of a type specifier ($\text{int}$ or $\text{float}$) followed by one or more identifiers ($\text{id}$). Thus, $P = L(G_1) = L(G_2) = Q$. Therefore, <strong>Option A is true</strong>.<br><br><strong>Step 2: Analyze Option B.</strong><br>In SDD2, all semantic rules compute attributes of head non-terminals using only attributes of their children nodes. Since all attributes are synthesized and evaluated bottom-up, SDD2 is S-attributed and contains only synthesized attributes. Therefore, <strong>Option B is true</strong>.<br><br><strong>Step 3: Analyze Option C.</strong><br>In SDD1, attributes such as $V.type$ and $V_1.type$ are inherited (passed top-down/sideways), but attributes such as $T.type$ and $D.type$ are synthesized. Because SDD1 contains both synthesized and inherited attributes, it does not contain <i>only</i> inherited attributes. Therefore, <strong>Option C is false</strong>.<br><br><strong>Step 4: Analyze Option D.</strong><br>For any valid declaration string, SDD1 passes the type information down through inherited attributes to call $\text{put}(\text{id.entry}, \text{type})$, whereas SDD2 synthesizes the type information up to $D$ to perform the same $\text{put}(\text{id.entry}, \text{type})$ action for each identifier. Thus, the exact same symbol table entries are created in both cases. Therefore, <strong>Option D is true</strong>.<br><br>Hence, options <strong>A, B, and D</strong> are true.",
+  "videoUrl": null
+}

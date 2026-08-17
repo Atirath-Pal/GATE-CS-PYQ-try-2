@@ -1,0 +1,22 @@
+{
+  "id": 63,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Engineering Mathematics",
+    "Probability"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Suppose an unbiased coin is tossed 6 times. Each coin toss is independent of all previous coin tosses. Let $E_1$ be the event that among the second, fourth, and sixth coin tosses, there are at least two heads. Let $E_2$ be the event that among the first, second, third, and fifth coin tosses, there are equal number of heads and tails.<br><br>The conditional probability $P(E_1|E_2)$ is equal to ____________. <em>(rounded off to one decimal place)</em>",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 0.5,
+    "max": 0.5
+  },
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>Let the outcome of the 6 coin tosses be represented by $(T_1, T_2, T_3, T_4, T_5, T_6)$.<br><br>1. <strong>Analyzing Event $E_2$:</strong><br>Event $E_2$ involves tosses $\\{1, 2, 3, 5\\}$. For equal heads and tails out of 4 tosses, exactly 2 must be Heads and 2 must be Tails.<br>• If $T_2 = \\text{Head (H)}$: Out of $\\{T_1, T_3, T_5\\}$, exactly 1 must be Head and 2 must be Tails. Number of favorable outcomes = $\\binom{3}{1} = 3$.<br>• If $T_2 = \\text{Tail (T)}$: Out of $\\{T_1, T_3, T_5\\}$, exactly 2 must be Heads and 1 must be Tail. Number of favorable outcomes = $\\binom{3}{2} = 3$.<br><br>Since $T_4$ and $T_6$ are independent of $E_2$ and have $2 \\times 2 = 4$ possible outcomes:<br>Total outcomes in $E_2 = (3 + 3) \\times 4 = 24$.<br><br>2. <strong>Analyzing Event $E_1 \\cap E_2$:</strong><br>Event $E_1$ requires at least two Heads among $\\{T_2, T_4, T_6\\}$.<br>• <strong>Case 1 ($T_2 = H$):</strong> We already have 1 Head. To satisfy $E_1$, we need at least 1 Head among $\\{T_4, T_6\\}$. Outcomes for $(T_4, T_6)$ can be $(H,H), (H,T), (T,H)$, which gives 3 possibilities.<br>Number of outcomes in $E_1 \\cap E_2$ for $T_2 = H$ is $3 \\text{ (from } E_2 \\text{)} \\times 3 \\text{ (from } E_1 \\text{)} = 9$.<br><br>• <strong>Case 2 ($T_2 = T$):</strong> We need both $T_4$ and $T_6$ to be Heads to satisfy $E_1$, giving only 1 outcome $(H,H)$.<br>Number of outcomes in $E_1 \\cap E_2$ for $T_2 = T$ is $3 \\text{ (from } E_2 \\text{)} \\times 1 \\text{ (from } E_1 \\text{)} = 3$.<br><br>Total outcomes in $E_1 \\cap E_2 = 9 + 3 = 12$.<br><br>3. <strong>Calculating Conditional Probability $P(E_1|E_2)$:</strong><br>$$P(E_1|E_2) = \\frac{|E_1 \\cap E_2|}{|E_2|} = \\frac{12}{24} = 0.5$$<br><br>Thus, $P(E_1|E_2) = 0.5$.",
+  "videoUrl": null
+}

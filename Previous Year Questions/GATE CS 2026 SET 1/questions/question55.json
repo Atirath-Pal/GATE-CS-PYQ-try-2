@@ -1,0 +1,27 @@
+{
+  "id": 55,
+  "year": 2026,
+  "set": 1,
+  "topics": [
+    "Algorithms",
+    "Graph Algorithms"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "An undirected, unweighted, simple graph $G(V, E)$ is said to be 2-colorable if there exists a function $c: V \\rightarrow \\{0, 1\\}$ such that for every $(u, v) \\in E, c(u) \\neq c(v)$.<br><br>Which of the following statements about 2-colorable graphs is/are true?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "If $G$ is 2-colorable, then $G$ may contain cycles of odd length",
+    "If $G$ is 2-colorable, then $G$ may contain cycles of even length",
+    "An optimal algorithm for testing whether $G$ is 2-colorable runs in time $\\Theta(|V| + |E|)$, if $G$ is represented as an adjacency list",
+    "An optimal algorithm for testing whether $G$ is 2-colorable runs in time $\\Theta(|E| \\log |V|)$, if $G$ is represented as an adjacency list"
+  ],
+  "answer": [
+    "B",
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Understand 2-Colorable Graphs (Bipartite Graphs).</strong><br>A graph $G$ is 2-colorable if and only if it is bipartite. By Koenig's Theorem, a graph is bipartite (2-colorable) if and only if it contains no cycles of odd length.<br><br><strong>Step 2: Evaluate Statements A and B.</strong><br>- Since a 2-colorable graph cannot have any odd cycles, <strong>Statement A is false</strong>.<br>- A 2-colorable graph can contain cycles of even length (for instance, a cycle graph $C_4$ is 2-colorable). Thus, <strong>Statement B is true</strong>.<br><br><strong>Step 3: Evaluate Statements C and D.</strong><br>- 2-colorability can be tested by traversing the graph using Breadth-First Search (BFS) or Depth-First Search (DFS). For an adjacency list representation, BFS/DFS inspects all vertices and edges in $\\Theta(|V| + |E|)$ time, which is optimal.<br>- Therefore, <strong>Statement C is true</strong> and <strong>Statement D is false</strong>.<br><br>Hence, options <strong>B and C</strong> are true.",
+  "videoUrl": null
+}

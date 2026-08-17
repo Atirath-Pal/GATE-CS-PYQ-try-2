@@ -1,0 +1,22 @@
+{
+  "id": 61,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Programming and Data Structures",
+    "Recursion"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the following ANSI-C function.<br><br>The maximum possible value that can be returned from this function is ____________. (answer in integer)<br><br><i>Note:</i> Ignore syntax errors (if any) in the function.",
+  "assetImage": null,
+  "codeBlock": "int func(int start, int end){\n    int length=end+1-start;\n    if((length<1)||(start<0)||(end<0)){ return(0); }\n    if(length%3==0){\n        return(func(start+1, end));\n    } else if(length%3==1){\n        return(1+func(start, end-1));\n    } else {\n        return(func(start+2, end));\n    }\n}",
+  "options": [],
+  "answer": {
+    "min": 1,
+    "max": 1
+  },
+  "explanation": "<strong>Step 1: Analyze the recursive logic based on $\\text{length} \\pmod 3$</strong><br>Let $L = \\text{end} + 1 - \\text{start}$.<br>• If $L < 1$, $\\text{start} < 0$, or $\\text{end} < 0$, the base case returns $0$.<br>• If $L \\pmod 3 == 0$, it calls <code>func(start+1, end)</code>. The new length becomes $L - 1 \\equiv 2 \\pmod 3$. Return value added = $+0$.<br>• If $L \\pmod 3 == 1$, it calls <code>1 + func(start, end-1)</code>. The new length becomes $L - 1 \\equiv 0 \\pmod 3$. Return value added = $+1$.<br>• If $L \\pmod 3 == 2$, it calls <code>func(start+2, end)</code>. The new length becomes $L - 2 \\equiv 0 \\pmod 3$. Return value added = $+0$.<br><br><strong>Step 2: Trace state transitions for $L \\pmod 3$</strong><br>• From $L \\pmod 3 = 1$, the length transitions to $0 \\pmod 3$ and adds $+1$.<br>• From $L \\pmod 3 = 0$, the length transitions to $2 \\pmod 3$ and adds $+0$.<br>• From $L \\pmod 3 = 2$, the length transitions to $0 \\pmod 3$ and adds $+0$.<br><br>Notice that starting from $0$ or $2 \\pmod 3$, the remainder toggles only between $0$ and $2$, and never reaches $1 \\pmod 3$.<br>Therefore, the $+1$ addition can occur <strong>at most once</strong> (only if the initial $L \\equiv 1 \\pmod 3$).<br><br><strong>Step 3: Conclusion</strong><br>The maximum possible value returned by the function is <strong>1</strong>.",
+  "videoUrl": null
+}

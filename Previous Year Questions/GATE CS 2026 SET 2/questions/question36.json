@@ -1,0 +1,26 @@
+{
+  "id": 36,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Graph Theory",
+    "Discrete Mathematics"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider a complete graph $K_n$ with $n$ vertices ($n > 4$). Note that multiple spanning trees can be constructed over $K_n$. Each of these spanning trees is represented as a set of edges. The Jaccard coefficient between any two sets is defined as the ratio of the size of the intersection of the two sets to the size of the union of the two sets.<br><br>Which one of the following options gives the lowest possible value for the Jaccard coefficient between any two spanning trees of $K_n$ ?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\frac{1}{n}$",
+    "$\\frac{1}{2n - 3}$",
+    "$0$",
+    "$\\frac{1}{n - 1}$"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. <strong>Definition of Jaccard Coefficient:</strong><br>For two spanning trees $T_1$ and $T_2$ represented by their edge sets $E_1$ and $E_2$, the Jaccard coefficient is:<br>$$J(E_1, E_2) = \\frac{|E_1 \\cap E_2|}{|E_1 \\cup E_2|}$$<br><br>2. <strong>Existence of Edge-Disjoint Spanning Trees:</strong><br>By Nash-Williams / Tutte theorem, a complete graph $K_n$ contains $\\lfloor n/2 \\rfloor$ edge-disjoint spanning trees.<br>For $n > 4$, $\\lfloor n/2 \\rfloor \\ge 2$, which guarantees the existence of at least two spanning trees $T_1$ and $T_2$ in $K_n$ that share no common edges.<br><br>3. <strong>Minimum Value Calculation:</strong><br>Since $T_1$ and $T_2$ can be chosen to be edge-disjoint, $|E_1 \\cap E_2| = 0$.<br>Thus:<br>$$J(E_1, E_2) = \\frac{0}{|E_1 \\cup E_2|} = 0$$<br><br>Therefore, the lowest possible value for the Jaccard coefficient is <strong>0</strong>.",
+  "videoUrl": null
+}

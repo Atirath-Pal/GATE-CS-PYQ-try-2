@@ -1,0 +1,22 @@
+{
+  "id": 34,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Computer Organization",
+    "Floating Point Representation"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "The 32-bit IEEE 754 single precision representation of a number is 0xC2710000. The number in decimal representation is __________. (<em>rounded off to two decimal places</em>)",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": -60.25,
+    "max": -60.25
+  },
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. <strong>Convert Hexadecimal to 32-bit Binary:</strong><br>The given hexadecimal value is <code>0xC2710000</code>.<br>Converting each hex digit to binary:<br>$$C = 1100, \\quad 2 = 0010, \\quad 7 = 0111, \\quad 1 = 0001, \\quad 0 = 0000, \\dots$$<br>The 32-bit binary representation is:<br>$$\\underbrace{1}_{\\text{Sign bit (S)}} \\quad \\underbrace{10000100}_{\\text{Exponent (E)}} \\quad \\underbrace{11100010000000000000000}_{\\text{Mantissa (M)}}$$<br><br>2. <strong>Extract IEEE 754 Fields:</strong><br>- <strong>Sign bit ($S$):</strong> $1 \\implies \\text{Negative}$<br>- <strong>Biased Exponent ($E$):</strong> $10000100_2 = 128 + 4 = 132$<br>- <strong>Actual Exponent ($e$):</strong> $E - 127 = 132 - 127 = 5$<br>- <strong>Mantissa ($M$):</strong> $1110001_2$<br><br>3. <strong>Calculate Decimal Value:</strong><br>$$\\text{Value} = (-1)^S \\times (1.M)_2 \\times 2^e$$<br>$$\\text{Value} = -1 \\times (1.1110001)_2 \\times 2^5$$<br>Shifting the binary point 5 positions to the right:<br>$$\\text{Value} = -(111100.01)_2$$<br>Converting $(111100.01)_2$ to decimal:<br>- Integer part: $111100_2 = 32 + 16 + 8 + 4 = 60$<br>- Fractional part: $.01_2 = 0 \\cdot 2^{-1} + 1 \\cdot 2^{-2} = 0.25$<br><br>$$\\text{Value} = -60.25$$<br><br>Therefore, the number in decimal representation is <strong>-60.25</strong>.",
+  "videoUrl": null
+}

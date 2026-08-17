@@ -1,0 +1,26 @@
+{
+  "id": 44,
+  "year": 2026,
+  "set": 1,
+  "topics": [
+    "Computer Networks",
+    "TCP Congestion Control"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "A TCP sender successfully establishes a connection with a TCP receiver and starts the transmission of segments. The TCP congestion control mechanism’s slow-start threshold is set to 10000 segments. Assume that the round-trip time is fixed at 1 millisecond. Assume that the sender always has data to send, the segments are numbered from 1, and no segment is lost. Let $t$ denote the time (in milliseconds) at which the transmission of segment number 2000 starts.<br><br>Which one of the following options is correct?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$9 \\le t < 10$",
+    "$10 \\le t < 11$",
+    "$11 \\le t < 12$",
+    "$12 \\le t < 13$"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step 1: Understand TCP Slow-Start Phase.</strong><br>In TCP slow-start, the congestion window size ($cwnd$) starts at $1$ segment and doubles every Round-Trip Time (RTT = $1\\text{ ms}$) until it reaches the slow-start threshold ($ssthresh = 10000$ segments).<br><br><strong>Step 2: Trace the number of segments transmitted per RTT.</strong><br>- <strong>RTT 1 ($t \\in [0, 1)$ ms):</strong> $cwnd = 1$. Transmits Segment $1$. (Cumulative segments: $1$)<br>- <strong>RTT 2 ($t \\in [1, 2)$ ms):</strong> $cwnd = 2$. Transmits Segments $2$ to $3$. (Cumulative segments: $3$)<br>- <strong>RTT 3 ($t \\in [2, 3)$ ms):</strong> $cwnd = 4$. Transmits Segments $4$ to $7$. (Cumulative segments: $7$)<br>- <strong>RTT 4 ($t \\in [3, 4)$ ms):</strong> $cwnd = 8$. Transmits Segments $8$ to $15$. (Cumulative segments: $15$)<br>- <strong>RTT 5 ($t \\in [4, 5)$ ms):</strong> $cwnd = 16$. Transmits Segments $16$ to $31$. (Cumulative segments: $31$)<br>- <strong>RTT 6 ($t \\in [5, 6)$ ms):</strong> $cwnd = 32$. Transmits Segments $32$ to $63$. (Cumulative segments: $63$)<br>- <strong>RTT 7 ($t \\in [6, 7)$ ms):</strong> $cwnd = 64$. Transmits Segments $64$ to $127$. (Cumulative segments: $127$)<br>- <strong>RTT 8 ($t \\in [7, 8)$ ms):</strong> $cwnd = 128$. Transmits Segments $128$ to $255$. (Cumulative segments: $255$)<br>- <strong>RTT 9 ($t \\in [8, 9)$ ms):</strong> $cwnd = 256$. Transmits Segments $256$ to $511$. (Cumulative segments: $511$)<br>- <strong>RTT 10 ($t \\in [9, 10)$ ms):</strong> $cwnd = 512$. Transmits Segments $512$ to $1023$. (Cumulative segments: $1023$)<br>- <strong>RTT 11 ($t \\in [10, 11)$ ms):</strong> $cwnd = 1024$. Transmits Segments $1024$ to $2047$. (Cumulative segments: $2047$)<br><br><strong>Step 3: Determine the transmission time for Segment 2000.</strong><br>Segment number $2000$ falls into the range $[1024, 2047]$, which is transmitted during RTT 11 (the time window $10 \\le t < 11$ ms).<br><br>Hence, option <strong>B</strong> is correct.",
+  "videoUrl": null
+}

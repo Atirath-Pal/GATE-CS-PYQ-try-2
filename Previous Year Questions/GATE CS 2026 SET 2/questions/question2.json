@@ -1,0 +1,26 @@
+{
+  "id": 2,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "General Aptitude",
+    "Spatial Aptitude"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "A black square PQRS has been cut into two parts. One part of it is shown in Panel I. Which one of the shapes in Panel II is the other part?",
+  "assetImage": "question2.png",
+  "codeBlock": null,
+  "options": [
+    "(i)",
+    "(ii)",
+    "(iii)",
+    "(iv)"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Understand the requirement.</strong><br>A solid black square $PQRS$ has been split into two complementary pieces. Panel I displays one piece, where the white region represents the missing shape required to complete the square.<br><br><strong>Step 2: Analyze the white region in Panel I.</strong><br>The required piece must perfectly fill the white space in Panel I without any overlap or missing segments.<br><br><strong>Step 3: Match with Panel II shapes.</strong><br>Comparing the geometry, orientation, and interlocking projections of the white cutout with the figures in Panel II, shape <strong>(iii)</strong> corresponds exactly to the missing piece.<br><br>Thus, the correct option is <strong>(C)</strong>.",
+  "videoUrl": null
+}

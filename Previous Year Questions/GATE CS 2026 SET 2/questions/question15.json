@@ -1,0 +1,26 @@
+{
+  "id": 15,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Database Management Systems",
+    "DBMS Architecture"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "In the context of DBMS, consider the two sets <strong>T</strong> and <strong>S</strong> given below.<br><br><table border=\"1\" style=\"border-collapse: collapse; border: 1px solid white;\"><thead><tr><th style=\"border: 1px solid white; padding: 8px; text-align: center;\"><strong>T</strong></th><th style=\"border: 1px solid white; padding: 8px; text-align: center;\"><strong>S</strong></th></tr></thead><tbody><tr><td style=\"border: 1px solid white; padding: 8px;\">I: Logical schema</td><td style=\"border: 1px solid white; padding: 8px;\">L: Views</td></tr><tr><td style=\"border: 1px solid white; padding: 8px;\">II: Physical schema</td><td style=\"border: 1px solid white; padding: 8px;\">M: File organization and indexes</td></tr><tr><td style=\"border: 1px solid white; padding: 8px;\">III: External schema</td><td style=\"border: 1px solid white; padding: 8px;\">N: Relations</td></tr></tbody></table><br>Which one of the following is the correct match from <strong>T</strong> to <strong>S</strong> ?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "I – L, II – M, III – N",
+    "I – M, II – L, III – N",
+    "I – N, II – M, III – L",
+    "I – N, II – L, III – M"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. <strong>Logical Schema (I):</strong> Defines the conceptual layout of the database, including table structures and relationships, which correspond to <strong>Relations (N)</strong>. Thus, <strong>I matches with N</strong>.<br><br>2. <strong>Physical Schema (II):</strong> Describes the low-level physical storage details of data on disk, which includes <strong>File organization and indexes (M)</strong>. Thus, <strong>II matches with M</strong>.<br><br>3. <strong>External Schema (III):</strong> Defines the view level tailored for specific users or user groups, implemented via <strong>Views (L)</strong>. Thus, <strong>III matches with L</strong>.<br><br>Therefore, the correct matching is <strong>I – N, II – M, III – L</strong>, which corresponds to Option <strong>(C)</strong>.",
+  "videoUrl": null
+}

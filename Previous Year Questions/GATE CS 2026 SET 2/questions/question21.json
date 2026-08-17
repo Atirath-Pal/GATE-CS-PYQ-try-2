@@ -1,0 +1,26 @@
+{
+  "id": 21,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Computer Networks",
+    "Delay and Throughput"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider a file of size 4 million bytes being transferred between two hosts connected via a path consisting of three consecutive links of bandwidth 2 Mbps, 500 kbps, and 1 Mbps, respectively. All processing delays and propagation delays are negligible. Assume that there is no other background traffic over the path and no other additional overhead to transfer the file.<br><br>Which one of the following is the total time (in seconds) to transfer the file?<br><br><em>Note:</em> $1\\text{M}=10^6$, $1\\text{k}=10^3$",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "731",
+    "64",
+    "8",
+    "16"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. <strong>Calculate File Size in Bits:</strong><br>File size $= 4 \\text{ million bytes} = 4 \\times 10^6 \\text{ bytes} = 4 \\times 10^6 \\times 8 \\text{ bits} = 32 \\times 10^6 \\text{ bits}$.<br><br>2. <strong>Identify Bottleneck Bandwidth:</strong><br>The path consists of three links with bandwidths:<br>- Link 1: $2 \\text{ Mbps} = 2 \\times 10^6 \\text{ bps}$<br>- Link 2: $500 \\text{ kbps} = 0.5 \\times 10^6 \\text{ bps}$<br>- Link 3: $1 \\text{ Mbps} = 1 \\times 10^6 \\text{ bps}$<br><br>The throughput across the end-to-end path is constrained by the bottleneck link (the link with minimum bandwidth):<br>$$\\text{Bottleneck Bandwidth} = 500 \\text{ kbps} = 0.5 \\times 10^6 \\text{ bps}$$<br><br>3. <strong>Calculate Total Transfer Time:</strong><br>$$\\text{Total Time} = \\frac{\\text{File Size}}{\\text{Bottleneck Bandwidth}} = \\frac{32 \\times 10^6 \\text{ bits}}{0.5 \\times 10^6 \\text{ bits/s}} = 64 \\text{ seconds}$$<br><br>Therefore, the correct option is <strong>(B)</strong>.",
+  "videoUrl": null
+}

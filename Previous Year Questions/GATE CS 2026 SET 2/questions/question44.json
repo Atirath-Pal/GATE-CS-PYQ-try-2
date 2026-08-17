@@ -1,0 +1,26 @@
+{
+  "id": 44,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Computer Organization and Architecture",
+    "Instruction Set Architecture"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider a processor that has 16 general purpose registers and it uses 2-byte instruction format for all its instructions. Variable-sized opcodes are permitted. There are three different types of instructions; M-type, R-type, and C-type. Each M-type instruction has 2 register operands and a 6-bit immediate operand. Each R-type instruction has 3 register operands. Each C-type instruction has a register operand and a 6-bit offset value. If there are 2 unique M-type opcodes and 7 unique R-type opcodes, which one of the following options gives the maximum number of unique opcodes possible for C-type instructions?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "8",
+    "4",
+    "64",
+    "16"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. <strong>Instruction Size & Register Representation:</strong><br>- Total Instruction Length = 2 bytes = 16 bits.<br>- Number of general purpose registers = 16 $\\implies \\log_2(16) = 4$ bits required to address each register.<br><br>2. <strong>M-type Instruction Analysis:</strong><br>- Operands: 2 registers ($2 \\times 4 = 8$ bits) + 6-bit immediate = 14 bits.<br>- Opcode Size = $16 - 14 = 2$ bits.<br>- Total 2-bit opcode capacity = $2^2 = 4$.<br>- Used M-type opcodes = 2.<br>- Unused 2-bit opcodes = $4 - 2 = 2$.<br><br>3. <strong>R-type Instruction Analysis:</strong><br>- Operands: 3 registers ($3 \\times 4 = 12$ bits).<br>- Opcode Size = $16 - 12 = 4$ bits.<br>- Available 4-bit opcodes expanded from unused 2-bit opcodes = $2 \\times 2^{(4-2)} = 8$.<br>- Used R-type opcodes = 7.<br>- Unused 4-bit opcodes = $8 - 7 = 1$.<br><br>4. <strong>C-type Instruction Analysis:</strong><br>- Operands: 1 register ($4$ bits) + 6-bit offset = 10 bits.<br>- Opcode Size = $16 - 10 = 6$ bits.<br>- Maximum C-type opcodes expanded from 1 unused 4-bit opcode = $1 \\times 2^{(6-4)} = 2^2 = 4$.<br><br>Hence, the maximum number of unique opcodes possible for C-type instructions is <strong>4</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,21 @@
+{
+  "id": 16,
+  "year": 2026,
+  "set": 1,
+  "topics": ["Computer Organization", "Pipelining"],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Which one of the following dependencies among the register operands of different instructions can cause a data hazard in a pipelined processor?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Read-after-read",
+    "Read-after-write",
+    "Write-after-read",
+    "Write-after-write"
+  ],
+  "answer": ["B"],
+  "explanation": "<strong>Step 1: Understand Data Dependencies and Hazards</strong><br>Data hazards occur when an instruction depends on the result of a previous instruction that has not yet completed execution or written back its result to the register file.<br><br><strong>Step 2: Analyze the Types of Dependencies</strong><br>• <strong>Read-After-Write (RAW):</strong> A true data dependency where a subsequent instruction attempts to read a register before a prior instruction writes its updated value to it. This causes a data hazard in a standard pipelined processor.<br>• <strong>Read-After-Read (RAR):</strong> Both instructions read the same register, which never causes a hazard.<br>• <strong>Write-After-Read (WAR) & Write-After-Write (WAW):</strong> These are anti-dependencies and output dependencies (name dependencies) that can only cause hazards in out-of-order execution or superscalar architectures, not in standard in-order pipelines.<br><br>Therefore, <strong>Read-after-write</strong> can cause a data hazard (Option B).",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 11,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Mathematical Logic",
+    "Predicate Logic"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "For two different persons $x$ and $y$, the predicate $M(x, y)$ denotes that $x$ knows $y$. Consider the following statement.<br><br><em>There is a person who does not know anyone else, but that person is known by everyone else.</em><br><br>Which one of the following expressions represents the above statement?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$(\\exists y)(\\forall x) ((x \\neq y) \\rightarrow (M(x, y) \\wedge \\neg M(y, x)))$",
+    "$(\\forall y)(\\exists x) ((x \\neq y) \\rightarrow (M(x, y) \\wedge \\neg M(y, x)))$",
+    "$(\\exists y)(\\exists x) ((x \\neq y) \\rightarrow (M(x, y) \\wedge \\neg M(y, x)))$",
+    "$(\\forall y)(\\forall x) ((x \\neq y) \\rightarrow (M(x, y) \\wedge \\neg M(y, x)))$"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. Break down the given statement into logical components:<br>- <strong>\"There is a person...\"</strong>: This indicates an existential quantification for a specific person, say $y$, i.e., $(\\exists y)$.<br>- <strong>\"...for everyone else ($x \\neq y$)\"</strong>: This applies universally to all other persons $x$, i.e., $(\\forall x) (x \\neq y \\rightarrow \\dots)$.<br><br>2. Analyze the condition for each person $x \\neq y$:<br>- <strong>\"that person is known by everyone else\"</strong>: $x$ knows $y$, represented by $M(x, y)$.<br>- <strong>\"does not know anyone else\"</strong>: $y$ does not know $x$, represented by $\\neg M(y, x)$.<br>- Combining both conditions with a logical AND gives: $M(x, y) \\wedge \\neg M(y, x)$.<br><br>3. Combine all parts together:<br>$(\\exists y)(\\forall x) ((x \\neq y) \\rightarrow (M(x, y) \\wedge \\neg M(y, x)))$<br><br>Hence, the correct option is <strong>(A)</strong>.",
+  "videoUrl": null
+}

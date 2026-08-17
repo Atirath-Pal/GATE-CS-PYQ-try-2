@@ -1,0 +1,21 @@
+{
+  "id": 19,
+  "year": 2026,
+  "set": 1,
+  "topics": ["Computer Networks", "Application Layer"],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Which of the following statements is/are true with respect to the interaction of a web browser with a web server using HTTP 1.1?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "HTTP 1.1 facilitates downloading multiple objects of the same webpage over the same TCP connection, if the objects are stored in the same server",
+    "HTTP 1.1 facilitates downloading multiple objects of the same webpage over the same TCP connection, even if they are stored in different servers",
+    "HTTP 1.1 facilitates sending a request for downloading one object without waiting for a previously requested object to be downloaded completely",
+    "HTTP 1.1 facilitates downloading multiple webpages on the same server to be downloaded over a single TCP connection"
+  ],
+  "answer": ["A", "C", "D"],
+  "explanation": "<strong>Step 1: Evaluate Statement (A)</strong><br>HTTP 1.1 introduces persistent connections by default. A client can download multiple objects of the same webpage using a single, persistent TCP connection if those objects reside on the same server. Thus, statement (A) is correct.<br><br><strong>Step 2: Evaluate Statement (B)</strong><br>A single TCP connection is established between specific IP address and port pairs (client and a single server). Objects stored on different servers require separate TCP connections to each respective server. Thus, statement (B) is incorrect.<br><br><strong>Step 3: Evaluate Statement (C)</strong><br>HTTP 1.1 supports <i>HTTP Pipelining</i>, which allows a browser to send multiple HTTP requests over a single TCP connection without waiting for the responses to previous requests to arrive completely. Thus, statement (C) is correct.<br><br><strong>Step 4: Evaluate Statement (D)</strong><br>Since a persistent connection in HTTP 1.1 remains open for subsequent requests to the same server, multiple webpages (or requests for different resources) hosted on that server can be retrieved over the same single TCP connection. Thus, statement (D) is correct.<br><br>Therefore, the correct options are <strong>A, C, and D</strong>.",
+  "videoUrl": null
+}

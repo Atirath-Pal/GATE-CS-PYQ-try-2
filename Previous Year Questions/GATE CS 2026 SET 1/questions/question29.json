@@ -1,0 +1,21 @@
+{
+  "id": 29,
+  "year": 2026,
+  "set": 1,
+  "topics": ["Operating Systems", "Deadlocks"],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "With respect to deadlocks in an operating system, which of the following statements is/are FALSE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Banker’s algorithm is used to prevent deadlocks",
+    "Deadlock formation can be prevented by ensuring that the hold and wait condition is not allowed",
+    "An assignment edge in a resource allocation graph is marked from a process to a resource",
+    "A safe state guarantees that all processes can finish without formation of a deadlock"
+  ],
+  "answer": ["A", "C"],
+  "explanation": "<strong>Step 1: Analyze Statement (A)</strong><br>Banker's algorithm is a deadlock <em>avoidance</em> algorithm (which dynamically checks for safe states), whereas deadlock <em>prevention</em> strategies structurally eliminate one of the four necessary conditions for deadlock. Thus, Statement (A) is <strong>FALSE</strong>.<br><br><strong>Step 2: Analyze Statement (B)</strong><br>Ensuring that the \"hold and wait\" condition cannot hold is a standard deadlock prevention strategy (e.g., forcing a process to request all its required resources at once). Thus, Statement (B) is <strong>TRUE</strong>.<br><br><strong>Step 3: Analyze Statement (C)</strong><br>In a Resource Allocation Graph (RAG):<br>• A <strong>request edge</strong> is directed from a process to a resource ($P_i \\rightarrow R_j$).<br>• An <strong>assignment edge</strong> is directed from a resource to a process ($R_j \\rightarrow P_i$).<br>Stating that an assignment edge goes from a process to a resource is <strong>FALSE</strong>.<br><br><strong>Step 4: Analyze Statement (D)</strong><br>By definition, a system is in a safe state if there exists at least one safe sequence that allows all processes to finish execution without entering a deadlock. Thus, Statement (D) is <strong>TRUE</strong>.<br><br>Since the question asks for FALSE statements, the correct options are <strong>A and C</strong>.",
+  "videoUrl": null
+}

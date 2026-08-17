@@ -1,0 +1,26 @@
+{
+  "id": 41,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Compiler Design",
+    "Parsing"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the canonical $LR(0)$ parsing of the grammar below using terminals $\\{a, b, c\\}$ and non-terminals $\\{A, B, C, S\\}$ with $S$ as the start symbol.<br><br>$$S \\rightarrow ACB$$<br>$$A \\rightarrow aA \\mid \\epsilon$$<br>$$C \\rightarrow cC \\mid \\epsilon$$<br>$$B \\rightarrow bB \\mid b$$<br><br>Which one of the following options gives the number of shift-reduce conflicts that will occur in the $LR(0)$ ACTION table?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "2",
+    "3",
+    "4",
+    "5"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. <strong>Augmented Grammar:</strong><br>$$S' \\rightarrow S$$<br>$$S \\rightarrow ACB$$<br>$$A \\rightarrow aA \\mid \\epsilon$$<br>$$C \\rightarrow cC \\mid \\epsilon$$<br>$$B \\rightarrow bB \\mid b$$<br><br>2. <strong>Constructing $LR(0)$ States and Identifying Conflicts:</strong><br>In an $LR(0)$ ACTION table, a shift-reduce conflict occurs in a cell $(\\text{State}, \\text{Terminal})$ if the state has a shift transition on that terminal and also contains a reduce item (which places a reduce action across all terminal columns).<br><br>• <strong>State 1 ($I_0$):</strong> $\\{S' \\rightarrow \\cdot S, S \\rightarrow \\cdot ACB, A \\rightarrow \\cdot aA, A \\rightarrow \\cdot\\}$<br>Shift on '$a$' and Reduce $A \\rightarrow \\epsilon$ on '$a$' (<strong>1st Conflict</strong>).<br><br>• <strong>State 2 ($I_3$):</strong> $\\{A \\rightarrow a \\cdot A, A \\rightarrow \\cdot aA, A \\rightarrow \\cdot\\}$<br>Shift on '$a$' and Reduce $A \\rightarrow \\epsilon$ on '$a$' (<strong>2nd Conflict</strong>).<br><br>• <strong>State 3 ($I_2$):</strong> $\\{S \\rightarrow A \\cdot CB, C \\rightarrow \\cdot cC, C \\rightarrow \\cdot\\}$<br>Shift on '$c$' and Reduce $C \\rightarrow \\epsilon$ on '$c$' (<strong>3rd Conflict</strong>).<br><br>• <strong>State 4 ($I_5$):</strong> $\\{C \\rightarrow c \\cdot C, C \\rightarrow \\cdot cC, C \\rightarrow \\cdot\\}$<br>Shift on '$c$' and Reduce $C \\rightarrow \\epsilon$ on '$c$' (<strong>4th Conflict</strong>).<br><br>• <strong>State 5 ($I_8$):</strong> $\\{B \\rightarrow b \\cdot B, B \\rightarrow b \\cdot, B \\rightarrow \\cdot bB, B \\rightarrow \\cdot b\\}$<br>Shift on '$b$' and Reduce $B \\rightarrow b$ on '$b$' (<strong>5th Conflict</strong>).<br><br>Thus, there are exactly <strong>5</strong> shift-reduce conflicts in total.<br><br>Hence, Option <strong>(D)</strong> is the correct answer.",
+  "videoUrl": null
+}

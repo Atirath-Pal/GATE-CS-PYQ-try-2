@@ -1,0 +1,26 @@
+{
+  "id": 46,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Database Management Systems",
+    "Indexing"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "An index in a DBMS is said to be dense if an index entry appears for every search-key value in the indexed file. Otherwise it is called a sparse index. Consider the following two statements.<br><br>S1: A hash index must be a dense index<br>S2: A $B^+$ tree index can be a sparse index<br><br>Which one of the following options is correct?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Both S1 and S2 are true",
+    "Both S1 and S2 are false",
+    "S1 is true and S2 is false",
+    "S1 is false and S2 is true"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. <strong>Statement S1: A hash index must be a dense index</strong><br>A hash index maps search-key values directly to bucket addresses using a hash function. Because there is no sequential ordering among keys in a hash organization, searching for an unindexed record through sequential scanning from a nearby key is impossible. Thus, an entry must exist in the hash index for every search-key value in the data file. Hence, statement S1 is <strong>TRUE</strong>.<br><br>2. <strong>Statement S2: A $B^+$ tree index can be a sparse index</strong><br>When the underlying data file is sorted by the search key (as in a primary or clustering index), a $B^+$ tree leaf node needs to contain only one entry per data block (pointing to the block anchor/first record). This forms a <strong>sparse index</strong>. Therefore, statement S2 is <strong>TRUE</strong>.<br><br>Since both S1 and S2 are true, the correct option is <strong>(A)</strong>.",
+  "videoUrl": null
+}

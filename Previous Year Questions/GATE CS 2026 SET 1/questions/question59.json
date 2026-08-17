@@ -1,0 +1,22 @@
+{
+  "id": 59,
+  "year": 2026,
+  "set": 1,
+  "topics": [
+    "Computer Organization",
+    "Operating Systems"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a hard disk with a rotational speed of 15000 rpm. The time to move the read/write head from a track to its adjacent track is 1 millisecond. Initially, the head is on track 0. The number of sectors per track is 400. The sector size is 1024 bytes. It is necessary to transfer data from 10 randomly located sectors in each of the following tracks in the order: 5, 12 and 7.<br><br>The total time for the data transfer (in milliseconds) from the hard disk is ________. <i>(rounded off to one decimal place)</i>",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 77.3,
+    "max": 77.3
+  },
+  "explanation": "<strong>Step 1: Calculate rotational speed metrics.</strong><br>- Time for 1 full rotation = $\\frac{60 \\times 1000}{15000}\\text{ ms} = 4\\text{ ms}$.<br>- Average rotational latency per sector = $\\frac{4\\text{ ms}}{2} = 2\\text{ ms}$.<br>- Transfer time per sector = $\\frac{4\\text{ ms}}{400} = 0.01\\text{ ms}$.<br><br><strong>Step 2: Calculate total seek time.</strong><br>The head moves in the order: Track 0 $\\rightarrow$ 5 $\\rightarrow$ 12 $\\rightarrow$ 7.<br>- Track 0 to Track 5: $|5 - 0| \\times 1\\text{ ms} = 5\\text{ ms}$<br>- Track 5 to Track 12: $|12 - 5| \\times 1\\text{ ms} = 7\\text{ ms}$<br>- Track 12 to Track 7: $|7 - 12| \\times 1\\text{ ms} = 5\\text{ ms}$<br>Total seek time = $5 + 7 + 5 = 17\\text{ ms}$.<br><br><strong>Step 3: Calculate total time for reading sectors.</strong><br>Total sectors to read = $3 \\text{ tracks} \\times 10 \\text{ sectors/track} = 30 \\text{ sectors}$.<br>Time to read 1 sector = Rotational latency + Sector transfer time $= 2\\text{ ms} + 0.01\\text{ ms} = 2.01\\text{ ms}$.<br>Total sector access time = $30 \\times 2.01\\text{ ms} = 60.3\\text{ ms}$.<br><br><strong>Step 4: Calculate total time.</strong><br>Total time = Seek time + Sector access time $= 17\\text{ ms} + 60.3\\text{ ms} = 77.3\\text{ ms}$.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 45,
+  "year": 2026,
+  "set": 1,
+  "topics": [
+    "Computer Networks",
+    "Sliding Window Protocol"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the implementation of sliding window protocol over a lossless link, with a window size of $W$ frames, where each frame is of size 1000 bits (including header). The bandwidth of the link is 100 kbps ($1\\text{k} = 10^3$) and the one-way propagation delay is 100 milliseconds. Assume that processing times at the sender and receiver are zero and the transmission time of acknowledgements is also zero. Which one of the following options gives the minimum size of $W$ (in number of frames) required to achieve 100% link utilization?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "10",
+    "21",
+    "20",
+    "11"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step 1: Calculate Transmission Time ($T_t$).</strong><br>Frame size $L = 1000$ bits<br>Bandwidth $B = 100\\text{ kbps} = 100 \\times 10^3$ bits/second<br>$T_t = \\frac{\\text{Frame Size}}{\\text{Bandwidth}} = \\frac{1000}{100 \\times 10^3} = 0.01\\text{ s} = 10\\text{ ms}$<br><br><strong>Step 2: Identify Propagation Delay ($T_p$).</strong><br>One-way propagation delay $T_p = 100\\text{ ms}$<br><br><strong>Step 3: Calculate Minimum Window Size ($W$) for 100% Link Utilization.</strong><br>For 100% link utilization (efficiency $\\eta = 1$):<br>$\\eta = \\frac{W \\cdot T_t}{T_t + 2 T_p} = 1$<br>$W = \\frac{T_t + 2 T_p}{T_t} = 1 + \\frac{2 T_p}{T_t}$<br>Substituting $T_p = 100\\text{ ms}$ and $T_t = 10\\text{ ms}$:<br>$W = 1 + \\frac{2 \\times 100}{10} = 1 + 20 = 21$<br><br>Hence, option <strong>B</strong> is correct.",
+  "videoUrl": null
+}

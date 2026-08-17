@@ -1,0 +1,26 @@
+{
+  "id": 12,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Data Structures",
+    "Trees"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "The set <strong>T</strong> represents various traversals over binary tree. The set <strong>S</strong> represents the order of visiting nodes during a traversal.<br><br><table border=\"1\" style=\"border-collapse: collapse; border: 1px solid white;\"><thead><tr><th style=\"border: 1px solid white; padding: 8px; text-align: center;\"><strong>T</strong></th><th style=\"border: 1px solid white; padding: 8px; text-align: center;\"><strong>S</strong></th></tr></thead><tbody><tr><td style=\"border: 1px solid white; padding: 8px;\">I: Inorder</td><td style=\"border: 1px solid white; padding: 8px;\">L: left subtree, node, right subtree</td></tr><tr><td style=\"border: 1px solid white; padding: 8px;\">II: Preorder</td><td style=\"border: 1px solid white; padding: 8px;\">M: node, left subtree, right subtree</td></tr><tr><td style=\"border: 1px solid white; padding: 8px;\">III: Postorder</td><td style=\"border: 1px solid white; padding: 8px;\">N: left subtree, right subtree, node</td></tr></tbody></table><br>Which one of the following is the correct match from <strong>T</strong> to <strong>S</strong> ?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "I – L, II – M, III – N",
+    "I – M, II – L, III – N",
+    "I – N, II – M, III – L",
+    "I – L, II – N, III – M"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. <strong>Inorder Traversal (I):</strong> Nodes are visited in the order of <em>Left Subtree $\\rightarrow$ Root Node $\\rightarrow$ Right Subtree</em>. Thus, <strong>I matches with L</strong>.<br><br>2. <strong>Preorder Traversal (II):</strong> Nodes are visited in the order of <em>Root Node $\\rightarrow$ Left Subtree $\\rightarrow$ Right Subtree</em>. Thus, <strong>II matches with M</strong>.<br><br>3. <strong>Postorder Traversal (III):</strong> Nodes are visited in the order of <em>Left Subtree $\\rightarrow$ Right Subtree $\\rightarrow$ Root Node</em>. Thus, <strong>III matches with N</strong>.<br><br>Therefore, the correct matching is <strong>I – L, II – M, III – N</strong>, which corresponds to Option <strong>(A)</strong>.",
+  "videoUrl": null
+}

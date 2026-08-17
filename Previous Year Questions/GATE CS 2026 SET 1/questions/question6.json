@@ -1,0 +1,21 @@
+{
+  "id": 6,
+  "year": 2026,
+  "set": 1,
+  "topics": ["General Aptitude", "Verbal Ability"],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Combinatorics deals with problems involving counting. For example, “How many distinct arrangements of N distinct objects in M spaces on a circle are possible?” is a typical problem in combinatorics. This kind of counting is sometimes used in the modeling of several physical phenomena. Often, in such models, the different combinatorial possibilities are assigned probability values. Assigning probabilities enables the computation of the average values of physical quantities.<br><br>Consider the following statements:<br><br>P: Combinatorics is always invoked in the modeling of physical phenomena.<br><br>Q: Modeling some physical phenomena involves assigning probabilities to combinatorial possibilities in order to compute average values of physical quantities.<br><br>Based on the passage above, what can be inferred about statements P and Q?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "P is False and Q is False",
+    "P is False and Q is True",
+    "P is True and Q is False",
+    "P is True and Q is True"
+  ],
+  "answer": ["B"],
+  "explanation": "<strong>Step 1: Evaluate Statement P</strong><br>The passage states that counting in combinatorics is \"sometimes used\" in modeling physical phenomena. Statement P claims it is \"always invoked\", which is an unsupported absolute statement. Thus, Statement P is <strong>False</strong>.<br><br><strong>Step 2: Evaluate Statement Q</strong><br>The passage explicitly states that combinatorial possibilities are often assigned probability values to enable the computation of average values of physical quantities. Thus, Statement Q is <strong>True</strong>.<br><br>Therefore, <strong>P is False and Q is True</strong> (Option B).",
+  "videoUrl": null
+}

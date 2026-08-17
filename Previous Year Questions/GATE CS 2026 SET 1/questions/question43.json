@@ -1,0 +1,26 @@
+{
+  "id": 43,
+  "year": 2026,
+  "set": 1,
+  "topics": [
+    "Databases",
+    "Relational Algebra"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider a relational database schema with two relations $R(P, Q)$ and $S(X, Y)$.<br><br>Let $E = \\{ \\langle u \\rangle \\mid \\exists v \\, \\exists w \\, \\langle u, v \\rangle \\in R \\land \\langle v, w \\rangle \\in S \\}$ be a tuple relational calculus expression.<br><br>Which one of the following relational algebraic expressions is equivalent to $E$ ?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\Pi_P(R \\bowtie_{R.P=S.X} S)$",
+    "$\\Pi_P(S \\bowtie_{S.X=R.Q} R)$",
+    "$\\Pi_P(R \\bowtie_{R.P=S.Y} S)$",
+    "$\\Pi_P(S \\bowtie_{S.Y=R.Q} R)$"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step 1: Analyze the Tuple Relational Calculus (TRC) Expression.</strong><br>The given expression is $E = \\{ \\langle u \\rangle \\mid \\exists v \\, \\exists w \\, \\langle u, v \\rangle \\in R \\land \\langle v, w \\rangle \\in S \\}$.<br><br><strong>Step 2: Map variables to relation attributes.</strong><br>- From $\\langle u, v \\rangle \\in R$ with schema $R(P, Q)$, $u$ represents attribute $P$ and $v$ represents attribute $Q$.<br>- From $\\langle v, w \\rangle \\in S$ with schema $S(X, Y)$, $v$ represents attribute $X$ and $w$ represents attribute $Y$.<br><br><strong>Step 3: Determine the join condition and target projection.</strong><br>- The shared variable $v$ equates attribute $Q$ of relation $R$ with attribute $X$ of relation $S$, giving the join condition $S.X = R.Q$.<br>- The target output is component $u$, which corresponds to attribute $P$ of relation $R$.<br><br>Therefore, projecting $P$ over the theta-join of $S$ and $R$ yields:<br>$\\Pi_P(S \\bowtie_{S.X=R.Q} R)$<br><br>Hence, option <strong>B</strong> is correct.",
+  "videoUrl": null
+}

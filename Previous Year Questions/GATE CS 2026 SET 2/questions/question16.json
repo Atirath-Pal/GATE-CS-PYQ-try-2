@@ -1,0 +1,26 @@
+{
+  "id": 16,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Digital Logic",
+    "Boolean Algebra"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Which one of the following options is <strong>not</strong> a property of Boolean Algebra?<br><br><em>Note</em>: $+$ is OR operation, $.$ is AND operation, and $'$ is NOT operation",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$a + b = b + a$",
+    "$a . a' = 1$",
+    "$a + a' = 1$",
+    "$a . b = b . a$"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. <strong>Commutative Laws:</strong> $a + b = b + a$ and $a . b = b . a$ are standard commutative properties of Boolean Algebra. Thus, options (A) and (D) are valid properties.<br><br>2. <strong>Complement Law for OR:</strong> $a + a' = 1$ is a valid property, so option (C) is a valid property.<br><br>3. <strong>Complement Law for AND:</strong> According to the complement law of Boolean algebra, $a . a' = 0$ (not $1$). Therefore, $a . a' = 1$ is <strong>not</strong> a valid property.<br><br>Hence, the correct option is <strong>(B)</strong>.",
+  "videoUrl": null
+}

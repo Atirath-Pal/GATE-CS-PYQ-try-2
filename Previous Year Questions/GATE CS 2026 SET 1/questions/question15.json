@@ -1,0 +1,21 @@
+{
+  "id": 15,
+  "year": 2026,
+  "set": 1,
+  "topics": ["Computer Organization", "Instruction Set Architecture"],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider a processor $P$ whose instruction set architecture is the load-store architecture. The instruction format is such that the first operand of any instruction is the destination operand.<br><br>Which one of the following sequences of instructions corresponds to the high-level language statement $Z = X + Y$ ?<br><br><i>Note:</i> $X$, $Y$, and $Z$ are memory operands. $R0$, $R1$, and $R2$ are registers.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "ADD Z, X, Y",
+    "LOAD R0, X<br>ADD Z, R0, Y",
+    "ADD R0, X, Y<br>STORE Z, R0",
+    "LOAD R0, X<br>LOAD R1, Y<br>ADD R2, R0, R1<br>STORE Z, R2"
+  ],
+  "answer": ["D"],
+  "explanation": "<strong>Step 1: Understand Load-Store Architecture</strong><br>In a load-store architecture, arithmetic operations (such as <code>ADD</code>) can only be performed on register operands, not directly on memory operands. Memory locations can only be accessed using <code>LOAD</code> and <code>STORE</code> instructions.<br><br><strong>Step 2: Trace the operation $Z = X + Y$</strong><br>1. <code>LOAD R0, X</code>: Transfer operand $X$ from memory into register $R0$.<br>2. <code>LOAD R1, Y</code>: Transfer operand $Y$ from memory into register $R1$.<br>3. <code>ADD R2, R0, R1</code>: Perform addition on registers $R0$ and $R1$, placing the result in destination register $R2$.<br>4. <code>STORE Z, R2</code>: Store the result from register $R2$ back into memory location $Z$.<br><br><strong>Step 3: Evaluate Options</strong><br>• Options (A), (B), and (C) attempt to perform <code>ADD</code> directly using memory operands ($X$, $Y$, or $Z$), which is invalid in a load-store architecture.<br>• Option (D) correctly loads both operands into registers first, adds them, and stores the final result back to memory.<br><br>Therefore, the correct instruction sequence is <strong>Option D</strong>.",
+  "videoUrl": null
+}

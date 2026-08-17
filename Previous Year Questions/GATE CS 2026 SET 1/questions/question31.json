@@ -1,0 +1,21 @@
+{
+  "id": 31,
+  "year": 2026,
+  "set": 1,
+  "topics": ["Databases", "Normalization"],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "In the context of relational database normalization, which of the following statements is/are true?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "It is always possible to obtain a dependency-preserving 3NF decomposition of a relation",
+    "It is always possible to obtain a dependency-preserving 1NF decomposition of a relation",
+    "It is not always possible to obtain a dependency-preserving BCNF decomposition of a relation",
+    "It is not always possible to obtain a dependency-preserving 2NF decomposition of a relation"
+  ],
+  "answer": ["A", "B", "C"],
+  "explanation": "<strong>Step 1: Analyze Statement (A)</strong><br>Using 3NF synthesis algorithm (Bernstein's algorithm), any relation schema can always be decomposed into 3NF such that the decomposition is both lossless-join and dependency-preserving. Thus, Statement (A) is <strong>TRUE</strong>.<br><br><strong>Step 2: Analyze Statement (B)</strong><br>Any relation is in 1NF as long as attributes contain atomic values. Keeping the original relation unchanged is a trivial 1NF decomposition that preserves all functional dependencies. Thus, Statement (B) is <strong>TRUE</strong>.<br><br><strong>Step 3: Analyze Statement (C)</strong><br>While BCNF decomposition always guarantees the lossless-join property, it does not guarantee dependency preservation. For example, in relation $R(A, B, C)$ with $AB \\rightarrow C$ and $C \\rightarrow B$, any BCNF decomposition will lose the dependency $AB \\rightarrow C$. Thus, Statement (C) is <strong>TRUE</strong>.<br><br><strong>Step 4: Analyze Statement (D)</strong><br>Since every relation can always be decomposed into a dependency-preserving 3NF, and every 3NF relation is automatically in 2NF, it is always possible to obtain a dependency-preserving 2NF decomposition. Thus, Statement (D) is <strong>FALSE</strong>.<br><br>Therefore, the correct options are <strong>A, B, and C</strong>.",
+  "videoUrl": null
+}

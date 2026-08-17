@@ -1,0 +1,21 @@
+{
+  "id": 22,
+  "year": 2026,
+  "set": 1,
+  "topics": ["Digital Logic", "Computer Organization"],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider the 8-bit signed integers $X, Y$ and $Z$ represented using the sign-magnitude form. The binary representations of $X$ and $Y$ are as follows:<br><br>$$X: 10110100 \\quad Y: 01001100$$<br><br>Which of the following operations to compute $Z$ result(s) in an arithmetic overflow?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$Z = X + Y$",
+    "$Z = X - Y$",
+    "$Z = -X + Y$",
+    "$Z = -X - Y$"
+  ],
+  "answer": ["B", "C"],
+  "explanation": "<strong>Step 1: Determine values of $X$ and $Y$ in sign-magnitude representation</strong><br>In an 8-bit sign-magnitude representation, the MSB represents the sign ($0$ for positive, $1$ for negative) and the remaining 7 bits represent the magnitude. The representable range for an 8-bit sign-magnitude integer is $[-127, +127]$.<br><br>• $X = 10110100_2$:<br>Sign bit = $1$ (Negative)<br>Magnitude = $0110100_2 = 32 + 16 + 4 = 52$<br>Value of $X = -52$<br><br>• $Y = 01001100_2$:<br>Sign bit = $0$ (Positive)<br>Magnitude = $1001100_2 = 64 + 8 + 4 = 76$<br>Value of $Y = +76$<br><br><strong>Step 2: Check each option for overflow</strong><br>An arithmetic overflow occurs if the computed result $Z$ falls outside the range $[-127, +127]$.<br><br>• <strong>Option (A):</strong> $Z = X + Y = -52 + 76 = +24$. Since $+24 \\in [-127, +127]$, no overflow.<br>• <strong>Option (B):</strong> $Z = X - Y = -52 - 76 = -128$. Since $-128 \\notin [-127, +127]$, overflow occurs.<br>• <strong>Option (C):</strong> $Z = -X + Y = -(-52) + 76 = 52 + 76 = +128$. Since $+128 \\notin [-127, +127]$, overflow occurs.<br>• <strong>Option (D):</strong> $Z = -X - Y = 52 - 76 = -24$. Since $-24 \\in [-127, +127]$, no overflow.<br><br>Therefore, the correct options are <strong>B and C</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,22 @@
+{
+  "id": 60,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Programming and Data Structures",
+    "C Programming"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the following ANSI-C program.<br><br>The output of this program is ____________. (answer in integer)<br><br><i>Note:</i> Assume that the program compiles and runs successfully.",
+  "assetImage": null,
+  "codeBlock": "#include <stdio.h>\n\nint main(){\n    int *ptr, a, b, c;\n    a=5; b=11; c=20;\n    ptr=&a; *ptr=c; ptr=&c;\n    a=*(&b); c=*ptr-a;\n    printf(\"%d\",c);\n    return(0);\n}",
+  "options": [],
+  "answer": {
+    "min": 9,
+    "max": 9
+  },
+  "explanation": "<strong>Step 1: Initial Variable Assignments</strong><br>• $a = 5$<br>• $b = 11$<br>• $c = 20$<br><br><strong>Step 2: Trace Pointer Operations</strong><br>• <code>ptr = &a;</code> $\\rightarrow$ <code>ptr</code> points to memory location of $a$.<br>• <code>*ptr = c;</code> $\\rightarrow$ Dereferencing <code>ptr</code> assigns the value of $c$ ($20$) to $a$. Now, $a = 20$.<br>• <code>ptr = &c;</code> $\\rightarrow$ <code>ptr</code> now points to memory location of $c$ ($c = 20$).<br><br><strong>Step 3: Evaluate Remaining Statements</strong><br>• <code>a = *(&b);</code> $\\rightarrow$ Dereferencing the address of $b$ yields the value of $b$ ($11$). So, $a = 11$.<br>• <code>c = *ptr - a;</code> $\\rightarrow$ Since <code>ptr</code> points to $c$, <code>*ptr</code> evaluates to $20$. Therefore, $c = 20 - 11 = 9$.<br><br><strong>Step 4: Output</strong><br>• <code>printf(\"%d\", c);</code> outputs the value of $c$, which is <strong>9</strong>.",
+  "videoUrl": null
+}

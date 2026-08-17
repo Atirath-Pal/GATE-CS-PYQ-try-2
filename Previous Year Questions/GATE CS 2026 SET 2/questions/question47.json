@@ -1,0 +1,27 @@
+{
+  "id": 47,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Theory of Computation",
+    "Finite Automata"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the following two finite automata $D_1$ and $D_2$.<br><br>Which of the following statements is/are true?",
+  "assetImage": "question47.png",
+  "codeBlock": null,
+  "options": [
+    "$L(D_1) = L(D_2)$",
+    "$L(D_1)$ is a proper subset of $L(D_2)$",
+    "$L(D_1) \\cap L(D_2) = \\{\\epsilon\\}$",
+    "$(L(D_1) \\cup L(D_2))^*$ consists of all strings in $\\{0,1\\}^*$ whose length is divisible by 3"
+  ],
+  "answer": [
+    "C",
+    "D"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. <strong>Analyzing $D_1$ and $D_2$:</strong><br>In both finite automata $D_1$ and $D_2$, the only accepting state is the initial start state. Every cycle from the start state back to itself consists of transitions of length 3 (or multiples of 3). Consequently, both automata accept only strings whose lengths are divisible by 3.<br><br>2. <strong>Evaluating Statement (C):</strong><br>Apart from the empty string $\\epsilon$ (length 0), the non-empty strings accepted by $D_1$ and $D_2$ follow mutually exclusive state transition sequences. Thus, the only common string accepted by both automata is $\\epsilon$. Therefore, $L(D_1) \\cap L(D_2) = \\{\\epsilon\\}$, making statement <strong>(C)</strong> true.<br><br>3. <strong>Evaluating Statement (D):</strong><br>Since $D_1$ and $D_2$ generate all essential 3-length transition patterns over the alphabet $\\{0, 1\\}$, taking the union $L(D_1) \\cup L(D_2)$ and applying the Kleene star $(L(D_1) \\cup L(D_2))^*$ generates every possible string in $\\{0, 1\\}^*$ whose length is a multiple of 3. Therefore, statement <strong>(D)</strong> is true.<br><br>4. <strong>Evaluating Statements (A) and (B):</strong><br>Since $L(D_1)$ and $L(D_2)$ contain distinct non-empty strings, $L(D_1) \\neq L(D_2)$ and $L(D_1)$ is not a subset of $L(D_2)$. Thus, statements (A) and (B) are false.<br><br>Hence, the correct options are <strong>(C)</strong> and <strong>(D)</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 18,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Computer Organization and Architecture",
+    "I/O Organization"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the following two statements about interrupt handling mechanisms in a CPU.<br><br>S1: In non-vectored interrupt mechanism, it usually takes more time to start the Interrupt Service Routine (ISR) when compared to that in a vectored interrupt mechanism.<br><br>S2: In daisy-chain interrupt mechanism, the CPU polls all the input devices individually to determine the source of the interrupt.<br><br>Which one of the following options is correct with respect to S1 and S2 ?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Both S1 and S2 are true",
+    "Both S1 and S2 are false",
+    "S1 is true and S2 is false",
+    "S1 is false and S2 is true"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. <strong>Statement S1:</strong> In a non-vectored interrupt mechanism, the interrupting device does not provide the address of its Interrupt Service Routine (ISR) directly. Instead, control branches to a fixed general interrupt handler, which must poll devices via software to determine the interrupting source. In contrast, a vectored interrupt directly provides the vector (address offset) to jump directly to the device's ISR. Thus, non-vectored interrupts take more time to start the ISR, making <strong>S1 TRUE</strong>.<br><br>2. <strong>Statement S2:</strong> Daisy-chaining is a <em>hardware-based</em> priority interrupt handling mechanism where an interrupt acknowledge (INTA) signal propagates serially from one device to the next along a chain until it reaches the requesting device. The CPU does not poll individual devices via software; hardware handles the priority resolution. Thus, <strong>S2 is FALSE</strong>.<br><br>Therefore, S1 is true and S2 is false, which corresponds to Option <strong>(C)</strong>.",
+  "videoUrl": null
+}

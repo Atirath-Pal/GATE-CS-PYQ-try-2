@@ -1,0 +1,21 @@
+{
+  "id": 5,
+  "year": 2026,
+  "set": 1,
+  "topics": ["General Aptitude", "Analytical Reasoning"],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "‘When the teacher is in the room, all students stand silently.’<br><br>If the above statement is true, which one of the following statements is <b>not necessarily</b> true?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "If any student is not standing silently, then the teacher is not in the room.",
+    "When the teacher is in the room, all students are silent.",
+    "If all students are standing, then the teacher is in the room.",
+    "When the teacher is in the room, all students are standing."
+  ],
+  "answer": ["C"],
+  "explanation": "<strong>Step 1: Analyze the given condition</strong><br>Let $P$ = 'Teacher is in the room' and $Q$ = 'All students stand silently' (which means every student is both standing and silent).<br>The given statement is $P \\implies Q$.<br><br><strong>Step 2: Evaluate the options</strong><br>• <strong>Option (A):</strong> Represents the contrapositive $\\neg Q \\implies \\neg P$ ('If any student is not standing silently, then the teacher is not in the room'). A statement and its contrapositive are logically equivalent, so this is always true.<br>• <strong>Option (B):</strong> If all students stand silently, then they are all silent. Thus, when $P$ is true, all students are silent (must be true).<br>• <strong>Option (D):</strong> If all students stand silently, then they are all standing. Thus, when $P$ is true, all students are standing (must be true).<br>• <strong>Option (C):</strong> States 'If all students are standing, then the teacher is in the room.' This is the fallacy of affirming the consequent ($Q \\implies P$). Students could be standing for another reason even if the teacher is not in the room.<br><br>Therefore, Option (C) is <strong>not necessarily</strong> true.",
+  "videoUrl": null
+}

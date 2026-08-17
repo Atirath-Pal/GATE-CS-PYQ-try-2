@@ -1,0 +1,19 @@
+{
+  "id": 53,
+  "year": 2026,
+  "set": 2,
+  "topics": ["Operating Systems", "File Systems"],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "To keep track of free blocks in a file system, one of the two approaches is generally used – using bitmaps (bit vectors) or using linked lists. Consider that the linked list approach is used to keep track of free blocks in a file system. Assume that the disk size is 16 GB, block size is 2 KB, and block numbers used are 32-bit long. A single pointer of size 4 bytes is used in each block of the list to point to the next block of the list. The number of blocks required to hold the free disk block numbers is ____________. (answer in integer)<br><br>Note: $1\\text{K}=2^{10}$ and $1\\text{G}=2^{30}$",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 16417,
+    "max": 16417
+  },
+  "explanation": "<strong>Step 1: Calculate total number of blocks on the disk.</strong><br>Disk Size = $16\\text{ GB} = 16 \\times 2^{30}\\text{ bytes} = 2^{34}\\text{ bytes}$<br>Block Size = $2\\text{ KB} = 2 \\times 2^{10}\\text{ bytes} = 2^{11}\\text{ bytes} = 2048\\text{ bytes}$<br>Total Number of Blocks = $\\frac{2^{34}}{2^{11}} = 2^{23} = 8,388,608\\text{ blocks}$<br><br><strong>Step 2: Calculate space available for block numbers per block.</strong><br>Block size = $2048\\text{ bytes}$<br>Pointer size = $4\\text{ bytes}$<br>Available space for block numbers = $2048 - 4 = 2044\\text{ bytes}$<br>Each block number takes $32\\text{ bits} = 4\\text{ bytes}$.<br>Number of block numbers per block = $\\frac{2044}{4} = 511\\text{ block numbers}$<br><br><strong>Step 3: Calculate total blocks required.</strong><br>Number of blocks required = $\\left\\lceil \\frac{8,388,608}{511} \\right\\rceil = \\left\\lceil 16416.06 \\right\\rceil = 16417\\text{ blocks}$",
+  "videoUrl": null
+}

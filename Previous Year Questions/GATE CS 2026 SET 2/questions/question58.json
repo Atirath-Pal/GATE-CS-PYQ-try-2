@@ -1,0 +1,22 @@
+{
+  "id": 58,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Computer Networks",
+    "TCP Congestion Control"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a new TCP connection between a sender and a receiver. The receiver advertised window is constant at 48 KB, the maximum segment size (MSS) is 2 KB, and the slow start threshold for TCP congestion control is 16 KB. Assume that there are no timeouts or duplicate acknowledgements. The number of rounds of transmission required for the congestion control algorithm of the TCP connection to reach the congestion avoidance phase is __________. <em>(answer in integer)</em><br><br><em>Note:</em> 1K=$2^{10}$",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 4,
+    "max": 4
+  },
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. <strong>Initial Parameters:</strong><br>• Maximum Segment Size ($MSS$) = $2\\text{ KB}$<br>• Slow Start Threshold ($ssthresh$) = $16\\text{ KB} = 8\\text{ MSS}$<br>• Receiver Advertised Window ($rwnd$) = $48\\text{ KB}$<br><br>2. <strong>Round-by-Round Transmission Analysis:</strong><br>• <strong>Round 1:</strong> Initial $cwnd = 1\\text{ MSS} = 2\\text{ KB}$. Transmits in Slow Start phase. At the end of Round 1, $cwnd$ doubles to $2\\text{ MSS} = 4\\text{ KB}$.<br>• <strong>Round 2:</strong> $cwnd = 2\\text{ MSS} = 4\\text{ KB}$. Transmits in Slow Start phase. At the end of Round 2, $cwnd$ doubles to $4\\text{ MSS} = 8\\text{ KB}$.<br>• <strong>Round 3:</strong> $cwnd = 4\\text{ MSS} = 8\\text{ KB}$. Transmits in Slow Start phase. At the end of Round 3, $cwnd$ doubles to $8\\text{ MSS} = 16\\text{ KB}$.<br>• <strong>Round 4:</strong> $cwnd = 8\\text{ MSS} = 16\\text{ KB} = ssthresh$. Since $cwnd \\ge ssthresh$, the transmission in Round 4 is the first round executed in the <strong>Congestion Avoidance phase</strong>.<br><br>Therefore, <strong>4</strong> rounds of transmission are required to reach the congestion avoidance phase.",
+  "videoUrl": null
+}

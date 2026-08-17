@@ -1,0 +1,26 @@
+{
+  "id": 37,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Algorithms",
+    "Graph Algorithms"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Let $G$ be a weighted directed acyclic graph with $m$ edges and $n$ vertices. Given $G$ and a source vertex $s$ in $G$, which one of the following options gives the worst case time complexity of the fastest algorithm to find the lengths of shortest paths from $s$ to all vertices that are reachable from $s$ in $G$?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\Theta(m + n)$",
+    "$\\Theta(m + n \\log(n))$",
+    "$\\Theta(nm)$",
+    "$\\Theta(n^3)$"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. <strong>Properties of Directed Acyclic Graphs (DAGs):</strong><br>For a Directed Acyclic Graph (DAG), we can solve the Single-Source Shortest Path (SSSP) problem efficiently regardless of whether edge weights are positive or negative, because no cycles exist.<br><br>2. <strong>Algorithm Steps:</strong><br>- <strong>Topological Sorting:</strong> Compute a topological order of the vertices in $\\Theta(m + n)$ time using Depth First Search (DFS) or Kahn's algorithm.<br>- <strong>Edge Relaxation:</strong> Process each vertex in topological order and relax all of its outgoing edges. Each edge is relaxed exactly once, which takes $\\Theta(m)$ time.<br><br>3. <strong>Total Worst-Case Time Complexity:</strong><br>$$\\text{Total Time} = \\Theta(m + n) + \\Theta(m) = \\Theta(m + n)$$<br><br>Thus, the fastest algorithm achieves a time complexity of <strong>$\\Theta(m + n)$</strong>.",
+  "videoUrl": null
+}

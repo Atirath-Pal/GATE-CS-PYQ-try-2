@@ -1,0 +1,22 @@
+{
+  "id": 64,
+  "year": 2026,
+  "set": 1,
+  "topics": [
+    "Operating Systems",
+    "CPU Scheduling"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a CPU that has to execute two types of processes. The first type, Actuators (A), requires a CPU burst of 6 seconds. The second type, Controllers (C), requires a CPU burst of 8 seconds. A new process of type A arrives at time $t = 10, 20, 30, 40$, and $50$ (in seconds). Similarly, a new process of type C arrives at time $t = 11, 22, 33, 44$, and $55$ (in seconds). The CPU scheduling policy is First Come First Serve (FCFS). The first process of type A starts running at $t = 10$ seconds. The average waiting time (in seconds) for the 10 processes is ________. <i>(rounded off to one decimal place)</i>",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 9.5,
+    "max": 9.5
+  },
+  "explanation": "<strong>Step 1: List all processes with their arrival times and burst times.</strong><br>The processes arrive in the following order under First Come First Serve (FCFS):<br>- $A_1$: Arrival $t = 10$, Burst $= 6\\text{ s}$<br>- $C_1$: Arrival $t = 11$, Burst $= 8\\text{ s}$<br>- $A_2$: Arrival $t = 20$, Burst $= 6\\text{ s}$<br>- $C_2$: Arrival $t = 22$, Burst $= 8\\text{ s}$<br>- $A_3$: Arrival $t = 30$, Burst $= 6\\text{ s}$<br>- $C_3$: Arrival $t = 33$, Burst $= 8\\text{ s}$<br>- $A_4$: Arrival $t = 40$, Burst $= 6\\text{ s}$<br>- $C_4$: Arrival $t = 44$, Burst $= 8\\text{ s}$<br>- $A_5$: Arrival $t = 50$, Burst $= 6\\text{ s}$<br>- $C_5$: Arrival $t = 55$, Burst $= 8\\text{ s}$<br><br><strong>Step 2: Calculate start time, completion time, and waiting time for each process.</strong><br>Waiting Time $(\\text{WT}) = \\text{Start Time} - \\text{Arrival Time}$<br><br>- $A_1$: Starts at $10$, Finishes at $16$. $\\text{WT} = 10 - 10 = 0\\text{ s}$<br>- $C_1$: Starts at $16$, Finishes at $24$. $\\text{WT} = 16 - 11 = 5\\text{ s}$<br>- $A_2$: Starts at $24$, Finishes at $30$. $\\text{WT} = 24 - 20 = 4\\text{ s}$<br>- $C_2$: Starts at $30$, Finishes at $38$. $\\text{WT} = 30 - 22 = 8\\text{ s}$<br>- $A_3$: Starts at $38$, Finishes at $44$. $\\text{WT} = 38 - 30 = 8\\text{ s}$<br>- $C_3$: Starts at $44$, Finishes at $52$. $\\text{WT} = 44 - 33 = 11\\text{ s}$<br>- $A_4$: Starts at $52$, Finishes at $58$. $\\text{WT} = 52 - 40 = 12\\text{ s}$<br>- $C_4$: Starts at $58$, Finishes at $66$. $\\text{WT} = 58 - 44 = 14\\text{ s}$<br>- $A_5$: Starts at $66$, Finishes at $72$. $\\text{WT} = 66 - 50 = 16\\text{ s}$<br>- $C_5$: Starts at $72$, Finishes at $80$. $\\text{WT} = 72 - 55 = 17\\text{ s}$<br><br><strong>Step 3: Compute total and average waiting time.</strong><br>$$\\text{Total Waiting Time} = 0 + 5 + 4 + 8 + 8 + 11 + 12 + 14 + 16 + 17 = 95\\text{ s}$$<br>$$\\text{Average Waiting Time} = \\frac{95}{10} = 9.5\\text{ s}$$<br><br>Thus, the average waiting time is <strong>9.5</strong> seconds.",
+  "videoUrl": null
+}

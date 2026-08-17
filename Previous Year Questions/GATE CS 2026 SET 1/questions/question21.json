@@ -1,0 +1,21 @@
+{
+  "id": 21,
+  "year": 2026,
+  "set": 1,
+  "topics": ["Digital Logic", "Boolean Algebra"],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider the following Boolean expression of a function $F$ :<br><br>$$F(P, Q) = (\\bar{P} + Q) \\oplus (\\bar{P}Q)$$<br><br>Which of the following expressions is/are equivalent to $F$ ?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\overline{P \\oplus Q}$",
+    "$P \\oplus Q$",
+    "$\\bar{P} \\oplus Q$",
+    "$\\bar{P} \\oplus \\bar{Q}$"
+  ],
+  "answer": ["A", "C"],
+  "explanation": "<strong>Step 1: Simplify the Boolean expression $F(P, Q)$</strong><br>Recall that $A \\oplus B = A\\bar{B} + \\bar{A}B$.<br>Let $A = \\bar{P} + Q$ and $B = \\bar{P}Q$.<br><br>• Compute $\\bar{A}$ and $\\bar{B}$:<br>$\\bar{A} = \\overline{\\bar{P} + Q} = P\\bar{Q}$<br>$\\bar{B} = \\overline{\\bar{P}Q} = P + \\bar{Q}$<br><br>• Compute $A\\bar{B}$:<br>$A\\bar{B} = (\\bar{P} + Q)(P + \\bar{Q}) = \\bar{P}P + \\bar{P}\\bar{Q} + QP + Q\\bar{Q} = 0 + \\bar{P}\\bar{Q} + PQ + 0 = PQ + \\bar{P}\\bar{Q}$<br><br>• Compute $\\bar{A}B$:<br>$\\bar{A}B = (P\\bar{Q})(\\bar{P}Q) = 0$<br><br>• Combine terms:<br>$F(P, Q) = A\\bar{B} + \\bar{A}B = PQ + \\bar{P}\\bar{Q} = \\overline{P \\oplus Q}$ (XNOR operation).<br><br><strong>Step 2: Evaluate each option</strong><br>• <strong>Option (A):</strong> $\\overline{P \\oplus Q} = PQ + \\bar{P}\\bar{Q}$ (Equivalent)<br>• <strong>Option (B):</strong> $P \\oplus Q = P\\bar{Q} + \\bar{P}Q$ (XOR operation, Not equivalent)<br>• <strong>Option (C):</strong> $\\bar{P} \\oplus Q = \\bar{P}\\bar{Q} + \\overline{\\bar{P}}Q = \\bar{P}\\bar{Q} + PQ = \\overline{P \\oplus Q}$ (Equivalent)<br>• <strong>Option (D):</strong> $\\bar{P} \\oplus \\bar{Q} = \\bar{P}\\overline{\\bar{Q}} + \\overline{\\bar{P}}\\bar{Q} = \\bar{P}Q + P\\bar{Q} = P \\oplus Q$ (Not equivalent)<br><br>Therefore, the correct options are <strong>A and C</strong>.",
+  "videoUrl": null
+}

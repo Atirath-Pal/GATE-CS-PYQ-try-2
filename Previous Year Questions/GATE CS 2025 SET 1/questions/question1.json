@@ -1,0 +1,12 @@
+{
+  "id": 1,
+  "type": "MCQ",
+  "marks": 2,
+  "questionText": "Which of the following languages are undecidable? Note that $\\langle M \\rangle$ indicates encoding of the Turing machine $M$.<br><br>$$L_1 = \\{\\langle M \\rangle \\mid L(M) = \\emptyset\\}$$<br>$$L_2 = \\{\\langle M, w, q \\rangle \\mid M \\text{ on input } w \\text{ reaches state } q \\text{ in exactly 100 steps}\\}$$<br>$$L_3 = \\{\\langle M \\rangle \\mid L(M) \\text{ is not recursive}\\}$$<br>$$L_4 = \\{\\langle M \\rangle \\mid L(M) \\text{ contains at least 21 members}\\}$$",
+  "options": [
+    "$L_1, L_3, \\text{ and } L_4 \\text{ only}$",
+    "$L_1 \\text{ and } L_3 \\text{ only}$",
+    "$L_2 \\text{ and } L_3 \\text{ only}$",
+    "$L_2, L_3, \\text{ and } L_4 \\text{ only}$"
+  ]
+}

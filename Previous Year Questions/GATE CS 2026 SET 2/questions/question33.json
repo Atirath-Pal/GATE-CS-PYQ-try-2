@@ -1,0 +1,22 @@
+{
+  "id": 33,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Computer Networks",
+    "IP Addressing"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "If an IP network uses a subnet mask of 255.255.240.0, the maximum number of IP addresses that can be assigned to network interfaces is __________. (<em>answer in integer</em>)",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 4094,
+    "max": 4094
+  },
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. <strong>Determine the Number of Host Bits:</strong><br>The given subnet mask is $255.255.240.0$.<br>In binary representation:<br>$$11111111.11111111.11110000.00000000$$<br>The number of network bits (1s) is $8 + 8 + 4 = 20$.<br>The number of host bits (0s) is $32 - 20 = 12$.<br><br>2. <strong>Calculate Assignable IP Addresses:</strong><br>Total IP addresses in the subnet = $2^{12} = 4096$.<br>Two IP addresses are reserved:<br>- Network ID (all host bits set to 0)<br>- Directed Broadcast Address (all host bits set to 1)<br><br>$$\\text{Assignable IP Addresses} = 2^{12} - 2 = 4096 - 2 = 4094$$<br><br>Therefore, the maximum number of IP addresses that can be assigned to network interfaces is <strong>4094</strong>.",
+  "videoUrl": null
+}

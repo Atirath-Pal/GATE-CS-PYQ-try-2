@@ -1,0 +1,27 @@
+{
+  "id": 52,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Computer Organization",
+    "Cache Memory"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a system with a processor and a 4 KB direct mapped cache with block size of 16 bytes. The system has a 16 MB physical memory. Four words P, Q, R, and S are accessed by the processor in the same order 10 times. That is, there are a total of 40 memory references in the sequence P, Q, R, S, P, Q, R, S,...<br><br>Assume that the cache memory is initially empty. The physical addresses of the words are given below (1 word = 1 byte).<br><br>P: 0x845B32, Q: 0x845B26, R: 0x845B36, S: 0x846B32<br><br>Which of the following statements is/are true?<br><br><i>Note:</i> 1K=$2^{10}$ and 1M=$2^{20}$",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Every access to P results in a cache miss",
+    "Every access to R results in a cache hit",
+    "Every access to Q results in a cache miss",
+    "Except the first access to S, all subsequent accesses to S result in cache hits"
+  ],
+  "answer": [
+    "A",
+    "B"
+  ],
+  "explanation": "Given parameters:<br>• Cache Size = $4\\text{ KB} = 2^{12}\\text{ bytes}$<br>• Block Size = $16\\text{ bytes} = 2^4\\text{ bytes}$<br>• Number of Cache Lines = $\\frac{4\\text{ KB}}{16\\text{ bytes}} = 256 = 2^8\\text{ lines}$<br>• Physical Memory = $16\\text{ MB} = 2^{24}\\text{ bytes}$ (24-bit physical address)<br><br><strong>Address Field Breakdown:</strong><br>• Block Offset = $4\\text{ bits}$ (Bits 0 to 3)<br>• Cache Line Index = $8\\text{ bits}$ (Bits 4 to 11)<br>• Tag = $12\\text{ bits}$ (Bits 12 to 23)<br><br><strong>Analyzing the Physical Addresses:</strong><br>1. <strong>P = 0x845B32:</strong> Block Address = $\\text{0x845B3}$, Cache Index = $\\text{0xB3}$, Tag = $\\text{0x845}$<br>2. <strong>Q = 0x845B26:</strong> Block Address = $\\text{0x845B2}$, Cache Index = $\\text{0xB2}$, Tag = $\\text{0x845}$<br>3. <strong>R = 0x845B36:</strong> Block Address = $\\text{0x845B3}$ (Same block as P), Cache Index = $\\text{0xB3}$, Tag = $\\text{0x845}$<br>4. <strong>S = 0x846B32:</strong> Block Address = $\\text{0x846B3}$, Cache Index = $\\text{0xB3}$, Tag = $\\text{0x846}$<br><br><strong>Execution Trace for Each Iteration (P, Q, R, S):</strong><br>• <strong>Q</strong> maps uniquely to Line $\\text{0xB2}$. It misses on the 1st access and hits on all subsequent 9 accesses.<br>• <strong>P, R, and S</strong> all map to Line $\\text{0xB3}$. Notice P and R are in the exact same memory block.<br><br>In every iteration of (P, Q, R, S):<br>1. <strong>Access P:</strong> Evicts block S from Line $\\text{0xB3}$ and loads block P (Tag $\\text{0x845}$). $\\rightarrow$ <strong>MISS</strong> (all 10 times).<br>2. <strong>Access Q:</strong> Line $\\text{0xB2}$ is unaffected. $\\rightarrow$ <strong>HIT</strong> (except 1st iteration).<br>3. <strong>Access R:</strong> Same block as P! Block P is currently in Line $\\text{0xB3}$. $\\rightarrow$ <strong>HIT</strong> (all 10 times).<br>4. <strong>Access S:</strong> Evicts block P/R from Line $\\text{0xB3}$ and loads block S (Tag $\\text{0x846}$). $\\rightarrow$ <strong>MISS</strong> (all 10 times).<br><br><strong>Conclusion:</strong><br>• Statement (A) is <strong>TRUE</strong>.<br>• Statement (B) is <strong>TRUE</strong>.<br>• Statement (C) is <strong>FALSE</strong>.<br>• Statement (D) is <strong>FALSE</strong>.",
+  "videoUrl": null
+}

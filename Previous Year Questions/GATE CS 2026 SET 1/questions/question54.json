@@ -1,0 +1,27 @@
+{
+  "id": 54,
+  "year": 2026,
+  "set": 1,
+  "topics": [
+    "Operating Systems",
+    "Virtual Memory"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a system that has a cache memory unit and a memory management unit (MMU). The address input to the cache memory is a physical address. The MMU has a translation lookaside buffer (TLB). Assume that when a page is evicted from the main memory, the corresponding blocks in the cache are marked as invalid.<br><br>For a given memory reference, which of the following sequences of events can NEVER happen?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "TLB miss, Page table hit, Cache hit",
+    "TLB hit, Page table miss, Cache hit",
+    "TLB miss, Page table miss, Cache hit",
+    "TLB miss, Page table miss, Cache miss"
+  ],
+  "answer": [
+    "B",
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Analyze TLB and Page Table relation.</strong><br>The TLB is a fast hardware cache for the page table. A TLB hit implies that the address translation is present, meaning the corresponding page must already be resident in main memory (a Page Table hit). Therefore, a <strong>TLB hit</strong> along with a <strong>Page table miss</strong> is impossible.<br><br><strong>Step 2: Analyze Page Table miss and Cache hit relation.</strong><br>A Page Table miss (page fault) means the requested page is not in main memory. The question explicitly states that whenever a page is evicted from main memory, all its corresponding blocks in the cache are invalidated. Thus, if a page is absent from main memory, its blocks cannot yield a <strong>Cache hit</strong>.<br><br><strong>Step 3: Evaluate each option.</strong><br>- <strong>Option A (TLB miss, Page table hit, Cache hit):</strong> POSSIBLE. The translation is not in the TLB but found in the page table, and the requested block is present in the cache.<br>- <strong>Option B (TLB hit, Page table miss, Cache hit):</strong> NEVER HAPPENS. A TLB hit cannot occur alongside a Page Table miss, nor can a Cache hit occur during a Page Table miss.<br>- <strong>Option C (TLB miss, Page table miss, Cache hit):</strong> NEVER HAPPENS. A Page Table miss means the page is not in main memory, which guarantees a Cache miss.<br>- <strong>Option D (TLB miss, Page table miss, Cache miss):</strong> POSSIBLE. Standard page fault scenario where the page is missing from the TLB, main memory, and cache.<br><br>Hence, options <strong>B and C</strong> can NEVER happen.",
+  "videoUrl": null
+}

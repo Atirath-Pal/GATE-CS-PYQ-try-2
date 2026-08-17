@@ -1,0 +1,26 @@
+{
+  "id": 45,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Compiler Design",
+    "Code Optimization"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the control flow graph given below.<br><br>Which one of the following options is the set of live variables at the exit point of each basic block?",
+  "assetImage": "question45.png",
+  "codeBlock": null,
+  "options": [
+    "$B1: \\{a, b, c, e, f\\}, B2: \\{d, e\\}, B3: \\{b, c, e, f\\}, B4: \\emptyset$",
+    "$B1: \\emptyset, B2: \\{d, e\\}, B3: \\{a, c, f\\}, B4: \\emptyset$",
+    "$B1: \\{a, b, c, e, f\\}, B2: \\{d, e\\}, B3: \\{c, e, f\\}, B4: \\emptyset$",
+    "$B1: \\emptyset, B2: \\{d, e, f\\}, B3: \\{a, b, c, e, f\\}, B4: \\emptyset$"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>Live variable analysis is a backward data-flow analysis. The data-flow equations are defined as:<br>$$Live_{out}(B) = \\bigcup_{S \\in succ(B)} Live_{in}(S)$$<br>$$Live_{in}(B) = use(B) \\cup (Live_{out}(B) \\setminus def(B))$$<br><br>1. <strong>Basic Block B4:</strong><br>• $use(B4) = \\{d, e\\}$, $def(B4) = \\{g\\}$<br>• Since B4 is followed by EXIT, $Live_{out}(B4) = \\emptyset$.<br>• $Live_{in}(B4) = \\{d, e\\}$.<br><br>2. <strong>Basic Block B2:</strong><br>• $use(B2) = \\{a, e\\}$, $def(B2) = \\{d\\}$<br>• $Live_{out}(B2) = Live_{in}(B4) = \\{d, e\\}$.<br>• $Live_{in}(B2) = \\{a, e\\} \\cup (\\{d, e\\} \\setminus \\{d\\}) = \\{a, e\\}$.<br><br>3. <strong>Basic Block B1:</strong><br>• $use(B1) = \\{b, c\\}$, $def(B1) = \\{a\\}$<br>• Successors of B1 are B2 and B3.<br>• $Live_{out}(B1) = Live_{in}(B2) \\cup Live_{in}(B3)$.<br><br>4. <strong>Basic Block B3:</strong><br>• $use(B3) = \\{a, f\\}$, $def(B3) = \\{e\\}$<br>• Successor of B3 is B1 (loop back).<br>• $Live_{out}(B3) = Live_{in}(B1)$.<br>• $Live_{in}(B3) = \\{a, f\\} \\cup (Live_{out}(B3) \\setminus \\{e\\})$.<br><br>5. <strong>Solving Iteratively for B1 and B3:</strong><br>• $Live_{in}(B1) = \\{b, c\\} \\cup (Live_{out}(B1) \\setminus \\{a\\}) = \\{b, c, e, f\\}$.<br>• $Live_{out}(B3) = Live_{in}(B1) = \\{b, c, e, f\\}$.<br>• $Live_{in}(B3) = \\{a, f\\} \\cup (\\{b, c, e, f\\} \\setminus \\{e\\}) = \\{a, b, c, f\\}$.<br>• $Live_{out}(B1) = Live_{in}(B2) \\cup Live_{in}(B3) = \\{a, e\\} \\cup \\{a, b, c, f\\} = \\{a, b, c, e, f\\}$.<br><br><strong>Summary of Exit Live Variables ($Live_{out}$):</strong><br>• <strong>B1:</strong> $\\{a, b, c, e, f\\}$<br>• <strong>B2:</strong> $\\{d, e\\}$<br>• <strong>B3:</strong> $\\{b, c, e, f\\}$<br>• <strong>B4:</strong> $\\emptyset$<br><br>Therefore, Option <strong>(A)</strong> is correct.",
+  "videoUrl": null
+}

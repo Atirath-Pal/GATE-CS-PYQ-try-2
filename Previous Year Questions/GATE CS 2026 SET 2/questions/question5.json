@@ -1,0 +1,26 @@
+{
+  "id": 5,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "General Aptitude",
+    "Logical Reasoning"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "'When it is raining, peacocks dance.'<br><br>Based only on this sentence, which one of the following options is necessarily true?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Peacocks dance only when it is raining.",
+    "When peacocks dance, it is raining.",
+    "When peacocks are not dancing, it is not raining.",
+    "When it is not raining, peacocks do not dance."
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. Express the given sentence as a logical implication:<br>- Let $P$ = \"It is raining\"<br>- Let $Q$ = \"Peacocks dance\"<br><br>The statement 'When it is raining, peacocks dance' translates to: $P \\rightarrow Q$.<br><br>2. A conditional statement $P \\rightarrow Q$ is logically equivalent ONLY to its <strong>contrapositive</strong>, which is $\\neg Q \\rightarrow \\neg P$.<br><br>3. Translating the contrapositive $\\neg Q \\rightarrow \\neg P$ into English:<br>- $\\neg Q$: \"Peacocks are not dancing\"<br>- $\\neg P$: \"It is not raining\"<br>- Therefore, $\\neg Q \\rightarrow \\neg P$ means: \"When peacocks are not dancing, it is not raining.\"<br><br>4. Analysis of options:<br>- (A) and (B) represent the converse ($Q \\rightarrow P$).<br>- (D) represents the inverse ($\\neg P \\rightarrow \\neg Q$).<br>- (C) represents the contrapositive ($\\neg Q \\rightarrow \\neg P$), which is logically equivalent to the original statement.<br><br>Hence, the correct option is <strong>(C)</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 42,
+  "year": 2026,
+  "set": 1,
+  "topics": [
+    "Compiler Design",
+    "Code Optimization"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the control flow graph shown in the figure.<br><br>Which one of the following options correctly lists the set of redundant expressions (common subexpressions) in the basic blocks B4 and B5?<br><br><em>Note:</em> All the variables are integers.",
+  "assetImage": "question42.png",
+  "codeBlock": null,
+  "options": [
+    "B4: { b + i }<br>B5: { c + m }",
+    "B4: { g * k }<br>B5: { c + m }",
+    "B4: { g * k, b + i }<br>B5: { }",
+    "B4: { g * k }<br>B5: { }"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Step 1: Understanding Common Subexpression Availability</strong><br>An expression $e$ is redundant (available) at a basic block if it is evaluated along <strong>every</strong> path leading to that basic block from the entry node, and none of its constituent variables are modified along those paths after the expression's evaluation.<br><br><strong>Step 2: Analysis of Basic Block B4</strong><br>- <strong>Expression $g * k$:</strong><br>  - Evaluated in B2 ($a = g * k$). $g$ and $k$ are not redefined in B2.<br>  - Evaluated in B3 ($t = g * k$). $g$ and $k$ are not redefined in B3.<br>  - Since $g * k$ is available along both incoming paths (B2 $\\rightarrow$ B4 and B3 $\\rightarrow$ B4), it is <strong>redundant</strong> in B4.<br>- <strong>Expression $b + i$:</strong><br>  - Evaluated in B1 ($a = b + i$).<br>  - In B3, $b$ is redefined ($b = c + m$), which kills the expression $b + i$ along the path B1 $\\rightarrow$ B3 $\\rightarrow$ B4.<br>  - Since $b + i$ is not available along the path through B3, it is <strong>not redundant</strong> in B4.<br><br>Thus, the set of redundant expressions for B4 is $\\{g * k\\}$.<br><br><strong>Step 3: Analysis of Basic Block B5</strong><br>- The expression evaluated in B5 is $c + m$.<br>- Along path B1 $\\rightarrow$ B2 $\\rightarrow$ B4 $\\rightarrow$ B5, the expression $c + m$ is never evaluated.<br>- Since it is not computed along all paths leading to B5, $c + m$ is not available at B5.<br><br>Thus, the set of redundant expressions for B5 is $\\{\\}$ (empty).<br><br>Hence, option <strong>D</strong> is correct.",
+  "videoUrl": null
+}

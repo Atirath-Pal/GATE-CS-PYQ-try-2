@@ -1,0 +1,28 @@
+{
+  "id": 56,
+  "year": 2026,
+  "set": 1,
+  "topics": [
+    "Computer Networks",
+    "IP Addressing"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "An ISP having an address block 202.16.0.0/15 assigns a block of 6000 IP addresses to a client, using the classless internet domain routing (CIDR) super-netting approach. Which of the following address blocks can be assigned by the ISP?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "202.16.0.0/19",
+    "202.17.64.0/19",
+    "202.16.32.0/19",
+    "202.17.24.0/19"
+  ],
+  "answer": [
+    "A",
+    "B",
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Determine the required block size and prefix length.</strong><br>To allocate at least 6000 IP addresses, the block size must be a power of 2. Since $2^{12} = 4096 < 6000$, we need $2^{13} = 8192 \\ge 6000$ addresses.<br>Thus, $13$ host bits are required, which corresponds to a prefix length of $32 - 13 = 19$ (a /19 block).<br><br><strong>Step 2: Determine boundary conditions for a /19 block.</strong><br>A /19 block has $19$ network bits ($8 + 8 + 3$). In the 3rd octet, the block size is $2^{8-3} = 2^5 = 32$.<br>Therefore, the 3rd octet of a valid /19 network address must be a multiple of 32 (i.e., 0, 32, 64, 96, 128, 160, 192, 224).<br><br><strong>Step 3: Check ISP address range.</strong><br>The ISP block is 202.16.0.0/15, which ranges from 202.16.0.0 to 202.17.255.255.<br><br><strong>Step 4: Evaluate the options.</strong><br>- <strong>Option A (202.16.0.0/19):</strong> 3rd octet is 0 (multiple of 32) and lies within the ISP range. Valid.<br>- <strong>Option B (202.17.64.0/19):</strong> 3rd octet is 64 (multiple of 32) and lies within the ISP range. Valid.<br>- <strong>Option C (202.16.32.0/19):</strong> 3rd octet is 32 (multiple of 32) and lies within the ISP range. Valid.<br>- <strong>Option D (202.17.24.0/19):</strong> 3rd octet is 24, which is NOT a multiple of 32. Invalid.<br><br>Hence, options <strong>A, B, and C</strong> can be assigned by the ISP.",
+  "videoUrl": null
+}

@@ -1,0 +1,19 @@
+{
+  "id": 32,
+  "year": 2026,
+  "set": 1,
+  "topics": ["Engineering Mathematics", "Calculus"],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider the function $f: \\mathbb{R} \\rightarrow \\mathbb{R}$ defined as follows:<br><br>$$f(x) = \\begin{cases} c_1 e^x - c_2 \\log_e\\left(\\frac{1}{x}\\right), & \\text{if } x > 0 \\\\ 3 & \\text{otherwise} \\end{cases}$$<br><br>where $c_1, c_2 \\in \\mathbb{R}$.<br><br>If $f$ is continuous at $x = 0$, then $c_1 + c_2 =$ ________. (answer in integer)",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 3,
+    "max": 3
+  },
+  "explanation": "<strong>Step 1: Condition for continuity at $x = 0$</strong><br>For $f(x)$ to be continuous at $x = 0$, the right-hand limit as $x \\to 0^+$ must exist and equal $f(0)$:<br>$$\\lim_{x \\to 0^+} f(x) = f(0) = 3$$<br><br><strong>Step 2: Simplify the expression for $x > 0$</strong><br>Using the logarithmic identity $\\log_e\\left(\\frac{1}{x}\\right) = -\\log_e(x)$, the function for $x > 0$ becomes:<br>$$f(x) = c_1 e^x + c_2 \\log_e(x)$$<br><br><strong>Step 3: Evaluate the limit and find $c_1$ and $c_2$</strong><br>As $x \\to 0^+$, $e^x \\to 1$ while $\\log_e(x) \\to -\\infty$.<br>For the limit to exist and equal a finite constant, the unbounded term $\\log_e(x)$ must be eliminated, which requires:<br>$$c_2 = 0$$<br><br>Setting $c_2 = 0$, the limit simplifies to:<br>$$\\lim_{x \\to 0^+} (c_1 e^x) = c_1$$<br>Equating this to $f(0) = 3$ gives $c_1 = 3$.<br><br><strong>Step 4: Calculate $c_1 + c_2$</strong><br>$$c_1 + c_2 = 3 + 0 = 3$$",
+  "videoUrl": null
+}

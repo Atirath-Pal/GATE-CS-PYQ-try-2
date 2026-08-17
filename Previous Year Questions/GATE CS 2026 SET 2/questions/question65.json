@@ -1,0 +1,22 @@
+{
+  "id": 65,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Computer Networks",
+    "Data Link Layer"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "It is necessary to design a link-layer protocol between two hosts that are directly connected over a lossless link of length 3000 kilometers. Assume that the link bandwidth is $10^8$ bits per second and that the propagation delay in the link is 5 nanoseconds per meter. Every transmitted data byte is assigned a unique sequence number.<br><br>Let $N$ be the minimum number of bits needed for the sequence number field in the protocol header such that<br><br>i. the sequence numbers do not wrap around before 60 seconds, and<br>ii. the maximum utilization of the link is achieved.<br><br>The value of $N$ is __________. <em>(answer in integer)</em>",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 30,
+    "max": 30
+  },
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. <strong>Calculate total transmission rate in bytes per second:</strong><br>• Bandwidth $B = 10^8\\text{ bits/sec} = \\frac{10^8}{8} = 1.25 \\times 10^7\\text{ bytes/sec}$.<br><br>2. <strong>Condition (i) - Sequence number wrap-around time:</strong><br>• The link transmits $1.25 \\times 10^7\\text{ bytes/sec}$.<br>• In 60 seconds, total bytes transmitted $= 1.25 \\times 10^7 \\times 60 = 7.5 \\times 10^8\\text{ bytes}$.<br>• Since every byte requires a unique sequence number, we need at least $7.5 \\times 10^8$ distinct sequence numbers to prevent wrap-around within 60 seconds.<br>• Let $N_1$ be the bits required for wrap-around:<br>$$2^{N_1} \\ge 7.5 \\times 10^8$$<br>$$\\log_2(7.5 \\times 10^8) \\approx 29.48$$\\Rightarrow N_1 = 30\\text{ bits}.<br><br>3. <strong>Condition (ii) - Maximum link utilization:</strong><br>• Propagation Delay $T_p = 3000\\text{ km} \\times 5\\text{ ns/m} = 3000 \\times 10^3\\text{ m} \\times 5 \\times 10^{-9}\\text{ s/m} = 0.015\\text{ seconds} = 15\\text{ ms}$.<br>• Round Trip Time $RTT = 2 \\times T_p = 30\\text{ ms} = 0.03\\text{ seconds}$.<br>• Max bytes in flight during one RTT $= 1.25 \\times 10^7\\text{ bytes/sec} \\times 0.03\\text{ sec} = 3.75 \\times 10^5\\text{ bytes}$.<br>• Bits required for maximum utilization $N_2$ satisfies:<br>$$2^{N_2} \\ge 3.75 \\times 10^5$$\\Rightarrow N_2 = 19\\text{ bits}.<br><br>4. <strong>Determining $N$:</strong><br>To satisfy both conditions, $N = \\max(N_1, N_2) = \\max(30, 19) = 30$.<br><br>Thus, the minimum number of bits needed is <strong>30</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,28 @@
+{
+  "id": 51,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Operating Systems",
+    "Process Synchronization"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider three processes P1, P2, and P3 running identical code, as shown in the pseudocode below. $A$ and $B$ are two binary semaphores initialized to 1 and 0, respectively. $X$ is a shared variable initialized to 0. Each line in the pseudocode is executed atomically.<br><br>Assume that any of the three processes can start to execute first and context switching can happen between these processes at any arbitrary time and in any arbitrary order.<br><br>Which of the following patterns is/are possible to be generated as an outcome of the execution of these three processes?",
+  "assetImage": null,
+  "codeBlock": "Wait(A);\nPrint(*);\nX = X+1;\nIf (X == 2)\n{\n    Print($);\n    Signal(B);\n}\nSignal(A);\nWait(B);\nPrint(#);\nSignal(B);",
+  "options": [
+    "**$*###",
+    "**$#*##",
+    "**$##*#",
+    "***$###"
+  ],
+  "answer": [
+    "A",
+    "B",
+    "C"
+  ],
+  "explanation": "<strong>1. Phase 1 Analysis (Before Wait(B)):</strong><br>- Process 1 enters Phase 1: executes <code>Wait(A)</code>, prints <code>*</code>, increments $X$ to $1$. Since $X \\neq 2$, it skips the <code>if</code> block and calls <code>Signal(A)</code>.<br>- Process 2 enters Phase 1: executes <code>Wait(A)</code>, prints <code>*</code>, increments $X$ to $2$. Since $X == 2$, it enters the <code>if</code> block, prints <code>$</code>, calls <code>Signal(B)</code>, and then calls <code>Signal(A)</code>.<br>- At this point, exactly two <code>*</code> and one <code>$</code> have been printed (prefix pattern: <code>**$</code>), $B$ becomes $1$, and $A$ becomes $1$.<br><br><strong>2. Why (D) is Impossible:</strong><br>- Process 3 can only execute its Phase 1 after Process 2 calls <code>Signal(A)</code>, which happens strictly AFTER Process 2 prints <code>$</code>.<br>- Therefore, the 3rd <code>*</code> can NEVER appear before <code>$</code>, making <code>***$###</code> impossible.<br><br><strong>3. Interleaving Remaining Operations:</strong><br>- After <code>**$</code> is generated, Process 3 still needs to run Phase 1 (prints one <code>*</code>), and all three processes need to run Phase 2 (each prints one <code>#</code>).<br>- <strong>Pattern (A) [<code>**$*###</code>]:</strong> Process 3 executes Phase 1 first (prints <code>*</code>), then all 3 processes execute Phase 2 (prints <code>###</code>).<br>- <strong>Pattern (B) [<code>**$#*##</code>]:</strong> One process executes Phase 2 (prints <code>#</code>), then Process 3 executes Phase 1 (prints <code>*</code>), followed by remaining 2 processes executing Phase 2 (prints <code>##</code>).<br>- <strong>Pattern (C) [<code>**$##*#</code>]:</strong> Two processes execute Phase 2 (prints <code>##</code>), then Process 3 executes Phase 1 (prints <code>*</code>), followed by the last process executing Phase 2 (prints <code>#</code>).<br><br>Hence, patterns (A), (B), and (C) are all possible.",
+  "videoUrl": null
+}

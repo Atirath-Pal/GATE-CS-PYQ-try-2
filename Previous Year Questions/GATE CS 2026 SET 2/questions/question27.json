@@ -1,0 +1,27 @@
+{
+  "id": 27,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Engineering Mathematics",
+    "Calculus"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "For a real number $a$, let $I(a) = \\int_{-1}^{1} (3x^2 - ax + 1) dx$. Which of the following statements is/are true?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "The value of $I(a)$ is independent of the value of $a$",
+    "The value of $I(a)$ can vary with the value of $a$",
+    "There exists $a \\in (-\\infty, +\\infty)$ such that $I(a)$ is a positive real number",
+    "There exists $a \\in (-\\infty, +\\infty)$ such that $I(a)$ is a negative real number"
+  ],
+  "answer": [
+    "A",
+    "C"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. <strong>Evaluate the integral $I(a)$:</strong><br>$$I(a) = \\int_{-1}^{1} (3x^2 - ax + 1) dx$$<br>Integrating term by term:<br>$$I(a) = \\left[ x^3 - \\frac{ax^2}{2} + x \\right]_{-1}^{1}$$<br>Substituting the limits:<br>$$I(a) = \\left( 1^3 - \\frac{a(1)^2}{2} + 1 \\right) - \\left( (-1)^3 - \\frac{a(-1)^2}{2} + (-1) \\right)$$<br>$$I(a) = \\left( 2 - \\frac{a}{2} \\right) - \\left( -2 - \\frac{a}{2} \\right) = 2 + 2 = 4$$<br><br>2. <strong>Analyze the options:</strong><br>- Since $I(a) = 4$ for all $a$, its value is constant and completely independent of $a$. Thus, <strong>(A) is true</strong> and <strong>(B) is false</strong>.<br>- Since $I(a) = 4 > 0$ for all real numbers $a$, there exists $a \\in (-\\infty, +\\infty)$ such that $I(a)$ is a positive real number. Thus, <strong>(C) is true</strong>.<br>- $I(a)$ is never negative, so <strong>(D) is false</strong>.<br><br>Therefore, the correct statements are <strong>(A)</strong> and <strong>(C)</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,22 @@
+{
+  "id": 56,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Computer Organization and Architecture",
+    "Cache Memory"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a system with 1 MB physical memory and a word length of 1 byte. The system uses a direct mapped cache, with block numbers starting from 0. The word with physical address 0xA2C28 is mapped to the cache block number $176_{10}$. The maximum possible size of the cache (in KB) for this configuration is ____________.<br>(answer in integer)<br><br>Note: $1\\text{K}=2^{10}$ and $1\\text{M}=2^{20}$",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 128,
+    "max": 128
+  },
+  "explanation": "<strong>Step 1: Address Bit-width Calculation</strong><br>Physical memory size = $1\\text{ MB} = 2^{20}\\text{ bytes}$.<br>Word length = $1\\text{ byte}$.<br>Therefore, the total physical address length is $20\\text{ bits}$ (bit 19 down to bit 0).<br><br><strong>Step 2: Binary Representation of Physical Address</strong><br>Physical Address = $\\text{0xA2C28}_{16}$.<br>Converting to 20-bit binary:<br>$\\text{0xA2C28} = 1010\\ 0010\\ 1100\\ 0010\\ 1000_2$<br><br>Bit positions (19 down to 0):<br>Bits 19..16: $1010$<br>Bits 15..12: $0010$<br>Bits 11..8: $1100$<br>Bits 7..4: $0010$<br>Bits 3..0: $1000$<br><br><strong>Step 3: Locating the Block Index Pattern</strong><br>Target Cache Block Number = $176_{10} = 10110000_2$ (requires 8 bits).<br>Scanning the 20-bit address for the contiguous pattern $10110000$:<br>$\\text{bits}[13..6] = 10110000_2 = 176_{10}$<br><br><strong>Step 4: Maximizing Cache Index and Size</strong><br>In a direct mapped cache, the physical address is partitioned as:<br>$\\text{Tag} \\mid \\text{Block Index } (c\\text{ bits}) \\mid \\text{Block Offset } (b\\text{ bits})$<br><br>Since the block index starts at bit 6, the block offset $b = 6\\text{ bits}$.<br>To maximize cache size $2^{c+b}$, we must maximize the index bits $c$ by including any leading zero bits above bit 13:<br>Bit 14 = 0, Bit 15 = 0, Bit 16 = 0.<br>Bit 17 = 1 (we must stop here, as including bit 17 would add $2^{11}$ to the index value, changing it from 176).<br><br>Thus, the maximum index field $c$ covers bits 16 down to 6 ($c = 11\\text{ bits}$).<br>Total bits for cache index and offset = $11 + 6 = 17\\text{ bits}$.<br><br><strong>Step 5: Final Size Calculation</strong><br>$\\text{Maximum Cache Size} = 2^{17}\\text{ bytes} = \\frac{2^{17}}{2^{10}}\\text{ KB} = 2^7\\text{ KB} = 128\\text{ KB}$.<br><br>Hence, the correct answer is <strong>128</strong>.",
+  "videoUrl": null
+}

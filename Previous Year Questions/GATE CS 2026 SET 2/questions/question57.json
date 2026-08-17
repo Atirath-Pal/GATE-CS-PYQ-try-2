@@ -1,0 +1,22 @@
+{
+  "id": 57,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Computer Organization",
+    "Pipelining"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "A non-pipelined instruction execution unit that operates at 1.6 GHz clock takes an average of 5 clock cycles to complete the execution of an instruction. To improve the performance, the system was pipelined with a goal of achieving an average throughput of one instruction per clock cycle. However, it could operate only at 1.2 GHz due to pipeline overheads. While executing a program in the pipelined design, 30% of instructions encountered a stall of 2 cycles due to pipeline hazards. The speed-up obtained by the pipelined design over the non-pipelined one for this program is ____________. (rounded off to two decimal places)<br><br><i>Note:</i> 1G=$10^9$",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 2.30,
+    "max": 2.40
+  },
+  "explanation": "<strong>Step 1: Calculate execution time per instruction for the non-pipelined processor ($T_{\\text{non}}$).</strong><br>• Clock Frequency ($f_{\\text{non}}$) = $1.6\\text{ GHz}$<br>• Clock Cycle Time ($t_{\\text{non}}$) = $\\frac{1}{1.6\\text{ GHz}} = \\frac{1}{1.6}\\text{ ns}$<br>• $\\text{CPI}_{\\text{non}} = 5$<br>• $T_{\\text{non}} = \\text{CPI}_{\\text{non}} \\times t_{\\text{non}} = \\frac{5}{1.6}\\text{ ns} = 3.125\\text{ ns}$<br><br><strong>Step 2: Calculate execution time per instruction for the pipelined processor ($T_{\\text{pipe}}$).</strong><br>• Clock Frequency ($f_{\\text{pipe}}$) = $1.2\\text{ GHz}$<br>• Clock Cycle Time ($t_{\\text{pipe}}$) = $\\frac{1}{1.2\\text{ GHz}} = \\frac{1}{1.2}\\text{ ns}$<br>• Base CPI = $1$<br>• Stall Cycles = $30\\% \\times 2 = 0.30 \\times 2 = 0.6$<br>• $\\text{CPI}_{\\text{pipe}} = 1 + 0.6 = 1.6$<br>• $T_{\\text{pipe}} = \\text{CPI}_{\\text{pipe}} \\times t_{\\text{pipe}} = 1.6 \\times \\frac{1}{1.2}\\text{ ns} = \\frac{1.6}{1.2}\\text{ ns} = \\frac{4}{3}\\text{ ns} \\approx 1.3333\\text{ ns}$<br><br><strong>Step 3: Calculate Speed-up ($S$).</strong><br>• $S = \\frac{T_{\\text{non}}}{T_{\\text{pipe}}} = \\frac{3.125}{4/3} = \\frac{3.125 \\times 3}{4} = \\frac{9.375}{4} = 2.34375$<br><br>Rounding off to two decimal places gives <strong>2.34</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 13,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Theory of Computation",
+    "Decidability"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Which one of the following statements is equivalent to the following assertion?<br><br>Turing machine $M$ decides the language $L \\subseteq \\{0,1\\}^*$",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Turing machine $M$ halts on all input strings in $\\{0,1\\}^*$",
+    "Turing machine $M$ accepts all input strings in $L$",
+    "Turing machine $M$ rejects all input strings in $\\{0,1\\}^* - L$",
+    "Turing machine $M$ accepts all input strings in $L$ and rejects all input strings in $\\{0,1\\}^* - L$"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. <strong>Definition of Deciding a Language:</strong> A Turing machine $M$ is said to <em>decide</em> a language $L \\subseteq \\Sigma^*$ if for every input string $w \\in \\Sigma^*$:<br>- If $w \\in L$, $M$ eventually halts in an <strong>accept</strong> state.<br>- If $w \\notin L$ (i.e., $w \\in \\Sigma^* - L$), $M$ eventually halts in a <strong>reject</strong> state.<br><br>2. <strong>Analysis of Options:</strong><br>- <strong>(A)</strong> Stating $M$ halts on all inputs is a necessary condition, but does not specify acceptance/rejection criteria.<br>- <strong>(B)</strong> Accepting all strings in $L$ only describes Turing recognizability (Turing-acceptable language), as $M$ might loop infinitely on strings not in $L$.<br>- <strong>(C)</strong> Only addresses rejection of strings outside $L$.<br>- <strong>(D)</strong> Explicitly states that $M$ accepts all strings in $L$ and rejects all strings in $\\{0,1\\}^* - L$, which completely captures the definition of deciding $L$.<br><br>Hence, the correct option is <strong>(D)</strong>.",
+  "videoUrl": null
+}

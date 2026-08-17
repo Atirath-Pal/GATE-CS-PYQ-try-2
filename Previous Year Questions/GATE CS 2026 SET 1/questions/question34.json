@@ -1,0 +1,19 @@
+{
+  "id": 34,
+  "year": 2026,
+  "set": 1,
+  "topics": ["C Programming", "Scope & Storage Classes"],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider the following program in C:<br><br>The output of the program is ________. (answer in integer)<br><br>Note: Assume that the program compiles and runs successfully.",
+  "assetImage": null,
+  "codeBlock": "#include <stdio.h>\n\nvoid func(int i, int j) {\n    if(i < j) {\n        int i = 0;\n        while (i < 10) {\n            j += 2;\n            i++;\n        }\n    }\n    printf(\"%d\", i);\n}\n\nint main() {\n    int i = 9, j = 10;\n    func(i, j);\n    return 0;\n}",
+  "options": [],
+  "answer": {
+    "min": 9,
+    "max": 9
+  },
+  "explanation": "<strong>Step 1: Variable Scoping and Shadowing</strong><br>In C, declaring a variable inside an inner block (e.g., inside the `if` block) shadows any variable with the same name declared in an outer scope (e.g., the function parameter `i`).<br><br><strong>Step 2: Trace `func(9, 10)` Execution</strong><br>• The `main()` function invokes `func(9, 10)`, initializing parameter $i = 9$ and parameter $j = 10$.<br>• The condition `if (i < j)` evaluates to `9 < 10` (true).<br>• Inside the `if` block, a new block-scoped variable `int i = 0;` is declared, shadowing parameter $i$.<br>• The `while (i < 10)` loop increments this local $i$ until it reaches 10.<br>• Upon exiting the `if` block, the local block-scoped $i$ goes out of scope.<br><br><strong>Step 3: Determine Output</strong><br>• The line `printf(\"%d\", i);` is executed outside the `if` block, where $i$ refers to the function parameter $i$.<br>• Parameter $i$ remained untouched with a value of $9$.<br><br>Therefore, the output of the program is <strong>9</strong>.",
+  "videoUrl": null
+}

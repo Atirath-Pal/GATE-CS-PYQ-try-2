@@ -1,0 +1,22 @@
+{
+  "id": 65,
+  "year": 2026,
+  "set": 1,
+  "topics": [
+    "Database Management Systems",
+    "Relational Database Design"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a relational database schema with a relation $R(A, B, C, D)$. If $\\{A, B\\}$ and $\\{A, C\\}$ are the only two candidate keys of the relation $R$, then the number of superkeys of relation $R$ is ________. <i>(answer in integer)</i>",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 6,
+    "max": 6
+  },
+  "explanation": "<strong>Step 1: Understand superkey definition.</strong><br>A superkey is any set of attributes that contains a candidate key as a subset. Relation $R$ has attributes $\\{A, B, C, D\\}$ (total 4 attributes).<br>The candidate keys are $K_1 = \\{A, B\\}$ and $K_2 = \\{A, C\\}$.<br><br><strong>Step 2: Apply the Principle of Inclusion-Exclusion.</strong><br>- <strong>Superkeys containing $K_1 = \\{A, B\\}$:</strong><br>  The remaining attributes are $\\{C, D\\}$. The number of combinations is $2^2 = 4$.<br>  Sets: $\\{A, B\\}, \\{A, B, C\\}, \\{A, B, D\\}, \\{A, B, C, D\\}$.<br><br>- <strong>Superkeys containing $K_2 = \\{A, C\\}$:</strong><br>  The remaining attributes are $\\{B, D\\}$. The number of combinations is $2^2 = 4$.<br>  Sets: $\\{A, C\\}, \\{A, B, C\\}, \\{A, C, D\\}, \\{A, B, C, D\\}$.<br><br>- <strong>Superkeys containing BOTH $K_1$ and $K_2$ ($K_1 \\cup K_2 = \\{A, B, C\\}$):</strong><br>  The remaining attribute is $\\{D\\}$. The number of combinations is $2^1 = 2$.<br>  Sets: $\\{A, B, C\\}, \\{A, B, C, D\\}$.<br><br><strong>Step 3: Calculate the total unique superkeys.</strong><br>$$\\text{Total Superkeys} = |S(K_1)| + |S(K_2)| - |S(K_1 \\cap K_2)| = 4 + 4 - 2 = 6$$<br><br>Thus, the number of superkeys of relation $R$ is <strong>6</strong>.",
+  "videoUrl": null
+}

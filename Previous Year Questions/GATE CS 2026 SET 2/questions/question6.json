@@ -1,0 +1,26 @@
+{
+  "id": 6,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "General Aptitude",
+    "Verbal Ability"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Water : P :: Food : Q<br><br>Choose the P and Q combination from the options below to form a meaningful analogy.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "P = Thirst; Q = Hunger",
+    "P = Drink; Q = Hunger",
+    "P = Thirst; Q = Satiated",
+    "P = Wet; Q = Critic"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. The analogy follows the relationship between a substance and the physical need/desire it quenches or satisfies.<br><br>2. <strong>Water</strong> is consumed to satisfy <strong>Thirst</strong> ($P = \\text{Thirst}$).<br><br>3. Similarly, <strong>Food</strong> is consumed to satisfy <strong>Hunger</strong> ($Q = \\text{Hunger}$).<br><br>Therefore, the combination $P = \\text{Thirst}; Q = \\text{Hunger}$ forms a parallel and meaningful analogy.<br><br>Hence, the correct option is <strong>(A)</strong>.",
+  "videoUrl": null
+}

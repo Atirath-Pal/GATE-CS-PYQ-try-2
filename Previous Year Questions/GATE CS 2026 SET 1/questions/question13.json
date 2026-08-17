@@ -1,0 +1,21 @@
+{
+  "id": 13,
+  "year": 2026,
+  "set": 1,
+  "topics": ["Engineering Mathematics", "Linear Algebra"],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "For $n > 1$, the maximum multiplicity of any eigenvalue of an $n \\times n$ matrix with elements from $\\mathbb{R}$ is",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$n$",
+    "$n - 1$",
+    "$1$",
+    "$n + 1$"
+  ],
+  "answer": ["A"],
+  "explanation": "<strong>Step 1: Characteristic polynomial degree</strong><br>An $n \\times n$ matrix has a characteristic polynomial of degree $n$. Therefore, the total sum of algebraic multiplicities of all eigenvalues is at most $n$.<br><br><strong>Step 2: Maximum multiplicity</strong><br>Since the total degree is $n$, a single eigenvalue can have a multiplicity of at most $n$.<br><br><strong>Step 3: Example</strong><br>Consider the $n \\times n$ identity matrix $I_n$. Its characteristic polynomial is $(1 - \\lambda)^n = 0$, where the eigenvalue $\\lambda = 1$ has a multiplicity of exactly $n$.<br><br>Therefore, the maximum multiplicity is <strong>$n$</strong> (Option A).",
+  "videoUrl": null
+}

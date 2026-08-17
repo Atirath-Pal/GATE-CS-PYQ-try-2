@@ -1,0 +1,26 @@
+{
+  "id": 23,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Operating Systems",
+    "CPU Scheduling"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Which one of the following CPU scheduling algorithms <strong>cannot</strong> be preemptive?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Shortest Remaining Time First (SRTF) Scheduling",
+    "First Come First Serve (FCFS) Scheduling",
+    "Round Robin Scheduling",
+    "Priority Scheduling"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. <strong>Shortest Remaining Time First (SRTF):</strong> SRTF is inherently the preemptive version of Shortest Job First (SJF) scheduling.<br><br>2. <strong>First Come First Serve (FCFS):</strong> In FCFS, once the CPU is allocated to a process, that process keeps the CPU until it either terminates or requests I/O. Therefore, FCFS is strictly non-preemptive.<br><br>3. <strong>Round Robin:</strong> Designed specifically for time-sharing systems, processes are preempted after a fixed time quantum expires, making it inherently preemptive.<br><br>4. <strong>Priority Scheduling:</strong> Can be implemented in either preemptive or non-preemptive modes.<br><br>Thus, First Come First Serve (FCFS) Scheduling cannot be preemptive, which corresponds to Option <strong>(B)</strong>.",
+  "videoUrl": null
+}

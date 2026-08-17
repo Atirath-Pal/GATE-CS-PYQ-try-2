@@ -1,0 +1,21 @@
+{
+  "id": 1,
+  "year": 2026,
+  "set": 1,
+  "topics": ["General Aptitude", "Verbal Ability"],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "The antonym of the word protagonist is _________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "agnostic",
+    "antagonist",
+    "arsonist",
+    "anarchist"
+  ],
+  "answer": ["B"],
+  "explanation": "<strong>Step 1: Understand the term</strong><br>A <strong>protagonist</strong> refers to the principal character or leading figure in a story, play, or movement.<br><br><strong>Step 2: Evaluate the options</strong><br>• <strong>agnostic</strong>: A person who believes that nothing is known or can be known of the existence of God.<br>• <strong>antagonist</strong>: An adversary or opponent who actively competes with or opposes another (direct antonym of protagonist).<br>• <strong>arsonist</strong>: A person who intentionally sets fire to property.<br>• <strong>anarchist</strong>: A person who rebels against any established system, order, or authority.<br><br>Therefore, the correct antonym is <strong>antagonist</strong>.",
+  "videoUrl": null
+}

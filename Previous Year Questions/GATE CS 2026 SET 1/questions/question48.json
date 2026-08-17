@@ -1,0 +1,27 @@
+{
+  "id": 48,
+  "year": 2026,
+  "set": 1,
+  "topics": [
+    "Digital Logic",
+    "Boolean Algebra"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a Boolean function $F$ with the following minterm expression:<br><br>$$F(P, Q, R, S) = \\sum m (1, 2, 3, 4, 5, 7, 10, 12, 13, 14)$$<br><br>Which of the following options is/are the minimal sum-of-products expression(s) of $F$ ?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\bar{P}S + Q\\bar{R} + \\bar{P}\\bar{Q}R + \\bar{Q}R\\bar{S}$",
+    "$\\bar{P}S + Q\\bar{R} + \\bar{P}\\bar{Q}R + PR\\bar{S}$",
+    "$\\bar{P}S + Q\\bar{R} + PQ\\bar{S} + PR\\bar{S}$",
+    "$\\bar{P}S + Q\\bar{R} + PQ\\bar{S} + \\bar{Q}R\\bar{S}$"
+  ],
+  "answer": [
+    "B",
+    "D"
+  ],
+  "explanation": "<strong>Step 1: Identify Essential Prime Implicants using K-map.</strong><br>Plotting the minterms $m(1, 2, 3, 4, 5, 7, 10, 12, 13, 14)$ on a 4-variable K-map:<br>- Grouping $m(1, 3, 5, 7)$ gives the prime implicant $\\bar{P}S$.<br>- Grouping $m(4, 5, 12, 13)$ gives the prime implicant $Q\\bar{R}$.<br><br>These two essential prime implicants cover minterms $\\{1, 3, 4, 5, 7, 12, 13\\}$.<br><br><strong>Step 2: Cover remaining minterms $\\{2, 10, 14\\}$.</strong><br>To cover the remaining minterms with minimum cost:<br>- <strong>Combination 1:</strong> Select $\\bar{P}\\bar{Q}R$ (covers minterms $2, 3$) and $PR\\bar{S}$ (covers minterms $10, 14$).<br>This yields the minimal SOP expression: $F = \\bar{P}S + Q\\bar{R} + \\bar{P}\\bar{Q}R + PR\\bar{S}$ (Option B).<br><br>- <strong>Combination 2:</strong> Select $\\bar{Q}R\\bar{S}$ (covers minterms $2, 10$) and $PQ\\bar{S}$ (covers minterms $12, 14$).<br>This yields another minimal SOP expression: $F = \\bar{P}S + Q\\bar{R} + PQ\\bar{S} + \\bar{Q}R\\bar{S}$ (Option D).<br><br>Both expressions consist of 4 product terms and 10 total literals, which represents the minimum achievable complexity.<br><br>Hence, options <strong>B</strong> and <strong>D</strong> are correct.",
+  "videoUrl": null
+}

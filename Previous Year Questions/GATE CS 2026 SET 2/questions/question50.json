@@ -1,0 +1,27 @@
+{
+  "id": 50,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Data Structures",
+    "Stacks and Queues"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a stack $S$ and a queue $Q$. Both of them are initially empty and have the capacity to store ten elements each. The elements 1, 2, 3, 4, and 5 arrive one by one, in that order. When an element arrives, it is assigned either to $S$ (pushed on $S$) or to $Q$ (enqueued to $Q$). Once all the five elements are stored, the output is generated in two steps. First, stack $S$ is emptied by popping all elements. Then queue $Q$ is emptied by dequeueing all elements. The output obtained by following this process is 4 3 1 2 5 .<br><br>Given the output, the objective is to predict whether an element was assigned to $S$ or $Q$.<br><br>Which of the following options is/are possible valid assignment(s) of the elements?<br><br>Note: In the options, the notation $xS$ denotes that element $x$ was assigned to $S$ and $yQ$ denotes that element $y$ was assigned to $Q$.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$1S, 2Q, 3S, 4S, 5Q$",
+    "$1Q, 2Q, 3S, 4S, 5Q$",
+    "$1Q, 2Q, 3Q, 4S, 5S$",
+    "$1S, 2S, 3S, 4Q, 5Q$"
+  ],
+  "answer": [
+    "A",
+    "B"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>The output is formed by first popping all elements from $S$ (LIFO order), followed by dequeueing all elements from $Q$ (FIFO order). Thus, the output consists of:<br>$$\\text{[Elements in } S \\text{ in reverse arrival order]} + \\text{[Elements in } Q \\text{ in arrival order]}$$<br>The required overall output is: <strong>4, 3, 1, 2, 5</strong>.<br><br>1. <strong>Test Option (A): $1S, 2Q, 3S, 4S, 5Q$</strong><br>- Elements pushed to $S$: 1, 3, 4. Popping $S$ gives: <strong>4, 3, 1</strong>.<br>- Elements enqueued to $Q$: 2, 5. Dequeueing $Q$ gives: <strong>2, 5</strong>.<br>- Total Output: <strong>4, 3, 1, 2, 5</strong>. (Matches target output)<br><br>2. <strong>Test Option (B): $1Q, 2Q, 3S, 4S, 5Q$</strong><br>- Elements pushed to $S$: 3, 4. Popping $S$ gives: <strong>4, 3</strong>.<br>- Elements enqueued to $Q$: 1, 2, 5. Dequeueing $Q$ gives: <strong>1, 2, 5</strong>.<br>- Total Output: <strong>4, 3, 1, 2, 5</strong>. (Matches target output)<br><br>3. <strong>Test Option (C): $1Q, 2Q, 3Q, 4S, 5S$</strong><br>- Elements pushed to $S$: 4, 5. Popping $S$ gives: <strong>5, 4</strong>.<br>- Elements enqueued to $Q$: 1, 2, 3. Dequeueing $Q$ gives: <strong>1, 2, 3</strong>.<br>- Total Output: <strong>5, 4, 1, 2, 3</strong>. (Incorrect)<br><br>4. <strong>Test Option (D): $1S, 2S, 3S, 4Q, 5Q$</strong><br>- Elements pushed to $S$: 1, 2, 3. Popping $S$ gives: <strong>3, 2, 1</strong>.<br>- Elements enqueued to $Q$: 4, 5. Dequeueing $Q$ gives: <strong>4, 5</strong>.<br>- Total Output: <strong>3, 2, 1, 4, 5</strong>. (Incorrect)<br><br>Hence, options <strong>(A) and (B)</strong> are the valid assignments.",
+  "videoUrl": null
+}

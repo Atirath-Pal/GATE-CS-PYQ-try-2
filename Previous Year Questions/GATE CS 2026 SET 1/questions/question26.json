@@ -1,0 +1,21 @@
+{
+  "id": 26,
+  "year": 2026,
+  "set": 1,
+  "topics": ["Theory of Computation", "Finite Automata"],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Let $M$ be a nondeterministic finite automaton (NFA) with 6 states over a finite alphabet.<br><br>Which of the following options CANNOT be the number of states in the minimal deterministic finite automaton (DFA) that is equivalent to $M$ ?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "32",
+    "65",
+    "1",
+    "128"
+  ],
+  "answer": ["B", "D"],
+  "explanation": "<strong>Step 1: Find the bounds on the number of states in equivalent DFA</strong><br>For an NFA with $n$ states, the equivalent DFA constructed using subset construction can have at most $2^n$ states. Therefore, the minimal DFA equivalent to $M$ can have at most $2^n$ states.<br><br>Here, $n = 6$, so the maximum possible number of states in the minimal DFA is $2^6 = 64$.<br><br><strong>Step 2: Determine the minimum possible states</strong><br>The minimum number of states in any minimal DFA is $1$ (for instance, when the language accepted is $\\Sigma^*$ or $\\emptyset$).<br><br>Thus, if $k$ is the number of states in the minimal DFA equivalent to $M$, then:<br>$$1 \\le k \\le 64$$<br><br><strong>Step 3: Evaluate the options</strong><br>• <strong>32 (Option A):</strong> Possible since $1 \\le 32 \\le 64$.<br>• <strong>65 (Option B):</strong> Impossible since $65 > 64$.<br>• <strong>1 (Option C):</strong> Possible since $1 \\le 1 \\le 64$.<br>• <strong>128 (Option D):</strong> Impossible since $128 > 64$.<br><br>Therefore, the options that CANNOT be the number of states in the minimal DFA are <strong>B and D</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,27 @@
+{
+  "id": 29,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Theory of Computation",
+    "Context-Free Grammars"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Which of the following grammars is/are ambiguous?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$S \\rightarrow aSb \\mid \\epsilon$",
+    "$E \\rightarrow E + E \\mid E * E \\mid id$",
+    "$S \\rightarrow aS \\mid Sa \\mid \\epsilon$",
+    "$S \\rightarrow aS \\mid \\epsilon$"
+  ],
+  "answer": [
+    "B",
+    "C"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. <strong>Option (A):</strong> $S \\rightarrow aSb \\mid \\epsilon$ generates the language $L = \\{a^n b^n \\mid n \\ge 0\\}$. Every string in $L$ has a unique leftmost derivation. Hence, it is <strong>unambiguous</strong>.<br><br>2. <strong>Option (B):</strong> $E \\rightarrow E + E \\mid E * E \\mid id$ is a well-known expression grammar that allows multiple parse trees for expressions like $id + id * id$ due to lack of operator precedence and associativity enforcement. Hence, it is <strong>ambiguous</strong>.<br><br>3. <strong>Option (C):</strong> $S \\rightarrow aS \\mid Sa \\mid \\epsilon$ generates the language $a^*$. For the string $aa$, there are multiple distinct parse trees (e.g., starting with $S \\Rightarrow aS$ vs $S \\Rightarrow Sa$). Hence, it is <strong>ambiguous</strong>.<br><br>4. <strong>Option (D):</strong> $S \\rightarrow aS \\mid \\epsilon$ generates $a^*$ with a right-linear structure where every string $a^n$ has a unique derivation. Hence, it is <strong>unambiguous</strong>.<br><br>Therefore, the ambiguous grammars are <strong>(B)</strong> and <strong>(C)</strong>.",
+  "videoUrl": null
+}

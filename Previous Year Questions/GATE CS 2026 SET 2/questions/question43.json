@@ -1,0 +1,26 @@
+{
+  "id": 43,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Computer Networks",
+    "Error Detection"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the transmission of data bits 110001011 over a link that uses Cyclic Redundancy Check (CRC) code for error detection. If the generator bit pattern is given to be 1001, which one of the following options shows the remainder bit pattern appended to the data bits before transmission?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "011",
+    "101",
+    "000",
+    "100"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. <strong>Identify Given Data:</strong><br>- Data bits: $110001011$ (length = 9 bits)<br>- Generator bit pattern: $1001$ (length $k = 4$ bits)<br><br>2. <strong>Append Zeros to Data Bits:</strong><br>The number of zeros to append is equal to $(k - 1) = 4 - 1 = 3$ zeros.<br>Appended data = $110001011000$<br><br>3. <strong>Modulo-2 Division (XOR Operation):</strong><br>- $1100 \\oplus 1001 = 0101$<br>- Bring down $0 \\rightarrow 1010 \\oplus 1001 = 0011$<br>- Bring down $1 \\rightarrow 0111$ (MSB is $0$, skip XOR)<br>- Bring down $0 \\rightarrow 1110 \\oplus 1001 = 0111$<br>- Bring down $1 \\rightarrow 1111 \\oplus 1001 = 0110$<br>- Bring down $1 \\rightarrow 1101 \\oplus 1001 = 0100$<br>- Bring down $0 \\rightarrow 1000 \\oplus 1001 = 0001$<br>- Bring down $0 \\rightarrow 0010$ (MSB is $0$, skip XOR)<br>- Bring down $0 \\rightarrow 0100$ (MSB is $0$, skip XOR)<br><br>4. <strong>Result:</strong><br>The 3-bit remainder obtained is <strong>100</strong>.<br><br>Hence, the correct option is <strong>(D)</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,27 @@
+{
+  "id": 50,
+  "year": 2026,
+  "set": 1,
+  "topics": [
+    "Algorithms",
+    "Graph Algorithms"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the following pseudocode for depth-first search (DFS) algorithm which takes a directed graph $G(V, E)$ as input, where $d[v]$ and $f[v]$ are the discovery time and finishing time, respectively, of the vertex $v \\in V$.<br><br><table border=\"1\" style=\"width:100%; border-collapse: collapse;\"><tr><td style=\"vertical-align: top; padding: 10px;\"><i>DFS(G):</i><br>&nbsp;&nbsp;<i>unmark all</i> $v \\in V$<br>&nbsp;&nbsp;$t \\leftarrow 0$<br>&nbsp;&nbsp;<i>for each</i> $v \\in V$<br>&nbsp;&nbsp;&nbsp;&nbsp;<i>if</i> $v$ <i>is unmarked</i><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$t \\leftarrow Explore(G, v, t)$<br>&nbsp;&nbsp;&nbsp;&nbsp;<i>end if</i><br>&nbsp;&nbsp;<i>end for</i></td><td style=\"vertical-align: top; padding: 10px;\"><i>Explore(G, v, t):</i><br>&nbsp;&nbsp;<i>mark</i> $v$<br>&nbsp;&nbsp;$t \\leftarrow t + 1$<br>&nbsp;&nbsp;$d[v] \\leftarrow t$<br>&nbsp;&nbsp;<i>for each</i> $(v, w) \\in E$<br>&nbsp;&nbsp;&nbsp;&nbsp;<i>if</i> $w$ <i>is unmarked</i><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$t \\leftarrow Explore(G, w, t)$<br>&nbsp;&nbsp;&nbsp;&nbsp;<i>end if</i><br>&nbsp;&nbsp;<i>end for</i><br>&nbsp;&nbsp;$t \\leftarrow t + 1$<br>&nbsp;&nbsp;$f[v] \\leftarrow t$<br>&nbsp;&nbsp;<i>return</i> $t$</td></tr></table><br><br>Suppose that the input directed graph $G(V, E)$ is a directed acyclic graph (DAG).<br><br>For an edge $(u, v) \\in E$, which of the following options will NEVER be correct?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$d[u] < d[v] < f[v] < f[u]$",
+    "$d[v] < d[u] < f[u] < f[v]$",
+    "$d[v] < f[v] < d[u] < f[u]$",
+    "$d[u] < d[v] < f[u] < f[v]$"
+  ],
+  "answer": [
+    "B",
+    "D"
+  ],
+  "explanation": "<strong>Step 1: Understand the Parenthesis Theorem for DFS.</strong><br>By the Parenthesis Theorem of DFS, for any pair of vertices $u$ and $v$, their discovery-finishing intervals $[d[u], f[u]]$ and $[d[v], f[v]]$ must either be completely disjoint or one must be strictly contained within the other.<br><br><strong>Step 2: Analyze Option D.</strong><br>Option D represents $d[u] < d[v] < f[u] < f[v]$, where the interval $[d[v], f[v]]$ overlaps with $[d[u], f[u]]$ without being fully nested. According to the Parenthesis Theorem, overlapping intervals are impossible in DFS for any graph. Therefore, <strong>Option D can NEVER be correct</strong>.<br><br><strong>Step 3: Analyze Option B.</strong><br>Option B represents $d[v] < d[u] < f[u] < f[v]$, which means $u$ is a descendant of $v$ in the DFS forest (i.e., there exists a path from $v$ to $u$). However, we are given that $(u, v) \\in E$ is a directed edge from $u$ to $v$. If $u$ were a descendant of $v$, combining that path with the edge $(u, v)$ would form a directed cycle. Since $G$ is a Directed Acyclic Graph (DAG), no directed cycle can exist. Thus, $u$ can never be a descendant of $v$, and <strong>Option B can NEVER be correct</strong>.<br><br><strong>Step 4: Analyze Options A and C.</strong><br>- Option A ($d[u] < d[v] < f[v] < f[u]$) occurs when $v$ is a descendant of $u$ (tree/forward edge), which is possible in a DAG.<br>- Option C ($d[v] < f[v] < d[u] < f[u]$) occurs when $v$ is visited and finished before $u$ is discovered (cross edge), which is also possible in a DAG.<br><br>Hence, options <strong>B and D</strong> will NEVER be correct.",
+  "videoUrl": null
+}

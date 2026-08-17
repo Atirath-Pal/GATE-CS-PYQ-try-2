@@ -1,0 +1,21 @@
+{
+  "id": 17,
+  "year": 2026,
+  "set": 1,
+  "topics": ["Algorithms", "Recurrence Relations"],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the following recurrence relations:<br><br>For all $n > 1$,<br>$$T_1(n) = 4 T_1\\left(\\frac{n}{2}\\right) + T_2(n)$$<br>$$T_2(n) = 5 T_2\\left(\\frac{n}{4}\\right) + \\Theta(\\log_2 n)$$<br><br>Assume that for all $n \\le 1, T_1(n) = 1$ and $T_2(n) = 1$.<br><br>Which one of the following options is correct?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$T_1(n) = \\Theta(n^2)$",
+    "$T_1(n) = \\Theta(n^2 \\log_2 n)$",
+    "$T_1(n) = \\Theta(n^{\\log_4 5})$",
+    "$T_1(n) = \\Theta(n^{\\log_4 5} \\log_2 n)$"
+  ],
+  "answer": ["A"],
+  "explanation": "<strong>Step 1: Solve for $T_2(n)$ using Master Theorem</strong><br>The recurrence for $T_2(n)$ is:<br>$$T_2(n) = 5 T_2\\left(\\frac{n}{4}\\right) + \\Theta(\\log_2 n)$$<br>Here, $a = 5$, $b = 4$, so $n^{\\log_b a} = n^{\\log_4 5} \\approx n^{1.161}$.<br>Since $f(n) = \\Theta(\\log_2 n) = O(n^{\\log_4 5 - \\epsilon})$ for $\\epsilon > 0$, by Case 1 of Master Theorem:<br>$$T_2(n) = \\Theta(n^{\\log_4 5})$$<br><br><strong>Step 2: Solve for $T_1(n)$</strong><br>Substitute $T_2(n)$ into the expression for $T_1(n)$:<br>$$T_1(n) = 4 T_1\\left(\\frac{n}{2}\\right) + \\Theta(n^{\\log_4 5})$$<br>Here, $a = 4$, $b = 2$, so $n^{\\log_b a} = n^{\\log_2 4} = n^2$.<br>Since $f(n) = \\Theta(n^{\\log_4 5})$ and $\\log_4 5 \\approx 1.161 < 2$, we have $f(n) = O(n^{2 - \\epsilon})$ for $\\epsilon > 0$.<br>By Case 1 of Master Theorem:<br>$$T_1(n) = \\Theta(n^2)$$<br><br>Therefore, the correct option is <strong>$T_1(n) = \\Theta(n^2)$</strong> (Option A).",
+  "videoUrl": null
+}

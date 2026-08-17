@@ -1,0 +1,21 @@
+{
+  "id": 10,
+  "year": 2026,
+  "set": 1,
+  "topics": ["General Aptitude", "Probability"],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "An unbiased six-faced dice whose faces are marked with numbers 1, 2, 3, 4, 5, and 6 is rolled twice in succession and the number on the top face is recorded each time. The probability that the number appearing in the second roll is an integer multiple of the number appearing in the first roll is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\frac{1}{6}$",
+    "$\\frac{5}{18}$",
+    "$\\frac{7}{18}$",
+    "$\\frac{5}{6}$"
+  ],
+  "answer": ["C"],
+  "explanation": "<strong>Step 1: Determine total outcomes</strong><br>When a 6-faced dice is rolled twice, the total number of possible outcomes is $6 \\times 6 = 36$.<br><br><strong>Step 2: Count favorable outcomes</strong><br>Let $x$ be the number on the first roll and $y$ be the number on the second roll. We need $y$ to be an integer multiple of $x$ ($y = kx$ for some integer $k$):<br>• For $x = 1$: $y \\in \\{1, 2, 3, 4, 5, 6\\}$ $\\rightarrow 6$ outcomes<br>• For $x = 2$: $y \\in \\{2, 4, 6\\}$ $\\rightarrow 3$ outcomes<br>• For $x = 3$: $y \\in \\{3, 6\\}$ $\\rightarrow 2$ outcomes<br>• For $x = 4$: $y \\in \\{4\\}$ $\\rightarrow 1$ outcome<br>• For $x = 5$: $y \\in \\{5\\}$ $\\rightarrow 1$ outcome<br>• For $x = 6$: $y \\in \\{6\\}$ $\\rightarrow 1$ outcome<br><br>Total favorable outcomes = $6 + 3 + 2 + 1 + 1 + 1 = 14$.<br><br><strong>Step 3: Calculate probability</strong><br>$$\\text{Probability} = \\frac{14}{36} = \\frac{7}{18}$$<br><br>Therefore, the required probability is <strong>$\\frac{7}{18}$</strong> (Option C).",
+  "videoUrl": null
+}

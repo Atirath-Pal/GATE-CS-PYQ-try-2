@@ -1,0 +1,22 @@
+{
+  "id": 61,
+  "year": 2026,
+  "set": 1,
+  "topics": [
+    "Programming and Data Structures",
+    "Recursion"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the recursive functions represented by the following code segment:<br><br>The smallest positive integer $n$ for which foo($n$) returns 5 is ________. <i>(answer in integer)</i><br><br><i>Note: Ignore syntax errors (if any) in the function.</i>",
+  "assetImage": null,
+  "codeBlock": "int bar(int n){\n    if (n == 1) return 0;\n    else return 1 + bar(n/2);\n}\n\nint foo(int n){\n    if (n == 1) return 1;\n    else return 1 + foo(bar(n));\n}",
+  "options": [],
+  "answer": {
+    "min": 65536,
+    "max": 65536
+  },
+  "explanation": "<strong>Step 1: Analyze function bar(n).</strong><br>For $n \\ge 1$, $\\text{bar}(n)$ computes $\\lfloor \\log_2(n) \\rfloor$ using integer division:<br>- $\\text{bar}(1) = 0$<br>- $\\text{bar}(n) = 1 + \\text{bar}(\\lfloor n/2 \\rfloor)$ for $n > 1$<br>The smallest positive integer $n$ such that $\\text{bar}(n) = k$ is $n = 2^k$.<br><br><strong>Step 2: Analyze function foo(n).</strong><br>- For $n = 1$, $\\text{foo}(1) = 1$.<br>- For $n > 1$, $\\text{foo}(n) = 1 + \\text{foo}(\\text{bar}(n))$.<br><br><strong>Step 3: Determine smallest $n$ for each return value of foo(n).</strong><br>- To get $\\text{foo}(n) = 1$: Smallest $n = 1$.<br>- To get $\\text{foo}(n) = 2$: $1 + \\text{foo}(\\text{bar}(n)) = 2 \\implies \\text{foo}(\\text{bar}(n)) = 1 \\implies \\text{bar}(n) = 1$. Smallest $n = 2^1 = 2$.<br>- To get $\\text{foo}(n) = 3$: $1 + \\text{foo}(\\text{bar}(n)) = 3 \\implies \\text{foo}(\\text{bar}(n)) = 2 \\implies \\text{bar}(n) = 2$. Smallest $n = 2^2 = 4$.<br>- To get $\\text{foo}(n) = 4$: $1 + \\text{foo}(\\text{bar}(n)) = 4 \\implies \\text{foo}(\\text{bar}(n)) = 3 \\implies \\text{bar}(n) = 4$. Smallest $n = 2^4 = 16$.<br>- To get $\\text{foo}(n) = 5$: $1 + \\text{foo}(\\text{bar}(n)) = 5 \\implies \\text{foo}(\\text{bar}(n)) = 4 \\implies \\text{bar}(n) = 16$. Smallest $n = 2^{16} = 65536$.<br><br>Thus, the smallest positive integer $n$ for which $\\text{foo}(n)$ returns 5 is <strong>65536</strong>.",
+  "videoUrl": null
+}

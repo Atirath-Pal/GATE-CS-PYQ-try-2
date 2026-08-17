@@ -1,0 +1,22 @@
+{
+  "id": 62,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Engineering Mathematics",
+    "Linear Algebra"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "The determinant of a $4 \\times 4$ matrix $A$ is 3. The value of the determinant of $2A$ is ____________. (answer in integer)",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "max": 48,
+    "min": 48
+  },
+  "explanation": "<strong>Step 1: Use Determinant Property for Scalar Multiplication</strong><br>For an $n \\times n$ square matrix $A$ and a scalar $k$, the determinant of $kA$ is given by:<br>$\\det(kA) = k^n \\cdot \\det(A)$<br><br><strong>Step 2: Identify Given Parameters</strong><br>• Dimension of matrix ($n$) = $4$<br>• Scalar multiplier ($k$) = $2$<br>• Determinant of $A$ ($\\det(A)$) = $3$<br><br><strong>Step 3: Calculate $\\det(2A)$</strong><br>$\\det(2A) = 2^4 \\cdot \\det(A) = 16 \\cdot 3 = 48$<br><br>Hence, the value of the determinant of $2A$ is <strong>48</strong>.",
+  "videoUrl": null
+}

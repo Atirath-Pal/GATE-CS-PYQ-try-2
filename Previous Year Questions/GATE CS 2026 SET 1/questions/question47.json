@@ -1,0 +1,26 @@
+{
+  "id": 47,
+  "year": 2026,
+  "set": 1,
+  "topics": [
+    "Algorithms",
+    "Graph Theory"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Let $G(V,E)$ be a simple, undirected graph. A vertex cover of $G$ is a subset $V' \\subseteq V$ such that for every $(u, v) \\in E$, $u \\in V'$ or $v \\in V'$. Let the size of the smallest vertex cover in $G$ be $k$. Let $S$ be any vertex cover of size $k$.<br><br>For a vertex $v \\in V$, which of the following constraints will always ensure that $v \\in S$?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "The degree of $v$ is at least $k + 1$",
+    "The vertex $v$ is on a path of length $k + 1$",
+    "The vertex $v$ is on a cycle of length $k + 1$",
+    "The vertex $v$ is a part of a clique of size $k$"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step 1: Analyze Option A (Degree of $v \\ge k + 1$).</strong><br>Suppose $v \\notin S$. To cover all the $k + 1$ (or more) edges incident to $v$, every single neighbor of $v$ must be included in the vertex cover $S$. Since $v$ has at least $k + 1$ distinct neighbors, $S$ must contain at least $k + 1$ vertices. This contradicts the fact that $|S| = k$. Therefore, $v$ must belong to $S$. Thus, <strong>Option A is true</strong>.<br><br><strong>Step 2: Analyze Option B.</strong><br>Consider a path $P_4 = v_1 - v_2 - v_3 - v_4$ (length 3). Here $k = 2$ and a minimum vertex cover is $S = \\{v_2, v_3\\}$. The vertex $v_1$ lies on a path of length $3 = k + 1$, but $v_1 \\notin S$. Thus, Option B is false.<br><br><strong>Step 3: Analyze Option C.</strong><br>Consider a triangle $C_3$ (cycle of length 3) with $k = 2$. Any set of 2 vertices forms a minimum vertex cover. For any vertex $v$, we can select the remaining 2 vertices to form $S$, so $v \\notin S$. Thus, Option C is false.<br><br><strong>Step 4: Analyze Option D.</strong><br>Consider a graph containing a clique $K_k$ of size $k$. Any $k - 1$ vertices of $K_k$ suffice to cover all edges within $K_k$. If the remaining graph requires 1 more vertex to cover its edges, a minimum vertex cover $S$ of size $k$ can be formed by choosing $k - 1$ vertices from $K_k$ and 1 from outside, excluding a specific vertex $v \\in K_k$. Thus, Option D is false.<br><br>Hence, <strong>Option A</strong> is the correct statement.",
+  "videoUrl": null
+}

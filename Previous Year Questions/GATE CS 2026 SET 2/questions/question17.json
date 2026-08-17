@@ -1,0 +1,26 @@
+{
+  "id": 17,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Programming and Data Structures",
+    "C Programming"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "In C runtime environment, which one of the following is stored in heap?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "A static variable declared inside a function",
+    "An array of integers declared inside a function",
+    "A dynamically allocated array of integers created using malloc() function call",
+    "Return address of a function"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. <strong>Static variables:</strong> Stored in the Data segment (if initialized) or BSS segment (if uninitialized), not on the stack or heap.<br><br>2. <strong>Local variables / arrays declared inside a function:</strong> Stored in the Stack frame (activation record) of that function.<br><br>3. <strong>Dynamically allocated memory:</strong> Memory requested during runtime using functions like <code>malloc()</code>, <code>calloc()</code>, or <code>realloc()</code> is allocated from the Heap segment.<br><br>4. <strong>Return address of a function:</strong> Stored in the Stack frame of the function call.<br><br>Hence, the correct option is <strong>(C)</strong>.",
+  "videoUrl": null
+}

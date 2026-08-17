@@ -1,0 +1,26 @@
+{
+  "id": 22,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Computer Networks",
+    "Application Layer Protocols"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Which one of the following protocols may need to broadcast some of its messages?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "SMTP",
+    "FTP",
+    "DHCP",
+    "HTTP"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. <strong>DHCP (Dynamic Host Configuration Protocol):</strong> When a host connects to a network without an assigned IP address, it sends a <code>DHCPDISCOVER</code> message broadcasted to the subnet using the broadcast address $255.255.255.255$. DHCP servers on the network may also reply using broadcast messages.<br><br>2. <strong>Other Protocols:</strong> SMTP, FTP, and HTTP operate over TCP (Transmission Control Protocol), which is strictly a unicast (point-to-point) transport protocol.<br><br>Therefore, DHCP is the protocol that needs to broadcast messages, which corresponds to Option <strong>(C)</strong>.",
+  "videoUrl": null
+}

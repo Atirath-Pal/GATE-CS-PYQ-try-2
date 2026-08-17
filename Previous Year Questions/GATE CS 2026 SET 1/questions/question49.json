@@ -1,0 +1,27 @@
+{
+  "id": 49,
+  "year": 2026,
+  "set": 1,
+  "topics": [
+    "Algorithms",
+    "Graph Theory"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Let $G(V, E)$ be a simple, undirected, edge-weighted graph with unique edge weights.<br><br>Which of the following statements about the minimum spanning trees (MST) of $G$ is/are true?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "In every cycle $C$ of $G$, the edge with the largest weight in $C$ is not in any MST",
+    "In every cycle $C$ of $G$, the edge with the smallest weight in $C$ is in every MST",
+    "For every vertex $v \\in V$, the edge with the largest weight incident on $v$ is not in any MST",
+    "For every vertex $v \\in V$, the edge with the smallest weight incident on $v$ is in every MST"
+  ],
+  "answer": [
+    "A",
+    "D"
+  ],
+  "explanation": "<strong>Step 1: Analyze Statement A (Cycle Property of MST).</strong><br>According to the <strong>Cycle Property</strong>, for any cycle $C$ in a graph with unique edge weights, the edge with the strictly largest weight in $C$ cannot belong to any MST. Removing this heaviest edge leaves a smaller weight spanning tree. Therefore, <strong>Statement A is true</strong>.<br><br><strong>Step 2: Analyze Statement B.</strong><br>Consider a graph with vertices $\\{v_1, v_2, v_3, v_4\\}$ and edges $(v_1, v_4)$ with weight 1, $(v_2, v_4)$ with weight 2, $(v_1, v_2)$ with weight 10, $(v_2, v_3)$ with weight 100, and $(v_3, v_1)$ with weight 101.<br>In the cycle $C = (v_1, v_2, v_3)$, the edge $(v_1, v_2)$ has the smallest weight (10). However, the unique MST consists of edges $(v_1, v_4)$, $(v_2, v_4)$, and $(v_2, v_3)$, which excludes $(v_1, v_2)$ because $v_1$ and $v_2$ are already connected via a cheaper path through $v_4$. Therefore, <strong>Statement B is false</strong>.<br><br><strong>Step 3: Analyze Statement C.</strong><br>Consider a star graph (or any tree graph). In any tree, all edges must be included in the MST. For the central vertex of a star graph, the edge with the maximum weight incident on it must still be included in the MST to connect the corresponding leaf node. Therefore, <strong>Statement C is false</strong>.<br><br><strong>Step 4: Analyze Statement D (Cut Property of MST).</strong><br>Consider the cut defined by $S = \\{v\\}$ and $V \\setminus S$. The set of edges incident on vertex $v$ forms the cut set for this cut. By the <strong>Cut Property</strong>, the edge with the minimum weight crossing any cut must belong to the MST (and since edge weights are unique, it belongs to the unique MST). Thus, the edge with the smallest weight incident on $v$ is always in every MST. Therefore, <strong>Statement D is true</strong>.<br><br>Hence, statements <strong>A and D</strong> are true.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 4,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "General Aptitude",
+    "Quantitative Aptitude"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "The values of Stock A and Stock B on a particular day are Rs. 50 and Rs. 80, respectively. An investor invests Rs. 100 in Stock A and Rs. 80 in Stock B. He sells all the stocks the next day when the value of Stock A is Rs. 55 and Stock B is Rs. 70. The profit made by the investor is Rs. _______",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "0",
+    "5",
+    "10",
+    "20"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. <strong>Calculate units purchased and total cost:</strong><br>- Units of Stock A bought = $\\frac{100}{50} = 2$ units<br>- Units of Stock B bought = $\\frac{80}{80} = 1$ unit<br>- Total Cost Price = $100 + 80 = \\text{Rs. } 180$<br><br>2. <strong>Calculate total amount realized on selling:</strong><br>- Amount from Stock A = $2 \\times 55 = \\text{Rs. } 110$<br>- Amount from Stock B = $1 \\times 70 = \\text{Rs. } 70$<br>- Total Selling Price = $110 + 70 = \\text{Rs. } 180$<br><br>3. <strong>Calculate profit:</strong><br>- $\\text{Profit} = \\text{Total Selling Price} - \\text{Total Cost Price} = 180 - 180 = \\text{Rs. } 0$<br><br>Hence, the correct option is <strong>(A)</strong>.",
+  "videoUrl": null
+}

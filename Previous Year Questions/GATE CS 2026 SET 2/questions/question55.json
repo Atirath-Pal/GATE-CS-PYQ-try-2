@@ -1,0 +1,22 @@
+{
+  "id": 55,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Operating Systems",
+    "Memory Management"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider contiguous allocation of physical memory to processes using variable partitioning scheme. Suppose there are 8 holes in the memory of sizes 20 KB, 4 KB, 25 KB, 18 KB, 7 KB, 9 KB, 15 KB, and 12 KB. Assume that no two holes are adjacent. Two processes P1 of size 16 KB and P2 of size 9 KB arrive in that order, and they are allocated memory using the best-fit technique. After allocating space to P1 and P2, the number of holes of size less than 8 KB is ____________. (answer in integer)<br><br><i>Note:</i> 1K=$2^{10}$",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "max": 3,
+    "min": 3
+  },
+  "explanation": "<strong>Step 1: Initial list of hole sizes</strong><br>The initial sizes of the 8 holes are: 20 KB, 4 KB, 25 KB, 18 KB, 7 KB, 9 KB, 15 KB, and 12 KB.<br><br><strong>Step 2: Allocation for Process P1 (16 KB) using Best-Fit</strong><br>• The Best-Fit strategy selects the smallest hole that is large enough ($\n\\ge 16\\text{ KB}$).\n<br>• Candidate holes $\\ge 16\\text{ KB}$: 20 KB, 25 KB, 18 KB.<br>• Smallest candidate hole is 18 KB.<br>• Allocation: P1 is placed in the 18 KB hole.<br>• Remaining size of this hole = $18\\text{ KB} - 16\\text{ KB} = 2\\text{ KB}$.<br><br><strong>Step 3: Allocation for Process P2 (9 KB) using Best-Fit</strong><br>• Current hole sizes: 20 KB, 4 KB, 25 KB, 2 KB, 7 KB, 9 KB, 15 KB, 12 KB.<br>• Candidate holes $\\ge 9\\text{ KB}$: 20 KB, 25 KB, 9 KB, 15 KB, 12 KB.<br>• Smallest candidate hole is 9 KB.<br>• Allocation: P2 is placed in the 9 KB hole.<br>• Remaining size of this hole = $9\\text{ KB} - 9\\text{ KB} = 0\\text{ KB}$ (hole is fully allocated).<br><br><strong>Step 4: Count holes with size less than 8 KB</strong><br>The final list of remaining holes is: 20 KB, 4 KB, 25 KB, 2 KB, 7 KB, 15 KB, 12 KB.<br>Holes of size less than 8 KB are:<br>1. 4 KB<br>2. 2 KB<br>3. 7 KB<br><br>Thus, the number of holes of size less than 8 KB is <strong>3</strong>.",
+  "videoUrl": null
+}

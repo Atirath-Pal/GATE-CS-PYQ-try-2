@@ -1,0 +1,26 @@
+{
+  "id": 20,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Database Management Systems",
+    "Concurrency Control"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider concurrent execution of two transactions $T1$ and $T2$ in a DBMS, both of which access a data object $A$. For these two transactions to not conflict on $A$, which one of the following statements must be true?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Both $T1$ and $T2$ only read $A$",
+    "$T1$ reads $A$ and $T2$ writes $A$",
+    "$T1$ writes $A$ and $T2$ reads $A$",
+    "Both $T1$ and $T2$ write $A$"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. <strong>Conflict Operations in DBMS:</strong> Two operations on the same data item $A$ belonging to different transactions $T1$ and $T2$ are said to conflict if at least one of the operations is a <strong>Write</strong> operation.<br><br>2. <strong>Conflict Types:</strong><br>- Read-Write ($R_1(A), W_2(A)$): Conflicting<br>- Write-Read ($W_1(A), R_2(A)$): Conflicting<br>- Write-Write ($W_1(A), W_2(A)$): Conflicting<br>- Read-Read ($R_1(A), R_2(A)$): <strong>Non-conflicting</strong><br><br>3. Therefore, for the transactions not to conflict on $A$, both $T1$ and $T2$ must only perform read operations on $A$.<br><br>Hence, the correct option is <strong>(A)</strong>.",
+  "videoUrl": null
+}

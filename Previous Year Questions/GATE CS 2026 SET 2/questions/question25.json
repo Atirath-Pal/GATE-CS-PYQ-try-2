@@ -1,0 +1,27 @@
+{
+  "id": 25,
+  "year": 2026,
+  "set": 2,
+  "topics": [
+    "Algorithms",
+    "Recurrence Relations"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Which of the following can be recurrence relation(s) corresponding to an algorithm with time complexity $\\Theta(n)$?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$T(n) = T(n - 1) + 1, \\quad T(1) = 1$",
+    "$T(n) = 2T\\left(\\frac{n}{2}\\right) + 1, \\quad T(1) = 1$",
+    "$T(n) = 2T\\left(\\frac{n}{2}\\right) + n, \\quad T(1) = 1$",
+    "$T(n) = T(n - 1) + n, \\quad T(1) = 1$"
+  ],
+  "answer": [
+    "A",
+    "B"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. <strong>Option (A):</strong> $T(n) = T(n - 1) + 1$<br>Expanding the recurrence:<br>$T(n) = T(n - 2) + 1 + 1 = \\dots = T(1) + (n - 1) = 1 + n - 1 = n = \\Theta(n)$.<br>Hence, Option (A) gives $\\Theta(n)$.<br><br>2. <strong>Option (B):</strong> $T(n) = 2T\\left(\\frac{n}{2}\\right) + 1$<br>Using Master Theorem where $a = 2, b = 2, f(n) = 1$:<br>$n^{\\log_b a} = n^{\\log_2 2} = n^1 = n$.<br>Since $f(n) = O(n^{1 - \\epsilon})$ for $\\epsilon = 1$, Case 1 applies: $T(n) = \\Theta(n)$.<br>Hence, Option (B) gives $\\Theta(n)$.<br><br>3. <strong>Option (C):</strong> $T(n) = 2T\\left(\\frac{n}{2}\\right) + n$<br>Using Master Theorem with $a = 2, b = 2, f(n) = n = \\Theta(n^{\\log_2 2})$:<br>Case 2 applies: $T(n) = \\Theta(n \\log n)$.<br><br>4. <strong>Option (D):</strong> $T(n) = T(n - 1) + n$<br>Expanding the recurrence:<br>$T(n) = n + (n - 1) + (n - 2) + \\dots + 1 = \\frac{n(n + 1)}{2} = \\Theta(n^2)$.<br><br>Therefore, the correct options are <strong>(A)</strong> and <strong>(B)</strong>.",
+  "videoUrl": null
+}
