@@ -1,0 +1,26 @@
+{
+  "id": 45,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "Data Structures",
+    "Stacks"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a stack data structure into which we can PUSH and POP records. Assume that each record pushed in the stack has a positive integer key and that all keys are distinct.<br><br>We wish to augment the stack data structure with an $O(1)$ time MIN operation that returns a pointer to the record with smallest key present in the stack<br><br>1) without deleting the corresponding record, and<br>2) without increasing the complexities of the standard stack operations.<br><br>Which one or more of the following approach(es) can achieve it?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Keep with every record in the stack, a pointer to the record with the smallest key below it.",
+    "Keep a pointer to the record with the smallest key in the stack.",
+    "Keep an auxiliary array in which the key values of the records in the stack are maintained in sorted order.",
+    "Keep a Min-Heap in which the key values of the records in the stack are maintained."
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "To keep the standard stack operations (PUSH and POP) at $O(1)$ time while enabling an $O(1)$ MIN operation, we evaluate each option:<br><br><strong>Option A:</strong> By storing a pointer with each record that references the minimum record at or below it in the stack:<br>- <strong>PUSH:</strong> The new top record's minimum pointer is set to either itself or the previous top record's minimum pointer, whichever key is smaller. This takes $O(1)$ time.<br>- <strong>POP:</strong> Removing the top element automatically restores the minimum pointer state of the element below it. This takes $O(1)$ time.<br>- <strong>MIN:</strong> Simply read the minimum pointer stored at the current top record. This takes $O(1)$ time.<br>Thus, Option A satisfies all conditions.<br><br><strong>Option B:</strong> Maintaining a single global pointer works for PUSH and MIN, but when the minimum element is popped, finding the new minimum requires scanning all remaining elements, taking $O(n)$ time.<br><br><strong>Option C:</strong> Maintaining a sorted array requires $O(n)$ time for insertions/deletions, which increases the complexities of standard stack operations.<br><br><strong>Option D:</strong> Maintaining a Min-Heap requires $O(\\log n)$ time for insertions/deletions, which increases the complexities of standard stack operations.<br><br>Therefore, <strong>(A)</strong> is the only correct option.",
+  "videoUrl": null
+}

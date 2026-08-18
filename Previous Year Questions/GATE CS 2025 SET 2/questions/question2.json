@@ -1,0 +1,26 @@
+{
+  "id": 2,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "General Aptitude",
+    "Verbal Ability"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Bird : Nest :: Bee : ______<br><br>Select the correct option to complete the analogy.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Kennel",
+    "Hammock",
+    "Hive",
+    "Lair"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>The given analogy represents the relationship between a creature and its natural dwelling place:<br><br>• A <strong>Bird</strong> lives in a <strong>Nest</strong>.<br>• Similarly, a <strong>Bee</strong> lives in a <strong>Hive</strong>.<br><br>Looking at the options:<br>• <strong>Kennel</strong>: A shelter for dogs.<br>• <strong>Hammock</strong>: A type of bed.<br>• <strong>Hive</strong>: A structure where bees live.<br>• <strong>Lair</strong>: A resting place for wild animals.<br><br>Therefore, the correct answer is <strong>Hive</strong> (Option C).",
+  "videoUrl": null
+}

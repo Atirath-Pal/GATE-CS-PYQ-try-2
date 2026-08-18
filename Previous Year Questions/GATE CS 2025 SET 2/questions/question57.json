@@ -1,0 +1,22 @@
+{
+  "id": 57,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "Databases",
+    "B+ Trees"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "In a $B^+$- tree where each node can hold at most four key values, a root to leaf path consists of the following nodes:<br><br>$$A = (49, 77, 83, -), B = (7, 19, 33, 44), C = (20*, 22*, 25*, 26*)$$<br><br>The $*$-marked keys signify that these are data entries in a leaf.<br><br>Assume that a pointer between keys $k_1$ and $k_2$ points to a subtree containing keys in $[k_1, k_2)$, and that when a leaf is created, the smallest key in it is copied up into its parent.<br><br>A record with key value 23 is inserted into the $B^+$- tree.<br><br>The smallest key value in the parent of the leaf that contains $25*$ is ________. (Answer in integer)",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 33,
+    "max": 33
+  },
+  "explanation": "<strong>Step 1: Understand the given structure and path.</strong><br>The path from root to leaf consists of:<br>• Node $A$ (Root/Internal): $(49, 77, 83, -)$<br>• Node $B$ (Internal child of $A$): $(7, 19, 33, 44)$<br>• Node $C$ (Leaf node child of $B$): $(20*, 22*, 25*, 26*)$<br><br><strong>Step 2: Insertion of key 23.</strong><br>Key 23 belongs to leaf node $C$ because $23 \\in [19, 33)$.<br>Leaf $C$ currently has 4 keys: $(20*, 22*, 25*, 26*)$. Inserting 23 makes it overflow with 5 keys: $(20*, 22*, 23*, 25*, 26*)$.<br><br><strong>Step 3: Splitting the leaf node.</strong><br>The leaf node splits into two leaves:<br>• Left leaf $C_1$: $(20*, 22*, 23*)$<br>• Right leaf $C_2$: $(25*, 26*)$<br><br>The smallest key of the newly created leaf node $C_2$ is $25*$. As per the rule, $25$ is copied up to the parent node $B$.<br><br><strong>Step 4: Updating parent Node $B$.</strong><br>Node $B$ originally contains four keys: $(7, 19, 33, 44)$.<br>Inserting key $25$ into node $B$ causes an overflow in node $B$, giving five keys: $(7, 19, 25, 33, 44)$.<br><br><strong>Step 5: Splitting the internal node $B$.</strong><br>Node $B$ splits into two internal nodes:<br>• Left node $B_1$: $(7, 19)$<br>• Key pushed up to root $A$: $25$<br>• Right node $B_2$: $(33, 44)$<br><br>Here, leaf $C_2$ (which contains $25*$) points to the right subtree of $25$, which is managed by the newly created parent node $B_2 = (33, 44)$.<br><br><strong>Step 6: Finding the smallest key value in the parent of leaf containing $25*$.</strong><br>The parent of the leaf node containing $25*$ is now node $B_2$, whose keys are $(33, 44)$.<br>Therefore, the smallest key value in this parent node is <strong>33</strong>.",
+  "videoUrl": null
+}

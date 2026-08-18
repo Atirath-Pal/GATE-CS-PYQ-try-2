@@ -1,0 +1,22 @@
+{
+  "id": 35,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "Data Structures",
+    "Binary Search Trees"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Suppose the values $10, -4, 15, 30, 20, 5, 60, 19$ are inserted in that order into an initially empty binary search tree. Let $T$ be the resulting binary search tree. The number of edges in the path from the node containing $19$ to the root node of $T$ is ________. (Answer in integer)",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 4,
+    "max": 4
+  },
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br><strong>1. Constructing the Binary Search Tree (BST):</strong><br>• Insert <strong>10</strong>: Root node = $10$<br>• Insert <strong>-4</strong>: $-4 < 10 \\implies$ Left child of $10$<br>• Insert <strong>15</strong>: $15 > 10 \\implies$ Right child of $10$<br>• Insert <strong>30</strong>: $30 > 10, 30 > 15 \\implies$ Right child of $15$<br>• Insert <strong>20</strong>: $20 > 10, 20 > 15, 20 < 30 \\implies$ Left child of $30$<br>• Insert <strong>5</strong>: $5 < 10, 5 > -4 \\implies$ Right child of $-4$<br>• Insert <strong>60</strong>: $60 > 10, 60 > 15, 60 > 30 \\implies$ Right child of $30$<br>• Insert <strong>19</strong>: $19 > 10, 19 > 15, 19 < 30, 19 < 20 \\implies$ Left child of $20$<br><br><strong>2. Path from Node 19 to the Root Node (10):</strong><br>The path from the node $19$ to the root $10$ goes through:<br>$19 \\rightarrow 20 \\rightarrow 30 \\rightarrow 15 \\rightarrow 10$<br><br><strong>3. Counting Edges:</strong><br>• Edge 1: $(19, 20)$<br>• Edge 2: $(20, 30)$<br>• Edge 3: $(30, 15)$<br>• Edge 4: $(15, 10)$<br><br>Total number of edges = <strong>4</strong>.",
+  "videoUrl": null
+}

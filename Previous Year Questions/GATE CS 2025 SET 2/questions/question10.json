@@ -1,0 +1,26 @@
+{
+  "id": 10,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "General Aptitude",
+    "Analytical Aptitude"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "The diagram below shows a river system consisting of 7 segments, marked P, Q, R, S, T, U, and V. It splits the land into 5 zones, marked Z1, Z2, Z3, Z4, and Z5. We need to connect these zones using the least number of bridges. Out of the following options, which one is correct?<br><br>Note: The figure shown is representative.",
+  "assetImage": "question10.png",
+  "codeBlock": null,
+  "options": [
+    "Bridges on P, Q, and T",
+    "Bridges on P, Q, S, and T",
+    "Bridges on Q, R, T, and V",
+    "Bridges on P, Q, S, U, and V"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br><strong>Step 1: Find the minimum number of bridges needed.</strong><br>The land is divided into 5 distinct zones ($Z_1, Z_2, Z_3, Z_4, Z_5$), which represent 5 vertices in a graph. To connect 5 vertices using the minimum number of edges, we need a spanning tree containing $V - 1 = 5 - 1 = 4$ bridges.<br><br><strong>Step 2: Evaluate the options.</strong><br>• <strong>Option (A) [P, Q, T]:</strong> Contains only 3 bridges, which is insufficient to connect 5 zones.<br>• <strong>Option (B) [P, Q, S, T]:</strong> Segment P connects $Z_1$-$Z_2$, Q connects $Z_1$-$Z_3$, S connects $Z_1$-$Z_5$, and T connects $Z_3$-$Z_5$. Notice that zone $Z_4$ remains disconnected because neither V nor U (which border $Z_4$) is included.<br>• <strong>Option (C) [Q, R, T, V]:</strong><br>  - R connects $Z_2$ and $Z_3$<br>  - Q connects $Z_1$ and $Z_3$<br>  - T connects $Z_5$ and $Z_3$<br>  - V connects $Z_4$ and $Z_3$<br>All 5 zones are connected through $Z_3$ using exactly 4 bridges.<br>• <strong>Option (D) [P, Q, S, U, V]:</strong> Contains 5 bridges, which is not the minimum required.<br><br>Therefore, <strong>Option (C)</strong> is the correct choice.",
+  "videoUrl": null
+}

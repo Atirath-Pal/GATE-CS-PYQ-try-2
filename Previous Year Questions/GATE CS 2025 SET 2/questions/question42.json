@@ -1,0 +1,27 @@
+{
+  "id": 42,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "Discrete Mathematics",
+    "Set Theory & Algebra"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Let $\\mathcal{F}$ be the set of all functions from $\\{1, \\dots, n\\}$ to $\\{0, 1\\}$. Define the binary relation $\\leqslant$ on $\\mathcal{F}$ as follows:<br><br>$\\forall f, g \\in \\mathcal{F}$, $f \\leqslant g$ if and only if $\\forall x \\in \\{1, \\dots, n\\}$, $f(x) \\le g(x)$, where $0 \\le 1$.<br><br>Which of the following statement(s) is/are TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\leqslant$ is a symmetric relation",
+    "$(\\mathcal{F}, \\leqslant)$ is a partial order",
+    "$(\\mathcal{F}, \\leqslant)$ is a lattice",
+    "$\\leqslant$ is an equivalence relation"
+  ],
+  "answer": [
+    "B",
+    "C"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br><strong>1. Isomorphism to Power Set:</strong><br>Each function $f \\in \\mathcal{F}$ represents a characteristic function for a subset of $S = \\{1, \\dots, n\\}$, where $x \\in S_f \\iff f(x) = 1$. The relation $f \\leqslant g$ corresponds directly to $S_f \\subseteq S_g$. Thus, $(\\mathcal{F}, \\leqslant)$ is isomorphic to the power set poset $(P(S), \\subseteq)$.<br><br><strong>2. Check Properties of $\\leqslant$:</strong><br>• <strong>Reflexivity:</strong> $\\forall x$, $f(x) \\le f(x)$ holds, so $f \\leqslant f$.<br>• <strong>Antisymmetry:</strong> If $f \\leqslant g$ and $g \\leqslant f$, then $f(x) \\le g(x)$ and $g(x) \\le f(x) \\implies f(x) = g(x)$ for all $x$, so $f = g$.<br>• <strong>Transitivity:</strong> If $f \\leqslant g$ and $g \\leqslant h$, then $f(x) \\le g(x) \\le h(x) \\implies f(x) \\le h(x)$, so $f \\leqslant h$.<br>Since it is reflexive, antisymmetric, and transitive, <strong>$(\\mathcal{F}, \\leqslant)$ is a partial order (Poset)</strong>. Therefore, <strong>Option (B) is TRUE</strong>.<br><br>• <strong>Symmetry:</strong> If $f(x) = 0$ and $g(x) = 1$, then $f \\leqslant g$ but $g \\nleqslant f$. Thus, $\\leqslant$ is not symmetric, so it is neither symmetric nor an equivalence relation. Hence, <strong>Options (A) and (D) are FALSE</strong>.<br><br><strong>3. Check Lattice Property:</strong><br>For any two functions $f, g \\in \\mathcal{F}$, we can define:<br>• <strong>Greatest Lower Bound (Meet):</strong> $(f \\wedge g)(x) = \\min(f(x), g(x))$<br>• <strong>Least Upper Bound (Join):</strong> $(f \\vee g)(x) = \\max(f(x), g(x))$<br>Since both $(f \\wedge g)$ and $(f \\vee g)$ belong to $\\mathcal{F}$, every pair of elements has a unique LUB and GLB. Thus, <strong>$(\\mathcal{F}, \\leqslant)$ is a lattice</strong>. Therefore, <strong>Option (C) is TRUE</strong>.<br><br>Hence, the correct options are <strong>(B) and (C)</strong>.",
+  "videoUrl": null
+}

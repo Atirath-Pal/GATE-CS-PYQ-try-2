@@ -1,0 +1,26 @@
+{
+  "id": 18,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "Computer Networks",
+    "Network Layer"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "A machine receives an IPv4 datagram. The protocol field of the IPv4 header has the protocol number of a protocol X.<br><br>Which ONE of the following is NOT a possible candidate for X?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Internet Control Message Protocol (ICMP)",
+    "Internet Group Management Protocol (IGMP)",
+    "Open Shortest Path First (OSPF)",
+    "Routing Information Protocol (RIP)"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>• <strong>ICMP (Internet Control Message Protocol):</strong> Encapsulated directly inside IPv4 datagrams with protocol number $1$.<br><br>• <strong>IGMP (Internet Group Management Protocol):</strong> Encapsulated directly inside IPv4 datagrams with protocol number $2$.<br><br>• <strong>OSPF (Open Shortest Path First):</strong> Encapsulated directly inside IPv4 datagrams with protocol number $89$.<br><br>• <strong>RIP (Routing Information Protocol):</strong> Operates at the application layer and runs on top of <strong>UDP</strong> using port $520$. Therefore, the IPv4 header protocol field carries the protocol number for UDP ($17$), not RIP.<br><br>Hence, RIP is NOT a candidate for X, making <strong>Option (D)</strong> the correct answer.",
+  "videoUrl": null
+}

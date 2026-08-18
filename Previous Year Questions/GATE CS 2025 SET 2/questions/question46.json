@@ -1,0 +1,27 @@
+{
+  "id": 46,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "Database Management Systems",
+    "Normalization"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the following relational schema along with all the functional dependencies that hold on them.<br><br>$R1(A, B, C, D, E): \\{ D \\rightarrow E, EA \\rightarrow B, EB \\rightarrow C \\}$<br><br>$R2(A, B, C, D): \\{ A \\rightarrow D, A \\rightarrow B, C \\rightarrow A \\}$<br><br>Which of the following statement(s) is/are TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$R1$ is in 3NF",
+    "$R2$ is in 3NF",
+    "$R1$ is NOT in 3NF",
+    "$R2$ is NOT in 3NF"
+  ],
+  "answer": [
+    "C",
+    "D"
+  ],
+  "explanation": "<strong>Analysis of Schema $R1(A, B, C, D, E)$:</strong><br><br>Functional Dependencies: $\\{D \\rightarrow E, EA \\rightarrow B, EB \\rightarrow C\\}$<br><br>1. To find the candidate key for $R1$, observe attributes not on the RHS of any FD, which are $A$ and $D$.<br>2. Find closure of $(AD)^+$:<br>$(AD)^+ = \\{A, D, E, B, C\\}$<br>Since $(AD)^+$ contains all attributes of $R1$, $AD$ is the candidate key.<br><br>3. Prime attributes: $A, D$<br>Non-prime attributes: $B, C, E$<br><br>4. Check 3NF condition for each FD ($X \\rightarrow Y$ is in 3NF if $X$ is a superkey or $Y$ is a prime attribute):<br>- $D \\rightarrow E$: $D$ is not a superkey, and $E$ is not a prime attribute. This violates 3NF condition.<br><br>Thus, <strong>$R1$ is NOT in 3NF</strong>.<br><br><br><strong>Analysis of Schema $R2(A, B, C, D)$:</strong><br><br>Functional Dependencies: $\\{A \\rightarrow D, A \\rightarrow B, C \\rightarrow A\\}$<br><br>1. Attribute not on the RHS of any FD is $C$.<br>2. Find closure of $C^+$:<br>$C^+ = \\{C, A, D, B\\}$<br>Since $C^+$ contains all attributes of $R2$, $C$ is a candidate key.<br><br>3. Check closure of $A^+$:<br>$A^+ = \\{A, D, B\\}$ (Not a superkey)<br><br>4. Prime attributes: $C$<br>Non-prime attributes: $A, B, D$<br><br>5. Check 3NF condition for each FD:<br>- $A \\rightarrow D$: $A$ is not a superkey, and $D$ is not a prime attribute. This violates 3NF condition.<br><br>Thus, <strong>$R2$ is NOT in 3NF</strong>.<br><br><br>Hence, statements (C) and (D) are TRUE.",
+  "videoUrl": null
+}

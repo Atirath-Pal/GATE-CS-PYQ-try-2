@@ -1,0 +1,28 @@
+{
+  "id": 31,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "Digital Logic",
+    "Boolean Algebra"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider the following logic circuit diagram.<br><br>Which is/are the CORRECT option(s) for the output function $F$?",
+  "assetImage": "question31.png",
+  "codeBlock": null,
+  "options": [
+    "$\\overline{XY}$",
+    "$\\overline{X} + \\overline{Y} + X\\overline{Y}$",
+    "$\\overline{XY} + \\overline{X} + X\\overline{Y}$",
+    "$X + \\overline{Y}$"
+  ],
+  "answer": [
+    "A",
+    "B",
+    "C"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br><strong>1. Analyze individual gate outputs in the circuit:</strong><br>• Top gate (NAND gate): Inputs are $X$ and $Y$, output = $\\overline{XY}$.<br>• Middle gate (NOT gate): Input is $X$, output = $\\overline{X}$.<br>• Bottom path (NOT gate followed by AND gate): Inputs to AND gate are $X$ and $\\overline{Y}$, output = $X\\overline{Y}$.<br><br><strong>2. Combine outputs at the final OR gate:</strong><br>• $F = \\overline{XY} + \\overline{X} + X\\overline{Y}$ &nbsp;&rarr;&nbsp; <strong>Option (C)</strong><br><br><strong>3. Simplify the expression using Boolean Algebra:</strong><br>• Using De Morgan's Law, $\\overline{XY} = \\overline{X} + \\overline{Y}$.<br>• $F = (\\overline{X} + \\overline{Y}) + \\overline{X} + X\\overline{Y} = \\overline{X} + \\overline{Y} + X\\overline{Y}$ &nbsp;&rarr;&nbsp; <strong>Option (B)</strong><br>• Using absorption law, $\\overline{Y} + X\\overline{Y} = \\overline{Y}(1 + X) = \\overline{Y}$.<br>• $F = \\overline{X} + \\overline{Y} = \\overline{XY}$ &nbsp;&rarr;&nbsp; <strong>Option (A)</strong><br><br>Therefore, options <strong>(A), (B), and (C)</strong> are all correct representations of the output function $F$.",
+  "videoUrl": null
+}

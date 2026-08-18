@@ -1,0 +1,22 @@
+{
+  "id": 59,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "Algorithms",
+    "Graph Theory"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the following algorithm <code>someAlgo</code> that takes an undirected graph $G$ as input.<br><br>The output of <code>someAlgo(T)</code> for the tree shown in the given figure is ________. (Answer in integer)",
+  "assetImage": "question59.png",
+  "codeBlock": "someAlgo(G)\n\n1. Let v be any vertex in G.\n   Run BFS on G starting at v.\n   Let u be a vertex in G at\n   maximum distance from v\n   as given by the BFS.\n\n2. Run BFS on G again with u as\n   the starting vertex.\n   Let z be the vertex at\n   maximum distance from u\n   as given by the BFS.\n\n3. Output the distance between\n   u and z in G.",
+  "options": [],
+  "answer": {
+    "min": 6,
+    "max": 6
+  },
+  "explanation": "<strong>Step 1: Understand the Algorithm</strong><br>The algorithm <code>someAlgo</code> implements the standard two-BFS algorithm used to find the <strong>diameter</strong> (the longest simple path between any pair of vertices) of a tree.<br><br><strong>Step 2: Trace the Tree Structure</strong><br>By analyzing the tree given in the image:<br>- First, running BFS from any arbitrary starting vertex $v$ finds a vertex $u$ that is farthest from $v$ (which is guaranteed to be one of the endpoints of a longest path in the tree).<br>- Second, running BFS from $u$ finds a vertex $z$ that is farthest from $u$.<br>- The distance between $u$ and $z$ gives the total length of the longest simple path in the tree.<br><br><strong>Step 3: Count the Longest Path Length</strong><br>Counting the maximum number of edges in the longest path between two leaf nodes in the provided figure:<br>The path spanning from the leftmost leaf to the rightmost leaf covers $6$ edges.<br><br>Thus, the diameter of the tree is $6$.",
+  "videoUrl": null
+}

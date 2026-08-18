@@ -1,0 +1,28 @@
+{
+  "id": 29,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "Algorithms",
+    "Graph Algorithms"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Which of the following statements regarding Breadth First Search (BFS) and Depth First Search (DFS) on an undirected simple graph $G$ is/are TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "A DFS tree of $G$ is a Shortest Path tree of $G$.",
+    "Every non-tree edge of $G$ with respect to a DFS tree is a forward/back edge.",
+    "If $(u, v)$ is a non-tree edge of $G$ with respect to a BFS tree, then the distances from the source vertex $s$ to $u$ and $v$ in the BFS tree are within $\\pm 1$ of each other.",
+    "Both BFS and DFS can be used to find the connected components of $G$."
+  ],
+  "answer": [
+    "B",
+    "C",
+    "D"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>• <strong>Statement (A) is FALSE:</strong> A BFS tree provides shortest path trees in unweighted graphs, but a DFS tree goes deep along each branch before backtracking, so it generally does not give the shortest path.<br><br>• <strong>Statement (B) is TRUE:</strong> For an undirected graph, a DFS tree produces only tree edges and back edges (forward and back edges are structurally identical in undirected graphs). Cross edges cannot exist.<br><br>• <strong>Statement (C) is TRUE:</strong> In a BFS tree of an undirected graph, non-tree edges can only exist between vertices residing in the same level or between adjacent levels. Therefore, $|d(s, u) - d(s, v)| \\le 1$, meaning their distances from the source $s$ are within $\\pm 1$ of each other.<br><br>• <strong>Statement (D) is TRUE:</strong> Both BFS and DFS visit every reachable vertex in a connected component, so running either algorithm iteratively on unvisited vertices can find all connected components of $G$.<br><br>Hence, statements <strong>(B), (C), and (D)</strong> are TRUE.",
+  "videoUrl": null
+}

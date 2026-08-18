@@ -1,0 +1,22 @@
+{
+  "id": 64,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "Engineering Mathematics",
+    "Probability"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "A quadratic polynomial $(x - \\alpha)(x - \\beta)$ over complex numbers is said to be square invariant if $(x - \\alpha)(x - \\beta) = (x - \\alpha^2)(x - \\beta^2)$. Suppose from the set of all square invariant quadratic polynomials we choose one at random.<br><br>The probability that the roots of the chosen polynomial are equal is __________. (rounded off to one decimal place)",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 0.5,
+    "max": 0.5
+  },
+  "explanation": "To find the square invariant polynomials, we equate the roots of $(x - \\alpha)(x - \\beta)$ and $(x - \\alpha^2)(x - \\beta^2)$.<br><br>The set of roots $\\{\\alpha, \\beta\\}$ must equal the set of squared roots $\\{\\alpha^2, \\beta^2\\}$.<br><br><strong>Case 1:</strong> $\\alpha = \\alpha^2$ and $\\beta = \\beta^2$<br>Since $z^2 = z$ has solutions $z \\in \\{0, 1\\}$, the possible choices for $\\alpha$ and $\\beta$ are:<br>• $\\alpha = 0, \\beta = 0 \\implies$ polynomial $(x - 0)(x - 0) = x^2$ (roots are equal)<br>• $\\alpha = 1, \\beta = 1 \\implies$ polynomial $(x - 1)(x - 1) = (x - 1)^2$ (roots are equal)<br>• $\\alpha = 0, \\beta = 1 \\implies$ polynomial $x(x - 1)$ (roots are distinct)<br>• $\\alpha = 1, \\beta = 0 \\implies$ same polynomial $x(x - 1)$<br><br>This gives 3 unique polynomials: $x^2$, $(x - 1)^2$, and $x(x - 1)$.<br><br><strong>Case 2:</strong> $\\alpha = \\beta^2$ and $\\beta = \\alpha^2$<br>Substituting $\\beta = \\alpha^2$ into the first gives $\\alpha = (\\alpha^2)^2 = \\alpha^4$, which means $\\alpha(\\alpha^3 - 1) = 0$.<br>The roots for $\\alpha$ are $0, 1, \\omega, \\omega^2$, where $\\omega, \\omega^2$ are complex cube roots of unity.<br>• If $\\alpha = 0$, $\\beta = 0$ (already counted).<br>• If $\\alpha = 1$, $\\beta = 1$ (already counted).<br>• If $\\alpha = \\omega$, $\\beta = \\omega^2 \\implies$ polynomial $(x - \\omega)(x - \\omega^2) = x^2 + x + 1$ (roots are distinct).<br><br><strong>Total Unique Square Invariant Polynomials:</strong><br>1. $P_1(x) = x^2$ (Equal roots: $0, 0$)<br>2. $P_2(x) = (x - 1)^2$ (Equal roots: $1, 1$)<br>3. $P_3(x) = x(x - 1)$ (Distinct roots: $0, 1$)<br>4. $P_4(x) = x^2 + x + 1$ (Distinct roots: $\\omega, \\omega^2$)<br><br>Total number of square invariant polynomials = $4$.<br>Number of polynomials with equal roots = $2$.<br><br><strong>Required Probability:</strong><br>$$\\text{Probability} = \\frac{2}{4} = 0.5$$",
+  "videoUrl": null
+}

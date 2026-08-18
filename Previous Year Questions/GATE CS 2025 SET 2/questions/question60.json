@@ -1,0 +1,22 @@
+{
+  "id": 60,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "Theory of Computation",
+    "Finite Automata"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Let $\\Sigma = \\{1,2,3,4\\}$. For $x \\in \\Sigma^*$, let $prod(x)$ be the product of symbols in $x$ modulo 7. We take $prod(\\epsilon) = 1$, where $\\epsilon$ is the null string.<br><br>For example, $prod(124) = (1 \\times 2 \\times 4) \\pmod 7 = 1$.<br><br>Define $L = \\{x \\in \\Sigma^* \\mid prod(x) = 2\\}$.<br><br>The number of states in a minimum state DFA for $L$ is ____________. (Answer in integer)",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 6,
+    "max": 6
+  },
+  "explanation": "To determine the minimum number of states in a DFA for the language $L = \\{x \\in \\Sigma^* \\mid prod(x) = 2\\}$, where $prod(x)$ computes the product of the symbols modulo 7:<br><br><strong>1. Possible Modulo Values:</strong><br>The result of any product modulo 7 can be $0, 1, 2, 3, 4, 5,$ or $6$. However, since the input alphabet is $\\Sigma = \\{1, 2, 3, 4\\}$, none of the individual symbols are divisible by 7 (i.e., there is no symbol $0$ or multiple of 7). Thus, starting from $prod(\\epsilon) = 1$, multiplying by elements of $\\Sigma$ will never result in a product congruent to $0 \\pmod 7$.<br><br><strong>2. Reachable States:</strong><br>The possible values for $prod(x) \\pmod 7$ are $\\{1, 2, 3, 4, 5, 6\\}$.<br>Each of these 6 non-zero modulo classes modulo 7 is reachable:<br>• $prod(\\epsilon) = 1$<br>• $prod(2) = 2$<br>• $prod(3) = 3$<br>• $prod(4) = 4$<br>• $prod(23) = (2 \\times 3) \\pmod 7 = 6$<br>• $prod(34) = (3 \\times 4) \\pmod 7 = 5$<br><br><strong>3. Transitions:</strong><br>Since 7 is a prime number, every non-zero element in $\\mathbb{Z}_7$ has a multiplicative inverse. Therefore, reading a symbol $a \\in \\Sigma$ deterministically transitions state $q_k$ (where $k = prod(x) \\pmod 7$) to state $q_{(k \\times a) \\pmod 7}$.<br><br><strong>4. Minimality:</strong><br>All 6 states are reachable and non-equivalent because for any two distinct states $q_i, q_j \\in \\{1, 2, 3, 4, 5, 6\\}$, there exists a string $w$ that drives one to the final state ($q_2$) and the other to a non-final state. Hence, none of the 6 states can be merged.<br><br>Thus, the minimum number of states in the DFA is <strong>6</strong>.",
+  "videoUrl": null
+}

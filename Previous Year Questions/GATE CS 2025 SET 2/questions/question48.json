@@ -1,0 +1,21 @@
+{
+  "id": 48,
+  "year": "2025",
+  "set": "2",
+  "topics": ["Operating Systems", "Deadlocks"],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "$P = \\{P_1, P_2, P_3, P_4\\}$ consists of all active processes in an operating system.<br>$R = \\{R_1, R_2, R_3, R_4\\}$ consists of single instances of distinct types of resources in the system.<br><br>The resource allocation graph has the following assignment and claim edges.<br><br>Assignment edges: $R_1 \\rightarrow P_1,\\ R_2 \\rightarrow P_2,\\ R_3 \\rightarrow P_3,\\ R_4 \\rightarrow P_4$ (the assignment edge $R_1 \\rightarrow P_1$ means resource $R_1$ is assigned to process $P_1$, and so on for others)<br><br>Claim edges: $P_1 \\rightarrow R_2,\\ P_2 \\rightarrow R_3,\\ P_3 \\rightarrow R_1,\\ P_2 \\rightarrow R_4,\\ P_4 \\rightarrow R_2$ (the claim edge $P_1 \\rightarrow R_2$ means process $P_1$ is waiting for resource $R_2$, and so on for others)<br><br>Which of the following statement(s) is/are CORRECT?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Aborting $P_1$ makes the system deadlock free.",
+    "Aborting $P_3$ makes the system deadlock free.",
+    "Aborting $P_2$ makes the system deadlock free.",
+    "Aborting $P_1$ and $P_4$ makes the system deadlock free."
+  ],
+  "answer": ["C", "D"],
+  "explanation": "<strong>Step-by-step Analysis:</strong><br><br><strong>1. Identify the Cycles in the Graph:</strong><br>Since each resource has a single instance, a deadlock exists if and only if there is a cycle in the Resource Allocation Graph.<br><br>Let's trace the dependencies:<br>- $P_1 \\rightarrow R_2 \\rightarrow P_2 \\rightarrow R_3 \\rightarrow P_3 \\rightarrow R_1 \\rightarrow P_1$<br>  So, <strong>Cycle 1</strong> is: $P_1 \\rightarrow P_2 \\rightarrow P_3 \\rightarrow P_1$<br><br>- $P_4 \\rightarrow R_2 \\rightarrow P_2 \\rightarrow R_4 \\rightarrow P_4$<br>  So, <strong>Cycle 2</strong> is: $P_4 \\rightarrow P_2 \\rightarrow P_4$<br><br>Notice that process $P_2$ is part of <strong>both</strong> Cycle 1 and Cycle 2.<br><br><strong>2. Evaluating Options:</strong><br>- <strong>Option A (Aborting $P_1$):</strong> Breaks Cycle 1, but Cycle 2 ($P_4 \\rightarrow P_2 \\rightarrow P_4$) still remains. Thus, the system is NOT deadlock free. (Incorrect)<br><br>- <strong>Option B (Aborting $P_3$):</strong> Breaks Cycle 1, but Cycle 2 still remains. Thus, the system is NOT deadlock free. (Incorrect)<br><br>- <strong>Option C (Aborting $P_2$):</strong> Since $P_2$ participates in both Cycle 1 and Cycle 2, aborting $P_2$ breaks both cycles simultaneously. The system becomes deadlock free. (Correct)<br><br>- <strong>Option D (Aborting $P_1$ and $P_4$):</strong> Aborting $P_1$ breaks Cycle 1, and aborting $P_4$ breaks Cycle 2. Removing both $P_1$ and $P_4$ removes all cycles, making the system deadlock free. (Correct)<br><br>Hence, the correct options are <strong>C</strong> and <strong>D</strong>.",
+  "videoUrl": null
+}

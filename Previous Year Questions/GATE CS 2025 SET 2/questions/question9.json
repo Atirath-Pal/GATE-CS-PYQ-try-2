@@ -1,0 +1,26 @@
+{
+  "id": 9,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "General Aptitude",
+    "Geometry"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "In the given figure, $PQRS$ is a square of side $2\\text{ cm}$ and $PLMN$ is a rectangle. The corner $L$ of the rectangle is on the side $QR$. Side $MN$ of the rectangle passes through the corner $S$ of the square.<br><br>What is the area (in $\\text{cm}^2$) of the rectangle $PLMN$?<br><br>Note: The figure shown is representative.",
+  "assetImage": "question9.png",
+  "codeBlock": null,
+  "options": [
+    "$2\\sqrt{2}$",
+    "$2$",
+    "$8$",
+    "$4$"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Step 1: Understand the geometry of the given figures.</strong><br>Let the side length of the square $PQRS$ be $s = 2\\text{ cm}$.<br>Let $\\angle QPL = \\theta$.<br><br><strong>Step 2: Calculate the side length $PL$ of the rectangle.</strong><br>In right-angled triangle $\\triangle PQL$:<br>$\\cos(\\theta) = \\frac{PQ}{PL} = \\frac{2}{PL} \\implies PL = \\frac{2}{\\cos(\\theta)}$<br><br><strong>Step 3: Calculate the side length $PN$ of the rectangle.</strong><br>Since $PQRS$ is a square, $\\angle QPS = 90^\\circ$, which gives $\\angle LPS = 90^\\circ - \\theta$.<br>Since $PLMN$ is a rectangle, $\\angle NPL = 90^\\circ$.<br>Therefore, $\\angle NPS = \\angle NPL - \\angle LPS = 90^\\circ - (90^\\circ - \\theta) = \\theta$.<br>In right-angled triangle $\\triangle PNS$ (where $\\angle PNS = 90^\\circ$):<br>$\\cos(\\theta) = \\frac{PN}{PS} = \\frac{PN}{2} \\implies PN = 2\\cos(\\theta)$<br><br><strong>Step 4: Calculate the area of rectangle $PLMN$.</strong><br>$\\text{Area} = PL \\times PN = \\left(\\frac{2}{\\cos(\\theta)}\\right) \\times (2\\cos(\\theta)) = 4\\text{ cm}^2$<br><br>Hence, the area of rectangle $PLMN$ is $4\\text{ cm}^2$.",
+  "videoUrl": null
+}

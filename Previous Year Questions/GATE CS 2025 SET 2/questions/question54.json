@@ -1,0 +1,28 @@
+{
+  "id": 54,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "Database Management Systems",
+    "SQL"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the following relational schema:<br><br>Students (<u>rollno: integer</u>, name: string, age: integer, cgpa: real)<br><br>Courses (<u>courseno: integer</u>, cname: string, credits: integer)<br><br>Enrolled (<u>rollno: integer</u>, <u>courseno: integer</u>, grade: string)<br><br>Which of the following options is/are correct SQL query/queries to retrieve the names of the students enrolled in course number (i.e., courseno) 1470?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "SELECT S.name\nFROM Students S\nWHERE EXISTS (SELECT * FROM Enrolled E\n              WHERE E.courseno = 1470\n                AND E.rollno = S.rollno);",
+    "SELECT S.name\nFROM Students S\nWHERE SIZEOF (SELECT * FROM Enrolled E\n              WHERE E.courseno = 1470\n                AND E.rollno = S.rollno) > 0;",
+    "SELECT S.name\nFROM Students S\nWHERE 0 < (SELECT COUNT(*)\n           FROM Enrolled E\n           WHERE E.courseno = 1470\n             AND E.rollno = S.rollno);",
+    "SELECT S.name\nFROM Students S NATURAL JOIN Enrolled E\nWHERE E.courseno = 1470;"
+  ],
+  "answer": [
+    "A",
+    "C",
+    "D"
+  ],
+  "explanation": "<strong>Step-by-step evaluation of options:</strong><br><br>1. <strong>Option (A):</strong><br>The <code>EXISTS</code> clause checks if the subquery returns at least one row. The correlated subquery filters tuples from <code>Enrolled</code> where <code>courseno = 1470</code> and matches the student's <code>rollno</code>. This correctly checks if the student is enrolled in course 1470 and returns their name. Thus, Option (A) is correct.<br><br>2. <strong>Option (B):</strong><br><code>SIZEOF</code> is not a valid SQL operator or function for subqueries in standard SQL. Therefore, Option (B) is syntactically incorrect.<br><br>3. <strong>Option (C):</strong><br>The correlated subquery calculates <code>COUNT(*)</code>, which is the total number of records in <code>Enrolled</code> matching <code>courseno = 1470</code> for that specific student. The outer query checks if <code>0 < COUNT(*)</code> (i.e., count is at least 1). This is functionally equivalent to checking existence and correctly retrieves student names. Thus, Option (C) is correct.<br><br>4. <strong>Option (D):</strong><br><code>NATURAL JOIN</code> automatically joins <code>Students</code> and <code>Enrolled</code> on their common attribute <code>rollno</code>. Filtering this joined table with <code>WHERE E.courseno = 1470</code> retrieves all student tuples who are enrolled in course 1470, selecting their <code>name</code>. Thus, Option (D) is correct.<br><br>Hence, options <strong>A, C, and D</strong> are correct.",
+  "videoUrl": null
+}

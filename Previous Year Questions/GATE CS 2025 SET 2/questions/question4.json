@@ -1,0 +1,26 @@
+{
+  "id": 4,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "General Aptitude",
+    "Spatial Aptitude"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "The paper as shown in the figure is folded to make a cube where each square corresponds to a particular face of the cube. Which one of the following options correctly represents the cube?<br><br>Note: The figures shown are representative.",
+  "assetImage": "question4.png",
+  "codeBlock": null,
+  "options": [
+    "[IMG: question4_option_a.png]",
+    "[IMG: question4_option_b.png]",
+    "[IMG: question4_option_c.png]",
+    "[IMG: question4_option_d.png]"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>By analyzing the unfolded cube net, we can determine which pairs of faces are opposite to each other:<br>1. The face with the <strong>Solid Dot ($\\bullet$)</strong> is opposite to the face with the <strong>Hollow Circle ($\\circ$)</strong>.<br>2. The face with the <strong>Hollow Triangle ($\\Delta$)</strong> is opposite to the face with the <strong>Solid Triangle ($\\blacktriangle$)</strong>.<br>3. The two <strong>blank faces</strong> are opposite to each other.<br><br>Opposite faces can never share an edge or appear adjacent on the cube:<br>• In <strong>Option (B)</strong>, the Hollow Triangle ($\\Delta$) and Solid Triangle ($\\blacktriangle$) are shown adjacent to each other, which is impossible since they are opposite faces.<br>• In <strong>Option (A)</strong>, the top face (Solid Dot $\\bullet$), front face (Hollow Triangle $\\Delta$), and side face (Blank) are adjacent and share a common vertex, which perfectly matches the net layout.<br><br>Therefore, <strong>Option (A)</strong> correctly represents the cube.",
+  "videoUrl": null
+}

@@ -1,0 +1,27 @@
+{
+  "id": 27,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "Database Management Systems",
+    "Transactions and Concurrency Control"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "An audit of a banking transactions system has found that on an earlier occasion, two joint holders of account $A$ attempted simultaneous transfers of Rs. 10000 each from account $A$ to account $B$. Both transactions read the same value, Rs. 11000, as the initial balance in $A$ and were allowed to go through. $B$ was credited Rs. 10000 twice. $A$ was debited only once and ended up with a balance of Rs. 1000.<br><br>Which of the following properties is/are certain to have been violated by the system?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Atomicity",
+    "Consistency",
+    "Isolation",
+    "Durability"
+  ],
+  "answer": [
+    "B",
+    "C"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br><strong>1. Analysis of the Scenario:</strong><br>• Initial balance of $A$ = Rs. 11,000.<br>• Two concurrent transactions $T_1$ and $T_2$ both attempt to transfer Rs. 10,000 from $A$ to $B$.<br>• Both $T_1$ and $T_2$ read $A = 11000$ simultaneously (a classic lost update / concurrency issue).<br>• $T_1$ debits $A$ by 10,000 and writes $A = 1000$, and credits $B$ by 10,000.<br>• $T_2$ also debits $A$ by 10,000 based on its initial read of 11,000, overwriting $A = 1000$, and credits $B$ by 10,000.<br>• Result: Account $B$ received Rs. 20,000 while account $A$ was reduced by only Rs. 10,000.<br><br><strong>2. Evaluating ACID Properties:</strong><br>• <strong>Isolation (Violated):</strong> Concurrent execution led to an un-isolated lost update phenomenon where $T_2$ overwrote $T_1$'s update without being isolated from it.<br>• <strong>Consistency (Violated):</strong> The total amount of money in the system changed incorrectly (Rs. 10,000 created artificially), violating the integrity constraints/invariants of a bank system.<br>• <strong>Atomicity (Not Violated):</strong> All operations within both transactions executed completely (all-or-nothing held).<br>• <strong>Durability (Not Violated):</strong> The completed transactions successfully persisted in the database.<br><br>Hence, the properties violated are <strong>Consistency</strong> and <strong>Isolation</strong>, corresponding to <strong>Options (B) and (C)</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 17,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "Computer Networks",
+    "Routing Algorithms"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the routing protocols given in <strong>List I</strong> and the names given in <strong>List II</strong>:<br><br><table style=\"border: 1px solid white; border-collapse: collapse; margin: 0 auto;\">\n  <tr>\n    <th style=\"border: 1px solid white; padding: 8px 16px; text-align: center;\">List I</th>\n    <th style=\"border: 1px solid white; padding: 8px 16px; text-align: center;\">List II</th>\n  </tr>\n  <tr>\n    <td style=\"border: 1px solid white; padding: 8px 16px; text-align: left;\">(i)&nbsp;&nbsp;&nbsp;&nbsp;Distance vector routing</td>\n    <td style=\"border: 1px solid white; padding: 8px 16px; text-align: left;\">(a)&nbsp;&nbsp;&nbsp;&nbsp;Bellman-Ford</td>\n  </tr>\n  <tr>\n    <td style=\"border: 1px solid white; padding: 8px 16px; text-align: left;\">(ii)&nbsp;&nbsp;&nbsp;Link state routing</td>\n    <td style=\"border: 1px solid white; padding: 8px 16px; text-align: left;\">(b)&nbsp;&nbsp;&nbsp;&nbsp;Dijkstra</td>\n  </tr>\n</table><br>For matching of items in <strong>List I</strong> with those in <strong>List II</strong>, which ONE of the following options is CORRECT?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "(i) – (a) and (ii) – (b)",
+    "(i) – (a) and (ii) – (a)",
+    "(i) – (b) and (ii) – (a)",
+    "(i) – (b) and (ii) – (b)"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>• <strong>Distance vector routing (i):</strong> Operates based on the <strong>Bellman-Ford algorithm</strong>, where each router maintains a vector of distances to all destinations and periodically updates its neighbors. Hence, (i) matches with (a).<br><br>• <strong>Link state routing (ii):</strong> Operates based on <strong>Dijkstra's algorithm</strong>, where each router learns the complete network topology and independently calculates the shortest path to every other node. Hence, (ii) matches with (b).<br><br>Therefore, the correct matching is (i) – (a) and (ii) – (b), which corresponds to <strong>Option (A)</strong>.",
+  "videoUrl": null
+}

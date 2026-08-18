@@ -1,0 +1,26 @@
+{
+  "id": 16,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "Computer Networks",
+    "Transport Layer"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the following statements:<br><br>(i) Address Resolution Protocol (ARP) provides a mapping from an IP address to the corresponding hardware (link-layer) address.<br>(ii) A single TCP segment from a sender S to a receiver R cannot carry both data from S to R and acknowledgement for a segment from R to S.<br><br>Which ONE of the following is CORRECT?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Both (i) and (ii) are TRUE",
+    "(i) is TRUE and (ii) is FALSE",
+    "(i) is FALSE and (ii) is TRUE",
+    "Both (i) and (ii) are FALSE"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>• <strong>Statement (i):</strong> Address Resolution Protocol (ARP) maps a network-layer IP address to its corresponding physical hardware (MAC/link-layer) address. Hence, statement (i) is <strong>TRUE</strong>.<br><br>• <strong>Statement (ii):</strong> TCP supports piggybacking, allowing an outgoing TCP segment from sender S to receiver R to carry both data from S to R and an acknowledgment (ACK) for a previously received segment from R to S. Thus, statement (ii) is <strong>FALSE</strong>.<br><br>Therefore, (i) is TRUE and (ii) is FALSE, making <strong>Option (B)</strong> the correct choice.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 15,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "Mathematical Logic",
+    "Discrete Mathematics"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Let $P(x)$ be an arbitrary predicate over the domain of natural numbers.<br><br>Which ONE of the following statements is TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$(P(0) \\land (\\forall x [P(x) \\implies P(x + 1)])) \\implies (\\forall x P(x))$",
+    "$(P(0) \\land (\\forall x [P(x) \\implies P(x - 1)])) \\implies (\\forall x P(x))$",
+    "$(P(1000) \\land (\\forall x [P(x) \\implies P(x - 1)])) \\implies (\\forall x P(x))$",
+    "$(P(1000) \\land (\\forall x [P(x) \\implies P(x + 1)])) \\implies (\\forall x P(x))$"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br><strong>Step 1: Identify the Principle of Mathematical Induction.</strong><br>The statement in Option (A) is the formal representation of the Principle of Mathematical Induction over the set of natural numbers $\\mathbb{N} = \\{0, 1, 2, \\dots\\}$.<br><br>• <strong>Base Case:</strong> $P(0)$ asserts that the predicate holds for $x = 0$.<br>• <strong>Inductive Step:</strong> $\\forall x [P(x) \\implies P(x + 1)]$ asserts that if the predicate holds for any natural number $x$, it must also hold for $x + 1$.<br>• <strong>Conclusion:</strong> Combining the base case and inductive step implies that $P(x)$ holds for all natural numbers, represented by $\\forall x P(x)$.<br><br><strong>Step 2: Analysis of other options.</strong><br>• <strong>Option (B):</strong> Going backward ($P(x) \\implies P(x - 1)$) from $0$ does not cover all positive natural numbers.<br>• <strong>Option (C):</strong> Starting at $1000$ and moving backward ($x - 1$) only covers values $0 \\le x \\le 1000$, not all natural numbers.<br>• <strong>Option (D):</strong> Starting at $1000$ and moving forward ($x + 1$) leaves natural numbers from $0$ to $999$ unverified.<br><br>Hence, <strong>Option (A)</strong> is the only logically true statement for all natural numbers.",
+  "videoUrl": null
+}

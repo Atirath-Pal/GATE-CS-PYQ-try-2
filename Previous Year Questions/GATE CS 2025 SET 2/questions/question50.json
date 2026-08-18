@@ -1,0 +1,21 @@
+{
+  "id": 50,
+  "year": 2025,
+  "set": 2,
+  "topics": ["Digital Logic", "Boolean Algebra"],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Which of the following Boolean algebraic equation(s) is/are CORRECT?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\bar{A} B C + A \\bar{B} \\bar{C} + \\bar{A} \\bar{B} \\bar{C} + A \\bar{B} C + A B C = B C + \\bar{B} \\bar{C} + \\bar{A} \\bar{B}$",
+    "$A B + \\bar{A} C + B C = A B + \\bar{A} C$",
+    "$(A + C)(\\bar{A} + B) = A B + \\bar{A} C$",
+    "$\\overline{(A + \\bar{B} + \\bar{D})(C + D)(\\bar{A} + C + D)(A + B + \\bar{D})} = \\bar{A} D + \\bar{C} \\bar{D}$"
+  ],
+  "answer": ["B", "C", "D"],
+  "explanation": "<strong>Step-by-step verification of each option:</strong><br><br><strong>Option A:</strong><br>LHS = $\\bar{A} B C + A \\bar{B} \\bar{C} + \\bar{A} \\bar{B} \\bar{C} + A \\bar{B} C + A B C$<br>= $B C (\\bar{A} + A) + \\bar{B} \\bar{C} (A + \\bar{A}) + A \\bar{B} C$<br>= $B C + \\bar{B} \\bar{C} + A \\bar{B} C$<br>RHS = $B C + \\bar{B} \\bar{C} + \\bar{A} \\bar{B}$.<br>LHS and RHS are not equal. Hence, Option A is <strong>INCORRECT</strong>.<br><br><strong>Option B:</strong><br>Using Consensus Theorem:<br>$A B + \\bar{A} C + B C = A B + \\bar{A} C$.<br>Hence, Option B is <strong>CORRECT</strong>.<br><br><strong>Option C:</strong><br>LHS = $(A + C)(\\bar{A} + B) = A \\bar{A} + A B + \\bar{A} C + B C$<br>= $A B + \\bar{A} C + B C$<br>By Consensus Theorem, $A B + \\bar{A} C + B C = A B + \\bar{A} C = \\text{RHS}$.<br>Hence, Option C is <strong>CORRECT</strong>.<br><br><strong>Option D:</strong><br>Let $X = (A + \\bar{B} + \\bar{D})(C + D)(\\bar{A} + C + D)(A + B + \\bar{D})$.<br>Notice that $(C + D)(\\bar{A} + C + D) = C + D$.<br>So, $X = (C + D)(A + \\bar{B} + \\bar{D})(A + B + \\bar{D})$.<br>Also, $(A + \\bar{B} + \\bar{D})(A + B + \\bar{D}) = A + \\bar{D} + \\bar{B} B = A + \\bar{D}$.<br>Thus, $X = (C + D)(A + \\bar{D}) = A C + A D + C \\bar{D} + D \\bar{D} = A C + A D + C \\bar{D}$.<br>Taking the complement $\\bar{X}$:<br>$\\bar{X} = \\overline{(C + D)(A + \\bar{D})} = \\overline{C + D} + \\overline{A + \\bar{D}} = \\bar{C} \\bar{D} + \\bar{A} D$.<br>This matches the RHS $\\bar{A} D + \\bar{C} \\bar{D}$.<br>Hence, Option D is <strong>CORRECT</strong>.",
+  "videoUrl": null
+}

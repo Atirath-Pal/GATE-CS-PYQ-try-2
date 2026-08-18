@@ -1,0 +1,27 @@
+{
+  "id": 51,
+  "year": "2025",
+  "set": "2",
+  "topics": [
+    "Compiler Design",
+    "Parsing"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider two grammars $G_1$ and $G_2$ with the production rules given below:<br><br>$$G_1: S \\rightarrow \\text{if } E \\text{ then } S \\mid \\text{if } E \\text{ then } S \\text{ else } S \\mid a$$<br>$$E \\rightarrow b$$<br><br>$$G_2: S \\rightarrow \\text{if } E \\text{ then } S \\mid M$$<br>$$M \\rightarrow \\text{if } E \\text{ then } M \\text{ else } S \\mid c$$<br>$$E \\rightarrow b$$<br><br>where $\\text{if}, \\text{then}, \\text{else}, a, b, c$ are the terminals.<br><br>Which of the following option(s) is/are CORRECT?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$G_1$ is not $LL(1)$ and $G_2$ is $LL(1)$.",
+    "$G_1$ is $LL(1)$ and $G_2$ is not $LL(1)$.",
+    "$G_1$ and $G_2$ are not $LL(1)$.",
+    "$G_1$ and $G_2$ are ambiguous."
+  ],
+  "answer": [
+    "C",
+    "D"
+  ],
+  "explanation": "<strong>Grammar $G_1$:</strong><br>The string $\\text{if } E \\text{ then } \\text{if } E \\text{ then } S \\text{ else } S$ has two distinct leftmost derivations due to the dangling else problem. Thus, $G_1$ is ambiguous. Since all $LL(1)$ grammars must be unambiguous, $G_1$ is not $LL(1)$.<br><br><strong>Grammar $G_2$:</strong><br>Consider the string $\\text{if } E \\text{ then } \\text{if } E \\text{ then } M \\text{ else } S$. It can be derived in two different ways:<br>1. $S \\Rightarrow \\text{if } E \\text{ then } S \\Rightarrow \\text{if } E \\text{ then } M \\Rightarrow \\text{if } E \\text{ then } \\text{if } E \\text{ then } M \\text{ else } S$<br>2. $S \\Rightarrow M \\Rightarrow \\text{if } E \\text{ then } M \\text{ else } S \\Rightarrow \\text{if } E \\text{ then } S \\text{ else } S ...$<br>Thus, $G_2$ is also ambiguous and therefore not $LL(1)$.<br><br>Hence, options (C) and (D) are correct.",
+  "videoUrl": null
+}

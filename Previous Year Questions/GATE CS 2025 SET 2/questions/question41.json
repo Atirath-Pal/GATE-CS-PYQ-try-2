@@ -1,0 +1,26 @@
+{
+  "id": 41,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "Algorithms",
+    "Searching and Sorting"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "An array $A$ of length $n$ with distinct elements is said to be bitonic if there is an index $1 \\le i \\le n$ such that $A[1\\dots i]$ is sorted in the non-decreasing order and $A[i + 1\\dots n]$ is sorted in the non-increasing order.<br><br>Which ONE of the following represents the best possible asymptotic bound for the worst-case number of comparisons by an algorithm that searches for an element in a bitonic array $A$?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\Theta(n)$",
+    "$\\Theta(1)$",
+    "$\\Theta(\\log^2 n)$",
+    "$\\Theta(\\log n)$"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>Searching an element in a bitonic array can be efficiently performed in three binary search phases:<br><br><strong>1. Find the Bitonic Point (Peak Element):</strong><br>• Use a binary search variant to find the peak element index $i$ where $A[i]$ is maximum.<br>• Comparing $A[mid]$ with its neighbors determines whether to move left or right.<br>• Number of comparisons: $O(\\log n)$.<br><br><strong>2. Binary Search in the Left Subarray:</strong><br>• The prefix $A[1\\dots i]$ is sorted in increasing order.<br>• Perform a standard binary search on this subarray.<br>• Number of comparisons: $O(\\log n)$.<br><br><strong>3. Binary Search in the Right Subarray:</strong><br>• The suffix $A[i+1\\dots n]$ is sorted in decreasing order.<br>• If the element is not found in the left subarray, perform a reverse binary search on this subarray.<br>• Number of comparisons: $O(\\log n)$.<br><br><strong>Total Worst-case Comparisons:</strong><br>$$T(n) = O(\\log n) + O(\\log n) + O(\\log n) = \\Theta(\\log n)$$<br><br>Hence, <strong>Option (D)</strong> is correct.",
+  "videoUrl": null
+}

@@ -1,0 +1,28 @@
+{
+  "id": 44,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "Engineering Mathematics",
+    "Linear Algebra"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a system of linear equations $PX = Q$ where $P \\in \\mathbb{R}^{3 \\times 3}$ and $Q \\in \\mathbb{R}^{3 \\times 1}$. Suppose $P$ has an LU decomposition, $P = LU$, where<br><br>$$L = \\begin{bmatrix} 1 & 0 & 0 \\\\ l_{21} & 1 & 0 \\\\ l_{31} & l_{32} & 1 \\end{bmatrix} \\text{ and } U = \\begin{bmatrix} u_{11} & u_{12} & u_{13} \\\\ 0 & u_{22} & u_{23} \\\\ 0 & 0 & u_{33} \\end{bmatrix}.$$<br><br>Which of the following statement(s) is/are TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "The system $PX = Q$ can be solved by first solving $LY = Q$ and then $UX = Y$.",
+    "If $P$ is invertible, then both $L$ and $U$ are invertible.",
+    "If $P$ is singular, then at least one of the diagonal elements of $U$ is zero.",
+    "If $P$ is symmetric, then both $L$ and $U$ are symmetric."
+  ],
+  "answer": [
+    "A",
+    "B",
+    "C"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br><strong>1. Analysis of Option (A):</strong><br>• The given system is $PX = Q$. Substituting $P = LU$ yields $(LU)X = Q \\implies L(UX) = Q$.<br>• Letting $UX = Y$, we first solve $LY = Q$ for $Y$ using forward substitution, and then solve $UX = Y$ for $X$ using backward substitution.<br>• Thus, <strong>Option (A) is TRUE</strong>.<br><br><strong>2. Analysis of Option (B):</strong><br>• The determinant relation is $\\det(P) = \\det(L) \\cdot \\det(U)$.<br>• Since $L$ is a unit lower triangular matrix, its determinant is $\\det(L) = 1 \\neq 0$, so $L$ is always invertible.<br>• If $P$ is invertible, then $\\det(P) \\neq 0 \\implies \\det(U) \\neq 0$, which implies $U$ is also invertible.<br>• Thus, <strong>Option (B) is TRUE</strong>.<br><br><strong>3. Analysis of Option (C):</strong><br>• The matrix $U$ is upper triangular, so its determinant is the product of its diagonal elements: $\\det(U) = u_{11} u_{22} u_{33}$.<br>• If $P$ is singular, $\\det(P) = 0 \\implies \\det(L) \\cdot \\det(U) = 1 \\cdot (u_{11} u_{22} u_{33}) = 0$.<br>• Therefore, at least one diagonal element $u_{ii}$ of $U$ must be zero.<br>• Thus, <strong>Option (C) is TRUE</strong>.<br><br><strong>4. Analysis of Option (D):</strong><br>• If $P$ is symmetric, $P = P^T \\implies LU = U^T L^T$.<br>• This condition does not mean $L$ or $U$ are symmetric. In general, lower/upper triangular matrices are symmetric only if they are diagonal.<br>• For example, for $P = \\begin{bmatrix} 2 & 1 \\\\ 1 & 2 \\end{bmatrix}$, the LU factors are $L = \\begin{bmatrix} 1 & 0 \\\\ 0.5 & 1 \\end{bmatrix}$ and $U = \\begin{bmatrix} 2 & 1 \\\\ 0 & 1.5 \\end{bmatrix}$, neither of which is symmetric.<br>• Thus, <strong>Option (D) is FALSE</strong>.<br><br>Hence, the correct options are <strong>(A), (B), and (C)</strong>.",
+  "videoUrl": null
+}

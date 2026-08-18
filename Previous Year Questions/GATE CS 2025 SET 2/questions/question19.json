@@ -1,0 +1,26 @@
+{
+  "id": 19,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "Programming in C",
+    "Pointers"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the following C program:<br><br>Which ONE of the following will be the output of the program?",
+  "assetImage": null,
+  "codeBlock": "#include <stdio.h>\n\nvoid stringcopy(char *, char *);\n\nint main() {\n    char a[30] = \"@#Hello World!\";\n    stringcopy(a, a + 2);\n    printf(\"%s\\n\", a);\n    return 0;\n}\n\nvoid stringcopy(char *s, char *t) {\n    while(*t)\n        *s++ = *t++;\n}",
+  "options": [
+    "@#Hello World!",
+    "Hello World!",
+    "ello World!",
+    "Hello World!d!"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Step 1: Analyze the initial array state</strong><br>The character array $a$ is initialized as: $a = \\text{\"@#Hello World!\"}$.<br>Its elements and indices are:<br>Index 0-1: '@', '#'<br>Index 2-13: 'H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd', '!'<br>Index 14: '\\0' (null character)<br><br><strong>Step 2: Trace `stringcopy(a, a + 2)`</strong><br>Pointer $s$ points to $a[0]$ ('@') and pointer $t$ points to $a[2]$ ('H').<br>The function runs `while(*t) *s++ = *t++;`.<br>This copies each character pointed to by $t$ to $s$ until $t$ encounters the null character `\\0`.<br><br><strong>Note:</strong> The loop condition `while(*t)` checks the value before copying, which means it stops when $*t = '\\0'$ without copying the null character to $s$.<br><br><strong>Step 3: Determine the resulting string</strong><br>The 12 characters \"Hello World!\" (from indices 2 to 13) are copied into indices 0 to 11.<br>Indices 12, 13, and 14 remain unchanged from the original array:<br>- $a[12] = \\text{'d'}$<br>- $a[13] = \\text{'!'}$<br>- $a[14] = \\text{'\\0'}$<br><br>Combining indices 0 through 14 gives: <code>Hello World!d!</code><br><br>Hence, option (D) is correct.",
+  "videoUrl": null
+}

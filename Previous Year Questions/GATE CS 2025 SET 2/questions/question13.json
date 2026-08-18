@@ -1,0 +1,26 @@
+{
+  "id": 13,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "Data Structures",
+    "Trees"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider a binary tree $T$ in which every node has either zero or two children. Let $n > 0$ be the number of nodes in $T$.<br><br>Which ONE of the following is the number of nodes in $T$ that have exactly two children?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\frac{n - 2}{2}$",
+    "$\\frac{n - 1}{2}$",
+    "$\\frac{n}{2}$",
+    "$\\frac{n + 1}{2}$"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br><strong>Step 1: Understand the structure of the binary tree.</strong><br>In the given binary tree $T$, every node has either $0$ or $2$ children. There are no nodes with $1$ child ($n_1 = 0$).<br><br>Let:<br>• $n_0$ = number of leaf nodes (nodes with $0$ children)<br>• $n_2$ = number of internal nodes (nodes with $2$ children)<br>• $n$ = total number of nodes in $T$<br><br><strong>Step 2: Relation between $n_0$, $n_2$, and $n$.</strong><br>For any binary tree, the relationship between leaf nodes and nodes with two children is given by:<br>$$n_0 = n_2 + 1$$<br><br>The total number of nodes $n$ is:<br>$$n = n_0 + n_2$$<br><br>Substituting $n_0 = n_2 + 1$ into the total node equation gives:<br>$$n = (n_2 + 1) + n_2 = 2n_2 + 1$$<br><br><strong>Step 3: Solve for $n_2$.</strong><br>$$2n_2 = n - 1 \\implies n_2 = \\frac{n - 1}{2}$$<br><br>Therefore, the number of nodes in $T$ that have exactly two children is $\\frac{n - 1}{2}$, which corresponds to option <strong>(B)</strong>.",
+  "videoUrl": null
+}

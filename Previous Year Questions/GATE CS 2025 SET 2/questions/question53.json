@@ -1,0 +1,26 @@
+{
+  "id": 53,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "Database Management Systems",
+    "Transaction and Concurrency Control"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the database transactions T1 and T2, and data items X and Y. Which of the schedule(s) is/are conflict serializable?<br><br><table style=\"border: 1px solid white; border-collapse: collapse; margin: 0 auto; text-align: left;\">\n  <tr>\n    <th style=\"border: 1px solid white; padding: 8px 16px;\">Transaction T1</th>\n    <th style=\"border: 1px solid white; padding: 8px 16px;\">Transaction T2</th>\n  </tr>\n  <tr>\n    <td style=\"border: 1px solid white; padding: 6px 16px;\">R1(X)</td>\n    <td style=\"border: 1px solid white; padding: 6px 16px;\"></td>\n  </tr>\n  <tr>\n    <td style=\"border: 1px solid white; padding: 6px 16px;\">W1(Y)</td>\n    <td style=\"border: 1px solid white; padding: 6px 16px;\">W2(X)</td>\n  </tr>\n  <tr>\n    <td style=\"border: 1px solid white; padding: 6px 16px;\">R1(X)</td>\n    <td style=\"border: 1px solid white; padding: 6px 16px;\">W2(Y)</td>\n  </tr>\n  <tr>\n    <td style=\"border: 1px solid white; padding: 6px 16px;\">W1(X)</td>\n    <td style=\"border: 1px solid white; padding: 6px 16px;\">COMMIT(T2)</td>\n  </tr>\n  <tr>\n    <td style=\"border: 1px solid white; padding: 6px 16px;\">COMMIT(T1)</td>\n    <td style=\"border: 1px solid white; padding: 6px 16px;\"></td>\n  </tr>\n</table>",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "R1(X), W2(X), W1(Y), W2(Y), R1(X), W1(X), COMMIT(T2), COMMIT(T1)",
+    "W2(X), R1(X), W2(Y), W1(Y), R1(X), COMMIT(T2), W1(X), COMMIT(T1)",
+    "R1(X), W1(Y), W2(X), W2(Y), R1(X), W1(X), COMMIT(T1), COMMIT(T2)",
+    "W2(X), R1(X), W1(Y), W2(Y), R1(X), COMMIT(T2), W1(X), COMMIT(T1)"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step 1: Identify Conflicting Operations</strong><br>Two operations conflict if they belong to different transactions, operate on the same data item, and at least one of them is a write operation.<br><br><strong>Step 2: Construct Precedence Graph for each Schedule</strong><br><br>• <strong>Schedule (A):</strong> R1(X), W2(X), W1(Y), W2(Y), R1(X), W1(X), COMMIT(T2), COMMIT(T1)<br>- Conflicts on X: R1(X) before W2(X) gives edge $T1 \\rightarrow T2$. W2(X) before R1(X) gives edge $T2 \\rightarrow T1$.<br>- Since there is a cycle ($T1 \\rightleftharpoons T2$), Schedule (A) is <strong>not</strong> conflict serializable.<br><br>• <strong>Schedule (B):</strong> W2(X), R1(X), W2(Y), W1(Y), R1(X), COMMIT(T2), W1(X), COMMIT(T1)<br>- Conflicts on X: W2(X) before R1(X) gives edge $T2 \\rightarrow T1$; W2(X) before W1(X) gives edge $T2 \\rightarrow T1$.<br>- Conflicts on Y: W2(Y) before W1(Y) gives edge $T2 \\rightarrow T1$.<br>- There are no edges from $T1 \\rightarrow T2$. The precedence graph is acyclic ($T2 \\rightarrow T1$). Thus, Schedule (B) <strong>is</strong> conflict serializable.<br><br>• <strong>Schedule (C):</strong> R1(X), W1(Y), W2(X), W2(Y), R1(X), W1(X), COMMIT(T1), COMMIT(T2)<br>- Conflicts on X: R1(X) before W2(X) gives edge $T1 \\rightarrow T2$. W2(X) before R1(X) gives edge $T2 \\rightarrow T1$.<br>- Contains a cycle ($T1 \\rightleftharpoons T2$), so Schedule (C) is <strong>not</strong> conflict serializable.<br><br>• <strong>Schedule (D):</strong> W2(X), R1(X), W1(Y), W2(Y), R1(X), COMMIT(T2), W1(X), COMMIT(T1)<br>- Conflicts on X: W2(X) before R1(X) gives edge $T2 \\rightarrow T1$.<br>- Conflicts on Y: W1(Y) before W2(Y) gives edge $T1 \\rightarrow T2$.<br>- Contains a cycle ($T1 \\rightleftharpoons T2$), so Schedule (D) is <strong>not</strong> conflict serializable.<br><br><strong>Conclusion:</strong><br>Only <strong>Option (B)</strong> is conflict serializable.",
+  "videoUrl": null
+}

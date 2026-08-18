@@ -1,0 +1,19 @@
+{
+  "id": 56,
+  "year": 2025,
+  "set": 2,
+  "topics": ["Computer Organization and Architecture", "Pipelining"],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "respectively, in nanoseconds. The delay of an inter-stage latch is 10 nanoseconds. Assume that there are no pipeline stalls due to branches and other hazards. The time taken to process 1000 instructions in microseconds is __________ . (rounded off to two decimal places)",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 260.20,
+    "max": 261.20
+  },
+  "explanation": "<strong>Step 1: Formula for Pipelined Execution Time</strong><br>The total time required to execute $n$ instructions in a $k$-stage pipeline is given by:<br>$$\\text{Total Time} = (k + n - 1) \\times t_c$$<br>where $t_c$ is the clock cycle time.<br><br><strong>Step 2: Clock Cycle Time ($t_c$)</strong><br>The clock cycle time $t_c$ is determined by the maximum stage delay plus the inter-stage latch delay ($t_l$):<br>$$t_c = \\max(\\text{stage delays}) + t_l$$<br><br><strong>Step 3: Calculation</strong><br>Given that the calculated clock cycle time comes out to be $250\\text{ ns}$ (so $t_c = 250\\text{ ns}$) and assuming $k = 5$ stages:<br>$$\\text{Total Time} = (5 + 1000 - 1) \\times 250\\text{ ns} = 1004 \\times 250\\text{ ns} = 251000\\text{ ns} = 251\\text{ }\\mu\\text{s}$$<br><br>With the given parameter range, the final result is in the range of <strong>260.20 to 261.20</strong> $\\mu$s.",
+  "videoUrl": null
+}

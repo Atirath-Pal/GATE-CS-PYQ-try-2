@@ -1,0 +1,22 @@
+{
+  "id": 34,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "Digital Logic",
+    "Counters"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "In a 4-bit ripple counter, if the period of the waveform at the last flip-flop is 64 microseconds, then the frequency of the ripple counter in kHz is ________. (Answer in integer)",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 250,
+    "max": 250
+  },
+  "explanation": "<strong>Step 1: Relationship in an $n$-bit Ripple Counter</strong><br>An $n$-bit ripple counter divides the input clock frequency by $2^n$.<br>Thus, the output time period ($T_{out}$) at the last flip-flop is related to the input clock period ($T_{in}$) by:<br>$T_{out} = 2^n \\times T_{in}$<br><br><strong>Step 2: Calculate the Input Clock Period ($T_{in}$)</strong><br>For a 4-bit counter ($n = 4$) and $T_{out} = 64\\ \\mu\\text{s}$:<br>$64\\ \\mu\\text{s} = 2^4 \\times T_{in} = 16 \\times T_{in}$<br>$T_{in} = \\frac{64}{16} = 4\\ \\mu\\text{s}$<br><br><strong>Step 3: Calculate the Input Frequency ($f_{in}$)</strong><br>The frequency of the input clock to the ripple counter is:<br>$f_{in} = \\frac{1}{T_{in}} = \\frac{1}{4\\ \\mu\\text{s}} = 0.25\\ \\text{MHz} = 250\\ \\text{kHz}$<br><br>Hence, the frequency of the ripple counter is <strong>250</strong> kHz.",
+  "videoUrl": null
+}

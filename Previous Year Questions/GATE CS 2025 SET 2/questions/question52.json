@@ -1,0 +1,27 @@
+{
+  "id": 52,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "Theory of Computation",
+    "Regular Languages"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Let $\\Sigma = \\{a, b, c\\}$. For $x \\in \\Sigma^*$, and $\\alpha \\in \\Sigma$, let $\\#_\\alpha(x)$ denote the number of occurrences of $\\alpha$ in $x$.<br><br>Which one or more of the following option(s) define(s) regular language(s)?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\{a^m b^n \\mid m, n \\ge 0\\}$",
+    "$\\{a, b\\}^* \\cap \\{a^m b^n c^{m-n} \\mid m \\ge n \\ge 0\\}$",
+    "$\\{w \\mid w \\in \\{a, b\\}^*, \\#_a(w) \\equiv 2 \\pmod 7, \\text{ and } \\#_b(w) \\equiv 3 \\pmod 9\\}$",
+    "$\\{w \\mid w \\in \\{a, b\\}^*, \\#_a(w) \\equiv 2 \\pmod 7, \\text{ and } \\#_a(w) = \\#_b(w)\\}$"
+  ],
+  "answer": [
+    "A",
+    "C"
+  ],
+  "explanation": "<strong>Analysis of each option:</strong><br><br><strong>Option (A):</strong> The language is $\\{a^m b^n \\mid m, n \\ge 0\\}$, which corresponds to the regular expression $a^* b^*$. Since it can be represented by a regular expression and recognized by a Finite Automaton without memory comparison between $m$ and $n$, it is a <strong>regular language</strong>.<br><br><strong>Option (B):</strong> Consider $L = \\{a, b\\}^* \\cap \\{a^m b^n c^{m-n} \\mid m \\ge n \\ge 0\\}$. Since the words must belong to $\\{a, b\\}^*$, there can be no symbol $c$ in any string. Thus, we must have $m - n = 0$, which implies $m = n$. The intersection simplifies to the language $\\{a^n b^n \\mid n \\ge 0\\}$, which requires matching the count of $a$'s and $b$'s. This is a classic non-regular context-free language. Hence, option (B) is <strong>not regular</strong>.<br><br><strong>Option (C):</strong> The conditions require the number of $a$'s to be $2 \\pmod 7$ and the number of $b$'s to be $3 \\pmod 9$. Modulo conditions on symbol counts can be tracked using a Finite State Automaton (specifically, the product automaton of a 7-state DFA and a 9-state DFA). Since a DFA can be constructed, this language is <strong>regular</strong>.<br><br><strong>Option (D):</strong> The condition $\\#_a(w) = \\#_b(w)$ requires checking equal numbers of $a$'s and $b$'s without any upper bound, which cannot be done using finite memory. Hence, option (D) is <strong>not regular</strong>.<br><br>Therefore, the correct options are <strong>A</strong> and <strong>C</strong>.",
+  "videoUrl": null
+}

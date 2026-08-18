@@ -1,0 +1,22 @@
+{
+  "id": 65,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "Engineering Mathematics",
+    "Probability and Statistics"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "The unit interval $(0,1)$ is divided at a point chosen uniformly distributed over $(0,1)$ in $\\mathbb{R}$ into two disjoint subintervals.<br><br>The expected length of the subinterval that contains $0.4$ is ____________. (rounded off to two decimal places)",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 0.70,
+    "max": 0.80
+  },
+  "explanation": "Let $X$ be the division point chosen uniformly from $(0,1)$. Thus, $X \\sim \\text{Uniform}(0,1)$, and its probability density function is $f_X(x) = 1$ for $x \\in (0,1)$.<br><br>The point $X$ splits the interval $(0,1)$ into two disjoint subintervals: $(0, X)$ and $(X, 1)$.<br><br>Let $L$ be the length of the subinterval containing $0.4$.<br><br><strong>Case 1:</strong> If $X > 0.4$, then $0.4$ lies in the subinterval $(0, X)$. The length of this subinterval is $L = X$.<br><br><strong>Case 2:</strong> If $X \\le 0.4$, then $0.4$ lies in the subinterval $(X, 1)$. The length of this subinterval is $L = 1 - X$.<br><br>Thus, $L$ can be expressed as:<br>$L = \\begin{cases} X & \\text{if } X > 0.4 \\\\ 1 - X & \\text{if } X \\le 0.4 \\end{cases}$<br><br>To find the expected value $E[L]$:<br>$E[L] = \\int_{0}^{0.4} (1 - x) f_X(x) \\, dx + \\int_{0.4}^{1} x f_X(x) \\, dx$<br><br>Since $f_X(x) = 1$:<br>$E[L] = \\int_{0}^{0.4} (1 - x) \\, dx + \\int_{0.4}^{1} x \\, dx$<br><br>Evaluating the first integral:<br>$\\int_{0}^{0.4} (1 - x) \\, dx = \\left[ x - \\frac{x^2}{2} \\right]_{0}^{0.4} = 0.4 - \\frac{0.16}{2} = 0.4 - 0.08 = 0.32$<br><br>Evaluating the second integral:<br>$\\int_{0.4}^{1} x \\, dx = \\left[ \\frac{x^2}{2} \\right]_{0.4}^{1} = \\frac{1}{2} - \\frac{0.16}{2} = 0.5 - 0.08 = 0.42$<br><br>Adding the two values:<br>$E[L] = 0.32 + 0.42 = 0.74$<br><br>Therefore, the expected length of the subinterval that contains $0.4$ is <strong>0.74</strong>.",
+  "videoUrl": null
+}

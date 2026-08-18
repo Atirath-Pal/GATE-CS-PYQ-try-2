@@ -1,0 +1,26 @@
+{
+  "id": 20,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "Algorithms",
+    "Sorting & Searching"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider an unordered list of $N$ distinct integers.<br><br>What is the minimum number of element comparisons required to find an integer in the list that is NOT the largest in the list?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "1",
+    "$N - 1$",
+    "$N$",
+    "$2N - 1$"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br><strong>Step 1: Understand the goal.</strong><br>We need to find <em>any</em> element from an unordered list of $N$ distinct integers that is guaranteed to not be the maximum element in the list.<br><br><strong>Step 2: Perform a comparison.</strong><br>Pick any two arbitrary elements $x$ and $y$ from the list and compare them (which takes $1$ comparison):<br>• If $x < y$, then $x$ cannot be the maximum element because $y$ is larger than $x$.<br>• If $x > y$, then $y$ cannot be the maximum element because $x$ is larger than $y$.<br><br><strong>Step 3: Conclusion.</strong><br>With just $1$ comparison, we can immediately identify an element that is strictly smaller than another element in the list, ensuring it is NOT the largest element.<br><br>Hence, the minimum number of comparisons required is $1$, which corresponds to <strong>Option (A)</strong>.",
+  "videoUrl": null
+}

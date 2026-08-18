@@ -1,0 +1,26 @@
+{
+  "id": 14,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "Linear Algebra",
+    "Matrix Theory"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Let $L, M,$ and $N$ be non-singular matrices of order $3$ satisfying the equations<br><br>$L^2 = L^{-1}$, $M = L^8$ and $N = L^2$.<br><br>Which ONE of the following is the value of the determinant of $(M - N)$?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "0",
+    "1",
+    "2",
+    "3"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br><strong>Step 1: Simplify $L^3$.</strong><br>Given $L^2 = L^{-1}$, multiplying both sides by $L$ gives:<br>$$L^3 = I$$<br><br><strong>Step 2: Express $M$ and $N$ in terms of $L$.</strong><br>• $M = L^8 = (L^3)^2 \\cdot L^2 = (I)^2 \\cdot L^2 = L^2$<br>• $N = L^2$<br><br><strong>Step 3: Find $M - N$ and its determinant.</strong><br>$$M - N = L^2 - L^2 = \\mathbf{0}$$<br>Since $(M - N)$ is a zero matrix of order $3$, its determinant is:<br>$$\\det(M - N) = \\det(\\mathbf{0}) = 0$$<br><br>Therefore, the correct option is <strong>(A)</strong>.",
+  "videoUrl": null
+}

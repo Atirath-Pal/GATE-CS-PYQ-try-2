@@ -1,0 +1,26 @@
+{
+  "id": 36,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "Computer Networks",
+    "Flow and Error Control"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Suppose we are transmitting frames between two nodes using Stop-and-Wait protocol. The frame size is 3000 bits. The transmission rate of the channel is 2000 bps (bits/second) and the propagation delay between the two nodes is 100 milliseconds. Assume that the processing times at the source and destination are negligible. Also, assume that the size of the acknowledgement packet is negligible. Which ONE of the following most accurately gives the channel utilization for the above scenario in percentage?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "88.23",
+    "93.75",
+    "85.44",
+    "66.67"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br><strong>1. Calculate Transmission Time ($T_t$):</strong><br>• Frame size ($L$) = $3000$ bits<br>• Transmission rate ($B$) = $2000$ bps<br>• $T_t = \\frac{L}{B} = \\frac{3000}{2000} = 1.5\\text{ seconds} = 1500\\text{ ms}$<br><br><strong>2. Propagation Delay ($T_p$):</strong><br>• $T_p = 100\\text{ ms} = 0.1\\text{ seconds}$<br><br><strong>3. Calculate Channel Utilization ($\n\\eta$):</strong><br>For Stop-and-Wait protocol:<br>$\\eta = \\frac{T_t}{T_t + 2 \\times T_p}$<br><br>Substitute the values:<br>$\\eta = \\frac{1.5}{1.5 + 2 \\times 0.1} = \\frac{1.5}{1.7} = \\frac{15}{17} \\approx 0.8823529$<br><br>In percentage:<br>$\\eta\\% = 0.8823529 \\times 100\\% \\approx 88.23\\%$<br><br>Hence, <strong>Option (A)</strong> is the correct answer.",
+  "videoUrl": null
+}

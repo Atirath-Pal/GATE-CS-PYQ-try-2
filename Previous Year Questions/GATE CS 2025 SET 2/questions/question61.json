@@ -1,0 +1,22 @@
+{
+  "id": 61,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "Computer Organization and Architecture",
+    "CPU Performance"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "An application executes $6.4 \\times 10^8$ number of instructions in $6.3$ seconds. There are four types of instructions, the details of which are given in the table. The duration of a clock cycle in nanoseconds is __________. (rounded off to one decimal place)<br><br><table style=\"border: 1px solid white; border-collapse: collapse; margin: 0 auto; text-align: center;\">\n  <thead>\n    <tr>\n      <th style=\"border: 1px solid white; padding: 8px 16px;\">Instruction type</th>\n      <th style=\"border: 1px solid white; padding: 8px 16px;\">Clock cycles required per instruction (CPI)</th>\n      <th style=\"border: 1px solid white; padding: 8px 16px;\">Number of instructions executed</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td style=\"border: 1px solid white; padding: 6px 16px; text-align: left;\">Branch</td>\n      <td style=\"border: 1px solid white; padding: 6px 16px;\">2</td>\n      <td style=\"border: 1px solid white; padding: 6px 16px;\">$2.25 \\times 10^8$</td>\n    </tr>\n    <tr>\n      <td style=\"border: 1px solid white; padding: 6px 16px; text-align: left;\">Load</td>\n      <td style=\"border: 1px solid white; padding: 6px 16px;\">5</td>\n      <td style=\"border: 1px solid white; padding: 6px 16px;\">$1.20 \\times 10^8$</td>\n    </tr>\n    <tr>\n      <td style=\"border: 1px solid white; padding: 6px 16px; text-align: left;\">Store</td>\n      <td style=\"border: 1px solid white; padding: 6px 16px;\">4</td>\n      <td style=\"border: 1px solid white; padding: 6px 16px;\">$1.65 \\times 10^8$</td>\n    </tr>\n    <tr>\n      <td style=\"border: 1px solid white; padding: 6px 16px; text-align: left;\">Arithmetic</td>\n      <td style=\"border: 1px solid white; padding: 6px 16px;\">3</td>\n      <td style=\"border: 1px solid white; padding: 6px 16px;\">$1.30 \\times 10^8$</td>\n    </tr>\n  </tbody>\n</table>",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 3.0,
+    "max": 3.0
+  },
+  "explanation": "<strong>Step 1: Calculate the total number of clock cycles required.</strong><br>Total Cycles = $\\sum (\\text{CPI}_i \\times \\text{Instruction Count}_i)$<br>Total Cycles = $(2 \\times 2.25 \\times 10^8) + (5 \\times 1.20 \\times 10^8) + (4 \\times 1.65 \\times 10^8) + (3 \\times 1.30 \\times 10^8)$<br>Total Cycles = $(4.50 + 6.00 + 6.60 + 3.90) \\times 10^8 = 21.0 \\times 10^8$ cycles.<br><br><strong>Step 2: Calculate the duration of one clock cycle (Cycle Time).</strong><br>Execution Time = Total Cycles $\\times$ Cycle Time<br>$6.3 \\text{ seconds} = 21.0 \\times 10^8 \\times \\text{Cycle Time}$<br>Cycle Time = $\\frac{6.3}{21.0 \\times 10^8} = 0.3 \\times 10^{-8} \\text{ seconds} = 3 \\times 10^{-9} \\text{ seconds} = 3.0 \\text{ ns}$.<br><br>Thus, the duration of a clock cycle is <strong>3.0</strong> nanoseconds.",
+  "videoUrl": null
+}

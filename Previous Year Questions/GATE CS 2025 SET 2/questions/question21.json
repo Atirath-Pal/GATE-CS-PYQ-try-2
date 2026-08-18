@@ -1,0 +1,26 @@
+{
+  "id": 21,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "Compiler Design",
+    "Intermediate Code Generation"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the following statements about the use of backpatching in a compiler for intermediate code generation:<br><br>(I)&nbsp;&nbsp;&nbsp;&nbsp;Backpatching can be used to generate code for Boolean expression in one pass.<br>(II)&nbsp;&nbsp;&nbsp;Backpatching can be used to generate code for flow-of-control statements in one pass.<br><br>Which ONE of the following options is CORRECT?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Only (I) is correct.",
+    "Only (II) is correct.",
+    "Both (I) and (II) are correct.",
+    "Neither (I) nor (II) is correct."
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>• <strong>Backpatching Concept:</strong> Backpatching is a technique used in single-pass compilers to generate code for Boolean expressions and flow-of-control statements without requiring a separate second pass to resolve forward jump target labels.<br><br>• <strong>Statement (I):</strong> Backpatching generates code for Boolean expressions in a single pass by maintaining lists of jumps with incomplete target addresses (e.g., $truelist$ and $falselist$) and filling them in once the target labels are synthesized. Hence, Statement (I) is <strong>correct</strong>.<br><br>• <strong>Statement (II):</strong> Similarly, for flow-of-control constructs (such as <code>if-then-else</code> and <code>while</code> loops), backpatching maintains lists of forward branching quadruples/triples and patches their target addresses in a single pass as soon as the target statements are parsed. Hence, Statement (II) is <strong>correct</strong>.<br><br>Therefore, <strong>Both (I) and (II) are correct</strong>, which corresponds to <strong>Option (C)</strong>.",
+  "videoUrl": null
+}

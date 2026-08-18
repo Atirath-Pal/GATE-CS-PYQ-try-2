@@ -1,0 +1,27 @@
+{
+  "id": 30,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "Theory of Computation",
+    "Closure Properties"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider the two lists <strong>List I</strong> and <strong>List II</strong> given below:<br><br><table style=\"border: 1px solid white; border-collapse: collapse; margin: 0 auto;\">\n  <tr>\n    <th style=\"border: 1px solid white; padding: 8px 16px; text-align: center;\">List I</th>\n    <th style=\"border: 1px solid white; padding: 8px 16px; text-align: center;\">List II</th>\n  </tr>\n  <tr>\n    <td style=\"border: 1px solid white; padding: 8px 16px; text-align: left;\">(i)&nbsp;&nbsp;&nbsp;&nbsp;Context free languages</td>\n    <td style=\"border: 1px solid white; padding: 8px 16px; text-align: left;\">(a)&nbsp;&nbsp;&nbsp;&nbsp;Closed under union</td>\n  </tr>\n  <tr>\n    <td style=\"border: 1px solid white; padding: 8px 16px; text-align: left;\">(ii)&nbsp;&nbsp;&nbsp;Recursive languages</td>\n    <td style=\"border: 1px solid white; padding: 8px 16px; text-align: left;\">(b)&nbsp;&nbsp;&nbsp;&nbsp;Not closed under complementation</td>\n  </tr>\n  <tr>\n    <td style=\"border: 1px solid white; padding: 8px 16px; text-align: left;\">(iii)&nbsp;&nbsp;Regular languages</td>\n    <td style=\"border: 1px solid white; padding: 8px 16px; text-align: left;\">(c)&nbsp;&nbsp;&nbsp;&nbsp;Closed under intersection</td>\n  </tr>\n</table><br>For matching of items in <strong>List I</strong> with those in <strong>List II</strong>, which of the following option(s) is/are CORRECT?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "(i) - (a), (ii) - (b), and (iii) - (c)",
+    "(i) - (b), (ii) - (a), and (iii) - (c)",
+    "(i) - (b), (ii) - (c), and (iii) - (a)",
+    "(i) - (a), (ii) - (c), and (iii) - (b)"
+  ],
+  "answer": [
+    "B",
+    "C"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br><strong>1. Analyze Closure Properties:</strong><br>• <strong>(i) Context Free Languages (CFLs):</strong><br>- CFLs are closed under union.<br>- CFLs are <strong>not</strong> closed under complementation.<br>- CFLs are <strong>not</strong> closed under intersection.<br>Therefore, (i) maps uniquely to <strong>(b) Not closed under complementation</strong>.<br><br>• <strong>(ii) Recursive Languages:</strong><br>- Recursive languages are closed under union, complementation, and intersection.<br>Therefore, (ii) can match with either <strong>(a) Closed under union</strong> or <strong>(c) Closed under intersection</strong>.<br><br>• <strong>(iii) Regular Languages:</strong><br>- Regular languages are closed under union, complementation, and intersection.<br>Therefore, (iii) can also match with either <strong>(a) Closed under union</strong> or <strong>(c) Closed under intersection</strong>.<br><br><strong>2. Evaluate Options:</strong><br>• Since (i) must map to (b), (ii) and (iii) can share/exchange valid true statements (a) and (c):<br>- <strong>Matching 1:</strong> (i) – (b), (ii) – (a), (iii) – (c) &nbsp;&rarr;&nbsp; <strong>Option (B)</strong> is valid.<br>- <strong>Matching 2:</strong> (i) – (b), (ii) – (c), (iii) – (a) &nbsp;&rarr;&nbsp; <strong>Option (C)</strong> is valid.<br><br>Hence, <strong>Options (B) and (C)</strong> are CORRECT.",
+  "videoUrl": null
+}

@@ -1,0 +1,22 @@
+{
+  "id": 58,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "Operating Systems",
+    "Paging"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "A computer system supports a logical address space of $2^{32}$ bytes. It uses two-level hierarchical paging with a page size of 4096 bytes. A logical address is divided into a $b$-bit index to the outer page table, an offset within the page of the inner page table, and an offset within the desired page. Each entry of the inner page table uses eight bytes. All the pages in the system have the same size.<br><br>The value of $b$ is __________ . (Answer in integer)",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 11,
+    "max": 11
+  },
+  "explanation": "<strong>Step 1: Determine the total address length and page offset bits.</strong><br>Logical Address Space = $2^{32}$ bytes, so logical address length = $32$ bits.<br>Page Size = $4096$ bytes = $2^{12}$ bytes.<br>Thus, the page offset (offset within the desired page) = $12$ bits.<br><br><strong>Step 2: Determine the size of the inner page table page and number of entries per inner page table.</strong><br>Since all pages in the system have the same size, an inner page table itself occupies one page, i.e., $4096$ bytes ($2^{12}$ bytes).<br>Each entry of the inner page table = $8$ bytes ($2^3$ bytes).<br>Number of entries in an inner page table page = $\\frac{2^{12}}{2^3} = 2^9$ entries.<br>Therefore, the index/offset within the page of the inner page table = $9$ bits.<br><br><strong>Step 3: Calculate $b$, the number of bits for the outer page table.</strong><br>Total Logical Address Bits = (Outer Page Table Index, $b$) + (Inner Page Table Offset) + (Page Offset)<br>$32 = b + 9 + 12$<br>$32 = b + 21$<br>$b = 11$<br><br>Hence, the value of $b$ is <strong>11</strong>.",
+  "videoUrl": null
+}

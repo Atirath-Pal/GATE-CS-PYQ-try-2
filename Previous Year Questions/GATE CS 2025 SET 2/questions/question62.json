@@ -1,0 +1,22 @@
+{
+  "id": 62,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "Programming and Data Structures",
+    "C Programming"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the following C program:<br><br>The output of the above program is ____________. (Answer in integer)",
+  "assetImage": null,
+  "codeBlock": "#include <stdio.h>\n\nint main(){\n    int a;\n    int arr[5] = {30,50,10};\n    int *ptr;\n    ptr = &arr[0] + 1;\n    a = *ptr;\n    (*ptr)++;\n    ptr++;\n    printf(\"%d\", a + (*ptr) + arr[1]);\n    return 0;\n}",
+  "options": [],
+  "answer": {
+    "min": 111,
+    "max": 111
+  },
+  "explanation": "<strong>Step-by-step execution:</strong><br><br>1. <strong>Array Initialization:</strong><br><code>int arr[5] = {30, 50, 10};</code><br>The array <code>arr</code> is initialized as: <code>arr[0] = 30</code>, <code>arr[1] = 50</code>, <code>arr[2] = 10</code>, <code>arr[3] = 0</code>, <code>arr[4] = 0</code>.<br><br>2. <strong>Pointer Assignment:</strong><br><code>ptr = &arr[0] + 1;</code><br><code>ptr</code> points to the memory location of <code>arr[1]</code>.<br><br>3. <strong>Variable $a$ Assignment:</strong><br><code>a = *ptr;</code><br>Since <code>ptr</code> points to <code>arr[1]</code>, $a = 50$.<br><br>4. <strong>Pointer Dereference and Increment:</strong><br><code>(*ptr)++;</code><br>The value stored at <code>arr[1]</code> is incremented by 1. Thus, <code>arr[1]</code> becomes $50 + 1 = 51$.<br><br>5. <strong>Pointer Increment:</strong><br><code>ptr++;</code><br><code>ptr</code> now moves to the next element, which is <code>arr[2]</code>. So, <code>*ptr</code> refers to <code>arr[2] = 10</code>.<br><br>6. <strong>Evaluation of Expression:</strong><br><code>a + (*ptr) + arr[1]</code><br>- $a = 50$<br>- $*ptr = \text{arr}[2] = 10$<br>- $\text{arr}[1] = 51$<br><br>Sum = $50 + 10 + 51 = 111$.<br><br>The output printed by <code>printf</code> is <strong>111</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 6,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "General Aptitude",
+    "Verbal Ability"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Based only on the conversation below, identify the logically correct inference:<br><br>“Even if I had known that you were in the hospital, I would not have gone there to see you”, Ramya told Josephine.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Ramya knew that Josephine was in the hospital.",
+    "Ramya did not know that Josephine was in the hospital.",
+    "Ramya and Josephine were once close friends; but now, they are not.",
+    "Josephine was in the hospital due to an injury to her leg."
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>The sentence uses a counterfactual third conditional structure: <em>\"Even if I had known...\"</em>.<br><br>1. In English grammar, using the past perfect conditional (<em>\"if I had known\"</em>) expresses a hypothetical situation about the past that did not actually happen.<br>2. Thus, the statement directly implies the real-world fact that Ramya <strong>did not know</strong> Josephine was in the hospital.<br>3. Options (C) and (D) introduce external assumptions or facts not given in the premise.<br><br>Therefore, the logically correct inference is <strong>Option (B)</strong>.",
+  "videoUrl": null
+}

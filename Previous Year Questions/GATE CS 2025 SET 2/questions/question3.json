@@ -1,0 +1,26 @@
+{
+  "id": 3,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "General Aptitude",
+    "Quantitative Aptitude"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "If $P e^x = Q e^{-x}$ for all real values of $x$, which one of the following statements is true?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$P = Q = 0$",
+    "$P = Q = 1$",
+    "$P = 1; Q = -1$",
+    "$\\frac{P}{Q} = 0$"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>Given that the equation $P e^x = Q e^{-x}$ holds true for all real values of $x$:<br><br><strong>Step 1: Evaluate at $x = 0$</strong><br>$$P e^0 = Q e^0$$<br>Since $e^0 = 1$, we get:<br>$$P = Q$$<br><br><strong>Step 2: Evaluate at $x = 1$</strong><br>$$P e^1 = Q e^{-1}$$<br>$$P e = \\frac{Q}{e}$$<br><br><strong>Step 3: Substitute $Q = P$</strong><br>$$P e = \\frac{P}{e}$$<br>$$P e - \\frac{P}{e} = 0$$<br>$$P \\left(e - \\frac{1}{e}\\right) = 0$$<br><br>Since $e \\approx 2.718$, $e - \\frac{1}{e} \\neq 0$. Therefore, we must have:<br>$$P = 0$$<br><br>Since $P = Q$, it follows that $Q = 0$ as well.<br><br>Hence, $P = Q = 0$.<br><br><strong>Correct Option: (A)</strong>",
+  "videoUrl": null
+}

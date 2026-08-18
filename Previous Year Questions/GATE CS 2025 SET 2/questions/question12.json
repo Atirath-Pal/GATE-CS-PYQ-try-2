@@ -1,0 +1,26 @@
+{
+  "id": 12,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "Calculus",
+    "Engineering Mathematics"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "The value of $x$ such that $x > 1$, satisfying the equation $\\int_1^x t \\ln t \\, dt = \\frac{1}{4}$ is",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\sqrt{e}$",
+    "$e$",
+    "$e^2$",
+    "$e - 1$"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br><strong>Step 1: Evaluate the definite integral using Integration by Parts.</strong><br>Using the formula $\\int u \\, dv = uv - \\int v \\, du$, let:<br>• $u = \\ln t \\implies du = \\frac{1}{t} \\, dt$<br>• $dv = t \\, dt \\implies v = \\frac{t^2}{2}$<br><br>$$\\int t \\ln t \\, dt = \\frac{t^2}{2} \\ln t - \\int \\frac{t^2}{2} \\cdot \\frac{1}{t} \\, dt = \\frac{t^2}{2} \\ln t - \\frac{t^2}{4}$$<br><br><strong>Step 2: Apply limits from $1$ to $x$.</strong><br>$$\\int_1^x t \\ln t \\, dt = \\left[ \\frac{t^2}{2} \\ln t - \\frac{t^2}{4} \\right]_1^x = \\left( \\frac{x^2}{2} \\ln x - \\frac{x^2}{4} \\right) - \\left( \\frac{1}{2} \\ln 1 - \\frac{1}{4} \\right)$$<br>Since $\\ln 1 = 0$, this simplifies to:<br>$$\\frac{x^2}{2} \\ln x - \\frac{x^2}{4} + \\frac{1}{4}$$<br><br><strong>Step 3: Solve for $x$.</strong><br>Given that the integral value equals $\\frac{1}{4}$:<br>$$\\frac{x^2}{2} \\ln x - \\frac{x^2}{4} + \\frac{1}{4} = \\frac{1}{4}$$<br>$$\\frac{x^2}{2} \\ln x - \\frac{x^2}{4} = 0$$<br>Factor out $x^2$:<br>$$x^2 \\left( \\frac{1}{2} \\ln x - \\frac{1}{4} \\right) = 0$$<br><br>Since $x > 1$, $x \\neq 0$. Therefore:<br>$$\\frac{1}{2} \\ln x - \\frac{1}{4} = 0 \\implies \\ln x = \\frac{1}{2} \\implies x = e^{1/2} = \\sqrt{e}$$<br><br>Thus, the correct option is <strong>(A)</strong>.",
+  "videoUrl": null
+}

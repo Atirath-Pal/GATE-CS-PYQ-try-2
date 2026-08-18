@@ -1,0 +1,26 @@
+{
+  "id": 24,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "Theory of Computation",
+    "Pushdown Automata"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Which ONE of the following languages is accepted by a deterministic pushdown automaton?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Any regular language.",
+    "Any context-free language.",
+    "Any language accepted by a non-deterministic pushdown automaton.",
+    "Any decidable language."
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>• <strong>Deterministic Pushdown Automata (DPDA):</strong> A DPDA accepts Deterministic Context-Free Languages (DCFLs).<br><br>• <strong>Hierarchy of Languages:</strong><br>$$\\text{Regular Languages} \\subset \\text{DCFLs} \\subset \\text{CFLs} \\subset \\text{Decidable Languages}$$<br><br>• Since every regular language is a DCFL, a DPDA can accept <strong>any regular language</strong>.<br><br>• A DPDA cannot accept all Context-Free Languages (CFLs) because non-deterministic CFLs (like $L = \\{ w w^R \\mid w \\in \\{a, b\\}^* \\}$) require a Non-deterministic Pushdown Automaton (NPDA).<br><br>Therefore, <strong>Option (A)</strong> is the correct answer.",
+  "videoUrl": null
+}

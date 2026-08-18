@@ -1,0 +1,26 @@
+{
+  "id": 23,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "Computer Networks",
+    "IP Fragmentation"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider a network that uses Ethernet and IPv4. Assume that IPv4 headers do not use any options field. Each Ethernet frame can carry a maximum of 1500 bytes in its data field. A UDP segment is transmitted. The payload (data) in the UDP segment is 7488 bytes.<br><br>Which ONE of the following choices has the CORRECT total number of fragments transmitted and the size of the last fragment including IPv4 header?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "5 fragments, 1488 bytes",
+    "6 fragments, 88 bytes",
+    "6 fragments, 108 bytes",
+    "6 fragments, 116 bytes"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br><strong>1. Calculate total IP Payload:</strong><br>• UDP header size = $8\\text{ bytes}$<br>• UDP payload = $7488\\text{ bytes}$<br>• Total UDP segment size (which forms the IP payload) = $7488 + 8 = 7496\\text{ bytes}$<br><br><strong>2. Determine maximum IP payload per fragment:</strong><br>• Maximum Transmission Unit (MTU) = $1500\\text{ bytes}$<br>• Standard IPv4 header size (without options) = $20\\text{ bytes}$<br>• Maximum payload capacity per IP fragment = $1500 - 20 = 1480\\text{ bytes}$<br>• Since $1480$ is a multiple of $8$ ($1480 / 8 = 185$), each non-final fragment carries $1480\\text{ bytes}$ of payload.<br><br><strong>3. Calculate total number of fragments:</strong><br>• Number of full fragments = $\\lfloor 7496 / 1480 \\rfloor = 5$ fragments<br>• Payload in 5 fragments = $5 \\times 1480 = 7400\\text{ bytes}$<br>• Remaining payload for 6th fragment = $7496 - 7400 = 96\\text{ bytes}$<br>• Therefore, total fragments = $6$.<br><br><strong>4. Calculate size of the last fragment including IPv4 header:</strong><br>• Size of 6th fragment = IP payload + IPv4 header = $96 + 20 = 116\\text{ bytes}$.<br><br>Hence, the correct answer is <strong>6 fragments, 116 bytes</strong>, corresponding to <strong>Option (D)</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 5,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "General Aptitude",
+    "Quantitative Aptitude"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Let $p_1$ and $p_2$ denote two arbitrary prime numbers. Which one of the following statements is correct for all values of $p_1$ and $p_2$?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$p_1 + p_2$ is not a prime number.",
+    "$p_1 p_2$ is not a prime number.",
+    "$p_1 + p_2 + 1$ is a prime number.",
+    "$p_1 p_2 + 1$ is a prime number."
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>Let us analyze each statement for arbitrary prime numbers $p_1$ and $p_2$ (where $p_1, p_2 \\ge 2$):<br><br>• <strong>Option (A):</strong> $p_1 + p_2$ is not a prime number.<br>Counterexample: If $p_1 = 2$ and $p_2 = 3$, then $p_1 + p_2 = 5$, which is a prime number. Thus, this statement is not true for all values.<br><br>• <strong>Option (B):</strong> $p_1 p_2$ is not a prime number.<br>Since $p_1$ and $p_2$ are primes ($\\ge 2$), their product $p_1 p_2$ has factors other than $1$ and itself (namely $p_1$ and $p_2$). A prime number must have exactly two distinct positive divisors. Therefore, $p_1 p_2$ is always composite, so this statement is <strong>always correct</strong>.<br><br>• <strong>Option (C):</strong> $p_1 + p_2 + 1$ is a prime number.<br>Counterexample: If $p_1 = 3$ and $p_2 = 5$, then $p_1 + p_2 + 1 = 9$, which is not a prime number.<br><br>• <strong>Option (D):</strong> $p_1 p_2 + 1$ is a prime number.<br>Counterexample: If $p_1 = 3$ and $p_2 = 5$, then $p_1 p_2 + 1 = 16$, which is not a prime number.<br><br>Therefore, the correct answer is <strong>(B)</strong>.",
+  "videoUrl": null
+}

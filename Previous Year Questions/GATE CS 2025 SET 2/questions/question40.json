@@ -1,0 +1,26 @@
+{
+  "id": 40,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "Compiler Design",
+    "Parsing"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Given a Context-Free Grammar $G$ as follows:<br><br>$S \\rightarrow Aa \\mid bAc \\mid dc \\mid bda$<br>$A \\rightarrow d$<br><br>Which ONE of the following statements is TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$G$ is neither LALR(1) nor SLR(1)",
+    "$G$ is CLR(1), not LALR(1)",
+    "$G$ is LALR(1), not SLR(1)",
+    "$G$ is LALR(1), also SLR(1)"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br><strong>1. Check for SLR(1):</strong><br>• Calculate $FOLLOW(A)$:<br>&nbsp;&nbsp;From production $S \\rightarrow Aa$, $a \\in FOLLOW(A)$.<br>&nbsp;&nbsp;From production $S \\rightarrow bAc$, $c \\in FOLLOW(A)$.<br>&nbsp;&nbsp;Thus, $FOLLOW(A) = \\{a, c\\}$.<br><br>• Consider the item set reachable on terminal symbol 'd' from the initial state $I_0$ ($GOTO(I_0, d)$):<br>&nbsp;&nbsp;$S \\rightarrow d \\cdot c$<br>&nbsp;&nbsp;$A \\rightarrow d \\cdot$<br><br>• In SLR(1) parsing, a reduce action for $A \\rightarrow d$ occurs on all lookaheads in $FOLLOW(A) = \\{a, c\\}$.<br>• On seeing terminal 'c', there is a <strong>Shift/Reduce conflict</strong> between shifting 'c' (for $S \\rightarrow d \\cdot c$) and reducing by $A \\rightarrow d$ (since $c \\in FOLLOW(A)$).<br>• Hence, $G$ is <strong>not SLR(1)</strong>.<br><br><strong>2. Check for LR(1) / LALR(1):</strong><br>• In LR(1), lookaheads are computed specifically per item:<br>&nbsp;&nbsp;From $I_0$, $GOTO(I_0, d)$ gives:<br>&nbsp;&nbsp;$[S \\rightarrow d \\cdot c, \\$]$<br>&nbsp;&nbsp;$[A \\rightarrow d \\cdot, a]$<br>&nbsp;&nbsp;Here, shift action is on 'c' and reduce action is on 'a'. Since $\\{c\\} \\cap \\{a\\} = \\emptyset$, there is no S/R conflict.<br><br>&nbsp;&nbsp;Similarly, $GOTO(I_0, b)$ followed by 'd' gives:<br>&nbsp;&nbsp;$[S \\rightarrow bd \\cdot a, \\$]$<br>&nbsp;&nbsp;$[A \\rightarrow d \\cdot, c]$<br>&nbsp;&nbsp;Shift action is on 'a' and reduce action is on 'c'. Since $\\{a\\} \\cap \\{c\\} = \\emptyset$, there is no S/R conflict.<br><br>• Since no conflicts exist in LR(1) and merging core items produces no new conflicts, $G$ is <strong>LALR(1)</strong>.<br><br>Therefore, <strong>$G$ is LALR(1), not SLR(1)</strong>, which corresponds to <strong>Option (C)</strong>.",
+  "videoUrl": null
+}

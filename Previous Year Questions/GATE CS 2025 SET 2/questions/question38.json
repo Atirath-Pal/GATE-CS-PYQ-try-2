@@ -1,0 +1,26 @@
+{
+  "id": 38,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "Data Structures",
+    "Algorithms"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "A meld operation on two instances of a data structure combines them into one single instance of the same data structure. Consider the following data structures:<br><br>P: Unsorted doubly linked list with pointers to the head node and tail node of the list.<br><br>Q: Min-heap implemented using an array.<br><br>R: Binary Search Tree.<br><br>Which ONE of the following options gives the worst-case time complexities for meld operation on instances of size $n$ of these data structures?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "P: $\\Theta(1)$, Q: $\\Theta(n)$, R: $\\Theta(n)$",
+    "P: $\\Theta(1)$, Q: $\\Theta(n \\log n)$, R: $\\Theta(n)$",
+    "P: $\\Theta(n)$, Q: $\\Theta(n \\log n)$, R: $\\Theta(n^2)$",
+    "P: $\\Theta(1)$, Q: $\\Theta(n)$, R: $\\Theta(n \\log n)$"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br><strong>1. Unsorted Doubly Linked List (P):</strong><br>• To meld two doubly linked lists given their head and tail pointers, set the `next` pointer of the tail of the first list to the head of the second list, and update the tail pointer.<br>• This requires a constant number of pointer manipulations, taking $\\Theta(1)$ time.<br><br><strong>2. Min-heap Implemented using an Array (Q):</strong><br>• Concatenating two min-heap arrays of size $n$ yields an array of size $2n$.<br>• Applying Floyd's `buildHeap` algorithm to create a valid min-heap from this array takes linear time in the total number of elements, i.e., $\\Theta(2n) = \\Theta(n)$ time.<br><br><strong>3. Binary Search Tree (R):</strong><br>• Perform an in-order traversal of both BSTs to obtain two sorted arrays in $\\Theta(n)$ time.<br>• Merge the two sorted arrays into a single sorted array of size $2n$ in $\\Theta(n)$ time.<br>• Construct a balanced BST from the sorted array in $\\Theta(n)$ time.<br>• Total time complexity = $\\Theta(n) + \\Theta(n) + \\Theta(n) = \\Theta(n)$.<br><br>Therefore, the correct worst-case time complexities are <strong>P: $\\Theta(1)$, Q: $\\Theta(n)$, R: $\\Theta(n)$</strong>, which corresponds to <strong>Option (A)</strong>.",
+  "videoUrl": null
+}

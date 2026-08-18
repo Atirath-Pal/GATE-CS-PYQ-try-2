@@ -1,0 +1,22 @@
+{
+  "id": 33,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "Programming and Data Structures",
+    "C Programming"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider the following C code segment:<br><br>The output of the given C code segment is ________. (Answer in integer)",
+  "assetImage": null,
+  "codeBlock": "int x=126,y=105;\ndo {\n    if(x>y) x=x-y;\n    else y=y-x;\n} while(x!=y);\n\nprintf(\"%d\",x);",
+  "options": [],
+  "answer": {
+    "min": 21,
+    "max": 21
+  },
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>• The code segment implements the <strong>Euclidean algorithm</strong> for calculating the Greatest Common Divisor (GCD) of two numbers using repeated subtraction.<br><br>• <strong>Trace of execution:</strong><br>1. Initial values: $x = 126, y = 105$<br>2. Iteration 1: Since $x > y$, $x = 126 - 105 = 21$<br>3. Iteration 2: Since $y > x$, $y = 105 - 21 = 84$<br>4. Iteration 3: Since $y > x$, $y = 84 - 21 = 63$<br>5. Iteration 4: Since $y > x$, $y = 63 - 21 = 42$<br>6. Iteration 5: Since $y > x$, $y = 42 - 21 = 21$<br><br>• At this point, $x = 21$ and $y = 21$. The loop condition `while(x != y)` evaluates to false, so the loop terminates.<br><br>• Finally, `printf(\"%d\", x);` outputs $21$.<br><br>Therefore, the output of the given C code segment is <strong>21</strong>.",
+  "videoUrl": null
+}

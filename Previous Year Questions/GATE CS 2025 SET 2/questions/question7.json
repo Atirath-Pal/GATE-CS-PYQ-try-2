@@ -1,0 +1,26 @@
+{
+  "id": 7,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "General Aptitude",
+    "Analytical Aptitude"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "If IMAGE and FIELD are coded as FHBNJ and EMFJG respectively then, which one among the given options is the most appropriate code for BEACH ?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "CEADP",
+    "IDBFC",
+    "JGIBC",
+    "IBCEC"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>Let us analyze the pattern used in the coding scheme:<br><br>1. <strong>Pattern Identification:</strong><br>Each letter in the given word is replaced by its next alphabet ($+1$ position), and the resulting string is reversed.<br><br>• For <strong>IMAGE</strong>:<br>  - Shift $+1$: I $\\rightarrow$ J, M $\\rightarrow$ N, A $\\rightarrow$ B, G $\\rightarrow$ H, E $\\rightarrow$ F $\\Rightarrow$ <strong>JNBHF</strong><br>  - Reverse: <strong>FHBNJ</strong><br><br>• For <strong>FIELD</strong>:<br>  - Shift $+1$: F $\\rightarrow$ G, I $\\rightarrow$ J, E $\\rightarrow$ F, L $\\rightarrow$ M, D $\\rightarrow$ E $\\Rightarrow$ <strong>GJFME</strong><br>  - Reverse: <strong>EMFJG</strong><br><br>2. <strong>Applying the pattern to BEACH:</strong><br>  - Shift $+1$: B $\\rightarrow$ C, E $\\rightarrow$ F, A $\\rightarrow$ B, C $\\rightarrow$ D, H $\\rightarrow$ I $\\Rightarrow$ <strong>CFBDI</strong><br>  - Reverse: <strong>IDBFC</strong><br><br>Therefore, the correct code for <strong>BEACH</strong> is <strong>IDBFC</strong> (Option B).",
+  "videoUrl": null
+}

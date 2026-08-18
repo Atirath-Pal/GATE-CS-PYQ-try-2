@@ -1,0 +1,26 @@
+{
+  "id": 28,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "Computer Organization and Architecture",
+    "Instruction Set Architecture"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Which of the following is/are part of an Instruction Set Architecture of a processor?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "The size of the cache memory",
+    "The clock frequency of the processor",
+    "The number of cache memory levels",
+    "The total number of registers"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>• <strong>Instruction Set Architecture (ISA):</strong> The ISA defines the abstract model of a computer that is visible to the programmer or compiler. It includes the instruction set, addressing modes, data types, and programmer-visible architectural state such as the <strong>total number of registers</strong>.<br><br>• <strong>Microarchitectural Features:</strong><br>- <strong>Cache size and number of levels</strong> (Options A & C) are microarchitectural implementation details and are transparent to the ISA.<br>- <strong>Clock frequency</strong> (Option B) is a hardware implementation parameter.<br><br>Hence, only <strong>Option (D)</strong> is a part of the Instruction Set Architecture.",
+  "videoUrl": null
+}

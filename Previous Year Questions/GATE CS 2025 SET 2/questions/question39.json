@@ -1,0 +1,26 @@
+{
+  "id": 39,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "Computer Organization and Architecture",
+    "Cache Memory"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "For a direct-mapped cache, 4 bits are used for the tag field and 12 bits are used to index into a cache block. The size of each cache block is one byte. Assume that there is no other information stored for each cache block.<br><br>Which ONE of the following is the CORRECT option for the sizes of the main memory and the cache memory in this system (byte addressable), respectively?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "64 KB and 4 KB",
+    "128 KB and 16 KB",
+    "64 KB and 8 KB",
+    "128 KB and 6 KB"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br><strong>1. Identify the Address Fields:</strong><br>• Tag bits = $4$ bits<br>• Index (Line) bits = $12$ bits<br>• Block offset = $0$ bits (since block size is $1\\text{ byte} = 2^0\\text{ bytes}$)<br><br><strong>2. Calculate Main Memory Size:</strong><br>• Total physical address bits = $\\text{Tag bits} + \\text{Index bits} + \\text{Block offset bits} = 4 + 12 + 0 = 16\\text{ bits}$<br>• Total addressable memory = $2^{16}\\text{ bytes} = 65536\\text{ bytes} = 64\\text{ KB}$<br><br><strong>3. Calculate Cache Memory Size:</strong><br>• Number of cache lines/blocks = $2^{\\text{Index bits}} = 2^{12} = 4096\\text{ lines}$<br>• Cache data capacity = $\\text{Number of lines} \\times \\text{Block size} = 2^{12} \\times 1\\text{ byte} = 4096\\text{ bytes} = 4\\text{ KB}$<br><br>Therefore, the sizes of the main memory and the cache memory are <strong>64 KB and 4 KB</strong>, respectively, which corresponds to <strong>Option (A)</strong>.",
+  "videoUrl": null
+}

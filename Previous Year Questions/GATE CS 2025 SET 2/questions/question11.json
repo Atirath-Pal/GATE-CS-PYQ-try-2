@@ -1,0 +1,26 @@
+{
+  "id": 11,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "Linear Algebra",
+    "Matrix Theory"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "If $A = \\begin{pmatrix} 1 & 2 \\\\ 2 & -1 \\end{pmatrix}$, then which ONE of the following is $A^8$ ?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\begin{pmatrix} 25 & 0 \\\\ 0 & 25 \\end{pmatrix}$",
+    "$\\begin{pmatrix} 125 & 0 \\\\ 0 & 125 \\end{pmatrix}$",
+    "$\\begin{pmatrix} 625 & 0 \\\\ 0 & 625 \\end{pmatrix}$",
+    "$\\begin{pmatrix} 3125 & 0 \\\\ 0 & 3125 \\end{pmatrix}$"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>Given matrix $A = \\begin{pmatrix} 1 & 2 \\\\ 2 & -1 \\end{pmatrix}$.<br><br><strong>Step 1: Calculate $A^2$</strong><br>$$A^2 = A \\times A = \\begin{pmatrix} 1 & 2 \\\\ 2 & -1 \\end{pmatrix} \\begin{pmatrix} 1 & 2 \\\\ 2 & -1 \\end{pmatrix} = \\begin{pmatrix} 1(1) + 2(2) & 1(2) + 2(-1) \\\\ 2(1) + (-1)(2) & 2(2) + (-1)(-1) \\end{pmatrix} = \\begin{pmatrix} 5 & 0 \\\\ 0 & 5 \\end{pmatrix} = 5I$$<br><br><strong>Step 2: Calculate $A^8$</strong><br>$$A^8 = (A^2)^4 = (5I)^4 = 5^4 I = 625 I = \\begin{pmatrix} 625 & 0 \\\\ 0 & 625 \\end{pmatrix}$$<br><br>Therefore, option <strong>(C)</strong> is the correct answer.",
+  "videoUrl": null
+}

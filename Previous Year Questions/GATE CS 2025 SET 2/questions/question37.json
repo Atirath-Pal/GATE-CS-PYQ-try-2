@@ -1,0 +1,26 @@
+{
+  "id": 37,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "Algorithms",
+    "Graph Algorithms"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Let $G$ be an edge-weighted undirected graph with positive edge weights. Suppose a positive constant $\\alpha$ is added to the weight of every edge.<br><br>Which ONE of the following statements is TRUE about the minimum spanning trees (MSTs) and shortest paths (SPs) in $G$ before and after the edge weight update?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Every MST remains an MST, and every SP remains an SP.",
+    "MSTs need not remain MSTs, and every SP remains an SP.",
+    "Every MST remains an MST, and SPs need not remain SPs.",
+    "MSTs need not remain MSTs, and SPs need not remain SPs."
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br><strong>1. Minimum Spanning Trees (MSTs):</strong><br>• Any spanning tree $T$ in a connected graph $G = (V, E)$ contains exactly $|V| - 1$ edges.<br>• When a positive constant $\\alpha$ is added to every edge weight, the weight of any spanning tree $T$ increases by exactly $(|V| - 1)\\alpha$:<br>$$W'(T) = W(T) + (|V| - 1)\\alpha$$<br>• Since the added value $(|V| - 1)\\alpha$ is identical for all spanning trees, their relative weight order remains unchanged. Therefore, <strong>every MST remains an MST</strong>.<br><br><strong>2. Shortest Paths (SPs):</strong><br>• The change in the total weight of a path depends on the number of edges in that path.<br>• For a path $P$ containing $k$ edges, its new length becomes $L'(P) = L(P) + k\\alpha$.<br>• <strong>Counterexample:</strong> Suppose path $P_1$ has $1$ edge of weight $10$, and path $P_2$ has $2$ edges of weights $4$ and $5$ (total length = $9$). Initially, $P_2$ is the shortest path ($9 < 10$).<br>• If $\\alpha = 3$ is added to each edge, the new length of $P_1$ is $10 + 3 = 13$, while the new length of $P_2$ is $(4+3) + (5+3) = 15$. Now $P_1$ becomes shorter ($13 < 15$).<br>• Thus, <strong>SPs need not remain SPs</strong>.<br><br>Hence, <strong>Option (C)</strong> is correct.",
+  "videoUrl": null
+}

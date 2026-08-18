@@ -1,0 +1,26 @@
+{
+  "id": 22,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "Compiler Design",
+    "Syntax Directed Translation"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Given the following syntax directed translation rules:<br><br>Rule 1: $R \\rightarrow AB \\ \\{B.i = R.i - 1; A.i = B.i; R.i = A.i + 1\\}$<br>Rule 2: $P \\rightarrow CD \\ \\{P.i = C.i + D.i; D.i = C.i + 2\\}$<br>Rule 3: $Q \\rightarrow EF \\ \\{Q.i = E.i + F.i\\}$<br><br>Which ONE is the CORRECT option among the following?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Rule 1 is S-attributed and L-attributed; Rule 2 is S-attributed and not L-attributed; Rule 3 is neither S-attributed nor L-attributed",
+    "Rule 1 is neither S-attributed nor L-attributed; Rule 2 is S-attributed and L-attributed; Rule 3 is S-attributed and L-attributed",
+    "Rule 1 is neither S-attributed nor L-attributed; Rule 2 is not S-attributed and is L-attributed; Rule 3 is S-attributed and L-attributed",
+    "Rule 1 is S-attributed and not L-attributed; Rule 2 is not S-attributed and is L-attributed; Rule 3 is S-attributed and L-attributed"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br><strong>Step 1: Understand S-attributed and L-attributed definitions.</strong><br>• <strong>S-attributed SDD:</strong> Uses <em>only</em> synthesized attributes (attributes evaluated from children or constants).<br>• <strong>L-attributed SDD:</strong> Allows both synthesized and inherited attributes, provided that inherited attributes of a node depend <em>only</em> on its parent's attributes or attributes of its left-siblings. Every S-attributed SDD is also an L-attributed SDD.<br><br><strong>Step 2: Analyze Rule 1 ($R \\rightarrow AB$).</strong><br>• $A.i = B.i$ defines an inherited attribute for $A$ based on $B$, which is to the <em>right</em> of $A$. This violates L-attributed rules.<br>• Since inherited attributes are used, it is also not S-attributed.<br>• Therefore, Rule 1 is <strong>neither S-attributed nor L-attributed</strong>.<br><br><strong>Step 3: Analyze Rule 2 ($P \\rightarrow CD$).</strong><br>• $D.i = C.i + 2$ defines an inherited attribute for $D$ using $C.i$, which is a sibling to the <em>left</em> of $D$. This satisfies L-attributed rules.<br>• Since inherited attributes are computed, it is not S-attributed.<br>• Therefore, Rule 2 is <strong>not S-attributed and is L-attributed</strong>.<br><br><strong>Step 4: Analyze Rule 3 ($Q \\rightarrow EF$).</strong><br>• $Q.i = E.i + F.i$ defines an attribute of the head $Q$ using attributes of its children $E$ and $F$ (synthesized evaluation).<br>• Since it uses only synthesized attributes, Rule 3 is <strong>S-attributed</strong>, and by definition, every S-attributed SDD is also <strong>L-attributed</strong>.<br><br>Hence, <strong>Option (C)</strong> is the correct choice.",
+  "videoUrl": null
+}

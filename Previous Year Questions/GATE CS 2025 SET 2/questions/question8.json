@@ -1,0 +1,26 @@
+{
+  "id": 8,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "General Aptitude",
+    "Analytical Aptitude"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Which one of the following options is correct for the given data in the table?<br><br><table style=\"border: 1px solid white; border-collapse: collapse; text-align: center; margin: 0 auto;\">\n  <tr>\n    <td style=\"border: 1px solid white; padding: 8px 12px;\">Iteration ($i$)</td>\n    <td style=\"border: 1px solid white; padding: 8px 12px;\">0</td>\n    <td style=\"border: 1px solid white; padding: 8px 12px;\">1</td>\n    <td style=\"border: 1px solid white; padding: 8px 12px;\">2</td>\n    <td style=\"border: 1px solid white; padding: 8px 12px;\">3</td>\n  </tr>\n  <tr>\n    <td style=\"border: 1px solid white; padding: 8px 12px;\">Input ($I$)</td>\n    <td style=\"border: 1px solid white; padding: 8px 12px;\">20</td>\n    <td style=\"border: 1px solid white; padding: 8px 12px;\">-4</td>\n    <td style=\"border: 1px solid white; padding: 8px 12px;\">10</td>\n    <td style=\"border: 1px solid white; padding: 8px 12px;\">15</td>\n  </tr>\n  <tr>\n    <td style=\"border: 1px solid white; padding: 8px 12px;\">Output ($X$)</td>\n    <td style=\"border: 1px solid white; padding: 8px 12px;\">20</td>\n    <td style=\"border: 1px solid white; padding: 8px 12px;\">16</td>\n    <td style=\"border: 1px solid white; padding: 8px 12px;\">26</td>\n    <td style=\"border: 1px solid white; padding: 8px 12px;\">41</td>\n  </tr>\n  <tr>\n    <td style=\"border: 1px solid white; padding: 8px 12px;\">Output ($Y$)</td>\n    <td style=\"border: 1px solid white; padding: 8px 12px;\">20</td>\n    <td style=\"border: 1px solid white; padding: 8px 12px;\">-80</td>\n    <td style=\"border: 1px solid white; padding: 8px 12px;\">-800</td>\n    <td style=\"border: 1px solid white; padding: 8px 12px;\">-12000</td>\n  </tr>\n</table>",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$X(i) = X(i - 1) + I(i); \\quad Y(i) = Y(i - 1)I(i); \\quad i > 0$",
+    "$X(i) = X(i - 1)I(i); \\quad Y(i) = Y(i - 1) + I(i); \\quad i > 0$",
+    "$X(i) = X(i - 1)I(i); \\quad Y(i) = Y(i - 1)I(i); \\quad i > 0$",
+    "$X(i) = X(i - 1) + I(i); \\quad Y(i) = Y(i - 1)I(i - 1); \\quad i > 0$"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>We can derive the recursive relationship between consecutive iterations for both outputs $X(i)$ and $Y(i)$ for $i > 0$:<br><br>1. <strong>Analyzing Output $X(i)$:</strong><br>• For $i = 1$: $X(1) = 20 + (-4) = 16 = X(0) + I(1)$<br>• For $i = 2$: $X(2) = 16 + 10 = 26 = X(1) + I(2)$<br>• For $i = 3$: $X(3) = 26 + 15 = 41 = X(2) + I(3)$<br>This gives: $X(i) = X(i - 1) + I(i)$ for $i > 0$.<br><br>2. <strong>Analyzing Output $Y(i)$:</strong><br>• For $i = 1$: $Y(1) = 20 \\times (-4) = -80 = Y(0) \\times I(1)$<br>• For $i = 2$: $Y(2) = -80 \\times 10 = -800 = Y(1) \\times I(2)$<br>• For $i = 3$: $Y(3) = -800 \\times 15 = -12000 = Y(2) \\times I(3)$<br>This gives: $Y(i) = Y(i - 1)I(i)$ for $i > 0$.<br><br>Therefore, the correct option is <strong>(A)</strong>.",
+  "videoUrl": null
+}

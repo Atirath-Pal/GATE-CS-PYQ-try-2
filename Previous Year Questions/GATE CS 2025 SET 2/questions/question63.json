@@ -1,0 +1,22 @@
+{
+  "id": 63,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "Programming and Data Structures",
+    "C Programming"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the following C program:<br><br>The output of the given C program is ________. (Answer in integer)",
+  "assetImage": null,
+  "codeBlock": "#include <stdio.h>\n\nint g(int n) {\n    return (n+10);\n}\n\nint f(int n) {\n    return g(n*2);\n}\n\nint main() {\n    int sum, n;\n    sum=0;\n    for (n=1; n<3; n++)\n        sum += g(f(n));\n    printf (\"%d\", sum);\n    return 0;\n}",
+  "options": [],
+  "answer": {
+    "min": 46,
+    "max": 46
+  },
+  "explanation": "<strong>Step-by-step execution of the code:</strong><br><br>1. <strong>Function Definitions:</strong><br>- $g(n) = n + 10$<br>- $f(n) = g(2n) = (2n) + 10 = 2n + 10$<br>- $g(f(n)) = g(2n + 10) = (2n + 10) + 10 = 2n + 20$<br><br>2. <strong>Loop Execution in main():</strong><br>Initially, $sum = 0$.<br><br>- <strong>For $n = 1$:</strong><br>$g(f(1)) = 2(1) + 20 = 22$<br>$sum = sum + 22 = 0 + 22 = 22$<br><br>- <strong>For $n = 2$:</strong><br>$g(f(2)) = 2(2) + 20 = 24$<br>$sum = sum + 24 = 22 + 24 = 46$<br><br>- <strong>For $n = 3$:</strong><br>The loop condition $n < 3$ becomes false ($3 < 3$ is False), so the loop terminates.<br><br>3. <strong>Output:</strong><br>The function prints the value of $sum$, which is <strong>46</strong>.",
+  "videoUrl": null
+}

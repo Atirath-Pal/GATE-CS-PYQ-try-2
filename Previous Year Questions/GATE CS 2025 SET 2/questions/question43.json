@@ -1,0 +1,27 @@
+{
+  "id": 43,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "Digital Logic",
+    "Karnaugh Maps"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Given the following Karnaugh Map for a Boolean function $F(w,x,y,z)$:<br><br><table style=\"margin: 0 auto; border-collapse: collapse; text-align: center;\">\n  <tr>\n    <td style=\"padding: 4px;\"></td>\n    <td style=\"padding: 4px; font-style: italic;\" colspan=\"4\">yz</td>\n  </tr>\n  <tr>\n    <td style=\"padding: 4px; vertical-align: bottom; font-style: italic;\">wx&nbsp;</td>\n    <td style=\"border: 1px solid white; padding: 8px 16px;\">1</td>\n    <td style=\"border: 1px solid white; padding: 8px 16px;\">0</td>\n    <td style=\"border: 1px solid white; padding: 8px 16px;\">0</td>\n    <td style=\"border: 1px solid white; padding: 8px 16px;\">1</td>\n  </tr>\n  <tr>\n    <td></td>\n    <td style=\"border: 1px solid white; padding: 8px 16px;\">0</td>\n    <td style=\"border: 1px solid white; padding: 8px 16px;\">1</td>\n    <td style=\"border: 1px solid white; padding: 8px 16px;\">1</td>\n    <td style=\"border: 1px solid white; padding: 8px 16px;\">0</td>\n  </tr>\n  <tr>\n    <td></td>\n    <td style=\"border: 1px solid white; padding: 8px 16px;\">0</td>\n    <td style=\"border: 1px solid white; padding: 8px 16px;\">1</td>\n    <td style=\"border: 1px solid white; padding: 8px 16px;\">1</td>\n    <td style=\"border: 1px solid white; padding: 8px 16px;\">0</td>\n  </tr>\n  <tr>\n    <td></td>\n    <td style=\"border: 1px solid white; padding: 8px 16px;\">1</td>\n    <td style=\"border: 1px solid white; padding: 8px 16px;\">0</td>\n    <td style=\"border: 1px solid white; padding: 8px 16px;\">0</td>\n    <td style=\"border: 1px solid white; padding: 8px 16px;\">1</td>\n  </tr>\n</table><br>Which one or more of the following Boolean expression(s) represent(s) $F$?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\bar{w}\\bar{x}\\bar{y}\\bar{z} + w\\bar{x}\\bar{y}\\bar{z} + \\bar{w}\\bar{x}y\\bar{z} + w\\bar{x}y\\bar{z} + xz$",
+    "$\\bar{w}\\bar{x}\\bar{y}\\bar{z} + w\\bar{x}\\bar{y}\\bar{z} + w\\bar{x}y\\bar{z} + xz$",
+    "$\\bar{w}\\bar{x}\\bar{y}\\bar{z} + w\\bar{x}\\bar{y}\\bar{z} + w\\bar{x}\\bar{y}z + xz$",
+    "$\\bar{x}\\bar{z} + xz$"
+  ],
+  "answer": [
+    "A",
+    "D"
+  ],
+  "explanation": "<strong>Step 1: Analyze the K-Map 1s</strong><br>The 1s in the given Karnaugh Map are located at two main groups:<br>1. <strong>Four Corners:</strong> Entries at $(wx, yz) = (00, 00), (00, 10), (10, 00), (10, 10)$. Combining these four corner 1s gives the term $\\bar{x}\\bar{z}$.<br>2. <strong>Central $2 \\times 2$ Block:</strong> Entries at $(wx, yz) = (01, 01), (01, 11), (11, 01), (11, 11)$. Combining these four central 1s gives the term $xz$.<br><br><strong>Step 2: Simplified Minimal Expression</strong><br>Summing both prime implicants yields:<br>$F(w,x,y,z) = \\bar{x}\\bar{z} + xz$<br>This directly matches <strong>Option (D)</strong>.<br><br><strong>Step 3: Expand Minterms for Corner Terms</strong><br>The term $\\bar{x}\\bar{z}$ covers 4 canonical minterms:<br>$\\bar{x}\\bar{z} = \\bar{w}\\bar{x}\\bar{y}\\bar{z} + w\\bar{x}\\bar{y}\\bar{z} + \\bar{w}\\bar{x}y\\bar{z} + w\\bar{x}y\\bar{z}$<br><br>Substituting this expansion into $F$ gives:<br>$F = \\bar{w}\\bar{x}\\bar{y}\\bar{z} + w\\bar{x}\\bar{y}\\bar{z} + \\bar{w}\\bar{x}y\\bar{z} + w\\bar{x}y\\bar{z} + xz$<br>This matches <strong>Option (A)</strong>.<br><br>Options (B) and (C) leave out one of the required minterms, making them incomplete. Thus, the correct options are <strong>A</strong> and <strong>D</strong>.",
+  "videoUrl": null
+}

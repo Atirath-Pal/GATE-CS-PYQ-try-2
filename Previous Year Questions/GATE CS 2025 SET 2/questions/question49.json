@@ -1,0 +1,28 @@
+{
+  "id": 49,
+  "year": 2025,
+  "set": 2,
+  "topics": [
+    "Computer Organization and Architecture",
+    "Data Representation"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Three floating point numbers $X, Y,$ and $Z$ are stored in three registers $\\text{R}_X, \\text{R}_Y,$ and $\\text{R}_Z,$ respectively in IEEE 754 single precision format as given below in hexadecimal:<br><br>$\\text{R}_X = 0\\text{xC}1100000, \\text{R}_Y = 0\\text{x}40\\text{C}00000,$ and $\\text{R}_Z = 0\\text{x}41400000$<br><br>Which of the following option(s) is/are CORRECT?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$4(X + Y) + Z = 0$",
+    "$2Y - Z = 0$",
+    "$4X + 3Z = 0$",
+    "$X + Y + Z = 0$"
+  ],
+  "answer": [
+    "A",
+    "B",
+    "C"
+  ],
+  "explanation": "To determine the values of $X, Y,$ and $Z$, we convert the given IEEE 754 single-precision hexadecimal values to decimal numbers.<br><br>The IEEE 754 single-precision format consists of:<br>- 1 sign bit ($S$)<br>- 8 exponent bits ($E$)<br>- 23 mantissa/fraction bits ($M$)<br>Value formula: $(-1)^S \\times 2^{E - 127} \\times (1.M)_2$<br><br><strong>1. Decoding $X$ from $\\text{R}_X = 0\\text{xC}1100000$:</strong><br>Binary representation: `1100 0001 0001 0000 0000 0000 0000 0000`<br>- $S = 1$ (negative number)<br>- $E = 10000010_2 = 130_{10}$<br>- Exponent bias: $130 - 127 = 3$<br>- Mantissa $M = .001_2 = 2^{-3} = 0.125$<br>- Value $X = -1 \\times 2^3 \\times (1 + 0.125) = -8 \\times 1.125 = -9$<br><br><strong>2. Decoding $Y$ from $\\text{R}_Y = 0\\text{x}40\\text{C}00000$:</strong><br>Binary representation: `0010 0000 0110 0000 0000 0000 0000 0000`<br>Wait, $0\\text{x}40\\text{C}00000$ in binary is:<br>`0100 0000 1100 0000 0000 0000 0000 0000`<br>- $S = 0$ (positive number)<br>- $E = 10000001_2 = 129_{10}$<br>- Exponent bias: $129 - 127 = 2$<br>- Mantissa $M = .1_2 = 0.5$<br>- Value $Y = +1 \\times 2^2 \\times (1 + 0.5) = 4 \\times 1.5 = 6$<br><br><strong>3. Decoding $Z$ from $\\text{R}_Z = 0\\text{x}41400000$:</strong><br>Binary representation: `0100 0001 0100 0000 0000 0000 0000 0000`<br>- $S = 0$ (positive number)<br>- $E = 10000010_2 = 130_{10}$<br>- Exponent bias: $130 - 127 = 3$<br>- Mantissa $M = .1_2 = 0.5$<br>- Value $Z = +1 \\times 2^3 \\times (1 + 0.5) = 8 \\times 1.5 = 12$<br><br>So, $X = -9$, $Y = 6$, and $Z = 12$.<br><br><strong>Evaluating the options:</strong><br>- <strong>Option A:</strong> $4(X + Y) + Z = 4(-9 + 6) + 12 = 4(-3) + 12 = -12 + 12 = 0$. (Correct)<br>- <strong>Option B:</strong> $2Y - Z = 2(6) - 12 = 12 - 12 = 0$. (Correct)<br>- <strong>Option C:</strong> $4X + 3Z = 4(-9) + 3(12) = -36 + 36 = 0$. (Correct)<br>- <strong>Option D:</strong> $X + Y + Z = -9 + 6 + 12 = 9 \\neq 0$. (Incorrect)<br><br>Hence, options (A), (B), and (C) are correct.",
+  "videoUrl": null
+}
