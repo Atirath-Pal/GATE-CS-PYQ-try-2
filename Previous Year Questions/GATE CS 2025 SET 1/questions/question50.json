@@ -1,0 +1,20 @@
+{
+  "id": 50,
+  "year": 2025,
+  "set": 1,
+  "topics": ["Theory of Computation", "Finite Automata"],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the following deterministic finite automaton (DFA) defined over the alphabet, $\\Sigma = \\{a, b\\}$. Identify which of the following language(s) is/are accepted by the given DFA.",
+  "assetImage": "question50.png",
+  "codeBlock": null,
+  "options": [
+    "The set of all strings containing an even number of $b$'s.",
+    "The set of all strings containing the pattern $bab$.",
+    "The set of all strings ending with the pattern $bab$.",
+    "The set of all strings not containing the pattern $aba$."
+  ],
+  "answer": ["C"],
+  "explanation": "<strong>Step 1: Analyze the DFA Structure</strong><br>Let the states from left to right be $q_0$ (start state), $q_1$, $q_2$, and $q_3$ (final double-circled state).<br><br><strong>Step 2: Trace transitions</strong><br>- State $q_0$: Start state (represents string ending with $\\epsilon$ or non-matching prefix). Transition on $a$ loops to $q_0$, transition on $b$ goes to $q_1$.<br>- State $q_1$: Represents strings ending with $b$. Loop on $b$, transition on $a$ goes to $q_2$ (ends with $ba$).<br>- State $q_2$: Represents strings ending with $ba$. Transition on $a$ goes to $q_0$ (ends with $baa$), transition on $b$ goes to $q_3$ (ends with $bab$).<br>- State $q_3$: Accepting state, represents strings ending with $bab$. Transition on $a$ goes to $q_2$ (ends with $baba \\rightarrow ba$), transition on $b$ goes to $q_1$ (ends with $babb \\rightarrow b$).<br><br><strong>Step 3: Determine the language accepted</strong><br>Since state $q_3$ is the only accepting state, and entering $q_3$ requires the suffix to be $bab$, any string accepted by this DFA must end with the pattern $bab$.<br><br>Therefore, the correct option is <strong>C</strong>."
+}

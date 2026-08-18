@@ -1,0 +1,26 @@
+{
+  "id": 3,
+  "year": 2025,
+  "set": 1,
+  "topics": [
+    "General Aptitude",
+    "Quantitative Aptitude"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "The average marks obtained by a class in an examination were calculated as 30.8. However, while checking the marks entered, the teacher found that the marks of one student were entered incorrectly as 24 instead of 42. After correcting the marks, the average becomes 31.4. How many students does the class have?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "25",
+    "28",
+    "30",
+    "32"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Define variables</strong><br>Let $n$ be the total number of students in the class.<br><br><strong>Step 2: Calculate the change in total marks</strong><br>The marks of one student were changed from $24$ to $42$.<br>Increase in total marks = $42 - 24 = 18$<br><br><strong>Step 3: Relate the change in average to total marks</strong><br>The original average was $30.8$ and the corrected average is $31.4$.<br>Increase in average = $31.4 - 30.8 = 0.6$<br><br><strong>Step 4: Solve for $n$</strong><br>$$\\text{Increase in average} = \\frac{\\text{Increase in total marks}}{n}$$<br>$$0.6 = \\frac{18}{n}$$<br>$$n = \\frac{18}{0.6} = 30$$<br><br>Therefore, the number of students in the class is $30$.",
+  "videoUrl": null
+}

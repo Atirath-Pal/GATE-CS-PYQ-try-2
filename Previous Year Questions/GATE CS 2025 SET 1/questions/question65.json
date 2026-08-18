@@ -1,0 +1,22 @@
+{
+  "id": 65,
+  "year": 2025,
+  "set": 1,
+  "topics": [
+    "Data Structures",
+    "Hashing"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "In a double hashing scheme, $h_1(k) = k \\bmod 11$ and $h_2(k) = 1 + (k \\bmod 7)$ are the auxiliary hash functions. The size $m$ of the hash table is $11$. The hash function for the $i$-th probe in the open address table is $[h_1(k) + i \\cdot h_2(k)] \\bmod m$. The following keys are inserted in the given order: $63, 50, 25, 79, 67, 24$.<br><br>The slot at which key $24$ gets stored is ____________. (Answer in integer)",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 10,
+    "max": 11
+  },
+  "explanation": "<strong>Step 1: Understand the Hash Functions</strong><br>Hash table size $m = 11$ (slots 0 to 10).<br>$h_1(k) = k \\bmod 11$<br>$h_2(k) = 1 + (k \\bmod 7)$<br>Probe function for sequence $i = 0, 1, 2, \\dots$: $h(k, i) = [h_1(k) + i \\cdot h_2(k)] \\bmod 11$<br><br><strong>Step 2: Insert keys sequentially</strong><br><br>1. <strong>Key 63:</strong><br>$h_1(63) = 63 \\bmod 11 = 8$<br>Probe $i=0$: $h(63, 0) = 8$. Slot 8 is empty. Insert 63 at <strong>Slot 8</strong>.<br><br>2. <strong>Key 50:</strong><br>$h_1(50) = 50 \\bmod 11 = 6$<br>Probe $i=0$: $h(50, 0) = 6$. Slot 6 is empty. Insert 50 at <strong>Slot 6</strong>.<br><br>3. <strong>Key 25:</strong><br>$h_1(25) = 25 \\bmod 11 = 3$<br>Probe $i=0$: $h(25, 0) = 3$. Slot 3 is empty. Insert 25 at <strong>Slot 3</strong>.<br><br>4. <strong>Key 79:</strong><br>$h_1(79) = 79 \\bmod 11 = 2$<br>Probe $i=0$: $h(79, 0) = 2$. Slot 2 is empty. Insert 79 at <strong>Slot 2</strong>.<br><br>5. <strong>Key 67:</strong><br>$h_1(67) = 67 \\bmod 11 = 1$<br>Probe $i=0$: $h(67, 0) = 1$. Slot 1 is empty. Insert 67 at <strong>Slot 1</strong>.<br><br>6. <strong>Key 24:</strong><br>$h_1(24) = 24 \\bmod 11 = 2$<br>$h_2(24) = 1 + (24 \\bmod 7) = 1 + 3 = 4$<br><br>Probing for 24:<br>• $i = 0$: $h(24, 0) = 2 \\bmod 11 = 2$ (Occupied by 79)<br>• $i = 1$: $h(24, 1) = (2 + 1 \\times 4) \\bmod 11 = 6$ (Occupied by 50)<br>• $i = 2$: $h(24, 2) = (2 + 2 \\times 4) \\bmod 11 = 10$ (Empty)<br><br>Therefore, key $24$ is stored at <strong>Slot 10</strong>.",
+  "videoUrl": null
+}

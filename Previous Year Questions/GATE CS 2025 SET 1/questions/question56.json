@@ -1,0 +1,19 @@
+{
+  "id": 56,
+  "year": 2025,
+  "set": 1,
+  "topics": ["Computer Networks", "Probability"],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Suppose a 5-bit message is transmitted from a source to a destination through a noisy channel. The probability that a bit of the message gets flipped during transmission is $0.01$. Flipping of each bit is independent of one another. The probability that the message is delivered error-free to the destination is ________ . (rounded off to three decimal places)",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 0.949,
+    "max": 0.952
+  },
+  "explanation": "<strong>Step 1: Identify given probabilities.</strong><br>Length of the message, $n = 5$ bits.<br>Probability of a bit getting flipped (error), $p = 0.01$.<br>Probability of a bit being transmitted correctly without flipping, $q = 1 - p = 1 - 0.01 = 0.99$.<br><br><strong>Step 2: Calculate error-free transmission probability.</strong><br>Since flipping of each bit is independent of one another, for the entire 5-bit message to be delivered error-free, all 5 bits must be transmitted correctly.<br>Probability = $q^n = (0.99)^5$<br><br><strong>Step 3: Perform calculation.</strong><br>$(0.99)^5 \\approx 0.9509900499$<br><br><strong>Step 4: Round off.</strong><br>Rounding off to three decimal places gives $0.951$.",
+  "videoUrl": null
+}

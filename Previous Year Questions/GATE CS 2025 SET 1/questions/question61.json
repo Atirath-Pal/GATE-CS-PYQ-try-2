@@ -1,0 +1,19 @@
+{
+  "id": 61,
+  "year": "2025",
+  "set": "1",
+  "topics": ["Programming and Data Structures", "C Programming"],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "The value printed by the given C program is ________ . (Answer in integer)",
+  "assetImage": null,
+  "codeBlock": "#include <stdio.h>\nint foo(int S[],int size){\n    if(size == 0) return 0;\n    if(size == 1) return 1;\n    if(S[0] != S[1]) return 1+foo(S+1,size-1);\n    return foo(S+1,size-1);\n}\nint main(){\n    int A[]={0,1,2,2,2,0,0,1,1};\n    printf(\"%d\",foo(A,9));\n    return 0;\n}",
+  "options": [],
+  "answer": {
+    "min": 5,
+    "max": 5
+  },
+  "explanation": "Let's trace the function function <strong>foo(S, size)</strong> on array $A = \\{0, 1, 2, 2, 2, 0, 0, 1, 1\\}$ with initial size $9$:<br><br>1. <strong>foo(A, 9)</strong>: $S[0] = 0, S[1] = 1$. Since $0 \\neq 1$, returns $1 + \\text{foo}(A+1, 8)$.<br>2. <strong>foo(A+1, 8)</strong>: $S[0] = 1, S[1] = 2$. Since $1 \\neq 2$, returns $1 + \\text{foo}(A+2, 7)$.<br>3. <strong>foo(A+2, 7)</strong>: $S[0] = 2, S[1] = 2$. Equal, returns $\\text{foo}(A+3, 6)$.<br>4. <strong>foo(A+3, 6)</strong>: $S[0] = 2, S[1] = 2$. Equal, returns $\\text{foo}(A+4, 5)$.<br>5. <strong>foo(A+4, 5)</strong>: $S[0] = 2, S[1] = 0$. Since $2 \\neq 0$, returns $1 + \\text{foo}(A+5, 4)$.<br>6. <strong>foo(A+5, 4)</strong>: $S[0] = 0, S[1] = 0$. Equal, returns $\\text{foo}(A+6, 3)$.<br>7. <strong>foo(A+6, 3)</strong>: $S[0] = 0, S[1] = 1$. Since $0 \\neq 1$, returns $1 + \\text{foo}(A+7, 2)$.<br>8. <strong>foo(A+7, 2)</strong>: $S[0] = 1, S[1] = 1$. Equal, returns $\\text{foo}(A+8, 1)$.<br>9. <strong>foo(A+8, 1)</strong>: Base case $size == 1$, returns $1$.<br><br>Summing up the values returned:<br>$1 + 1 + 1 + 1 + 1 = 5$.<br><br>Therefore, the program prints <strong>5</strong>.",
+  "videoUrl": null
+}

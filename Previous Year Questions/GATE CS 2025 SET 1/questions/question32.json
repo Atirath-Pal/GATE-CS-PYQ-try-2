@@ -1,0 +1,19 @@
+{
+  "id": 32,
+  "year": 2025,
+  "set": 1,
+  "topics": ["Engineering Mathematics", "Probability"],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "A box contains 5 coins: 4 regular coins and 1 fake coin. When a regular coin is tossed, the probability $P(head) = 0.5$ and for a fake coin, $P(head) = 1$. You pick a coin at random and toss it twice, and get two heads. The probability that the coin you have chosen is the fake coin is ________. (rounded off to two decimal places)",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 0.49,
+    "max": 0.51
+  },
+  "explanation": "<strong>Step 1: Identify the events</strong><br>Let $F$ be the event of choosing the fake coin.<br>Let $R$ be the event of choosing a regular coin.<br>Let $H_2$ be the event of getting two heads in two tosses.<br><br><strong>Step 2: Calculate prior probabilities</strong><br>Total coins = 5 (4 regular, 1 fake)<br>$P(F) = \\frac{1}{5} = 0.2$<br>$P(R) = \\frac{4}{5} = 0.8$<br><br><strong>Step 3: Calculate conditional probabilities</strong><br>For a fake coin, $P(head) = 1$, so $P(H_2 | F) = 1 \\times 1 = 1$.<br>For a regular coin, $P(head) = 0.5$, so $P(H_2 | R) = 0.5 \\times 0.5 = 0.25$.<br><br><strong>Step 4: Apply Bayes' Theorem</strong><br>We need to find $P(F | H_2)$:<br>$P(F | H_2) = \\frac{P(H_2 | F) \\times P(F)}{P(H_2 | F) \\times P(F) + P(H_2 | R) \\times P(R)}$<br><br>$P(F | H_2) = \\frac{1 \\times 0.2}{(1 \\times 0.2) + (0.25 \\times 0.8)} = \\frac{0.2}{0.2 + 0.2} = \\frac{0.2}{0.4} = 0.5$<br><br>Thus, the probability rounded off to two decimal places is <strong>0.50</strong>.",
+  "videoUrl": null
+}

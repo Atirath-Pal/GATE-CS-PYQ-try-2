@@ -1,0 +1,21 @@
+{
+  "id": 24,
+  "year": "2025",
+  "set": "1",
+  "topics": ["Digital Logic", "Boolean Algebra"],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Let $X$ be a 3-variable Boolean function that produces output as '1' when at least two of the input variables are '1'. Which of the following statement(s) is/are CORRECT, where $a, b, c, d, e$ are Boolean variables?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$X(a, b, X(c, d, e)) = X(X(a, b, c), d, e)$",
+    "$X(a, b, X(a, b, c)) = X(a, b, c)$",
+    "$X(a, b, X(a, c, d)) = (X(a, b, a) \\text{ AND } X(c, d, c))$",
+    "$X(a, b, c) = X(a, X(a, b, c), X(a, c, c))$"
+  ],
+  "answer": ["B", "D"],
+  "explanation": "<strong>Step 1: Understand the definition of $X(p, q, r)$</strong><br>The function $X(p, q, r)$ is a majority function of three variables:<br>$X(p, q, r) = pq + qr + pr$<br><br><strong>Step 2: Analyze Option (A)</strong><br>LHS = $X(a, b, X(c, d, e)) = ab + b(cd + de + ce) + a(cd + de + ce)$<br>RHS = $X(X(a, b, c), d, e) = (ab + bc + ac)d + de + (ab + bc + ac)e$<br>LHS contains term $ab$, but RHS does not contain $ab$ independently without being multiplied by $d$ or $e$. Thus, LHS $\\neq$ RHS. So, Statement (A) is INCORRECT.<br><br><strong>Step 3: Analyze Option (B)</strong><br>Let $M = X(a, b, c) = ab + bc + ac$.<br>LHS = $X(a, b, M) = ab + bM + aM$<br>$= ab + (a + b)M$<br>$= ab + (a + b)(ab + bc + ac)$<br>$= ab + aab + abc + aac + bab + bbc + bac$<br>$= ab + ab + abc + ac + ab + bc + abc$<br>$= ab + bc + ac = X(a, b, c) = \\text{RHS}$.<br>Therefore, Statement (B) is CORRECT.<br><br><strong>Step 4: Analyze Option (C)</strong><br>Notice that $X(a, b, a) = aa + ba + ba = a$.<br>Similarly, $X(c, d, c) = c$.<br>So, RHS = $a \\text{ AND } c = ac$.<br>LHS = $X(a, b, X(a, c, d)) = ab + b(ac + ad + cd) + a(ac + ad + cd) = ab + abc + abd + bcd + ac + ad + acd = ab + ac + ad + bcd$.<br>Clearly, LHS $\\neq$ RHS. So, Statement (C) is INCORRECT.<br><br><strong>Step 5: Analyze Option (D)</strong><br>$X(a, c, c) = ac + cc + ac = c$.<br>RHS = $X(a, X(a, b, c), X(a, c, c)) = X(a, X(a, b, c), c)$.<br>Let $M = X(a, b, c)$.<br>RHS = $X(a, M, c) = aM + Mc + ac = (a + c)M + ac$<br>$= (a + c)(ab + bc + ac) + ac$<br>$= aab + abc + aac + abc + bcc + acc + ac$<br>$= ab + abc + ac + bc + ac$<br>$= ab + bc + ac = X(a, b, c) = \\text{LHS}$.<br>Therefore, Statement (D) is CORRECT.",
+  "videoUrl": null
+}

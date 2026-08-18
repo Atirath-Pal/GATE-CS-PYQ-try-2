@@ -1,0 +1,22 @@
+{
+  "id": 30,
+  "year": 2025,
+  "set": 1,
+  "topics": [
+    "Combinatorics",
+    "Discrete Mathematics"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Let $S$ be the set of all ternary strings defined over the alphabet $\\{a, b, c\\}$. Consider all strings in $S$ that contain at least one occurrence of two consecutive symbols, that is, “aa”, “bb” or “cc”. The number of such strings of length 5 that are possible is ________. (Answer in integer)",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 195,
+    "max": 195
+  },
+  "explanation": "To find the number of ternary strings of length 5 that contain at least one occurrence of two consecutive identical symbols (\"aa\", \"bb\", or \"cc\"), we can subtract the number of valid ternary strings of length 5 with <strong>no consecutive identical symbols</strong> from the <strong>total number of ternary strings</strong> of length 5.<br><br><strong>Step 1: Total number of ternary strings of length 5</strong><br>For each position in a string of length 5, there are 3 choices ($a$, $b$, or $c$).<br>$\\text{Total strings} = 3^5 = 243$<br><br><strong>Step 2: Strings with NO consecutive identical symbols</strong><br>- For the first position, we have 3 choices ($a$, $b$, or $c$).<br>- For the second position, we must choose a symbol different from the first, so there are 2 choices.<br>- For the third position, we must choose a symbol different from the second, giving 2 choices.<br>- For the fourth position, we must choose a symbol different from the third, giving 2 choices.<br>- For the fifth position, we must choose a symbol different from the fourth, giving 2 choices.<br><br>$\\text{Strings without consecutive identical symbols} = 3 \\times 2 \\times 2 \\times 2 \\times 2 = 3 \\times 2^4 = 48$<br><br><strong>Step 3: Strings WITH at least one consecutive pair of identical symbols</strong><br>$\\text{Required strings} = \\text{Total strings} - \\text{Strings without consecutive identical symbols}$<br>$\\text{Required strings} = 243 - 48 = 195$<br><br>Thus, the correct answer is <strong>195</strong>.",
+  "videoUrl": null
+}

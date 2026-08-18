@@ -1,0 +1,26 @@
+{
+  "id": 18,
+  "year": 2025,
+  "set": 1,
+  "topics": [
+    "Algorithms",
+    "Graph Theory"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Let $G$ be any undirected graph with positive edge weights, and $T$ be a minimum spanning tree of $G$. For any two vertices, $u$ and $v$, let $d_1(u, v)$ and $d_2(u, v)$ be the shortest distances between $u$ and $v$ in $G$ and $T$, respectively. Which ONE of the options is CORRECT for all possible $G, T, u$ and $v$?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$d_1(u, v) = d_2(u, v)$",
+    "$d_1(u, v) \\le d_2(u, v)$",
+    "$d_1(u, v) \\ge d_2(u, v)$",
+    "$d_1(u, v) \\neq d_2(u, v)$"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. <strong>Understand the definitions:</strong><br>- $T$ is a minimum spanning tree (MST) of graph $G$. Therefore, $T$ is a subgraph of $G$ containing all the vertices of $G$ and a subset of its edges ($E_T \\subseteq E_G$).<br>- $d_1(u, v)$ is the shortest distance between vertices $u$ and $v$ in $G$.<br>- $d_2(u, v)$ is the shortest distance between $u$ and $v$ in $T$.<br><br>2. <strong>Compare path lengths:</strong><br>- Any path connecting $u$ and $v$ in $T$ is also a valid path in $G$ because all edges in $T$ belong to $G$.<br>- Since $d_1(u, v)$ represents the minimum possible path distance between $u$ and $v$ considering <em>all</em> available paths in $G$, the distance $d_2(u, v)$ in a restricted subgraph $T$ can never be strictly smaller than $d_1(u, v)$.<br>- Therefore, $d_1(u, v) \\le d_2(u, v)$ must hold for all possible choices of $G, T, u,$ and $v$.<br><br>Thus, the correct option is <strong>(B)</strong>.",
+  "videoUrl": null
+}

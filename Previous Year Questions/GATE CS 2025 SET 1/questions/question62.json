@@ -1,0 +1,22 @@
+{
+  "id": 62,
+  "year": "2025",
+  "set": "1",
+  "topics": [
+    "Data Structures",
+    "Linked List"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Let <code>LIST</code> be a datatype for an implementation of linked list defined as follows:<br><br><code>typedef struct list {<br>&nbsp;&nbsp;&nbsp;&nbsp;int data;<br>&nbsp;&nbsp;&nbsp;&nbsp;struct list *next;<br>} LIST;</code><br><br>Suppose a program has created two linked lists, L1 and L2, whose contents are given in the figure below (code for creating L1 and L2 is not provided here). L1 contains 9 nodes, and L2 contains 7 nodes.<br><br>Consider the following C program segment that modifies the list L1. The number of nodes that will be there in L1 after the execution of the code segment is __________ .<br>(Answer in integer)",
+  "assetImage": "question62.png",
+  "codeBlock": "int find (int query, LIST *list) {\n    while (list != NULL) {\n        if(list->data == query) return 1;\n        list = list->next;\n    }\n    return 0;\n}\nint main () {\n    ... ... ...\n    ptr1=L1; ptr2=L2;\n    while (ptr1->next != NULL) {\n        query = ptr1->next->data;\n        if (find (query, L2))\n            ptr1->next = ptr1->next->next;\n        else ptr1 = ptr1->next;\n    }\n    ... ... ...\n    return 0;\n}",
+  "options": [],
+  "answer": {
+    "min": 5,
+    "max": 5
+  },
+  "explanation": "<strong>Step-by-Step Explanation:</strong><br><br>1. Function <code>find(query, L2)</code> checks whether the value <code>query</code> exists in the linked list <code>L2</code>. It returns 1 if present, otherwise 0.<br><br>2. The linked list contents are:<br>• <strong>L1:</strong> [1, 7, 12, 3, 9, 5, 11, 15, 8]<br>• <strong>L2:</strong> [1, 11, 6, 9, 15, 12, 4]<br><br>3. The loop iterates through <code>L1</code> starting with <code>ptr1</code> pointing to the head node (data = 1). The loop checks the next node's data (<code>ptr1->next->data</code>):<br>• If <code>ptr1->next->data</code> is present in <code>L2</code>, the node is removed from <code>L1</code> by executing <code>ptr1->next = ptr1->next->next</code> (without advancing <code>ptr1</code>).<br>• Otherwise, <code>ptr1</code> advances to <code>ptr1->next</code>.<br><br>4. Note that the first element of <code>L1</code> (data = 1) is never checked or deleted because the loop inspects <code>ptr1->next->data</code> starting from the second node.<br><br>5. Let's trace the elements checked (starting from second node of L1):<br>• <strong>7:</strong> Not in L2 → Keep, advance <code>ptr1</code> to node 7.<br>• <strong>12:</strong> Present in L2 → Delete node 12. <code>ptr1</code> stays at node 7.<br>• <strong>3:</strong> Not in L2 → Keep, advance <code>ptr1</code> to node 3.<br>• <strong>9:</strong> Present in L2 → Delete node 9. <code>ptr1</code> stays at node 3.<br>• <strong>5:</strong> Not in L2 → Keep, advance <code>ptr1</code> to node 5.<br>• <strong>11:</strong> Present in L2 → Delete node 11. <code>ptr1</code> stays at node 5.<br>• <strong>15:</strong> Present in L2 → Delete node 15. <code>ptr1</code> stays at node 5.<br>• <strong>8:</strong> Not in L2 → Keep, advance <code>ptr1</code> to node 8.<br>• <code>ptr1->next</code> is now <code>NULL</code>, loop terminates.<br><br>6. Remaining nodes in <code>L1</code> are: [1, 7, 3, 5, 8].<br><br>7. Total number of nodes remaining in L1 is <strong>5</strong>.",
+  "videoUrl": null
+}

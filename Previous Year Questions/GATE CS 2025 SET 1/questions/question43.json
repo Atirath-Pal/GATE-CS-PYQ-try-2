@@ -1,0 +1,26 @@
+{
+  "id": 43,
+  "year": 2025,
+  "set": 1,
+  "topics": [
+    "Algorithms",
+    "Graph Theory"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Let $G(V, E)$ be an undirected and unweighted graph with 100 vertices. Let $d(u, v)$ denote the number of edges in a shortest path between vertices $u$ and $v$ in $V$. Let the maximum value of $d(u, v)$, $u, v \\in V$ such that $u \\neq v$, be 30. Let $T$ be any breadth-first-search tree of $G$. Which ONE of the given options is CORRECT for every such graph $G$?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "The height of $T$ is exactly 15.",
+    "The height of $T$ is exactly 30.",
+    "The height of $T$ is at least 15.",
+    "The height of $T$ is at least 30."
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Understand graph diameter and BFS properties</strong><br>The diameter of the graph $G$ is given as $\\max_{u, v} d(u, v) = 30$. This means there exists a pair of vertices $x, y \\in V$ such that the shortest path distance between them is $d(x, y) = 30$.<br><br><strong>Step 2: Relate BFS root to tree height</strong><br>In a BFS tree $T$ rooted at vertex $r$, the depth (level) of any vertex $v$ from $r$ in $T$ is equal to the shortest path distance $d(r, v)$ in $G$.<br>Therefore, the height $h(T)$ of the BFS tree rooted at $r$ is:<br>$h(T) = \\max_{v \\in V} d(r, v)$<br><br><strong>Step 3: Calculate the lower bound on the height of $T$</strong><br>By triangle inequality, for the two vertices $x$ and $y$ at maximum distance 30:<br>$d(x, y) \\le d(r, x) + d(r, y)$<br>$30 \\le d(r, x) + d(r, y)$<br><br>Since $h(T) = \\max_{v} d(r, v) \\ge d(r, x)$ and $h(T) \\ge d(r, y)$, we have:<br>$30 \\le h(T) + h(T) = 2 h(T)$<br>$h(T) \\ge 15$<br><br>Thus, for any choice of root $r$, the height of the BFS tree $T$ must be at least 15.<br><br><strong>Step 4: Conclusion</strong><br>Therefore, the height of $T$ is at least 15, which matches option (C).",
+  "videoUrl": null
+}

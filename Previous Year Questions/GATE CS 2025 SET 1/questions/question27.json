@@ -1,0 +1,28 @@
+{
+  "id": 27,
+  "year": 2025,
+  "set": 1,
+  "topics": [
+    "Computer Organization and Architecture",
+    "Datapath and Control Unit"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "A partial data path of a processor is given in the figure, where RA, RB, and RZ are 32-bit registers. Which option(s) is/are CORRECT related to arithmetic operations using the data path as shown?",
+  "assetImage": "question27.png",
+  "codeBlock": null,
+  "options": [
+    "The data path can implement arithmetic operations involving two registers.",
+    "The data path can implement arithmetic operations involving one register and one immediate value.",
+    "The data path can implement arithmetic operations involving two immediate values.",
+    "The data path can only implement arithmetic operations involving one register and one immediate value."
+  ],
+  "answer": [
+    "A",
+    "B",
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Analyze the Multiplexers (Mux_A and Mux_B)</strong><br>From the datapath diagram:<br>- <strong>Mux_A</strong> has two inputs: Register $RA$ and a 32-bit immediate value.<br>- <strong>Mux_B</strong> has two inputs: Register $RB$ and a 32-bit immediate value.<br><br><strong>Step 2: Evaluate the possible combinations for ALU inputs</strong><br>Since each multiplexer can independently select either of its two inputs, the ALU can perform arithmetic operations on:<br>1. <strong>Two registers:</strong> $RA$ selected from Mux_A and $RB$ selected from Mux_B. (Option A is correct)<br>2. <strong>One register and one immediate value:</strong> Either ($RA$ from Mux_A and immediate value from Mux_B) OR (immediate value from Mux_A and $RB$ from Mux_B). (Option B is correct)<br>3. <strong>Two immediate values:</strong> Immediate value selected from Mux_A and immediate value selected from Mux_B. (Option C is correct)<br><br><strong>Step 3: Evaluate Option D</strong><br>Since the datapath can also process two registers or two immediate values, Option D (\"can only implement...\") is incorrect.<br><br>Therefore, options <strong>A, B, and C</strong> are correct.",
+  "videoUrl": null
+}

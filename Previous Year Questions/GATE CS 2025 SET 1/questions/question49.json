@@ -1,0 +1,21 @@
+{
+  "id": 49,
+  "year": "2025",
+  "set": "1",
+  "topics": ["Discrete Mathematics", "Group Theory"],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "$A = \\{0, 1, 2, 3, \\dots\\}$ is the set of non-negative integers. Let $\\text{F}$ be the set of functions from $A$ to itself. For any two functions, $f_1, f_2 \\in \\text{F}$, we define<br><br>$$\\left(f_1 \\odot f_2\\right)(n) = f_1(n) + f_2(n)$$<br><br>for every number $n$ in $A$. Which of the following is/are CORRECT about the mathematical structure $(\\text{F}, \\odot)$?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "(F, \\odot) is an Abelian group.",
+    "(F, \\odot) is an Abelian monoid.",
+    "(F, \\odot) is a non-Abelian group.",
+    "(F, \\odot) is a non-Abelian monoid."
+  ],
+  "answer": ["B"],
+  "explanation": "<strong>Step-by-step analysis of the algebraic structure $(F, \\odot)$:</strong><br><br><strong>1. Closure Property:</strong><br>For any $f_1, f_2 \\in F$, $(f_1 \\odot f_2)(n) = f_1(n) + f_2(n)$. Since $f_1(n) \\ge 0$ and $f_2(n) \\ge 0$ for all $n \\in A$, their sum $f_1(n) + f_2(n)$ is also a non-negative integer in $A$. Thus, $f_1 \\odot f_2 \\in F$.<br><br><strong>2. Associativity:</strong><br>For any $f_1, f_2, f_3 \\in F$, standard addition of non-negative integers is associative:<br>$((f_1 \\odot f_2) \\odot f_3)(n) = (f_1(n) + f_2(n)) + f_3(n) = f_1(n) + (f_2(n) + f_3(n)) = (f_1 \\odot (f_2 \\odot f_3))(n)$.<br>Hence, operation $\\odot$ is associative.<br><br><strong>3. Identity Element:</strong><br>Define $e(n) = 0$ for all $n \\in A$. Since $0 \\in A$, $e \\in F$.<br>For any $f \\in F$, $(f \\odot e)(n) = f(n) + 0 = f(n)$.<br>Therefore, $e(n) = 0$ is the identity element, making $(F, \\odot)$ a <strong>monoid</strong>.<br><br><strong>4. Commutativity (Abelian property):</strong><br>$(f_1 \\odot f_2)(n) = f_1(n) + f_2(n) = f_2(n) + f_1(n) = (f_2 \\odot f_1)(n)$ for all $n \\in A$.<br>Thus, the operation is commutative, making $(F, \\odot)$ an <strong>Abelian monoid</strong>.<br><br><strong>5. Inverse Element:</strong><br>For a function $f \\in F$ to have an inverse $g \\in F$, we must have $(f \\odot g)(n) = e(n) = 0$, which implies $f(n) + g(n) = 0$.<br>Since $f(n), g(n) \\in A = \\{0, 1, 2, \\dots\\}$, if $f(n) > 0$ for any $n$, then $g(n)$ must be negative, which is not allowed since the codomain is $A$. Therefore, functions taking non-zero values do not have inverses in $F$. Hence, $(F, \\odot)$ is <strong>not a group</strong>.<br><br><strong>Conclusion:</strong><br>$(F, \\odot)$ is an <strong>Abelian monoid</strong>, so the correct option is <strong>B</strong>.",
+  "videoUrl": null
+}

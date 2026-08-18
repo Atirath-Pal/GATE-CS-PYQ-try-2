@@ -1,0 +1,27 @@
+{
+  "id": 47,
+  "year": 2025,
+  "set": 1,
+  "topics": [
+    "Database Management Systems",
+    "Normalization"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a relational schema $team(name, city, owner)$, with functional dependencies $\\{name \\rightarrow city, name \\rightarrow owner\\}$.<br><br>The relation $team$ is decomposed into two relations, $t1(name, city)$ and $t2(name, owner)$. Which of the following statement(s) is/are TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "The relation $team$ is NOT in BCNF.",
+    "The relations $t1$ and $t2$ are in BCNF.",
+    "The decomposition constitutes a lossless join.",
+    "The relation $team$ is NOT in 3NF."
+  ],
+  "answer": [
+    "B",
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Analyze the original relation schema $team(name, city, owner)$</strong><br>Given functional dependencies (FDs):<br>$F = \\{name \\rightarrow city, name \\rightarrow owner\\}$<br><br>Finding the candidate key for $team$:<br>$(name)^+ = \\{name, city, owner\\}$<br>Since $name$ determines all attributes of the relation, $name$ is a candidate key.<br><br><strong>Step 2: Check Normal Forms for relation $team$</strong><br>For every non-trivial FD $X \\rightarrow Y$, the determinant $X$ must be a super key for the relation to be in BCNF (and 3NF).<br>Here, the determinant for both FDs is $name$, which is a super key (candidate key).<br>Therefore, the relation $team$ IS in BCNF and also in 3NF.<br>Hence, statements (A) and (D) are FALSE.<br><br><strong>Step 3: Analyze the decomposed relations $t1(name, city)$ and $t2(name, owner)$</strong><br>For relation $t1(name, city)$:<br>FD: $name \\rightarrow city$, where $name$ is the key. Thus, $t1$ is in BCNF.<br><br>For relation $t2(name, owner)$:<br>FD: $name \\rightarrow owner$, where $name$ is the key. Thus, $t2$ is in BCNF.<br><br>Therefore, statement (B) is TRUE.<br><br><strong>Step 4: Check for Lossless Join Decomposition</strong><br>Common attribute between $t1$ and $t2$:<br>$R_1 \\cap R_2 = \\{name\\}$<br><br>Since $name \\rightarrow city$ holds in $t1$ (and $name \\rightarrow owner$ holds in $t2$), the common attribute $name$ is a candidate key in at least one of the decomposed relations.<br>Thus, the decomposition is lossless.<br><br>Therefore, statement (C) is TRUE.<br><br><strong>Correct Options: B and C</strong>",
+  "videoUrl": null
+}

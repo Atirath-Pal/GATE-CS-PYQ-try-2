@@ -1,0 +1,22 @@
+{
+  "id": 34,
+  "year": 2025,
+  "set": 1,
+  "topics": [
+    "Programming and Data Structures",
+    "C Programming"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider the following C program:<br><br>The output of the given C program is _________. (Answer in integer)",
+  "assetImage": null,
+  "codeBlock": "#include <stdio.h>\nvoid foo(int *p, int x){\n    *p=x;\n}\nint main() {\n    int *z;\n    int a = 20, b = 25;\n    z = &a;\n    foo(z,b);\n    printf(\"%d\",a);\n    return 0;\n}",
+  "options": [],
+  "answer": {
+    "min": 25,
+    "max": 25
+  },
+  "explanation": "<strong>Step-by-step execution of the program:</strong><br><br>1. In function <code>main()</code>, integer variables are declared: <code>a = 20</code> and <code>b = 25</code>.<br>2. Pointer <code>z</code> is set to point to the address of <code>a</code> (i.e., <code>z = &a</code>).<br>3. Function <code>foo(z, b)</code> is called. Here, parameter <code>p</code> receives the address of variable <code>a</code> (so <code>p</code> points to <code>a</code>), and parameter <code>x</code> receives the value of <code>b</code>, which is $25$.<br>4. Inside <code>foo()</code>, <code>*p = x;</code> assigns the value of <code>x</code> ($25$) to the location pointed to by <code>p</code> (which is variable <code>a</code>). Therefore, <code>a</code> becomes $25$.<br>5. Returning to <code>main()</code>, <code>printf(\"%d\", a);</code> prints the updated value of <code>a</code>, which is $25$.<br><br>Hence, the output of the program is <strong>25</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,21 @@
+{
+  "id": 13,
+  "year": 2025,
+  "set": 1,
+  "topics": ["Compiler Design", "Code Optimization"],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Which ONE of the following techniques used in compiler code optimization uses live variable analysis?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Run-time function call management",
+    "Register assignment to variables",
+    "Strength reduction",
+    "Constant folding"
+  ],
+  "answer": ["B"],
+  "explanation": "<strong>Step 1: Understand Live Variable Analysis</strong><br>Live variable analysis is a data-flow analysis technique used to determine whether the value of a variable at a given point in the execution of a program could be read before it is next written to.<br><br><strong>Step 2: Role in Register Allocation/Assignment</strong><br>If two variables are live at the same point in time, they interfere with each other and cannot share the same CPU register. Compiler algorithms (such as Graph Coloring for Register Allocation) construct an interference graph based on live variable analysis to allocate limited machine registers efficiently to variables.<br><br><strong>Step 3: Analyze Options</strong><br>• <strong>Run-time function call management:</strong> Uses activation records/stack frames, not live variable analysis.<br>• <strong>Register assignment to variables:</strong> Directly uses live variable analysis to determine register reuse and allocation.<br>• <strong>Strength reduction:</strong> Replaces expensive operations (e.g., multiplication) with cheaper ones (e.g., addition) within loops.<br>• <strong>Constant folding:</strong> Evaluates constant expressions at compile-time.<br><br>Thus, the correct answer is <strong>(B)</strong>.",
+  "videoUrl": null
+}

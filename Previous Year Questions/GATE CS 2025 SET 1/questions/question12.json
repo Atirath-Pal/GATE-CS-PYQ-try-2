@@ -1,0 +1,26 @@
+{
+  "id": 12,
+  "year": 2025,
+  "set": 1,
+  "topics": [
+    "Compiler Design",
+    "Symbol Table"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Which ONE of the following statements is <strong>FALSE</strong> regarding the symbol table?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Symbol table is responsible for keeping track of the scope of variables.",
+    "Symbol table can be implemented using a binary search tree.",
+    "Symbol table is not required after the parsing phase.",
+    "Symbol table is created during the lexical analysis phase."
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Explanation:</strong><br><br>Let us analyze each statement regarding the symbol table:<br><br>1. <strong>Symbol table is responsible for keeping track of the scope of variables:</strong> This is <strong>TRUE</strong>. The symbol table stores attributes of identifiers such as type, scope, memory address, etc., to manage variable scoping.<br><br>2. <strong>Symbol table can be implemented using a binary search tree:</strong> This is <strong>TRUE</strong>. Symbol tables can be implemented using various data structures including hash tables, binary search trees (BSTs), linked lists, and arrays.<br><br>3. <strong>Symbol table is not required after the parsing phase:</strong> This is <strong>FALSE</strong>. The symbol table is used throughout almost all phases of the compiler, including semantic analysis, intermediate code generation, code optimization, and target code generation.<br><br>4. <strong>Symbol table is created during the lexical analysis phase:</strong> This is <strong>TRUE</strong>. The creation/initialization of the symbol table begins during the lexical analysis phase as tokens are recognized.<br><br>Therefore, statement (C) is the FALSE statement.",
+  "videoUrl": null
+}

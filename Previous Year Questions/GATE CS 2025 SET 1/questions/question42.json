@@ -1,0 +1,26 @@
+{
+  "id": 42,
+  "year": "2025",
+  "set": "1",
+  "topics": [
+    "Digital Logic",
+    "Boolean Algebra"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the following four variable Boolean function in sum-of-product form<br>$$F(b_3, b_2, b_1, b_0) = \\sum(0, 2, 4, 8, 10, 11, 12).$$<br>where the value of the function is computed by considering $b_3 b_2 b_1 b_0$ as a 4-bit binary number, where $b_3$ denotes the most significant bit and $b_0$ denotes the least significant bit. Note that there are no don't care terms. Which ONE of the following options is the CORRECT minimized Boolean expression for $F$?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\bar{b}_1 \\bar{b}_0 + \\bar{b}_2 \\bar{b}_0 + b_1 \\bar{b}_2 b_3$",
+    "$\\bar{b}_1 \\bar{b}_0 + \\bar{b}_2 \\bar{b}_0$",
+    "$\\bar{b}_2 \\bar{b}_0 + b_1 b_2 b_3$",
+    "$\\bar{b}_0 \\bar{b}_2 + \\bar{b}_3$"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "To find the minimized Boolean expression for $F(b_3, b_2, b_1, b_0) = \\sum(0, 2, 4, 8, 10, 11, 12)$, we can group the minterms using a 4-variable K-map:<br><br><strong>Minterms in binary form ($b_3 b_2 b_1 b_0$):</strong><br>• $0 = 0000$<br>• $2 = 0010$<br>• $4 = 0100$<br>• $8 = 1000$<br>• $10 = 1010$<br>• $11 = 1011$<br>• $12 = 1100$<br><br><strong>Grouping the minterms:</strong><br>1. Group of 4 minterms $(0, 2, 8, 10)$: Gives the term $\\bar{b}_1 \\bar{b}_0$<br>2. Group of 4 minterms $(0, 4, 8, 12)$: Gives the term $\\bar{b}_2 \\bar{b}_0$<br>3. Group of 2 minterms $(10, 11)$: Minterm $11$ ($1011$) needs to be covered. Grouping $10$ ($1010$) and $11$ ($1011$) gives $b_3 \\bar{b}_2 b_1$<br><br>Combining these prime implicants, we get:<br>$F = \\bar{b}_1 \\bar{b}_0 + \\bar{b}_2 \\bar{b}_0 + b_1 \\bar{b}_2 b_3$<br><br>Thus, Option A is the correct minimized expression.",
+  "videoUrl": null
+}

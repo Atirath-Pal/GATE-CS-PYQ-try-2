@@ -1,0 +1,21 @@
+{
+  "id": 23,
+  "year": 2025,
+  "set": 1,
+  "topics": ["Linear Algebra", "System of Linear Equations"],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider the given system of linear equations for variables $x$ and $y$, where $k$ is a real-valued constant. Which of the following option(s) is/are CORRECT?<br><br>$$x + ky = 1$$<br>$$kx + y = -1$$",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "There is exactly one value of $k$ for which the above system of equations has no solution.",
+    "There exist an infinite number of values of $k$ for which the system of equations has no solution.",
+    "There exists exactly one value of $k$ for which the system of equations has exactly one solution.",
+    "There exists exactly one value of $k$ for which the system of equations has an infinite number of solutions."
+  ],
+  "answer": ["A", "D"],
+  "explanation": "To analyze the system of linear equations:<br>$$x + ky = 1$$<br>$$kx + y = -1$$<br><br>We can write the system in matrix form $AX = B$ where:<br>$$A = \\begin{pmatrix} 1 & k \\\\ k & 1 \\end{pmatrix}, \\quad B = \\begin{pmatrix} 1 \\\\ -1 \\end{pmatrix}$$<br><br><strong>Step 1: Find the determinant of matrix $A$</strong><br>$$\\det(A) = (1)(1) - (k)(k) = 1 - k^2$$<br><br><strong>Step 2: Case 1 - Unique Solution</strong><br>A unique solution exists when $\\det(A) \\neq 0$.<br>$$1 - k^2 \\neq 0 \\implies k \\neq 1 \\text{ and } k \\neq -1$$<br>Therefore, there are infinitely many values of $k$ for which the system has a unique solution. Hence, Option C is incorrect.<br><br><strong>Step 3: Case 2 - $k = 1$</strong><br>Substituting $k = 1$ into the system:<br>$$x + y = 1$$<br>$$x + y = -1$$<br>These two equations represent parallel, distinct lines, which means there is no solution (inconsistent system).<br>So, $k = 1$ gives <strong>no solution</strong>.<br><br><strong>Step 4: Case 3 - $k = -1$</strong><br>Substituting $k = -1$ into the system:<br>$$x - y = 1$$<br>$$-x + y = -1 \\implies x - y = 1$$<br>Both equations represent the exact same line, which means there are infinitely many solutions.<br>So, $k = -1$ gives an <strong>infinite number of solutions</strong>.<br><br><strong>Conclusion:</strong><br><br>1. Exactly one value of $k$ ($k = 1$) gives no solution. Thus, <strong>Option A is CORRECT</strong>.<br>2. Option B is INCORRECT.<br>3. Option C is INCORRECT.<br>4. Exactly one value of $k$ ($k = -1$) gives infinitely many solutions. Thus, <strong>Option D is CORRECT</strong>.",
+  "videoUrl": null
+}

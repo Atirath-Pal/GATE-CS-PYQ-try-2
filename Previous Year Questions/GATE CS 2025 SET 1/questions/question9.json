@@ -1,0 +1,26 @@
+{
+  "id": 9,
+  "year": 2025,
+  "set": 1,
+  "topics": [
+    "General Aptitude",
+    "Spatial Aptitude"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "A square paper, shown in figure (I), is folded along the dotted lines as shown in the figures (II) and (III). Then a few cuts are made as shown in figure (IV). Which one of the following patterns will be obtained when the paper is unfolded?<br><br>Note: The figures shown are representative.",
+  "assetImage": "question9.png",
+  "codeBlock": null,
+  "options": [
+    "[IMG: question9_option_a.png]",
+    "[IMG: question9_option_b.png]",
+    "[IMG: question9_option_c.png]",
+    "[IMG: question9_option_d.png]"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step 1: Analyze the folding process</strong><br>1. The square paper is first folded diagonally along the top-left to bottom-right axis.<br>2. The resulting triangle is folded diagonally again to form a smaller triangle as shown in figure (III).<br><br><strong>Step 2: Trace the cuts upon unfolding</strong><br>1. Unfolding along the second fold reflects the shapes across the bisecting line.<br>2. Unfolding along the main diagonal fold reflects the entire pattern across the main diagonal to fill out the full square.<br><br><strong>Step 3: Analyze the symmetry and orientations</strong><br>- The triangular notch cut on the hypotenuse edge unfolds into small triangles pointing outwards along the edges.<br>- The cuts made inside the paper maintain symmetry across the folded axes.<br>- Reversing the folds step-by-step produces the exact layout shown in option (A).",
+  "videoUrl": null
+}

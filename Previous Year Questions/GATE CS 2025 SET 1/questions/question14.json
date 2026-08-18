@@ -1,0 +1,21 @@
+{
+  "id": 14,
+  "year": 2025,
+  "set": 1,
+  "topics": ["Operating Systems", "Memory Management"],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider a demand paging memory management system with 32-bit logical address, 20-bit physical address, and page size of 2048 bytes. Assuming that the memory is byte addressable, what is the maximum number of entries in the page table?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$2^{21}$",
+    "$2^{20}$",
+    "$2^{22}$",
+    "$2^{24}$"
+  ],
+  "answer": ["A"],
+  "explanation": "<strong>Step-by-step Solution:</strong><br><br><strong>1. Logical Address Breakdown:</strong><br>Logical Address size = 32 bits.<br><br><strong>2. Page Size and Offset:</strong><br>Page Size = $2048\\text{ bytes} = 2^{11}\\text{ bytes}$.<br>Therefore, the Page Offset ($d$) requires 11 bits.<br><br><strong>3. Number of Pages (Entries in Page Table):</strong><br>Page Number ($p$) bits = Logical Address bits - Offset bits<br>$p = 32 - 11 = 21\\text{ bits}$.<br><br>Maximum number of entries in the page table = $2^{\\text{number of page bits}} = 2^{21}$.<br><br>Thus, the correct option is <strong>(A)</strong>.",
+  "videoUrl": null
+}

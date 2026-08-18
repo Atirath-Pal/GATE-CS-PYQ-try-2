@@ -1,0 +1,26 @@
+{
+  "id": 5,
+  "year": 2025,
+  "set": 1,
+  "topics": [
+    "General Aptitude",
+    "Spatial Aptitude"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "According to the map shown in the figure, which one of the following statements is correct?<br><br>Note: The figure shown is representative.",
+  "assetImage": "question5.png",
+  "codeBlock": null,
+  "options": [
+    "The library is located to the northwest of the canteen.",
+    "The hospital is located to the east of the chemistry lab.",
+    "The chemistry lab is to the southeast of physics lab.",
+    "The classrooms and canteen are next to each other."
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>Let us analyze each statement based on the provided direction rose (N, S, E, W):<br><br>1. <strong>Statement (A):</strong> The Library is directly to the West of the Canteen (not northwest). Thus, option (A) is incorrect.<br><br>2. <strong>Statement (B):</strong> The Hospital is located to the North of the Chemistry Lab (across 5th Cross Road), not to its east. Thus, option (B) is incorrect.<br><br>3. <strong>Statement (C):</strong> Physics Lab is in the northwest quadrant relative to the intersection, while Chemistry Lab is in the southeast quadrant (south of 5th Cross Road and east of 1st Main Road). Therefore, the Chemistry Lab is to the <strong>southeast</strong> of the Physics Lab. Thus, option (C) is correct.<br><br>4. <strong>Statement (D):</strong> Classrooms and Canteen are diagonally opposite across the main intersection and are not next to each other. Thus, option (D) is incorrect.<br><br>Hence, the correct option is <strong>C</strong>.",
+  "videoUrl": null
+}

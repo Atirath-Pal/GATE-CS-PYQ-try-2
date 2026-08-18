@@ -1,0 +1,26 @@
+{
+  "id": 41,
+  "year": "2025",
+  "set": "1",
+  "topics": [
+    "Engineering Mathematics",
+    "Linear Algebra"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Let $A$ be a $2 \\times 2$ matrix as given.<br>$$A = \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix}$$<br><br>What are the eigenvalues of the matrix $A^{13}$ ?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$1, -1$",
+    "$2\\sqrt{2}, -2\\sqrt{2}$",
+    "$4\\sqrt{2}, -4\\sqrt{2}$",
+    "$64\\sqrt{2}, -64\\sqrt{2}$"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Step 1: Find the eigenvalues of matrix $A$.</strong><br>The matrix $A$ is given as:<br>$$A = \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix}$$<br><br>To find the eigenvalues $\\lambda$, solve the characteristic equation $\\det(A - \\lambda I) = 0$:<br>$$\\begin{vmatrix} 1 - \\lambda & 1 \\\\ 1 & -1 - \\lambda \\end{vmatrix} = 0$$<br><br>$$(1 - \\lambda)(-1 - \\lambda) - (1)(1) = 0$$<br>$$(-1 + \\lambda^2) - 1 = 0$$<br>$$\\lambda^2 - 2 = 0$$<br>$$\\lambda = \\pm\\sqrt{2}$$<br><br>Thus, the eigenvalues of matrix $A$ are $\\lambda_1 = \\sqrt{2}$ and $\\lambda_2 = -\\sqrt{2}$.<br><br><strong>Step 2: Find the eigenvalues of $A^{13}$.</strong><br>If $\\lambda$ is an eigenvalue of matrix $A$, then $\\lambda^k$ is an eigenvalue of matrix $A^k$.<br>Therefore, the eigenvalues of $A^{13}$ are $\\lambda_1^{13}$ and $\\lambda_2^{13}$.<br><br>Calculate $\\lambda_1^{13}$:<br>$$\\lambda_1^{13} = (\\sqrt{2})^{13} = (\\sqrt{2})^{12} \\cdot \\sqrt{2} = (2^6) \\cdot \\sqrt{2} = 64\\sqrt{2}$$<br><br>Calculate $\\lambda_2^{13}$:<br>$$\\lambda_2^{13} = (-\\sqrt{2})^{13} = -(\\sqrt{2})^{13} = -64\\sqrt{2}$$<br><br><strong>Conclusion:</strong><br>The eigenvalues of $A^{13}$ are $64\\sqrt{2}$ and $-64\\sqrt{2}$. Hence, option (D) is correct.",
+  "videoUrl": null
+}

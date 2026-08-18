@@ -1,0 +1,21 @@
+{
+  "id": 11,
+  "year": 2025,
+  "set": 1,
+  "topics": ["Computer Organization and Architecture", "Interrupts"],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Suppose a program is running on a non-pipelined single processor computer system. The computer is connected to an external device that can interrupt the processor asynchronously. The processor needs to execute the interrupt service routine (ISR) to serve this interrupt. The following steps (not necessarily in order) are taken by the processor when the interrupt arrives:<br><br>(i) The processor saves the content of the program counter.<br>(ii) The program counter is loaded with the start address of the ISR.<br>(iii) The processor finishes the present instruction.<br><br>Which ONE of the following is the CORRECT sequence of steps?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "(iii), (i), (ii)",
+    "(i), (iii), (ii)",
+    "(iii), (ii), (i)",
+    "(ii), (i), (iii)"
+  ],
+  "answer": ["A"],
+  "explanation": "When an asynchronous interrupt occurs during instruction execution in a non-pipelined processor:<br><br>1. <strong>Finish Present Instruction:</strong> The processor completes the execution of the current instruction being executed (Step iii).<br>2. <strong>Save Program Counter:</strong> The processor saves the current context, specifically the content of the Program Counter (PC), onto the stack so it can return to the main program later (Step i).<br>3. <strong>Load ISR Start Address:</strong> The PC is loaded with the starting vector/address of the Interrupt Service Routine (ISR) to begin servicing the interrupt (Step ii).<br><br>Thus, the correct sequence of steps is <strong>(iii), (i), (ii)</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,22 @@
+{
+  "id": 53,
+  "year": 2025,
+  "set": 1,
+  "topics": [
+    "Computer Organization and Architecture",
+    "Cache Memory"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "A computer has a memory hierarchy consisting of two-level cache (L1 and L2) and a main memory. If the processor needs to access data from memory, it first looks into L1 cache. If the data is not found in L1 cache, it goes to L2 cache. If it fails to get the data from L2 cache, it goes to main memory, where the data is definitely available. <i>Hit rates</i> and <i>access times</i> of various memory units are shown in the figure. The <i>average memory access time</i> in nanoseconds ($ns$) is ________. (rounded off to two decimal places)",
+  "assetImage": "question53.png",
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 11.83,
+    "max": 11.87
+  },
+  "explanation": "<strong>Given parameters:</strong><br>• L1 cache hit rate ($H_1$) = $95\\% = 0.95$<br>• L1 cache access time ($T_1$) = $10\\text{ ns}$<br>• L2 cache hit rate ($H_2$) = $85\\% = 0.85$<br>• L2 cache access time including L1 cache miss penalty ($T_2$) = $20\\text{ ns}$<br>• Main memory access time including L1 and L2 cache miss penalty ($T_{MM}$) = $200\\text{ ns}$<br><br><strong>Formula for Average Memory Access Time ($AMAT$):</strong><br>Since the access times for lower levels already include the miss penalties of higher levels (simultaneous/hierarchical access structure given with total cumulative times), we calculate $AMAT$ as:<br>$AMAT = H_1 \\times T_1 + (1 - H_1) \\times H_2 \\times T_2 + (1 - H_1) \\times (1 - H_2) \\times T_{MM}$<br><br><strong>Calculation:</strong><br>1. Probability of L1 hit: $0.95$<br>   Contribution = $0.95 \\times 10 = 9.5\\text{ ns}$<br><br>2. Probability of L1 miss and L2 hit: $(1 - 0.95) \\times 0.85 = 0.05 \\times 0.85 = 0.0425$<br>   Contribution = $0.0425 \\times 20 = 0.85\\text{ ns}$<br><br>3. Probability of L1 miss and L2 miss (Main Memory access): $(1 - 0.95) \\times (1 - 0.85) = 0.05 \\times 0.15 = 0.0075$<br>   Contribution = $0.0075 \\times 200 = 1.5\\text{ ns}$<br><br><strong>Total AMAT:</strong><br>$AMAT = 9.5 + 0.85 + 1.5 = 11.85\\text{ ns}$",
+  "videoUrl": null
+}

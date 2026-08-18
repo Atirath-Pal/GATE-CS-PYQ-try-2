@@ -1,0 +1,22 @@
+{
+  "id": 52,
+  "year": 2025,
+  "set": 1,
+  "topics": [
+    "Compiler Design",
+    "Intermediate Code Generation"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Refer to the given 3-address code sequence. This code sequence is split into basic blocks. The number of basic blocks is ________. (Answer in integer)",
+  "assetImage": null,
+  "codeBlock": "1001: i = 1\n1002: j = 1\n1003: t1 = 10*i\n1004: t2 = t1+j\n1005: t3 = 8*t2\n1006: t4 = t3-88\n1007: a[t4] = 0.0\n1008: j = j+1\n1009: if j <= 10 goto 1003\n1010: i = i+1\n1011: if i <= 10 goto 1002\n1012: i = 1\n1013: t5 = i-1\n1014: t6 = 88*t5\n1015: a[t6] = 1.0\n1016: i = i+1\n1017: if i <= 10 goto 1013",
+  "options": [],
+  "answer": {
+    "min": 6,
+    "max": 6
+  },
+  "explanation": "To determine the number of basic blocks, we first need to identify the <strong>leaders</strong> (the first instructions of basic blocks):<br><br>1. <strong>Rule 1:</strong> The first instruction of the code sequence is a leader.<br>&nbsp;&nbsp;&nbsp;&nbsp;&bull; Instruction <strong>1001</strong> is a leader.<br><br>2. <strong>Rule 2:</strong> Any instruction that is the target of a conditional or unconditional jump/goto statement is a leader.<br>&nbsp;&nbsp;&nbsp;&nbsp;&bull; Target of line 1009 (`goto 1003`): Instruction <strong>1003</strong> is a leader.<br>&nbsp;&nbsp;&nbsp;&nbsp;&bull; Target of line 1011 (`goto 1002`): Instruction <strong>1002</strong> is a leader.<br>&nbsp;&nbsp;&nbsp;&nbsp;&bull; Target of line 1017 (`goto 1013`): Instruction <strong>1013</strong> is a leader.<br><br>3. <strong>Rule 3:</strong> Any instruction that immediately follows a jump/goto statement is a leader.<br>&nbsp;&nbsp;&nbsp;&nbsp;&bull; Following line 1009 (`goto 1003`): Instruction <strong>1010</strong> is a leader.<br>&nbsp;&nbsp;&nbsp;&nbsp;&bull; Following line 1011 (`goto 1002`): Instruction <strong>1012</strong> is a leader.<br><br><strong>Set of Leaders:</strong> {1001, 1002, 1003, 1010, 1012, 1013}<br><br><strong>Basic Blocks Formation:</strong><br>&bull; <strong>Block 1:</strong> 1001<br>&bull; <strong>Block 2:</strong> 1002<br>&bull; <strong>Block 3:</strong> 1003 to 1009<br>&bull; <strong>Block 4:</strong> 1010 to 1011<br>&bull; <strong>Block 5:</strong> 1012<br>&bull; <strong>Block 6:</strong> 1013 to 1017<br><br>Thus, the total number of basic blocks is <strong>6</strong>.",
+  "videoUrl": null
+}

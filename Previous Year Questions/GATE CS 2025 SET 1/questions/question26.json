@@ -1,0 +1,27 @@
+{
+  "id": 26,
+  "year": 2025,
+  "set": 1,
+  "topics": [
+    "Data Structures",
+    "Binary Search Trees"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Which of the following statement(s) is/are TRUE for any binary search tree (BST) having $n$ distinct integers?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "The maximum length of a path from the root node to any other node is $(n - 1)$.",
+    "An inorder traversal will always produce a sorted sequence of elements.",
+    "Finding an element takes $O(\\log_2 n)$ time in the worst case.",
+    "Every BST is also a Min-Heap."
+  ],
+  "answer": [
+    "A",
+    "B"
+  ],
+  "explanation": "<strong>Step 1: Analyze Option (A)</strong><br>In a skewed binary search tree with $n$ nodes, the total number of edges on the path from the root to the deepest leaf node (the maximum path length measured in edges) is $n - 1$. Hence, option (A) is <strong>TRUE</strong>.<br><br><strong>Step 2: Analyze Option (B)</strong><br>By definition of a Binary Search Tree, for every node, all values in its left subtree are smaller and all values in its right subtree are greater. Performing an inorder traversal (Left, Root, Right) processes the elements in strictly ascending (sorted) order. Hence, option (B) is <strong>TRUE</strong>.<br><br><strong>Step 3: Analyze Option (C)</strong><br>In a worst-case scenario (such as a skewed tree), finding an element requires searching through all $n$ nodes, resulting in a worst-case time complexity of $O(n)$, not $O(\\log_2 n)$. Hence, option (C) is <strong>FALSE</strong>.<br><br><strong>Step 4: Analyze Option (D)</strong><br>In a Min-Heap, every parent node must be smaller than or equal to both of its children. In a BST, the right child is always strictly greater than its parent, but the left child is smaller than its parent, violating the Min-Heap property. Hence, option (D) is <strong>FALSE</strong>.",
+  "videoUrl": null
+}

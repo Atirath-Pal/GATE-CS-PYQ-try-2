@@ -1,0 +1,26 @@
+{
+  "id": 40,
+  "year": 2025,
+  "set": 1,
+  "topics": [
+    "Computer Networks",
+    "IP Addressing"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "A packet with the destination IP address 145.36.109.70 arrives at a router whose routing table is shown. Which interface will the packet be forwarded to?<br><br><table style=\"border: 1px solid white; border-collapse: collapse; margin: 0 auto; text-align: center;\"><thead><tr><th style=\"border: 1px solid white; padding: 8px 16px;\">Subnet Address</th><th style=\"border: 1px solid white; padding: 8px 16px;\">Subnet Mask (in CIDR notation)</th><th style=\"border: 1px solid white; padding: 8px 16px;\">Interface</th></tr></thead><tbody><tr><td style=\"border: 1px solid white; padding: 6px 16px;\">145.36.0.0</td><td style=\"border: 1px solid white; padding: 6px 16px;\">/16</td><td style=\"border: 1px solid white; padding: 6px 16px;\">E1</td></tr><tr><td style=\"border: 1px solid white; padding: 6px 16px;\">145.36.128.0</td><td style=\"border: 1px solid white; padding: 6px 16px;\">/17</td><td style=\"border: 1px solid white; padding: 6px 16px;\">E2</td></tr><tr><td style=\"border: 1px solid white; padding: 6px 16px;\">145.36.64.0</td><td style=\"border: 1px solid white; padding: 6px 16px;\">/18</td><td style=\"border: 1px solid white; padding: 6px 16px;\">E3</td></tr><tr><td style=\"border: 1px solid white; padding: 6px 16px;\">145.36.255.0</td><td style=\"border: 1px solid white; padding: 6px 16px;\">/24</td><td style=\"border: 1px solid white; padding: 6px 16px;\">E4</td></tr><tr><td style=\"border: 1px solid white; padding: 6px 16px;\">Default</td><td style=\"border: 1px solid white; padding: 6px 16px;\">--</td><td style=\"border: 1px solid white; padding: 6px 16px;\">E5</td></tr></tbody></table>",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "E3",
+    "E1",
+    "E2",
+    "E5"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step 1: Understand the Longest Prefix Match Rule</strong><br>When a router receives an IP packet, it checks the destination IP address against the entries in its routing table and forwards the packet based on the longest prefix match (i.e., the matching entry with the largest CIDR mask value).<br><br><strong>Step 2: Destination IP Analysis</strong><br>Destination IP: $145.36.109.70$<br>In binary for the 3rd octet ($109$):<br>$109 = 01101101_2$<br><br><strong>Step 3: Check Each Routing Entry</strong><br><br>1. <strong>Interface E1:</strong><br>Subnet: $145.36.0.0/16$<br>Mask $/16$ checks the first two octets ($145.36$).<br>Destination match: $145.36$ matches $145.36$.<br><strong>Match found with mask length /16.</strong><br><br>2. <strong>Interface E2:</strong><br>Subnet: $145.36.128.0/17$<br>Mask $/17$ requires the 17th bit to be $1$ (since $128 = 10000000_2$).<br>However, 3rd octet of destination IP is $109 = 01101101_2$ (17th bit is $0$).<br><strong>No match.</strong><br><br>3. <strong>Interface E3:</strong><br>Subnet: $145.36.64.0/18$<br>Mask $/18$ requires the first 2 bits of the 3rd octet to be $01_2$ (since $64 = 01000000_2$).<br>3rd octet of destination IP is $109 = 01101101_2$, where the first 2 bits are indeed $01_2$.<br>Performing bitwise AND of $109$ ($01101101_2$) and mask $11000000_2$ ($192$):<br>$01101101_2 \\text{ AND } 11000000_2 = 01000000_2 = 64$.<br>This matches $145.36.64.0$.<br><strong>Match found with mask length /18.</strong><br><br>4. <strong>Interface E4:</strong><br>Subnet: $145.36.255.0/24$<br>Mask $/24$ requires the 3rd octet to be $255$. Destination 3rd octet is $109$.<br><strong>No match.</strong><br><br><strong>Step 4: Select the Longest Prefix Match</strong><br>Matches found for interfaces E1 ($/16$) and E3 ($/18$).<br>Since $/18 > /16$, interface <strong>E3</strong> is selected by the longest prefix matching rule.<br><br>Therefore, the correct answer is <strong>(A) E3</strong>.",
+  "videoUrl": null
+}

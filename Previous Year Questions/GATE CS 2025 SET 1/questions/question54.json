@@ -1,0 +1,22 @@
+{
+  "id": 54,
+  "year": 2025,
+  "set": 1,
+  "topics": [
+    "Operating Systems",
+    "Memory Management"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "In optimal page replacement algorithm, information about all future page references is available to the operating system (OS). A modification of the optimal page replacement algorithm is as follows:<br><br><i>The OS correctly predicts only up to next $4$ page references (including the current page) at the time of allocating a frame to a page.</i><br><br>A process accesses the pages in the following order of page numbers:<br><br>$$1, 3, 2, 4, 2, 3, 1, 2, 4, 3, 1, 4.$$<br><br>If the system has three memory frames that are initially empty, the number of page faults that will occur during execution of the process is ________ . (Answer in integer)",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 6,
+    "max": 6
+  },
+  "explanation": "<strong>Step-by-Step Solution:</strong><br><br>We are given a sequence of page references: $1, 3, 2, 4, 2, 3, 1, 2, 4, 3, 1, 4$.<br>Number of memory frames = $3$ (initially empty).<br>Rule: When replacing a page, look ahead up to the next $4$ page references (including the current page requested). If a page currently in memory is not present in this lookahead window of $4$ references, it is considered as not needed in the near future and can be replaced.<br><br>Let us trace through each page reference step by step:<br><br>1. <strong>Reference 1:</strong> Frames: $[1]$. Page Fault (PF $1$).<br>2. <strong>Reference 3:</strong> Frames: $[1, 3]$. Page Fault (PF $2$).<br>3. <strong>Reference 2:</strong> Frames: $[1, 3, 2]$. Page Fault (PF $3$).<br>4. <strong>Reference 4:</strong> Page Fault occurs.<br>Current frame contents: $\\{1, 3, 2\\}$.<br>Lookahead window of $4$ page references starting at index $4$: $(4, 2, 3, 1)$.<br>Pages present in this $4$-reference window: $4, 2, 3, 1$.<br>Looking at the immediate upcoming references among $\\{1, 3, 2\\}$ inside the window $(4, 2, 3, 1)$:<br>- Page $2$ is needed next (at index 5).<br>- Page $3$ is needed next (at index 6).<br>- Page $1$ is needed furthest (at index 7).<br>Therefore, page $1$ is replaced with $4$.<br>Frames: $[4, 3, 2]$. Page Fault (PF $4$).<br>5. <strong>Reference 2:</strong> Present in frame $[4, 3, 2]$. Hit.<br>6. <strong>Reference 3:</strong> Present in frame $[4, 3, 2]$. Hit.<br>7. <strong>Reference 1:</strong> Page Fault occurs.<br>Current frame contents: $\\{4, 3, 2\\}$.<br>Lookahead window of $4$ page references starting at index $7$: $(1, 2, 4, 3)$.<br>Looking at immediate upcoming references among $\\{4, 3, 2\\}$ in $(1, 2, 4, 3)$:<br>- Page $2$ is referenced at index 8.<br>- Page $4$ is referenced at index 9.<br>- Page $3$ is referenced at index 10 (furthest).<br>Therefore, page $3$ is replaced with $1$.<br>Frames: $[4, 1, 2]$. Page Fault (PF $5$).<br>8. <strong>Reference 2:</strong> Present in frame $[4, 1, 2]$. Hit.<br>9. <strong>Reference 4:</strong> Present in frame $[4, 1, 2]$. Hit.<br>10. <strong>Reference 3:</strong> Page Fault occurs.<br>Current frame contents: $\\{4, 1, 2\\}$.<br>Lookahead window of $4$ page references starting at index $10$: $(3, 1, 4)$.<br>Pages present in this lookahead window: $3, 1, 4$.<br>Page $2$ is NOT present in the lookahead window.<br>Therefore, page $2$ is replaced with $3$.<br>Frames: $[4, 1, 3]$. Page Fault (PF $6$).<br>11. <strong>Reference 1:</strong> Present in frame $[4, 1, 3]$. Hit.<br>12. <strong>Reference 4:</strong> Present in frame $[4, 1, 3]$. Hit.<br><br>Total number of page faults = $6$.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 20,
+  "year": 2025,
+  "set": 1,
+  "topics": [
+    "Algorithms",
+    "Recurrence Relations"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the following recurrence relation:<br><br>$T(n) = 2T(n - 1) + n 2^n$ for $n > 0$, $T(0) = 1$.<br><br>Which ONE of the following options is CORRECT?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$T(n) = \\Theta(n^2 2^n)$",
+    "$T(n) = \\Theta(n 2^n)$",
+    "$T(n) = \\Theta((\\log n)^2 2^n)$",
+    "$T(n) = \\Theta(4^n)$"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step 1: Divide the recurrence by $2^n$ to simplify it.</strong><br>Given: $T(n) = 2T(n-1) + n 2^n$<br>Dividing both sides by $2^n$:<br>$$\\frac{T(n)}{2^n} = \\frac{T(n-1)}{2^{n-1}} + n$$<br><br><strong>Step 2: Substitute $S(n) = \\frac{T(n)}{2^n}$.</strong><br>The equation becomes:<br>$S(n) = S(n-1) + n$<br>Base case: $S(0) = \\frac{T(0)}{2^0} = 1$.<br><br><strong>Step 3: Solve for $S(n)$ using summation.</strong><br>$S(n) = S(0) + \\sum_{i=1}^{n} i = 1 + \\frac{n(n+1)}{2} = \\Theta(n^2)$<br><br><strong>Step 4: Find $T(n)$.</strong><br>$T(n) = 2^n \\cdot S(n) = 2^n \\cdot \\Theta(n^2) = \\Theta(n^2 2^n)$<br><br>Therefore, option (A) is correct.",
+  "videoUrl": null
+}

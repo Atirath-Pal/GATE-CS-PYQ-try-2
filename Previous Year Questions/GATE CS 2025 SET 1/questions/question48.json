@@ -1,0 +1,27 @@
+{
+  "id": 48,
+  "year": 2025,
+  "set": 1,
+  "topics": [
+    "Mathematical Logic",
+    "Predicate Logic"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Which of the following predicate logic formulae/formula is/are CORRECT representation(s) of the statement: “<i>Everyone has exactly one mother</i>”?<br><br>The meanings of the predicates used are:<br>• $mother(y, x)$: $y$ is the mother of $x$<br>• $noteq(x, y)$: $x$ and $y$ are not equal",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\forall x \\exists y \\exists z (mother(y, x) \\land \\neg mother(z, x))$",
+    "$\\forall x \\exists y [mother(y, x) \\land \\forall z (noteq(z, y) \\rightarrow \\neg mother(z, x))]$",
+    "$\\forall x \\forall y [mother(y, x) \\rightarrow \\exists z (mother(z, x) \\land \\neg noteq(z, y))]$",
+    "$\\forall x \\exists y [mother(y, x) \\land \\neg \\exists z (noteq(z, y) \\land mother(z, x))]$"
+  ],
+  "answer": [
+    "B",
+    "D"
+  ],
+  "explanation": "To represent the statement \"Everyone has exactly one mother\", we need to express two conditions for every person $x$:<br>1. <strong>Existence:</strong> There exists a person $y$ such that $y$ is the mother of $x$, i.e., $mother(y, x)$.<br>2. <strong>Uniqueness:</strong> Any person $z$ who is not equal to $y$ ($noteq(z, y)$) is not the mother of $x$ ($\\neg mother(z, x)$). Alternatively, there does not exist any person $z$ who is different from $y$ and is also the mother of $x$.<br><br><strong>Analysis of options:</strong><br><br>• <strong>Option (B):</strong> $\\forall x \\exists y [mother(y, x) \\land \\forall z (noteq(z, y) \\rightarrow \\neg mother(z, x))]<br>This directly captures both existence ($mother(y, x)$) and uniqueness (if $z \\neq y$, then $z$ is not the mother of $x$). Thus, <strong>Option (B) is CORRECT</strong>.<br><br>• <strong>Option (D):</strong> $\\forall x \\exists y [mother(y, x) \\land \\neg \\exists z (noteq(z, y) \\land mother(z, x))]<br>Notice that $\\forall z (noteq(z, y) \\rightarrow \\neg mother(z, x))$ is logically equivalent to $\\forall z (\\neg noteq(z, y) \\lor \\neg mother(z, x)) \\equiv \\neg \\exists z (noteq(z, y) \\land mother(z, x))$. Thus, <strong>Option (D) is CORRECT</strong>.<br><br>• <strong>Option (A):</strong> Incorrect because it does not properly link $z$ to being distinct from $y$.<br>• <strong>Option (C):</strong> Incorrect because it uses universal quantifiers incorrectly for existence.",
+  "videoUrl": null
+}

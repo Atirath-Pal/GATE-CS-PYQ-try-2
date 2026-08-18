@@ -1,0 +1,26 @@
+{
+  "id": 4,
+  "year": 2025,
+  "set": 1,
+  "topics": [
+    "General Aptitude",
+    "Blood Relations"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the relationships among P, Q, R, S, and T:<br><br>• P is the brother of Q.<br>• S is the daughter of Q.<br>• T is the sister of S.<br>• R is the mother of Q.<br><br>The following statements are made based on the relationships given above.<br><br>(1) R is the grandmother of S.<br>(2) P is the uncle of S and T.<br>(3) R has only one son.<br>(4) Q has only one daughter.<br><br>Which one of the following options is correct?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Both (1) and (2) are true.",
+    "Both (1) and (3) are true.",
+    "Only (3) is true.",
+    "Only (4) is true."
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step 1: Analyze the given relationships:</strong><br>1. $P$ is the brother of $Q$ (P is male).<br>2. $S$ is the daughter of $Q$ (S is female, Q is a parent of S).<br>3. $T$ is the sister of $S$ (T is female, so both S and T are children of Q).<br>4. $R$ is the mother of $Q$ (R is female, R is the mother of both P and Q).<br><br><strong>Step 2: Evaluate each statement:</strong><br>• <strong>Statement (1):</strong> $R$ is the mother of $Q$, and $Q$ is the parent of $S$. Therefore, $R$ is the grandmother of $S$. This statement is <strong>TRUE</strong>.<br>• <strong>Statement (2):</strong> $P$ is the brother of $Q$, and $S$ and $T$ are the children of $Q$. Therefore, $P$ is the uncle of $S$ and $T$. This statement is <strong>TRUE</strong>.<br>• <strong>Statement (3):</strong> We know $P$ is a son of $R$. However, the gender of $Q$ is not specified (Q could be male or female). Thus, we cannot definitively say that $R$ has only one son. This statement cannot be confirmed as true.<br>• <strong>Statement (4):</strong> Both $S$ and $T$ are daughters of $Q$. Thus, $Q$ has at least two daughters, making this statement <strong>FALSE</strong>.<br><br><strong>Conclusion:</strong><br>Both (1) and (2) are true. Therefore, the correct option is <strong>(A)</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,21 @@
+{
+  "id": 39,
+  "year": "2025",
+  "set": "CS-1",
+  "topics": ["Databases", "Relational Calculus"],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider two relations describing <i>teams</i> and <i>players</i> in a sports league:<br><br><ul><li><i>teams(tid, tname)</i>: <i>tid</i>, <i>tname</i> are team-id and team-name, respectively</li><li><i>players(pid, pname, tid)</i>: <i>pid</i>, <i>pname</i>, and <i>tid</i> denote player-id, player-name and the team-id of the player, respectively</li></ul><br>Which ONE of the following tuple relational calculus queries returns the name of the players who play for the team having <i>tname</i> as '<i>MI</i>'?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "{ p.pname | p \\in players \\land \\exists t (t \\in teams \\land p.tid = t.tid \\land t.tname = 'MI') }",
+    "{ p.pname | p \\in teams \\land \\exists t (t \\in players \\land p.tid = t.tid \\land t.tname = 'MI') }",
+    "{ p.pname | p \\in players \\land \\exists t (t \\in teams \\land t.tname = 'MI') }",
+    "{ p.pname | p \\in teams \\land \\exists t (t \\in players \\land t.tname = 'MI') }"
+  ],
+  "answer": ["A"],
+  "explanation": "To get the names of players who play for the team with $tname = 'MI'$, we need to:<br>1. Select tuples $p$ from the $players$ relation ($p \\in players$).<br>2. Select the player's name attribute ($p.pname$).<br>3. Ensure there exists a tuple $t$ in the $teams$ relation ($t \\in teams$).<br>4. Join both relations using the common attribute $tid$ ($p.tid = t.tid$).<br>5. Apply the filter for the team name ($t.tname = 'MI'$).<br><br><strong>Correct Formula:</strong><br>$\\{ p.pname \\mid p \\in players \\land \\exists t (t \\in teams \\land p.tid = t.tid \\land t.tname = 'MI') \\}$<br><br>Therefore, Option (A) is correct.",
+  "videoUrl": null
+}

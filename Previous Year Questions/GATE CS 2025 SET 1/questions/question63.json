@@ -1,0 +1,22 @@
+{
+  "id": 63,
+  "year": 2025,
+  "set": 1,
+  "topics": [
+    "C Programming",
+    "Control Structures"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the following C program:<br><br>The value printed by the given C program is ________ . (Answer in integer)",
+  "assetImage": null,
+  "codeBlock": "#include <stdio.h>\nint gate (int n) {\n    int d, t, newnum, turn;\n    newnum = turn = 0; t=1;\n    while (n>=t) t *= 10;\n    t /=10;\n    while (t>0) {\n        d = n/t;\n        n = n%t;\n        t /= 10;\n        if (turn) newnum = 10*newnum + d;\n        turn = (turn + 1) % 2;\n    }\n    return newnum;\n}\nint main () {\n    printf (\"%d\", gate(14362));\n    return 0;\n}",
+  "options": [],
+  "answer": {
+    "min": 46,
+    "max": 46
+  },
+  "explanation": "Let us trace the function <strong>gate(14362)</strong> step-by-step:<br><br><strong>1. Initialization:</strong><br>• $n = 14362$<br>• $newnum = 0$, $turn = 0$, $t = 1$<br><br><strong>2. First while loop:</strong> <code>while (n >= t) t *= 10;</code><br>• $t$ becomes $100000$ because $100000 > 14362$.<br>• Then, <code>t /= 10;</code> makes $t = 10000$.<br><br><strong>3. Second while loop execution:</strong> <code>while (t > 0)</code><br><br>• <strong>Iteration 1 ($t = 10000$):</strong><br>&nbsp;&nbsp;- $d = 14362 / 10000 = 1$<br>&nbsp;&nbsp;- $n = 14362 \\% 10000 = 4362$<br>&nbsp;&nbsp;- $t = 10000 / 10 = 1000$<br>&nbsp;&nbsp;- $turn = 0$ (Condition <code>if (turn)</code> is FALSE)<br>&nbsp;&nbsp;- $turn = (0 + 1) \\% 2 = 1$<br><br>• <strong>Iteration 2 ($t = 1000$):</strong><br>&nbsp;&nbsp;- $d = 4362 / 1000 = 4$<br>&nbsp;&nbsp;- $n = 4362 \\% 1000 = 362$<br>&nbsp;&nbsp;- $t = 1000 / 10 = 100$<br>&nbsp;&nbsp;- $turn = 1$ (Condition <code>if (turn)</code> is TRUE):<br>&nbsp;&nbsp;&nbsp;&nbsp;$newnum = 10 \\times 0 + 4 = 4$<br>&nbsp;&nbsp;- $turn = (1 + 1) \\% 2 = 0$<br><br>• <strong>Iteration 3 ($t = 100$):</strong><br>&nbsp;&nbsp;- $d = 362 / 100 = 3$<br>&nbsp;&nbsp;- $n = 362 \\% 100 = 62$<br>&nbsp;&nbsp;- $t = 100 / 10 = 10$<br>&nbsp;&nbsp;- $turn = 0$ (Condition <code>if (turn)</code> is FALSE)<br>&nbsp;&nbsp;- $turn = (0 + 1) \\% 2 = 1$<br><br>• <strong>Iteration 4 ($t = 10$):</strong><br>&nbsp;&nbsp;- $d = 62 / 10 = 6$<br>&nbsp;&nbsp;- $n = 62 \\% 10 = 2$<br>&nbsp;&nbsp;- $t = 10 / 10 = 1$<br>&nbsp;&nbsp;- $turn = 1$ (Condition <code>if (turn)</code> is TRUE):<br>&nbsp;&nbsp;&nbsp;&nbsp;$newnum = 10 \\times 4 + 6 = 46$<br>&nbsp;&nbsp;- $turn = (1 + 1) \\% 2 = 0$<br><br>• <strong>Iteration 5 ($t = 1$):</strong><br>&nbsp;&nbsp;- $d = 2 / 1 = 2$<br>&nbsp;&nbsp;- $n = 2 \\% 1 = 0$<br>&nbsp;&nbsp;- $t = 1 / 10 = 0$<br>&nbsp;&nbsp;- $turn = 0$ (Condition <code>if (turn)</code> is FALSE)<br>&nbsp;&nbsp;- $turn = (0 + 1) \\% 2 = 1$<br><br>The loop terminates as $t = 0$.<br><br>The function returns $newnum = 46$.",
+  "videoUrl": null
+}

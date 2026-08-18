@@ -1,0 +1,22 @@
+{
+  "id": 29,
+  "year": 2025,
+  "set": 1,
+  "topics": [
+    "Operating Systems",
+    "Process Management"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Suppose in a multiprogramming environment, the following C program segment is executed. A process goes into I/O queue whenever an I/O related operation is performed. Assume that there will always be a context switch whenever a process requests for an I/O, and also whenever the process returns from an I/O. The number of times the process will enter the ready queue during its lifetime (not counting the time the process enters the ready queue when it is run initially) is _______. (Answer in integer)",
+  "assetImage": null,
+  "codeBlock": "int main()\n{\n    int x=0,i=0;\n    scanf(\"%d\", &x);\n    for(i=0; i<20; i++)\n    {\n        x = x+20;\n        printf(\"%d\\n\",x);\n    }\n    return 0;\n}",
+  "options": [],
+  "answer": {
+    "min": 21,
+    "max": 21
+  },
+  "explanation": "To determine how many times the process enters the ready queue after completing an I/O operation:<br><br>1. An entry into the ready queue occurs whenever an I/O operation completes and the process transitions from the Blocked/Waiting state back to the Ready state.<br><br>2. <strong>First I/O operation:</strong> The line <code>scanf(\"%d\", &x);</code> performs 1 input operation. Upon completion of this I/O, the process enters the ready queue <strong>1 time</strong>.<br><br>3. <strong>Loop I/O operations:</strong> The loop runs 20 times (for $i = 0$ to $19$). Inside the loop, <code>printf(\"%d\\n\", x);</code> is executed in each iteration. Each <code>printf</code> call performs 1 output operation. Thus, there are 20 output operations, causing the process to enter the ready queue <strong>20 times</strong> after completing these I/O operations.<br><br>4. <strong>Total entries into the ready queue:</strong> $1 \\text{ (from scanf)} + 20 \\text{ (from printf)} = 21$.",
+  "videoUrl": null
+}

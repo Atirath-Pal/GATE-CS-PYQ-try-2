@@ -1,0 +1,21 @@
+{
+  "id": 2,
+  "year": 2025,
+  "set": 1,
+  "topics": ["General Aptitude", "Verbal Ability"],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "The CEO’s decision to downsize the workforce was considered <u>myopic</u> because it sacrificed long-term stability to accommodate short-term gains.<br><br>Select the most appropriate option that can replace the word “myopic” without changing the meaning of the sentence.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "visionary",
+    "shortsighted",
+    "progressive",
+    "innovative"
+  ],
+  "answer": ["B"],
+  "explanation": "<strong>Step 1: Understand the meaning of the word 'myopic' in context.</strong><br>In medical terms, <em>myopic</em> refers to nearsightedness. Metaphorically, it describes a lack of foresight or focus on short-term needs rather than long-term outcomes.<br><br><strong>Step 2: Analyze the given sentence.</strong><br>The sentence states that the decision \"sacrificed long-term stability to accommodate short-term gains.\" This confirms that the word describes focusing only on immediate/short-term outcomes without considering the future.<br><br><strong>Step 3: Evaluate the options.</strong><br><ul><br>  <li><strong>visionary:</strong> Thinking about or planning the future with wisdom or imagination (opposite of myopic).</li><br>  <li><strong>shortsighted:</strong> Lacking foresight or scope; focusing on the immediate future (synonym of myopic).</li><br>  <li><strong>progressive:</strong> Favoring or advocating progress, change, or reform.</li><br>  <li><strong>innovative:</strong> Featuring new methods; advanced and original.</li><br></ul><br><strong>Conclusion:</strong><br>The word <strong>shortsighted</strong> directly matches the meaning of <strong>myopic</strong> in this context.",
+  "videoUrl": null
+}

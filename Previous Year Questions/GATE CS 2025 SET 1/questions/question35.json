@@ -1,0 +1,22 @@
+{
+  "id": 35,
+  "year": 2025,
+  "set": 1,
+  "topics": [
+    "Data Structures",
+    "Heaps"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "The height of any rooted tree is defined as the maximum number of edges in the path from the root node to any leaf node.<br><br>Suppose a Min-Heap $T$ stores 32 keys. The height of $T$ is ____________.<br>(Answer in integer)",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 5,
+    "max": 5
+  },
+  "explanation": "<strong>Step 1: Understand the definition of height.</strong><br>The height of a tree is defined as the maximum number of edges in the path from the root node to any leaf node.<br>For a complete binary tree with $N$ nodes, the height $h$ is given by $h = \\lfloor \\log_2 N \\rfloor$.<br><br><strong>Step 2: Calculate height for $N = 32$.</strong><br>Given that $N = 32$ keys are stored in the Min-Heap $T$ (which is represented as a complete binary tree):<br>$h = \\lfloor \\log_2 32 \\rfloor = \\lfloor 5 \\rfloor = 5$.<br><br>Therefore, the height of $T$ is <strong>5</strong>.",
+  "videoUrl": null
+}

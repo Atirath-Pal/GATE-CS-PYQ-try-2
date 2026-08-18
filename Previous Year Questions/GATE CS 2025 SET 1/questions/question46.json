@@ -1,0 +1,27 @@
+{
+  "id": 46,
+  "year": "2025",
+  "set": "1",
+  "topics": [
+    "Compiler Design",
+    "Parsing"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Which of the following statement(s) is/are TRUE while computing $First$ and $Follow$ during top down parsing by a compiler?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "For a production $A \\rightarrow \\epsilon$, $\\epsilon$ will be added to $First(A)$.",
+    "If there is any input right end marker, it will be added to $First(S)$, where $S$ is the start symbol.",
+    "For a production $A \\rightarrow \\epsilon$, $\\epsilon$ will be added to $Follow(A)$.",
+    "If there is any input right end marker, it will be added to $Follow(S)$, where $S$ is the start symbol."
+  ],
+  "answer": [
+    "A",
+    "D"
+  ],
+  "explanation": "<strong>Step 1: Rules for computing $First$ sets</strong><br>• If $X$ is a terminal, then $First(X) = \\{X\\}$.<br>• If $X \\rightarrow \\epsilon$ is a production, then add $\\epsilon$ to $First(X)$. Hence, <strong>Statement (A) is TRUE</strong>.<br>• If $X$ is a non-terminal and $X \\rightarrow Y_1 Y_2 \\dots Y_k$, then add $First(Y_1 Y_2 \\dots Y_k)$ to $First(X)$.<br><br><strong>Step 2: Rules for computing $Follow$ sets</strong><br>• Place $\\$ $ (the input right end-marker) in $Follow(S)$, where $S$ is the start symbol. Hence, <strong>Statement (D) is TRUE</strong>.<br>• $\\epsilon$ (epsilon) is NEVER placed in any $Follow$ set. $Follow$ sets contain only terminals and the end-marker $\\$$. Therefore, <strong>Statement (C) is FALSE</strong>.<br>• $First$ sets contain terminals and $\\epsilon$, but not the end-marker $\\$$. Therefore, <strong>Statement (B) is FALSE</strong>.<br><br>Thus, statements (A) and (D) are correct.",
+  "videoUrl": null
+}

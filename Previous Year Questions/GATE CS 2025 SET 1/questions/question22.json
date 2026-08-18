@@ -1,0 +1,21 @@
+{
+  "id": 22,
+  "year": "2025",
+  "set": "1",
+  "topics": ["Computer Networks", "Transport Layer"],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider the 3-way handshaking protocol for TCP connection establishment. Let the three packets exchanged during the connection establishment be denoted as P1, P2, and P3, in order. Which of the following option(s) is/are TRUE with respect to TCP header flags that are set in the packets?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "P3: SYN = 1, ACK = 1",
+    "P2: SYN = 1, ACK = 1",
+    "P2: SYN = 0, ACK = 1",
+    "P1: SYN = 1"
+  ],
+  "answer": ["B", "D"],
+  "explanation": "In the TCP 3-way handshaking protocol, the connection establishment process involves the following steps:<br><br><strong>1. First Packet (P1):</strong> Sent by the Client to the Server to initiate the connection. The SYN flag is set.<br>Hence, <strong>P1: SYN = 1</strong> (ACK = 0).<br><br><strong>2. Second Packet (P2):</strong> Sent by the Server to the Client in response. The Server acknowledges the SYN request and also sends its own SYN. Both SYN and ACK flags are set.<br>Hence, <strong>P2: SYN = 1, ACK = 1</strong>.<br><br><strong>3. Third Packet (P3):</strong> Sent by the Client to the Server to acknowledge the Server's SYN. Only the ACK flag is set.<br>Hence, <strong>P3: SYN = 0, ACK = 1</strong>.<br><br>Therefore, options <strong>(B)</strong> and <strong>(D)</strong> are TRUE.",
+  "videoUrl": null
+}

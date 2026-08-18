@@ -1,0 +1,22 @@
+{
+  "id": 57,
+  "year": "2025",
+  "set": "CS-1",
+  "topics": [
+    "Computer Networks",
+    "IP Fragmentation"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Suppose a message of size 15000 bytes is transmitted from a source to a destination using IPv4 protocol via two routers as shown in the figure. Each router has a defined maximum transmission unit (MTU) as shown in the figure, including IP header. The number of fragments that will be delivered to the destination is ______ .<br>(Answer in integer)",
+  "assetImage": "question57.png",
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 7,
+    "max": 7
+  },
+  "explanation": "<strong>Step 1: Understanding the IPv4 Data and Header</strong><br>Message size = $15000$ bytes.<br>Assuming a standard IPv4 header size of $20$ bytes unless specified otherwise.<br>Payload size = $15000 - 20 = 14980$ bytes.<br><br><strong>Step 2: Fragmentation at Router-1 ($\\text{MTU} = 5000$ bytes)</strong><br>Maximum data per fragment at Router-1 = $\\text{MTU} - \\text{Header} = 5000 - 20 = 4980$ bytes.<br>Since the fragmentation data size must be a multiple of $8$ bytes:<br>$\\lfloor 4980 / 8 \\rfloor \\times 8 = 622 \\times 8 = 4976$ bytes.<br><br>Router-1 fragments the $14980$ bytes of data into:<br>1. Fragment 1: $4976$ bytes payload ($4996$ bytes total)<br>2. Fragment 2: $4976$ bytes payload ($4996$ bytes total)<br>3. Fragment 3: $4976$ bytes payload ($4996$ bytes total)<br>4. Fragment 4: $14980 - (3 \\times 4976) = 14980 - 14928 = 52$ bytes payload ($72$ bytes total)<br><br><strong>Step 3: Fragmentation at Router-2 ($\\text{MTU} = 3000$ bytes)</strong><br>Maximum data per fragment at Router-2 = $3000 - 20 = 2980$ bytes.<br>Largest multiple of $8 \\le 2980$ is $\\lfloor 2980 / 8 \\rfloor \\times 8 = 372 \\times 8 = 2976$ bytes.<br><br>Now, Router-2 receives the fragments from Router-1 and processes each:<br>- <strong>Fragment 1 ($4976$ bytes data):</strong><br> &nbsp;- Sub-fragment 1a: $2976$ bytes payload<br> &nbsp;- Sub-fragment 1b: $4976 - 2976 = 2000$ bytes payload<br> &nbsp;$\\rightarrow$ Yields $2$ fragments.<br><br>- <strong>Fragment 2 ($4976$ bytes data):</strong><br> &nbsp;- Sub-fragment 2a: $2976$ bytes payload<br> &nbsp;- Sub-fragment 2b: $2000$ bytes payload<br> &nbsp;$\\rightarrow$ Yields $2$ fragments.<br><br>- <strong>Fragment 3 ($4976$ bytes data):</strong><br> &nbsp;- Sub-fragment 3a: $2976$ bytes payload<br> &nbsp;- Sub-fragment 3b: $2000$ bytes payload<br> &nbsp;$\\rightarrow$ Yields $2$ fragments.<br><br>- <strong>Fragment 4 ($52$ bytes data):</strong><br> &nbsp;- Sub-fragment 4a: $52$ bytes payload ($\\le 2980$, no further fragmentation required)<br> &nbsp;$\\rightarrow$ Yields $1$ fragment.<br><br><strong>Total fragments reaching destination:</strong><br>$2 + 2 + 2 + 1 = 7$ fragments.",
+  "videoUrl": null
+}

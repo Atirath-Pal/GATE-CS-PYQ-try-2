@@ -1,0 +1,26 @@
+{
+  "id": 6,
+  "year": 2025,
+  "set": 1,
+  "topics": [
+    "General Aptitude",
+    "Verbal Aptitude"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "“I put the brown paper in my pocket along with the chalks, and possibly other things. I suppose every one must have reflected how primeval and how poetical are the things that one carries in one’s pocket: the pocket-knife, for instance the type of all human tools, the infant of the sword. Once I planned to write a book of poems entirely about the things in my pocket. But I found it would be too long: and the age of the great epics is past.”<br><br>(From G.K. Chesterton’s “A Piece of Chalk”)<br><br>Based only on the information provided in the above passage, which one of the following statements is true?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "The author of the passage carries a mirror in his pocket to reflect upon things.",
+    "The author of the passage had decided to write a poem on epics.",
+    "The pocket-knife is described as the infant of the sword.",
+    "Epics are described as too inconvenient to write."
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step-by-Step Explanation:</strong><br><br>1. <strong>Analyze the Passage:</strong><br>The passage states: \"...the pocket-knife, for instance the type of all human tools, the infant of the sword.\"<br><br>2. <strong>Evaluate the Options:</strong><br>- <strong>Option A:</strong> Incorrect. The text uses \"reflected\" in the sense of thinking/contemplating, not literally carrying a mirror.<br>- <strong>Option B:</strong> Incorrect. The author planned to write a book of poems about things in his pocket, not a poem on epics.<br>- <strong>Option C:</strong> <strong>Correct.</strong> The author explicitly refers to the pocket-knife as \"the infant of the sword\".<br>- <strong>Option D:</strong> Incorrect. The passage states \"the age of the great epics is past\", not that they are inconvenient to write.<br><br>Thus, <strong>Option C</strong> is the correct statement based directly on the provided passage.",
+  "videoUrl": null
+}

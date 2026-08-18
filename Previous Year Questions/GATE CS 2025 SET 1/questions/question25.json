@@ -1,0 +1,21 @@
+{
+  "id": 25,
+  "year": "2025",
+  "set": "1",
+  "topics": ["Digital Logic", "Number Representations"],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "The number $-6$ can be represented as $1010$ in $4$-bit 2's complement representation. Which of the following is/are CORRECT 2's complement representation(s) of $-6$?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "1000 1010 in 8-bits",
+    "1111 1010 in 8-bits",
+    "1000 0000 0000 1010 in 16-bits",
+    "1111 1111 1111 1010 in 16-bits"
+  ],
+  "answer": ["B", "D"],
+  "explanation": "<strong>Step 1: Understand Sign Extension in 2's Complement</strong><br>To extend a signed integer in 2's complement representation from a smaller number of bits to a larger number of bits without changing its value, we perform <strong>sign extension</strong>. This is done by replicating the Most Significant Bit (MSB/sign bit) to the left.<br><br><strong>Step 2: Sign Extension for $-6$</strong><br>The original $4$-bit 2's complement representation of $-6$ is $1010$.<br>Here, the sign bit (MSB) is $1$.<br><br><strong>Step 3: Evaluate Options</strong><br>• For an $8$-bit representation, extend the sign bit ($1$) by $4$ bits to the left:<br>$$1111\\ 1010$$<br>This matches <strong>Option (B)</strong>.<br><br>• For a $16$-bit representation, extend the sign bit ($1$) by $12$ bits to the left:<br>$$1111\\ 1111\\ 1111\\ 1010$$<br>This matches <strong>Option (D)</strong>.<br><br>Hence, options (B) and (D) are correct.",
+  "videoUrl": null
+}

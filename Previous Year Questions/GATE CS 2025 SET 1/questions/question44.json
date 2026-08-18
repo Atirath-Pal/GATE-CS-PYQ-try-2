@@ -1,0 +1,26 @@
+{
+  "id": 44,
+  "year": 2025,
+  "set": 1,
+  "topics": [
+    "Theory of Computation",
+    "Regular Languages"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the following two languages over the alphabet $\\{a, b\\}$:<br><br>$$L_1 = \\{\\alpha\\beta\\alpha \\mid \\alpha \\in \\{a, b\\}^+ \\text{ AND } \\beta \\in \\{a, b\\}^+\\}$$<br>$$L_2 = \\{\\alpha\\beta\\alpha \\mid \\alpha \\in \\{a\\}^+ \\text{ AND } \\beta \\in \\{a, b\\}^+\\}$$<br><br>Which ONE of the following statements is CORRECT?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Both $L_1$ and $L_2$ are regular languages.",
+    "$L_1$ is a regular language but $L_2$ is not a regular language.",
+    "$L_1$ is not a regular language but $L_2$ is a regular language.",
+    "Neither $L_1$ nor $L_2$ is a regular language."
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Analysis of Language $L_1$:</strong><br>$L_1 = \\{\\alpha\\beta\\alpha \\mid \\alpha \\in \\{a, b\\}^+ \\text{ AND } \\beta \\in \\{a, b\\}^+\\}$.<br>Since $\\alpha$ can be any non-empty string over $\\{a, b\\}$, matching the prefix $\\alpha$ with the suffix $\\alpha$ requires unbounded memory (similar to the non-regular language $ww^R$ or $ww$). Therefore, $L_1$ is <strong>not a regular language</strong>.<br><br><strong>Analysis of Language $L_2$:</strong><br>$L_2 = \\{\\alpha\\beta\\alpha \\mid \\alpha \\in \\{a\\}^+ \\text{ AND } \\beta \\in \\{a, b\\}^+\\}$.<br>Here, $\\alpha = a^k$ where $k \\ge 1$. The strings in $L_2$ are of the form $a^k \\beta a^k$ where $\\beta \\in \\{a, b\\}^+$.<br>Notice that any string starting with $a$ and ending with $a$ with length at least $3$ can be written in this form by choosing $k = 1$ (i.e., $\\alpha = a$) and letting $\\beta$ absorb the middle remaining characters.<br>Specifically, $L_2 = a(a+b)^+a$, which is represented by a regular expression.<br>Therefore, $L_2$ is a <strong>regular language</strong>.<br><br><strong>Conclusion:</strong><br>$L_1$ is not a regular language but $L_2$ is a regular language.",
+  "videoUrl": null
+}

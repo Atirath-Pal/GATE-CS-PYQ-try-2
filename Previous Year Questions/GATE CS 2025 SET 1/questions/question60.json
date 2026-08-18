@@ -1,0 +1,22 @@
+{
+  "id": 60,
+  "year": 2025,
+  "set": 1,
+  "topics": [
+    "Digital Logic",
+    "Sequential Circuits"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the given sequential circuit designed using D-Flip-flops. The circuit is initialized with some value (initial state). The number of distinct states the circuit will go through before returning back to the initial state is ________ . (Answer in integer)",
+  "assetImage": "question60.png",
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 7,
+    "max": 8
+  },
+  "explanation": "<strong>Step 1: Identify the flip-flop input equations from the circuit diagram.</strong><br>Looking at the connections:<br>$D_0 = \\overline{Q_3}$<br>$D_1 = Q_0$<br>$D_2 = Q_1$<br>$D_3 = Q_2$<br><br><strong>Step 2: Determine the next-state equations for D Flip-flops.</strong><br>For a D flip-flop, the next state $Q^+$ is equal to its input $D$. Therefore:<br>$Q_0^+ = D_0 = \\overline{Q_3}$<br>$Q_1^+ = D_1 = Q_0$<br>$Q_2^+ = D_2 = Q_1$<br>$Q_3^+ = D_3 = Q_2$<br><br><strong>Step 3: Analyze the behavior of the circuit.</strong><br>This circuit is a 4-bit <strong>Johnson Counter</strong> (or Twisted Ring Counter).<br>For an $n$-bit Johnson Counter, the maximum sequence length (number of distinct states before returning to the initial state) is $2n$.<br><br>Here, $n = 4$ flip-flops, so the number of distinct states is:<br>$\\text{Number of states} = 2 \\times 4 = 8$.<br><br><strong>Step 4: Verify state transitions (starting from 0000).</strong><br>1. $0000 \\rightarrow 1000$<br>2. $1000 \\rightarrow 1100$<br>3. $1100 \\rightarrow 1110$<br>4. $1110 \\rightarrow 1111$<br>5. $1111 \\rightarrow 0111$<br>6. $0111 \\rightarrow 0011$<br>7. $0011 \\rightarrow 0001$<br>8. $0001 \\rightarrow 0000$<br><br>Thus, the circuit traverses through <strong>8</strong> distinct states before repeating.",
+  "videoUrl": null
+}

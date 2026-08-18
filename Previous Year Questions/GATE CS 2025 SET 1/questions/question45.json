@@ -1,0 +1,26 @@
+{
+  "id": 45,
+  "year": "2025",
+  "set": "1",
+  "topics": [
+    "Theory of Computation",
+    "Context-Free Languages"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the following two languages over the alphabet $\\{a, b, c\\}$, where $m$ and $n$ are natural numbers.<br><br>$$L_1 = \\{a^m b^m c^{m+n} \\mid m, n \\ge 1\\}$$<br>$$L_2 = \\{a^m b^n c^{m+n} \\mid m, n \\ge 1\\}$$<br><br>Which ONE of the following statements is CORRECT?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Both $L_1$ and $L_2$ are context-free languages.",
+    "$L_1$ is a context-free language but $L_2$ is not a context-free language.",
+    "$L_1$ is not a context-free language but $L_2$ is a context-free language.",
+    "Neither $L_1$ nor $L_2$ are context-free languages."
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Analyzing Language $L_1$:</strong><br>$L_1 = \\{a^m b^m c^{m+n} \\mid m, n \\ge 1\\}$.<br>Here, the number of $a$'s must match the number of $b$'s ($m$), and the number of $c$'s ($m+n$) must be greater than the number of $a$'s and $b$'s by $n$. This requires comparing three components simultaneously (matching $a$'s with $b$'s AND matching total $c$'s with $a$'s and $b$'s). A Pushdown Automaton (PDA) cannot perform these multiple independent dependencies simultaneously because stack operations are limited to one context at a time. Therefore, $L_1$ is <strong>not context-free</strong>.<br><br><strong>Analyzing Language $L_2$:</strong><br>$L_2 = \\{a^m b^n c^{m+n} \\mid m, n \\ge 1\\}$.<br>Here, the total number of $c$'s is equal to the sum of the number of $a$'s and $b$'s ($m+n$). A PDA can easily accept this language by pushing all $a$'s and $b$'s onto the stack and then popping one symbol for each incoming $c$. Since a PDA exists for $L_2$, $L_2$ is a <strong>context-free language</strong>.<br><br>Therefore, $L_1$ is not a context-free language but $L_2$ is a context-free language.",
+  "videoUrl": null
+}

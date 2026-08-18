@@ -1,0 +1,26 @@
+{
+  "id": 36,
+  "year": 2025,
+  "set": 1,
+  "topics": [
+    "Computer Organization",
+    "Cache Memory"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider a memory system with 1M bytes of main memory and 16K bytes of cache memory. Assume that the processor generates 20-bit memory address, and the cache block size is 16 bytes. If the cache uses direct mapping, how many bits will be required to store all the $tag$ values? [Assume memory is byte addressable, $1\\text{K}=2^{10}$, $1\\text{M}=2^{20}$.]",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$6 \\times 2^{10}$",
+    "$8 \\times 2^{10}$",
+    "$2^{12}$",
+    "$2^{14}$"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step 1: Determine the address fields for direct mapped cache.</strong><br>Total physical address size = $20$ bits.<br>Block size = $16\\text{ bytes} = 2^4\\text{ bytes}$, so <strong>Block Offset</strong> = $4$ bits.<br><br><strong>Step 2: Calculate the number of cache blocks (lines).</strong><br>Cache size = $16\\text{ KB} = 16 \\times 1024\\text{ bytes} = 2^{14}\\text{ bytes}$.<br>Number of cache blocks = $\\frac{\\text{Cache Size}}{\\text{Block Size}} = \\frac{2^{14}}{2^4} = 2^{10}$ blocks.<br>Therefore, <strong>Index bits</strong> = $10$ bits.<br><br><strong>Step 3: Calculate Tag bits per cache block.</strong><br>$\\text{Tag bits} = \\text{Total Address bits} - (\\text{Index bits} + \\text{Block Offset})$<br>$\\text{Tag bits} = 20 - (10 + 4) = 6$ bits.<br><br><strong>Step 4: Calculate total bits required to store all tag values.</strong><br>$\\text{Total tag bits} = \\text{Number of cache blocks} \\times \\text{Tag bits per block}$<br>$\\text{Total tag bits} = 2^{10} \\times 6 = 6 \\times 2^{10}$ bits.<br><br>Hence, the correct option is <strong>(A)</strong>.",
+  "videoUrl": null
+}

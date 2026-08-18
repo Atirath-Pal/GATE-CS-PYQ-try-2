@@ -1,0 +1,22 @@
+{
+  "id": 33,
+  "year": 2025,
+  "set": 1,
+  "topics": [
+    "Algorithms",
+    "Sorting"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "The pseudocode of a function <strong>fun()</strong> is given below:<br><br>Let $A[0, ..., 29]$ be an array storing 30 distinct integers in descending order. The number of swap operations that will be performed, if the function <strong>fun()</strong> is called with $A[0, ..., 29]$ as argument, is ____________. (Answer in integer)",
+  "assetImage": null,
+  "codeBlock": "fun(int A[0,...,n-1]){\n    for i=0 to n-2\n        for j=0 to n-i-2\n            if (A[j]>A[j+1])\n                then swap A[j] and A[j+1]\n}",
+  "options": [],
+  "answer": {
+    "min": 435,
+    "max": 435
+  },
+  "explanation": "<strong>Step 1: Understand the algorithm</strong><br>The given pseudocode represents standard Bubble Sort to sort an array of size $n$ in ascending order.<br><br><strong>Step 2: Identify the initial condition</strong><br>The input array $A[0, ..., 29]$ has size $n = 30$ and contains 30 distinct integers sorted in descending order (which is the worst-case scenario for Bubble Sort).<br><br><strong>Step 3: Calculate the total number of swaps</strong><br>For an array of size $n$ in reverse (descending) order, every adjacent comparison in the nested loops results in a swap.<br>The total number of swaps is equal to the total number of comparisons performed by the inner loop:<br>$$\\text{Total Swaps} = \\sum_{i=0}^{n-2} (n - i - 1) = \\frac{n(n - 1)}{2}$$<br><br>Substituting $n = 30$:<br>$$\\text{Total Swaps} = \\frac{30 \\times 29}{2} = 15 \\times 29 = 435$$<br><br><strong>Conclusion:</strong><br>The function performs exactly <strong>435</strong> swap operations.",
+  "videoUrl": null
+}

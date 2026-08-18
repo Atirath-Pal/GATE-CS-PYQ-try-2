@@ -1,0 +1,26 @@
+{
+  "id": 16,
+  "year": 2025,
+  "set": 1,
+  "topics": [
+    "Computer Networks",
+    "OSI Layers"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Identify the ONE CORRECT matching between the OSI layers and their corresponding functionalities as shown.<br><br><table style='border: 1px solid white; border-collapse: collapse; margin: 0 auto; text-align: center;'><thead><tr><th style='border: 1px solid white; padding: 8px 20px; text-decoration: underline;'>OSI Layers</th><th style='border: 1px solid white; padding: 8px 20px; text-decoration: underline;'>Functionalities</th></tr></thead><tbody><tr><td style='border: 1px solid white; padding: 6px 20px; text-align: left;'>(a) Network layer</td><td style='border: 1px solid white; padding: 6px 20px; text-align: left;'>(I) Packet routing</td></tr><tr><td style='border: 1px solid white; padding: 6px 20px; text-align: left;'>(b) Transport layer</td><td style='border: 1px solid white; padding: 6px 20px; text-align: left;'>(II) Framing and error handling</td></tr><tr><td style='border: 1px solid white; padding: 6px 20px; text-align: left;'>(c) Datalink layer</td><td style='border: 1px solid white; padding: 6px 20px; text-align: left;'>(III) Host to host communication</td></tr></tbody></table>",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "(a)-(I), (b)-(II), (c)-(III)",
+    "(a)-(I), (b)-(III), (c)-(II)",
+    "(a)-(II), (b)-(I), (c)-(III)",
+    "(a)-(III), (b)-(II), (c)-(I)"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "To find the correct matching:<br><br><strong>1. Network Layer (a):</strong> Responsible for routing packets across network boundaries (Packet routing). Thus, <strong>(a) matches with (I)</strong>.<br><br><strong>2. Transport Layer (b):</strong> Responsible for process-to-process communication, end-to-end delivery, or host-to-host delivery/communication mechanisms depending on context. Here, <strong>(b) matches with (III)</strong>.<br><br><strong>3. Datalink Layer (c):</strong> Responsible for node-to-node framing, media access, and error handling. Thus, <strong>(c) matches with (II)</strong>.<br><br>Correct Matching: <strong>(a)-(I), (b)-(III), (c)-(II)</strong>.",
+  "videoUrl": null
+}

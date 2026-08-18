@@ -1,0 +1,27 @@
+{
+  "id": 21,
+  "year": 2025,
+  "set": 1,
+  "topics": [
+    "Databases",
+    "B+ Trees"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider the following $B^+$ tree with 5 nodes, in which a node can store at most 3 key values. The value 23 is now inserted in the $B^+$ tree. Which of the following options(s) is/are CORRECT?",
+  "assetImage": "question21.png",
+  "codeBlock": null,
+  "options": [
+    "None of the nodes will split.",
+    "At least one node will split and redistribute.",
+    "The total number of nodes will remain same.",
+    "The height of the tree will increase."
+  ],
+  "answer": [
+    "B",
+    "D"
+  ],
+  "explanation": "<strong>Step 1: Understand the given $B^+$ Tree state</strong><br>A node can store at most 3 key values.<br>The leaf node containing values $[20, 21, 22]$ is full because it already holds 3 key values.<br><br><strong>Step 2: Inserting value 23</strong><br>1. Value 23 goes to the rightmost leaf node $[20, 21, 22]$.<br>2. Inserting 23 causes an overflow in this leaf node (it would temporarily contain 4 keys: $[20, 21, 22, 23]$).<br>3. This causes the leaf node to split into two leaf nodes.<br><br><strong>Step 3: Propagation of Split</strong><br>1. Splitting the leaf node pushes a key up to the parent node $[6, 12, 19]$.<br>2. Since the root node $[6, 12, 19]$ also already has 3 keys, receiving another key causes an overflow at the root level.<br>3. Thus, the root node splits as well, leading to the creation of a new root node.<br><br><strong>Conclusion:</strong><br>- At least one node will split (in fact, multiple nodes split and redistribute). Therefore, <strong>Option (B)</strong> is CORRECT.<br>- Since the root node splits, a new root is created, which increases the height of the tree. Therefore, <strong>Option (D)</strong> is CORRECT.",
+  "videoUrl": null
+}

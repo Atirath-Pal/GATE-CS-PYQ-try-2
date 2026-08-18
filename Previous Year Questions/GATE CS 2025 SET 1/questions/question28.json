@@ -1,0 +1,20 @@
+{
+  "id": 28,
+  "year": 2025,
+  "set": 1,
+  "topics": ["Theory of Computation", "Finite Automata"],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "A regular language $L$ is accepted by a non-deterministic finite automaton (NFA) with $n$ states. Which of the following statement(s) is/are FALSE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$L$ may have an accepting NFA with $< n$ states.",
+    "$L$ may have an accepting DFA with $< n$ states.",
+    "There exists a DFA with $\\le 2^n$ states that accepts $L$.",
+    "Every DFA that accepts $L$ has $> 2^n$ states."
+  ],
+  "answer": ["D"],
+  "explanation": "<strong>Step-by-step evaluation of each statement:</strong><br><br><strong>1. Statement (A):</strong> \"$L$ may have an accepting NFA with $< n$ states.\"<br>This is <strong>TRUE</strong>. An NFA with $n$ states is not guaranteed to be minimal. It is possible to construct or find an equivalent NFA with fewer than $n$ states for the same language $L$.<br><br><strong>2. Statement (B):</strong> \"$L$ may have an accepting DFA with $< n$ states.\"<br>This is <strong>TRUE</strong>. For example, an NFA with $n$ redundant states could accept a language as simple as $\\Sigma^*$, which can be accepted by a 1-state DFA (where $1 < n$ for any $n > 1$).<br><br><strong>3. Statement (C):</strong> \"There exists a DFA with $\\le 2^n$ states that accepts $L$.\"<br>This is <strong>TRUE</strong>. By using the standard subset construction method (powerset construction), any NFA with $n$ states can be converted into an equivalent DFA with at most $2^n$ states.<br><br><strong>4. Statement (D):</strong> \"Every DFA that accepts $L$ has $> 2^n$ states.\"<br>This is <strong>FALSE</strong>, because we are guaranteed the existence of an equivalent DFA with at most $2^n$ states (by subset construction).<br><br>Since the question asks for the statement(s) that is/are <strong>FALSE</strong>, option <strong>D</strong> is the correct choice."
+}

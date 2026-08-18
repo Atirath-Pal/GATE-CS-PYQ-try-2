@@ -1,0 +1,22 @@
+{
+  "id": 58,
+  "year": 2025,
+  "set": 1,
+  "topics": [
+    "Engineering Mathematics",
+    "Probability and Statistics"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a probability distribution given by the density function $P(x)$.<br><br>$$P(x) = \\begin{cases} Cx^2, & \\text{for } 1 \\le x \\le 4 \\\\ 0, & \\text{for } x < 1 \\text{ or } x > 4 \\end{cases}$$<br><br>The probability that $x$ lies between $2$ and $3$, i.e., $P(2 \\le x \\le 3)$ is __________.<br>(rounded off to three decimal places)",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 0.300,
+    "max": 0.302
+  },
+  "explanation": "<strong>Step 1: Find the normalization constant $C$.</strong><br>Since $P(x)$ is a valid probability density function, the total probability over the entire domain must equal $1$:<br>$\\int_{-\\infty}^{\\infty} P(x) \\, dx = 1$<br><br>$\\int_{1}^{4} C x^2 \\, dx = 1$<br><br>$C \\left[ \\frac{x^3}{3} \\right]_{1}^{4} = 1$<br><br>$C \\left( \\frac{64 - 1}{3} \\right) = 1$<br><br>$C \\left( \\frac{63}{3} \\right) = 1 \\implies 21C = 1 \\implies C = \\frac{1}{21}$<br><br><strong>Step 2: Calculate $P(2 \\le x \\le 3)$.</strong><br>$P(2 \\le x \\le 3) = \\int_{2}^{3} P(x) \\, dx = \\int_{2}^{3} \\frac{1}{21} x^2 \\, dx$<br><br>$= \\frac{1}{21} \\left[ \\frac{x^3}{3} \\right]_{2}^{3}$<br><br>$= \\frac{1}{21} \\left( \\frac{27 - 8}{3} \\right) = \\frac{1}{21} \\times \\frac{19}{3} = \\frac{19}{63}$<br><br><strong>Step 3: Convert to decimal.</strong><br>$\\frac{19}{63} \\approx 0.30158... \\approx 0.302$<br><br>Thus, the value rounded off to three decimal places is <strong>0.302</strong> (acceptable range: 0.300 to 0.302).",
+  "videoUrl": null
+}

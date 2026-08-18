@@ -1,0 +1,21 @@
+{
+  "id": 15,
+  "year": 2025,
+  "set": 1,
+  "topics": ["Databases", "Transactions and Concurrency Control"],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "A schedule of three database transactions $T_1$, $T_2$, and $T_3$ is shown. $R_i(A)$ and $W_i(A)$ denote read and write of data item $A$ by transaction $T_i, i = 1,2,3$. The transaction $T_1$ aborts at the end. Which other transaction(s) will be required to be rolled back?<br><br>$$R_1(X) \\, W_1(Y) \\, R_2(X) \\, R_2(Y) \\, R_3(Y) \\, ABORT(T_1)$$",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Only $T_2$",
+    "Only $T_3$",
+    "Both $T_2$ and $T_3$",
+    "Neither $T_2$ nor $T_3$"
+  ],
+  "answer": ["C"],
+  "explanation": "<strong>Step 1: Analyze the sequence of operations in the given schedule:</strong><br>1. $T_1$ reads $X$: $R_1(X)$<br>2. $T_1$ writes to $Y$: $W_1(Y)$<br>3. $T_2$ reads $X$: $R_2(X)$<br>4. $T_2$ reads $Y$: $R_2(Y)$<br>5. $T_3$ reads $Y$: $R_3(Y)$<br>6. $T_1$ aborts: $ABORT(T_1)$<br><br><strong>Step 2: Identify dirty reads (Dirty Read Problem):</strong><br>A dirty read occurs when a transaction reads data that has been modified by another uncommitted transaction.<br><br>- $T_1$ writes data item $Y$ via $W_1(Y)$.<br>- $T_2$ subsequently reads $Y$ via $R_2(Y)$ before $T_1$ commits or aborts. Thus, $T_2$ performs a dirty read on $Y$.<br>- $T_3$ also reads $Y$ via $R_3(Y)$ before $T_1$ commits or aborts. Thus, $T_3$ performs a dirty read on $Y$.<br><br><strong>Step 3: Determine cascading rollback requirement:</strong><br>Since $T_1$ aborts ($ABORT(T_1)$), any transaction that read uncommitted data modified by $T_1$ must also be rolled back to maintain consistency (cascading rollback).<br><br>Because both $T_2$ and $T_3$ read uncommitted data written by $T_1$, both **$T_2$ and $T_3$** must be rolled back.<br><br>Therefore, the correct option is <strong>Both $T_2$ and $T_3$</strong>.",
+  "videoUrl": null
+}

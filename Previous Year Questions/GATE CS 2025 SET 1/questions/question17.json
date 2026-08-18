@@ -1,0 +1,21 @@
+{
+  "id": 17,
+  "year": 2025,
+  "set": 1,
+  "topics": ["Discrete Mathematics", "Functions"],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "$g(.)$ is a function from $A$ to $B$, $f(.)$ is a function from $B$ to $C$, and their composition defined as $f(g(.))$ is a mapping from $A$ to $C$.<br><br>If $f(.)$ and $f(g(.))$ are onto (surjective) functions, which ONE of the following is TRUE about the function $g(.)$?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$g(.)$ must be an onto (surjective) function.",
+    "$g(.)$ must be a one-to-one (injective) function.",
+    "$g(.)$ must be a bijective function, that is, both one-to-one and onto.",
+    "$g(.)$ is not required to be a one-to-one or onto function."
+  ],
+  "answer": ["D"],
+  "explanation": "<strong>Step 1: Understand the given setup</strong><br>We have sets $A$, $B$, and $C$, with functions $g: A \\to B$ and $f: B \\to C$. The composite function is $f \\circ g: A \\to C$.<br>We are given that $f$ and $f \\circ g$ are onto (surjective).<br><br><strong>Step 2: Construct a counterexample</strong><br>Let's construct a simple counterexample to see if $g$ must be injective or surjective:<br>Let $A = \\{a_1, a_2\\}$, $B = \\{b_1, b_2, b_3\\}$, and $C = \\{c_1, c_2\\}$.<br><br>Define $g: A \\to B$ as:<br>$g(a_1) = b_1$<br>$g(a_2) = b_2$<br>Notice that element $b_3 \\in B$ is not mapped to by any element in $A$. Thus, $g$ is <strong>not onto</strong>.<br>Also, no two elements in $A$ map to the same element in $B$ in this definition, but let's test another case for injectivity.<br><br>Now define $f: B \\to C$ as:<br>$f(b_1) = c_1$<br>$f(b_2) = c_2$<br>$f(b_3) = c_2$<br><br>Here, $f(B) = \\{c_1, c_2\\} = C$, so $f$ is <strong>onto</strong>.<br>The composition $(f \\circ g): A \\to C$ gives:<br>$(f \\circ g)(a_1) = f(g(a_1)) = f(b_1) = c_1$<br>$(f \\circ g)(a_2) = f(g(a_2)) = f(b_2) = c_2$<br>Thus, $(f \\circ g)(A) = \\{c_1, c_2\\} = C$, so $f \\circ g$ is <strong>onto</strong>.<br><br>In this valid scenario, $g$ is <strong>not onto</strong> because $b_3$ is not in the range of $g$.<br><br>To show $g$ does not need to be <strong>one-to-one</strong>, consider $A = \\{a_1, a_2, a_3\\}$, $B = \\{b_1, b_2\\}$, and $C = \\{c_1\\}$.<br>Let $g(a_1) = b_1, g(a_2) = b_1, g(a_3) = b_2$. Here, $g$ is clearly not one-to-one.<br>Let $f(b_1) = c_1, f(b_2) = c_1$. Here, $f$ is onto, and $(f \\circ g)$ is also onto.<br><br><strong>Step 3: Conclusion</strong><br>Therefore, $g(.)$ is not required to be either a one-to-one or an onto function.<br><br><strong>Correct Answer: (D)</strong>",
+  "videoUrl": null
+}

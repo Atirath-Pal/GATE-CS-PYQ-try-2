@@ -1,0 +1,21 @@
+{
+  "id": 7,
+  "year": 2025,
+  "set": 1,
+  "topics": ["General Aptitude", "Geometry"],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "In the diagram, the lines QR and ST are parallel to each other. The shortest distance between these two lines is half the shortest distance between the point P and line QR. What is the ratio of the area of the triangle PST to the area of the trapezium SQRT?<br><br>Note: The figure shown is representative.",
+  "assetImage": "question7.png",
+  "codeBlock": null,
+  "options": [
+    "$\\frac{1}{3}$",
+    "$\\frac{1}{4}$",
+    "$\\frac{2}{5}$",
+    "$\\frac{1}{2}$"
+  ],
+  "answer": ["A"],
+  "explanation": "<strong>Step 1: Understand the given height relations.</strong><br>Let $H$ be the shortest distance (height) from vertex $P$ to the line $QR$.<br>The shortest distance between lines $ST$ and $QR$ is given as $\\frac{H}{2}$.<br>Therefore, the height of triangle $PST$ from $P$ to $ST$ is $h = H - \\frac{H}{2} = \\frac{H}{2}$.<br><br><strong>Step 2: Determine similarity ratio.</strong><br>Since $ST \\parallel QR$, $\\triangle PST$ is similar to $\\triangle PQR$ ($\\triangle PST \\sim \\triangle PQR$).<br>The ratio of their heights is:<br>$\\frac{h}{H} = \\frac{\\frac{H}{2}}{H} = \\frac{1}{2}$.<br><br><strong>Step 3: Calculate the area ratio.</strong><br>The ratio of the area of two similar triangles is the square of the ratio of their corresponding heights:<br>$\\frac{\\text{Area}(\\triangle PST)}{\\text{Area}(\\triangle PQR)} = \\left(\\frac{1}{2}\\right)^2 = \\frac{1}{4}$.<br><br><strong>Step 4: Find the area of trapezium SQRT.</strong><br>$\\text{Area}(\\text{trapezium SQRT}) = \\text{Area}(\\triangle PQR) - \\text{Area}(\\triangle PST)$.<br>If $\\text{Area}(\\triangle PST) = 1$ unit, then $\\text{Area}(\\triangle PQR) = 4$ units.<br>Thus, $\\text{Area}(\\text{trapezium SQRT}) = 4 - 1 = 3$ units.<br><br><strong>Step 5: Compute the required ratio.</strong><br>$\\frac{\\text{Area}(\\triangle PST)}{\\text{Area}(\\text{trapezium SQRT})} = \\frac{1}{3}$.<br><br>Hence, option (A) is the correct answer.",
+  "videoUrl": null
+}

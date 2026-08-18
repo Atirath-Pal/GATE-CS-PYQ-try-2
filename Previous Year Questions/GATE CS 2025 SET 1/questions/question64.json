@@ -1,0 +1,22 @@
+{
+  "id": 64,
+  "year": 2025,
+  "set": 1,
+  "topics": [
+    "Algorithms",
+    "Graph Theory"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "The maximum value of $x$ such that the edge between the nodes B and C is included in every minimum spanning tree of the given graph is ________ . (answer in integer)",
+  "assetImage": "question64.png",
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 5,
+    "max": 5
+  },
+  "explanation": "<strong>Step-by-step Solution:</strong><br><br>1. An edge $e$ is included in <strong>every</strong> Minimum Spanning Tree (MST) of a connected graph if and only if there exists a cut for which $e$ is the <strong>unique minimum-weight edge</strong> crossing that cut.<br><br>2. Consider the cut $S = \\{B\\}$ and $V \\setminus S = \\{A, C, D\\}$. The edges crossing this cut are:<br>- Edge $(B, A)$ with weight $7$<br>- Edge $(B, D)$ with weight $1$<br>- Edge $(B, C)$ with weight $x$<br><br>3. Consider the fundamental cycles formed by adding edge $(B, C)$ to potential MSTs:<br>- Cycle $B - C - A - B$ with edge weights $x$, $3$, and $7$. For edge $(B, C)$ to be strictly smaller than the heaviest edge in this cycle, $x < 7$.<br>- Cycle $B - C - D - B$ with edge weights $x$, $8$, and $1$. For edge $(B, C)$ to be strictly smaller than the heaviest edge in this cycle, $x < 8$.<br>- Cycle $A - B - C - D - A$ or other combinations. Let's look at the cycle formed by edges $(B, C)$, $(C, A)$, $(A, D)$, and $(D, B)$:<br>  - Edge $(B, C)$ has weight $x$<br>  - Edge $(C, A)$ has weight $3$<br>  - Edge $(A, D)$ has weight $6$<br>  - Edge $(D, B)$ has weight $1$<br><br>4. In the cycle $B - C - A - D - B$, the edges have weights $x, 3, 6, 1$.<br>For the edge $(B, C)$ of weight $x$ to be included in <strong>every</strong> MST, it must not be the maximum-weight edge in any cycle containing it, or more strictly, there must be a cut where it is the unique minimum edge.<br><br>5. Let's analyze the cuts involving $C$:<br>Consider the cut $S = \\{C\\}$ and $V \\setminus S = \\{A, B, D\\}$. The edges crossing this cut are:<br>- Edge $(C, A)$ with weight $3$<br>- Edge $(C, D)$ with weight $8$<br>- Edge $(C, B)$ with weight $x$<br>If $x < 3$, then $(C, B)$ is the unique minimum weight edge for this cut.<br><br>6. Now consider the cut separating $\\{B, C\\}$ from $\\{A, D\\}$:<br>The edges crossing the cut between $\\{B, C\\}$ and $\\{A, D\\}$ are:<br>- Edge $(B, A)$ with weight $7$<br>- Edge $(B, D)$ with weight $1$<br>- Edge $(C, A)$ with weight $3$<br>- Edge $(C, D)$ with weight $8$<br><br>7. Consider cycle $B - C - A - D - B$ with edge weights $x$, $3$, $6$, $1$.<br>For edge $(B, C)$ to be part of every MST, it must be strictly lighter than the maximum edge in this cycle if it were to replace another edge, but more directly, the path between $B$ and $C$ without using edge $(B, C)$ consists of edges $(B, D)$ of weight $1$, $(D, A)$ of weight $6$, and $(A, C)$ of weight $3$.<br>The max weight on the path $B - D - A - C$ is $\\max(1, 6, 3) = 6$.<br>If $x < 6$, then edge $(B, C)$ is strictly lighter than the heaviest edge (6) on the alternative path between $B$ and $C$.<br>If $x = 6$, there exists an alternative MST using the edge of weight $6$ instead of $(B, C)$, so $(B, C)$ wouldn't be in <em>every</em> MST.<br>Thus, $x < 6$.<br><br>8. Since $x$ must be an integer, the maximum integer value of $x$ such that $x < 6$ is <strong>5</strong>.",
+  "videoUrl": null
+}

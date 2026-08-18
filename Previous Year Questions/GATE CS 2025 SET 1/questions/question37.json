@@ -1,0 +1,26 @@
+{
+  "id": 37,
+  "year": 2025,
+  "set": 1,
+  "topics": [
+    "Computer Organization and Architecture",
+    "Instruction Architecture"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "A processor has 64 general-purpose registers and 50 distinct instruction types. An instruction is encoded in 32-bits. What is the maximum number of bits that can be used to store the immediate operand for the given instruction?<br><br><b>ADD R1, #25 &nbsp;&nbsp;&nbsp;&nbsp; // R1 = R1 + 25</b>",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "16",
+    "20",
+    "22",
+    "24"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step 1: Determine bits required for Opcode</strong><br>There are 50 distinct instruction types.<br>Bits required for opcode = $\\lceil \\log_2(50) \\rceil = 6$ bits.<br><br><strong>Step 2: Determine bits required for the register operand</strong><br>There are 64 general-purpose registers.<br>Bits required to address one register = $\\lceil \\log_2(64) \\rceil = 6$ bits.<br>The instruction given is <code>ADD R1, #25</code>, where <code>R1</code> acts as both the destination and source register (i.e., $R1 = R1 + 25$). Thus, only 1 register address is specified in the instruction format.<br><br><strong>Step 3: Calculate remaining bits for the Immediate Operand</strong><br>Total instruction size = 32 bits.<br>Bits used for Opcode = 6 bits.<br>Bits used for Register ($R1$) = 6 bits.<br>Bits remaining for Immediate Operand = $32 - (6 + 6) = 20$ bits.<br><br>Therefore, the maximum number of bits available for the immediate operand is <strong>20</strong>.",
+  "videoUrl": null
+}
