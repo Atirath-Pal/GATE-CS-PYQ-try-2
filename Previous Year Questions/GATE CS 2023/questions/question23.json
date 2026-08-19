@@ -1,0 +1,27 @@
+{
+  "id": 23,
+  "year": 2023,
+  "set": null,
+  "topics": [
+    "Operating Systems",
+    "System Calls"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Which one or more of the following options guarantee that a computer system will transition from user mode to kernel mode?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Function Call",
+    "malloc Call",
+    "Page Fault",
+    "System Call"
+  ],
+  "answer": [
+    "C",
+    "D"
+  ],
+  "explanation": "<strong>Step-by-Step Explanation:</strong><br><br>1. <strong>Function Call:</strong> A normal function call executes entirely in user space within the program's stack frame and does not require switching to kernel mode.<br><br>2. <strong>malloc Call:</strong> <code>malloc</code> is a C library function that allocates memory from the process heap in user space. It only invokes a system call (such as <code>sbrk</code> or <code>mmap</code>) when the heap needs to be expanded. Thus, it does not <em>guarantee</em> a transition to kernel mode on every invocation.<br><br>3. <strong>Page Fault:</strong> A page fault is a hardware exception/trap triggered when a process attempts to access a virtual memory address that is not currently mapped in physical memory. Handling traps requires the CPU to immediately transition from user mode to kernel mode to run the page fault handler.<br><br>4. <strong>System Call:</strong> A system call is a mechanism used by an application to request services from the operating system kernel. Executing a system call instruction (e.g., <code>syscall</code> or <code>int 0x80</code>) inherently switches execution from user mode to kernel mode.<br><br>Therefore, <strong>(C) Page Fault</strong> and <strong>(D) System Call</strong> guarantee a mode switch.",
+  "videoUrl": null
+}

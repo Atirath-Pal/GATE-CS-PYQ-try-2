@@ -1,0 +1,21 @@
+{
+  "id": 28,
+  "year": 2023,
+  "set": null,
+  "topics": ["Engineering Mathematics", "Calculus"],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Let<br>$$f(x) = x^3 + 15x^2 - 33x - 36$$<br>be a real-valued function.<br><br>Which of the following statements is/are TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$f(x)$ does not have a local maximum.",
+    "$f(x)$ has a local maximum.",
+    "$f(x)$ does not have a local minimum.",
+    "$f(x)$ has a local minimum."
+  ],
+  "answer": ["B", "D"],
+  "explanation": "To determine local extrema, we find the critical points using the first and second derivatives.<br><br><strong>Step 1: First Derivative</strong><br>$$f'(x) = 3x^2 + 30x - 33 = 3(x^2 + 10x - 11)$$<br><br><strong>Step 2: Critical Points</strong><br>Set $f'(x) = 0$:<br>$$3(x + 11)(x - 1) = 0 \\implies x = -11, \\, x = 1$$<br><br><strong>Step 3: Second Derivative Test</strong><br>$$f''(x) = 6x + 30$$<br>At $x = -11$: $f''(-11) = 6(-11) + 30 = -36 < 0$, which indicates a <strong>local maximum</strong>.<br>At $x = 1$: $f''(1) = 6(1) + 30 = 36 > 0$, which indicates a <strong>local minimum</strong>.<br><br>Thus, $f(x)$ has both a local maximum and a local minimum. Therefore, statements (B) and (D) are correct.",
+  "videoUrl": null
+}

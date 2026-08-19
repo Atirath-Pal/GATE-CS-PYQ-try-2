@@ -1,0 +1,22 @@
+{
+  "id": 35,
+  "year": 2023,
+  "set": null,
+  "topics": [
+    "Programming and Data Structures",
+    "C Programming"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "The integer value printed by the ANSI-C program given below is ________.",
+  "assetImage": null,
+  "codeBlock": "#include<stdio.h>\n\nint funcp(){\n    static int x = 1;\n    x++;\n    return x;\n}\n\nint main(){\n    int x,y;\n    x = funcp();\n    y = funcp()+x;\n    printf(\"%d\\n\", (x+y));\n    return 0;\n}",
+  "options": [],
+  "answer": {
+    "min": 7,
+    "max": 7
+  },
+  "explanation": "<strong>Step 1: First call to <code>funcp()</code></strong><br>In <code>main()</code>, statement <code>x = funcp();</code> is executed.<br>Inside <code>funcp()</code>, the static variable $x$ is initialized to $1$ (only once during execution).<br>$x++$ increments this static $x$ to $2$, which is then returned.<br>So, <code>main()</code>'s variable $x$ gets assigned $2$.<br><br><strong>Step 2: Second call to <code>funcp()</code></strong><br>In <code>main()</code>, statement <code>y = funcp() + x;</code> is executed.<br>When <code>funcp()</code> is called again, the static variable $x$ retains its previous value ($2$).<br>$x++$ increments it to $3$, and $3$ is returned.<br>Since <code>main()</code>'s local variable $x$ is $2$, we get $y = 3 + 2 = 5$.<br><br><strong>Step 3: Calculate the printed value</strong><br>The statement <code>printf(\"%d\\n\", (x+y));</code> prints $x + y = 2 + 5 = 7$.<br><br>Therefore, the output printed is <strong>7</strong>.",
+  "videoUrl": null
+}

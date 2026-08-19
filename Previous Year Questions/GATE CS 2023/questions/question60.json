@@ -1,0 +1,22 @@
+{
+  "id": 60,
+  "year": 2023,
+  "set": null,
+  "topics": [
+    "Compiler Design",
+    "Syntax Directed Translation"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the syntax directed translation given by the following grammar and semantic rules. Here $N$, $I$, $F$ and $B$ are non-terminals. $N$ is the starting non-terminal, and $\\#$, $0$ and $1$ are lexical tokens corresponding to input letters \"$\\#$\", \"$0$\" and \"$1$\", respectively. $X.val$ denotes the synthesized attribute (a numeric value) associated with a non-terminal $X$. $I_1$ and $F_1$ denote occurrences of $I$ and $F$ on the right hand side of a production, respectively. For the tokens $0$ and $1$, $0.val = 0$ and $1.val = 1$.<br><br>The grammar and semantic rules are:<br><br>$N \\rightarrow I \\# F$ &nbsp;&nbsp; $N.val = I.val + F.val$<br>$I \\rightarrow I_1 B$ &nbsp;&nbsp; $I.val = (2 \\times I_1.val) + B.val$<br>$I \\rightarrow B$ &nbsp;&nbsp; $I.val = B.val$<br>$F \\rightarrow B F_1$ &nbsp;&nbsp; $F.val = \\frac{1}{2}(B.val + F_1.val)$<br>$F \\rightarrow B$ &nbsp;&nbsp; $F.val = \\frac{1}{2}B.val$<br>$B \\rightarrow 0$ &nbsp;&nbsp; $B.val = 0.val$<br>$B \\rightarrow 1$ &nbsp;&nbsp; $B.val = 1.val$<br><br>The value computed by the translation scheme for the input string $10\\#011$ is ________ (Rounded off to three decimal places).",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 2.374,
+    "max": 2.376
+  },
+  "explanation": "<strong>Step 1: Evaluate the left part $I$ for the string $10$.</strong><br>Using $I \\rightarrow I_1B$, the first bit is $1$ and the next bit is $0$. Thus, $I.val = (2 \\times 1) + 0 = 2$.<br><br><strong>Step 2: Evaluate the right part $F$ for the string $011$.</strong><br>For the last bit $1$, using $F \\rightarrow B$, we get $F.val = \\frac{1}{2}(1) = 0.5$.<br><br>For $11$, using $F \\rightarrow BF_1$, we get $F.val = \\frac{1}{2}(1 + 0.5) = 0.75$.<br><br>For $011$, using $F \\rightarrow BF_1$, we get $F.val = \\frac{1}{2}(0 + 0.75) = 0.375$.<br><br><strong>Step 3: Evaluate $N$.</strong><br>Using $N \\rightarrow I\\#F$, $N.val = I.val + F.val = 2 + 0.375 = 2.375$.<br><br><strong>Step 4: Round off.</strong><br>The value rounded to three decimal places is $2.375$, which lies within the accepted NAT range $2.374$ to $2.376$.",
+  "videoUrl": null
+}

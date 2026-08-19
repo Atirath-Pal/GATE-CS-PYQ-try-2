@@ -1,0 +1,26 @@
+{
+  "id": 6,
+  "year": "2023",
+  "set": null,
+  "topics": [
+    "General Aptitude",
+    "Critical Reasoning"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "The country of Zombieland is in distress since more than 75% of its working population is suffering from serious health issues. Studies conducted by competent health experts concluded that a complete lack of physical exercise among its working population was one of the leading causes of their health issues. As one of the measures to address the problem, the Government of Zombieland has decided to provide monetary incentives to those who ride bicycles to work.<br><br>Based only on the information provided above, which one of the following statements can be logically inferred with <i>certainty</i>?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "All the working population of Zombieland will henceforth ride bicycles to work.",
+    "Riding bicycles will ensure that all of the working population of Zombieland is free of health issues.",
+    "The health experts suggested to the Government of Zombieland to declare riding bicycles as mandatory.",
+    "The Government of Zombieland believes that riding bicycles is a form of physical exercise."
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Step 1: Analyze the passage</strong><br>The passage states that:<br>1. Lack of physical exercise is one of the leading causes of health issues.<br>2. To address this problem, the Government decided to provide monetary incentives for riding bicycles to work.<br><br><strong>Step 2: Evaluate Option (D)</strong><br>Since the government's action to solve the lack of physical exercise is to incentivize riding bicycles, it directly implies that the Government believes riding bicycles is a form of physical exercise.<br><br><strong>Step 3: Eliminate other options</strong><br>- <strong>Option (A):</strong> Incentives do not logically guarantee that <em>all</em> workers will switch to riding bicycles.<br>- <strong>Option (B):</strong> Lack of exercise is only <em>one</em> of the causes, so riding bicycles does not guarantee everyone will be completely free of health issues.<br>- <strong>Option (C):</strong> There is no statement in the passage that experts recommended making bicycle riding mandatory.<br><br>Therefore, <strong>Option (D)</strong> is the only statement that can be logically inferred with certainty.",
+  "videoUrl": null
+}

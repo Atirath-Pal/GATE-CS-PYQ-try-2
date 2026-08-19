@@ -1,0 +1,22 @@
+{
+  "id": 30,
+  "year": 2023,
+  "set": null,
+  "topics": [
+    "Graph Theory",
+    "Linear Algebra"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Let $A$ be the adjacency matrix of the graph with vertices $\\{1, 2, 3, 4, 5\\}$.<br><br>Let $\\lambda_1, \\lambda_2, \\lambda_3, \\lambda_4$, and $\\lambda_5$ be the five eigenvalues of $A$. Note that these eigenvalues need not be distinct.<br>The value of $\\lambda_1 + \\lambda_2 + \\lambda_3 + \\lambda_4 + \\lambda_5 = $ _________.",
+  "assetImage": "question30.png",
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 2,
+    "max": 4
+  },
+  "explanation": "<strong>Step 1: Relate eigenvalues to trace of the matrix.</strong><br>The sum of the eigenvalues of a matrix $A$ is equal to the trace of $A$, which is the sum of its diagonal entries:<br>$\\sum_{i=1}^{5} \\lambda_i = \\text{Tr}(A) = \\sum_{i=1}^{5} A_{ii}$<br><br><strong>Step 2: Calculate the diagonal entries $A_{ii}$.</strong><br>In an adjacency matrix, the diagonal element $A_{ii}$ corresponds to self-loops at vertex $i$.<br>- Vertices $1, 2, 5$ have no self-loops, so $A_{11} = A_{22} = A_{55} = 0$.<br>- Vertices $3$ and $4$ each have $1$ self-loop.<br><br><strong>Step 3: Determine the trace value.</strong><br>- If each self-loop contributes $1$ to the diagonal (standard convention), then $A_{33} = 1$ and $A_{44} = 1$, giving $\\text{Tr}(A) = 1 + 1 = 2$.<br>- If each self-loop contributes $2$ to the diagonal (alternative undirected graph convention), then $A_{33} = 2$ and $A_{44} = 2$, giving $\\text{Tr}(A) = 2 + 2 = 4$.<br><br>Hence, the answer is $2$ (or $4$).",
+  "videoUrl": null
+}

@@ -1,0 +1,19 @@
+{
+  "id": 56,
+  "year": 2023,
+  "set": null,
+  "topics": ["Algorithms", "Graph Theory"],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Let $U = \\{1, 2, 3\\}$. Let $2^U$ denote the powerset of $U$. Consider an undirected graph $G$ whose vertex set is $2^U$. For any $A, B \\in 2^U$, $(A, B)$ is an edge in $G$ if and only if (i) $A \\neq B$, and (ii) either $A \\subsetneq B$ or $B \\subsetneq A$. For any vertex $A$ in $G$, the set of all possible orderings in which the vertices of $G$ can be visited in a Breadth First Search (BFS) starting from $A$ is denoted by $\\mathcal{B}(A)$.<br><br>If $\\emptyset$ denotes the empty set, then the cardinality of $\\mathcal{B}(\\emptyset)$ is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 5040,
+    "max": 5040
+  },
+  "explanation": "<strong>Step 1: Understand the structure of the graph $G$.</strong><br>The vertex set of $G$ is the powerset $2^U$ where $U = \\{1, 2, 3\\}$.<br>The total number of vertices in $G$ is $|2^U| = 2^3 = 8$.<br><br><strong>Step 2: Determine the adjacency of the empty set $\\emptyset$.</strong><br>An edge exists between two vertices $A$ and $B$ if $A \\neq B$ and either $A \\subsetneq B$ or $B \\subsetneq A$.<br>For any non-empty set $B \\in 2^U \\setminus \\{\\emptyset\\}$, the relation $\\emptyset \\subsetneq B$ holds true.<br>Thus, the empty set $\\emptyset$ is directly connected to all remaining $8 - 1 = 7$ vertices in $G$.<br><br><strong>Step 3: Analyze BFS traversal starting from $\\emptyset$.</strong><br>In a Breadth First Search starting from $\\emptyset$ (level 0), all remaining $7$ vertices are at a distance of $1$ from $\\emptyset$.<br>Since all other $7$ vertices are discovered simultaneously in the first step, they can be visited in any arbitrary order.<br><br><strong>Step 4: Calculate the number of distinct BFS orderings.</strong><br>The number of ways to permute the remaining $7$ vertices is $7!$:<br>$7! = 7 \\times 6 \\times 5 \\times 4 \\times 3 \\times 2 \\times 1 = 5040$.<br><br>Therefore, the cardinality of $\\mathcal{B}(\\emptyset)$ is <strong>5040</strong>.",
+  "videoUrl": null
+}

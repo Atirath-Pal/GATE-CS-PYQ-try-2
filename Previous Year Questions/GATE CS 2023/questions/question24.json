@@ -1,0 +1,28 @@
+{
+  "id": 24,
+  "year": 2023,
+  "set": null,
+  "topics": [
+    "Formal Languages",
+    "Computability Theory"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Which of the following statements is/are CORRECT?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "The intersection of two regular languages is regular.",
+    "The intersection of two context-free languages is context-free.",
+    "The intersection of two recursive languages is recursive.",
+    "The intersection of two recursively enumerable languages is recursively enumerable."
+  ],
+  "answer": [
+    "A",
+    "C",
+    "D"
+  ],
+  "explanation": "<strong>Option A:</strong> Correct. Regular languages are closed under intersection. Given DFAs for two regular languages, their intersection can be recognized using the product construction.<br><br><strong>Option B:</strong> Incorrect. Context-free languages are not closed under intersection. For example, suitable context-free languages can have an intersection that is not context-free.<br><br><strong>Option C:</strong> Correct. Recursive languages are closed under intersection. Given two deciders, run both deciders on the input and accept only if both accept. Since both machines halt, the resulting machine also halts.<br><br><strong>Option D:</strong> Correct. Recursively enumerable languages are closed under intersection. Given two recognizers, simulate them in dovetailing fashion and accept when both recognizers have accepted. If the input belongs to both languages, both recognizers eventually accept.",
+  "videoUrl": null
+}

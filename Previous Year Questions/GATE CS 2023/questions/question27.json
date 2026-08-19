@@ -1,0 +1,28 @@
+{
+  "id": 27,
+  "year": 2023,
+  "set": null,
+  "topics": [
+    "Operating Systems",
+    "CPU Scheduling"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Which one or more of the following CPU scheduling algorithms can potentially cause starvation?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "First-in First-Out",
+    "Round Robin",
+    "Priority Scheduling",
+    "Shortest Job First"
+  ],
+  "answer": [
+    "A",
+    "C",
+    "D"
+  ],
+  "explanation": "<strong>Starvation</strong> occurs when a process is indefinitely delayed because other processes are given preference.<br><br><strong>Analysis of options:</strong><br><br>1. <strong>First-in First-Out (FIFO):</strong> Strictly speaking, standard FIFO executes processes in order of arrival. However, if a process runs infinitely, waiting processes starve. Hence, GATE official key considered both {C, D} and {A, C, D} as correct.<br><br>2. <strong>Round Robin:</strong> Every ready process gets a CPU time slice in cyclic order, preventing starvation.<br><br>3. <strong>Priority Scheduling:</strong> Continuous arrival of higher-priority processes can prevent lower-priority processes from ever running, causing starvation.<br><br>4. <strong>Shortest Job First (SJF):</strong> Continuous arrival of shorter processes can prevent longer processes from running, causing starvation.",
+  "videoUrl": null
+}

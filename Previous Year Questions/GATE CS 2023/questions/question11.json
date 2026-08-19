@@ -1,0 +1,25 @@
+{
+  "id": 11,
+  "year": 2023,
+  "set": null,
+  "topics": [
+    "Compiler Design"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the following statements regarding the front-end and back-end of a compiler.<br><br><b>S1:</b> The front-end includes phases that are independent of the target hardware.<br><b>S2:</b> The back-end includes phases that are specific to the target hardware.<br><b>S3:</b> The back-end includes phases that are specific to the programming language used in the source code.<br><br>Identify the CORRECT option.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Only <b>S1</b> is TRUE.",
+    "Only <b>S1</b> and <b>S2</b> are TRUE.",
+    "<b>S1</b>, <b>S2</b>, and <b>S3</b> are all TRUE.",
+    "Only <b>S1</b> and <b>S3</b> are TRUE."
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Statement 1 (S1):</strong> The front-end of a compiler handles language-specific analysis (Lexical, Syntax, and Semantic Analysis) and Intermediate Code Generation, making it independent of the target hardware architecture. Hence, <strong>S1 is TRUE</strong>.<br><br><strong>Statement 2 (S2):</strong> The back-end of a compiler takes intermediate representation and performs target-dependent code optimization and machine code generation, making it specific to the target hardware architecture. Hence, <strong>S2 is TRUE</strong>.<br><br><strong>Statement 3 (S3):</strong> The back-end operates on intermediate representation and is independent of the source programming language. Source language details are completely handled by the front-end. Hence, <strong>S3 is FALSE</strong>.<br><br>Therefore, only <strong>S1</strong> and <strong>S2</strong> are TRUE.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 47,
+  "year": 2023,
+  "set": null,
+  "topics": [
+    "Data Structures",
+    "Recursion"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the C function <code>foo</code> and the binary tree shown.<br><br>When <code>foo</code> is called with a pointer to the root node of the given binary tree, what will it print?",
+  "assetImage": "question47.png",
+  "codeBlock": "typedef struct node {\n    int val;\n    struct node *left, *right;\n} node;\n\nint foo(node *p) {\n    int retval;\n    if (p == NULL)\n        return 0;\n    else {\n        retval = p->val + foo(p->left) + foo(p->right);\n        printf(\"%d \", retval);\n        return retval;\n    }\n}",
+  "options": [
+    "3 8 5 13 11 10",
+    "3 5 8 10 11 13",
+    "3 8 16 13 24 50",
+    "3 16 8 50 24 13"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step-by-step Execution:</strong><br><br>The function <code>foo(p)</code> recursively calculates the sum of the node's value and the values returned by its left and right subtrees, then prints <code>retval</code> before returning it.<br><br>1. <strong>foo(10)</strong> calls <strong>foo(5)</strong> and <strong>foo(11)</strong>:<br>• <strong>foo(5)</strong> calls <strong>foo(3)</strong> and <strong>foo(8)</strong>:<br>&nbsp;&nbsp;&nbsp;&nbsp;- <strong>foo(3)</strong>: $p \\rightarrow \\text{left} = \\text{NULL}$, $p \\rightarrow \\text{right} = \\text{NULL}$. Returns $3 + 0 + 0 = 3$. Prints <strong>3</strong>.<br>&nbsp;&nbsp;&nbsp;&nbsp;- <strong>foo(8)</strong>: $p \\rightarrow \\text{left} = \\text{NULL}$, $p \\rightarrow \\text{right} = \\text{NULL}$. Returns $8 + 0 + 0 = 8$. Prints <strong>8</strong>.<br>&nbsp;&nbsp;&nbsp;&nbsp;- <strong>foo(5)</strong> returns $5 + 3 + 8 = 16$. Prints <strong>16</strong>.<br><br>• <strong>foo(11)</strong> calls <strong>foo(NULL)</strong> and <strong>foo(13)</strong>:<br>&nbsp;&nbsp;&nbsp;&nbsp;- <strong>foo(NULL)</strong> returns $0$.<br>&nbsp;&nbsp;&nbsp;&nbsp;- <strong>foo(13)</strong> returns $13 + 0 + 0 = 13$. Prints <strong>13</strong>.<br>&nbsp;&nbsp;&nbsp;&nbsp;- <strong>foo(11)</strong> returns $11 + 0 + 13 = 24$. Prints <strong>24</strong>.<br><br>• <strong>foo(10)</strong> returns $10 + 16 + 24 = 50$. Prints <strong>50</strong>.<br><br>The printed order is: <strong>3 8 16 13 24 50</strong>.",
+  "videoUrl": null
+}

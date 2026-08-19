@@ -1,0 +1,27 @@
+{
+  "id": 54,
+  "year": "2023",
+  "set": null,
+  "topics": [
+    "Algorithms",
+    "Asymptotic Analysis"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider functions <strong>Function_1</strong> and <strong>Function_2</strong> expressed in pseudocode as follows:<br><br>Let $f_1(n)$ and $f_2(n)$ denote the number of times the statement \"$x = x + 1$\" is executed in <strong>Function_1</strong> and <strong>Function_2</strong>, respectively.<br><br>Which of the following statements is/are TRUE?",
+  "assetImage": null,
+  "codeBlock": "Function_1:\nwhile n > 1 do\n    for i = 1 to n do\n        x = x + 1;\n    end for\n    n = \\lfloor n/2 \\rfloor;\nend while\n\nFunction_2:\nfor i = 1 to 100 * n do\n    x = x + 1;\nend for",
+  "options": [
+    "$f_1(n) \\in \\Theta(f_2(n))$",
+    "$f_1(n) \\in o(f_2(n))$",
+    "$f_1(n) \\in \\omega(f_2(n))$",
+    "$f_1(n) \\in O(n)$"
+  ],
+  "answer": [
+    "A",
+    "D"
+  ],
+  "explanation": "<strong>Step 1: Analyze Function_1</strong><br>In Function_1, during each iteration of the outer while loop, the inner for loop executes $n$ times. After each iteration, $n$ is updated to $\\lfloor n/2 \\rfloor$.<br><br>Therefore, the total number of executions is $f_1(n) = n + \\lfloor n/2 \\rfloor + \\lfloor n/4 \\rfloor + \\cdots$. This is a geometric series, so $f_1(n) = \\Theta(n)$.<br><br><strong>Step 2: Analyze Function_2</strong><br>In Function_2, the for loop executes from $1$ to $100n$. Therefore, $f_2(n) = 100n = \\Theta(n)$.<br><br><strong>Step 3: Evaluate the Options</strong><br><strong>Option A:</strong> Since $f_1(n) = \\Theta(n)$ and $f_2(n) = \\Theta(n)$, we have $f_1(n) \\in \\Theta(f_2(n))$. Hence, A is TRUE.<br><br><strong>Option B:</strong> $f_1(n) \\in o(f_2(n))$ would require $f_1(n)$ to grow strictly slower than $f_2(n)$. Since both functions are $\\Theta(n)$, B is FALSE.<br><br><strong>Option C:</strong> $f_1(n) \\in \\omega(f_2(n))$ would require $f_1(n)$ to grow strictly faster than $f_2(n)$. Since both functions are $\\Theta(n)$, C is FALSE.<br><br><strong>Option D:</strong> Since $f_1(n) = \\Theta(n)$, it follows directly that $f_1(n) \\in O(n)$. Hence, D is TRUE.<br><br>Therefore, the correct answers are <strong>A and D</strong>.",
+  "videoUrl": null
+}

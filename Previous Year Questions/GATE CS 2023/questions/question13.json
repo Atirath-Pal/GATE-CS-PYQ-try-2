@@ -1,0 +1,26 @@
+{
+  "id": 13,
+  "year": 2023,
+  "set": null,
+  "topics": [
+    "Data Structures",
+    "Linked List"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Let $\\texttt{SLLdel}$ be a function that deletes a node in a singly-linked list given a pointer to the node and a pointer to the head of the list. Similarly, let $\\texttt{DLLdel}$ be another function that deletes a node in a doubly-linked list given a pointer to the node and a pointer to the head of the list.<br><br>Let $n$ denote the number of nodes in each of the linked lists. Which one of the following choices is TRUE about the worst-case time complexity of $\\texttt{SLLdel}$ and $\\texttt{DLLdel}$?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\texttt{SLLdel}$ is $O(1)$ and $\\texttt{DLLdel}$ is $O(n)$",
+    "Both $\\texttt{SLLdel}$ and $\\texttt{DLLdel}$ are $O(\\log(n))$",
+    "Both $\\texttt{SLLdel}$ and $\\texttt{DLLdel}$ are $O(1)$",
+    "$\\texttt{SLLdel}$ is $O(n)$ and $\\texttt{DLLdel}$ is $O(1)$"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>1. Singly-Linked List Node Deletion (SLLdel):</strong><br>To delete a node in a singly-linked list, we must modify the $next$ pointer of the node preceding the node to be deleted. Since we are given a pointer to the target node and the head of the list, in the worst case (such as deleting the last node), we need to traverse the list starting from the head to find the predecessor node. This traversal takes $O(n)$ time.<br><br><strong>2. Doubly-Linked List Node Deletion (DLLdel):</strong><br>In a doubly-linked list, every node contains pointers to both its previous node ($prev$) and next node ($next$). Having a direct pointer to the target node allows us to access and update the pointers of adjacent nodes in $O(1)$ time without performing any traversal.<br><br>Therefore, $\\texttt{SLLdel}$ is $O(n)$ and $\\texttt{DLLdel}$ is $O(1)$.",
+  "videoUrl": null
+}

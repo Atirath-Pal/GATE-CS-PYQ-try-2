@@ -1,0 +1,26 @@
+{
+  "id": 5,
+  "year": 2023,
+  "set": null,
+  "topics": [
+    "General Aptitude",
+    "Spatial Aptitude"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Looking at the surface of a smooth 3-dimensional object from the outside, which one of the following options is TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "The surface of the object must be concave everywhere.",
+    "The surface of the object must be convex everywhere.",
+    "The surface of the object may be concave in some places and convex in other places.",
+    "The object can have edges, but no corners."
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "A smooth 3-dimensional object is differentiable across its entire surface, meaning it cannot have sharp discontinuities like edges or corners (eliminating option D).<br><br>Furthermore, a smooth 3D shape (such as a donut, a vase, or a dumbbell) can feature regions of varying curvature. It does not have to be exclusively concave or exclusively convex throughout its entire surface (eliminating options A and B).<br><br>Therefore, the surface may be concave in some places and convex in other places, making <strong>Option (C)</strong> the correct statement.",
+  "videoUrl": null
+}

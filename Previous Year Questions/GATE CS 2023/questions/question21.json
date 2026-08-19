@@ -1,0 +1,25 @@
+{
+  "id": 21,
+  "year": 2023,
+  "set": null,
+  "topics": [
+    "Digital Logic"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "The output of a 2-input multiplexer is connected back to one of its inputs as shown in the figure.<br><br>Match the functional equivalence of this circuit to one of the following options.",
+  "assetImage": "question21.png",
+  "codeBlock": null,
+  "options": [
+    "D Flip-flop",
+    "D Latch",
+    "Half-adder",
+    "Demultiplexer"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step 1: Express the multiplexer output equation</strong><br>For a 2-to-1 Multiplexer with inputs $I_0$ and $I_1$, select line $S$, and output $Q$, the boolean output equation is:<br>$$Q_{next} = \\bar{S} I_0 + S I_1$$<br><br><strong>Step 2: Substitute circuit connections</strong><br>From the circuit diagram:<br>* Input $0$ is connected to output feedback $Q$, so $I_0 = Q$.<br>* Input $1$ acts as the data input, say $D$, so $I_1 = D$.<br><br>Substituting these inputs into the output equation yields:<br>$$Q_{next} = \\bar{S} Q + S D$$<br><br><strong>Step 3: Analyze circuit behavior</strong><br>* When $S = 0$: $Q_{next} = Q$ (holds current state / memory state).<br>* When $S = 1$: $Q_{next} = D$ (passes new input data to output).<br><br>This level-sensitive memory behavior directly defines a <strong>D Latch</strong>.",
+  "videoUrl": null
+}

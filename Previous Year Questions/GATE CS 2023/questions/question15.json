@@ -1,0 +1,26 @@
+{
+  "id": 15,
+  "year": 2023,
+  "set": null,
+  "topics": [
+    "Discrete Mathematics",
+    "Recurrence Relations"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "The Lucas sequence $L_n$ is defined by the recurrence relation:<br><br>$$L_n = L_{n-1} + L_{n-2}, \\quad \\text{for } n \\ge 3,$$<br><br>with $L_1 = 1$ and $L_2 = 3$.<br><br>Which one of the options given is TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$L_n = \\left(\\frac{1 + \\sqrt{5}}{2}\\right)^n + \\left(\\frac{1 - \\sqrt{5}}{2}\\right)^n$",
+    "$L_n = \\left(\\frac{1 + \\sqrt{5}}{2}\\right)^n - \\left(\\frac{1 - \\sqrt{5}}{3}\\right)^n$",
+    "$L_n = \\left(\\frac{1 + \\sqrt{5}}{2}\\right)^n + \\left(\\frac{1 - \\sqrt{5}}{3}\\right)^n$",
+    "$L_n = \\left(\\frac{1 + \\sqrt{5}}{2}\\right)^n - \\left(\\frac{1 - \\sqrt{5}}{2}\\right)^n$"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step 1: Test base cases for Option A</strong><br><br>For $n = 1$:<br>$L_1 = \\left(\\frac{1 + \\sqrt{5}}{2}\\right) + \\left(\\frac{1 - \\sqrt{5}}{2}\\right) = \\frac{2}{2} = 1$<br><br>For $n = 2$:<br>$L_2 = \\left(\\frac{6 + 2\\sqrt{5}}{4}\\right) + \\left(\\frac{6 - 2\\sqrt{5}}{4}\\right) = \\frac{12}{4} = 3$<br><br>Both match the given values $L_1 = 1$ and $L_2 = 3$. Hence, Option A is correct.",
+  "videoUrl": null
+}

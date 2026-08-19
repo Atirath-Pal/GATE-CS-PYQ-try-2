@@ -1,0 +1,26 @@
+{
+  "id": 19,
+  "year": 2023,
+  "set": null,
+  "topics": [
+    "Compiler Design",
+    "Theory of Computation"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the following definition of a lexical token <strong>id</strong> for an identifier in a programming language, using extended regular expressions:<br><br>$$\\begin{array}{lcl} \\text{letter} & \\rightarrow & [\\text{A-Za-z}] \\\\ \\text{digit} & \\rightarrow & [0-9] \\\\ \\text{id} & \\rightarrow & \\text{letter } (\\text{letter} \\mid \\text{digit})^* \\end{array}$$<br><br>Which one of the following Non-deterministic Finite-state Automata with $\\epsilon$-transitions accepts the set of valid identifiers? (A double-circle denotes a final state)",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "[IMG: question19_option_a.png]",
+    "[IMG: question19_option_b.png]",
+    "[IMG: question19_option_c.png]",
+    "[IMG: question19_option_d.png]"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Analyze the Regular Expression</strong><br>The regular expression given for an identifier is:<br>$$\\text{id} \\rightarrow \\text{letter} (\\text{letter} \\mid \\text{digit})^*$$<br>This means an identifier must begin with a $\\text{letter}$, followed by zero or more repetitions of either a $\\text{letter}$ or a $\\text{digit}$.<br><br><strong>Step 2: Thompson's Construction for $\\epsilon$-NFA</strong><br>1. Processing the initial $\\text{letter}$ moves from the start state to a state that is marked as a final state (accepting a single-letter identifier).<br>2. To handle $(\\text{letter} \\mid \\text{digit})^*$, standard Thompson's construction for Kleene star and union is applied:<br>- $\\epsilon$-transitions split into two parallel branches: one for $\\text{letter}$ and one for $\\text{digit}$.<br>- After consuming $\\text{letter}$ or $\\text{digit}$, $\\epsilon$-transitions merge into a single state.<br>- An $\\epsilon$-transition loops back from this state to repeat, and another $\\epsilon$-transition allows bypassing or reaching the final accepting state.<br><br><strong>Step 3: Conclusion</strong><br>Option (C) correctly matches the structural $\\epsilon$-NFA diagram obtained via Thompson's construction for $(\\text{letter} \\mid \\text{digit})^*$ following the initial $\\text{letter}$.<br><br>Hence, the correct option is <strong>C</strong>.",
+  "videoUrl": null
+}

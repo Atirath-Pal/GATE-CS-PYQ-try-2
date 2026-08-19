@@ -1,0 +1,26 @@
+{
+  "id": 45,
+  "year": 2023,
+  "set": null,
+  "topics": [
+    "Computer Organization and Architecture",
+    "Floating Point Representation"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the IEEE-754 single precision floating point numbers $P = \\text{0xC1800000}$ and $Q = \\text{0x3F5C2EF4}$.<br><br>Which one of the following corresponds to the product of these numbers (i.e., $P \\times Q$), represented in the IEEE-754 single precision format?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "0x404C2EF4",
+    "0x405C2EF4",
+    "0xC15C2EF4",
+    "0xC14C2EF4"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Analyze number $P = \\text{0xC1800000}$</strong><br>Converting $P$ to binary representation:<br>$P = \\text{1 10000011 00000000000000000000000}_2$<br>• Sign bit ($S_P$) = $1$ (Negative)<br>• Biased Exponent ($E_P$) = $10000011_2 = 131_{10}$<br>• Actual Exponent ($e_P$) = $131 - 127 = 4$<br>• Mantissa ($M_P$) = $0$<br>So, $P = -1.0 \\times 2^4 = -16$.<br><br><strong>Step 2: Analyze number $Q = \\text{0x3F5C2EF4}$</strong><br>Converting $Q$ to binary representation:<br>$Q = \\text{0 01111110 10111000010111011110100}_2$<br>• Sign bit ($S_Q$) = $0$ (Positive)<br>• Biased Exponent ($E_Q$) = $01111110_2 = 126_{10}$<br>• Actual Exponent ($e_Q$) = $126 - 127 = -1$<br>• Mantissa ($M_Q$) = $10111000010111011110100_2$<br><br><strong>Step 3: Compute the product $P \\times Q$</strong><br>• Resulting Sign bit ($S$) = $S_P \\oplus S_Q = 1 \\oplus 0 = 1$ (Negative)<br>• Multiplying $Q$ by $-2^4$ shifts the exponent of $Q$ by $+4$ without changing its fraction/mantissa bits.<br>• New Actual Exponent ($e$) = $e_Q + 4 = -1 + 4 = 3$<br>• New Biased Exponent ($E$) = $3 + 127 = 130_{10} = 10000010_2$<br>• Mantissa ($M$) remains identical to $M_Q = 10111000010111011110100_2$<br><br><strong>Step 4: Reconstruct 32-bit floating-point result</strong><br>• Binary: $\\text{1 10000010 10111000010111011110100}_2$<br>• Grouping into 4-bit nibbles: `1100 0001 0101 1100 0010 1110 1111 0100`<br>• Hexadecimal: `0xC15C2EF4`<br><br>Hence, the correct option is <strong>C</strong>.",
+  "videoUrl": null
+}

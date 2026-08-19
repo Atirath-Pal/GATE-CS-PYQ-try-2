@@ -1,0 +1,19 @@
+{
+  "id": 32,
+  "year": "2023",
+  "set": null,
+  "topics": ["Digital Logic", "Number Representations"],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "A particular number is written as $132$ in radix-4 representation. The same number in radix-5 representation is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 110,
+    "max": 110
+  },
+  "explanation": "<strong>Step 1: Convert the number from radix-4 (base-4) to decimal (base-10).</strong><br>The given number is $(132)_4$.<br>$(132)_4 = 1 \\times 4^2 + 3 \\times 4^1 + 2 \\times 4^0 = 16 + 12 + 2 = 30_{10}$<br><br><strong>Step 2: Convert the decimal number to radix-5 (base-5).</strong><br>Divide $30$ by $5$ repeatedly and record the remainders:<br>$30 \\div 5 = 6$, remainder $= 0$<br>$6 \\div 5 = 1$, remainder $= 1$<br>$1 \\div 5 = 0$, remainder $= 1$<br><br>Reading the remainders from bottom to top yields $(110)_5$.<br><br>Therefore, the number in radix-5 representation is <strong>110</strong>.",
+  "videoUrl": null
+}

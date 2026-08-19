@@ -1,0 +1,26 @@
+{
+  "id": 2,
+  "year": 2023,
+  "set": null,
+  "topics": [
+    "General Aptitude",
+    "Verbal Ability"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Kind : _______ : : Often : Frequently<br><br>(By word meaning)",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Mean",
+    "Type",
+    "Cruel",
+    "Kindly"
+  ],
+  "answer": [
+    "MTA"
+  ],
+  "explanation": "The given analogy is based on word meanings (synonyms):<br><br><strong>Often</strong> and <strong>Frequently</strong> are synonyms.<br><br>Similarly, <strong>Kind</strong> (as a noun, meaning category or class) is a synonym for <strong>Type</strong>.<br><br>However, due to potential ambiguity in the word usage, this question was officially declared <strong>MTA (Marks To All)</strong> by GATE.",
+  "videoUrl": null
+}

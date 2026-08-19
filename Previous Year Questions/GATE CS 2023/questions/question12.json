@@ -1,0 +1,23 @@
+{
+  "id": 12,
+  "year": 2023,
+  "set": null,
+  "topics": ["Data Structures", "Heaps"],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Which one of the following sequences when stored in an array at locations $A[1], \\dots, A[10]$ forms a max-heap?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "23, 17, 10, 6, 13, 14, 1, 5, 7, 12",
+    "23, 17, 14, 7, 13, 10, 1, 5, 6, 12",
+    "23, 17, 14, 6, 13, 10, 1, 5, 7, 15",
+    "23, 14, 17, 1, 10, 13, 16, 12, 7, 5"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "For a $1$-indexed array representation of a binary max-heap, every parent node at index $i$ must satisfy the max-heap property:<br>$A[i] \\ge A[2i]$ (left child)<br>$A[i] \\ge A[2i+1]$ (right child)<br><br>Let's check each option:<br><br><strong>Option A:</strong> $A[3] = 10$, but its left child $A[6] = 14$. Since $10 < 14$, this violates the max-heap property.<br><br><strong>Option B:</strong><br>- $A[1] = 23 \\ge A[2] = 17, A[3] = 14$<br>- $A[2] = 17 \\ge A[4] = 7, A[5] = 13$<br>- $A[3] = 14 \\ge A[6] = 10, A[7] = 1$<br>- $A[4] = 7 \\ge A[8] = 5, A[9] = 6$<br>- $A[5] = 13 \\ge A[10] = 12$<br>All elements satisfy the max-heap property.<br><br><strong>Option C:</strong> $A[5] = 13$, but its left child $A[10] = 15$. Since $13 < 15$, this violates the max-heap property.<br><br><strong>Option D:</strong> $A[4] = 1$, but its left child $A[8] = 12$. Since $1 < 12$, this violates the max-heap property.<br><br>Therefore, <strong>Option B</strong> is the correct answer.",
+  "videoUrl": null
+}

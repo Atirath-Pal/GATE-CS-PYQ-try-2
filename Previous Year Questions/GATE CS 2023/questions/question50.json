@@ -1,0 +1,28 @@
+{
+  "id": 50,
+  "year": "2023",
+  "set": null,
+  "topics": [
+    "Computer Networks",
+    "Transport Layer"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Suppose you are asked to design a new reliable byte-stream transport protocol like TCP. This protocol, named $\\texttt{myTCP}$, runs over a 100 Mbps network with Round Trip Time of 150 milliseconds and the maximum segment lifetime of 2 minutes.<br><br>Which of the following is/are valid lengths of the <strong>Sequence Number</strong> field in the $\\texttt{myTCP}$ header?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "30 bits",
+    "32 bits",
+    "34 bits",
+    "36 bits"
+  ],
+  "answer": [
+    "B",
+    "C",
+    "D"
+  ],
+  "explanation": "To prevent sequence number wrap-around during the Maximum Segment Lifetime (MSL), the total number of unique sequence numbers must be large enough so that sequence numbers are not reused within the MSL duration.<br><br><strong>Given:</strong><br>Bandwidth = $100\\text{ Mbps} = \\frac{100 \\times 10^6}{8}\\text{ bytes/sec} = 12.5 \\times 10^6\\text{ bytes/sec}$<br>Maximum Segment Lifetime (MSL) = $2\\text{ minutes} = 120\\text{ seconds}$<br><br><strong>Step 1: Calculate the maximum bytes transmitted during MSL:</strong><br>$\\text{Max Bytes Transmitted} = \\text{Bandwidth} \\times \\text{MSL}$<br>$\\text{Max Bytes Transmitted} = 12.5 \\times 10^6\\text{ bytes/sec} \\times 120\\text{ sec} = 1.5 \\times 10^9\\text{ bytes}$<br><br><strong>Step 2: Determine the minimum number of bits ($N$) required:</strong><br>$2^N \\ge 1.5 \\times 10^9$<br><br>Checking powers of 2:<br>$2^{30} = 1,073,741,824 \\text{ bytes} < 1.5 \\times 10^9\\text{ bytes}$ (30 bits is NOT enough)<br>$2^{31} = 2,147,483,648 \\text{ bytes} > 1.5 \\times 10^9\\text{ bytes}$ (Minimum required is 31 bits)<br><br><strong>Conclusion:</strong><br>Any field length greater than or equal to $31\\text{ bits}$ is valid. Thus, $32\\text{ bits}$, $34\\text{ bits}$, and $36\\text{ bits}$ are all valid sequence number field lengths.",
+  "videoUrl": null
+}

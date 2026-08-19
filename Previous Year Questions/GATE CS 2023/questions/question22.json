@@ -1,0 +1,28 @@
+{
+  "id": 22,
+  "year": 2023,
+  "set": null,
+  "topics": [
+    "Operating Systems",
+    "Threads"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Which one or more of the following need to be saved on a context switch from one thread (T1) of a process to another thread (T2) of the same process?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Page table base register",
+    "Stack pointer",
+    "Program counter",
+    "General purpose registers"
+  ],
+  "answer": [
+    "B",
+    "C",
+    "D"
+  ],
+  "explanation": "<strong>Explanation:</strong><br><br>When a context switch occurs between threads of the <strong>same process</strong>:<br><br>1. <strong>Shared Resources:</strong> Threads of the same process share the address space, code segment, data segment, and global variables. Therefore, virtual memory mappings remain identical, and the <strong>Page table base register</strong> does not need to be modified or saved.<br><br>2. <strong>Thread-Specific State:</strong> Each thread maintains its own independent context to manage its execution stream, which includes:<br>• <strong>Stack Pointer</strong> (to maintain thread-specific execution stack)<br>• <strong>Program Counter</strong> (to track the next instruction for that thread)<br>• <strong>General Purpose Registers</strong> (to save register state during switch)<br><br>Hence, CPU registers such as the <strong>Stack pointer</strong>, <strong>Program counter</strong>, and <strong>General purpose registers</strong> must be saved to the Thread Control Block (TCB).<br><br>Therefore, the correct options are <strong>(B)</strong>, <strong>(C)</strong>, and <strong>(D)</strong>.",
+  "videoUrl": null
+}

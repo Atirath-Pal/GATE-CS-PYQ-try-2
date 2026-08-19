@@ -1,0 +1,27 @@
+{
+  "id": 53,
+  "year": "2023",
+  "set": null,
+  "topics": [
+    "Probability",
+    "Engineering Mathematics"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a random experiment where two fair coins are tossed. Let $A$ be the event that denotes HEAD on both the throws, $B$ be the event that denotes HEAD on the first throw, and $C$ be the event that denotes HEAD on the second throw.<br><br>Which of the following statements is/are TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$A$ and $B$ are independent.",
+    "$A$ and $C$ are independent.",
+    "$B$ and $C$ are independent.",
+    "$\\text{Prob}(B|C) = \\text{Prob}(B)$"
+  ],
+  "answer": [
+    "C",
+    "D"
+  ],
+  "explanation": "<strong>Sample Space:</strong> $S = \\{HH, HT, TH, TT\\}$, with equal probability $1/4$ for each outcome.<br><br><strong>Events:</strong><br>* $A = \\{HH\\} \\implies P(A) = 1/4$<br>* $B = \\{HH, HT\\} \\implies P(B) = 1/2$<br>* $C = \\{HH, TH\\} \\implies P(C) = 1/2$<br><br><strong>Analysis:</strong><br>* $P(A \\cap B) = 1/4 \\neq P(A)P(B) = 1/8$ (Dependent)<br>* $P(A \\cap C) = 1/4 \\neq P(A)P(C) = 1/8$ (Dependent)<br>* $P(B \\cap C) = 1/4 = P(B)P(C) = (1/2)(1/2) = 1/4$ (Independent)<br>* $P(B|C) = \\frac{P(B \\cap C)}{P(C)} = \\frac{1/4}{1/2} = 1/2 = P(B)$<br><br>Statements <strong>(C)</strong> and <strong>(D)</strong> are TRUE.",
+  "videoUrl": null
+}

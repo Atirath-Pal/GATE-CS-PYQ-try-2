@@ -1,0 +1,22 @@
+{
+  "id": 31,
+  "year": 2023,
+  "set": null,
+  "topics": [
+    "Engineering Mathematics",
+    "Calculus"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "The value of the definite integral<br><br>$$\\int_{-3}^{3} \\int_{-2}^{2} \\int_{-1}^{1} (4x^2y - z^3) \\, dz \\, dy \\, dx$$<br><br>is ____________ . (Rounded off to the nearest integer)",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 0,
+    "max": 0
+  },
+  "explanation": "<strong>Step 1: Split the integral into two separate terms.</strong><br>The given triple integral is:<br>$I = \\int_{-3}^{3} \\int_{-2}^{2} \\int_{-1}^{1} (4x^2y - z^3) \\, dz \\, dy \\, dx = I_1 - I_2$<br><br>where,<br>$I_1 = \\int_{-3}^{3} \\int_{-2}^{2} \\int_{-1}^{1} 4x^2y \\, dz \\, dy \\, dx$<br>$I_2 = \\int_{-3}^{3} \\int_{-2}^{2} \\int_{-1}^{1} z^3 \\, dz \\, dy \\, dx$<br><br><strong>Step 2: Evaluate $I_1$.</strong><br>Since the limits of integration are constant, we can factor the integral:<br>$I_1 = \\left(\\int_{-3}^{3} 4x^2 \\, dx\\right) \\cdot \\left(\\int_{-2}^{2} y \\, dy\\right) \\cdot \\left(\\int_{-1}^{1} 1 \\, dz\\right)$<br>Since $f(y) = y$ is an odd function integrated over symmetric limits $[-2, 2]$, $\\int_{-2}^{2} y \\, dy = 0$.<br>Therefore, $I_1 = 0$.<br><br><strong>Step 3: Evaluate $I_2$.</strong><br>Similarly, factoring $I_2$:<br>$I_2 = \\left(\\int_{-3}^{3} 1 \\, dx\\right) \\cdot \\left(\\int_{-2}^{2} 1 \\, dy\\right) \\cdot \\left(\\int_{-1}^{1} z^3 \\, dz\\right)$<br>Since $g(z) = z^3$ is an odd function integrated over symmetric limits $[-1, 1]$, $\\int_{-1}^{1} z^3 \\, dz = 0$.<br>Therefore, $I_2 = 0$.<br><br><strong>Conclusion:</strong><br>The total value is $I = 0 - 0 = 0$.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 38,
+  "year": "2023",
+  "set": null,
+  "topics": [
+    "Operating Systems",
+    "Process Synchronization"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the two functions <code>incr</code> and <code>decr</code> shown below.<br><br>There are $5$ threads each invoking <code>incr</code> once, and $3$ threads each invoking <code>decr</code> once, on the same shared variable $X$. The initial value of $X$ is $10$.<br><br>Suppose there are two implementations of the semaphore $s$, as follows:<br><br><strong>I-1:</strong> $s$ is a binary semaphore initialized to $1$.<br><br><strong>I-2:</strong> $s$ is a counting semaphore initialized to $2$.<br><br>Let $V1, V2$ be the values of $X$ at the end of execution of all the threads with implementations <strong>I-1</strong>, <strong>I-2</strong>, respectively.<br><br>Which one of the following choices corresponds to the minimum possible values of $V1, V2$, respectively?",
+  "assetImage": null,
+  "codeBlock": "incr(){\n    wait(s);\n    X = X+1;\n    signal(s);\n}\n\ndecr(){\n    wait(s);\n    X = X-1;\n    signal(s);\n}",
+  "options": [
+    "15, 7",
+    "7, 7",
+    "12, 7",
+    "12, 8"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Case 1: Implementation I-1 ($s$ is a binary semaphore initialized to $1$)</strong><br>A binary semaphore initialized to $1$ guarantees strict mutual exclusion. Only one thread can enter the critical section at a time, ensuring that all operations execute sequentially.<br>• Initial value: $X = 10$<br>• $5$ increments and $3$ decrements: $V1 = 10 + 5 - 3 = 12$<br><br><strong>Case 2: Implementation I-2 ($s$ is a counting semaphore initialized to $2$)</strong><br>With an initial value of $2$, up to two threads can enter the critical section simultaneously, leading to race conditions.<br>To achieve the minimum possible value for $V2$:<br>1. Decrement thread $D_3$ executes completely: $X$ becomes $10 - 1 = 9$.<br>2. Decrement thread $D_2$ executes completely: $X$ becomes $9 - 1 = 8$.<br>3. Decrement thread $D_1$ enters the critical section, reads $X = 8$, and is preempted before writing.<br>4. All $5$ increment threads ($I_1$ to $I_5$) execute sequentially, updating $X$ from $8$ to $13$.<br>5. Thread $D_1$ resumes, computes $8 - 1 = 7$ using its previously saved local value, and writes $7$ to $X$.<br><br>Thus, the minimum value for $V2$ is $7$.<br><br>Therefore, the minimum possible values of $(V1, V2)$ are $(12, 7)$.",
+  "videoUrl": null
+}

@@ -1,0 +1,21 @@
+{
+  "id": 43,
+  "year": 2023,
+  "set": null,
+  "topics": ["Digital Logic", "Sequential Circuits"],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider a sequential digital circuit consisting of T flip-flops and D flip-flops as shown in the figure. CLKIN is the clock input to the circuit. At the beginning, Q1, Q2 and Q3 have values 0, 1 and 1, respectively.<br><br>Which one of the given values of (Q1, Q2, Q3) can NEVER be obtained with this digital circuit?",
+  "assetImage": "question43.png",
+  "codeBlock": null,
+  "options": [
+    "(0, 0, 1)",
+    "(1, 0, 0)",
+    "(1, 0, 1)",
+    "(1, 1, 1)"
+  ],
+  "answer": ["A"],
+  "explanation": "<strong>Step 1: Derive Next-State Equations</strong><br>From the given circuit diagram:<br>- For Flip-Flop 1 (T Flip-Flop): $T_1 = \\overline{Q_3} \\implies Q_1^+ = T_1 \\oplus Q_1 = \\overline{Q_3} \\oplus Q_1$<br>- For Flip-Flop 2 (D Flip-Flop): $D_2 = Q_1 \\implies Q_2^+ = D_2 = Q_1$<br>- For Flip-Flop 3 (T Flip-Flop): $T_3 = Q_2 \\implies Q_3^+ = T_3 \\oplus Q_3 = Q_2 \\oplus Q_3$<br><br><strong>Step 2: Trace State Transitions</strong><br>Starting from the initial state $(Q_1, Q_2, Q_3) = (0, 1, 1)$:<br><br>1. Initial State: $(0, 1, 1)$<br>   $Q_1^+ = \\overline{1} \\oplus 0 = 0$<br>   $Q_2^+ = 0$<br>   $Q_3^+ = 1 \\oplus 1 = 0$<br>   Next State $\\rightarrow (0, 0, 0)$<br><br>2. Current State: $(0, 0, 0)$<br>   $Q_1^+ = \\overline{0} \\oplus 0 = 1$<br>   $Q_2^+ = 0$<br>   $Q_3^+ = 0 \\oplus 0 = 0$<br>   Next State $\\rightarrow (1, 0, 0)$<br><br>3. Current State: $(1, 0, 0)$<br>   $Q_1^+ = \\overline{0} \\oplus 1 = 0$<br>   $Q_2^+ = 1$<br>   $Q_3^+ = 0 \\oplus 0 = 0$<br>   Next State $\\rightarrow (0, 1, 0)$<br><br>4. Current State: $(0, 1, 0)$<br>   $Q_1^+ = \\overline{0} \\oplus 0 = 1$<br>   $Q_2^+ = 0$<br>   $Q_3^+ = 1 \\oplus 0 = 1$<br>   Next State $\\rightarrow (1, 0, 1)$<br><br>5. Current State: $(1, 0, 1)$<br>   $Q_1^+ = \\overline{1} \\oplus 1 = 1$<br>   $Q_2^+ = 1$<br>   $Q_3^+ = 0 \\oplus 1 = 1$<br>   Next State $\\rightarrow (1, 1, 1)$<br><br>6. Current State: $(1, 1, 1)$<br>   $Q_1^+ = \\overline{1} \\oplus 1 = 1$<br>   $Q_2^+ = 1$<br>   $Q_3^+ = 1 \\oplus 1 = 0$<br>   Next State $\\rightarrow (1, 1, 0)$<br><br>7. Current State: $(1, 1, 0)$<br>   $Q_1^+ = \\overline{0} \\oplus 1 = 0$<br>   $Q_2^+ = 1$<br>   $Q_3^+ = 1 \\oplus 0 = 1$<br>   Next State $\\rightarrow (0, 1, 1)$ (cycles back to initial state)<br><br><strong>Step 3: Conclusion</strong><br>The set of reachable states in the cycle is $\\{(0, 1, 1), (0, 0, 0), (1, 0, 0), (0, 1, 0), (1, 0, 1), (1, 1, 1), (1, 1, 0)\\}$.<br>The state $(0, 0, 1)$ is never reached.",
+  "videoUrl": null
+}

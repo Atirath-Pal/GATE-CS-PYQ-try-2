@@ -1,0 +1,26 @@
+{
+  "id": 18,
+  "year": "2023",
+  "set": null,
+  "topics": [
+    "Linear Algebra",
+    "Engineering Mathematics"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Let $$A = \\begin{bmatrix} 1 & 2 & 3 & 4 \\\\ 4 & 1 & 2 & 3 \\\\ 3 & 4 & 1 & 2 \\\\ 2 & 3 & 4 & 1 \\end{bmatrix} \\quad \\text{and} \\quad B = \\begin{bmatrix} 3 & 4 & 1 & 2 \\\\ 4 & 1 & 2 & 3 \\\\ 1 & 2 & 3 & 4 \\\\ 2 & 3 & 4 & 1 \\end{bmatrix}.$$<br><br>Let $\\det(A)$ and $\\det(B)$ denote the determinants of the matrices $A$ and $B$, respectively.<br><br>Which one of the options given below is TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\det(A) = \\det(B)$",
+    "$\\det(B) = -\\det(A)$",
+    "$\\det(A) = 0$",
+    "$\\det(AB) = \\det(A) + \\det(B)$"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step 1: Observe the rows of matrices $A$ and $B$.</strong><br>Matrix $A$ has row vectors:<br>$R_1 = [1, 2, 3, 4]$<br>$R_2 = [4, 1, 2, 3]$<br>$R_3 = [3, 4, 1, 2]$<br>$R_4 = [2, 3, 4, 1]$<br><br>Matrix $B$ has row vectors:<br>$R'_1 = [3, 4, 1, 2]$<br>$R'_2 = [4, 1, 2, 3]$<br>$R'_3 = [1, 2, 3, 4]$<br>$R'_4 = [2, 3, 4, 1]$<br><br><strong>Step 2: Relate matrix $B$ to matrix $A$ via row operations.</strong><br>Matrix $B$ can be obtained by swapping the first row ($R_1$) and the third row ($R_3$) of matrix $A$ ($R_1 \\leftrightarrow R_3$).<br><br><strong>Step 3: Apply the determinant property.</strong><br>Interchanging any two rows of a square matrix negates its determinant.<br>Therefore, after 1 row interchange, $\\det(B) = -\\det(A)$.<br><br>Hence, option (B) is the correct choice.",
+  "videoUrl": null
+}

@@ -1,0 +1,27 @@
+{
+  "id": 55,
+  "year": 2023,
+  "set": null,
+  "topics": [
+    "Graph Theory",
+    "Algorithms"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Let $G$ be a simple, finite, undirected graph with vertex set \\{v_1, \\dots, v_n\\}. Let $\\Delta(G)$ denote the maximum degree of $G$ and let $\\mathbb{N} = \\{1, 2, \\dots\\}$ denote the set of all possible colors. Color the vertices of $G$ using the following greedy strategy:<br>for $i = 1, \\dots, n$<br>$$\\text{color}(v_i) \\leftarrow \\min\\{j \\in \\mathbb{N} : \\text{ no neighbour of } v_i \\text{ is colored } j\\}$$<br><br>Which of the following statements is/are TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "This procedure results in a proper vertex coloring of $G$.",
+    "The number of colors used is at most $\\Delta(G) + 1$.",
+    "The number of colors used is at most $\\Delta(G)$.",
+    "The number of colors used is equal to the chromatic number of $G$."
+  ],
+  "answer": [
+    "A",
+    "B"
+  ],
+  "explanation": "<strong>Step 1: Proper Vertex Coloring (Option A)</strong><br>The greedy algorithm assigns to each vertex $v_i$ the smallest color in $\\mathbb{N}$ that is not already assigned to any of its neighbors. Since no adjacent vertices share the same color, this process always results in a valid (proper) vertex coloring of $G$. Thus, <strong>Statement (A) is TRUE</strong>.<br><br><strong>Step 2: Number of Colors Used (Options B & C)</strong><br>When coloring vertex $v_i$, it has at most $\\text{deg}(v_i) \\le \\Delta(G)$ neighbors. Consequently, at most $\\Delta(G)$ colors are unavailable for $v_i$. Even if all neighbors of $v_i$ are assigned distinct colors from $\\{1, 2, \\dots, \\Delta(G)\\}$, the color $\\Delta(G) + 1$ is always available. Hence, the total number of colors used is at most $\\Delta(G) + 1$. Therefore, <strong>Statement (B) is TRUE</strong>.<br>Statement (C) is <strong>FALSE</strong> because complete graphs $K_n$ require $n = \\Delta(G) + 1$ colors.<br><br><strong>Step 3: Chromatic Number (Option D)</strong><br>The output of the greedy coloring algorithm depends heavily on the ordering of vertices and does not always yield the minimum number of colors needed to color $G$ (the chromatic number $\\chi(G)$). For instance, with an unfavorable vertex ordering, a bipartite graph (which has $\\chi(G) = 2$) can require significantly more colors. Thus, <strong>Statement (D) is FALSE</strong>.<br><br><strong>Conclusion:</strong><br>The correct statements are <strong>A</strong> and <strong>B</strong>.",
+  "videoUrl": null
+}

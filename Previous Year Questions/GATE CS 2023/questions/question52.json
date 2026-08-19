@@ -1,0 +1,27 @@
+{
+  "id": 52,
+  "year": 2023,
+  "set": null,
+  "topics": [
+    "Theory of Computation",
+    "Formal Languages"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Which of the following statement(s) is/are TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "The intersection of two context-free languages is context-free.",
+    "The complement of a context-free language is context-free.",
+    "The intersection of a context-free language and a regular language is context-free.",
+    "The complement of a regular language is regular."
+  ],
+  "answer": [
+    "C",
+    "D"
+  ],
+  "explanation": "<strong>Analysis of Options:</strong><br><br><strong>Option A:</strong> Incorrect. Context-Free Languages (CFLs) are not closed under intersection. For instance, $L_1 = \\{a^n b^n c^m \\mid n, m \\ge 0\\}$ and $L_2 = \\{a^m b^n c^n \\mid n, m \\ge 0\\}$ are both CFLs, but their intersection $L_1 \\cap L_2 = \\{a^n b^n c^n \\mid n \\ge 0\\}$ is not context-free.<br><br><strong>Option B:</strong> Incorrect. Context-Free Languages are not closed under complementation. If CFLs were closed under complementation, then by De Morgan's Laws, they would also be closed under intersection, which is false.<br><br><strong>Option C:</strong> Correct. The intersection of a context-free language and a regular language is always a context-free language (i.e., $\\text{CFL} \\cap \\text{Regular} = \\text{CFL}$).<br><br><strong>Option D:</strong> Correct. Regular languages are closed under complementation. If $L$ is regular, its complement $\\bar{L}$ is guaranteed to be regular.<br><br>Hence, options <strong>C</strong> and <strong>D</strong> are correct.",
+  "videoUrl": null
+}

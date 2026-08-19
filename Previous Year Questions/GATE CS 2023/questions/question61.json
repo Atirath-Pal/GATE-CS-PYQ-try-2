@@ -1,0 +1,22 @@
+{
+  "id": 61,
+  "year": "2023",
+  "set": null,
+  "topics": [
+    "Database Management System",
+    "SQL"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the following table named Student in a relational database. The primary key of this table is rollNum.<br><br>Student<br><table style=\"border-collapse: collapse; border: 1px solid currentColor; margin: 8px 0;\"><thead><tr><th style=\"border: 1px solid currentColor; padding: 6px 12px; text-align: center;\"><u>rollNum</u></th><th style=\"border: 1px solid currentColor; padding: 6px 12px; text-align: left;\">name</th><th style=\"border: 1px solid currentColor; padding: 6px 12px; text-align: center;\">gender</th><th style=\"border: 1px solid currentColor; padding: 6px 12px; text-align: center;\">marks</th></tr></thead><tbody><tr><td style=\"border: 1px solid currentColor; padding: 6px 12px; text-align: center;\">1</td><td style=\"border: 1px solid currentColor; padding: 6px 12px; text-align: left;\">Naman</td><td style=\"border: 1px solid currentColor; padding: 6px 12px; text-align: center;\">M</td><td style=\"border: 1px solid currentColor; padding: 6px 12px; text-align: center;\">62</td></tr><tr><td style=\"border: 1px solid currentColor; padding: 6px 12px; text-align: center;\">2</td><td style=\"border: 1px solid currentColor; padding: 6px 12px; text-align: left;\">Aliya</td><td style=\"border: 1px solid currentColor; padding: 6px 12px; text-align: center;\">F</td><td style=\"border: 1px solid currentColor; padding: 6px 12px; text-align: center;\">70</td></tr><tr><td style=\"border: 1px solid currentColor; padding: 6px 12px; text-align: center;\">3</td><td style=\"border: 1px solid currentColor; padding: 6px 12px; text-align: left;\">Aliya</td><td style=\"border: 1px solid currentColor; padding: 6px 12px; text-align: center;\">F</td><td style=\"border: 1px solid currentColor; padding: 6px 12px; text-align: center;\">80</td></tr><tr><td style=\"border: 1px solid currentColor; padding: 6px 12px; text-align: center;\">4</td><td style=\"border: 1px solid currentColor; padding: 6px 12px; text-align: left;\">James</td><td style=\"border: 1px solid currentColor; padding: 6px 12px; text-align: center;\">M</td><td style=\"border: 1px solid currentColor; padding: 6px 12px; text-align: center;\">82</td></tr><tr><td style=\"border: 1px solid currentColor; padding: 6px 12px; text-align: center;\">5</td><td style=\"border: 1px solid currentColor; padding: 6px 12px; text-align: left;\">Swati</td><td style=\"border: 1px solid currentColor; padding: 6px 12px; text-align: center;\">F</td><td style=\"border: 1px solid currentColor; padding: 6px 12px; text-align: center;\">65</td></tr></tbody></table><br>The SQL query below is executed on this database.<br><br>The number of rows returned by the query is _________.",
+  "assetImage": null,
+  "codeBlock": "SELECT *\nFROM Student\nWHERE gender = 'F' AND\n      marks > 65;",
+  "options": [],
+  "answer": {
+    "min": 2,
+    "max": 2
+  },
+  "explanation": "<strong>Step 1: Analyze the query conditions</strong><br>The SQL query filters the records in the <code>Student</code> table based on two conditions connected by the logical <strong>AND</strong> operator:<br>1. $\\text{gender} = \\text{'F'}$<br>2. $\\text{marks} > 65$<br><br><strong>Step 2: Evaluate each row in the table</strong><br>• <strong>rollNum 1:</strong> $\\text{gender} = \\text{'M'}$, $\\text{marks} = 62$ (Condition fails)<br>• <strong>rollNum 2:</strong> $\\text{gender} = \\text{'F'}$, $\\text{marks} = 70 > 65$ (Satisfies both conditions)<br>• <strong>rollNum 3:</strong> $\\text{gender} = \\text{'F'}$, $\\text{marks} = 80 > 65$ (Satisfies both conditions)<br>• <strong>rollNum 4:</strong> $\\text{gender} = \\text{'M'}$, $\\text{marks} = 82$ (Condition fails)<br>• <strong>rollNum 5:</strong> $\\text{gender} = \\text{'F'}$, but $\\text{marks} = 65$ is NOT strictly greater than $65$ (Condition fails)<br><br><strong>Step 3: Conclusion</strong><br>Only $2$ rows (corresponding to rollNum 2 and rollNum 3) satisfy both conditions.<br><br>Therefore, the total number of rows returned by the query is <strong>2</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,22 @@
+{
+  "id": 59,
+  "year": 2023,
+  "set": null,
+  "topics": [
+    "Data Structures",
+    "Stacks & Queues"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a sequence $a$ of elements $a_0 = 1, a_1 = 5, a_2 = 7, a_3 = 8, a_4 = 9$, and $a_5 = 2$. The following operations are performed on a stack $S$ and a queue $Q$, both of which are initially empty.<br><br>I: $\\text{push}$ the elements of $a$ from $a_0$ to $a_5$ in that order into $S$.<br>II: $\\text{enqueue}$ the elements of $a$ from $a_0$ to $a_5$ in that order into $Q$.<br>III: $\\text{pop}$ an element from $S$.<br>IV: $\\text{dequeue}$ an element from $Q$.<br>V: $\\text{pop}$ an element from $S$.<br>VI: $\\text{dequeue}$ an element from $Q$.<br>VII: $\\text{dequeue}$ an element from $Q$ and $\\text{push}$ the same element into $S$.<br>VIII: Repeat operation VII three times.<br>IX: $\\text{pop}$ an element from $S$.<br>X: $\\text{pop}$ an element from $S$.<br><br>The $\\text{top}$ element of $S$ after executing the above operations is ____________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 8,
+    "max": 8
+  },
+  "explanation": "Let us trace the operations step-by-step:<br><br><strong>Initial State:</strong><br>Sequence $a = [1, 5, 7, 8, 9, 2]$<br>Stack $S = []$<br>Queue $Q = []$<br><br><strong>I:</strong> Push elements $a_0$ through $a_5$ into $S$:<br>$S = [1, 5, 7, 8, 9, 2]$ (top = $2$)<br><br><strong>II:</strong> Enqueue elements $a_0$ through $a_5$ into $Q$:<br>$Q = [1, 5, 7, 8, 9, 2]$ (front = $1$)<br><br><strong>III:</strong> Pop from $S$:<br>Pops $2 \\rightarrow S = [1, 5, 7, 8, 9]$<br><br><strong>IV:</strong> Dequeue from $Q$:<br>Dequeues $1 \\rightarrow Q = [5, 7, 8, 9, 2]$<br><br><strong>V:</strong> Pop from $S$:<br>Pops $9 \\rightarrow S = [1, 5, 7, 8]$<br><br><strong>VI:</strong> Dequeue from $Q$:<br>Dequeues $5 \\rightarrow Q = [7, 8, 9, 2]$<br><br><strong>VII:</strong> Dequeue from $Q$ and push to $S$:<br>Dequeues $7 \\rightarrow Q = [8, 9, 2]$<br>Pushes $7 \\rightarrow S = [1, 5, 7, 8, 7]$<br><br><strong>VIII:</strong> Repeat operation VII 3 times:<br>1. Dequeue 8, push 8: $Q = [9, 2], S = [1, 5, 7, 8, 7, 8]$<br>2. Dequeue 9, push 9: $Q = [2], S = [1, 5, 7, 8, 7, 8, 9]$<br>3. Dequeue 2, push 2: $Q = [], S = [1, 5, 7, 8, 7, 8, 9, 2]$<br><br><strong>IX:</strong> Pop from $S$:<br>Pops $2 \\rightarrow S = [1, 5, 7, 8, 7, 8, 9]$<br><br><strong>X:</strong> Pop from $S$:<br>Pops $9 \\rightarrow S = [1, 5, 7, 8, 7, 8]$<br><br>The top element of $S$ is <strong>8</strong>.",
+  "videoUrl": null
+}

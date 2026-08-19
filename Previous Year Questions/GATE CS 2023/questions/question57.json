@@ -1,0 +1,22 @@
+{
+  "id": 57,
+  "year": 2023,
+  "set": null,
+  "topics": [
+    "Operating Systems",
+    "Virtual Memory"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the following two-dimensional array $D$ in the C programming language, which is stored in row-major order:<br><br><code>int D[128][128];</code><br><br>Demand paging is used for allocating memory and each physical page frame holds $512$ elements of the array $D$. The Least Recently Used (LRU) page-replacement policy is used by the operating system. A total of $30$ physical page frames are allocated to a process which executes the following code snippet:<br><br>The number of page faults generated during the execution of this code snippet is ________.",
+  "assetImage": null,
+  "codeBlock": "for (int i = 0; i < 128; i++)\n    for (int j = 0; j < 128; j++)\n        D[j][i] *= 10;",
+  "options": [],
+  "answer": {
+    "min": 4096,
+    "max": 4096
+  },
+  "explanation": "<strong>1. Array and Page Size Analysis:</strong><br>- Total elements in array $D = 128 \\times 128 = 16384$ elements.<br>- Each page frame holds $512$ elements.<br>- Total number of pages required = $\\frac{16384}{512} = 32$ pages.<br><br><strong>2. Row-to-Page Mapping:</strong><br>- Number of elements per row = $128$.<br>- Number of rows stored in a single page = $\\frac{512}{128} = 4$ rows.<br>- Therefore, Page $0$ contains rows $0$ to $3$, Page $1$ contains rows $4$ to $7$, ..., and Page $31$ contains rows $124$ to $127$.<br><br><strong>3. Access Pattern:</strong><br>- The outer loop varies column index $i$ and the inner loop varies row index $j$.<br>- This causes element accesses to occur column-wise ($D[0][i], D[1][i], \\dots, D[127][i]$).<br>- Processing one complete column requires sequentially accessing pages $0, 1, 2, \\dots, 31$.<br><br><strong>4. Page Fault Calculation:</strong><br>- For a single column, accessing rows $0$ to $127$ touches all $32$ pages sequentially.<br>- The process is allocated $30$ physical page frames, which is strictly less than $32$ pages.<br>- Under the LRU policy, after filling $30$ frames, accessing pages $30$ and $31$ evicts pages $0$ and $1$.<br>- Consequently, every page access to a new row block incurs a page fault for every iteration of the outer loop.<br>- Page faults per column = $32$.<br>- Total page faults across $128$ columns = $128 \\times 32 = 4096$.",
+  "videoUrl": null
+}

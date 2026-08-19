@@ -1,0 +1,27 @@
+{
+  "id": 51,
+  "year": 2023,
+  "set": null,
+  "topics": [
+    "Discrete Mathematics",
+    "Group Theory"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Let $X$ be a set and $2^X$ denote the powerset of $X$.<br>Define a binary operation $\\Delta$ on $2^X$ as follows:<br>$$A \\Delta B = (A - B) \\cup (B - A) .$$<br>Let $H = (2^X, \\Delta)$. Which of the following statements about $H$ is/are correct?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$H$ is a group.",
+    "Every element in $H$ has an inverse, but $H$ is NOT a group.",
+    "For every $A \\in 2^X$, the inverse of $A$ is the complement of $A$.",
+    "For every $A \\in 2^X$, the inverse of $A$ is $A$."
+  ],
+  "answer": [
+    "A",
+    "D"
+  ],
+  "explanation": "<strong>1. Closure:</strong> For any $A, B \\in 2^X$, $A \\Delta B = (A - B) \\cup (B - A) \\in 2^X$.<br><br><strong>2. Associativity:</strong> The symmetric difference operation $\\Delta$ is associative, i.e., $(A \\Delta B) \\Delta C = A \\Delta (B \\Delta C)$ for all $A, B, C \\in 2^X$.<br><br><strong>3. Identity Element:</strong> The empty set $\\emptyset \\in 2^X$ acts as the identity element because $A \\Delta \\emptyset = (A - \\emptyset) \\cup (\\emptyset - A) = A \\cup \\emptyset = A$ for all $A \\in 2^X$.<br><br><strong>4. Inverse Element:</strong> For any $A \\in 2^X$, $A \\Delta A = (A - A) \\cup (A - A) = \\emptyset \\cup \\emptyset = \\emptyset$. Since $A \\Delta A = \\emptyset$ (the identity element), every element $A$ is its own inverse.<br><br>Since $H = (2^X, \\Delta)$ satisfies closure, associativity, existence of identity, and existence of inverse, $H$ is a group, and for every $A \\in 2^X$, the inverse of $A$ is $A$.<br><br>Hence, options <strong>(A)</strong> and <strong>(D)</strong> are correct.",
+  "videoUrl": null
+}

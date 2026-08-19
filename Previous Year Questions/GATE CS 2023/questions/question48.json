@@ -1,0 +1,26 @@
+{
+  "id": 48,
+  "year": 2023,
+  "set": null,
+  "topics": [
+    "Discrete Mathematics",
+    "Combinatorics"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Let $U = \\{1, 2, \\dots, n\\}$, where $n$ is a large positive integer greater than 1000. Let $k$ be a positive integer less than $n$. Let $A, B$ be subsets of $U$ with $|A| = |B| = k$ and $A \\cap B = \\emptyset$. We say that a permutation of $U$ separates $A$ from $B$ if one of the following is true.<br><br>- All members of $A$ appear in the permutation before any of the members of $B$.<br><br>- All members of $B$ appear in the permutation before any of the members of $A$.<br><br>How many permutations of $U$ separate $A$ from $B$?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$n!$",
+    "$\\binom{n}{2k} (n - 2k)!$",
+    "$\\binom{n}{2k} (n - 2k)! (k!)^2$",
+    "$2 \\binom{n}{2k} (n - 2k)! (k!)^2$"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "To find the total number of permutations of $U$ that separate $A$ from $B$:<br><br>1. <strong>Choosing positions for $A \\cup B$:</strong> The set $A \\cup B$ contains $|A| + |B| = 2k$ elements since $A \\cap B = \\emptyset$. Out of $n$ total positions in the permutation, we choose $2k$ positions to place the elements of $A \\cup B$. This can be done in $\\binom{n}{2k}$ ways.<br><br>2. <strong>Arranging elements not in $A \\cup B$:</strong> The remaining $n - 2k$ elements of $U$ can be arranged in the remaining $n - 2k$ positions in $(n - 2k)!$ ways.<br><br>3. <strong>Arranging elements of $A$ and $B$:</strong><br>- <strong>Case 1 (All $A$ before $B$):</strong> The first $k$ positions among the $2k$ chosen positions must contain elements of $A$ ($k!$ ways), and the remaining $k$ positions must contain elements of $B$ ($k!$ ways). This gives $(k!)^2$ ways.<br>- <strong>Case 2 (All $B$ before $A$):</strong> The first $k$ positions must contain elements of $B$ ($k!$ ways), and the remaining $k$ positions must contain elements of $A$ ($k!$ ways). This gives another $(k!)^2$ ways.<br><br>Thus, there are $2(k!)^2$ total valid ways to order $A$ and $B$ in the $2k$ chosen positions.<br><br>Combining all choices gives:<br>$$2 \\binom{n}{2k} (n - 2k)! (k!)^2$$<br><br>Hence, option <strong>(D)</strong> is correct.",
+  "videoUrl": null
+}

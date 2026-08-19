@@ -1,0 +1,26 @@
+{
+  "id": 16,
+  "year": 2023,
+  "set": null,
+  "topics": [
+    "Database Management System",
+    "Relational Model"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Which one of the options given below refers to the degree (or arity) of a relation in relational database systems?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Number of attributes of its relation schema.",
+    "Number of tuples stored in the relation.",
+    "Number of entries in the relation.",
+    "Number of distinct domains of its relation schema."
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "In Relational Database Management Systems (RDBMS):<br><br><strong>Degree (or Arity):</strong> Defined as the total number of attributes (columns) present in a relation schema.<br><br><strong>Cardinality:</strong> Defined as the total number of tuples (rows) stored in the relation.<br><br>Therefore, option (A) correctly describes the degree (or arity) of a relation.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 36,
+  "year": 2023,
+  "set": null,
+  "topics": [
+    "C Programming",
+    "Recursion"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the following program:<br><br>Which one of the following options represents the activation tree corresponding to the main function?",
+  "assetImage": null,
+  "codeBlock": "int main()\n{\n    f1();\n    f2(2);\n    f3();\n    return(0);\n}\n\nint f1()\n{\n    return(1);\n}\n\nint f2(int X)\n{\n    f3();\n    if (X==1)\n        return f1();\n    else\n        return (X*f2(X-1));\n}\n\nint f3()\n{\n    return(5);\n}",
+  "options": [
+    "[IMG: question36_option_a.png]",
+    "[IMG: question36_option_b.png]",
+    "[IMG: question36_option_c.png]",
+    "[IMG: question36_option_d.png]"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "To find the activation tree corresponding to the <code>main</code> function, we trace the execution flow of the function calls step-by-step:<br><br>1. <strong>Calls from <code>main()</code>:</strong><br>- First calls <code>f1()</code><br>- Then calls <code>f2(2)</code><br>- Finally calls <code>f3()</code><br>Thus, the direct children of <code>main</code> are <code>f1</code>, <code>f2</code>, and <code>f3</code> in left-to-right order.<br><br>2. <strong>Calls from <code>f2(2)</code>:</strong><br>- First executes <code>f3()</code>.<br>- Then checks $X == 1$. Since $X = 2$, it executes the <code>else</code> condition: <code>return (X * f2(X-1))</code>, which calls <code>f2(1)</code>.<br>Thus, the children of <code>f2(2)</code> are <code>f3</code> and <code>f2</code>.<br><br>3. <strong>Calls from <code>f2(1)</code>:</strong><br>- First executes <code>f3()</code>.<br>- Then checks $X == 1$. Since $X = 1$, it executes <code>return f1()</code>, which calls <code>f1()</code>.<br>Thus, the children of <code>f2(1)</code> are <code>f3</code> and <code>f1</code>.<br><br>Putting this all together, the tree structure matches <strong>Option (A)</strong>.",
+  "videoUrl": null
+}

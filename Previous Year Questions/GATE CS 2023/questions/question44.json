@@ -1,0 +1,26 @@
+{
+  "id": 44,
+  "year": 2023,
+  "set": null,
+  "topics": [
+    "Digital Logic",
+    "Multiplexers"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "A Boolean digital circuit is composed using two 4-input multiplexers (M1 and M2) and one 2-input multiplexer (M3) as shown in the figure. X0–X7 are the inputs of the multiplexers M1 and M2 and could be connected to either 0 or 1. The select lines of the multiplexers are connected to Boolean variables A, B and C as shown.<br><br>Which one of the following set of values of (X0, X1, X2, X3, X4, X5, X6, X7) will realise the Boolean function $\\overline{A} + \\overline{A}.\\overline{C} + A.\\overline{B}.C$?",
+  "assetImage": "question44.png",
+  "codeBlock": null,
+  "options": [
+    "(1, 1, 0, 0, 1, 1, 1, 0)",
+    "(1, 1, 0, 0, 1, 1, 0, 1)",
+    "(1, 1, 0, 1, 1, 1, 0, 0)",
+    "(0, 0, 1, 1, 0, 1, 1, 1)"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Write down the expression for the output of each multiplexer.</strong><br><br>Multiplexer M1 has select lines $S_1 = A$ and $S_0 = C$. Its output $Q_{M1}$ is:<br>$Q_{M1} = \\overline{A}\\overline{C} X_0 + \\overline{A}C X_1 + A\\overline{C} X_2 + AC X_3$<br><br>Multiplexer M2 also has select lines $S_1 = A$ and $S_0 = C$. Its output $Q_{M2}$ is:<br>$Q_{M2} = \\overline{A}\\overline{C} X_4 + \\overline{A}C X_5 + A\\overline{C} X_6 + AC X_7$<br><br>Multiplexer M3 has select line $S = B$. Its final output $Q$ is:<br>$Q = \\overline{B} Q_{M1} + B Q_{M2}$<br><br><strong>Step 2: Expand the complete function $Q(A, B, C)$.</strong><br><br>$Q = \\overline{A}\\overline{B}\\overline{C} X_0 + \\overline{A}\\overline{B}C X_1 + A\\overline{B}\\overline{C} X_2 + A\\overline{B}C X_3 + \\overline{A}B\\overline{C} X_4 + \\overline{A}BC X_5 + AB\\overline{C} X_6 + ABC X_7$<br><br><strong>Step 3: Simplify the given Boolean function $F(A, B, C)$.</strong><br><br>$F = \\overline{A} + \\overline{A}.\\overline{C} + A.\\overline{B}.C = \\overline{A} + A.\\overline{B}.C$<br><br>Writing $F$ in sum-of-minterms form:<br>• $\\overline{A}$ corresponds to minterms $m_0 (000), m_1 (001), m_2 (010), m_3 (011)$.<br>• $A.\\overline{B}.C$ corresponds to minterm $m_5 (101)$.<br><br>So, $F = \\sum m(0, 1, 2, 3, 5)$.<br><br><strong>Step 4: Compare terms to find the values of $X_0$ through $X_7$.</strong><br><br>• $m_0 (000) \\implies \\overline{A}\\overline{B}\\overline{C} X_0 \\implies X_0 = 1$<br>• $m_1 (001) \\implies \\overline{A}\\overline{B}C X_1 \\implies X_1 = 1$<br>• $m_2 (010) \\implies \\overline{A}B\\overline{C} X_4 \\implies X_4 = 1$<br>• $m_3 (011) \\implies \\overline{A}BC X_5 \\implies X_5 = 1$<br>• $m_5 (101) \\implies A\\overline{B}C X_3 \\implies X_3 = 1$<br>• All other inputs $X_2, X_6, X_7 = 0$.<br><br>Therefore, $(X_0, X_1, X_2, X_3, X_4, X_5, X_6, X_7) = (1, 1, 0, 1, 1, 1, 0, 0)$.",
+  "videoUrl": null
+}

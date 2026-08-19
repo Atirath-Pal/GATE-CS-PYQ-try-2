@@ -1,0 +1,26 @@
+{
+  "id": 4,
+  "year": 2023,
+  "set": null,
+  "topics": [
+    "General Aptitude",
+    "Quantitative Aptitude"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "A survey for a certain year found that $90\\%$ of pregnant women received medical care at least once before giving birth. Of these women, $60\\%$ received medical care from doctors, while $40\\%$ received medical care from other healthcare providers.<br><br>Given this information, which one of the following statements can be inferred with <i>certainty</i>?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "More than half of the pregnant women received medical care at least once from a doctor.",
+    "Less than half of the pregnant women received medical care at least once from a doctor.",
+    "More than half of the pregnant women received medical care at most once from a doctor.",
+    "Less than half of the pregnant women received medical care at most once from a doctor."
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>Let the total number of pregnant women be $100$.<br><br>1. Total women receiving medical care at least once $= 90\\%$ of $100 = 90$.<br>2. Out of these $90$ women, $60\\%$ received medical care from doctors.<br>3. Number of women receiving medical care at least once from doctors $= 60\\% \\text{ of } 90 = 0.60 \\times 90 = 54$.<br><br>Since $54$ out of $100$ total pregnant women corresponds to $54\\%$, this value is strictly greater than half ($50\\%$).<br><br>Therefore, it can be inferred with certainty that <strong>more than half of the pregnant women received medical care at least once from a doctor</strong>.<br><br>Hence, Option <strong>(A)</strong> is correct.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 7,
+  "year": 2023,
+  "set": null,
+  "topics": [
+    "General Aptitude",
+    "Quantitative Aptitude"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider two functions of time ($t$),<br><br>$$f(t) = 0.01 t^2$$<br>$$g(t) = 4 t$$<br><br>where $0 < t < \\infty$.<br><br>Now consider the following two statements:<br><br>(i) For some $t > 0$, $g(t) > f(t)$.<br>(ii) There exists a $T$, such that $f(t) > g(t)$ for all $t > T$.<br><br>Which one of the following options is TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "only (i) is correct",
+    "only (ii) is correct",
+    "both (i) and (ii) are correct",
+    "neither (i) nor (ii) is correct"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "To determine the correctness of each statement, let's analyze the inequality between $f(t)$ and $g(t)$ for $t > 0$:<br><br><strong>Statement (i):</strong><br>We check if $g(t) > f(t)$ for some $t > 0$:<br>$4t > 0.01t^2$<br>Since $t > 0$, divide both sides by $t$:<br>$4 > 0.01t \\implies t < 400$.<br>For example, taking $t = 1$, we get $g(1) = 4$ and $f(1) = 0.01$, which satisfies $g(1) > f(1)$.<br>Therefore, statement (i) is <strong>correct</strong>.<br><br><strong>Statement (ii):</strong><br>We check if there exists a $T$ such that $f(t) > g(t)$ for all $t > T$:<br>$0.01t^2 > 4t$<br>Since $t > 0$, divide both sides by $t$:<br>$0.01t > 4 \\implies t > 400$.<br>So, if we choose $T = 400$, then for all $t > T$, $f(t) > g(t)$ holds true.<br>Therefore, statement (ii) is <strong>correct</strong>.<br><br>Hence, <strong>both (i) and (ii) are correct</strong>.",
+  "videoUrl": null
+}

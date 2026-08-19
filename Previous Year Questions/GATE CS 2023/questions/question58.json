@@ -1,0 +1,22 @@
+{
+  "id": 58,
+  "year": 2023,
+  "set": null,
+  "topics": [
+    "Operating Systems",
+    "Virtual Memory"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a computer system with $57$-bit virtual addressing using multi-level tree-structured page tables with $L$ levels for virtual to physical address translation. The page size is $4\\text{ KB}$ ($1\\text{ KB} = 1024\\text{ B}$) and a page table entry at any of the levels occupies $8\\text{ bytes}$.<br><br>The value of $L$ is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 5,
+    "max": 5
+  },
+  "explanation": "<strong>Step 1: Determine the Page Offset</strong><br>Given Page Size = $4\\text{ KB} = 4 \\times 1024\\text{ bytes} = 2^{12}\\text{ bytes}$.<br>Thus, the Page Offset requires $12$ bits.<br><br><strong>Step 2: Determine the Virtual Page Number (VPN) size</strong><br>Virtual Address size = $57$ bits.<br>$\\text{VPN bits} = \\text{Total Virtual Address bits} - \\text{Page Offset bits} = 57 - 12 = 45\\text{ bits}$.<br><br><strong>Step 3: Calculate entries per Page Table and bits per level</strong><br>Page Table Entry (PTE) size = $8\\text{ bytes} = 2^3\\text{ bytes}$.<br>Number of entries in a single page table = $\\frac{\\text{Page Size}}{\\text{PTE Size}} = \\frac{2^{12}}{2^3} = 2^9 = 512\\text{ entries}$.<br>Each level of the page table uses $\\log_2(512) = 9$ bits of the virtual address for indexing.<br><br><strong>Step 4: Calculate the number of levels ($L$)</strong><br>$L = \\frac{\\text{Total VPN bits}}{\\text{Bits per level}} = \\frac{45}{9} = 5$.<br><br>Therefore, the value of $L$ is $5$.",
+  "videoUrl": null
+}

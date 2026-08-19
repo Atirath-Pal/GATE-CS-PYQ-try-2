@@ -1,0 +1,22 @@
+{
+  "id": 62,
+  "year": "2023",
+  "set": null,
+  "topics": [
+    "Database Management System",
+    "Indexing"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a database of fixed-length records, stored as an ordered file. The database has $25,000$ records, with each record being $100$ bytes, of which the primary key occupies $15$ bytes. The data file is block-aligned in that each data record is fully contained within a block. The database is indexed by a primary index file, which is also stored as a block-aligned ordered file. The figure below depicts this indexing scheme.<br><br>Suppose the block size of the file system is $1024$ bytes, and a pointer to a block occupies $5$ bytes. The system uses binary search on the index file to search for a record with a given key. You may assume that a binary search on an index file of $b$ blocks takes $\\lceil \\log_2 b \\rceil$ block accesses in the worst case.<br><br>Given a key, the number of block accesses required to identify the block in the data file that may contain a record with the key, in the worst case, is ________.",
+  "assetImage": "question62.png",
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 6,
+    "max": 6
+  },
+  "explanation": "<strong>Step 1: Calculate records per data block</strong><br>Given record size = $100$ bytes and block size = $1024$ bytes.<br>Number of records per block = $\\lfloor 1024 / 100 \\rfloor = 10$ records.<br><br><strong>Step 2: Calculate total data blocks</strong><br>Total database records = $25,000$.<br>Number of data blocks = $\\lceil 25000 / 10 \\rceil = 2500$ blocks.<br><br><strong>Step 3: Calculate index entry size and entries per index block</strong><br>Primary key size = $15$ bytes, block pointer size = $5$ bytes.<br>Index record size = $15 + 5 = 20$ bytes.<br>Number of index records per block = $\\lfloor 1024 / 20 \\rfloor = 51$ entries.<br><br><strong>Step 4: Calculate total index blocks ($b$)</strong><br>A primary index has one index entry for each block in the data file, so there are $2500$ index entries.<br>Number of index blocks $b = \\lceil 2500 / 51 \\rceil = 50$ blocks.<br><br><strong>Step 5: Calculate required block accesses</strong><br>Binary search on an index file of $b = 50$ blocks takes $\\lceil \\log_2 50 \\rceil = \\lceil 5.64 \\rceil = 6$ block accesses to identify the block in the data file.<br><br>Hence, the answer is <strong>6</strong>.",
+  "videoUrl": null
+}

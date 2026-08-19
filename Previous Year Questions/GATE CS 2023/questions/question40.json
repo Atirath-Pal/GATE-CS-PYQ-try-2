@@ -1,0 +1,26 @@
+{
+  "id": 40,
+  "year": 2023,
+  "set": null,
+  "topics": [
+    "Theory of Computation",
+    "Pushdown Automata"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the pushdown automaton (PDA) $P$ below, which runs on the input alphabet $\\{a, b\\}$, has stack alphabet $\\{\\bot, A\\}$, and has three states $\\{s, p, q\\}$, with $s$ being the start state. A transition from state $u$ to state $v$, labelled $c/X/\\gamma$, where $c$ is an input symbol or $\\epsilon$, $X$ is a stack symbol, and $\\gamma$ is a string of stack symbols, represents the fact that in state $u$, the PDA can read $c$ from the input, with $X$ on the top of its stack, pop $X$ from the stack, push in the string $\\gamma$ on the stack, and go to state $v$. In the initial configuration, the stack has only the symbol $\\bot$ in it. The PDA accepts by empty stack.<br><br>Which one of the following options correctly describes the language accepted by $P$?",
+  "assetImage": "question40.png",
+  "codeBlock": null,
+  "options": [
+    "$\\{a^m b^n \\mid 1 \\le m \\text{ and } n < m\\}$",
+    "$\\{a^m b^n \\mid 0 \\le n \\le m\\}$",
+    "$\\{a^m b^n \\mid 0 \\le m \\text{ and } 0 \\le n\\}$",
+    "$\\{a^m \\mid 0 \\le m\\} \\cup \\{b^n \\mid 0 \\le n\\}$"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step 1: Analyzing state $s$</strong><br>The PDA starts at state $s$ with $\\bot$ as the initial stack symbol.<br>- On receiving input '$a$' with $\\bot$ on top, it pushes $A$ ($a, \\bot / A\\bot$).<br>- For subsequent '$a$'s, it pushes $A$ for each ($a, A / AA$).<br>Thus, to push any symbol onto the stack and move anywhere in the automaton, at least one '$a$' must be processed. After reading $m$ '$a$'s ($m \\ge 1$), the stack contents become $A^m \\bot$.<br><br><strong>Step 2: Analyzing transition paths out of state $s$</strong><br>1. <strong>Path to $q$ directly ($\n\\epsilon, A / \\epsilon$):</strong> If no '$b$' is read ($n = 0$), the PDA transitions to $q$ by popping one $A$. In state $q$, all remaining $A$'s and $\\bot$ are popped via $\\epsilon$-transitions ($\n\\epsilon, A / \\epsilon$ and $\\epsilon, \\bot / \\epsilon$), accepting the string by empty stack. Here $m \\ge 1$ and $n = 0$, which satisfies $n < m$.<br>2. <strong>Path to $p$ ($b, A / \\epsilon$):</strong> Reads the first '$b$' and pops one $A$.<br><br><strong>Step 3: Analyzing state $p$</strong><br>- In state $p$, each subsequent '$b$' pops an $A$ via the loop transition $b, A / \\epsilon$.<br>- To reach state $q$ from $p$, the PDA must execute the transition $\\epsilon, A / \\epsilon$, which requires at least one symbol $A$ to be left on top of the stack.<br>- Since $m$ '$a$'s push $m$ '$A$'s, and reading $n$ '$b$'s pops $n$ '$A$'s, leaving at least one $A$ for the $p \\rightarrow q$ transition requires $m - n \\ge 1 \\implies n < m$.<br><br><strong>Step 4: Conclusion</strong><br>Combining these conditions:<br>- At least one '$a$' must be read ($1 \\le m$).<br>- The number of '$b$'s must be strictly less than the number of '$a$'s ($n < m$).<br><br>Thus, the language accepted by $P$ is $\\{a^m b^n \\mid 1 \\le m \\text{ and } n < m\\}$.",
+  "videoUrl": null
+}

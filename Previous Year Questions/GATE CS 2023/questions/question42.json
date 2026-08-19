@@ -1,0 +1,21 @@
+{
+  "id": 42,
+  "year": 2023,
+  "set": null,
+  "topics": ["Computer Organization", "Memory Organization"],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "A 4 kilobyte (KB) byte-addressable memory is realized using four 1 KB memory blocks. Two input address lines (IA4 and IA3) are connected to the chip select (CS) port of these memory blocks through a decoder as shown in the figure. The remaining ten input address lines from IA11–IA0 are connected to the address port of these blocks. The chip select (CS) is active high.<br><br>The input memory addresses (IA11–IA0), in decimal, for the starting locations (Addr=0) of each block (indicated as X1, X2, X3, X4 in the figure) are among the options given below. Which one of the following options is CORRECT?",
+  "assetImage": "question42.png",
+  "codeBlock": null,
+  "options": [
+    "(0, 1, 2, 3)",
+    "(0, 1024, 2048, 3072)",
+    "(0, 8, 16, 24)",
+    "(0, 0, 0, 0)"
+  ],
+  "answer": ["C"],
+  "explanation": "<strong>Step 1:</strong> Each memory block has size 1 KB = $1024$ bytes, so each block normally requires 10 address bits.<br><br><strong>Step 2:</strong> There are 12 input address lines, IA11 through IA0. The two lines IA4 and IA3 are not connected to the memory address inputs; instead, they are connected to the decoder to generate the chip-select signals for the four 1 KB blocks.<br><br><strong>Step 3:</strong> The decoder has two inputs, IA4 and IA3, and produces four outputs. Therefore, the blocks are selected according to the combinations $IA4IA3 = 00, 01, 10, 11$.<br><br><strong>Step 4:</strong> For the starting location of a block, the address connected to the memory's Addr input must be zero. Hence the address bits connected to the memory must be zero. The only changing bits determining the block are IA4 and IA3.<br><br><strong>Step 5:</strong> Since IA3 is the $2^3=8$ place and IA4 is the $2^4=16$ place, the four starting addresses are obtained as $0$, $8$, $16$, and $24$.<br><br>Thus, the correct option is <strong>(C) $(0, 8, 16, 24)$</strong>.",
+  "videoUrl": null
+}

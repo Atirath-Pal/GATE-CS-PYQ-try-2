@@ -1,0 +1,27 @@
+{
+  "id": 29,
+  "year": 2023,
+  "set": null,
+  "topics": [
+    "Algorithms",
+    "Asymptotic Analysis"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Let $f$ and $g$ be functions of natural numbers given by $f(n) = n$ and $g(n) = n^2$. Which of the following statements is/are TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$f \\in O(g)$",
+    "$f \\in \\Omega(g)$",
+    "$f \\in o(g)$",
+    "$f \\in \\Theta(g)$"
+  ],
+  "answer": [
+    "A",
+    "C"
+  ],
+  "explanation": "Given $f(n) = n$ and $g(n) = n^2$.<br><br><strong>1. Asymptotic Limit Evaluation:</strong><br>We compute the limit of $\\frac{f(n)}{g(n)}$ as $n \\to \\infty$:<br>$\\lim_{n \\to \\infty} \\frac{f(n)}{g(n)} = \\lim_{n \\to \\infty} \\frac{n}{n^2} = \\lim_{n \\to \\infty} \\frac{1}{n} = 0$.<br><br><strong>2. Evaluating Statements:</strong><br>- <strong>Option (C):</strong> Since $\\lim_{n \\to \\infty} \\frac{f(n)}{g(n)} = 0$, by definition $f(n) = o(g(n))$, meaning $f \\in o(g)$. Hence, statement (C) is <strong>TRUE</strong>.<br>- <strong>Option (A):</strong> Since $f \\in o(g)$ implies $f$ grows strictly slower than $g$, $f(n) \\le c \\cdot g(n)$ holds for all $c > 0$ and sufficiently large $n$. Thus, $f \\in O(g)$ is also <strong>TRUE</strong>.<br>- <strong>Option (B):</strong> For $f \\in \\Omega(g)$, $f(n)$ must grow at least as fast as $g(n)$. Since $f(n)$ grows strictly slower, $f \\notin \\Omega(g)$. Statement (B) is <strong>FALSE</strong>.<br>- <strong>Option (D):</strong> For $f \\in \\Theta(g)$, $f$ must be both $O(g)$ and \\Omega(g). Since $f \\notin \\Omega(g)$, statement (D) is <strong>FALSE</strong>.<br><br>Therefore, the correct choices are <strong>A</strong> and <strong>C</strong>.",
+  "videoUrl": null
+}

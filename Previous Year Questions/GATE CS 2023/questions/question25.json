@@ -1,0 +1,27 @@
+{
+  "id": 25,
+  "year": 2023,
+  "set": null,
+  "topics": [
+    "Computer Networks",
+    "Routing Protocols"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Which of the following statements is/are INCORRECT about the OSPF (Open Shortest Path First) routing protocol used in the Internet?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "OSPF implements Bellman-Ford algorithm to find shortest paths.",
+    "OSPF uses Dijkstra’s shortest path algorithm to implement least-cost path routing.",
+    "OSPF is used as an inter-domain routing protocol.",
+    "OSPF implements hierarchical routing."
+  ],
+  "answer": [
+    "A",
+    "C"
+  ],
+  "explanation": "<strong>Statement (A) is INCORRECT:</strong> OSPF is a link-state routing protocol that uses Dijkstra's algorithm to compute shortest paths. The Bellman-Ford algorithm is used by distance-vector protocols such as RIP.<br><br><strong>Statement (B) is CORRECT:</strong> OSPF nodes construct a full topology graph of the network and run Dijkstra's shortest path algorithm to derive the minimum-cost routes.<br><br><strong>Statement (C) is INCORRECT:</strong> OSPF is an <i>intra-domain</i> (Intra-AS) routing protocol. Inter-domain routing between different Autonomous Systems is handled by BGP (Border Gateway Protocol).<br><br><strong>Statement (D) is CORRECT:</strong> OSPF supports hierarchical routing by dividing an Autonomous System into smaller Areas with a central backbone area (Area 0).",
+  "videoUrl": null
+}

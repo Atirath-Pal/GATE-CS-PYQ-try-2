@@ -1,0 +1,22 @@
+{
+  "id": 33,
+  "year": 2023,
+  "set": null,
+  "topics": [
+    "Computer Organization",
+    "Pipelining"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider a 3-stage pipelined processor having a delay of $10\\text{ ns}$ (nanoseconds), $20\\text{ ns}$, and $14\\text{ ns}$, for the first, second, and the third stages, respectively. Assume that there is no other delay and the processor does not suffer from any pipeline hazards. Also assume that one instruction is fetched every cycle.<br><br>The total execution time for executing 100 instructions on this processor is ____________ ns.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 2040,
+    "max": 2040
+  },
+  "explanation": "<strong>Given Data:</strong><br>- Number of pipeline stages ($k$) = $3$<br>- Stage delays ($t_1, t_2, t_3$) = $10\\text{ ns}, 20\\text{ ns}, 14\\text{ ns}$<br>- Number of instructions ($n$) = $100$<br><br><strong>Step 1: Determine Clock Cycle Time ($T_c$)</strong><br>The cycle time is bounded by the delay of the slowest stage:<br>$T_c = \\max(t_1, t_2, t_3) = \\max(10, 20, 14) = 20\\text{ ns}$<br><br><strong>Step 2: Calculate Total Execution Time</strong><br>In an ideal $k$-stage pipeline without hazards, executing $n$ instructions takes $(k + n - 1)$ clock cycles:<br>$\\text{Total Execution Time} = (k + n - 1) \\times T_c$<br>$\\text{Total Execution Time} = (3 + 100 - 1) \\times 20\\text{ ns} = 102 \\times 20\\text{ ns} = 2040\\text{ ns}$",
+  "videoUrl": null
+}

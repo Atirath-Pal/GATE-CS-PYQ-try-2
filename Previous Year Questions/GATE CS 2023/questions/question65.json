@@ -1,0 +1,22 @@
+{
+  "id": 65,
+  "year": 2023,
+  "set": null,
+  "topics": [
+    "Computer Networks",
+    "IP Addressing"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "The forwarding table of a router is shown below.<br><br><table style=\"border-collapse: collapse; border: 1px solid currentColor; margin: 8px 0;\"><thead><tr><th style=\"border: 1px solid currentColor; padding: 6px 12px; text-align: left;\">Subnet Number</th><th style=\"border: 1px solid currentColor; padding: 6px 12px; text-align: left;\">Subnet Mask</th><th style=\"border: 1px solid currentColor; padding: 6px 12px; text-align: center;\">Interface ID</th></tr></thead><tbody><tr><td style=\"border: 1px solid currentColor; padding: 6px 12px; text-align: left;\">200.150.0.0</td><td style=\"border: 1px solid currentColor; padding: 6px 12px; text-align: left;\">255.255.0.0</td><td style=\"border: 1px solid currentColor; padding: 6px 12px; text-align: center;\">1</td></tr><tr><td style=\"border: 1px solid currentColor; padding: 6px 12px; text-align: left;\">200.150.64.0</td><td style=\"border: 1px solid currentColor; padding: 6px 12px; text-align: left;\">255.255.224.0</td><td style=\"border: 1px solid currentColor; padding: 6px 12px; text-align: center;\">2</td></tr><tr><td style=\"border: 1px solid currentColor; padding: 6px 12px; text-align: left;\">200.150.68.0</td><td style=\"border: 1px solid currentColor; padding: 6px 12px; text-align: left;\">255.255.255.0</td><td style=\"border: 1px solid currentColor; padding: 6px 12px; text-align: center;\">3</td></tr><tr><td style=\"border: 1px solid currentColor; padding: 6px 12px; text-align: left;\">200.150.68.64</td><td style=\"border: 1px solid currentColor; padding: 6px 12px; text-align: left;\">255.255.255.224</td><td style=\"border: 1px solid currentColor; padding: 6px 12px; text-align: center;\">4</td></tr><tr><td style=\"border: 1px solid currentColor; padding: 6px 12px; text-align: left;\">Default</td><td style=\"border: 1px solid currentColor; padding: 6px 12px; text-align: left;\"></td><td style=\"border: 1px solid currentColor; padding: 6px 12px; text-align: center;\">0</td></tr></tbody></table><br>A packet addressed to a destination address $200.150.68.118$ arrives at the router. It will be forwarded to the interface with ID ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 3,
+    "max": 3
+  },
+  "explanation": "To determine which interface the packet is forwarded to, we use the <strong>Longest Prefix Matching</strong> rule.<br><br><strong>Destination IP:</strong> $200.150.68.118$<br><br><strong>1. Interface 1:</strong><br>Subnet Mask: $255.255.0.0$ ($/16$)<br>Bitwise AND: $200.150.68.118 \\text{ AND } 255.255.0.0 = 200.150.0.0$<br>Matches Subnet Number $200.150.0.0$ with prefix length $16$.<br><br><strong>2. Interface 2:</strong><br>Subnet Mask: $255.255.224.0$ ($/19$)<br>Bitwise AND: $200.150.68.118 \\text{ AND } 255.255.224.0 = 200.150.64.0$<br>Matches Subnet Number $200.150.64.0$ with prefix length $19$.<br><br><strong>3. Interface 3:</strong><br>Subnet Mask: $255.255.255.0$ ($/24$)<br>Bitwise AND: $200.150.68.118 \\text{ AND } 255.255.255.0 = 200.150.68.0$<br>Matches Subnet Number $200.150.68.0$ with prefix length $24$.<br><br><strong>4. Interface 4:</strong><br>Subnet Mask: $255.255.255.224$ ($/27$)<br>Bitwise AND: $200.150.68.118 \\text{ AND } 255.255.255.224 = 200.150.68.96$<br>Does NOT match Subnet Number $200.150.68.64$.<br><br><strong>Conclusion:</strong><br>The matching interfaces are Interface 1 ($/16$), Interface 2 ($/19$), and Interface 3 ($/24$). By the longest prefix match rule, the packet will be forwarded to Interface 3, which has the longest matching prefix length ($/24$).",
+  "videoUrl": null
+}

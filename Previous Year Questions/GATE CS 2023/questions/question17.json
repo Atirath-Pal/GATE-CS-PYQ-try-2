@@ -1,0 +1,26 @@
+{
+  "id": 17,
+  "year": 2023,
+  "set": null,
+  "topics": [
+    "Computer Networks",
+    "Flow Control"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Suppose two hosts are connected by a point-to-point link and they are configured to use Stop-and-Wait protocol for reliable data transfer. Identify in which one of the following scenarios, the utilization of the link is the lowest.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Longer link length and lower transmission rate",
+    "Longer link length and higher transmission rate",
+    "Shorter link length and lower transmission rate",
+    "Shorter link length and higher transmission rate"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Efficiency / Utilization ($\\\\eta$) of Stop-and-Wait Protocol:</strong><br><br>The link utilization (efficiency) in Stop-and-Wait protocol is given by:<br>$$\\\\eta = \\\\frac{1}{1 + 2a}$$<br><br>where $a = \\\\frac{T_p}{T_t} = \\\\frac{\\\\text{Propagation Delay}}{\\\\text{Transmission Delay}}$.<br><br>We know that:<br>1. Propagation Delay ($T_p$) = $\\\\frac{\\\\text{Link Length } (d)}{\\\\text{Propagation Speed } (v)}$<br>2. Transmission Delay ($T_t$) = $\\\\frac{\\\\text{Packet Size } (L)}{\\\\text{Transmission Rate } (B)}$<br><br>Substituting $T_p$ and $T_t$ into $a$ gives:<br>$$a = \\\\frac{d \\\\cdot B}{v \\\\cdot L}$$<br><br>To achieve the <strong>lowest utilization</strong> ($\\\\eta$), the parameter $a$ must be maximized.<br>Since $a \\\\propto d \\\\cdot B$, $a$ is maximized when:<br>1. The link length ($d$) is <strong>longer</strong>.<br>2. The transmission rate ($B$) is <strong>higher</strong>.<br><br>Thus, lower utilization occurs with a longer link length and higher transmission rate.",
+  "videoUrl": null
+}

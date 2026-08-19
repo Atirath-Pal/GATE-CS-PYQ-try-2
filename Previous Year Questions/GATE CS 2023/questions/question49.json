@@ -1,0 +1,28 @@
+{
+  "id": 49,
+  "year": 2023,
+  "set": null,
+  "topics": [
+    "Discrete Mathematics",
+    "Set Theory & Algebra"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Let $f : A \\rightarrow B$ be an onto (or surjective) function, where $A$ and $B$ are nonempty sets. Define an equivalence relation $\\sim$ on the set $A$ as<br><br>$$a_1 \\sim a_2 \\text{ if } f(a_1) = f(a_2),$$<br><br>where $a_1, a_2 \\in A$. Let $\\mathcal{E} = \\{[x] : x \\in A\\}$ be the set of all the equivalence classes under $\\sim$. Define a new mapping $F : \\mathcal{E} \\rightarrow B$ as<br><br>$$F([x]) = f(x), \\quad \\text{for all the equivalence classes } [x] \\text{ in } \\mathcal{E}.$$<br><br>Which of the following statements is/are TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$F$ is NOT well-defined.",
+    "$F$ is an onto (or surjective) function.",
+    "$F$ is a one-to-one (or injective) function.",
+    "$F$ is a bijective function."
+  ],
+  "answer": [
+    "B",
+    "C",
+    "D"
+  ],
+  "explanation": "<strong>1. Well-definedness of $F$:</strong><br>Let $[x_1], [x_2] \\in \\mathcal{E}$ such that $[x_1] = [x_2]$.<br>This implies $x_1 \\sim x_2$, which means $f(x_1) = f(x_2)$.<br>Therefore, $F([x_1]) = f(x_1) = f(x_2) = F([x_2])$. Hence, $F$ is well-defined. Thus, statement (A) is FALSE.<br><br><strong>2. Surjectivity (Onto) of $F$:</strong><br>Since $f : A \\rightarrow B$ is given to be an onto function, for any $y \\in B$, there exists an element $x \\in A$ such that $f(x) = y$.<br>For this $x$, the equivalence class $[x] \\in \\mathcal{E}$ satisfies $F([x]) = f(x) = y$.<br>Hence, $F$ is onto (surjective). Thus, statement (B) is TRUE.<br><br><strong>3. Injectivity (One-to-One) of $F$:</strong><br>Let $[x_1], [x_2] \\in \\mathcal{E}$ such that $F([x_1]) = F([x_2])$.<br>By definition of $F$, $f(x_1) = f(x_2)$.<br>By definition of the relation $\\sim$, $f(x_1) = f(x_2) \\implies x_1 \\sim x_2 \\implies [x_1] = [x_2]$.<br>Hence, $F$ is one-to-one (injective). Thus, statement (C) is TRUE.<br><br><strong>4. Bijectivity of $F$:</strong><br>Since $F$ is both injective and surjective, $F$ is a bijective function. Thus, statement (D) is TRUE.",
+  "videoUrl": null
+}

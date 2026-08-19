@@ -1,0 +1,26 @@
+{
+  "id": 10,
+  "year": "2023",
+  "set": null,
+  "topics": [
+    "General Aptitude",
+    "Spatial Aptitude"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Which one of the options best describes the transformation of the 2-dimensional figure **P** to **Q**, and then to **R**, as shown?",
+  "assetImage": "question10.png",
+  "codeBlock": null,
+  "options": [
+    "<i>Operation 1</i>: A clockwise rotation by $90^\\circ$ about an axis perpendicular to the plane of the figure<br><br><i>Operation 2</i>: A reflection along a horizontal line",
+    "<i>Operation 1</i>: A counter clockwise rotation by $90^\\circ$ about an axis perpendicular to the plane of the figure<br><br><i>Operation 2</i>: A reflection along a horizontal line",
+    "<i>Operation 1</i>: A clockwise rotation by $90^\\circ$ about an axis perpendicular to the plane of the figure<br><br><i>Operation 2</i>: A reflection along a vertical line",
+    "<i>Operation 1</i>: A counter clockwise rotation by $180^\\circ$ about an axis perpendicular to the plane of the figure<br><br><i>Operation 2</i>: A reflection along a vertical line"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step 1: Analyzing Operation 1 (P to Q)</strong><br>In figure <strong>P</strong>, the longest tip of the figure points towards the top-right. In figure <strong>Q</strong>, this same long tip points towards the bottom-right. Rotating figure <strong>P</strong> by $90^\\circ$ clockwise about an axis perpendicular to its plane aligns the top-right tip to the bottom-right position. Thus, <i>Operation 1</i> is a <strong>clockwise rotation by $90^\\circ$</strong>.<br><br><strong>Step 2: Analyzing Operation 2 (Q to R)</strong><br>In figure <strong>Q</strong>, the long tip points downwards to the right, whereas in figure <strong>R</strong>, it points upwards to the right. Vertically flipping the figure across a horizontal axis converts figure <strong>Q</strong> into figure <strong>R</strong>. Thus, <i>Operation 2</i> is a <strong>reflection along a horizontal line</strong>.<br><br>Therefore, Option (A) is correct.",
+  "videoUrl": null
+}

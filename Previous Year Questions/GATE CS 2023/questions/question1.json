@@ -1,0 +1,26 @@
+{
+  "id": 1,
+  "year": 2023,
+  "set": null,
+  "topics": [
+    "General Aptitude",
+    "Verbal Ability"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "We reached the station late, and ______ missed the train.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "near",
+    "nearly",
+    "utterly",
+    "mostly"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step 1: Analyze the meaning of the sentence.</strong><br>The sentence describes arriving late at the station, which resulted in almost missing the train.<br><br><strong>Step 2: Evaluate the options:</strong><br>• <strong>near:</strong> An adjective/preposition meaning close in proximity or time, which is grammatically incorrect here.<br>• <strong>nearly:</strong> An adverb meaning 'almost' or 'very close to', perfectly fitting the context of almost missing a train.<br>• <strong>utterly:</strong> Means 'completely' or 'totally', which does not make sense with 'missed the train' in this context.<br>• <strong>mostly:</strong> Means 'mainly' or 'for the most part', which is logically inappropriate here.<br><br><strong>Conclusion:</strong><br>The correct word to complete the sentence is <strong>nearly</strong>.<br><br>Hence, the correct option is <strong>(B)</strong>.",
+  "videoUrl": null
+}

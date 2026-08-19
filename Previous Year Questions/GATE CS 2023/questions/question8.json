@@ -1,0 +1,26 @@
+{
+  "id": 8,
+  "year": 2023,
+  "set": null,
+  "topics": [
+    "General Aptitude",
+    "Verbal Ability"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Which one of the following sentence sequences creates a coherent narrative?<br><br>(i) Once on the terrace, on her way to her small room in the corner, she notices the man right away.<br>(ii) She begins to pant by the time she has climbed all the stairs.<br>(iii) Mina has bought vegetables and rice at the market, so her bags are heavy.<br>(iv) He was leaning against the parapet, watching the traffic below.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "(i), (ii), (iv), (iii)",
+    "(ii), (iii), (i), (iv)",
+    "(iv), (ii), (i), (iii)",
+    "(iii), (ii), (i), (iv)"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "To form a logical and coherent narrative:<br><br>1. Sentence <strong>(iii)</strong> introduces the main character (Mina) and sets up the context (her heavy bags from the market).<br>2. Sentence <strong>(ii)</strong> logically follows, explaining that she pants while climbing the stairs due to the heavy bags.<br>3. Sentence <strong>(i)</strong> describes her arrival at the top (terrace) where she notices a man.<br>4. Sentence <strong>(iv)</strong> describes 'the man' introduced in sentence (i).<br><br>Thus, the correct sequence is <strong>(iii), (ii), (i), (iv)</strong>.",
+  "videoUrl": null
+}

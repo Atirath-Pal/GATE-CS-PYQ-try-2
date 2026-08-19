@@ -1,0 +1,27 @@
+{
+  "id": 26,
+  "year": 2023,
+  "set": null,
+  "topics": [
+    "Discrete Mathematics",
+    "Mathematical Logic"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Geetha has a conjecture about integers, which is of the form<br><br>$$\\forall x \\left( P(x) \\implies \\exists y Q(x, y) \\right),$$<br><br>where $P$ is a statement about integers, and $Q$ is a statement about pairs of integers. Which of the following (one or more) option(s) would <i>imply</i> Geetha's conjecture?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\exists x \\left( P(x) \\wedge \\forall y Q(x, y) \\right)$",
+    "$\\forall x \\forall y Q(x, y)$",
+    "$\\exists y \\forall x \\left( P(x) \\implies Q(x, y) \\right)$",
+    "$\\exists x \\left( P(x) \\wedge \\exists y Q(x, y) \\right)$"
+  ],
+  "answer": [
+    "B",
+    "C"
+  ],
+  "explanation": "<strong>Conjecture:</strong> $G = \\forall x \\left( P(x) \\implies \\exists y Q(x, y) \\right)$<br><br><strong>Analysis of Options:</strong><br>• <strong>(B) $\\forall x \\forall y Q(x, y)$:</strong> If $Q(x, y)$ is true for all $x, y$, then $\\exists y Q(x,y)$ is always true. Thus, $P(x) \\implies \\exists y Q(x, y)$ holds universally for all $x$, implying $G$.<br>• <strong>(C) $\\exists y \\forall x \\left( P(x) \\implies Q(x, y) \\right)$:</strong> Selecting a fixed $y_0$ for which $P(x) \\implies Q(x, y_0)$ holds for every $x$ directly ensures that for every $x$, there exists at least one $y$ (namely $y_0$) satisfying $Q(x, y)$. Hence, (C) implies $G$.",
+  "videoUrl": null
+}

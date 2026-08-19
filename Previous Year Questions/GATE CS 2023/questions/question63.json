@@ -1,0 +1,22 @@
+{
+  "id": 63,
+  "year": 2023,
+  "set": null,
+  "topics": [
+    "Theory of Computation",
+    "Finite Automata"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the language $L$ over the alphabet $\\{0, 1\\}$, given below:<br><br>$$L = \\{w \\in \\{0, 1\\}^* \\mid w \\text{ does not contain three or more consecutive } 1's\\}.$$<br><br>The minimum number of states in a Deterministic Finite-State Automaton (DFA) for $L$ is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 4,
+    "max": 4
+  },
+  "explanation": "<strong>Step 1: Analyze the language condition</strong><br>The language $L$ consists of all binary strings over $\\{0, 1\\}$ that do not contain $111$ (three or more consecutive $1$'s) as a substring.<br><br><strong>Step 2: Determine necessary states</strong><br>To track the count of consecutive $1$'s seen so far, we need the following states:<br>1. <strong>State $q_0$ (Start State, Final State):</strong> Represents ending with zero consecutive $1$'s (or receiving a '0').<br>2. <strong>State $q_1$ (Final State):</strong> Represents ending with exactly one $1$.<br>3. <strong>State $q_2$ (Final State):</strong> Represents ending with exactly two consecutive $1$'s ($11$).<br>4. <strong>State $q_3$ (Dead/Trap State, Non-final):</strong> Represents having seen three consecutive $1$'s ($111$). Any further input keeps the automaton in this state.<br><br><strong>Step 3: Define state transitions</strong><br>- From $q_0$: on '0' $\\rightarrow q_0$, on '1' $\\rightarrow q_1$<br>- From $q_1$: on '0' $\\rightarrow q_0$, on '1' $\\rightarrow q_2$<br>- From $q_2$: on '0' $\\rightarrow q_0$, on '1' $\\rightarrow q_3$<br>- From $q_3$: on '0' $\\rightarrow q_3$, on '1' $\\rightarrow q_3$<br><br>Since all 4 states are distinguishable, the minimum number of states in the DFA is <strong>4</strong>.",
+  "videoUrl": null
+}

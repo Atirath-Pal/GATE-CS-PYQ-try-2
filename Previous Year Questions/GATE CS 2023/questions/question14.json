@@ -1,0 +1,26 @@
+{
+  "id": 14,
+  "year": 2023,
+  "set": null,
+  "topics": [
+    "Theory of Computation",
+    "Finite Automata"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the Deterministic Finite-state Automaton (DFA) $\\mathcal{A}$ shown below. The DFA runs on the alphabet $\\{0, 1\\}$, and has the set of states $\\{s, p, q, r\\}$, with $s$ being the start state and $p$ being the only final state.<br><br>Which one of the following regular expressions correctly describes the language accepted by $\\mathcal{A}$?",
+  "assetImage": "question14.png",
+  "codeBlock": null,
+  "options": [
+    "$1(0^*11)^*$",
+    "$0(0 + 1)^*$",
+    "$1(0 + 11)^*$",
+    "$1(110^*)^*$"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Analyze transitions from start state $s$.</strong><br>From $s$, reading '0' goes to trap state $r$, while reading '1' leads to final state $p$. Any accepted string must begin with '1'.<br><br><strong>Step 2: Analyze transitions at state $p$.</strong><br>At state $p$, reading '0' loops at $p$, and reading '11' (via $q$) returns to $p$. Reading '10' transitions to trap state $r$.<br><br><strong>Step 3: Derive the regular expression.</strong><br>After reaching $p$ with initial '1', any sequence of '0' or '11' can repeat. Thus, the language is $1(0 + 11)^*$, matching Option (C).",
+  "videoUrl": null
+}

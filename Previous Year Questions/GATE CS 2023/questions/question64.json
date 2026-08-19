@@ -1,0 +1,22 @@
+{
+  "id": 64,
+  "year": 2023,
+  "set": null,
+  "topics": [
+    "Computer Organization",
+    "Cache Memory"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "An 8-way set associative cache of size 64 KB ($1\\text{ KB} = 1024\\text{ bytes}$) is used in a system with 32-bit address. The address is sub-divided into TAG, INDEX, and BLOCK OFFSET.<br><br>The number of bits in the TAG is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 19,
+    "max": 19
+  },
+  "explanation": "<strong>Step 1: Understand the address division in set-associative cache.</strong><br>A physical address is divided into three components:<br>$\\text{Total Address Bits} = \\text{TAG bits} + \\text{INDEX bits} + \\text{BLOCK OFFSET bits}$<br><br><strong>Step 2: Relate Cache Size to Set count and Block Size.</strong><br>$\\text{Cache Size} = \\text{Number of Sets} \\times \\text{Associativity} \\times \\text{Block Size}$<br><br>Given:<br>- $\\text{Cache Size} = 64\\text{ KB} = 2^{16}\\text{ bytes}$<br>- $\\text{Associativity} = 8\\text{-way} = 2^3$<br><br>Substitute the known values:<br>$\\text{Number of Sets} \\times \\text{Block Size} = \\frac{2^{16}}{2^3} = 2^{13}\\text{ bytes}$<br><br><strong>Step 3: Calculate the sum of INDEX and BLOCK OFFSET bits.</strong><br>Taking $\\log_2$ on both sides:<br>$\\log_2(\\text{Number of Sets}) + \\log_2(\\text{Block Size}) = 13$<br>$\\text{INDEX bits} + \\text{BLOCK OFFSET bits} = 13$<br><br><strong>Step 4: Compute TAG bits.</strong><br>$\\text{TAG bits} = \\text{Total Address Bits} - (\\text{INDEX bits} + \\text{BLOCK OFFSET bits})$<br>$\\text{TAG bits} = 32 - 13 = 19$<br><br>Hence, the number of bits in the TAG field is <strong>19</strong>.",
+  "videoUrl": null
+}

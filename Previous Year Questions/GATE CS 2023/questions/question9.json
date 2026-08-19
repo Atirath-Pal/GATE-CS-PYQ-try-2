@@ -1,0 +1,26 @@
+{
+  "id": 9,
+  "year": 2023,
+  "set": null,
+  "topics": [
+    "General Aptitude",
+    "Functions"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "$f(x)$ and $g(y)$ are functions of $x$ and $y$, respectively, and $f(x) = g(y)$ for all real values of $x$ and $y$. Which one of the following options is <i>necessarily</i> TRUE for all $x$ and $y$?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$f(x) = 0$ and $g(y) = 0$",
+    "$f(x) = g(y) = \\text{constant}$",
+    "$f(x) \\neq \\text{constant}$ and $g(y) \\neq \\text{constant}$",
+    "$f(x) + g(y) = f(x) - g(y)$"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "Given that $f(x) = g(y)$ for all real values of $x$ and $y$.<br><br>Since $f(x)$ depends solely on $x$ and $g(y)$ depends solely on $y$, varying $x$ cannot change the value of $g(y)$, and varying $y$ cannot change the value of $f(x)$.<br><br>For the equality $f(x) = g(y)$ to hold true across all possible independent real values of $x$ and $y$, both functions must evaluate to the same constant value for every input.<br><br>Therefore, <strong>$f(x) = g(y) = \\text{constant}$</strong> is necessarily true.<br><br>Hence, option <strong>(B)</strong> is the correct choice.",
+  "videoUrl": null
+}

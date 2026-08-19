@@ -1,0 +1,21 @@
+{
+  "id": 37,
+  "year": 2023,
+  "set": null,
+  "topics": ["Compiler Design", "Code Optimization"],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the control flow graph shown.<br><br>Which one of the following choices correctly lists the set of <i>live</i> variables at the exit point of each basic block?",
+  "assetImage": "question37.png",
+  "codeBlock": null,
+  "options": [
+    "(A) B1: { }, B2: {a}, B3: {a}, B4: {a}",
+    "(B) B1: {i, j}, B2: {a}, B3: {a}, B4: {i}",
+    "(C) B1: {a, i, j}, B2: {a, i, j}, B3: {a, i}, B4: {a}",
+    "(D) B1: {a, i, j}, B2: {a, j}, B3: {a, j}, B4: {a, i, j}"
+  ],
+  "answer": ["D"],
+  "explanation": "<strong>Liveness Analysis</strong> determines which variables are <i>live</i> at a given point in a program. A variable is live at a point if its current value may be read along some path in the control flow graph before it is redefined.<br><br>The liveness equations are $\\text{Out}[B] = \\bigcup_{S \\in \\text{Succ}(B)} \\text{In}[S]$ and $\\text{In}[B] = \\text{Use}[B] \\cup (\\text{Out}[B] \\setminus \\text{Def}[B])$. Applying these equations iteratively until a fixed point is reached gives the live-variable sets at the exit of each block.<br><br>The final live-variable sets are:<br>- B1: $\\{a, i, j\\}$<br>- B2: $\\{a, j\\}$<br>- B3: $\\{a, j\\}$<br>- B4: $\\{a, i, j\\}$<br><br>Therefore, the correct choice is <strong>(D)</strong>.",
+  "videoUrl": null
+}
