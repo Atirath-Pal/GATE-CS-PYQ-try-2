@@ -1,0 +1,27 @@
+{
+  "id": 51,
+  "year": 2024,
+  "set": 1,
+  "topics": [
+    "Discrete Mathematics",
+    "Graph Theory"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "The chromatic number of a graph is the minimum number of colours used in a <i>proper</i> colouring of the graph. Let $G$ be any graph with $n$ vertices and chromatic number $k$. Which of the following statements is/are always TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$G$ contains a complete subgraph with $k$ vertices",
+    "$G$ contains an independent set of size at least $n/k$",
+    "$G$ contains at least $k(k - 1)/2$ edges",
+    "$G$ contains a vertex of degree at least $k$"
+  ],
+  "answer": [
+    "B",
+    "C"
+  ],
+  "explanation": "<strong>Analysis of Statements:</strong><br><br><strong>Statement (A):</strong> Incorrect. A $k$-chromatic graph does not necessarily contain a complete subgraph $K_k$. For example, the 5-cycle graph $C_5$ has chromatic number $k = 3$, but contains no triangles ($K_3$).<br><br><strong>Statement (B):</strong> Correct. A proper $k$-colouring partitions the $n$ vertices into $k$ independent sets (colour classes). By the Pigeonhole Principle, at least one colour class must contain at least $\\lceil n/k \\rceil \\ge n/k$ vertices.<br><br><strong>Statement (C):</strong> Correct. Between every pair of colour classes in a minimal $k$-colouring, there must be at least one edge (otherwise, those two classes could be combined into a single colour class, which would yield a proper $(k-1)$-colouring). Since there are $\\binom{k}{2} = \\frac{k(k-1)}{2}$ pairs of colour classes, $G$ must contain at least $k(k - 1)/2$ edges.<br><br><strong>Statement (D):</strong> Incorrect. For the 5-cycle graph $C_5$, $k = 3$, but every vertex has degree $2 < 3$. Thus, $G$ does not necessarily contain a vertex of degree at least $k$.",
+  "videoUrl": null
+}

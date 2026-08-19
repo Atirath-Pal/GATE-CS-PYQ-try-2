@@ -1,0 +1,22 @@
+{
+  "id": 63,
+  "year": 2024,
+  "set": 1,
+  "topics": [
+    "Engineering Mathematics",
+    "Probability"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "A bag contains 10 red balls and 15 blue balls. Two balls are drawn randomly without replacement. Given that the first ball drawn is red, the probability (<em>rounded off to 3 decimal places</em>) that both balls drawn are red is ________",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 0.370,
+    "max": 0.380
+  },
+  "explanation": "<strong>Step 1: Define the events and formula.</strong><br>Let $R_1$ be the event that the first ball drawn is red.<br>Let $R_2$ be the event that the second ball drawn is red.<br><br>We need to find the conditional probability that both balls drawn are red given that the first ball drawn is red, which is $P(R_1 \\cap R_2 \\mid R_1)$.<br><br>Using the definition of conditional probability:<br>$P(R_1 \\cap R_2 \\mid R_1) = \\frac{P(R_1 \\cap R_2)}{P(R_1)} = P(R_2 \\mid R_1)$<br><br><strong>Step 2: Calculate $P(R_2 \\mid R_1)$.</strong><br>Initially, the bag has:<br>- Red balls = $10$<br>- Blue balls = $15$<br>- Total balls = $25$<br><br>After one red ball is drawn, the remaining contents of the bag are:<br>- Red balls = $10 - 1 = 9$<br>- Blue balls = $15$<br>- Total remaining balls = $9 + 15 = 24$<br><br>The probability that the second ball drawn is red given the first was red is:<br>$P(R_2 \\mid R_1) = \\frac{9}{24} = \\frac{3}{8} = 0.375$<br><br><strong>Conclusion:</strong><br>The required probability rounded off to 3 decimal places is <strong>0.375</strong>.",
+  "videoUrl": null
+}

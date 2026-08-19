@@ -1,0 +1,26 @@
+{
+  "id": 38,
+  "year": 2024,
+  "set": 1,
+  "topics": [
+    "Compiler Design",
+    "Syntax Analysis"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the following grammar $G$, with $S$ as the start symbol. The grammar $G$ has three incomplete productions denoted by (1), (2), and (3).<br><br>$$S \\rightarrow daT \\mid \\underline{\\quad (1) \\quad}$$<br>$$T \\rightarrow aS \\mid bT \\mid \\underline{\\quad (2) \\quad}$$<br>$$R \\rightarrow \\underline{\\quad (3) \\quad} \\mid \\epsilon$$<br><br>The set of terminals is $\\{a, b, c, d, f\\}$. The FIRST and FOLLOW sets of the different non-terminals are as follows.<br><br>$$\\text{FIRST}(S) = \\{c, d, f\\}, \\; \\text{FIRST}(T) = \\{a, b, \\epsilon\\}, \\; \\text{FIRST}(R) = \\{c, \\epsilon\\}$$<br>$$\\text{FOLLOW}(S) = \\text{FOLLOW}(T) = \\{c, f, \\$\\}, \\; \\text{FOLLOW}(R) = \\{f\\}$$<br><br>Which one of the following options CORRECTLY fills in the incomplete productions?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "(1) $S \\rightarrow Rf$ \\quad (2) $T \\rightarrow \\epsilon$ \\quad (3) $R \\rightarrow cTR$",
+    "(1) $S \\rightarrow fR$ \\quad (2) $T \\rightarrow \\epsilon$ \\quad (3) $R \\rightarrow cTR$",
+    "(1) $S \\rightarrow fR$ \\quad (2) $T \\rightarrow cT$ \\quad (3) $R \\rightarrow cR$",
+    "(1) $S \\rightarrow Rf$ \\quad (2) $T \\rightarrow cT$ \\quad (3) $R \\rightarrow cR$"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step 1: Determine Production (1) for $S$</strong><br>We know that $\\text{FIRST}(S) = \\{c, d, f\\}$.<br>The given production $S \\rightarrow daT$ contributes $d$ to $\\text{FIRST}(S)$.<br>To account for $c$ and $f$ in $\\text{FIRST}(S)$:<br>If $(1)$ is $S \\rightarrow Rf$, then $\\text{FIRST}(Rf) = \\text{FIRST}(R) \\setminus \\{\\epsilon\\} \\cup \\{f\\}$ (since $\\epsilon \\in \\text{FIRST}(R)$).<br>Since $\\text{FIRST}(R) = \\{c, \\epsilon\\}$, we get $\\text{FIRST}(Rf) = \\{c\\} \\cup \\{f\\} = \\{c, f\\}$.<br>This correctly gives $\\text{FIRST}(S) = \\{c, d, f\\}$.<br>Hence, production (1) must be $S \\rightarrow Rf$.<br><br><strong>Step 2: Determine Production (2) for $T$</strong><br>We are given $\\text{FIRST}(T) = \\{a, b, \\epsilon\\}$.<br>The productions $T \\rightarrow aS \\mid bT$ contribute $a$ and $b$ to $\\text{FIRST}(T)$.<br>To get $\\epsilon \\in \\text{FIRST}(T)$, production (2) must be $T \\rightarrow \\epsilon$.<br><br><strong>Step 3: Determine Production (3) for $R$</strong><br>We are given $\\text{FIRST}(R) = \\{c, \\epsilon\\}$.<br>To derive $c$, the RHS of $R$ must start with $c$.<br>In option (A), (3) is $R \\rightarrow cTR$, which gives $\\text{FIRST}(cTR) = \\{c\\}$.<br><br>Thus, Option (A) correctly satisfies all given FIRST and FOLLOW constraints.",
+  "videoUrl": null
+}

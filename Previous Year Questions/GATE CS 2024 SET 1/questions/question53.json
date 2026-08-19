@@ -1,0 +1,27 @@
+{
+  "id": 53,
+  "year": 2024,
+  "set": 1,
+  "topics": [
+    "Computer Organization",
+    "Cache Memory"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider two set-associative cache memory architectures: <strong>WBC</strong>, which uses the write back policy, and <strong>WTC</strong>, which uses the write through policy. Both of them use the LRU (<i>Least Recently Used</i>) block replacement policy. The cache memory is connected to the main memory. Which of the following statements is/are TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "A read miss in <strong>WBC</strong> never evicts a dirty block",
+    "A read miss in <strong>WTC</strong> never triggers a write back operation of a cache block to main memory",
+    "A write hit in <strong>WBC</strong> can modify the value of the dirty bit of a cache block",
+    "A write miss in <strong>WTC</strong> always writes the victim cache block to main memory before loading the missed block to the cache"
+  ],
+  "answer": [
+    "B",
+    "C"
+  ],
+  "explanation": "<strong>Analysis of each statement:</strong><br><br>• <strong>Statement (A) is FALSE:</strong> In a Write-Back Cache (<strong>WBC</strong>), a read miss requires fetching a new block into the cache. If the corresponding set is full, the LRU block is evicted. If this victim block is dirty (i.e., modified), it must be written back to main memory. Therefore, a read miss <em>can</em> evict a dirty block.<br><br>• <strong>Statement (B) is TRUE:</strong> A Write-Through Cache (<strong>WTC</strong>) updates main memory immediately whenever a write occurs. As a result, cache blocks in <strong>WTC</strong> are never dirty and never trigger write-back operations upon eviction.<br><br>• <strong>Statement (C) is TRUE:</strong> In <strong>WBC</strong>, when a write hit occurs on a clean cache block (dirty bit = 0), its dirty bit is modified to 1 to reflect that the cache copy has been updated.<br><br>• <strong>Statement (D) is FALSE:</strong> Because <strong>WTC</strong> blocks in cache are always synchronized with main memory, a victim block is simply overwritten on eviction without writing back to main memory.<br><br>Hence, Statements <strong>(B)</strong> and <strong>(C)</strong> are TRUE.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 36,
+  "year": "2024",
+  "set": "1",
+  "topics": [
+    "Computer Networks",
+    "Packet Switching"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider a network path P—Q—R between nodes P and R via router Q. Node P sends a file of size $10^6$ bytes to R via this path by splitting the file into chunks of $10^3$ bytes each. Node P sends these chunks one after the other without any wait time between the successive chunk transmissions. Assume that the size of extra headers added to these chunks is negligible, and that the chunk size is less than the MTU.<br><br>Each of the links P—Q and Q—R has a bandwidth of $10^6$ bits/sec, and negligible propagation latency. Router Q immediately transmits every packet it receives from P to R, with negligible processing and queueing delays. Router Q can simultaneously receive on link P—Q and transmit on link Q—R.<br><br>Assume P starts transmitting the chunks at time $t = 0$. Which one of the following options gives the time (<em>in seconds, rounded off to 3 decimal places</em>) at which R receives all the chunks of the file?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "8.000",
+    "8.008",
+    "15.992",
+    "16.000"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step 1: Calculate the total number of packets (chunks)</strong><br>Total file size = $10^6$ bytes<br>Chunk size = $10^3$ bytes<br>Number of chunks ($N$) = $\\frac{10^6}{10^3} = 1000$ chunks<br><br><strong>Step 2: Transmission time per chunk</strong><br>Chunk size in bits = $10^3 \\times 8 = 8000$ bits<br>Bandwidth ($B$) = $10^6$ bits/sec<br>Transmission time for one chunk ($T_{\\text{trans}}$) = $\\frac{8000 \\text{ bits}}{10^6 \\text{ bits/sec}} = 0.008 \\text{ seconds}$<br><br><strong>Step 3: Total time calculation using pipelining</strong><br>Since router Q can immediately forward packets and both links have identical bandwidth:<br>- The first chunk reaches node R after traversing 2 links, which takes $2 \\times T_{\\text{trans}} = 2 \\times 0.008 = 0.016 \\text{ seconds}$.<br>- The remaining $N - 1 = 999$ chunks arrive at node R one after another, separated by $T_{\\text{trans}} = 0.008 \\text{ seconds}$ each.<br><br>Total time $T_{\\text{total}} = \\text{Time for 1st chunk to reach R} + (N - 1) \\times T_{\\text{trans}}$<br>$T_{\\text{total}} = 2 \\times T_{\\text{trans}} + 999 \\times T_{\\text{trans}} = (1000 + 1) \\times T_{\\text{trans}} = 1001 \\times 0.008 = 8.008 \\text{ seconds}$.<br><br>Thus, node R receives all chunks at $t = 8.008$ seconds.",
+  "videoUrl": null
+}

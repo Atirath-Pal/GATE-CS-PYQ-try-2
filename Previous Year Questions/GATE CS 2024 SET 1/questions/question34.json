@@ -1,0 +1,22 @@
+{
+  "id": 34,
+  "year": 2024,
+  "set": 1,
+  "topics": [
+    "Graph Theory",
+    "Discrete Mathematics"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "The number of spanning trees in a <i>complete</i> graph of 4 vertices labelled A, B, C, and D is _________",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 16,
+    "max": 16
+  },
+  "explanation": "<strong>Step 1: Formula for Spanning Trees in a Complete Graph</strong><br>According to Cayley's Formula, the number of spanning trees in a complete graph $K_n$ with $n$ labeled vertices is given by:<br>$$\\text{Number of Spanning Trees} = n^{n - 2}$$<br><br><strong>Step 2: Substitution</strong><br>Here, the number of vertices $n = 4$.<br>Applying the formula:<br>$$\\text{Number of Spanning Trees} = 4^{4 - 2} = 4^2 = 16$$<br><br>Thus, the number of spanning trees is <strong>16</strong>.",
+  "videoUrl": null
+}

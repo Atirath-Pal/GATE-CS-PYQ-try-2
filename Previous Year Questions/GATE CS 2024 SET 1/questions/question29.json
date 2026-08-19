@@ -1,0 +1,27 @@
+{
+  "id": 29,
+  "year": 2024,
+  "set": 1,
+  "topics": [
+    "Computer Networks",
+    "Transport Layer"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "TCP client P successfully establishes a connection to TCP server Q. Let $N_P$ denote the sequence number in the SYN sent from P to Q. Let $N_Q$ denote the acknowledgement number in the SYN ACK from Q to P. Which of the following statements is/are CORRECT?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "The sequence number $N_P$ is chosen randomly by P",
+    "The sequence number $N_P$ is always 0 for a new connection",
+    "The acknowledgement number $N_Q$ is equal to $N_P$",
+    "The acknowledgement number $N_Q$ is equal to $N_P + 1$"
+  ],
+  "answer": [
+    "A",
+    "D"
+  ],
+  "explanation": "In TCP three-way handshake:<br><br>1. <strong>Initial Sequence Number Selection:</strong> When client P initiates a connection by sending a SYN packet, it chooses an Initial Sequence Number (ISN), $N_P$, pseudo-randomly for security reasons (to prevent connection spoofing/replay attacks). Thus, statement (A) is correct and statement (B) is incorrect.<br><br>2. <strong>Acknowledgement Number:</strong> A SYN flag consumes 1 sequence number. When server Q responds with a SYN-ACK packet, it sets the acknowledgment number to the next expected sequence number from client P, which is $N_Q = N_P + 1$. Thus, statement (D) is correct and statement (C) is incorrect.<br><br>Therefore, the correct options are <strong>A</strong> and <strong>D</strong>.",
+  "videoUrl": null
+}

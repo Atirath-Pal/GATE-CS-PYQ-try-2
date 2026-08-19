@@ -1,0 +1,22 @@
+{
+  "id": 62,
+  "year": "2024",
+  "set": "1",
+  "topics": [
+    "Operating Systems",
+    "Paging and Memory Management"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a memory management system that uses a page size of $2\\text{ KB}$. Assume that both the physical and virtual addresses start from $0$. Assume that the pages $0, 1, 2$, and $3$ are stored in the page frames $1, 3, 2$, and $0$, respectively. The physical address (\\textit{in decimal format}) corresponding to the virtual address $2500$ (\\textit{in decimal format}) is ________",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 6596,
+    "max": 6596
+  },
+  "explanation": "<strong>Step 1: Determine the Page Size</strong><br>Page size = $2\\text{ KB} = 2 \\times 1024\\text{ bytes} = 2048\\text{ bytes}$.<br><br><strong>Step 2: Find the Page Number and Offset</strong><br>Given Virtual Address = $2500$.<br>Page Number ($P$) = $\\lfloor \\text{Virtual Address} / \\text{Page Size} \\rfloor = \\lfloor 2500 / 2048 \\rfloor = 1$.<br>Page Offset ($D$) = $\\text{Virtual Address} \\pmod{\\text{Page Size}} = 2500 \\pmod{2048} = 452$.<br><br><strong>Step 3: Map Page Number to Frame Number</strong><br>According to the mapping given in the question:<br>- Page 0 $\\rightarrow$ Frame 1<br>- Page 1 $\\rightarrow$ Frame 3<br>- Page 2 $\\rightarrow$ Frame 2<br>- Page 3 $\\rightarrow$ Frame 0<br><br>So, Page 1 is stored in Frame number $3$.<br><br><strong>Step 4: Calculate the Physical Address</strong><br>Physical Address = $(\\text{Frame Number} \\times \\text{Page Size}) + \\text{Page Offset}$<br>Physical Address = $(3 \\times 2048) + 452 = 6144 + 452 = 6596$.<br><br>Thus, the physical address is <strong>6596</strong>.",
+  "videoUrl": null
+}

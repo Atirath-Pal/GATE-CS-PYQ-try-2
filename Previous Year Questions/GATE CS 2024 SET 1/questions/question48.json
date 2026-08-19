@@ -1,0 +1,21 @@
+{
+  "id": 48,
+  "year": 2024,
+  "set": 1,
+  "topics": ["Programming and Data Structures", "C Programming"],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the following C function definition.<br><br>Which of the following statements is/are TRUE about the above function?",
+  "assetImage": null,
+  "codeBlock": "int f(int x, int y) {\n    for (int i=0; i<y; i++) {\n        x=x+x+y;\n    }\n    return x;\n}",
+  "options": [
+    "If the inputs are $x=20$, $y=10$, then the return value is greater than $2^{20}$",
+    "If the inputs are $x=20$, $y=20$, then the return value is greater than $2^{20}$",
+    "If the inputs are $x=20$, $y=10$, then the return value is less than $2^{10}$",
+    "If the inputs are $x=10$, $y=20$, then the return value is less than $2^{10}$"
+  ],
+  "answer": ["B", "D"],
+  "explanation": "<strong>Step 1: Analyze the loop operation</strong><br>In each iteration of the loop, the value of $x$ is updated as:<br>$x_{new} = x + x + y = 2x + y$<br><br><strong>Step 2: Derive the general expression</strong><br>Starting with initial value $x_0 = x$, after $y$ iterations:<br>• Iteration 1: $x_1 = 2x + y$<br>• Iteration 2: $x_2 = 2(2x + y) + y = 2^2 x + y(2 + 1)$<br>• Iteration $y$: $x_y = 2^y x + y(2^{y-1} + 2^{y-2} + \\dots + 1) = 2^y x + y(2^y - 1)$<br><br><strong>Step 3: Evaluate the options</strong><br><br><strong>Options A & C ($x = 20, y = 10$):</strong><br>Return value = $2^{10}(20) + 10(2^{10} - 1) = 30 \\cdot 2^{10} - 10 = 30710$.<br>Since $30710 < 2^{20}$ and $30710 > 2^{10}$, both options A and C are FALSE.<br><br><strong>Option B ($x = 20, y = 20$):</strong><br>Return value = $2^{20}(20) + 20(2^{20} - 1) = 40 \\cdot 2^{20} - 20$.<br>Since $40 \\cdot 2^{20} - 20 > 2^{20}$, option B is TRUE.<br><br><strong>Option D ($x = 10, y = 20$):</strong><br>Return value = $2^{20}(10) + 20(2^{20} - 1) = 30 \\cdot 2^{20} - 20$.<br>Since $30 \\cdot 2^{20} - 20 > 2^{20}$, option D is TRUE.<br><br>Hence, options <strong>B</strong> and <strong>D</strong> are correct.",
+  "videoUrl": null
+}

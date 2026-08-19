@@ -1,0 +1,26 @@
+{
+  "id": 4,
+  "year": 2024,
+  "set": 1,
+  "topics": [
+    "General Aptitude",
+    "Ratio and Proportion"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "The number of coins of ₹1, ₹5, and ₹10 denominations that a person has are in the ratio $5:3:13$. Of the total amount, the percentage of money in ₹5 coins is",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$21\\%$",
+    "$14\\frac{2}{7}\\%$",
+    "$10\\%$",
+    "$30\\%$"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Determine the ratio of total money for each denomination.</strong><br>Let the number of coins of ₹1, ₹5, and ₹10 be $5x$, $3x$, and $13x$ respectively.<br><br><strong>Step 2: Calculate the monetary value of each denomination.</strong><br>• Amount in ₹1 coins = $1 \\times 5x = 5x$<br>• Amount in ₹5 coins = $5 \\times 3x = 15x$<br>• Amount in ₹10 coins = $10 \\times 13x = 130x$<br><br><strong>Step 3: Calculate the total amount.</strong><br>$$\\text{Total Amount} = 5x + 15x + 130x = 150x$$<br><br><strong>Step 4: Find the percentage of money in ₹5 coins.</strong><br>$$\\text{Percentage} = \\left( \\frac{\\text{Amount in ₹5 coins}}{\\text{Total Amount}} \\right) \\times 100 = \\left( \\frac{15x}{150x} \\right) \\times 100 = 10\\%$$<br><br>Hence, the correct option is <strong>C</strong>.",
+  "videoUrl": null
+}

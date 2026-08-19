@@ -1,0 +1,27 @@
+{
+  "id": 25,
+  "year": 2024,
+  "set": 1,
+  "topics": [
+    "Operating Systems",
+    "Process Management"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Which of the following process state transitions is/are NOT possible?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Running to Ready",
+    "Waiting to Running",
+    "Ready to Waiting",
+    "Running to Terminated"
+  ],
+  "answer": [
+    "B",
+    "C"
+  ],
+  "explanation": "<strong>Process State Transitions Analysis:</strong><br><br>1. <strong>Running to Ready:</strong> Possible (e.g., when a process is preempted by the scheduler due to time quantum expiry or higher priority process).<br>2. <strong>Waiting to Running:</strong> <strong>NOT possible.</strong> A process in the Waiting (Blocked) state must first transition to the Ready state when its I/O or event completes before it can be scheduled to run.<br>3. <strong>Ready to Waiting:</strong> <strong>NOT possible.</strong> A process must be in the Running state to request an I/O operation or wait for an event, thus transitioning from Running to Waiting directly.<br>4. <strong>Running to Terminated:</strong> Possible (e.g., when execution finishes or a fatal error occurs).<br><br>Therefore, the state transitions that are <strong>NOT possible</strong> are options <strong>B</strong> and <strong>C</strong>.",
+  "videoUrl": null
+}

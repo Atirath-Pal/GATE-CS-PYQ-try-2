@@ -1,0 +1,26 @@
+{
+  "id": 43,
+  "year": "2024",
+  "set": "1",
+  "topics": [
+    "Data Structures",
+    "Heaps"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider a binary min-heap containing $105$ distinct elements. Let $k$ be the index (in the underlying array) of the maximum element stored in the heap. The number of possible values of $k$ is",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "53",
+    "52",
+    "27",
+    "1"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step-by-step explanation:</strong><br><br>1. In a binary min-heap, the maximum element must reside at one of the leaf nodes, because any internal node must be smaller than or equal to its children.<br><br>2. For a heap containing $n$ elements, the leaf nodes occupy indices from $\\lfloor n/2 \\rfloor + 1$ to $n$ (assuming 1-based indexing).<br><br>3. Here, $n = 105$.<br><br>4. The first leaf node index is $\\lfloor 105 / 2 \\rfloor + 1 = 52 + 1 = 53$.<br><br>5. Therefore, the leaf nodes are located at indices $53, 54, \\dots, 105$.<br><br>6. The total number of leaf nodes (and thus possible positions $k$ for the maximum element) is $105 - 53 + 1 = 53$.",
+  "videoUrl": null
+}

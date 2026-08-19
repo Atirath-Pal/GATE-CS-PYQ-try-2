@@ -1,0 +1,26 @@
+{
+  "id": 41,
+  "year": 2024,
+  "set": 1,
+  "topics": [
+    "Data Structures",
+    "Heaps"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "An array $[82, 101, 90, 11, 111, 75, 33, 131, 44, 93]$ is heapified. Which one of the following options represents the first three elements in the heapified array?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "82, 90, 101",
+    "82, 11, 93",
+    "131, 11, 93",
+    "131, 111, 90"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "To build a Max-Heap (heapify) bottom-up from an array of size $N = 10$, we start processing non-leaf nodes from index $\\lfloor N/2 \\rfloor = 5$ down to index $1$ (1-based indexing).<br><br><strong>Initial Array:</strong> $[82, 101, 90, 11, 111, 75, 33, 131, 44, 93]$<br><br><strong>Step 1: Heapify Node 5 (value = 111)</strong><br>Child is at index $10$ (value $93$). Since $111 > 93$, no change.<br><br><strong>Step 2: Heapify Node 4 (value = 11)</strong><br>Children are at indices $8$ ($131$) and $9$ ($44$). The largest child is $131$. Swap $11$ and $131$.<br>Array becomes: $[82, 101, 90, 131, 111, 75, 33, 11, 44, 93]$<br><br><strong>Step 3: Heapify Node 3 (value = 90)</strong><br>Children are at indices $6$ ($75$) and $7$ ($33$). Since $90 > 75$ and $90 > 33$, no change.<br><br><strong>Step 4: Heapify Node 2 (value = 101)</strong><br>Children are at indices $4$ ($131$) and $5$ ($111$). The largest child is $131$. Swap $101$ and $131$.<br>Array becomes: $[82, 131, 90, 101, 111, 75, 33, 11, 44, 93]$<br><br><strong>Step 5: Heapify Node 1 (value = 82)</strong><br>1. Children of root are $131$ (index $2$) and $90$ (index $3$). Swap $82$ and $131$.<br>Array becomes: $[131, 82, 90, 101, 111, 75, 33, 11, 44, 93]$<br>2. Heapify down at index $2$ ($82$): Children are $101$ (index $4$) and $111$ (index $5$). Swap $82$ and $111$.<br>Array becomes: $[131, 111, 90, 101, 82, 75, 33, 11, 44, 93]$<br>3. Heapify down at index $5$ ($82$): Child is $93$ (index $10$). Swap $82$ and $93$.<br>Final Array: $[131, 111, 90, 101, 93, 75, 33, 11, 44, 82]$<br><br>The first three elements in the heapified array are <strong>131, 111, 90</strong>.",
+  "videoUrl": null
+}

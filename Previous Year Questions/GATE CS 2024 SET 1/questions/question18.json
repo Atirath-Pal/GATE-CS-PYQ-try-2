@@ -1,0 +1,26 @@
+{
+  "id": 18,
+  "year": 2024,
+  "set": 1,
+  "topics": [
+    "C Programming",
+    "Control Structures"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the following C program:<br><br>Which one of the following statements is CORRECT?",
+  "assetImage": null,
+  "codeBlock": "#include <stdio.h>\n\nint main() {\n    int a = 6;\n    int b = 0;\n    while(a < 10) {\n        a = a / 12 + 1;\n        a += b; }\n    printf(\"%d\", a);\n    return 0;\n}",
+  "options": [
+    "The program prints 9 as output",
+    "The program prints 10 as output",
+    "The program gets stuck in an infinite loop",
+    "The program prints 6 as output"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step-by-step Execution:</strong><br><br>1. Initially, $a = 6$ and $b = 0$.<br><br>2. Check the condition $a < 10$: $6 < 10$ is <strong>True</strong>. Entering the loop:<br>&nbsp;&nbsp;&nbsp;&nbsp;- $a = a / 12 + 1 = 6 / 12 + 1 = 0 + 1 = 1$ (due to integer division $6 / 12 = 0$).<br>&nbsp;&nbsp;&nbsp;&nbsp;- $a += b \\implies a = 1 + 0 = 1$.<br><br>3. Check condition $a < 10$: $1 < 10$ is <strong>True</strong>. Re-entering the loop:<br>&nbsp;&nbsp;&nbsp;&nbsp;- $a = a / 12 + 1 = 1 / 12 + 1 = 0 + 1 = 1$.<br>&nbsp;&nbsp;&nbsp;&nbsp;- $a += b \\implies a = 1 + 0 = 1$.<br><br>4. In every iteration, $a$ gets re-evaluated to $1$. Since $a$ remains $1$, the loop condition $a < 10$ will always be <strong>True</strong>.<br><br>Therefore, the program gets stuck in an infinite loop.",
+  "videoUrl": null
+}

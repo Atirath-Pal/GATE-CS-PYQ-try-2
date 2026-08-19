@@ -1,0 +1,26 @@
+{
+  "id": 24,
+  "year": 2024,
+  "set": 1,
+  "topics": [
+    "Operating Systems",
+    "Threads"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Which of the following statements about threads is/are TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Threads can only be implemented in kernel space",
+    "Each thread has its own file descriptor table for open files",
+    "All the threads belonging to a process share a common stack",
+    "Threads belonging to a process are by default not protected from each other"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Analysis of each statement:</strong><br><br><strong>(A) Incorrect:</strong> Threads can be implemented at both the user level (User-Level Threads) and kernel level (Kernel-Level Threads), as well as hybrid models.<br><br><strong>(B) Incorrect:</strong> Open file descriptors are process-wide resources shared among all threads of that process, rather than maintained separately per thread.<br><br><strong>(C) Incorrect:</strong> Each thread must have its own separate stack to maintain its execution history, local variables, and function call frames.<br><br><strong>(D) Correct:</strong> Threads belonging to the same process share the same address space. Therefore, there is no built-in memory protection mechanism between threads within the same process.",
+  "videoUrl": null
+}

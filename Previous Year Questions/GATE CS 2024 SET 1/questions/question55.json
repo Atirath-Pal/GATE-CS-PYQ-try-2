@@ -1,0 +1,22 @@
+{
+  "id": 55,
+  "year": 2024,
+  "set": 1,
+  "topics": [
+    "Computer Organization and Architecture",
+    "Pipeline and Multicore"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "The baseline execution time of a program on a $2\\text{ GHz}$ single core machine is $100$ nanoseconds ($ns$). The code corresponding to $90\\%$ of the execution time can be fully parallelized. The overhead for using an additional core is $10\\text{ ns}$ when running on a multicore system. Assume that all cores in the multicore system run their share of the parallelized code for an equal amount of time.<br><br>The number of cores that minimize the execution time of the program is _________",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 3,
+    "max": 3
+  },
+  "explanation": "<strong>Step 1: Understand the baseline components of execution time.</strong><br>Total baseline execution time $T_1 = 100\\text{ ns}$.<br>Parallelizable portion ($90\\%$ of $100\\text{ ns}$) = $90\\text{ ns}$.<br>Non-parallelizable (serial) portion ($10\\%$ of $100\\text{ ns}$) = $10\\text{ ns}$.<br><br><strong>Step 2: Express execution time as a function of the number of cores $p$.</strong><br>For $p$ cores, the time taken by the parallel part is $\\frac{90}{p}\\text{ ns}$.<br>The overhead for using an additional core is $10\\text{ ns}$ per additional core, which equals $10 \\times (p - 1)\\text{ ns}$.<br>Thus, total execution time $T(p)$ for $p$ cores is given by:<br>$T(p) = \\text{Serial time} + \\text{Parallel time} + \\text{Overhead time}$<br>$T(p) = 10 + \\frac{90}{p} + 10(p - 1) = \\frac{90}{p} + 10p$<br><br><strong>Step 3: Calculate $T(p)$ for integer values of $p$.</strong><br>For $p = 1$: $T(1) = \\frac{90}{1} + 10(1) = 90 + 10 = 100\\text{ ns}$<br>For $p = 2$: $T(2) = \\frac{90}{2} + 10(2) = 45 + 20 = 65\\text{ ns}$<br>For $p = 3$: $T(3) = \\frac{90}{3} + 10(3) = 30 + 30 = 60\\text{ ns}$<br>For $p = 4$: $T(4) = \\frac{90}{4} + 10(4) = 22.5 + 40 = 62.5\\text{ ns}$<br><br>Since $T(3) = 60\\text{ ns}$ is the minimum execution time, the optimal number of cores is <strong>3</strong>.",
+  "videoUrl": null
+}

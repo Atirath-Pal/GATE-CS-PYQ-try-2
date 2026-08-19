@@ -1,0 +1,21 @@
+{
+  "id": 2,
+  "year": 2024,
+  "set": 1,
+  "topics": ["General Aptitude", "Quantitative Aptitude"],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "If two distinct non-zero real variables $x$ and $y$ are such that $(x + y)$ is proportional to $(x - y)$ then the value of $\\frac{x}{y}$",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "depends on $xy$",
+    "depends only on $x$ and not on $y$",
+    "depends only on $y$ and not on $x$",
+    "is a constant"
+  ],
+  "answer": ["D"],
+  "explanation": "Given that $(x + y)$ is proportional to $(x - y)$, we can write:<br>$(x + y) = k(x - y)$, where $k$ is a constant of proportionality.<br><br>Expanding the equation:<br>$x + y = kx - ky$<br><br>Rearranging the terms to group $x$ and $y$ together:<br>$y + ky = kx - x$<br>$y(1 + k) = x(k - 1)$<br><br>Dividing both sides to find $\\frac{x}{y}$:<br>$\\frac{x}{y} = \\frac{1 + k}{k - 1}$<br><br>Since $k$ is a constant, $\\frac{1 + k}{k - 1}$ is also a constant.<br>Therefore, the value of $\\frac{x}{y}$ <strong>is a constant</strong>.",
+  "videoUrl": null
+}

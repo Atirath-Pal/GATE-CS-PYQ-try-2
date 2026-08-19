@@ -1,0 +1,26 @@
+{
+  "id": 7,
+  "year": "2024",
+  "set": "1",
+  "topics": [
+    "General Aptitude",
+    "Quantitative Aptitude"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "A rectangular paper sheet of dimensions $54\\text{ cm} \\times 4\\text{ cm}$ is taken. The two longer edges of the sheet are joined together to create a cylindrical tube. A cube whose surface area is equal to the area of the sheet is also taken.<br><br>Then, the ratio of the volume of the cylindrical tube to the volume of the cube is",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$1/\\pi$",
+    "$2/\\pi$",
+    "$3/\\pi$",
+    "$4/\\pi$"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step 1: Find the dimensions and volume of the cylindrical tube.</strong><br>The rectangular sheet has dimensions $54\\text{ cm} \\times 4\\text{ cm}$.<br>The two longer edges ($54\\text{ cm}$) are joined together to form the cylinder. This means:<br>• The circumference of the circular cross-section of the cylinder is equal to the shorter edge: $2\\pi r = 4\\text{ cm} \\implies r = \\frac{2}{\\pi}\\text{ cm}$.<br>• The height of the cylinder is equal to the longer edge: $h = 54\\text{ cm}$.<br><br>The volume of the cylindrical tube is:<br>$V_{\\text{cylinder}} = \\pi r^2 h = \\pi \\left(\\frac{2}{\\pi}\\right)^2 \\times 54 = \\pi \\times \\frac{4}{\\pi^2} \\times 54 = \\frac{216}{\\pi}\\text{ cm}^3$.<br><br><strong>Step 2: Find the dimensions and volume of the cube.</strong><br>The total surface area of the cube is equal to the area of the sheet.<br>• Area of the sheet $= 54 \\times 4 = 216\\text{ cm}^2$.<br>Let $a$ be the side length of the cube.<br>Total surface area of cube $= 6a^2 = 216 \\implies a^2 = 36 \\implies a = 6\\text{ cm}$.<br><br>The volume of the cube is:<br>$V_{\\text{cube}} = a^3 = 6^3 = 216\\text{ cm}^3$.<br><br><strong>Step 3: Calculate the ratio of the volumes.</strong><br>$\\text{Ratio} = \\frac{V_{\\text{cylinder}}}{V_{\\text{cube}}} = \\frac{216/\\pi}{216} = \\frac{1}{\\pi}$.<br><br>Therefore, option (A) is correct.",
+  "videoUrl": null
+}

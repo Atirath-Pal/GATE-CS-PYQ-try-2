@@ -1,0 +1,22 @@
+{
+  "id": 35,
+  "year": 2024,
+  "set": 1,
+  "topics": [
+    "Database Management Systems",
+    "Relational Algebra"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider the following two relations, $R(A,B)$ and $S(A,C)$:<br><br><div style=\"display: flex; flex-wrap: wrap; gap: 40px; justify-content: center; align-items: flex-start; margin: 16px 0;\"><table style=\"border: 1px solid white; border-collapse: collapse; text-align: center;\"><thead><tr><th colspan=\"2\" style=\"border: 1px solid white; padding: 6px 24px;\"><i>R</i></th></tr><tr><th style=\"border: 1px solid white; padding: 6px 24px;\"><i>A</i></th><th style=\"border: 1px solid white; padding: 6px 24px;\"><i>B</i></th></tr></thead><tbody><tr><td style=\"border: 1px solid white; padding: 6px 24px;\">10</td><td style=\"border: 1px solid white; padding: 6px 24px;\">20</td></tr><tr><td style=\"border: 1px solid white; padding: 6px 24px;\">20</td><td style=\"border: 1px solid white; padding: 6px 24px;\">30</td></tr><tr><td style=\"border: 1px solid white; padding: 6px 24px;\">30</td><td style=\"border: 1px solid white; padding: 6px 24px;\">40</td></tr><tr><td style=\"border: 1px solid white; padding: 6px 24px;\">30</td><td style=\"border: 1px solid white; padding: 6px 24px;\">50</td></tr><tr><td style=\"border: 1px solid white; padding: 6px 24px;\">50</td><td style=\"border: 1px solid white; padding: 6px 24px;\">95</td></tr></tbody></table><table style=\"border: 1px solid white; border-collapse: collapse; text-align: center;\"><thead><tr><th colspan=\"2\" style=\"border: 1px solid white; padding: 6px 24px;\"><i>S</i></th></tr><tr><th style=\"border: 1px solid white; padding: 6px 24px;\"><i>A</i></th><th style=\"border: 1px solid white; padding: 6px 24px;\"><i>C</i></th></tr></thead><tbody><tr><td style=\"border: 1px solid white; padding: 6px 24px;\">10</td><td style=\"border: 1px solid white; padding: 6px 24px;\">90</td></tr><tr><td style=\"border: 1px solid white; padding: 6px 24px;\">30</td><td style=\"border: 1px solid white; padding: 6px 24px;\">45</td></tr><tr><td style=\"border: 1px solid white; padding: 6px 24px;\">40</td><td style=\"border: 1px solid white; padding: 6px 24px;\">80</td></tr></tbody></table></div><br>The total number of tuples obtained by evaluating the following expression<br><br>$$\\sigma_{B < C}(R \\bowtie_{R.A = S.A} S)$$<br><br>is ________",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 2,
+    "max": 2
+  },
+  "explanation": "<strong>Step 1: Perform the Natural/Equi-join operation $R \\bowtie_{R.A = S.A} S$</strong><br>We join tuple pairs from relation $R$ and relation $S$ where $R.A = S.A$:<br><br>1. For $R.A = 10$: $R(10, 20)$ matches with $S(10, 90) \\rightarrow (10, 20, 90)$<br>2. For $R.A = 20$: No match in $S$<br>3. For $R.A = 30$:<br>&nbsp;&nbsp;&nbsp;&nbsp;- $R(30, 40)$ matches with $S(30, 45) \\rightarrow (30, 40, 45)$<br>&nbsp;&nbsp;&nbsp;&nbsp;- $R(30, 50)$ matches with $S(30, 45) \\rightarrow (30, 50, 45)$<br>4. For $R.A = 50$: No match in $S$<br><br>The resulting tuples from $R \\bowtie_{R.A = S.A} S$ are:<br>- Tuple 1: $(A=10, B=20, C=90)$<br>- Tuple 2: $(A=30, B=40, C=45)$<br>- Tuple 3: $(A=30, B=50, C=45)$<br><br><strong>Step 2: Apply the selection condition $\\sigma_{B < C}$</strong><br>Now we filter the tuples where $B < C$:<br>- For Tuple 1: $B = 20, C = 90 \\implies 20 < 90$ (True)<br>- For Tuple 2: $B = 40, C = 45 \\implies 40 < 45$ (True)<br>- For Tuple 3: $B = 50, C = 45 \\implies 50 < 45$ (False)<br><br><strong>Conclusion:</strong><br>The selection condition yields $2$ tuples. Thus, the total number of tuples is <strong>2</strong>.",
+  "videoUrl": null
+}

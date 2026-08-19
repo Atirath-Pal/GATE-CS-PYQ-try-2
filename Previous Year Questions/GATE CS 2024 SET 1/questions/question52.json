@@ -1,0 +1,26 @@
+{
+  "id": 52,
+  "year": 2024,
+  "set": 1,
+  "topics": [
+    "Discrete Mathematics"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the operators $\\lozenge$ and $\\square$ defined by $a \\lozenge b = a + 2b$, $a \\square b = ab$, for positive integers. Which of the following statements is/are TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Operator $\\lozenge$ obeys the associative law",
+    "Operator $\\square$ obeys the associative law",
+    "Operator $\\lozenge$ over the operator $\\square$ obeys the distributive law",
+    "Operator $\\square$ over the operator $\\lozenge$ obeys the distributive law"
+  ],
+  "answer": [
+    "B",
+    "D"
+  ],
+  "explanation": "<strong>Given operators:</strong><br>$a \\lozenge b = a + 2b$<br>$a \\square b = ab$<br><br><strong>Option (A): Check associativity of $\\lozenge$</strong><br>LHS = $(a \\lozenge b) \\lozenge c = (a + 2b) \\lozenge c = a + 2b + 2c$<br>RHS = $a \\lozenge (b \\lozenge c) = a \\lozenge (b + 2c) = a + 2(b + 2c) = a + 2b + 4c$<br>Since LHS $\\neq$ RHS, operator $\\lozenge$ does not obey the associative law. Thus, (A) is FALSE.<br><br><strong>Option (B): Check associativity of $\\square$</strong><br>LHS = $(a \\square b) \\square c = (ab) \\square c = abc$<br>RHS = $a \\square (b \\square c) = a \\square (bc) = abc$<br>Since LHS = RHS, operator $\\square$ obeys the associative law. Thus, (B) is TRUE.<br><br><strong>Option (C): Check distributivity of $\\lozenge$ over $\\square$</strong><br>Distributive rule: $a \\lozenge (b \\square c) = (a \\lozenge b) \\square (a \\lozenge c)$<br>LHS = $a \\lozenge (bc) = a + 2bc$<br>RHS = $(a + 2b) \\square (a + 2c) = (a + 2b)(a + 2c) = a^2 + 2ac + 2ab + 4bc$<br>Since LHS $\\neq$ RHS, operator $\\lozenge$ does not distribute over $\\square$. Thus, (C) is FALSE.<br><br><strong>Option (D): Check distributivity of $\\square$ over $\\lozenge$</strong><br>Distributive rule: $a \\square (b \\lozenge c) = (a \\square b) \\lozenge (a \\square c)$<br>LHS = $a \\square (b + 2c) = a(b + 2c) = ab + 2ac$<br>RHS = $(ab) \\lozenge (ac) = ab + 2ac$<br>Since LHS = RHS, operator $\\square$ distributes over $\\lozenge$. Thus, (D) is TRUE.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 11,
+  "year": 2024,
+  "set": 1,
+  "topics": [
+    "Engineering Mathematics",
+    "Calculus"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Let $f: \\mathbb{R} \\rightarrow \\mathbb{R}$ be a function such that $f(x) = \\max\\{x, x^3\\}$, $x \\in \\mathbb{R}$, where $\\mathbb{R}$ is the set of all real numbers. The set of all points where $f(x)$ is NOT differentiable is",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\{-1, 1, 2\\}$",
+    "$\\{-2, -1, 1\\}$",
+    "$\\{0, 1\\}$",
+    "$\\{-1, 0, 1\\}$"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Step 1: Analyze the function definition</strong><br>We are given $f(x) = \\max\\{x, x^3\\}$. To find where $x = x^3$, we solve $x^3 - x = 0 \\implies x(x-1)(x+1) = 0$, giving intersection points at $x = -1, 0, 1$.<br><br><strong>Step 2: Determine $f(x)$ in different intervals</strong><br>• For $x \\in (-\\infty, -1)$: $x^3 < x$, so $f(x) = x$.<br>• For $x \\in (-1, 0)$: $x^3 > x$, so $f(x) = x^3$.<br>• For $x \\in (0, 1)$: $x^3 < x$, so $f(x) = x$.<br>• For $x \\in (1, \\infty)$: $x^3 > x$, so $f(x) = x^3$.<br><br><strong>Step 3: Check differentiability at intersection points</strong><br>• <strong>At $x = -1$:</strong> Left derivative $f'(-1^-) = 1$, Right derivative $f'(-1^+) = 3(-1)^2 = 3$. Since $1 \\neq 3$, $f(x)$ is not differentiable at $x = -1$.<br>• <strong>At $x = 0$:</strong> Left derivative $f'(0^-) = 3(0)^2 = 0$, Right derivative $f'(0^+) = 1$. Since $0 \\neq 1$, $f(x)$ is not differentiable at $x = 0$.<br>• <strong>At $x = 1$:</strong> Left derivative $f'(1^-) = 1$, Right derivative $f'(1^+) = 3(1)^2 = 3$. Since $1 \\neq 3$, $f(x)$ is not differentiable at $x = 1$.<br><br>Therefore, the set of points where $f(x)$ is NOT differentiable is $\\{-1, 0, 1\\}$.",
+  "videoUrl": null
+}

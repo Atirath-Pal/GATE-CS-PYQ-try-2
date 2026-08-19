@@ -1,0 +1,21 @@
+{
+  "id": 27,
+  "year": 2024,
+  "set": 1,
+  "topics": ["Engineering Mathematics", "Probability"],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Let $A$ and $B$ be two events in a probability space with $P(A) = 0.3$, $P(B) = 0.5$, and $P(A \\cap B) = 0.1$. Which of the following statements is/are TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "The two events $A$ and $B$ are independent",
+    "$P(A \\cup B) = 0.7$",
+    "$P(A \\cap B^c) = 0.2$, where $B^c$ is the complement of the event $B$",
+    "$P(A^c \\cap B^c) = 0.4$, where $A^c$ and $B^c$ are the complements of the events $A$ and $B$, respectively"
+  ],
+  "answer": ["B", "C"],
+  "explanation": "<strong>Given Information:</strong><br>$P(A) = 0.3$<br>$P(B) = 0.5$<br>$P(A \\cap B) = 0.1$<br><br><strong>Check Option A:</strong><br>For events $A$ and $B$ to be independent, we must have $P(A \\cap B) = P(A) \\times P(B)$.<br>$P(A) \\times P(B) = 0.3 \\times 0.5 = 0.15$.<br>Since $P(A \\cap B) = 0.1 \\neq 0.15$, the two events $A$ and $B$ are <strong>not independent</strong>.<br>So, Option A is FALSE.<br><br><strong>Check Option B:</strong><br>Using the principle of inclusion-exclusion:<br>$P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$<br>$P(A \\cup B) = 0.3 + 0.5 - 0.1 = 0.7$.<br>So, Option B is TRUE.<br><br><strong>Check Option C:</strong><br>$P(A \\cap B^c) = P(A) - P(A \\cap B)$<br>$P(A \\cap B^c) = 0.3 - 0.1 = 0.2$.<br>So, Option C is TRUE.<br><br><strong>Check Option D:</strong><br>Using De Morgan's Law:<br>$P(A^c \\cap B^c) = P((A \\cup B)^c) = 1 - P(A \\cup B)$<br>$P(A^c \\cap B^c) = 1 - 0.7 = 0.3$.<br>Since $0.3 \\neq 0.4$, Option D is FALSE.",
+  "videoUrl": null
+}

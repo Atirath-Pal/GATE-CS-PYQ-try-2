@@ -1,0 +1,21 @@
+{
+  "id": 21,
+  "year": 2024,
+  "set": 1,
+  "topics": ["Databases", "B+ Trees"],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "In a B+ tree, the requirement of at least half-full (50%) node occupancy is relaxed for which one of the following cases?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Only the root node",
+    "All leaf nodes",
+    "All internal nodes",
+    "Only the leftmost leaf node"
+  ],
+  "answer": ["A"],
+  "explanation": "<strong>Step 1: Understand B+ Tree Node Occupancy Rules</strong><br>In a B+ tree of order $p$ (where order represents the maximum number of children or pointers per node):<br>- Internal nodes (except the root) must have at least $\\lceil p/2 \\rceil$ children.<br>- Leaf nodes (except when the root is also a leaf) must be at least 50% full.<br><br><strong>Step 2: Identify the Exception</strong><br>The <strong>root node</strong> is an exception to the minimum occupancy condition. The root can have as few as 2 children (or containing as few as 1 key) when the tree is small or just growing, violating the strict 50% minimum node occupancy constraint that applies to all other nodes.<br><br><strong>Conclusion:</strong><br>Thus, the requirement of at least half-full occupancy is relaxed <strong>only for the root node</strong>.<br><br>Hence, the correct option is <strong>(A)</strong>.",
+  "videoUrl": null
+}

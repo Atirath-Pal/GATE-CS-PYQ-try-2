@@ -1,0 +1,26 @@
+{
+  "id": 40,
+  "year": 2024,
+  "set": 1,
+  "topics": [
+    "Operating Systems",
+    "Process Synchronization"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the following two threads T1 and T2 that update two shared variables $a$ and $b$. Assume that initially $a = b = 1$. Though context switching between threads can happen at any time, each statement of T1 or T2 is executed atomically without interruption.<br><br>Which one of the following options lists all the possible combinations of values of $a$ and $b$ after both T1 and T2 finish execution?",
+  "assetImage": null,
+  "codeBlock": "         T1                   T2\n\n     a = a + 1;           b = 2 * b;\n     b = b + 1;           a = 2 * a;",
+  "options": [
+    "(a = 4, b = 4);(a = 3, b = 3);(a = 4, b = 3)",
+    "(a = 3, b = 4);(a = 4, b = 3);(a = 3, b = 3)",
+    "(a = 4, b = 4);(a = 4, b = 3);(a = 3, b = 4)",
+    "(a = 2, b = 2);(a = 2, b = 3);(a = 3, b = 4)"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "Let the individual atomic statements of the threads be denoted as follows:<br><strong>T1_1:</strong> $a = a + 1$<br><strong>T1_2:</strong> $b = b + 1$<br><strong>T2_1:</strong> $b = 2 * b$<br><strong>T2_2:</strong> $a = 2 * a$<br><br>The initial values are $a = 1, b = 1$.<br>The final value of $a$ depends solely on the execution order of T1_1 and T2_2.<br>The final value of $b$ depends solely on the execution order of T1_2 and T2_1.<br><br><strong>Case 1: Serial Execution T1 followed by T2</strong><br>Sequence: T1_1 &rarr; T1_2 &rarr; T2_1 &rarr; T2_2<br>$a = (1 + 1) * 2 = 4$<br>$b = (1 + 1) * 2 = 4$<br>Result: <strong>(a = 4, b = 4)</strong><br><br><strong>Case 2: Serial Execution T2 followed by T1</strong><br>Sequence: T2_1 &rarr; T2_2 &rarr; T1_1 &rarr; T1_2<br>$a = (1 * 2) + 1 = 3$<br>$b = (1 * 2) + 1 = 3$<br>Result: <strong>(a = 3, b = 3)</strong><br><br><strong>Case 3: Interleaved Execution yielding a mixed state</strong><br>Let's check if $(a = 4, b = 3)$ is possible.<br>To get $a = 4$, T1_1 must execute before T2_2.<br>To get $b = 3$, T2_1 must execute before T1_2.<br>Can we find a sequence satisfying these dependencies along with the intra-thread dependencies (T1_1 before T1_2, and T2_1 before T2_2)?<br>Yes, an example sequence is: T1_1 &rarr; T2_1 &rarr; T2_2 &rarr; T1_2.<br>Execution trace:<br>T1_1: $a = 1 + 1 = 2$<br>T2_1: $b = 1 * 2 = 2$<br>T2_2: $a = 2 * 2 = 4$<br>T1_2: $b = 2 + 1 = 3$<br>Result: <strong>(a = 4, b = 3)</strong><br><br><strong>Case 4: Checking for (a = 3, b = 4)</strong><br>To get $a = 3$, T2_2 must execute before T1_1.<br>To get $b = 4$, T1_2 must execute before T2_1.<br>Based on intra-thread dependencies, we must have:<br>T1_1 &lt; T1_2 (T1 order)<br>T2_1 &lt; T2_2 (T2 order)<br>Combining these with our requirements:<br>T1_2 &lt; T2_1 &lt; T2_2 &lt; T1_1.<br>This implies T1_2 must execute before T1_1, which violates the strict sequential execution within thread T1. Thus, the state $(a = 3, b = 4)$ is impossible.<br><br>Therefore, the only possible combinations are $(a = 4, b = 4)$, $(a = 3, b = 3)$, and $(a = 4, b = 3)$, matching Option (A).",
+  "videoUrl": null
+}

@@ -1,0 +1,22 @@
+{
+  "id": 65,
+  "year": 2024,
+  "set": 1,
+  "topics": [
+    "Computer Networks",
+    "IP Fragmentation"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider sending an IP datagram of size 1420 bytes (including 20 bytes of IP header) from a sender to a receiver over a path of two links with a router between them. The first link (sender to router) has an MTU (Maximum Transmission Unit) size of 542 bytes, while the second link (router to receiver) has an MTU size of 360 bytes. The number of fragments that would be delivered at the receiver is ______",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 6,
+    "max": 6
+  },
+  "explanation": "<strong>Step 1: Analysis of Initial IP Datagram</strong><br>Total Size = 1420 bytes<br>Header Size = 20 bytes<br>Data Payload = $1420 - 20 = 1400$ bytes<br><br><strong>Step 2: Fragmentation at First Link (Sender to Router, MTU = 542 bytes)</strong><br>Max data payload capacity per fragment = $542 - 20 = 522$ bytes.<br>Since the fragment data size must be a multiple of 8 bytes (except for the last fragment):<br>Max data per fragment = $\\lfloor 522 / 8 \\rfloor \\times 8 = 65 \\times 8 = 520$ bytes.<br><br>The 1400 bytes payload is divided into 3 fragments:<br>- Fragment 1 ($F_1$): 520 bytes data (+ 20 bytes header)<br>- Fragment 2 ($F_2$): 520 bytes data (+ 20 bytes header)<br>- Fragment 3 ($F_3$): $1400 - (520 \\times 2) = 360$ bytes data (+ 20 bytes header)<br><br><strong>Step 3: Fragmentation at Second Link (Router to Receiver, MTU = 360 bytes)</strong><br>Max data payload capacity per fragment = $360 - 20 = 340$ bytes.<br>Max data per fragment (multiple of 8) = $\\lfloor 340 / 8 \\rfloor \\times 8 = 42 \\times 8 = 336$ bytes.<br><br>Each fragment arriving at the router is further fragmented as needed:<br>- $F_1$ (520 bytes data): Split into 2 sub-fragments (336 bytes + 184 bytes data).<br>- $F_2$ (520 bytes data): Split into 2 sub-fragments (336 bytes + 184 bytes data).<br>- $F_3$ (360 bytes data): Split into 2 sub-fragments (336 bytes + 24 bytes data).<br><br><strong>Conclusion:</strong><br>Total number of fragments delivered to the receiver = $2 + 2 + 2 = 6$.",
+  "videoUrl": null
+}

@@ -1,0 +1,27 @@
+{
+  "id": 30,
+  "year": 2024,
+  "set": 1,
+  "topics": [
+    "Computer Organization and Architecture",
+    "Pipelining"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider a 5-stage pipelined processor with Instruction Fetch (IF), Instruction Decode (ID), Execute (EX), Memory Access (MEM), and Register Writeback (WB) stages. Which of the following statements about <i>forwarding</i> is/are CORRECT?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "In a pipelined execution, forwarding means the result from a source stage of an earlier instruction is passed on to the destination stage of a later instruction",
+    "In forwarding, data from the output of the MEM stage can be passed on to the input of the EX stage of the next instruction",
+    "Forwarding cannot prevent all pipeline stalls",
+    "Forwarding does not require any extra hardware to retrieve the data from the pipeline stages"
+  ],
+  "answer": [
+    "A",
+    "C"
+  ],
+  "explanation": "<strong>Analysis of each statement:</strong><br><br><strong>Statement (A):</strong> Correct.<br>Forwarding (or operand bypassing) retrieves the generated result directly from a pipeline stage (source stage) where an earlier instruction computes it, and sends it directly to a consuming stage (destination stage) of a later instruction before it is written back to the register file.<br><br><strong>Statement (B):</strong> Incorrect.<br>Consider a load instruction followed immediately by an instruction that depends on the loaded data (Load-Use hazard). The loaded data is available at the output of the MEM stage (end of MEM / start of WB). The subsequent dependent instruction needs this data at the <i>beginning</i> of its EX stage. Since the EX stage of the <i>next</i> instruction executes concurrently with the MEM stage of the load instruction, the data from the output of the MEM stage is available only at the end of the MEM stage, which corresponds to the WB stage time frame. Thus, forwarding must occur to the EX stage of an instruction that is two cycles behind, or require a stall cycle. Directly passing the output of the MEM stage to the EX stage of the <i>very next</i> instruction in the same cycle would require backward time travel.<br><br><strong>Statement (C):</strong> Correct.<br>In a Load-Use data hazard, the data is only ready after the MEM stage. The dependent instruction requires the data at the start of its EX stage. Even with full forwarding, a 1-cycle pipeline stall is unavoidable in a standard 5-stage pipeline for a load-use hazard.<br><br><strong>Statement (D):</strong> Incorrect.<br>Forwarding requires extra hardware components, including multiplexers at the inputs of the ALU, data paths (bypassing wires), and control logic to detect hazards and control the multiplexers.<br><br>Therefore, statements <strong>A</strong> and <strong>C</strong> are CORRECT.",
+  "videoUrl": null
+}

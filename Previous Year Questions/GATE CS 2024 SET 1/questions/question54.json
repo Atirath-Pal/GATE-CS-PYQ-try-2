@@ -1,0 +1,22 @@
+{
+  "id": 54,
+  "year": 2024,
+  "set": 1,
+  "topics": [
+    "Operating Systems",
+    "Secondary Storage"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a 512 GB hard disk with 32 storage surfaces. There are 4096 sectors per track and each sector holds 1024 bytes of data. The number of cylinders in the hard disk is ________",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 4096,
+    "max": 4096
+  },
+  "explanation": "<strong>Given:</strong><br>Total Disk Capacity = $512 \\text{ GB} = 512 \\times 2^{30} \\text{ bytes} = 2^{39} \\text{ bytes}$<br>Number of Surfaces = $32 = 2^5$<br>Sectors per Track = $4096 = 2^{12}$<br>Bytes per Sector = $1024 \\text{ bytes} = 2^{10} \\text{ bytes}$<br><br><strong>Formula:</strong><br>$\\text{Total Capacity} = \\text{Number of Cylinders} \\times \\text{Number of Surfaces} \\times \\text{Sectors per Track} \\times \\text{Bytes per Sector}$<br><br><strong>Calculation:</strong><br>Capacity per cylinder = $2^5 \\times 2^{12} \\times 2^{10} = 2^{27} \\text{ bytes}$<br><br>$\\text{Number of Cylinders} = \\frac{\\text{Total Capacity}}{\\text{Capacity per Cylinder}} = \\frac{2^{39}}{2^{27}} = 2^{12} = 4096$<br><br>Thus, the number of cylinders in the hard disk is <strong>4096</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 1,
+  "year": "2024",
+  "set": "1",
+  "topics": [
+    "General Aptitude",
+    "Verbal Ability"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "If ‘$\\rightarrow$’ denotes increasing order of intensity, then the meaning of the words<br><br>[dry $\\rightarrow$ arid $\\rightarrow$ parched] is analogous to [diet $\\rightarrow$ fast $\\rightarrow$ __________ ].<br><br>Which one of the given options is appropriate to fill the blank?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "starve",
+    "reject",
+    "feast",
+    "deny"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. <strong>Analyze the first sequence:</strong><br>[dry $\\rightarrow$ arid $\\rightarrow$ parched]<br>- 'dry' means lacking moisture.<br>- 'arid' means extremely dry.<br>- 'parched' means completely dried out or severely suffering from heat/dryness.<br>This sequence represents a progression of increasing intensity related to dryness.<br><br>2. <strong>Analyze the second sequence:</strong><br>[diet $\\rightarrow$ fast $\\rightarrow$ __________ ]<br>- 'diet' means restricting food intake for health or weight reasons.<br>- 'fast' means abstaining from all or some kinds of food or drink for a period.<br>- The next word must represent an extreme degree of food deprivation with higher intensity than 'fast'.<br><br>3. <strong>Evaluate the options:</strong><br>- <strong>(A) starve:</strong> Means to suffer severely or die from hunger/lack of food. This represents the extreme intensity beyond 'fast'.<br>- <strong>(B) reject:</strong> Means to refuse or dismiss, not related to food intensity.<br>- <strong>(C) feast:</strong> Means a large meal, which is the opposite of food restriction.<br>- <strong>(D) deny:</strong> Means to refuse to give or grant something, not specifically relevant to the degree of food restriction.<br><br>Therefore, <strong>starve</strong> is the correct choice to complete the sequence in increasing order of intensity.<br><br><strong>Correct Answer:</strong> (A) starve",
+  "videoUrl": null
+}

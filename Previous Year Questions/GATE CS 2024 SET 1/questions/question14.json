@@ -1,0 +1,26 @@
+{
+  "id": 14,
+  "year": 2024,
+  "set": 1,
+  "topics": [
+    "Probability",
+    "Combinatorics"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider a permutation sampled uniformly at random from the set of all permutations of $\\{1, 2, 3, \\dots, n\\}$ for some $n \\ge 4$. Let $X$ be the event that $1$ occurs before $2$ in the permutation, and $Y$ the event that $3$ occurs before $4$. Which one of the following statements is TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "The events $X$ and $Y$ are mutually exclusive",
+    "The events $X$ and $Y$ are independent",
+    "Either event $X$ or $Y$ must occur",
+    "Event $X$ is more likely than event $Y$"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step 1: Calculate $P(X)$ and $P(Y)$</strong><br>By symmetry, in a random permutation of $\\{1, 2, 3, \\dots, n\\}$, $1$ is equally likely to appear before $2$ as it is to appear after $2$.<br>Therefore, $P(X) = \\frac{1}{2}$.<br>Similarly, $3$ is equally likely to appear before $4$ as after $4$, so $P(Y) = \\frac{1}{2}$.<br><br><strong>Step 2: Calculate $P(X \\cap Y)$</strong><br>Consider the relative order of the four distinct elements $\\{1, 2, 3, 4\\}$.<br>The total number of possible relative orderings of these $4$ elements is $4! = 24$, all equally likely.<br>For event $X \\cap Y$ to occur, $1$ must precede $2$ AND $3$ must precede $4$.<br>The pairs $(1, 2)$ can be ordered in $1$ way ($1$ before $2$), and $(3, 4)$ can be ordered in $1$ way ($3$ before $4$).<br>The number of ways to interleave these two ordered pairs is $\\binom{4}{2} = 6$.<br>Thus, $P(X \\cap Y) = \\frac{6}{24} = \\frac{1}{4}$.<br><br><strong>Step 3: Test for Independence</strong><br>Since $P(X \\cap Y) = \\frac{1}{4}$ and $P(X) \\cdot P(Y) = \\frac{1}{2} \\times \\frac{1}{2} = \\frac{1}{4}$, we have:<br>$P(X \\cap Y) = P(X) \\cdot P(Y)$.<br>Therefore, the events $X$ and $Y$ are <strong>independent</strong>.<br><br><strong>Step 4: Evaluate other options</strong><br>• <strong>Mutually exclusive:</strong> $P(X \\cap Y) = \\frac{1}{4} \\neq 0$, so they are not mutually exclusive.<br>• <strong>Either $X$ or $Y$ must occur:</strong> It is possible for both $2$ to occur before $1$ and $4$ to occur before $3$ (e.g., permutation $(2, 1, 4, 3)$), in which case neither $X$ nor $Y$ occurs.<br>• <strong>Likelihood comparison:</strong> $P(X) = P(Y) = \\frac{1}{2}$, so neither event is more likely than the other.",
+  "videoUrl": null
+}

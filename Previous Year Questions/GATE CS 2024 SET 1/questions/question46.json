@@ -1,0 +1,28 @@
+{
+  "id": 46,
+  "year": "2024",
+  "set": "1",
+  "topics": [
+    "Database Management Systems",
+    "Transactions and Concurrency Control"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the following read-write schedule $S$ over three transactions $T_1, T_2$, and $T_3$, where the subscripts in the schedule indicate transaction IDs:<br><br>$$S: r_1(z); w_1(z); r_2(x); r_3(y); w_3(y); r_2(y); w_2(x); w_2(y);$$<br><br>Which of the following transaction schedules is/are conflict equivalent to $S$ ?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$T_1 T_2 T_3$",
+    "$T_1 T_3 T_2$",
+    "$T_3 T_2 T_1$",
+    "$T_3 T_1 T_2$"
+  ],
+  "answer": [
+    "B",
+    "C",
+    "D"
+  ],
+  "explanation": "To determine which serial schedules are conflict equivalent to $S$, we construct the precedence graph (precedence testing) for $S$ by identifying conflicting operations between different transactions:<br><br><strong>1. Conflicting operations between $T_3$ and $T_2$:</strong><br>- $w_3(y)$ in $T_3$ occurs before $r_2(y)$ in $T_2$. Since one is a write and the other is a read on the same data item $y$, this is a conflict. Thus, there is a directed edge from $T_3 \\rightarrow T_2$.<br>- $w_3(y)$ in $T_3$ occurs before $w_2(y)$ in $T_2$. Thus, there is a write-write conflict leading to $T_3 \\rightarrow T_2$.<br><br><strong>2. Operations involving $T_1$:</strong><br>- $T_1$ only accesses data item $z$ ($r_1(z); w_1(z)$).<br>- Neither $T_2$ nor $T_3$ accesses data item $z$.<br>- Therefore, $T_1$ has no conflicting operations with either $T_2$ or $T_3$.<br><br><strong>Precedence Graph Summary:</strong><br>- Edge: $T_3 \\rightarrow T_2$<br>- $T_1$ is isolated with no incoming or outgoing edges.<br><br><strong>Valid Topological Orders (Conflict Equivalent Serial Schedules):</strong><br>Any topological sorting of the precedence graph must maintain that $T_3$ comes before $T_2$, while $T_1$ can appear anywhere relative to $T_1$, $T_2$, and $T_3$ as long as $T_3$ precedes $T_2$.<br><br>The valid topological orderings are:<br>1. $T_1 T_3 T_2$ (Option B)<br>2. $T_3 T_1 T_2$ (Option D)<br>3. $T_3 T_2 T_1$ (Option C)<br><br>Hence, options (B), (C), and (D) are all conflict equivalent to $S$.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 45,
+  "year": 2024,
+  "set": 1,
+  "topics": [
+    "Algorithms",
+    "Graph Theory"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Let $G$ be a directed graph and $T$ a depth first search (DFS) spanning tree in $G$ that is rooted at a vertex $v$. Suppose $T$ is also a breadth first search (BFS) tree in $G$, rooted at $v$. Which of the following statements is/are TRUE for <em>every</em> such graph $G$ and tree $T$ ?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "There are no back-edges in $G$ with respect to the tree $T$",
+    "There are no cross-edges in $G$ with respect to the tree $T$",
+    "There are no forward-edges in $G$ with respect to the tree $T$",
+    "The only edges in $G$ are the edges in $T$"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Analysis of Edges in BFS and DFS Spanning Trees:</strong><br><br>1. <strong>Forward-edges:</strong> A forward-edge is a non-tree edge from an ancestor $u$ to a descendant $w$ in $T$ such that the path length in $T$ from $u$ to $w$ is at least 2. If such an edge $(u, w)$ exists in $G$, the shortest path distance from the root $v$ to $w$ would be at most $dist(v, u) + 1$. However, in $T$, $dist_T(v, w) \\ge dist_T(v, u) + 2$. Since a BFS tree rooted at $v$ must give the shortest path distance from $v$ to every vertex, a forward-edge cannot exist. Therefore, <strong>there are no forward-edges in $G$ with respect to the tree $T$</strong>.<br><br>2. <strong>Back-edges & Cross-edges:</strong> Back-edges and cross-edges do not offer a shorter path from $v$ to any vertex, so they can exist in $G$ without violating the BFS or DFS tree structure of $T$.<br><br>Hence, only statement (C) is correct.",
+  "videoUrl": null
+}

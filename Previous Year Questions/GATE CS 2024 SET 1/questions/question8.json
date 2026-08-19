@@ -1,0 +1,26 @@
+{
+  "id": 8,
+  "year": 2024,
+  "set": 1,
+  "topics": [
+    "General Aptitude",
+    "Data Interpretation"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "The pie chart presents the percentage contribution of different macronutrients to a typical $2,000\\text{ kcal}$ diet of a person.<br><br>The typical energy density (kcal/g) of these macronutrients is given in the table.<br><br><table style=\"border: 1px solid white; border-collapse: collapse; margin: 12px 0;\"><thead><tr><th style=\"border: 1px solid white; padding: 6px 12px; text-align: left;\">Macronutrient</th><th style=\"border: 1px solid white; padding: 6px 12px; text-align: center;\">Energy density (kcal/g)</th></tr></thead><tbody><tr><td style=\"border: 1px solid white; padding: 6px 12px; text-align: left;\">Carbohydrates</td><td style=\"border: 1px solid white; padding: 6px 12px; text-align: center;\">4</td></tr><tr><td style=\"border: 1px solid white; padding: 6px 12px; text-align: left;\">Proteins</td><td style=\"border: 1px solid white; padding: 6px 12px; text-align: center;\">4</td></tr><tr><td style=\"border: 1px solid white; padding: 6px 12px; text-align: left;\">Unsaturated fat</td><td style=\"border: 1px solid white; padding: 6px 12px; text-align: center;\">9</td></tr><tr><td style=\"border: 1px solid white; padding: 6px 12px; text-align: left;\">Saturated fat</td><td style=\"border: 1px solid white; padding: 6px 12px; text-align: center;\">9</td></tr><tr><td style=\"border: 1px solid white; padding: 6px 12px; text-align: left;\">Trans fat</td><td style=\"border: 1px solid white; padding: 6px 12px; text-align: center;\">9</td></tr></tbody></table><br>The total fat (all three types), in grams, this person consumes is",
+  "assetImage": "question8.png",
+  "codeBlock": null,
+  "options": [
+    "44.4",
+    "77.8",
+    "100",
+    "3,600"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Calculate the total percentage of fat contribution from the pie chart.</strong><br>The three types of fat are:<br>* Trans fat = $5\\%$<br>* Saturated fat = $20\\%$<br>* Unsaturated fat = $20\\%$<br><br>Total percentage of fat = $5\\% + 20\\% + 20\\% = 45\\%$.<br><br><strong>Step 2: Calculate total calories contributed by fats.</strong><br>Total daily diet energy = $2,000\\text{ kcal}$.<br>Energy from fats = $45\\% \\text{ of } 2,000\\text{ kcal} = 0.45 \\times 2,000 = 900\\text{ kcal}$.<br><br><strong>Step 3: Calculate the total mass of fat in grams.</strong><br>The energy density for all types of fat is $9\\text{ kcal/g}$.<br>Total fat (in grams) = $\\frac{\\text{Total energy from fats}}{\\text{Energy density of fat}} = \\frac{900\\text{ kcal}}{9\\text{ kcal/g}} = 100\\text{ g}$.<br><br>Hence, Option (C) is the correct answer.",
+  "videoUrl": null
+}

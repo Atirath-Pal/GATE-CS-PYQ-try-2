@@ -1,0 +1,22 @@
+{
+  "id": 56,
+  "year": 2024,
+  "set": 1,
+  "topics": [
+    "Computer Organization and Architecture",
+    "Cache Memory"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "A given program has $25\\%$ load/store instructions. Suppose the ideal CPI (cycles per instruction) without any memory stalls is $2$. The program exhibits $2\\%$ miss rate on instruction cache and $8\\%$ miss rate on data cache. The miss penalty is $100$ cycles.<br><br>The speedup (<em>rounded off to two decimal places</em>) achieved with a perfect cache (i.e., with NO data or instruction cache misses) is ________",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 3.0,
+    "max": 3.0
+  },
+  "explanation": "<strong>Step 1: Calculate Instruction Cache Stalls</strong><br>Instruction miss rate per instruction = $2\\% = 0.02$<br>Instruction cache stall cycles per instruction = $0.02 \\times 100 = 2$ cycles.<br><br><strong>Step 2: Calculate Data Cache Stalls</strong><br>Frequency of load/store instructions = $25\\% = 0.25$<br>Data cache miss rate = $8\\% = 0.08$<br>Data cache misses per instruction = $0.25 \\times 0.08 = 0.02$<br>Data cache stall cycles per instruction = $0.02 \\times 100 = 2$ cycles.<br><br><strong>Step 3: Calculate Actual CPI</strong><br>$\\text{CPI}_{\\text{actual}} = \\text{Ideal CPI} + \\text{Instruction Stall Cycles} + \\text{Data Stall Cycles}$<br>$\\text{CPI}_{\\text{actual}} = 2 + 2 + 2 = 6$<br><br><strong>Step 4: Calculate CPI with Perfect Cache</strong><br>With a perfect cache, stall cycles = $0$.<br>$\\text{CPI}_{\\text{perfect}} = 2$<br><br><strong>Step 5: Calculate Speedup</strong><br>$\\text{Speedup} = \\frac{\\text{CPI}_{\\text{actual}}}{\\text{CPI}_{\\text{perfect}}} = \\frac{6}{2} = 3$",
+  "videoUrl": null
+}

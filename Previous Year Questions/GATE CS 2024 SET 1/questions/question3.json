@@ -1,0 +1,21 @@
+{
+  "id": 3,
+  "year": "2024",
+  "set": "1",
+  "topics": ["General Aptitude", "Quantitative Aptitude"],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the following sample of numbers:<br><br>$$9, 18, 11, 14, 15, 17, 10, 69, 11, 13$$<br><br>The median of the sample is",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "13.5",
+    "14",
+    "11",
+    "18.7"
+  ],
+  "answer": ["A"],
+  "explanation": "To find the median of the given sample of numbers, follow these steps:<br><br><strong>Step 1: Arrange the numbers in ascending order.</strong><br>The given sample is: $9, 18, 11, 14, 15, 17, 10, 69, 11, 13$<br>Arranging them in ascending order gives:<br>$9, 10, 11, 11, 13, 14, 15, 17, 18, 69$<br><br><strong>Step 2: Determine the total number of observations ($n$).</strong><br>There are $n = 10$ numbers in the sample (an even number of observations).<br><br><strong>Step 3: Calculate the median.</strong><br>Since $n$ is even, the median is the average of the two middle terms, which are the $(n/2)^{\\text{th}}$ term and the $(n/2 + 1)^{\\text{th}}$ term.<br>• $5^{\\text{th}}$ term = $13$<br>• $6^{\\text{th}}$ term = $14$<br><br>$\\text{Median} = \\frac{13 + 14}{2} = \\frac{27}{2} = 13.5$<br><br>Hence, the correct option is <strong>A</strong>.",
+  "videoUrl": null
+}

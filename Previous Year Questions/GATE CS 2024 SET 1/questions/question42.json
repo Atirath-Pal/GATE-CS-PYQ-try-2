@@ -1,0 +1,26 @@
+{
+  "id": 42,
+  "year": 2024,
+  "set": 1,
+  "topics": [
+    "Algorithms",
+    "Recurrence Relations"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the following recurrence relation:<br><br>$$T(n) = \\begin{cases} \\sqrt{n} T(\\sqrt{n}) + n & \\text{for } n > 1, \\\\ 1 & \\text{for } n = 1. \\end{cases}$$<br><br>Which one of the following options is CORRECT?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$T(n) = \\Theta(n \\log \\log n)$",
+    "$T(n) = \\Theta(n \\log n)$",
+    "$T(n) = \\Theta(n^2 \\log n)$",
+    "$T(n) = \\Theta(n^2 \\log \\log n)$"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "To solve the recurrence relation $T(n) = \\sqrt{n} T(\\sqrt{n}) + n$ for $n > 1$:<br><br><strong>Step 1: Divide both sides by $n$</strong><br>$$\\frac{T(n)}{n} = \\frac{\\sqrt{n} T(\\sqrt{n})}{n} + 1$$<br>$$\\frac{T(n)}{n} = \\frac{T(\\sqrt{n})}{\\sqrt{n}} + 1$$<br><br><strong>Step 2: Change of Variable</strong><br>Let $S(n) = \\frac{T(n)}{n}$.<br>Then, $S(\\sqrt{n}) = \\frac{T(\\sqrt{n})}{\\sqrt{n}}$.<br>So the equation becomes:<br>$$S(n) = S(\\sqrt{n}) + 1$$<br><br>Now, substitute $n = 2^k$, which means $\\sqrt{n} = 2^{k/2}$.<br>Let $S(2^k) = H(k)$.<br>Then the recurrence transforms to:<br>$$H(k) = H(k/2) + 1$$<br><br><strong>Step 3: Solve for $H(k)$</strong><br>By Master Theorem or substitution, $H(k) = \\Theta(\\log k)$.<br><br><strong>Step 4: Substitute back for $n$</strong><br>Since $n = 2^k$, we have $k = \\log_2 n$.<br>Therefore, $S(n) = H(\\log_2 n) = \\Theta(\\log \\log n)$.<br><br>Finally, since $S(n) = \\frac{T(n)}{n}$, we get:<br>$$T(n) = n \\cdot S(n) = \\Theta(n \\log \\log n)$$<br><br>Thus, Option (A) is correct.",
+  "videoUrl": null
+}

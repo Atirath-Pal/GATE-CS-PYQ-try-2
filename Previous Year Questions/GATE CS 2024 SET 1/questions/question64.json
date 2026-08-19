@@ -1,0 +1,22 @@
+{
+  "id": 64,
+  "year": 2024,
+  "set": 1,
+  "topics": [
+    "Digital Logic",
+    "Combinational Circuits"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a digital logic circuit consisting of three 2-to-1 multiplexers $M_1, M_2$, and $M_3$ as shown below. $X_1$ and $X_2$ are inputs of $M_1$. $X_3$ and $X_4$ are inputs of $M_2$. $A, B$, and $C$ are select lines of $M_1, M_2$, and $M_3$, respectively.<br><br>For an instance of inputs $X_1 = 1, X_2 = 1, X_3 = 0$, and $X_4 = 0$, the number of combinations of $A, B, C$ that give the output $Y = 1$ is ________",
+  "assetImage": "question64.png",
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 4,
+    "max": 4
+  },
+  "explanation": "<strong>Step 1: Output equations for Multiplexers</strong><br>The output of a 2-to-1 multiplexer with inputs $I_0, I_1$ and select line $S$ is given by:<br>$$\\text{Output} = \\overline{S} \\cdot I_0 + S \\cdot I_1$$<br><br><strong>Step 2: Calculate outputs $Q_1$ and $Q_2$ for $M_1$ and $M_2$</strong><br>Given inputs: $X_1 = 1, X_2 = 1, X_3 = 0, X_4 = 0$<br>Select lines: $S_1 = A, S_2 = B, S_3 = C$<br><br>For multiplexer $M_1$:<br>$$Q_1 = \\overline{A} \\cdot X_1 + A \\cdot X_2 = \\overline{A}(1) + A(1) = 1$$<br>So, $Q_1$ is always $1$, regardless of the value of $A$.<br><br>For multiplexer $M_2$:<br>$$Q_2 = \\overline{B} \\cdot X_3 + B \\cdot X_4 = \\overline{B}(0) + B(0) = 0$$<br>So, $Q_2$ is always $0$, regardless of the value of $B$.<br><br><strong>Step 3: Determine condition for output $Y = 1$</strong><br>For multiplexer $M_3$:<br>$$Y = \\overline{C} \\cdot Q_1 + C \\cdot Q_2$$<br>Substituting $Q_1 = 1$ and $Q_2 = 0$:<br>$$Y = \\overline{C}(1) + C(0) = \\overline{C}$$<br><br>To have output $Y = 1$, we need $\\overline{C} = 1 \\implies C = 0$.<br><br><strong>Step 4: Count combinations of $(A, B, C)$</strong><br>• $A$ can be $0$ or $1$ ($2$ choices)<br>• $B$ can be $0$ or $1$ ($2$ choices)<br>• $C$ must be $0$ ($1$ choice)<br><br>Total combinations of $(A, B, C) = 2 \\times 2 \\times 1 = 4$.",
+  "videoUrl": null
+}

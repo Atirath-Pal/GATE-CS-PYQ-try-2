@@ -1,0 +1,23 @@
+{
+  "id": 15,
+  "year": 2024,
+  "set": 1,
+  "topics": ["Computer Organization and Architecture", "I/O Interface"],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Which one of the following statements is FALSE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "In the cycle stealing mode of DMA, one word of data is transferred between an I/O device and main memory in a stolen cycle",
+    "For bulk data transfer, the burst mode of DMA has a higher throughput than the cycle stealing mode",
+    "Programmed I/O mechanism has a better CPU utilization than the interrupt driven I/O mechanism",
+    "The CPU can start executing an interrupt service routine faster with vectored interrupts than with non-vectored interrupts"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Analysis of each statement:</strong><br><br><strong>(A) True:</strong> In cycle stealing mode, the DMA controller transfers one word of data at a time by 'stealing' a bus cycle from the CPU.<br><br><strong>(B) True:</strong> Burst mode transfers a continuous block of data without giving control back to the CPU until the transfer completes, leading to higher throughput for bulk data transfers compared to cycle stealing mode.<br><br><strong>(C) False:</strong> Programmed I/O uses busy-waiting (polling), where the CPU continuously checks the status of the I/O device, resulting in very poor CPU utilization. Interrupt-driven I/O allows the CPU to execute other tasks while waiting for I/O, leading to much better CPU utilization.<br><br><strong>(D) True:</strong> In vectored interrupts, the interrupt source provides the memory address of the Interrupt Service Routine (ISR) directly, enabling faster branch execution compared to non-vectored interrupts where the CPU must poll/determine the source first.<br><br>Hence, statement (C) is FALSE.",
+  "videoUrl": null
+}

@@ -1,0 +1,22 @@
+{
+  "id": 32,
+  "year": 2024,
+  "set": 1,
+  "topics": [
+    "Discrete Mathematics",
+    "Set Theory & Algebra"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Let $A$ and $B$ be non-empty finite sets such that there exist one-to-one and onto functions (i) from $A$ to $B$ and (ii) from $A \\times A$ to $A \\cup B$. The number of possible values of $|A|$ is ______.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 2,
+    "max": 2
+  },
+  "explanation": "<strong>Step 1: Understand the given conditions</strong><br>A function $f: X \\to Y$ is one-to-one and onto (bijective) between finite sets if and only if $|X| = |Y|$.<br><br><strong>Step 2: Apply the conditions to the problem</strong><br>1. There exists a bijection from $A$ to $B$:<br>   $$\\Rightarrow |A| = |B| = n$$<br>   Since $A$ and $B$ are non-empty finite sets, $n \\ge 1$.<br><br>2. There exists a bijection from $A \\times A$ to $A \\cup B$:<br>   $$\\Rightarrow |A \\times A| = |A \\cup B|$$<br>   We know that $|A \\times A| = |A| \\times |A| = n^2$.<br>   For the union of two sets, $|A \\cup B| = |A| + |B| - |A \\cap B|$.<br>   Since $0 \\le |A \\cap B| \\le n$, we have:<br>   $$n \\le |A \\cup B| \\le 2n$$<br>   Therefore, $n \\le n^2 \\le 2n$.<br><br><strong>Step 3: Solve for $n$</strong><br>Dividing by $n$ (since $n \\ge 1$):<br>$$1 \\le n \\le 2$$<br>This gives two integer possibilities for $n$:<br>- If $n = 1$: $|A| = 1$, $|B| = 1$. Then $n^2 = 1$. If $A = B$, then $|A \\cup B| = 1$. So $n=1$ is possible.<br>- If $n = 2$: $|A| = 2$, $|B| = 2$. Then $n^2 = 4$. If $A$ and $B$ are disjoint ($A \\cap B = \\emptyset$), then $|A \\cup B| = 2 + 2 = 4$. So $n=2$ is also possible.<br><br>Thus, the possible values for $|A|$ are $1$ and $2$.<br><br><strong>Conclusion:</strong><br>The number of possible values of $|A|$ is <strong>2</strong>.",
+  "videoUrl": null
+}

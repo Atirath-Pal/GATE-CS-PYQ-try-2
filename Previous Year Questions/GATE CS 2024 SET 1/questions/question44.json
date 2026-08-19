@@ -1,0 +1,28 @@
+{
+  "id": 44,
+  "year": 2024,
+  "set": 1,
+  "topics": [
+    "Database Management Systems",
+    "Functional Dependencies"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "The symbol $\\rightarrow$ indicates functional dependency in the context of a relational database. Which of the following options is/are TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$(X, Y) \\rightarrow (Z, W)$ implies $X \\rightarrow (Z, W)$",
+    "$(X, Y) \\rightarrow (Z, W)$ implies $(X, Y) \\rightarrow Z$",
+    "($\\left(X, Y\\right) \\rightarrow Z$ and $W \\rightarrow Y$) implies $(X, W) \\rightarrow Z$",
+    "($X \\rightarrow Y$ and $Y \\rightarrow Z$) implies $X \\rightarrow Z$"
+  ],
+  "answer": [
+    "B",
+    "C",
+    "D"
+  ],
+  "explanation": "Let us analyze each option using Armstrong's Axioms for functional dependencies:<br><br><strong>Option (A):</strong> $(X, Y) \\rightarrow (Z, W)$ implies $X \\rightarrow (Z, W)$<br>This is <strong>FALSE</strong>. Deleting an attribute from the determinant (left-hand side) is not generally valid unless $Y$ is redundant.<br><br><strong>Option (B):</strong> $(X, Y) \\rightarrow (Z, W)$ implies $(X, Y) \\rightarrow Z$<br>By the Decomposition Rule (derived from Armstrong's Axioms), if $A \\rightarrow BC$, then $A \\rightarrow B$ and $A \\rightarrow C$. Therefore, $(X, Y) \\rightarrow (Z, W)$ implies $(X, Y) \\rightarrow Z$. Thus, this option is <strong>TRUE</strong>.<br><br><strong>Option (C):</strong> ($(X, Y) \\rightarrow Z$ and $W \\rightarrow Y$) implies $(X, W) \\rightarrow Z$<br>Using $W \\rightarrow Y$, augmenting with $X$ gives $(X, W) \\rightarrow (X, Y)$.<br>Since $(X, W) \\rightarrow (X, Y)$ and $(X, Y) \\rightarrow Z$, by Transitivity, we get $(X, W) \\rightarrow Z$. Thus, this option is <strong>TRUE</strong>.<br><br><strong>Option (D):</strong> ($X \\rightarrow Y$ and $Y \\rightarrow Z$) implies $X \\rightarrow Z$<br>This is the standard Transitivity Axiom of functional dependencies. Thus, this option is <strong>TRUE</strong>.<br><br>Therefore, the correct options are <strong>B, C, and D</strong>.",
+  "videoUrl": null
+}

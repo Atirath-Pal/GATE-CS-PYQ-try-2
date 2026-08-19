@@ -1,0 +1,27 @@
+{
+  "id": 50,
+  "year": 2024,
+  "set": 1,
+  "topics": [
+    "Theory of Computation",
+    "Finite Automata"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the 5-state DFA $M$ accepting the language $L(M) \\subset (0 + 1)^*$ shown below. For any string $w \\in (0 + 1)^*$ let $n_0(w)$ be the number of $0$'s in $w$ and $n_1(w)$ be the number of $1$'s in $w$.<br><br>Which of the following statements is/are FALSE?",
+  "assetImage": "question50.png",
+  "codeBlock": null,
+  "options": [
+    "States 2 and 4 are distinguishable in $M$",
+    "States 3 and 4 are distinguishable in $M$",
+    "States 2 and 5 are distinguishable in $M$",
+    "Any string $w$ with $n_0(w) = n_1(w)$ is in $L(M)$"
+  ],
+  "answer": [
+    "B",
+    "C"
+  ],
+  "explanation": "To determine which statements are FALSE, let us analyze the state distinguishability and the language accepted by DFA $M$:<br><br><strong>1. State Distinguishability:</strong><br>• <strong>States 2 and 4:</strong> $\\delta(2, 0) = 3$ (non-accepting state) and $\\delta(4, 0) = 1$ (accepting state). Since string $0$ leads to different acceptance states, states 2 and 4 are <strong>distinguishable</strong>. Hence, Statement (A) is TRUE.<br>• <strong>States 3 and 4:</strong> States 3 and 4 are equivalent ($3 \\equiv 4$) and cannot be distinguished by any string because $\\delta(3, 0) = \\delta(4, 0) = 1$ and $\\delta(3, 1) = 2 \\equiv 5 = \\delta(4, 1)$. Hence, Statement (B) is <strong>FALSE</strong>.<br>• <strong>States 2 and 5:</strong> States 2 and 5 are equivalent ($2 \\equiv 5$) and cannot be distinguished by any string because $\\delta(2, 0) = 3 \\equiv 4 = \\delta(5, 0)$ and $\\delta(2, 1) = \\delta(5, 1) = 1$. Hence, Statement (C) is <strong>FALSE</strong>.<br><br><strong>2. Language Analysis:</strong><br>• The state of DFA $M$ tracks the value of $(n_0(w) - n_1(w)) \\pmod 3$. State 1 is reached if and only if $(n_0(w) - n_1(w)) \\equiv 0 \\pmod 3$.<br>• For any string $w$ where $n_0(w) = n_1(w)$, we have $n_0(w) - n_1(w) = 0 \\equiv 0 \\pmod 3$. Thus, every such string lands in state 1 (the accepting state) and is in $L(M)$. Statement (D) is TRUE.<br><br>Since the question asks for FALSE statements, the correct options are <strong>B</strong> and <strong>C</strong>.",
+  "videoUrl": null
+}

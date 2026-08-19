@@ -1,0 +1,26 @@
+{
+  "id": 19,
+  "year": 2024,
+  "set": 1,
+  "topics": [
+    "C Programming",
+    "Recursion"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the following C program:<br><br>Assume that the input to the program from the command line is 1234 followed by a newline character. Which one of the following statements is CORRECT?",
+  "assetImage": null,
+  "codeBlock": "#include <stdio.h>\n\nvoid fX();\n\nint main() {\n    fX();\n    return 0;\n}\n\nvoid fX() {\n    char a;\n    if((a=getchar()) != '\\n')\n        fX();\n    if(a != '\\n')\n        putchar(a);\n}",
+  "options": [
+    "The program will not terminate",
+    "The program will terminate with no output",
+    "The program will terminate with 4321 as output",
+    "The program will terminate with 1234 as output"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step-by-step Execution:</strong><br><br>1. The program starts execution from <code>main()</code>, which invokes <code>fX()</code>.<br><br>2. <strong>First call to <code>fX()</code>:</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;- <code>a = getchar()</code> reads <code>'1'</code>.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Since <code>'1' != '\\n'</code> is <strong>True</strong>, <code>fX()</code> is called recursively.<br><br>3. <strong>Second call to <code>fX()</code>:</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;- <code>a = getchar()</code> reads <code>'2'</code>.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Since <code>'2' != '\\n'</code> is <strong>True</strong>, <code>fX()</code> is called recursively.<br><br>4. <strong>Third call to <code>fX()</code>:</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;- <code>a = getchar()</code> reads <code>'3'</code>.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Since <code>'3' != '\\n'</code> is <strong>True</strong>, <code>fX()</code> is called recursively.<br><br>5. <strong>Fourth call to <code>fX()</code>:</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;- <code>a = getchar()</code> reads <code>'4'</code>.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Since <code>'4' != '\\n'</code> is <strong>True</strong>, <code>fX()</code> is called recursively.<br><br>6. <strong>Fifth call to <code>fX()</code>:</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;- <code>a = getchar()</code> reads <code>'\\n'</code>.<br>&nbsp;&nbsp;&nbsp;&nbsp;- The condition <code>'\\n' != '\\n'</code> is <strong>False</strong>, skipping the recursive call.<br>&nbsp;&nbsp;&nbsp;&nbsp;- The condition <code>if (a != '\\n')</code> is also <strong>False</strong>, so nothing is printed and this function call finishes.<br><br>7. <strong>Unwinding the call stack (LIFO order):</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;- <strong>Fourth call resumes:</strong> <code>a</code> is <code>'4'</code>. Condition <code>if (a != '\\n')</code> is <strong>True</strong> $\\implies$ prints <code>4</code>.<br>&nbsp;&nbsp;&nbsp;&nbsp;- <strong>Third call resumes:</strong> <code>a</code> is <code>'3'</code>. Condition <code>if (a != '\\n')</code> is <strong>True</strong> $\\implies$ prints <code>3</code>.<br>&nbsp;&nbsp;&nbsp;&nbsp;- <strong>Second call resumes:</strong> <code>a</code> is <code>'2'</code>. Condition <code>if (a != '\\n')</code> is <strong>True</strong> $\\implies$ prints <code>2</code>.<br>&nbsp;&nbsp;&nbsp;&nbsp;- <strong>First call resumes:</strong> <code>a</code> is <code>'1'</code>. Condition <code>if (a != '\\n')</code> is <strong>True</strong> $\\implies$ prints <code>1</code>.<br><br>The sequence of printed characters is <strong>4321</strong>.<br><br>Hence, Option (C) is the correct answer.",
+  "videoUrl": null
+}

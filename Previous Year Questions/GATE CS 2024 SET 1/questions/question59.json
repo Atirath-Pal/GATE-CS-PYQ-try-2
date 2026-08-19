@@ -1,0 +1,19 @@
+{
+  "id": 59,
+  "year": 2024,
+  "set": 1,
+  "topics": ["Theory of Computation", "Context-Free Grammars"],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Let $G = (V, \\Sigma, S, P)$ be a context-free grammar in Chomsky Normal Form with $\\Sigma = \\{a, b, c\\}$ and $V$ containing 10 variable symbols including the start symbol $S$. The string $w = a^{30} b^{30} c^{30}$ is derivable from $S$. The number of steps (application of rules) in the derivation $S \\rightarrow^* w$ is _________",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 179,
+    "max": 179
+  },
+  "explanation": "<strong>Step 1: Understand CNF Derivation Property</strong><br>For any grammar in Chomsky Normal Form (CNF), every production rule is either of the form $A \\rightarrow BC$ or $A \\rightarrow a$.<br><br><strong>Step 2: Formula for Derivation Steps in CNF</strong><br>To derive a string $w$ of length $n = |w|$ using a grammar in Chomsky Normal Form:<br>- The number of non-terminal production applications (rules of the form $A \\rightarrow BC$) required is $n - 1$.<br>- The number of terminal production applications (rules of the form $A \\rightarrow a$) required is $n$.<br><br>Therefore, the total number of derivation steps is given by:<br>$\\text{Total Steps} = (n - 1) + n = 2n - 1$<br><br><strong>Step 3: Calculate for the Given String</strong><br>The given string is $w = a^{30} b^{30} c^{30}$.<br>Length of string, $n = |w| = 30 + 30 + 30 = 90$.<br><br>Plugging $n = 90$ into the formula:<br>$\\text{Total Steps} = 2(90) - 1 = 180 - 1 = 179$.<br><br>Thus, the number of steps in the derivation is <strong>179</strong>.",
+  "videoUrl": null
+}

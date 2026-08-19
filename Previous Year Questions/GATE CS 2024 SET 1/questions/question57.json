@@ -1,0 +1,22 @@
+{
+  "id": 57,
+  "year": 2024,
+  "set": 1,
+  "topics": [
+    "Operating Systems",
+    "System Calls"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the following code snippet using the <code>fork()</code> and <code>wait()</code> system calls. Assume that the code compiles and runs correctly, and that the system calls run successfully without any errors.<br><br>The total number of times the <code>printf</code> statement is executed is ________",
+  "assetImage": null,
+  "codeBlock": "int x = 3;\nwhile(x > 0) {\n    fork();\n    printf(\"hello\");\n    wait(NULL);\n    x--;\n}",
+  "options": [],
+  "answer": {
+    "min": 14,
+    "max": 14
+  },
+  "explanation": "To determine the total number of times the <code>printf</code> statement is executed, let us analyze the loop execution starting from $x = 3$.<br><br><strong>Iteration 1 ($x = 3$):</strong><br>• Initial state: $1$ process (P0) with $x = 3$.<br>• <code>fork()</code> creates $1$ new child process. Now there are $2$ processes (P0, P1).<br>• Both processes execute <code>printf</code>. (Count = $2$)<br>• Both processes decrement $x$ to $2$.<br><br><strong>Iteration 2 ($x = 2$):</strong><br>• Both $2$ processes (P0, P1) execute <code>fork()</code>, doubling the number of processes to $4$.<br>• All $4$ processes execute <code>printf</code>. (Count = $4$)<br>• All $4$ processes decrement $x$ to $1$.<br><br><strong>Iteration 3 ($x = 1$):</strong><br>• All $4$ processes execute <code>fork()</code>, doubling the number of processes to $8$.<br>• All $8$ processes execute <code>printf</code>. (Count = $8$)<br>• All $8$ processes decrement $x$ to $0$.<br><br><strong>Termination ($x = 0$):</strong><br>• All $8$ processes evaluate $x > 0$ as false and exit the loop.<br><br><strong>Total executions of <code>printf</code>:</strong><br>$2 + 4 + 8 = 14$",
+  "videoUrl": null
+}

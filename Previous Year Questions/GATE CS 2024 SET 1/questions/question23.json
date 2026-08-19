@@ -1,0 +1,27 @@
+{
+  "id": 23,
+  "year": 2024,
+  "set": 1,
+  "topics": [
+    "Theory of Computation",
+    "Regular Languages"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Let $L_1, L_2$ be two regular languages and $L_3$ a language which is not regular.<br>Which of the following statements is/are <i>always</i> TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$L_1 = L_2$ if and only if $L_1 \\cap \\overline{L_2} = \\phi$",
+    "$L_1 \\cup L_3$ is not regular",
+    "$\\overline{L_3}$ is not regular",
+    "$\\overline{L_1} \\cup \\overline{L_2}$ is regular"
+  ],
+  "answer": [
+    "C",
+    "D"
+  ],
+  "explanation": "<strong>Analysis of each statement:</strong><br><br><strong>Option (A):</strong> $L_1 = L_2 \\iff L_1 \\cap \\overline{L_2} = \\phi$<br>For two sets/languages to be equal ($L_1 = L_2$), we must have both $L_1 \\subseteq L_2$ and $L_2 \\subseteq L_1$.<br>The condition $L_1 \\cap \\overline{L_2} = \\phi$ only implies that $L_1 \\subseteq L_2$, but it does not guarantee $L_2 \\subseteq L_1$. For example, if $L_1 = \\phi$ and $L_2 = \\Sigma^*$, then $L_1 \\cap \\overline{L_2} = \\phi \\cap \\phi = \\phi$, but $L_1 \\neq L_2$. Hence, statement (A) is FALSE.<br><br><strong>Option (B):</strong> $L_1 \\cup L_3$ is not regular<br>Let $L_1 = \\Sigma^*$ (which is regular) and $L_3$ be any non-regular language (e.g., $\\{a^n b^n \\mid n \\ge 0\\}$). Then $L_1 \\cup L_3 = \\Sigma^*$, which is regular. Thus, $L_1 \\cup L_3$ can be regular, so statement (B) is NOT always TRUE.<br><br><strong>Option (C):</strong> $\\overline{L_3}$ is not regular<br>Regular languages are closed under complementation. If $\\overline{L_3}$ were regular, then its complement $\\overline{\\overline{L_3}} = L_3$ would also have to be regular, which contradicts the fact that $L_3$ is not regular. Therefore, $\\overline{L_3}$ must be non-regular. Statement (C) is ALWAYS TRUE.<br><br><strong>Option (D):</strong> $\\overline{L_1} \\cup \\overline{L_2}$ is regular<br>Since regular languages are closed under complementation, $\\overline{L_1}$ and $\\overline{L_2}$ are both regular languages. Furthermore, regular languages are closed under union, which means $\\overline{L_1} \\cup \\overline{L_2}$ is guaranteed to be regular. Statement (D) is ALWAYS TRUE.<br><br><strong>Correct options are (C) and (D).</strong>",
+  "videoUrl": null
+}

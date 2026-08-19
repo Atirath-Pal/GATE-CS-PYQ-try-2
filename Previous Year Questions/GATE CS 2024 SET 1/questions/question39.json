@@ -1,0 +1,26 @@
+{
+  "id": 39,
+  "year": 2024,
+  "set": 1,
+  "topics": [
+    "Compiler Design",
+    "Code Optimization"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the following pseudo-code.<br><br>Which one of the following options CORRECTLY specifies the number of basic blocks and the number of instructions in the largest basic block, respectively ?",
+  "assetImage": null,
+  "codeBlock": "L1:\tt1 = -1\nL2:\tt2 = 0\nL3:\tt3 = 0\nL4:\tt4 = 4 * t3\nL5:\tt5 = 4 * t2\nL6:\tt6 = t5 * M\nL7:\tt7 = t4 + t6\nL8:\tt8 = a[t7]\nL9:\tif t8 <= max goto L11\nL10:\tt1 = t8\nL11:\tt3 = t3 + 1\nL12:\tif t3 < M goto L4\nL13:\tt2 = t2 + 1\nL14:\tif t2 < N goto L3\nL15:\tmax = t1",
+  "options": [
+    "6 and 6",
+    "6 and 7",
+    "7 and 7",
+    "7 and 6"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Step 1: Identify the Leaders</strong><br>An instruction is defined as a leader if:<br>1. It is the first instruction of the program ($L1$).<br>2. It is the target of a conditional or unconditional jump ($L3$, $L4$, $L11$).<br>3. It immediately follows a conditional or unconditional jump ($L10$, $L13$, $L15$).<br><br>Thus, the leaders are: $L1, L3, L4, L10, L11, L13,$ and $L15$.<br><br><strong>Step 2: Form Basic Blocks</strong><br>Each basic block starts at a leader and extends up to (but does not include) the next leader or the end of the program:<br>* <strong>Block 1:</strong> $L1, L2$ (2 instructions)<br>* <strong>Block 2:</strong> $L3$ (1 instruction)<br>* <strong>Block 3:</strong> $L4, L5, L6, L7, L8, L9$ (6 instructions)<br>* <strong>Block 4:</strong> $L10$ (1 instruction)<br>* <strong>Block 5:</strong> $L11, L12$ (2 instructions)<br>* <strong>Block 6:</strong> $L13, L14$ (2 instructions)<br>* <strong>Block 7:</strong> $L15$ (1 instruction)<br><br><strong>Step 3: Conclusion</strong><br>* Total number of basic blocks = <strong>7</strong><br>* Number of instructions in the largest basic block (Block 3) = <strong>6</strong><br><br>Therefore, the correct answer is <strong>(D) 7 and 6</strong>.",
+  "videoUrl": null
+}

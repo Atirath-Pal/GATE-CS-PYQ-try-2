@@ -1,0 +1,27 @@
+{
+  "id": 47,
+  "year": 2024,
+  "set": 1,
+  "topics": [
+    "Digital Logic",
+    "Boolean Algebra"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a Boolean expression given by $F(X,Y,Z) = \\sum(3,5,6,7)$.<br><br>Which of the following statements is/are CORRECT?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$F(X,Y,Z) = \\prod(0,1,2,4)$",
+    "$F(X,Y,Z) = XY + YZ + XZ$",
+    "$F(X,Y,Z)$ is independent of input $Y$",
+    "$F(X,Y,Z)$ is independent of input $X$"
+  ],
+  "answer": [
+    "A",
+    "B"
+  ],
+  "explanation": "<strong>Step 1: Expressing as Product of Maxterms</strong><br>The given Boolean function in Sum of Minterms (SOP) form is $F(X,Y,Z) = \\sum(3,5,6,7)$.<br>Since a 3-variable function has $2^3 = 8$ total combinations (minterms/maxterms from $0$ to $7$), the maxterms correspond to the remaining indices: $0, 1, 2, 4$.<br>Therefore, in Product of Maxterms (POS) form:<br>$F(X,Y,Z) = \\prod(0,1,2,4)$.<br>Hence, <strong>Statement (A) is correct</strong>.<br><br><strong>Step 2: Minimizing the Boolean Expression</strong><br>Writing out the minterms for $F(X,Y,Z) = \\sum(3,5,6,7)$:<br>m3 = $\\bar{X}YZ$<br>m5 = $X\\bar{Y}Z$<br>m6 = $XY\\bar{Z}$<br>m7 = $XYZ$<br><br>Simplifying using Boolean algebra rules:<br>$F(X,Y,Z) = \\bar{X}YZ + X\\bar{Y}Z + XY\\bar{Z} + XYZ$<br>$F = YZ(\\bar{X} + X) + XZ(\\bar{Y} + Y) + XY(\\bar{Z} + Z)$<br>$F = YZ(1) + XZ(1) + XY(1) = XY + YZ + XZ$.<br>Hence, <strong>Statement (B) is correct</strong>.<br><br><strong>Step 3: Checking Input Dependency</strong><br>The simplified function $F(X,Y,Z) = XY + YZ + XZ$ contains all three variables $X$, $Y$, and $Z$, meaning the output depends on each of them.<br>Therefore, Statements (C) and (D) are incorrect.",
+  "videoUrl": null
+}

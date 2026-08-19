@@ -1,0 +1,26 @@
+{
+  "id": 10,
+  "year": 2024,
+  "set": 1,
+  "topics": [
+    "General Aptitude",
+    "Spatial Aptitude"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "The least number of squares to be added in the figure to make AB a line of symmetry is",
+  "assetImage": "question10.png",
+  "codeBlock": null,
+  "options": [
+    "6",
+    "4",
+    "5",
+    "7"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step 1: Understand Line of Symmetry</strong><br>A line of symmetry dividing a figure into two halves means that every square on one side of the line $AB$ must have a corresponding symmetric square reflected across $AB$ on the other side.<br><br><strong>Step 2: Analyze the given image</strong><br>Let us count the squares present above and below line $AB$:<br>1. Above line $AB$:<br>- There is $1$ square above line $AB$. Therefore, to make it symmetric, we need $1$ corresponding square reflected below line $AB$ at the same position. Since there is already a square directly below line $AB$ at this position, no extra square is needed here.<br>- However, let's examine all existing squares and their required reflections:<br><br>Let us count the squares that exist in the original figure:<br>- Below $AB$, there is $1$ square touching line $AB$, and another $1$ square directly under it ($2$ squares in that vertical column below $AB$). Directly above $AB$ in that column, there is $1$ square. Its reflection across $AB$ requires a matching square below, which already exists. However, the lower square of this column (2nd unit down) needs a matching square $2$ units above $AB$. That is **1 square to be added**.<br>- Further right below $AB$, there are $2$ adjacent squares touching $AB$ and $2$ squares attached below them (making $4$ squares below $AB$). None of these $4$ squares have symmetric counterparts above $AB$. Thus, all $4$ corresponding squares must be added above $AB$. That is **4 squares to be added**.<br>- The square directly below $AB$ under the top square requires a counterpart above $AB$ if any asymmetrical unit exists. Looking at all unmatched squares across the line of symmetry $AB$:<br><br>Total unmatched squares requiring a reflection:<br>- Below $AB$: $1$ square at distance 2 units down $\\rightarrow$ needs $1$ square at distance 2 units up.<br>- Below $AB$: $2$ squares at distance 1 unit down $\\rightarrow$ need $2$ squares at distance 1 unit up.<br>- Below $AB$: $2$ squares at distance 2 units down $\\rightarrow$ need $2$ squares at distance 2 units up.<br>- Above $AB$: $1$ square at distance 1 unit up $\\rightarrow$ needs $1$ square at distance 1 unit down (which already exists).<br><br>Total new squares required to be added = $1 + 2 + 2 + 1 = 6$ squares.<br><br>Thus, the minimum number of squares to be added is <strong>6</strong>.",
+  "videoUrl": null
+}

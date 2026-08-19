@@ -1,0 +1,27 @@
+{
+  "id": 26,
+  "year": 2024,
+  "set": 1,
+  "topics": [
+    "Compiler Design",
+    "Parsing"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Which of the following is/are Bottom-Up Parser(s)?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Shift-reduce Parser",
+    "Predictive Parser",
+    "LL(1) Parser",
+    "LR Parser"
+  ],
+  "answer": [
+    "A",
+    "D"
+  ],
+  "explanation": "<strong>Step 1: Classification of Parsers</strong><br>Parsers are broadly categorized into Top-Down parsers and Bottom-Up parsers.<br><br><strong>Step 2: Top-Down Parsers</strong><br>Top-Down parsers construct the parse tree from the root (top) down to the leaves. Examples include:<br>- <strong>Predictive Parser</strong><br>- <strong>LL(1) Parser</strong><br>- Recursive Descent Parser<br><br><strong>Step 3: Bottom-Up Parsers</strong><br>Bottom-Up parsers construct the parse tree starting from the leaves (bottom) up to the root by attempting to reduce the input string to the start symbol. Examples include:<br>- <strong>Shift-reduce Parser</strong><br>- <strong>LR Parser</strong> (SLR, CLR, LALR)<br><br>Therefore, the correct options representing Bottom-Up parsers are <strong>(A) Shift-reduce Parser</strong> and <strong>(D) LR Parser</strong>.",
+  "videoUrl": null
+}

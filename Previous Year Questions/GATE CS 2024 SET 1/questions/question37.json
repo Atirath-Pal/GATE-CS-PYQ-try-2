@@ -1,0 +1,26 @@
+{
+  "id": 37,
+  "year": 2024,
+  "set": 1,
+  "topics": [
+    "Compiler Design",
+    "Syntax Directed Translation"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the following syntax-directed definition (SDD).<br><br><table style=\"border: 1px solid white; border-collapse: collapse; margin: 12px 0;\"><tbody><tr><td style=\"border: 1px solid white; padding: 6px 16px; text-align: center;\">$S \\rightarrow DHTU$</td><td style=\"border: 1px solid white; padding: 6px 16px; text-align: left;\">$\\{ S.val = D.val + H.val + T.val + U.val; \\}$</td></tr><tr><td style=\"border: 1px solid white; padding: 6px 16px; text-align: center;\">$D \\rightarrow \\text{\"M\"}D_1$</td><td style=\"border: 1px solid white; padding: 6px 16px; text-align: left;\">$\\{ D.val = 5 + D_1.val; \\}$</td></tr><tr><td style=\"border: 1px solid white; padding: 6px 16px; text-align: center;\">$D \\rightarrow \\epsilon$</td><td style=\"border: 1px solid white; padding: 6px 16px; text-align: left;\">$\\{ D.val = -5; \\}$</td></tr><tr><td style=\"border: 1px solid white; padding: 6px 16px; text-align: center;\">$H \\rightarrow \\text{\"L\"}H_1$</td><td style=\"border: 1px solid white; padding: 6px 16px; text-align: left;\">$\\{ H.val = 5 * 10 + H_1.val; \\}$</td></tr><tr><td style=\"border: 1px solid white; padding: 6px 16px; text-align: center;\">$H \\rightarrow \\epsilon$</td><td style=\"border: 1px solid white; padding: 6px 16px; text-align: left;\">$\\{ H.val = -10; \\}$</td></tr><tr><td style=\"border: 1px solid white; padding: 6px 16px; text-align: center;\">$T \\rightarrow \\text{\"C\"}T_1$</td><td style=\"border: 1px solid white; padding: 6px 16px; text-align: left;\">$\\{ T.val = 5 * 100 + T_1.val; \\}$</td></tr><tr><td style=\"border: 1px solid white; padding: 6px 16px; text-align: center;\">$T \\rightarrow \\epsilon$</td><td style=\"border: 1px solid white; padding: 6px 16px; text-align: left;\">$\\{ T.val = -5; \\}$</td></tr><tr><td style=\"border: 1px solid white; padding: 6px 16px; text-align: center;\">$U \\rightarrow \\text{\"K\"}$</td><td style=\"border: 1px solid white; padding: 6px 16px; text-align: left;\">$\\{ U.val = 5; \\}$</td></tr></tbody></table><br>Given \"MMLK\" as the input, which one of the following options is the CORRECT value computed by the SDD (in the attribute $S.val$)?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "45",
+    "50",
+    "55",
+    "65"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step-by-step Evaluation of the SDD:</strong><br><br>The input string is <strong>\"MMLK\"</strong>.<br>We match the non-terminals $D, H, T, U$ to derive the input string:<br><br>1. <strong>Evaluation of $D$ for \"MM\":</strong><br>• $D \\rightarrow \\text{\"M\"}D_1$<br>• $D_1 \\rightarrow \\text{\"M\"}D_2$<br>• $D_2 \\rightarrow \\epsilon$<br><br>Computing attributes bottom-up:<br>• $D_2.val = -5$<br>• $D_1.val = 5 + D_2.val = 5 + (-5) = 0$<br>• $D.val = 5 + D_1.val = 5 + 0 = 5$<br><br>2. <strong>Evaluation of $H$ for \"L\":</strong><br>• $H \\rightarrow \\text{\"L\"}H_1$<br>• $H_1 \\rightarrow \\epsilon$<br><br>Computing attributes bottom-up:<br>• $H_1.val = -10$<br>• $H.val = 5 * 10 + H_1.val = 50 + (-10) = 40$<br><br>3. <strong>Evaluation of $T$ for $\\epsilon$ (no 'C' in input):</strong><br>• $T \\rightarrow \\epsilon$<br>• $T.val = -5$<br><br>4. <strong>Evaluation of $U$ for \"K\":</strong><br>• $U \\rightarrow \\text{\"K\"}$<br>• $U.val = 5$<br><br>5. <strong>Evaluation of $S.val$:</strong><br>$S.val = D.val + H.val + T.val + U.val$<br>$S.val = 5 + 40 + (-5) + 5 = 45$<br><br>Hence, the correct option is <strong>(A) 45</strong>.",
+  "videoUrl": null
+}

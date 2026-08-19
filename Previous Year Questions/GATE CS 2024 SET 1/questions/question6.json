@@ -1,0 +1,26 @@
+{
+  "id": 6,
+  "year": 2024,
+  "set": 1,
+  "topics": [
+    "General Aptitude",
+    "Verbal Ability"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "In the given text, the blanks are numbered (i)–(iv). Select the best match for all the blanks.<br><br>Steve was advised to keep his head _____<sup>(i)</sup>_____ before heading _____<sup>(ii)</sup>_____ to bat; for, while he had a head _____<sup>(iii)</sup>_____ batting, he could only do so with a cool head _____<sup>(iv)</sup>_____ his shoulders.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "(i) down\t(ii) down\t(iii) on\t(iv) for",
+    "(i) on\t(ii) down\t(iii) for\t(iv) on",
+    "(i) down\t(ii) out\t(iii) for\t(iv) on",
+    "(i) on\t(ii) out\t(iii) on\t(iv) for"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "To select the correct combination of prepositions and idioms:<br><br>1. <strong>Keep one's head down:</strong> This means to remain calm, focused, and avoid trouble or distraction. So, (i) should be <strong>down</strong>.<br>2. <strong>Heading out:</strong> Moving or going out towards the cricket field to bat. So, (ii) should be <strong>out</strong>.<br>3. <strong>Head for:</strong> Having an aptitude or natural talent for something (e.g., 'a head for batting'). So, (iii) should be <strong>for</strong>.<br>4. <strong>Head on one's shoulders:</strong> A common idiom meaning to be sensible or calm under pressure ('a cool head on his shoulders'). So, (iv) should be <strong>on</strong>.<br><br>Therefore, the correct match is <strong>(i) down, (ii) out, (iii) for, (iv) on</strong>, which corresponds to Option C.",
+  "videoUrl": null
+}

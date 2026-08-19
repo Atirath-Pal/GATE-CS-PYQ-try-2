@@ -1,0 +1,27 @@
+{
+  "id": 31,
+  "year": 2024,
+  "set": 1,
+  "topics": [
+    "Computer Networks",
+    "Network Address Translation"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Which of the following fields is/are modified in the IP header of a packet going out of a network address translation (NAT) device from an internal network to an external network?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Source IP",
+    "Destination IP",
+    "Header Checksum",
+    "Total Length"
+  ],
+  "answer": [
+    "A",
+    "C"
+  ],
+  "explanation": "When a packet leaves a private internal network heading towards an external public network through a NAT router:<br><br>1. <strong>Source IP Address:</strong> The private IP address of the source host inside the internal network is replaced with the public IP address assigned to the NAT device. Thus, the <strong>Source IP</strong> field is modified.<br><br>2. <strong>Header Checksum:</strong> Because the IP header content (specifically the Source IP) changes, the IP <strong>Header Checksum</strong> must be recomputed and updated.<br><br>3. <strong>Destination IP:</strong> Remains unchanged as the packet is meant to reach the original intended external destination.<br><br>4. <strong>Total Length:</strong> The payload and header size remain the same during standard NAT operations.<br><br>Therefore, the correct options are <strong>A</strong> and <strong>C</strong>.",
+  "videoUrl": null
+}

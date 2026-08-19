@@ -1,0 +1,26 @@
+{
+  "id": 49,
+  "year": 2024,
+  "set": 1,
+  "topics": [
+    "Linear Algebra",
+    "Systems of Linear Equations"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Let $A$ be any $n \\times m$ matrix, where $m > n$. Which of the following statements is/are TRUE about the system of linear equations $Ax = \\mathbf{0}$ ?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "There exist at least $m - n$ linearly independent solutions to this system",
+    "There exist $m - n$ linearly independent vectors such that every solution is a linear combination of these vectors",
+    "There exists a non-zero solution in which at least $m - n$ variables are 0",
+    "There exists a solution in which at least $n$ variables are non-zero"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step 1: Understand Matrix Dimensions and Rank-Nullity Theorem</strong><br>The given matrix $A$ has size $n \\times m$ with $m > n$.<br>This corresponds to a homogeneous system of linear equations $Ax = \\mathbf{0}$ with $n$ equations and $m$ variables.<br>The rank $r = \\text{rank}(A)$ satisfies $r \\le \\min(n, m) = n$.<br><br><strong>Step 2: Analyze Statement (A)</strong><br>By the Rank-Nullity Theorem:<br>$\\text{Nullity}(A) = m - r$<br>Since $r \\le n$, we have $-r \\ge -n$, which gives:<br>$\\text{Nullity}(A) = m - r \\ge m - n$<br>The nullity represents the dimension of the solution space (null space) of $Ax = \\mathbf{0}$. A solution space of dimension at least $m - n$ contains at least $m - n$ linearly independent solution vectors.<br>Hence, <strong>Statement (A) is TRUE</strong>.<br><br><strong>Step 3: Analyze Statement (B)</strong><br>If $r < n$, then $\\text{Nullity}(A) = m - r > m - n$. Any set of $m - n$ vectors can span a subspace of dimension at most $m - n$, which is insufficient to span the entire $(m - r)$-dimensional solution space.<br>Hence, <strong>Statement (B) is FALSE</strong>.<br><br><strong>Step 4: Analyze Statement (C)</strong><br>Consider the counterexample $A = [1 \\ \\ 1 \\ \\ 1]$ (a $1 \\times 3$ matrix with $n = 1, m = 3$). Here $m - n = 2$.<br>If we set at least $m - n = 2$ variables to 0 (say $x_2 = 0, x_3 = 0$), then $Ax = 0 \\implies x_1 + 0 + 0 = 0 \\implies x_1 = 0$. The only solution is the zero vector $(0, 0, 0)^T$. So no non-zero solution exists in this case.<br>Hence, <strong>Statement (C) is FALSE</strong>.<br><br><strong>Step 5: Analyze Statement (D)</strong><br>Consider $A = \\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\end{pmatrix}$ (a $2 \\times 3$ matrix with $n = 2, m = 3$).<br>The system $Ax = \\mathbf{0}$ yields $x_1 = 0$ and $x_2 = 0$. Every solution is of the form $(0, 0, x_3)^T$, which has at most 1 non-zero variable, whereas $n = 2$. Thus, no solution exists with at least $n = 2$ non-zero variables.<br>Hence, <strong>Statement (D) is FALSE</strong>.",
+  "videoUrl": null
+}

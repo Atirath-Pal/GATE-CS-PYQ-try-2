@@ -1,0 +1,26 @@
+{
+  "id": 16,
+  "year": 2024,
+  "set": 1,
+  "topics": [
+    "Computer Networks",
+    "Application Layer"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "A user starts browsing a webpage hosted at a remote server. The browser opens a single TCP connection to fetch the entire webpage from the server. The webpage consists of a top-level index page with multiple embedded image objects. Assume that all caches (e.g., DNS cache, browser cache) are all initially empty. The following packets leave the user’s computer in some order.<br><br>(i) HTTP GET request for the index page<br>(ii) DNS request to resolve the web server’s name to its IP address<br>(iii) HTTP GET request for an image object<br>(iv) TCP SYN to open a connection to the web server<br><br>Which one of the following is the CORRECT chronological order (earliest in time to latest) of the packets leaving the computer ?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "(iv), (ii), (iii), (i)",
+    "(ii), (iv), (iii), (i)",
+    "(ii), (iv), (i), (iii)",
+    "(iv), (ii), (i), (iii)"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step-by-step process:</strong><br><br>1. Since the caches are initially empty, the user's browser must first find the IP address corresponding to the server's domain name. Therefore, a <strong>DNS request (ii)</strong> is sent first.<br><br>2. Once the IP address is obtained via DNS resolution, the browser initiates a 3-way handshake to establish a TCP connection with the web server by sending a <strong>TCP SYN packet (iv)</strong>.<br><br>3. After the TCP connection is established, the browser sends an <strong>HTTP GET request for the index page (i)</strong>.<br><br>4. After receiving and parsing the index HTML page, the browser discovers references to embedded image objects and sends an <strong>HTTP GET request for an image object (iii)</strong>.<br><br>Thus, the correct chronological sequence of packets leaving the computer is <strong>(ii), (iv), (i), (iii)</strong>.",
+  "videoUrl": null
+}

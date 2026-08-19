@@ -1,0 +1,20 @@
+{
+  "id": 28,
+  "year": 2024,
+  "set": 1,
+  "topics": ["Digital Logic", "Combinational Circuits"],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider the circuit shown below where the gates may have propagation delays. Assume that all signal transitions occur instantaneously and that wires have no delays. Which of the following statements about the circuit is/are CORRECT?",
+  "assetImage": "question28.png",
+  "codeBlock": null,
+  "options": [
+    "With no propagation delays, the output $Y$ is always logic Zero",
+    "With no propagation delays, the output $Y$ is always logic One",
+    "With propagation delays, the output $Y$ can have a transient logic One after $X$ transitions from logic Zero to logic One",
+    "With propagation delays, the output $Y$ can have a transient logic Zero after $X$ transitions from logic One to logic Zero"
+  ],
+  "answer": ["A", "C"],
+  "explanation": "<strong>Step-by-Step Explanation:</strong><br><br><strong>1. Ideal Case (No Propagation Delays):</strong><br>The output is given by $Y = X \\cdot \\overline{X}$.<br>Since $X \\cdot \\overline{X} = 0$ for any value of $X$, the output $Y$ is always logic Zero.<br>Therefore, <strong>Statement (A) is correct</strong> and Statement (B) is incorrect.<br><br><strong>2. With Propagation Delays:</strong><br>Suppose the NOT gate has a propagation delay $\\Delta t$.<br>Assume initially $X = 0$. The output of the NOT gate is $1$, so $Y = 0 \\cdot 1 = 0$.<br>Now, let $X$ transition from logic $0$ to logic $1$ at time $t = 0$:<br>- At $t = 0^+$, $X$ becomes $1$ immediately.<br>- However, due to the delay $\\Delta t$ of the NOT gate, its output remains at $1$ during the interval $0 < t < \\Delta t$.<br>- Therefore, during $0 < t < \\Delta t$, the inputs to the AND gate are both $1$, making $Y = 1 \\cdot 1 = 1$.<br>- After $t = \\Delta t$, the NOT gate output transitions to $0$, bringing $Y$ back to $0$.<br>This creates a temporary positive glitch (a transient logic One).<br>Therefore, <strong>Statement (C) is correct</strong>.<br><br>If $X$ transitions from logic $1$ to logic $0$:<br>- Initially $X = 1$, so NOT gate output is $0$ and $Y = 0$.<br>- When $X$ becomes $0$, $X \\cdot \\text{NOT}(X)$ remains $0$ throughout (since $X$ drops to $0$ immediately while the NOT output stays at $0$ initially and then becomes $1$). Thus, no transient logic Zero pulse occurs.<br>Therefore, Statement (D) is incorrect.<br><br>Hence, the correct options are <strong>A and C</strong>."
+}

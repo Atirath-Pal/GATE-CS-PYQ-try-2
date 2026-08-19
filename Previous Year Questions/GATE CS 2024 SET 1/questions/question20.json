@@ -1,0 +1,26 @@
+{
+  "id": 20,
+  "year": 2024,
+  "set": 1,
+  "topics": [
+    "Database Management System",
+    "ER Diagrams"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Let S be the specification: \"Instructors teach courses. Students register for courses. Courses are allocated classrooms. Instructors guide students.\" Which one of the following ER diagrams CORRECTLY represents S?",
+  "assetImage": "question20.png",
+  "codeBlock": null,
+  "options": [
+    "(i)",
+    "(ii)",
+    "(iii)",
+    "(iv)"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Step 1: Identify Entity Sets and Relationship Sets in Specification S</strong><br><br>From the specification S:<br>1. \"Instructors teach courses\": <strong>Instructor</strong> (Entity) and <strong>Course</strong> (Entity) are connected via <strong>Teaches</strong> (Relationship).<br>2. \"Students register for courses\": <strong>Student</strong> (Entity) and <strong>Course</strong> (Entity) are connected via <strong>Registration</strong> (Relationship).<br>3. \"Courses are allocated classrooms\": <strong>Course</strong> (Entity) and <strong>Classroom</strong> (Entity) are connected via <strong>Allocation</strong> (Relationship).<br>4. \"Instructors guide students\": <strong>Instructor</strong> (Entity) and <strong>Student</strong> (Entity) are connected via <strong>Guides</strong> (Relationship).<br><br><strong>Step 2: Check standard ER diagram representations</strong><br>- Rectangles represent <strong>Entities</strong>: Instructor, Course, Student, Classroom.<br>- Diamonds represent <strong>Relationships</strong>: Teaches, Registration, Allocation, Guides.<br><br><strong>Step 3: Analyze the options</strong><br>- In diagram (iv):<br>&nbsp;&nbsp;• <strong>Instructor</strong> and <strong>Course</strong> connect via diamond <strong>Teaches</strong>.<br>&nbsp;&nbsp;• <strong>Course</strong> and <strong>Classroom</strong> connect via diamond <strong>Allocation</strong>.<br>&nbsp;&nbsp;• <strong>Course</strong> and <strong>Student</strong> connect via diamond <strong>Registration</strong>.<br>&nbsp;&nbsp;• <strong>Instructor</strong> and <strong>Student</strong> connect via diamond <strong>Guides</strong>.<br><br>All entities (Instructor, Course, Classroom, Student) are represented as rectangles and all relationship sets (Teaches, Allocation, Registration, Guides) are represented as diamonds connecting the appropriate entities.<br><br>Therefore, diagram <strong>(iv)</strong> correctly represents specification S, which corresponds to option <strong>(D)</strong>.",
+  "videoUrl": null
+}

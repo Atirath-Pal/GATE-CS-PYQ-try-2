@@ -1,0 +1,22 @@
+{
+  "id": 58,
+  "year": 2024,
+  "set": 1,
+  "topics": [
+    "Computer Networks",
+    "IP Addressing"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the entries shown below in the forwarding table of an IP router. Each entry consists of an IP prefix and the corresponding next hop router for packets whose destination IP address matches the prefix. The notation \"/N\" in a prefix indicates a subnet mask with the most significant N bits set to 1.<br><br><table style=\"border: 1px solid white; border-collapse: collapse; margin: 12px 0;\"><thead><tr><th style=\"border: 1px solid white; padding: 6px 16px; text-align: left;\">Prefix</th><th style=\"border: 1px solid white; padding: 6px 16px; text-align: center;\">Next hop router</th></tr></thead><tbody><tr><td style=\"border: 1px solid white; padding: 6px 16px; text-align: left;\">10.1.1.0/24</td><td style=\"border: 1px solid white; padding: 6px 16px; text-align: center;\">R1</td></tr><tr><td style=\"border: 1px solid white; padding: 6px 16px; text-align: left;\">10.1.1.128/25</td><td style=\"border: 1px solid white; padding: 6px 16px; text-align: center;\">R2</td></tr><tr><td style=\"border: 1px solid white; padding: 6px 16px; text-align: left;\">10.1.1.64/26</td><td style=\"border: 1px solid white; padding: 6px 16px; text-align: center;\">R3</td></tr><tr><td style=\"border: 1px solid white; padding: 6px 16px; text-align: left;\">10.1.1.192/26</td><td style=\"border: 1px solid white; padding: 6px 16px; text-align: center;\">R4</td></tr></tbody></table><br>This router forwards 20 packets each to 5 hosts. The IP addresses of the hosts are 10.1.1.16, 10.1.1.72, 10.1.1.132, 10.1.1.191, and 10.1.1.205 . The number of packets forwarded via the next hop router R2 is ________",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 40,
+    "max": 40
+  },
+  "explanation": "To determine the number of packets forwarded via next hop router <strong>R2</strong>, we find the routing path for each destination IP address using the <strong>Longest Prefix Match</strong> rule.<br><br><strong>Prefix Ranges & Mask Lengths:</strong><br>• $10.1.1.0/24$: $10.1.1.0$ to $10.1.1.255$ (Mask length = 24)<br>• $10.1.1.128/25$: $10.1.1.128$ to $10.1.1.255$ (Mask length = 25)<br>• $10.1.1.64/26$: $10.1.1.64$ to $10.1.1.127$ (Mask length = 26)<br>• $10.1.1.192/26$: $10.1.1.192$ to $10.1.1.255$ (Mask length = 26)<br><br><strong>Next Hop Determination for Hosts:</strong><br>1. <strong>10.1.1.16</strong>: Matches $10.1.1.0/24$. Next hop = <strong>R1</strong><br>2. <strong>10.1.1.72</strong>: Matches $10.1.1.0/24$ and $10.1.1.64/26$. Longest match is $/26$. Next hop = <strong>R3</strong><br>3. <strong>10.1.1.132</strong>: Matches $10.1.1.0/24$ and $10.1.1.128/25$. Longest match is $/25$. Next hop = <strong>R2</strong><br>4. <strong>10.1.1.191</strong>: Matches $10.1.1.0/24$ and $10.1.1.128/25$ (Note: $10.1.1.192/26$ starts at .192). Longest match is $/25$. Next hop = <strong>R2</strong><br>5. <strong>10.1.1.205</strong>: Matches $10.1.1.0/24$, $10.1.1.128/25$, and $10.1.1.192/26$. Longest match is $/26$. Next hop = <strong>R4</strong><br><br><strong>Total Packets to R2:</strong><br>Hosts forwarded to <strong>R2</strong> are $10.1.1.132$ and $10.1.1.191$ ($2$ hosts).<br>Since $20$ packets are sent to each host, the total number of packets forwarded via <strong>R2</strong> = $2 \\times 20 = 40$.",
+  "videoUrl": null
+}

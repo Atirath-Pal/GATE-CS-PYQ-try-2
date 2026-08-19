@@ -1,0 +1,21 @@
+{
+  "id": 17,
+  "year": 2024,
+  "set": 1,
+  "topics": ["Algorithms", "Asymptotic Analysis"],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Given an integer array of size $N$, we want to check if the array is sorted (in either ascending or descending order). An algorithm solves this problem by making a single pass through the array and comparing each element of the array only with its adjacent elements. The worst-case time complexity of this algorithm is",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "both $\\mathrm{O}(N)$ and $\\Omega(N)$",
+    "$\\mathrm{O}(N)$ but not $\\Omega(N)$",
+    "$\\Omega(N)$ but not $\\mathrm{O}(N)$",
+    "neither $\\mathrm{O}(N)$ nor $\\Omega(N)$"
+  ],
+  "answer": ["A"],
+  "explanation": "To check if an array of size $N$ is sorted (in either ascending or descending order) using a single pass, the algorithm makes at most $N-1$ comparisons.<br><br><strong>Upper Bound:</strong> The maximum number of comparisons performed is proportional to $N$, so the time complexity is $O(N)$.<br><br><strong>Lower Bound:</strong> In the worst case (for example, when the array is sorted), the algorithm must examine all adjacent pairs (i.e., perform $N-1$ comparisons) to confirm that the array is sorted. Hence, the worst-case time complexity is also $\\Omega(N)$.<br><br>Therefore, the worst-case time complexity is $\\Theta(N)$, which means it is both $O(N)$ and $\\Omega(N)$.",
+  "videoUrl": null
+}

@@ -1,0 +1,27 @@
+{
+  "id": 22,
+  "year": 2024,
+  "set": 1,
+  "topics": [
+    "Database Management Systems",
+    "Normalization"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Which of the following statements about a relation $\\mathbf{R}$ in first normal form (1NF) is/are TRUE ?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\mathbf{R}$ can have a multi-attribute key",
+    "$\\mathbf{R}$ cannot have a foreign key",
+    "$\\mathbf{R}$ cannot have a composite attribute",
+    "$\\mathbf{R}$ cannot have more than one candidate key"
+  ],
+  "answer": [
+    "A",
+    "C"
+  ],
+  "explanation": "<strong>Explanation:</strong><br><br>First Normal Form (1NF) requires that all attributes in a relation contain atomic values, meaning composite or multi-valued attributes are not permitted.<br><br>Let us evaluate each option:<br><br><strong>(A) TRUE:</strong> A relation in 1NF can have a primary/candidate key composed of multiple attributes (a multi-attribute or composite key).<br><br><strong>(B) FALSE:</strong> A relation in 1NF can certainly contain foreign keys referencing other relations or itself.<br><br><strong>(C) TRUE:</strong> By definition, 1NF disallows non-atomic attributes, which includes composite attributes and multi-valued attributes.<br><br><strong>(D) FALSE:</strong> A relation in 1NF can have multiple candidate keys.<br><br>Therefore, the correct options are <strong>A</strong> and <strong>C</strong>.",
+  "videoUrl": null
+}
