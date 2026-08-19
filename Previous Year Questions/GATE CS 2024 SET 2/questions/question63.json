@@ -1,0 +1,22 @@
+{
+  "id": 63,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "Discrete Mathematics",
+    "Group Theory"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Let $Z_n$ be the group of integers $\\{0, 1, 2, \\dots, n - 1\\}$ with addition modulo $n$ as the group operation. The number of elements in the group $Z_2 \\times Z_3 \\times Z_4$ that are their own inverses is ________",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 4,
+    "max": 4
+  },
+  "explanation": "An element $(a, b, c) \\in Z_2 \\times Z_3 \\times Z_4$ is its own inverse if and only if $(a, b, c) + (a, b, c) = (0, 0, 0)$, which implies:<br><br>1. $2a \\equiv 0 \\pmod 2$ in $Z_2$<br>2. $2b \\equiv 0 \\pmod 3$ in $Z_3$<br>3. $2c \\equiv 0 \\pmod 4$ in $Z_4$<br><br><strong>Step 1: Solve for $a$ in $Z_2$</strong><br>For $a \\in \\{0, 1\\}$:<br>• $2(0) = 0 \\equiv 0 \\pmod 2$<br>• $2(1) = 2 \\equiv 0 \\pmod 2$<br>There are <strong>2</strong> solutions in $Z_2$: $a \\in \\{0, 1\\}$.<br><br><strong>Step 2: Solve for $b$ in $Z_3$</strong><br>For $b \\in \\{0, 1, 2\\}$:<br>• $2(0) = 0 \\equiv 0 \\pmod 3$<br>• $2(1) = 2 \\not\\equiv 0 \\pmod 3$<br>• $2(2) = 4 \\equiv 1 \\not\\equiv 0 \\pmod 3$<br>There is <strong>1</strong> solution in $Z_3$: $b = 0$.<br><br><strong>Step 3: Solve for $c$ in $Z_4$</strong><br>For $c \\in \\{0, 1, 2, 3\\}$:<br>• $2(0) = 0 \\equiv 0 \\pmod 4$<br>• $2(1) = 2 \\not\\equiv 0 \\pmod 4$<br>• $2(2) = 4 \\equiv 0 \\pmod 4$<br>• $2(3) = 6 \\equiv 2 \\not\\equiv 0 \\pmod 4$<br>There are <strong>2</strong> solutions in $Z_4$: $c \\in \\{0, 2\\}$.<br><br><strong>Step 4: Calculate total elements</strong><br>Total number of self-inverse elements = $2 \\times 1 \\times 2 = 4$.",
+  "videoUrl": null
+}

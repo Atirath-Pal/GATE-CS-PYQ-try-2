@@ -1,0 +1,26 @@
+{
+  "id": 7,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "General Aptitude",
+    "Quantitative Aptitude"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "A person sold two different items at the same price. He made 10% profit in one item, and 10% loss in the other item. In selling these two items, the person made a total of",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "1% profit",
+    "2% profit",
+    "1% loss",
+    "2% loss"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Given Information</strong><br>Let the Selling Price ($SP$) of each item be $S$.<br>Profit on first item = $10\\%$<br>Loss on second item = $10\\%$<br><br><strong>Step 2: Calculate Cost Price ($CP$) for each item</strong><br>Cost Price of first item ($CP_1$):<br>$CP_1 = \\frac{S}{1 + 0.10} = \\frac{S}{1.1} = \\frac{10S}{11}$<br><br>Cost Price of second item ($CP_2$):<br>$CP_2 = \\frac{S}{1 - 0.10} = \\frac{S}{0.9} = \\frac{10S}{9}$<br><br><strong>Step 3: Total Cost Price and Total Selling Price</strong><br>Total $SP = S + S = 2S$<br>Total $CP = \\frac{10S}{11} + \\frac{10S}{9} = 10S \\times \\left( \\frac{9 + 11}{99} \\right) = \\frac{200S}{99}$<br><br><strong>Step 4: Overall Loss Percentage</strong><br>Since Total $CP >$ Total $SP$, there is an overall loss.<br>$\\text{Loss} = \\text{Total } CP - \\text{Total } SP = \\frac{200S}{99} - 2S = \\frac{2S}{99}$<br><br>$\\text{Loss Percentage} = \\left( \\frac{\\text{Loss}}{\\text{Total } CP} \\right) \\times 100 = \\left( \\frac{\\frac{2S}{99}}{\\frac{200S}{99}} \\right) \\times 100 = 1\\%$ loss.<br><br><strong>Shortcut Formula:</strong><br>When two articles are sold at the same price, one at a profit of $x\\%$ and the other at a loss of $x\\%$, the overall result is always a loss given by:<br>$\\text{Loss } \\% = \\left(\\frac{x}{10}\\right)^2 \\% = \\left(\\frac{10}{10}\\right)^2 \\% = 1\\%$ loss.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 10,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "General Aptitude",
+    "Analytical Aptitude"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "In the $4 \\times 4$ array shown below, each cell of the first three rows has either a cross ($\\text{X}$) or a number.<br><br><table style=\"border-collapse: collapse; border: 2px solid white; margin: 12px 0;\"><tbody><tr><td style=\"border: 1px solid white; width: 40px; height: 40px; text-align: center; vertical-align: middle;\">1</td><td style=\"border: 1px solid white; width: 40px; height: 40px; text-align: center; vertical-align: middle;\">X</td><td style=\"border: 1px solid white; width: 40px; height: 40px; text-align: center; vertical-align: middle;\">4</td><td style=\"border: 1px solid white; width: 40px; height: 40px; text-align: center; vertical-align: middle;\">3</td></tr><tr><td style=\"border: 1px solid white; width: 40px; height: 40px; text-align: center; vertical-align: middle;\">X</td><td style=\"border: 1px solid white; width: 40px; height: 40px; text-align: center; vertical-align: middle;\">5</td><td style=\"border: 1px solid white; width: 40px; height: 40px; text-align: center; vertical-align: middle;\">5</td><td style=\"border: 1px solid white; width: 40px; height: 40px; text-align: center; vertical-align: middle;\">4</td></tr><tr><td style=\"border: 1px solid white; width: 40px; height: 40px; text-align: center; vertical-align: middle;\">3</td><td style=\"border: 1px solid white; width: 40px; height: 40px; text-align: center; vertical-align: middle;\">X</td><td style=\"border: 1px solid white; width: 40px; height: 40px; text-align: center; vertical-align: middle;\">6</td><td style=\"border: 1px solid white; width: 40px; height: 40px; text-align: center; vertical-align: middle;\">X</td></tr><tr><td style=\"border: 1px solid white; width: 40px; height: 40px; text-align: center; vertical-align: middle;\">&nbsp;</td><td style=\"border: 1px solid white; width: 40px; height: 40px; text-align: center; vertical-align: middle;\">&nbsp;</td><td style=\"border: 1px solid white; width: 40px; height: 40px; text-align: center; vertical-align: middle;\">&nbsp;</td><td style=\"border: 1px solid white; width: 40px; height: 40px; text-align: center; vertical-align: middle;\">&nbsp;</td></tr></tbody></table><br>The number in a cell represents the count of the immediate neighboring cells (left, right, top, bottom, diagonals) NOT having a cross ($\\text{X}$). Given that the last row has no crosses ($\\text{X}$), the sum of the four numbers to be filled in the last row is",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "11",
+    "10",
+    "12",
+    "9"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "Let the four cells in the last row be represented by $a, b, c, d$ from left to right: cell $(4,1) = a$, cell $(4,2) = b$, cell $(4,3) = c$, and cell $(4,4) = d$.<br>Since the last row contains no crosses, all cells in row 4 contain numbers.<br><br><strong>Step 1: Calculate cell $(4,1) = a$</strong><br>The neighbors of $(4,1)$ are $(3,1)$, $(3,2)$, and $(4,2)$.<br>• $(3,1) = 3$ (number)<br>• $(3,2) = \\text{X}$ (cross)<br>• $(4,2) = b$ (number)<br>Count of non-cross neighbors = $2 \\implies a = 2$.<br><br><strong>Step 2: Calculate cell $(4,2) = b$</strong><br>The neighbors of $(4,2)$ are $(3,1)$, $(3,2)$, $(3,3)$, $(4,1)$, and $(4,3)$.<br>The non-cross neighbors are $(3,1)$, $(3,3)$, $(4,1)$, and $(4,3)$.<br>Count of non-cross neighbors = $4 \\implies b = 4$.<br><br><strong>Step 3: Calculate cell $(4,3) = c$</strong><br>The neighbors of $(4,3)$ are $(3,2)$, $(3,3)$, $(3,4)$, $(4,2)$, and $(4,4)$.<br>The non-cross neighbors are $(3,3)$, $(4,2)$, and $(4,4)$.<br>Count of non-cross neighbors = $3 \\implies c = 3$.<br><br><strong>Step 4: Calculate cell $(4,4) = d$</strong><br>The neighbors of $(4,4)$ are $(3,3)$, $(3,4)$, and $(4,3)$.<br>The non-cross neighbors are $(3,3)$ and $(4,3)$.<br>Count of non-cross neighbors = $2 \\implies d = 2$.<br><br><strong>Step 5: Calculate the sum</strong><br>$$\\text{Sum} = a + b + c + d = 2 + 4 + 3 + 2 = 11$$<br><br>Therefore, the correct option is <strong>(A) 11</strong>.",
+  "videoUrl": null
+}

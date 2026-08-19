@@ -1,0 +1,26 @@
+{
+  "id": 9,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "General Aptitude",
+    "Spatial Aptitude"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "A cube is to be cut into 8 pieces of equal size and shape. Here, each cut should be straight and it should not stop till it reaches the other end of the cube.<br><br>The minimum number of such cuts required is",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "3",
+    "4",
+    "7",
+    "8"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "To divide a cube into $8$ pieces of equal size and shape, we consider cuts along three mutually perpendicular axes ($x$, $y$, and $z$).<br><br><strong>Formula:</strong><br>Making $x$, $y$, and $z$ cuts along the respective dimensions generates total pieces equal to:<br>$(x + 1)(y + 1)(z + 1) = 8$<br><br><strong>Minimizing Total Cuts $(x + y + z)$:</strong><br>To minimize the total cuts, the terms $(x + 1)$, $(y + 1)$, and $(z + 1)$ should be as equal as possible.<br>Since $2 \\times 2 \\times 2 = 8$, we set:<br>$x + 1 = 2 \\implies x = 1$<br>$y + 1 = 2 \\implies y = 1$<br>$z + 1 = 2 \\implies z = 1$<br><br><strong>Total Minimum Cuts:</strong><br>$x + y + z = 1 + 1 + 1 = 3$<br><br>Therefore, the minimum number of cuts required is <strong>3</strong>.",
+  "videoUrl": null
+}

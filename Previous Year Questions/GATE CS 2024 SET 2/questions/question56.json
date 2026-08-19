@@ -1,0 +1,22 @@
+{
+  "id": 56,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "Computer Networks",
+    "Sliding Window Protocol"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a network using the sliding window protocol with a link bandwidth of $10\\text{ Mbps}$ and a one-way propagation delay of $20\\text{ ms}$. The frame size is $1000\\text{ bytes}$.<br><br>The minimum sender window size (in terms of number of frames) required to achieve $100\\%$ channel utilization is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 50,
+    "max": 50
+  },
+  "explanation": "To achieve $100\\%$ channel utilization in a sliding window protocol, the sender window size $W$ must be sufficient to fill the link during the Round-Trip Time ($RTT$).<br><br><strong>Given Data:</strong><br>• Bandwidth ($B$) = $10\\text{ Mbps} = 10^7\\text{ bits/sec}$<br>• One-way propagation delay ($T_p$) = $20\\text{ ms} = 0.02\\text{ sec}$<br>• Frame size ($L$) = $1000\\text{ bytes} = 8000\\text{ bits}$<br><br><strong>Step 1: Calculate Round-Trip Time ($RTT$)</strong><br>$RTT = 2 \\times T_p = 2 \\times 20\\text{ ms} = 40\\text{ ms} = 0.04\\text{ sec}$<br><br><strong>Step 2: Calculate Bandwidth-Delay Product ($BDP$)</strong><br>$BDP = B \\times RTT = 10^7\\text{ bits/sec} \\times 0.04\\text{ sec} = 400,000\\text{ bits}$<br><br><strong>Step 3: Calculate Minimum Window Size ($W$)</strong><br>$W = \\frac{BDP}{\\text{Frame Size}} = \\frac{400,000\\text{ bits}}{8000\\text{ bits}} = 50\\text{ frames}$<br><br>Thus, the minimum window size required to achieve maximum utilization is <strong>50</strong>.",
+  "videoUrl": null
+}

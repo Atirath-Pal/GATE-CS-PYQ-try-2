@@ -1,0 +1,28 @@
+{
+  "id": 49,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "Digital Logic",
+    "Number Systems"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Which of the following is/are EQUAL to $224$ in radix-$5$ ($i.e.$, base-$5$) notation?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "64 in radix-10",
+    "100 in radix-8",
+    "50 in radix-16",
+    "121 in radix-7"
+  ],
+  "answer": [
+    "A",
+    "B",
+    "D"
+  ],
+  "explanation": "<strong>Step 1: Convert the given number in radix-5 to decimal (radix-10)</strong><br>$(224)_5 = 2 \\times 5^2 + 2 \\times 5^1 + 4 \\times 5^0 = 50 + 10 + 4 = 64_{10}$<br><br><strong>Step 2: Evaluate each option by converting to decimal</strong><br><strong>(A)</strong> $64$ in radix-$10 = 64_{10}$ (Correct)<br><strong>(B)</strong> $100$ in radix-$8 = 1 \\times 8^2 + 0 \\times 8^1 + 0 \\times 8^0 = 64_{10}$ (Correct)<br><strong>(C)</strong> $50$ in radix-$16 = 5 \\times 16^1 + 0 \\times 16^0 = 80_{10} \\neq 64_{10}$ (Incorrect)<br><strong>(D)</strong> $121$ in radix-$7 = 1 \\times 7^2 + 2 \\times 7^1 + 1 \\times 7^0 = 49 + 14 + 1 = 64_{10}$ (Correct)<br><br>Therefore, options <strong>A, B, and D</strong> are equal to $224_5$.",
+  "videoUrl": null
+}

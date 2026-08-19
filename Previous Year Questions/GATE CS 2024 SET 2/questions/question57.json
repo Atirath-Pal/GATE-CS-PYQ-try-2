@@ -1,0 +1,22 @@
+{
+  "id": 57,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "Theory of Computation",
+    "Automata Theory"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the language $L$ over the alphabet $\\Sigma = \\{0, 1\\}$ defined as:<br><br>$L = \\{ w \\in \\{0, 1\\}^* \\mid \\text{the } 5^{\\text{th}} \\text{ symbol from the right end of } w \\text{ is } 1 \\}$<br><br>The number of states in the minimal Deterministic Finite Automaton (DFA) accepting $L$ is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 32,
+    "max": 32
+  },
+  "explanation": "<strong>Step 1: Understand the language condition</strong><br>The language $L$ consists of all binary strings where the $5^{\\text{th}}$ symbol from the right end is $1$.<br><br><strong>Step 2: State requirements for DFA</strong><br>To determine whether the $5^{\\text{th}}$ symbol from the right end is $1$, a deterministic finite automaton (DFA) must keep track of the most recent $5$ input symbols read.<br><br><strong>Step 3: Calculating the number of states</strong><br>Since each of the $5$ positions in the recent history can independently be $0$ or $1$, there are $2^5 = 32$ possible distinct states required to represent all binary sequences of length $5$.<br><br><strong>Step 4: Distinguishability and Minimality</strong><br>All $32$ states are reachable and pairwise distinguishable because for any two distinct $5$-bit sequences, there exists a suffix string of length at most $4$ that causes one state to accept and the other to reject.<br><br>Therefore, the minimal DFA accepting $L$ requires $2^5 = 32$ states.",
+  "videoUrl": null
+}

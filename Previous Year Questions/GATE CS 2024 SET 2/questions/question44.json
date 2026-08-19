@@ -1,0 +1,26 @@
+{
+  "id": 44,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "Probability",
+    "Random Variables"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Let $x$ and $y$ be random variables, not necessarily independent, that take real values in the interval $[0,1]$. Let $z = xy$ and let the mean values of $x,y,z$ be $\\bar{x},\\bar{y},\\bar{z}$, respectively. Which one of the following statements is TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\bar{z} = \\bar{x}\\bar{y}$",
+    "$\\bar{z} \\le \\bar{x}\\bar{y}$",
+    "$\\bar{z} \\ge \\bar{x}\\bar{y}$",
+    "$\\bar{z} \\le \\bar{x}$"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Step 1: Analyze the given conditions</strong><br>We are given that $x$ and $y$ take real values in the interval $[0, 1]$, and $z = xy$.<br>The mean values (expectations) are denoted as $\\bar{x} = E[x]$, $\\bar{y} = E[y]$, and $\\bar{z} = E[z]$.<br><br><strong>Step 2: Evaluate the relationship between $z$ and $x$</strong><br>Since $y \\in [0, 1]$, we have $y \\le 1$.<br>Since $x \\ge 0$, multiplying both sides of $y \\le 1$ by $x$ gives:<br>$xy \\le x \\implies z \\le x$.<br><br><strong>Step 3: Take expectations on both sides</strong><br>By the monotonicity property of expectations:<br>$E[z] \\le E[x] \\implies \\bar{z} \\le \\bar{x}$.<br><br>This inequality always holds regardless of whether $x$ and $y$ are independent.<br><br><strong>Step 4: Verify why other options are not universally true</strong><br>Since $x$ and $y$ are not necessarily independent, the expectation of $xy$ depends on their covariance. Depending on whether $x$ and $y$ are positively or negatively correlated, $\\bar{z}$ can be greater than, less than, or equal to $\\bar{x}\\bar{y}$. Hence, options (A), (B), and (C) are not true in general.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 5,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "General Aptitude",
+    "Numerical Ability"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "In the sequence 6, 9, 14, $x$, 30, 41, a possible value of $x$ is",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "25",
+    "21",
+    "18",
+    "20"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step 1: Analyze the given sequence.</strong><br>The given sequence is $6, 9, 14, x, 30, 41$.<br><br><strong>Step 2: Find the differences between consecutive terms.</strong><br>$9 - 6 = 3$<br>$14 - 9 = 5$<br>$41 - 30 = 11$<br><br><strong>Step 3: Identify the pattern.</strong><br>The differences between consecutive terms form a pattern of consecutive odd numbers: $3, 5, 7, 9, 11$.<br><br>Therefore:<br>$x = 14 + 7 = 21$<br><br>Checking the next step:<br>$21 + 9 = 30$<br><br>Thus, the correct value of $x$ is $21$.",
+  "videoUrl": null
+}

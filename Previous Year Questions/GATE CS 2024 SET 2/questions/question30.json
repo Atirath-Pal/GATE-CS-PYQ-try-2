@@ -1,0 +1,27 @@
+{
+  "id": 30,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "Digital Logic",
+    "Boolean Algebra"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "For a Boolean variable $x$, which of the following statements is/are FALSE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$x . 1 = x$",
+    "$x + 1 = x$",
+    "$x . x = 0$",
+    "$x + \\bar{x} = 1$"
+  ],
+  "answer": [
+    "B",
+    "C"
+  ],
+  "explanation": "Let us evaluate each statement using the fundamental laws of Boolean algebra:<br><br><strong>Option (A):</strong> $x . 1 = x$. This is the <strong>Identity Law</strong> for AND operations and is <strong>TRUE</strong>.<br><br><strong>Option (B):</strong> $x + 1 = 1$. The statement claims $x + 1 = x$, which is incorrect (e.g., if $x = 0$, $0 + 1 = 1 \\neq 0$). Thus, this statement is <strong>FALSE</strong>.<br><br><strong>Option (C):</strong> $x . x = x$. This is the <strong>Idempotent Law</strong>. The statement claims $x . x = 0$, which is incorrect (e.g., if $x = 1$, $1 . 1 = 1 \\neq 0$). Thus, this statement is <strong>FALSE</strong>.<br><br><strong>Option (D):</strong> $x + \\bar{x} = 1$. This is the <strong>Complement Law</strong> and is <strong>TRUE</strong>.<br><br>Since the question asks for the statement(s) that are <strong>FALSE</strong>, the correct options are <strong>B</strong> and <strong>C</strong>.",
+  "videoUrl": null
+}

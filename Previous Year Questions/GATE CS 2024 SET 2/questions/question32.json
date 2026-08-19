@@ -1,0 +1,27 @@
+{
+  "id": 32,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "Computer Networks",
+    "IPv4 Header"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Which of the following fields of an IP header is/are <i>always</i> modified by any router before it forwards the IP packet?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Source IP Address",
+    "Protocol",
+    "Time to Live (TTL)",
+    "Header Checksum"
+  ],
+  "answer": [
+    "C",
+    "D"
+  ],
+  "explanation": "<strong>Step 1: Time to Live (TTL) Field</strong><br>Every router that receives and forwards an IP packet decrements the Time to Live (TTL) field by at least $1$ to prevent packets from looping endlessly in the network. Therefore, TTL is <strong>always</strong> modified.<br><br><strong>Step 2: Header Checksum Field</strong><br>Because the Header Checksum is calculated over the IP header fields (including TTL), modifying the TTL field automatically invalidates the original checksum. Hence, the router must recompute and update the Header Checksum before forwarding the packet.<br><br><strong>Step 3: Other Options</strong><br>• <strong>Source IP Address:</strong> This field remains unchanged during normal routing (unless Network Address Translation/NAT is explicitly applied, so it is not <i>always</i> modified).<br>• <strong>Protocol:</strong> Indicates the upper-layer payload (e.g., TCP, UDP) and is never modified by routers during forwarding.<br><br>Thus, the correct options are <strong>C</strong> and <strong>D</strong>.",
+  "videoUrl": null
+}

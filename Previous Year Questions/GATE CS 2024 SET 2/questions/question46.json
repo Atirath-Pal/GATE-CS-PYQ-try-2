@@ -1,0 +1,27 @@
+{
+  "id": 46,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "Operating Systems",
+    "Process Synchronization"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a multi-threaded program with two threads T1 and T2. The threads share two semaphores: s1 (initialized to 1) and s2 (initialized to 0). The threads also share a global variable x (initialized to 0). The threads execute the code shown below.<br><br>Which of the following outcomes is/are possible when threads T1 and T2 execute concurrently?",
+  "assetImage": null,
+  "codeBlock": "// code of T1          |   // code of T2\nwait(s1);              |   wait(s1);\nx = x+1;               |   x = x+1;\nprint(x);              |   print(x);\nwait(s2);              |   signal(s2);\nsignal(s1);            |   signal(s1);",
+  "options": [
+    "T1 runs first and prints 1, T2 runs next and prints 2",
+    "T2 runs first and prints 1, T1 runs next and prints 2",
+    "T1 runs first and prints 1, T2 does not print anything (deadlock)",
+    "T2 runs first and prints 1, T1 does not print anything (deadlock)"
+  ],
+  "answer": [
+    "B",
+    "C"
+  ],
+  "explanation": "<strong>Case 1: Thread T1 executes first</strong><br>1. Initial state: $s1 = 1$, $s2 = 0$, $x = 0$.<br>2. T1 executes <code>wait(s1)</code> (decrementing $s1$ to 0), increments $x$ to 1, and prints 1.<br>3. T1 then executes <code>wait(s2)</code>. Since $s2 = 0$, T1 blocks waiting on $s2$.<br>4. T2 attempts to run and executes <code>wait(s1)</code>. Since $s1 = 0$, T2 blocks waiting on $s1$.<br>5. T1 is waiting for T2 to signal $s2$, while T2 is waiting for T1 to signal $s1$. This results in a deadlock, and T2 does not print anything.<br>Hence, <strong>Option C</strong> is correct.<br><br><strong>Case 2: Thread T2 executes first</strong><br>1. Initial state: $s1 = 1$, $s2 = 0$, $x = 0$.<br>2. T2 executes <code>wait(s1)</code> (decrementing $s1$ to 0), increments $x$ to 1, and prints 1.<br>3. T2 executes <code>signal(s2)</code> (making $s2 = 1$) and <code>signal(s1)</code> (making $s1 = 1$).<br>4. T1 then runs, executes <code>wait(s1)</code> (making $s1 = 0$), increments $x$ to 2, and prints 2.<br>5. T1 executes <code>wait(s2)</code> (making $s2 = 0$) and <code>signal(s1)</code> (making $s1 = 1$).<br>6. Both threads finish successfully.<br>Hence, <strong>Option B</strong> is correct.",
+  "videoUrl": null
+}

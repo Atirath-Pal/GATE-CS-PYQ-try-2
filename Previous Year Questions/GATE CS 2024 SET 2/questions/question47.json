@@ -1,0 +1,21 @@
+{
+  "id": 47,
+  "year": 2024,
+  "set": 2,
+  "topics": ["Linear Algebra"],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Let $A$ be an $n \\times n$ matrix over the set of all real numbers $\\mathbb{R}$. Let $B$ be a matrix obtained from $A$ by swapping two rows. Which of the following statements is/are TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "The determinant of $B$ is the negative of the determinant of $A$",
+    "If $A$ is invertible, then $B$ is also invertible",
+    "If $A$ is symmetric, then $B$ is also symmetric",
+    "If the trace of $A$ is zero, then the trace of $B$ is also zero"
+  ],
+  "answer": ["A", "B"],
+  "explanation": "<strong>Statement (A): Correct.</strong><br>Swapping any two rows of a matrix multiplies its determinant by $-1$. Therefore, $\\det(B) = -\\det(A)$, which means the determinant of $B$ is the negative of the determinant of $A$.<br><br><strong>Statement (B): Correct.</strong><br>A matrix is invertible if and only if its determinant is non-zero. Since $\\det(B) = -\\det(A)$, if $\\det(A) \\neq 0$, then $\\det(B) \\neq 0$. Thus, if $A$ is invertible, $B$ is also invertible.<br><br><strong>Statement (C): Incorrect.</strong><br>Consider a symmetric matrix $A = \\begin{pmatrix} 1 & 2 & 3 \\\\ 2 & 4 & 5 \\\\ 3 & 5 & 6 \\end{pmatrix}$. Swapping row 1 and row 2 yields $B = \\begin{pmatrix} 2 & 4 & 5 \\\\ 1 & 2 & 3 \\\\ 3 & 5 & 6 \\end{pmatrix}$, which is not symmetric since $b_{12} = 4 \\neq b_{21} = 1$.<br><br><strong>Statement (D): Incorrect.</strong><br>Consider $A = \\begin{pmatrix} 2 & 0 & 0 \\\\ 0 & -1 & 0 \\\\ 0 & 0 & -1 \\end{pmatrix}$, where $\\text{trace}(A) = 2 - 1 - 1 = 0$. Swapping row 1 and row 2 yields $B = \\begin{pmatrix} 0 & -1 & 0 \\\\ 2 & 0 & 0 \\\\ 0 & 0 & -1 \\end{pmatrix}$, where $\\text{trace}(B) = 0 + 0 - 1 = -1 \\neq 0$.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 42,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "Programming and Data Structures",
+    "C Programming"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider an array $X$ that contains $n$ positive integers. A subarray of $X$ is defined to be a sequence of array locations with consecutive indices.<br><br>The C code snippet given below has been written to compute the length of the longest subarray of $X$ that contains at most two distinct integers. The code has two missing expressions labelled $(P)$ and $(Q)$.<br><br>Which one of the following options gives the CORRECT missing expressions?<br><br>(<strong>Hint:</strong> At the end of the $i$-th iteration, the value of `len1` is the length of the longest subarray ending with `X[i]` that contains all equal values, and `len2` is the length of the longest subarray ending with `X[i]` that contains at most two distinct values.)",
+  "assetImage": null,
+  "codeBlock": "int first=0, second=0, len1=0, len2=0, maxlen=0;\nfor (int i=0; i < n; i++) {\n    if (X[i] == first) {\n        len2++; len1++;\n    } else if (X[i] == second) {\n        len2++;\n        len1 =   (P)   ;\n        second = first;\n    } else {\n        len2 =   (Q)   ;\n        len1 = 1; second = first;\n    }\n    if (len2 > maxlen) {\n        maxlen = len2;\n    }\n    first = X[i];\n}",
+  "options": [
+    "(P) len1+1    (Q) len2+1",
+    "(P) 1    (Q) len1+1",
+    "(P) 1    (Q) len2+1",
+    "(P) len2+1    (Q) len1+1"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step 1: Understand the state variables</strong><br>At the end of the $i$-th iteration:<br>- `len1` is the length of the longest subarray ending at $X[i]$ that contains all equal values.<br>- `len2` is the length of the longest subarray ending at $X[i]$ that contains at most two distinct values.<br>- `first` holds the value of the previous element $X[i-1]$.<br><br><strong>Step 2: Determine expression $(P)$</strong><br>When $X[i] == \\text{second}$, $X[i]$ is different from `first` (since $X[i] \\neq \\text{first}$).<br>Since $X[i] \\neq X[i-1]$, the current sequence of identical elements breaks, so `len1` resets to $1$ for $X[i]$.<br>Therefore, $(P) = 1$.<br><br><strong>Step 3: Determine expression $(Q)$</strong><br>When $X[i]$ is a third distinct value (neither `first` nor `second`), the new subarray ending at $X[i]$ with at most 2 distinct elements can only include the preceding contiguous block of equal elements (of length `len1`) plus the current element $X[i]$.<br>Therefore, the new length `len2` becomes $\\text{len1} + 1$.<br>So, $(Q) = \\text{len1}+1$.<br><br><strong>Conclusion:</strong><br>$(P) = 1$ and $(Q) = \\text{len1}+1$, which matches Option (B).",
+  "videoUrl": null
+}

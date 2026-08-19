@@ -1,0 +1,26 @@
+{
+  "id": 16,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "Engineering Mathematics",
+    "Calculus"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Let $f(x)$ be a continuous function from $\\mathbb{R}$ to $\\mathbb{R}$ such that<br><br>$$f(x) = 1 - f(2 - x)$$<br><br>Which one of the following options is the CORRECT value of $\\int_{0}^{2} f(x)dx$ ?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "0",
+    "1",
+    "2",
+    "-1"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step 1: Define the given integral.</strong><br>Let $I = \\int_{0}^{2} f(x) dx$.<br><br><strong>Step 2: Apply the definite integral property.</strong><br>Using the property $\\int_{a}^{b} f(x) dx = \\int_{a}^{b} f(a + b - x) dx$ with $a = 0$ and $b = 2$, we get:<br>$I = \\int_{0}^{2} f(0 + 2 - x) dx = \\int_{0}^{2} f(2 - x) dx$<br><br><strong>Step 3: Substitute the functional relation.</strong><br>From the given equation $f(x) = 1 - f(2 - x)$, we have $f(2 - x) = 1 - f(x)$.<br>Substituting this into the integral:<br>$I = \\int_{0}^{2} (1 - f(x)) dx$<br>$I = \\int_{0}^{2} 1 dx - \\int_{0}^{2} f(x) dx$<br>$I = [x]_{0}^{2} - I$<br>$I = (2 - 0) - I$<br>$I = 2 - I$<br><br><strong>Step 4: Solve for $I$.</strong><br>$2I = 2 \\implies I = 1$<br><br>Thus, the correct option is <strong>(B)</strong>.",
+  "videoUrl": null
+}

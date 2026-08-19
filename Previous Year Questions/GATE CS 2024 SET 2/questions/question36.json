@@ -1,0 +1,26 @@
+{
+  "id": 36,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "Programming and Data Structures",
+    "C Programming"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "What is the output of the following C program?",
+  "assetImage": null,
+  "codeBlock": "#include <stdio.h>\n\nint main() {\n    double a[2]={20.0, 25.0}, *p, *q;\n    p = a;\n    q = p + 1;\n    printf(\"%d,%d\", (int)(q - p), (int)(*q - *p));\n    return 0;\n}",
+  "options": [
+    "4,8",
+    "1,5",
+    "8,5",
+    "1,8"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step 1: Pointer Arithmetic ($q - p$)</strong><br>In C, subtracting two pointers of the same type ($p$ and $q$) gives the number of elements between them rather than the address difference in bytes.<br>Since $p$ points to $a[0]$ and $q$ points to $a[1]$, $q - p = 1$.<br>Casting to integer gives $(int)(q - p) = 1$.<br><br><strong>Step 2: Value Subtraction ($*q - *p$)</strong><br>Dereferencing the pointers yields $*p = a[0] = 20.0$ and $*q = a[1] = 25.0$.<br>Subtracting the values gives $*q - *p = 25.0 - 20.0 = 5.0$.<br>Casting to integer gives $(int)(5.0) = 5$.<br><br><strong>Step 3: Printing Result</strong><br>The statement `printf(\"%d,%d\", ...)` prints the two calculated integer values separated by a comma: `1,5`.<br><br>Hence, option <strong>(B)</strong> is correct.",
+  "videoUrl": null
+}

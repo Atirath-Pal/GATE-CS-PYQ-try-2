@@ -1,0 +1,26 @@
+{
+  "id": 40,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "Compiler Design",
+    "LL(1) Parsing"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the following context-free grammar where the start symbol is $S$ and the set of terminals is \\{a,b,c,d\\}.<br><br>$$S \\rightarrow AaAb \\mid BbBa$$<br>$$A \\rightarrow cS \\mid \\epsilon$$<br>$$B \\rightarrow dS \\mid \\epsilon$$<br><br>The following is a partially-filled LL(1) parsing table.<br><br><table style=\"border-collapse: collapse; text-align: center; margin: 12px 0;\"><tbody><tr><td style=\"border-bottom: 1px solid white; border-right: 1px solid white; padding: 6px 16px;\"></td><td style=\"border: 1px solid white; padding: 6px 16px;\">$a$</td><td style=\"border: 1px solid white; padding: 6px 16px;\">$b$</td><td style=\"border: 1px solid white; padding: 6px 16px;\">$c$</td><td style=\"border: 1px solid white; padding: 6px 16px;\">$d$</td><td style=\"border: 1px solid white; padding: 6px 16px;\">$\\$</td></tr><tr><td style=\"border: 1px solid white; padding: 6px 16px;\">$S$</td><td style=\"border: 1px solid white; padding: 6px 16px;\">$S \\rightarrow AaAb$</td><td style=\"border: 1px solid white; padding: 6px 16px;\">$S \\rightarrow BbBa$</td><td style=\"border: 1px solid white; padding: 6px 16px;\">(1)</td><td style=\"border: 1px solid white; padding: 6px 16px;\">(2)</td><td style=\"border: 1px solid white; padding: 6px 16px;\"></td></tr><tr><td style=\"border: 1px solid white; padding: 6px 16px;\">$A$</td><td style=\"border: 1px solid white; padding: 6px 16px;\">$A \\rightarrow \\epsilon$</td><td style=\"border: 1px solid white; padding: 6px 16px;\">(3)</td><td style=\"border: 1px solid white; padding: 6px 16px;\">$A \\rightarrow cS$</td><td style=\"border: 1px solid white; padding: 6px 16px;\"></td><td style=\"border: 1px solid white; padding: 6px 16px;\"></td></tr><tr><td style=\"border: 1px solid white; padding: 6px 16px;\">$B$</td><td style=\"border: 1px solid white; padding: 6px 16px;\">(4)</td><td style=\"border: 1px solid white; padding: 6px 16px;\">$B \\rightarrow \\epsilon$</td><td style=\"border: 1px solid white; padding: 6px 16px;\"></td><td style=\"border: 1px solid white; padding: 6px 16px;\">$B \\rightarrow dS$</td><td style=\"border: 1px solid white; padding: 6px 16px;\"></td></tr></tbody></table><br>Which one of the following options represents the CORRECT combination for the numbered cells in the parsing table?<br><br><em>Note: In the options, “blank” denotes that the corresponding cell is empty.</em>",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "(1) $S \\rightarrow AaAb$ (2) $S \\rightarrow BbBa$ (3) $A \\rightarrow \\epsilon$ (4) $B \\rightarrow \\epsilon$",
+    "(1) $S \\rightarrow BbBa$ (2) $S \\rightarrow AaAb$ (3) $A \\rightarrow \\epsilon$ (4) $B \\rightarrow \\epsilon$",
+    "(1) $S \\rightarrow AaAb$ (2) $S \\rightarrow BbBa$ (3) blank (4) blank",
+    "(1) $S \\rightarrow BbBa$ (2) $S \\rightarrow AaAb$ (3) blank (4) blank"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "To fill the LL(1) parsing table, we calculate the <strong>FIRST</strong> and <strong>FOLLOW</strong> sets for the non-terminals:<br><br><strong>1. FIRST Sets:</strong><br>• $\\text{FIRST}(A) = \\{c, \\epsilon\\}$<br>• $\\text{FIRST}(B) = \\{d, \\epsilon\\}$<br>• $\\text{FIRST}(AaAb) = (\\text{FIRST}(A) \\setminus \\{\\epsilon\\}) \\cup \\text{FIRST}(aAb) = \\{c, a\\}$<br>• $\\text{FIRST}(BbBa) = (\\text{FIRST}(B) \\setminus \\{\\epsilon\\}) \\cup \\text{FIRST}(bBa) = \\{d, b\\}$<br><br><strong>2. Filling Table Entries for $S$:</strong><br>• Production $S \\rightarrow AaAb$ is placed in $M[S, a]$ and $M[S, c]$. Hence, cell (1) under column $c$ is $S \\rightarrow AaAb$.<br>• Production $S \\rightarrow BbBa$ is placed in $M[S, b]$ and $M[S, d]$. Hence, cell (2) under column $d$ is $S \\rightarrow BbBa$.<br><br><strong>3. FOLLOW Sets & $\\epsilon$-productions:</strong><br>• For $A \\rightarrow \\epsilon$, entries are added to $M[A, x]$ for all $x \\in \\text{FOLLOW}(A)$.<br>• From $S \\rightarrow AaAb$, the terminal $a$ follows the first $A$ and terminal $b$ follows the second $A$, so $\\{a, b\\} \\subseteq \\text{FOLLOW}(A)$.<br>• Thus, $A \\rightarrow \\epsilon$ goes into $M[A, a]$ and $M[A, b]$. Hence, cell (3) under column $b$ is $A \\rightarrow \\epsilon$.<br>• From $S \\rightarrow BbBa$, the terminal $b$ follows the first $B$ and terminal $a$ follows the second $B$, so $\\{a, b\\} \\subseteq \\text{FOLLOW}(B)$.<br>• Thus, $B \\rightarrow \\epsilon$ goes into $M[B, b]$ and $M[B, a]$. Hence, cell (4) under column $a$ is $B \\rightarrow \\epsilon$.<br><br>Therefore, Option (A) is correct.",
+  "videoUrl": null
+}

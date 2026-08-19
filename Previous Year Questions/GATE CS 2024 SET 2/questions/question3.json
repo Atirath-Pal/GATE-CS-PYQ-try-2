@@ -1,0 +1,26 @@
+{
+  "id": 3,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "General Aptitude",
+    "Set Theory"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "In an engineering college of 10,000 students, 1,500 like neither their core branches nor other branches. The number of students who like their core branches is $1/4^{\\text{th}}$ of the number of students who like other branches. The number of students who like both their core and other branches is 500.<br><br>The number of students who like their core branches is",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "1,800",
+    "3,500",
+    "1,600",
+    "1,500"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step 1: Define the total and given set values.</strong><br>Total students in the college, $U = 10,000$.<br>Number of students who like neither core nor other branches = $1,500$.<br>Number of students who like at least one branch, $n(C \\cup O) = 10,000 - 1,500 = 8,500$.<br><br><strong>Step 2: Relate the sets.</strong><br>Let $n(C)$ be the number of students who like core branches, and $n(O)$ be the number of students who like other branches.<br>Given that $n(C) = \\frac{1}{4} n(O)$, we get $n(O) = 4 n(C)$.<br>Number of students who like both core and other branches, $n(C \\cap O) = 500$.<br><br><strong>Step 3: Apply the Principle of Inclusion-Exclusion.</strong><br>$n(C \\cup O) = n(C) + n(O) - n(C \\cap O)$<br>$8,500 = n(C) + 4 n(C) - 500$<br>$9,000 = 5 n(C)$<br>$n(C) = 1,800$.<br><br>Thus, the number of students who like their core branches is <strong>1,800</strong>.",
+  "videoUrl": null
+}

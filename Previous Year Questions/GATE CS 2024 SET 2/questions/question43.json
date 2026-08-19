@@ -1,0 +1,26 @@
+{
+  "id": 43,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "Compiler Design",
+    "Intermediate Code Generation"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the following expression: $x[i] = (p + r) * -s[i] + u/w$. The following sequence shows the list of triples representing the given expression, with entries missing for triples (1), (3), and (6).<br><br><table style=\"border-collapse: collapse; text-align: center; margin: 12px auto;\"><tbody><tr><td style=\"border: 1px solid white; padding: 6px 16px;\">(0)</td><td style=\"border: 1px solid white; padding: 6px 16px;\">+</td><td style=\"border: 1px solid white; padding: 6px 16px;\">$p$</td><td style=\"border: 1px solid white; padding: 6px 16px;\">$r$</td></tr><tr><td style=\"border: 1px solid white; padding: 6px 16px;\">(1)</td><td style=\"border: 1px solid white; padding: 6px 16px;\"></td><td style=\"border: 1px solid white; padding: 6px 16px;\"></td><td style=\"border: 1px solid white; padding: 6px 16px;\"></td></tr><tr><td style=\"border: 1px solid white; padding: 6px 16px;\">(2)</td><td style=\"border: 1px solid white; padding: 6px 16px;\">uminus</td><td style=\"border: 1px solid white; padding: 6px 16px;\">(1)</td><td style=\"border: 1px solid white; padding: 6px 16px;\"></td></tr><tr><td style=\"border: 1px solid white; padding: 6px 16px;\">(3)</td><td style=\"border: 1px solid white; padding: 6px 16px;\"></td><td style=\"border: 1px solid white; padding: 6px 16px;\"></td><td style=\"border: 1px solid white; padding: 6px 16px;\"></td></tr><tr><td style=\"border: 1px solid white; padding: 6px 16px;\">(4)</td><td style=\"border: 1px solid white; padding: 6px 16px;\">/</td><td style=\"border: 1px solid white; padding: 6px 16px;\">$u$</td><td style=\"border: 1px solid white; padding: 6px 16px;\">$w$</td></tr><tr><td style=\"border: 1px solid white; padding: 6px 16px;\">(5)</td><td style=\"border: 1px solid white; padding: 6px 16px;\">+</td><td style=\"border: 1px solid white; padding: 6px 16px;\">(3)</td><td style=\"border: 1px solid white; padding: 6px 16px;\">(4)</td></tr><tr><td style=\"border: 1px solid white; padding: 6px 16px;\">(6)</td><td style=\"border: 1px solid white; padding: 6px 16px;\"></td><td style=\"border: 1px solid white; padding: 6px 16px;\"></td><td style=\"border: 1px solid white; padding: 6px 16px;\"></td></tr><tr><td style=\"border: 1px solid white; padding: 6px 16px;\">(7)</td><td style=\"border: 1px solid white; padding: 6px 16px;\">=</td><td style=\"border: 1px solid white; padding: 6px 16px;\">(6)</td><td style=\"border: 1px solid white; padding: 6px 16px;\">(5)</td></tr></tbody></table><br>Which one of the following options fills in the missing entries CORRECTLY?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "(1) =[] $s$ $i$ &emsp;&emsp; (3) $*$ (0) (2) &emsp;&emsp; (6) []= $x$ $i$",
+    "(1) []= $s$ $i$ &emsp;&emsp; (3) $-$ (0) (2) &emsp;&emsp; (6) =[] $x$ (5)",
+    "(1) =[] $s$ $i$ &emsp;&emsp; (3) $*$ (0) (2) &emsp;&emsp; (6) []= $x$ (5)",
+    "(1) []= $s$ $i$ &emsp;&emsp; (3) $-$ (0) (2) &emsp;&emsp; (6) =[] $x$ $i$"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step-by-step Solution:</strong><br><br><strong>1. Triple (1): Array Index Dereference</strong><br>To evaluate $s[i]$, the standard operator for array access/dereferencing in triples is <code>=[]</code>. The operator takes array $s$ and index $i$ as arguments.<br>Thus, Triple (1) entry is: <code>=[]  s  i</code><br><br><strong>2. Triple (3): Multiplication</strong><br>Triple (0) computes $(p + r)$ via <code>+  p  r</code>.<br>Triple (2) computes $-s[i]$ using unary minus on Triple (1), i.e., <code>uminus  (1)</code>.<br>Triple (3) needs to multiply $(p + r)$ and $-s[i]$, which means applying operator <code>*</code> to Triple (0) and Triple (2).<br>Thus, Triple (3) entry is: <code>*  (0)  (2)</code><br><br><strong>3. Triple (6): Array Assignment Target</strong><br>Triple (4) computes $u / w$ via <code>/  u  w</code>.<br>Triple (5) adds Triple (3) and Triple (4) via <code>+  (3)  (4)</code>.<br>Triple (6) defines the target location $x[i]$ for assignment. The operator for array reference assignment target is <code>[]=</code> with array $x$ and index $i$.<br>Thus, Triple (6) entry is: <code>[]=  x  i</code><br><br>Finally, Triple (7) assigns the computed value in (5) to the address target in (6) using <code>=  (6)  (5)</code>.<br><br>Therefore, the correct option is <strong>(A)</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 38,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "Computer Networks",
+    "IP Addressing"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Which one of the following CIDR prefixes exactly represents the range of IP addresses 10.12.2.0 to 10.12.3.255?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "10.12.2.0/23",
+    "10.12.2.0/24",
+    "10.12.0.0/22",
+    "10.12.2.0/22"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step 1: Convert the IP range to binary representation.</strong><br>The first two octets remain constant: $10.12$.<br>The third octet ranges from $2$ to $3$:<br>- $2 = (00000010)_2$<br>- $3 = (00000011)_2$<br>The fourth octet ranges from $0$ to $255$ ($00000000_2$ to $11111111_2$).<br><br><strong>Step 2: Calculate the network prefix length.</strong><br>The first $16$ bits ($10.12$) are fixed.<br>In the third octet, the first $7$ bits ($0000001$) are identical for both addresses.<br>Total network prefix length = $8 + 8 + 7 = 23$ bits.<br><br><strong>Step 3: Identify the CIDR prefix.</strong><br>Setting all $32 - 23 = 9$ host bits to $0$ gives the network IP $10.12.2.0$.<br>Thus, the CIDR prefix is <strong>10.12.2.0/23</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,22 @@
+{
+  "id": 54,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "Computer Networks",
+    "TCP Congestion Control"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a TCP connection operating at a point of time with the congestion window of size 12 MSS (Maximum Segment Size), when a timeout occurs due to packet loss. Assuming that all the segments transmitted in the next two RTTs (Round Trip Time) are acknowledged correctly, the congestion window size (in MSS) during the third RTT will be ________",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 4,
+    "max": 4
+  },
+  "explanation": "<strong>Step-by-Step Explanation:</strong><br><br><strong>1. Timeout Event & Threshold Update:</strong><br>Initial congestion window size, $\\text{cwnd} = 12\\text{ MSS}$.<br>When a timeout occurs due to packet loss, TCP updates the slow start threshold ($\\text{ssthresh}$) to half of the current $\\text{cwnd}$:<br>$$\\text{ssthresh} = \\frac{12}{2} = 6\\text{ MSS}$$<br>The congestion window is then reset to $1\\text{ MSS}$, initiating the Slow Start phase.<br><br><strong>2. RTT Window Calculations:</strong><br><ul><li><strong>1st RTT:</strong> $\\text{cwnd} = 1\\text{ MSS}$. All segments are successfully acknowledged, doubling $\\text{cwnd}$ to $2\\text{ MSS}$.</li><li><strong>2nd RTT:</strong> $\\text{cwnd} = 2\\text{ MSS}$. All segments are successfully acknowledged, doubling $\\text{cwnd}$ to $4\\text{ MSS}$.</li><li><strong>3rd RTT:</strong> $\\text{cwnd} = 4\\text{ MSS}$.</li></ul><br>Since $4\\text{ MSS} < \\text{ssthresh} (6\\text{ MSS})$, the congestion window size during the third RTT is <strong>4</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,28 @@
+{
+  "id": 27,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "Database Management Systems",
+    "Concurrency Control"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Which of the following statements about the Two Phase Locking (2PL) protocol is/are TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "2PL permits only serializable schedules",
+    "With 2PL, a transaction always locks the data item being read or written just before every operation and always releases the lock just after the operation",
+    "With 2PL, once a lock is released on any data item inside a transaction, no more locks on any data item can be obtained inside that transaction",
+    "A deadlock is possible with 2PL"
+  ],
+  "answer": [
+    "A",
+    "C",
+    "D"
+  ],
+  "explanation": "<strong>Explanation:</strong><br><br>Let us analyze each statement about the Two Phase Locking (2PL) protocol:<br><br><strong>(A) TRUE:</strong> 2PL guarantees conflict serializability. Thus, every schedule permitted under 2PL is guaranteed to be serializable.<br><br><strong>(B) FALSE:</strong> Releasing a lock immediately after each operation would violate the shrinking phase rule if the transaction needs to acquire other locks later.<br><br><strong>(C) TRUE:</strong> The fundamental rule of 2PL states that a transaction has two phases: Growing Phase (locks are acquired, none released) and Shrinking Phase (locks are released, no new locks can be acquired). Thus, once any lock is released, no further locks can be obtained.<br><br><strong>(D) TRUE:</strong> Basic 2PL is not deadlock-free; cyclic waiting dependencies between transactions can lead to deadlocks.<br><br>Therefore, statements <strong>(A)</strong>, <strong>(C)</strong>, and <strong>(D)</strong> are correct.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 12,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "Mathematical Logic",
+    "Propositional Logic"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Let $p$ and $q$ be the following propositions:<br><br>$p$: Fail grade can be given.<br><br>$q$: Student scores more than 50% marks.<br><br>Consider the statement: “*Fail grade cannot be given when student scores more than 50% marks.*”<br><br>Which one of the following is the CORRECT representation of the above statement in propositional logic?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$q \\rightarrow \\neg p$",
+    "$q \\rightarrow p$",
+    "$p \\rightarrow q$",
+    "$\\neg p \\rightarrow q$"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>Given the propositions:<br>• $p$: Fail grade can be given.<br>• $q$: Student scores more than 50% marks.<br><br>The given statement is: \"<em>Fail grade cannot be given when student scores more than 50% marks.</em>\"<br><br>A statement of the structure \"$A$ when $B$\" translates to the conditional proposition \"If $B$, then $A$\" ($B \\rightarrow A$).<br><br>Here:<br>• Condition $B$ = \"student scores more than 50% marks\", which corresponds to $q$.<br>• Result $A$ = \"Fail grade cannot be given\", which is the negation of $p$, i.e., $\\neg p$.<br><br>Substituting these into $B \\rightarrow A$ yields:<br>$q \\rightarrow \\neg p$<br><br>Therefore, the correct option is <strong>(A)</strong>.",
+  "videoUrl": null
+}

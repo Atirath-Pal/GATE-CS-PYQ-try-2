@@ -1,0 +1,26 @@
+{
+  "id": 51,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "Graph Theory",
+    "Algorithms"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Let $G$ be an undirected connected graph in which every edge has a positive integer weight. Suppose that every spanning tree in $G$ has <em>even</em> weight. Which of the following statements is/are TRUE for <em>every</em> such graph $G$ ?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "All edges in $G$ have even weight",
+    "All edges in $G$ have even weight <b>OR</b> all edges in $G$ have odd weight",
+    "In each cycle $C$ in $G$, all edges in $C$ have even weight",
+    "In each cycle $C$ in $G$, either all edges in $C$ have even weight <b>OR</b> all edges in $C$ have odd weight"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Step 1: Analyze the parity condition for cycles.</strong><br>Let $T$ be a spanning tree of $G$. The weight of $T$, $w(T)$, is even.<br>If we add any non-tree edge $e \\notin T$ to $T$, it forms a unique fundamental cycle $C$.<br>Removing any edge $e' \\in C$ gives a new spanning tree $T' = T \\cup \\{e\\} \\setminus \\{e'\\}$.<br><br>Since every spanning tree must have an even weight:<br>$w(T') = w(T) + w(e) - w(e') \\equiv 0 \\pmod{2}$<br><br>Since $w(T)$ is even ($w(T) \\equiv 0 \\pmod{2}$), we get:<br>$w(e) \\equiv w(e') \\pmod{2}$<br><br>This implies that all edges in cycle $C$ must have the same parity (all even or all odd). Therefore, for every cycle $C$ in $G$, either all edges in $C$ have even weight OR all edges in $C$ have odd weight.<br><br><strong>Step 2: Construct a counterexample for statements (A), (B), and (C).</strong><br>Consider a graph $G$ consisting of two triangles connected by a bridge edge:<br>- Triangle 1: 3 edges, each of weight 1 (odd).<br>- Triangle 2: 3 edges, each of weight 2 (even).<br>- Bridge edge: 1 edge of weight 2 (even).<br><br>Any spanning tree of $G$ must contain:<br>- The bridge edge (weight 2)<br>- 2 edges from Triangle 1 (weight $1 + 1 = 2$)<br>- 2 edges from Triangle 2 (weight $2 + 2 = 4$)<br>Total spanning tree weight = $2 + 2 + 4 = 8$ (which is always even).<br><br>Now check each statement against this valid graph $G$:<br>- <strong>(A) False:</strong> $G$ contains edges of weight 1 (odd).<br>- <strong>(B) False:</strong> $G$ contains both odd and even edges.<br>- <strong>(C) False:</strong> Triangle 1 forms a cycle whose edges all have odd weight.<br>- <strong>(D) True:</strong> Each cycle in $G$ consists either entirely of even-weight edges (Triangle 2) or entirely of odd-weight edges (Triangle 1).<br><br>Hence, statement (D) is the only statement that is always true for every such graph $G$.",
+  "videoUrl": null
+}

@@ -1,0 +1,22 @@
+{
+  "id": 59,
+  "year": "2024",
+  "set": "2",
+  "topics": [
+    "Algorithms",
+    "Graph Theory"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "The number of distinct minimum-weight spanning trees of the following graph is ________.",
+  "assetImage": "question59.png",
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 9,
+    "max": 9
+  },
+  "explanation": "<strong>Step 1: Categorize edges by weight</strong><br>• Weight 1 edges: $(a, b), (a, f), (c, d), (e, d)$ (4 edges)<br>• Weight 2 edges: $(a, g), (b, g), (f, g), (c, g), (d, g), (e, g)$ (6 edges)<br>• Weight 3 edges: $(b, c), (f, e)$ (2 edges)<br><br><strong>Step 2: Apply Kruskal's Algorithm</strong><br>We must include all weight 1 edges as none of them form a cycle. Selecting these 4 edges creates three disconnected components:<br>1. Subtree 1: $\\{a, b, f\\}$<br>2. Subtree 2: $\\{c, d, e\\}$<br>3. Isolated vertex: $\\{g\\}$<br><br><strong>Step 3: Connect components with weight 2 edges</strong><br>A spanning tree for a 7-vertex graph requires $7 - 1 = 6$ edges. Since 4 weight-1 edges are already selected, we need 2 more edges of weight 2:<br>• Connect Subtree 1 $\\{a, b, f\\}$ to $g$: Choose 1 edge out of $\\{(a, g), (b, g), (f, g)\\}$ $\\rightarrow$ $3$ choices.<br>• Connect Subtree 2 $\\{c, d, e\\}$ to $g$: Choose 1 edge out of $\\{(c, g), (d, g), (e, g)\\}$ $\\rightarrow$ $3$ choices.<br><br><strong>Step 4: Calculate total distinct MSTs</strong><br>Total number of distinct MSTs = $3 \\times 3 = 9$.",
+  "videoUrl": null
+}

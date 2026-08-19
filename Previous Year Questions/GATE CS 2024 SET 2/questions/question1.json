@@ -1,0 +1,21 @@
+{
+  "id": 1,
+  "year": 2024,
+  "set": 2,
+  "topics": ["General Aptitude", "Verbal Ability"],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "If ‘$\\rightarrow$’ denotes increasing order of intensity, then the meaning of the words<br><br>[walk $\\rightarrow$ jog $\\rightarrow$ sprint] is analogous to [bothered $\\rightarrow$ ________ $\\rightarrow$ daunted].<br><br>Which one of the given options is appropriate to fill the blank?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "phased",
+    "phrased",
+    "fazed",
+    "fused"
+  ],
+  "answer": ["C"],
+  "explanation": "<strong>Step 1: Understand the analogy pattern</strong><br>The sequence $[\\text{walk} \\rightarrow \\text{jog} \\rightarrow \\text{sprint}]$ represents an increasing scale of physical intensity in movement.<br><br><strong>Step 2: Analyze the second sequence</strong><br>We require a word that represents a moderate level of intensity between being $bothered$ (mildly affected/worried) and $daunted$ (severely intimidated/discouraged).<br><br><strong>Step 3: Evaluate the options</strong><br>- <strong>phased:</strong> carried out in gradual stages.<br>- <strong>phrased:</strong> expressed in words.<br>- <strong>fazed:</strong> disturbed, discomfited, or perturbed (moderate emotional intensity).<br>- <strong>fused:</strong> joined or melted together.<br><br>Therefore, <strong>fazed</strong> correctly fits the blank to complete the progression of intensity: $[\\text{bothered} \\rightarrow \\text{fazed} \\rightarrow \\text{daunted}]$.<br><br>Hence, Option (C) is the correct answer.",
+  "videoUrl": null
+}

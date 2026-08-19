@@ -1,0 +1,22 @@
+{
+  "id": 61,
+  "year": "2024",
+  "set": 2,
+  "topics": [
+    "Computer Organization and Architecture",
+    "Instruction Format"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "A processor uses a 32-bit instruction format and supports byte-addressable memory access. The ISA of the processor has 150 distinct instructions. The instructions are equally divided into two types, namely R-type and I-type, whose formats are shown below.<br><br>R-type Instruction Format:<br><table style=\"border-collapse: collapse; margin: 10px 0;\"><tbody><tr><td style=\"border: 1px solid white; padding: 6px 12px;\">OPCODE</td><td style=\"border: 1px solid white; padding: 6px 12px;\">UNUSED</td><td style=\"border: 1px solid white; padding: 6px 12px;\">DST Register</td><td style=\"border: 1px solid white; padding: 6px 12px;\">SRC Register1</td><td style=\"border: 1px solid white; padding: 6px 12px;\">SRC Register 2</td></tr></tbody></table><br>I-type Instruction Format:<br><table style=\"border-collapse: collapse; margin: 10px 0;\"><tbody><tr><td style=\"border: 1px solid white; padding: 6px 12px;\">OPCODE</td><td style=\"border: 1px solid white; padding: 6px 12px;\">DST Register</td><td style=\"border: 1px solid white; padding: 6px 12px;\">SRC Register</td><td style=\"border: 1px solid white; padding: 6px 12px;\"># Immediate value/address</td></tr></tbody></table><br>In the OPCODE, 1 bit is used to distinguish between I-type and R-type instructions and the remaining bits indicate the operation. The processor has 50 architectural registers, and all register fields in the instructions are of equal size.<br><br>Let $X$ be the number of bits used to encode the UNUSED field, $Y$ be the number of bits used to encode the OPCODE field, and $Z$ be the number of bits used to encode the immediate value/address field. The value of $X + 2Y + Z$ is _________",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 34,
+    "max": 34
+  },
+  "explanation": "<strong>Step 1: Calculate the size of the OPCODE field ($Y$)</strong><br>- Total instructions = $150$, equally divided into R-type and I-type instructions.<br>- Number of R-type instructions = $75$, and number of I-type instructions = $75$.<br>- $1$ bit in OPCODE is used to distinguish between the two types.<br>- To distinguish $75$ operations within each type, we need $\\lceil \\log_2(75) \\rceil = 7$ bits.<br>- Total OPCODE field size $Y = 1 + 7 = 8$ bits.<br><br><strong>Step 2: Calculate the size of each Register field</strong><br>- The processor has $50$ architectural registers.<br>- Bits required for each register field = $\\lceil \\log_2(50) \\rceil = 6$ bits.<br>- Each register field (DST Register, SRC Register1, SRC Register 2, SRC Register) requires $6$ bits.<br><br><strong>Step 3: Calculate $X$ (UNUSED field size in R-type)</strong><br>- Total instruction length = $32$ bits.<br>- $\\text{OPCODE} + \\text{UNUSED} + \\text{DST Register} + \\text{SRC Register1} + \\text{SRC Register 2} = 32$<br>- $8 + X + 6 + 6 + 6 = 32$<br>- $X + 26 = 32 \\implies X = 6$ bits.<br><br><strong>Step 4: Calculate $Z$ (Immediate value/address field size in I-type)</strong><br>- $\\text{OPCODE} + \\text{DST Register} + \\text{SRC Register} + \\text{Immediate} = 32$<br>- $8 + 6 + 6 + Z = 32$<br>- $Z + 20 = 32 \\implies Z = 12$ bits.<br><br><strong>Step 5: Compute $X + 2Y + Z$</strong><br>- $X + 2Y + Z = 6 + 2(8) + 12 = 6 + 16 + 12 = 34$.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 13,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "Programming and Data Structures",
+    "C Programming"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the following C program. Assume parameters to a function are evaluated from <i>right to left</i>.<br><br>Which one of the following options is the CORRECT output of the above C program?",
+  "assetImage": null,
+  "codeBlock": "#include <stdio.h>\n\nint g(int p) { printf(\"%d\", p); return p; }\nint h(int q) { printf(\"%d\", q); return q; }\n\nvoid f(int x, int y) {\n    g(x);\n    h(y);\n}\n\nint main() {\n    f(g(10),h(20));\n}",
+  "options": [
+    "20101020",
+    "10202010",
+    "20102010",
+    "10201020"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step 1: Evaluation of arguments in main()</strong><br>The statement inside <code>main()</code> is <code>f(g(10), h(20));</code>. Since arguments are evaluated from <strong>right to left</strong>:<br>1. First, the right argument <code>h(20)</code> is evaluated. Function <code>h(20)</code> prints <strong>20</strong> and returns $20$.<br>2. Next, the left argument <code>g(10)</code> is evaluated. Function <code>g(10)</code> prints <strong>10</strong> and returns $10$.<br>Output printed so far: <strong>2010</strong>.<br><br><strong>Step 2: Execution of function f(10, 20)</strong><br>Now <code>f(10, 20)</code> is called with arguments $x = 10$ and $y = 20$:<br>1. <code>g(x)</code> is called, i.e., <code>g(10)</code>, which prints <strong>10</strong>.<br>2. <code>h(y)</code> is called, i.e., <code>h(20)</code>, which prints <strong>20</strong>.<br>Output printed inside <code>f</code>: <strong>1020</strong>.<br><br><strong>Step 3: Final Output</strong><br>Concatenating all printed outputs in order of execution gives <strong>20101020</strong>.<br><br>Hence, option <strong>(A)</strong> is correct.",
+  "videoUrl": null
+}

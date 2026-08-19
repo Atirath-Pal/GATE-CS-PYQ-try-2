@@ -1,0 +1,27 @@
+{
+  "id": 52,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "Theory of Computation",
+    "Context-Free Grammars"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a context-free grammar $G$ with the following 3 rules.<br><br>$$S \\rightarrow aS, S \\rightarrow aSbS, S \\rightarrow c$$<br><br>Let $w \\in L(G)$. Let $n_a(w), n_b(w), n_c(w)$ denote the number of times $a, b, c$ occur in $w$, respectively. Which of the following statements is/are TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$n_a(w) > n_b(w)$",
+    "$n_a(w) > n_c(w) - 2$",
+    "$n_c(w) = n_b(w) + 1$",
+    "$n_c(w) = n_b(w) * 2$"
+  ],
+  "answer": [
+    "B",
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Analyze the grammar rules</strong><br>The given production rules are:<br>1. $S \\rightarrow aS$: Adds one 'a', number of $S$ non-terminals remains unchanged.<br>2. $S \\rightarrow aSbS$: Adds one 'a', one 'b', and increases the number of $S$ non-terminals by 1.<br>3. $S \\rightarrow c$: Replaces one $S$ with 'c', reducing the number of $S$ non-terminals by 1.<br><br><strong>Step 2: Relationship between $n_b(w)$ and $n_c(w)$</strong><br>We start with a single start symbol $S$.<br>Every time rule 2 ($S \\rightarrow aSbS$) is used, it produces exactly one 'b' and introduces an additional $S$.<br>To derive a terminal string $w$, every $S$ must eventually be replaced by 'c' using rule 3 ($S \\rightarrow c$).<br>Therefore, the total number of 'c's in $w$ is:<br>$n_c(w) = n_b(w) + 1$<br>This directly proves that statement <strong>(C)</strong> is <strong>TRUE</strong>.<br><br><strong>Step 3: Relationship between $n_a(w)$ and $n_b(w)$</strong><br>Rule 1 produces an 'a' without any 'b', and Rule 2 produces an 'a' along with a 'b'.<br>Thus, $n_a(w) = (\\text{count of Rule 1}) + n_b(w) \\ge n_b(w)$.<br>For $w = acbc$ (using $S \\rightarrow aSbS \\rightarrow acbS \\rightarrow acbc$), we have $n_a(w) = 1$ and $n_b(w) = 1$. Here $n_a(w) = n_b(w)$, so statement <strong>(A)</strong> is <strong>FALSE</strong>.<br><br><strong>Step 4: Verify Statement (B)</strong><br>From Step 2, $n_c(w) = n_b(w) + 1 \\implies n_b(w) = n_c(w) - 1$.<br>Since $n_a(w) \\ge n_b(w)$, substituting $n_b(w)$ gives:<br>$n_a(w) \\ge n_c(w) - 1 > n_c(w) - 2$.<br>Thus, $n_a(w) > n_c(w) - 2$ is always true, making statement <strong>(B)</strong> <strong>TRUE</strong>.<br><br><strong>Step 5: Verify Statement (D)</strong><br>Since $n_c(w) = n_b(w) + 1$, $n_c(w) = n_b(w) * 2$ is not true in general (it only holds when $n_b(w) = 1$). Thus, statement <strong>(D)</strong> is <strong>FALSE</strong>.",
+  "videoUrl": null
+}

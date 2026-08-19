@@ -1,0 +1,26 @@
+{
+  "id": 20,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "Database Management System",
+    "ER Diagram"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "In the context of owner and weak entity sets in the ER (Entity-Relationship) data model, which one of the following statements is TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "The weak entity set MUST have total participation in the identifying relationship",
+    "The owner entity set MUST have total participation in the identifying relationship",
+    "Both weak and owner entity sets MUST have total participation in the identifying relationship",
+    "Neither weak entity set nor owner entity set MUST have total participation in the identifying relationship"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "In an Entity-Relationship (ER) model:<br><br>1. A <strong>weak entity set</strong> does not possess a primary key on its own and depends on a strong (owner) entity set for its existence.<br>2. Since every weak entity instance must be linked to an owner entity instance to be uniquely identified, the weak entity set <strong>MUST have total participation</strong> in the identifying relationship.<br>3. Conversely, an owner entity set can exist independently without having associated weak entities, so its participation in the identifying relationship can be partial.<br><br>Therefore, Option <strong>(A)</strong> is correct.",
+  "videoUrl": null
+}

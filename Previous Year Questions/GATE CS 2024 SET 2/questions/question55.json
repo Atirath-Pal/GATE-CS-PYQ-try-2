@@ -1,0 +1,22 @@
+{
+  "id": 55,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "Computer Networks",
+    "CSMA/CD"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider an Ethernet segment with a transmission speed of $10^8$ bits/sec and a maximum segment length of 500 meters. If the speed of propagation of the signal in the medium is $2\\times 10^8$ meters/sec, then the minimum frame size (in bits) required for collision detection is ________",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 500,
+    "max": 500
+  },
+  "explanation": "<strong>Given Data:</strong><br>• Transmission speed ($B$) = $10^8$ bits/sec<br>• Maximum segment length ($d$) = $500$ meters<br>• Speed of propagation ($v$) = $2 \\times 10^8$ meters/sec<br><br><strong>Formula:</strong><br>For collision detection in CSMA/CD Ethernet, the condition for minimum frame size ($L$) is:<br>$L = 2 \\times T_p \\times B$<br>where $T_p$ is the propagation delay ($T_p = \\frac{d}{v}$).<br><br><strong>Calculation:</strong><br>1. Calculate propagation delay ($T_p$):<br>$T_p = \\frac{500 \\text{ m}}{2 \\times 10^8 \\text{ m/sec}} = 2.5 \\times 10^{-6} \\text{ seconds}$<br><br>2. Calculate minimum frame size ($L$):<br>$L = 2 \\times (2.5 \\times 10^{-6} \\text{ sec}) \\times 10^8 \\text{ bits/sec}$<br>$L = 500 \\text{ bits}$<br><br>Thus, the minimum frame size required for collision detection is <strong>500</strong> bits.",
+  "videoUrl": null
+}

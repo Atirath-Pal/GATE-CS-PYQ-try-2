@@ -1,0 +1,26 @@
+{
+  "id": 39,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "Data Structures",
+    "Binary Search Trees"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "You are given a set $V$ of distinct integers. A binary search tree $T$ is created by inserting all elements of $V$ one by one, starting with an empty tree. The tree $T$ follows the convention that, at each node, all values stored in the left subtree of the node are smaller than the value stored at the node. You are not aware of the sequence in which these values were inserted into $T$, and you do not have access to $T$.<br><br>Which one of the following statements is TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Inorder traversal of $T$ can be determined from $V$",
+    "Root node of $T$ can be determined from $V$",
+    "Preorder traversal of $T$ can be determined from $V$",
+    "Postorder traversal of $T$ can be determined from $V$"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Explanation:</strong><br><br>1. An <strong>inorder traversal</strong> of a Binary Search Tree (BST) containing distinct elements always visits the nodes in strictly sorted ascending order.<br><br>2. Since $V$ is a set of distinct integers, sorting the elements of $V$ uniquely determines the inorder traversal sequence of $T$, regardless of the order in which the elements were inserted.<br><br>3. In contrast, the root node, preorder traversal, and postorder traversal depend on the exact structure of $T$, which is dictated by the specific insertion sequence. Since the insertion sequence is unknown, these cannot be uniquely determined from $V$ alone.<br><br>4. Therefore, statement (A) is correct.",
+  "videoUrl": null
+}

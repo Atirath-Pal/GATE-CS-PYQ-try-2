@@ -1,0 +1,26 @@
+{
+  "id": 23,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "Computer Networks",
+    "IP Addressing"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Node X has a TCP connection open to node Y. The packets from X to Y go through an intermediate IP router R. Ethernet switch S is the first switch on the network path between X and R. Consider a packet sent from X to Y over this connection.<br><br>Which of the following statements is/are TRUE about the destination IP and MAC addresses on this packet at the time it leaves X?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "The destination IP address is the IP address of R",
+    "The destination IP address is the IP address of Y",
+    "The destination MAC address is the MAC address of S",
+    "The destination MAC address is the MAC address of Y"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step 1: Understanding Destination IP Address</strong><br>The IP address represents the ultimate end-to-end destination of the packet. Throughout its journey across routers, the destination IP address remains the IP address of the destination host, which is node $Y$.<br><br><strong>Step 2: Understanding Destination MAC Address</strong><br>MAC addresses are used for hop-by-hop delivery at the Data Link Layer (Layer 2). To send a packet outside its local subnet to node $Y$, node $X$ must send the frame to its default gateway, which is router $R$. Therefore, the destination MAC address is set to the MAC address of router $R$.<br><br><strong>Step 3: Role of Ethernet Switch S</strong><br>Ethernet switch $S$ is a Layer 2 transparent device that forwards frames within the local network based on MAC addresses. It does not act as a Layer 3 or Layer 2 destination for node $X$.<br><br><strong>Summary at the time packet leaves X:</strong><br>• Destination IP address = IP address of $Y$<br>• Destination MAC address = MAC address of $R$<br><br>Hence, only statement <strong>(B)</strong> is TRUE.",
+  "videoUrl": null
+}

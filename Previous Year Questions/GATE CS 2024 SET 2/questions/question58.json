@@ -1,0 +1,22 @@
+{
+  "id": 58,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "Computer Architecture",
+    "Pipelining"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "A non-pipelined instruction execution unit operating at $2\\text{ GHz}$ takes an average of $6$ cycles to execute an instruction of a program $P$. The unit is then redesigned to operate on a $5$-stage pipeline at $2\\text{ GHz}$. Assume that the ideal throughput of the pipelined unit is $1$ instruction per cycle. In the execution of program $P$, $20\\%$ instructions incur an average of $2$ cycles stall due to data hazards and $20\\%$ instructions incur an average of $3$ cycles stall due to control hazards. The speedup (rounded off to one decimal place) obtained by the pipelined design over the non-pipelined design is _________",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 2.9,
+    "max": 3.1
+  },
+  "explanation": "<strong>Step 1: Calculate the average CPI for non-pipelined execution.</strong><br>$\\text{CPI}_{\\text{non-pipelined}} = 6$<br><br><strong>Step 2: Calculate the average CPI for pipelined execution.</strong><br>Ideal CPI = $1$<br>Stalls due to data hazards = $20\\% \\times 2 = 0.20 \\times 2 = 0.40$ cycles<br>Stalls due to control hazards = $20\\% \\times 3 = 0.20 \\times 3 = 0.60$ cycles<br><br>$$\\text{CPI}_{\\text{pipelined}} = \\text{Ideal CPI} + \\text{Stalls}_{\\text{data}} + \\text{Stalls}_{\\text{control}} = 1 + 0.40 + 0.60 = 2.0$$<br><br><strong>Step 3: Calculate the Speedup.</strong><br>Since the clock frequency ($2\\text{ GHz}$) is identical in both cases, the clock cycle time $T_{\\text{clk}}$ remains constant.<br><br>$$\\text{Speedup} = \\frac{\\text{CPI}_{\\text{non-pipelined}}}{\\text{CPI}_{\\text{pipelined}}} = \\frac{6}{2.0} = 3.0$$<br><br>Thus, the speedup obtained is <strong>3.0</strong>.",
+  "videoUrl": null
+}

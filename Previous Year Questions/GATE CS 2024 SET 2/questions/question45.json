@@ -1,0 +1,26 @@
+{
+  "id": 45,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "Database Management Systems",
+    "Relational Algebra"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "The relation schema, $\\text{Person}(\\underline{\\text{pid}}, \\text{city})$, describes the city of residence for every person uniquely identified by $\\text{pid}$. The following relational algebra operators are available: $\\text{selection}$, $\\text{projection}$, $\\text{cross product}$, and $\\text{rename}$.<br><br>To find the list of cities where at least 3 persons reside, using the above operators, the minimum number of $\\text{cross product}$ operations that must be used is",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "1",
+    "2",
+    "3",
+    "4"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step 1: Understand the Goal</strong><br>We need to find cities where at least 3 distinct persons reside using only selection, projection, cross product, and rename operations.<br><br><strong>Step 2: Renaming and Cross Products</strong><br>To compare 3 distinct persons in the same city, we need to join 3 instances of the $\\text{Person}$ relation, say $P_1$, $P_2$, and $P_3$, created via the rename operator $\\rho$.<br><br>To combine $n$ relation instances using cross product operations, we require $n - 1$ cross products:<br>1. First cross product: $P_1 \\times P_2$<br>2. Second cross product: $(P_1 \\times P_2) \\times P_3$<br><br>For $n = 3$ relation instances, the minimum number of cross product operations required is $3 - 1 = 2$.<br><br><strong>Step 3: Relational Algebra Expression</strong><br>$\\pi_{P_1.\\text{city}} \\left( \\sigma_{P_1.\\text{city}=P_2.\\text{city} \\land P_2.\\text{city}=P_3.\\text{city} \\land P_1.\\text{pid} \\neq P_2.\\text{pid} \\land P_2.\\text{pid} \\neq P_3.\\text{pid} \\land P_1.\\text{pid} \\neq P_3.\\text{pid}} \\left( (\\rho_{P_1}(\\text{Person}) \\times \\rho_{P_2}(\\text{Person})) \\times \\rho_{P_3}(\\text{Person}) \\right) \\right)$<br><br>Thus, the minimum number of cross product operations required is <strong>2</strong>.",
+  "videoUrl": null
+}

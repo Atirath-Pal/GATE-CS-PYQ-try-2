@@ -1,0 +1,22 @@
+{
+  "id": 53,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "Operating Systems",
+    "Disk Management"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a disk with the following specifications: rotation speed of 6000 RPM, average seek time of 5 milliseconds, 500 sectors/track, 512-byte sectors.<br><br>A file has content stored in 3000 sectors located <i>randomly</i> on the disk. Assuming average rotational latency, the total time (<i>in seconds, rounded off to 2 decimal places</i>) to read the entire file from the disk is _________",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 29.5,
+    "max": 30.5
+  },
+  "explanation": "<strong>Step 1: Calculate Rotation Time and Average Rotational Latency.</strong><br>Disk rotation speed = $6000\\text{ RPM} = \\frac{6000}{60} = 100\\text{ rotations per second}$.<br>Time for 1 complete rotation = $\\frac{1}{100}\\text{ s} = 10\\text{ ms}$.<br>Average Rotational Latency = $\\frac{10\\text{ ms}}{2} = 5\\text{ ms}$.<br><br><strong>Step 2: Calculate Sector Transfer Time.</strong><br>Time to transfer 1 track (500 sectors) = $10\\text{ ms}$.<br>Time to transfer 1 sector = $\\frac{10\\text{ ms}}{500} = 0.02\\text{ ms}$.<br><br><strong>Step 3: Calculate Time for 1 Randomly Located Sector.</strong><br>Total time per sector = $\\text{Seek Time} + \\text{Rotational Latency} + \\text{Transfer Time}$<br>Total time per sector = $5\\text{ ms} + 5\\text{ ms} + 0.02\\text{ ms} = 10.02\\text{ ms}$.<br><br><strong>Step 4: Calculate Total Time to Read 3000 Sectors.</strong><br>Because the 3000 sectors are located randomly, each sector read requires an independent seek, rotational latency, and transfer.<br>Total time = $3000 \\times 10.02\\text{ ms} = 30060\\text{ ms} = 30.06\\text{ seconds}$.<br><br>(<i>Note: If transfer time is ignored, total time = $3000 \\times (5 + 5)\\text{ ms} = 30000\\text{ ms} = 30.00\\text{ seconds}$, which is also within the allowed range of $29.50$ to $30.50$ seconds.</i>)",
+  "videoUrl": null
+}

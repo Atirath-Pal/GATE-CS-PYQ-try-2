@@ -1,0 +1,21 @@
+{
+  "id": 29,
+  "year": 2024,
+  "set": 2,
+  "topics": ["Compiler Design", "Syntax Directed Translation"],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Which of the following statements is/are FALSE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "An attribute grammar is a syntax-directed definition (SDD) in which the functions in the semantic rules have no side effects",
+    "The attributes in a L-attributed definition cannot always be evaluated in a depth-first order",
+    "Synthesized attributes can be evaluated by a bottom-up parser as the input is parsed",
+    "All L-attributed definitions based on LR(1) grammar can be evaluated using a bottom-up parsing strategy"
+  ],
+  "answer": ["B", "D"],
+  "explanation": "<strong>Statement (A) is TRUE:</strong> By definition, an attribute grammar is an SDD in which semantic rules have no side effects.<br><br><strong>Statement (B) is FALSE:</strong> An $L$-attributed definition is specifically defined such that its attributes can <em>always</em> be evaluated in a single depth-first, left-to-right traversal of the parse tree.<br><br><strong>Statement (C) is TRUE:</strong> Synthesized attributes rely only on children nodes, so they can be easily computed and evaluated during bottom-up parsing using the parser stack.<br><br><strong>Statement (D) is FALSE:</strong> Not all $L$-attributed definitions based on $LR(1)$ grammars can be evaluated during bottom-up parsing. Inherited attributes may require executing actions before the handle is fully recognized, which can introduce parsing conflicts (like shift/reduce or reduce/reduce conflicts).<br><br>Therefore, the false statements are <strong>(B)</strong> and <strong>(D)</strong>.",
+  "videoUrl": null
+}

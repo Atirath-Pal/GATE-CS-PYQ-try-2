@@ -1,0 +1,26 @@
+{
+  "id": 8,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "General Aptitude",
+    "Data Interpretation"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "The pie charts depict the shares of various power generation technologies in the total electricity generation of a country for the years 2007 and 2023.<br><br>The renewable sources of electricity generation consist of Hydro, Solar and Wind. Assuming that the total electricity generated remains the same from 2007 to 2023, what is the percentage increase in the share of the renewable sources of electricity generation over this period?",
+  "assetImage": "question8.png",
+  "codeBlock": null,
+  "options": [
+    "25%",
+    "50%",
+    "77.5%",
+    "62.5%"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Step 1: Calculate the total renewable share in 2007</strong><br>Renewable sources = Hydro + Solar + Wind<br>Share in 2007 = $30\\% + 5\\% + 5\\% = 40\\%$<br><br><strong>Step 2: Calculate the total renewable share in 2023</strong><br>Share in 2023 = $35\\% + 20\\% + 10\\% = 65\\%$<br><br><strong>Step 3: Calculate the percentage increase</strong><br>$$\\text{Percentage Increase} = \\left( \\frac{65 - 40}{40} \\right) \\times 100 = \\frac{25}{40} \\times 100 = 62.5\\%$$<br><br>Therefore, the percentage increase in the share of renewable sources is <strong>62.5%</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 37,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "Operating Systems",
+    "CPU Scheduling"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider a single processor system with four processes A, B, C, and D, represented as given below, where for each process the first value is its arrival time, and the second value is its CPU burst time.<br><br>A (0, 10), B (2, 6), C (4, 3), and D (6, 7).<br><br>Which one of the following options gives the average waiting times when preemptive Shortest Remaining Time First (SRTF) and Non-Preemptive Shortest Job First (NP-SJF) CPU scheduling algorithms are applied to the processes?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "SRTF = 6, NP-SJF = 7",
+    "SRTF = 6, NP-SJF = 7.5",
+    "SRTF = 7, NP-SJF = 7.5",
+    "SRTF = 7, NP-SJF = 8.5"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>1. Preemptive Shortest Remaining Time First (SRTF):</strong><br><br>Process execution timeline:<br>• $t = 0 \\text{ to } 2$: Process A runs (remaining burst time of A = $8$).<br>• $t = 2 \\text{ to } 4$: Process B arrives (burst time = $6$). Since $6 < 8$, B preempts A and runs (remaining burst time of B = $4$).<br>• $t = 4 \\text{ to } 7$: Process C arrives (burst time = $3$). Since $3 < 4$, C preempts B and runs to completion.<br>• $t = 7 \\text{ to } 11$: Process B resumes and completes.<br>• $t = 11 \\text{ to } 18$: Process D runs to completion (burst time = $7$).<br>• $t = 18 \\text{ to } 26$: Process A resumes and completes.<br><br><strong>Waiting Time (WT = Completion Time - Arrival Time - Burst Time):</strong><br>• $\\text{WT}(A) = 26 - 0 - 10 = 16$<br>• $\\text{WT}(B) = 11 - 2 - 6 = 3$<br>• $\\text{WT}(C) = 7 - 4 - 3 = 0$<br>• $\\text{WT}(D) = 18 - 6 - 7 = 5$<br><br>Average Waiting Time (SRTF) = $\\frac{16 + 3 + 0 + 5}{4} = 6$<br><br><hr><br><strong>2. Non-Preemptive Shortest Job First (NP-SJF):</strong><br><br>Process execution timeline:<br>• $t = 0 \\text{ to } 10$: Process A runs to completion (only process available at $t=0$).<br>• At $t = 10$, processes B, C, and D are in the ready queue. C has the shortest burst time ($3$).<br>• $t = 10 \\text{ to } 13$: Process C runs to completion.<br>• At $t = 13$, between B (burst time = $6$) and D (burst time = $7$), B is shorter.<br>• $t = 13 \\text{ to } 19$: Process B runs to completion.<br>• $t = 19 \\text{ to } 26$: Process D runs to completion.<br><br><strong>Waiting Time (WT):</strong><br>• $\\text{WT}(A) = 10 - 0 - 10 = 0$<br>• $\\text{WT}(B) = 19 - 2 - 6 = 11$<br>• $\\text{WT}(C) = 13 - 4 - 3 = 6$<br>• $\\text{WT}(D) = 26 - 6 - 7 = 13$<br><br>Average Waiting Time (NP-SJF) = $\\frac{0 + 11 + 6 + 13}{4} = \\frac{30}{4} = 7.5$<br><br>Hence, SRTF = 6 and NP-SJF = 7.5.",
+  "videoUrl": null
+}

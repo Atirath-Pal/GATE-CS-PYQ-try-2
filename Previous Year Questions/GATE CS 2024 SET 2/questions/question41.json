@@ -1,0 +1,26 @@
+{
+  "id": 41,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "Theory of Computation",
+    "Finite Automata"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Let $M$ be the 5-state NFA with \\epsilon-transitions shown in the diagram below.<br><br>Which one of the following regular expressions represents the language accepted by $M$ ?",
+  "assetImage": "question41.png",
+  "codeBlock": null,
+  "options": [
+    "$(00)^* + 1(11)^*$",
+    "$0^* + (1 + 0(00)^*)(11)^*$",
+    "$(00)^* + (1 + (00)^*)(11)^*$",
+    "$0^+ + 1(11)^* + 0(11)^*$"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "To determine the language accepted by the given NFA $M$, we analyze the paths from the initial state $1$ to the final states ($2$ and $5$).<br><br><strong>1. Acceptance at State 2:</strong><br>* Transition from state $1 \\xrightarrow{\\epsilon} 2$.<br>* From state $2$, we can loop via state $3$ ($2 \\xrightarrow{0} 3 \\xrightarrow{0} 2$), reading strings of $00$ any number of times.<br>* Language accepted at state $2 = (00)^*$.<br><br><strong>2. Acceptance at State 5:</strong><br>State $5$ can be reached in two ways:<br>* <strong>Via State 4:</strong> $1 \\xrightarrow{\\epsilon} 4 \\xrightarrow{1} 5$. Then loop via $5 \\xrightarrow{1} 4 \\xrightarrow{1} 5$. This gives the expression $1(11)^*$.<br>* <strong>Via States 2 and 3:</strong> $1 \\xrightarrow{\\epsilon} 2 \\xrightarrow{(00)^*} 2 \\xrightarrow{0} 3 \\xrightarrow{\\epsilon} 5$. Then loop at state $5$ via $11$. This gives the expression $0(00)^*(11)^*$.<br><br><strong>3. Total Accepted Language:</strong><br>$L(M) = (00)^* + 1(11)^* + 0(00)^*(11)^*$<br><br>We can simplify this by grouping:<br>$L(M) = (00)^* + (1 + 0(00)^*)(11)^*$<br><br>Note that when $(11)^*$ takes $\\epsilon$, $0(00)^*(11)^*$ contributes $0(00)^*$.<br>Combining $(00)^*$ (even number of 0s) and $0(00)^*$ (odd number of 0s) gives $0^*$.<br><br>Thus, $L(M) = 0^* + (1 + 0(00)^*)(11)^*$.<br><br>Hence, the correct option is <strong>(B)</strong>.",
+  "videoUrl": null
+}

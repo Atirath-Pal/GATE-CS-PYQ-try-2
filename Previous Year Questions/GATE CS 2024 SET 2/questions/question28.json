@@ -1,0 +1,27 @@
+{
+  "id": 28,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "Computer Networks",
+    "IP Addressing"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Which of the following statements about IPv4 fragmentation is/are TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "The fragmentation of an IP datagram is performed only at the source of the datagram",
+    "The fragmentation of an IP datagram is performed at any IP router which finds that the size of the datagram to be transmitted exceeds the MTU",
+    "The reassembly of fragments is performed only at the destination of the datagram",
+    "The reassembly of fragments is performed at all intermediate routers along the path from the source to the destination"
+  ],
+  "answer": [
+    "B",
+    "C"
+  ],
+  "explanation": "<strong>Statement (A) is FALSE:</strong> In IPv4, fragmentation can occur at the source host as well as at any intermediate router along the path if the packet size exceeds the MTU of the outgoing interface.<br><br><strong>Statement (B) is TRUE:</strong> Any IPv4 router along the path will fragment a datagram if its size is larger than the Maximum Transmission Unit (MTU) of the next link (provided the 'Don't Fragment' bit is not set).<br><br><strong>Statement (C) is TRUE:</strong> In IPv4, fragment reassembly is performed exclusively at the final destination host to avoid processing overhead and buffer management complexities on intermediate routers.<br><br><strong>Statement (D) is FALSE:</strong> Intermediate routers only forward fragments; they do not reassemble them. Reassembly happens strictly at the destination.",
+  "videoUrl": null
+}

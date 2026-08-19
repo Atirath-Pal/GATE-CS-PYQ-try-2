@@ -1,0 +1,26 @@
+{
+  "id": 21,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "Compiler Design",
+    "Phases of Compiler"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the following two sets:<br><br><table style=\"width: 100%; max-width: 500px; border-collapse: collapse; margin: 12px 0;\"><thead><tr><th style=\"text-align: center; width: 50%; padding: 6px; font-weight: bold;\">Set <i>X</i></th><th style=\"text-align: center; width: 50%; padding: 6px; font-weight: bold;\">Set <i>Y</i></th></tr></thead><tbody><tr><td style=\"text-align: center; padding: 4px;\">P. Lexical Analyzer</td><td style=\"text-align: center; padding: 4px;\">1. Abstract Syntax Tree</td></tr><tr><td style=\"text-align: center; padding: 4px;\">Q. Syntax Analyzer</td><td style=\"text-align: center; padding: 4px;\">2. Token</td></tr><tr><td style=\"text-align: center; padding: 4px;\">R. Intermediate Code Generator</td><td style=\"text-align: center; padding: 4px;\">3. Parse Tree</td></tr><tr><td style=\"text-align: center; padding: 4px;\">S. Code Optimizer</td><td style=\"text-align: center; padding: 4px;\">4. Constant Folding</td></tr></tbody></table><br>Which one of the following options is the CORRECT match from <strong>Set X</strong> to <strong>Set Y</strong>?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "P – 4; Q – 1; R – 3; S – 2",
+    "P – 2; Q – 3; R – 1; S – 4",
+    "P – 2; Q – 1; R – 3; S – 4",
+    "P – 4; Q – 3; R – 2; S – 1"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br><strong>1. Lexical Analyzer (P):</strong> The lexical analyzer scans the source program and groups character sequences into tokens. Hence, <strong>P matches with 2 (Token)</strong>.<br><br><strong>2. Syntax Analyzer (Q):</strong> The syntax analyzer (parser) processes the stream of tokens and constructs a parse tree according to the language grammar rules. Hence, <strong>Q matches with 3 (Parse Tree)</strong>.<br><br><strong>3. Intermediate Code Generator (R):</strong> The intermediate code generator transforms the syntactic representation into an intermediate representation such as an Abstract Syntax Tree (AST) or three-address code. Hence, <strong>R matches with 1 (Abstract Syntax Tree)</strong>.<br><br><strong>4. Code Optimizer (S):</strong> The code optimizer performs transformations to improve code execution speed or reduce space, one common technique being constant folding. Hence, <strong>S matches with 4 (Constant Folding)</strong>.<br><br>Therefore, the correct mapping is <strong>P – 2; Q – 3; R – 1; S – 4</strong>, which corresponds to <strong>Option (B)</strong>.",
+  "videoUrl": null
+}

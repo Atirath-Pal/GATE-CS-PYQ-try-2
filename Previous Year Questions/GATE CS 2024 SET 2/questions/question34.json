@@ -1,0 +1,22 @@
+{
+  "id": 34,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "Discrete Mathematics",
+    "Set Theory & Algebra"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Let $P$ be the partial order defined on the set $\\{1,2,3,4\\}$ as follows<br><br>$$P = \\{(x, x) \\mid x \\in \\{1,2,3,4\\}\\} \\cup \\{(1,2), (3,2), (3,4)\\}$$<br><br>The number of total orders on $\\{1,2,3,4\\}$ that contain $P$ is _________",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 5,
+    "max": 5
+  },
+  "explanation": "<strong>Step 1: Analyze the given partial order $P$</strong><br>The partial order $P$ imposes the following precedence relations on the elements $\\{1, 2, 3, 4\\}$:<br>1. $1 < 2$<br>2. $3 < 2$<br>3. $3 < 4$<br><br>A total order containing $P$ is a linear extension of $P$ that satisfies all three conditions above.<br><br><strong>Step 2: Count valid total orders by analyzing the position of element $3$</strong><br>Since $3 < 2$ and $3 < 4$, element $3$ must precede both $2$ and $4$. Thus, $3$ can only occupy position 1 or position 2 in a sequence of 4 elements.<br><br>• <strong>Case 1: $3$ is at position 1</strong><br>The remaining positions (2, 3, 4) are filled by $\\{1, 2, 4\\}$ such that $1 < 2$. The element $4$ can be placed in any relative position:<br>1. $(3, 1, 2, 4)$<br>2. $(3, 1, 4, 2)$<br>3. $(3, 4, 1, 2)$<br>This gives <strong>3</strong> valid total orders.<br><br>• <strong>Case 2: $3$ is at position 2</strong><br>Since $3$ must precede $2$ and $4$, neither $2$ nor $4$ can be in position 1. Therefore, position 1 must be $1$. Positions 3 and 4 are filled by $2$ and $4$ in either order:<br>1. $(1, 3, 2, 4)$<br>2. $(1, 3, 4, 2)$<br>This gives <strong>2</strong> valid total orders.<br><br>• <strong>Case 3: $3$ is at position 3 or 4</strong><br>Impossible, because at least two elements ($2$ and $4$) must follow $3$.<br><br><strong>Step 3: Total Count</strong><br>Total number of total orders = $3 + 2 = 5$.",
+  "videoUrl": null
+}

@@ -1,0 +1,28 @@
+{
+  "id": 33,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "C Programming",
+    "Pointers"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider the following C function definition.<br><br>Which of the following statements is/are TRUE?",
+  "assetImage": null,
+  "codeBlock": "int fX(char *a){\n    char *b = a;\n    while(*b)\n        b++;\n    return b - a;\n}",
+  "options": [
+    "The function call fX(\"abcd\") will always return a value",
+    "Assuming a character array c is declared as char c[] = \"abcd\" in main(), the function call fX(c) will always return a value",
+    "The code of the function will not compile",
+    "Assuming a character pointer c is declared as char *c = \"abcd\" in main(), the function call fX(c) will always return a value"
+  ],
+  "answer": [
+    "A",
+    "B",
+    "D"
+  ],
+  "explanation": "<strong>Step 1: Analyze the Function</strong><br>The function <code>fX</code> takes a character pointer $a$ pointing to a null-terminated string.<br>It initializes a second pointer $b = a$.<br>The loop <code>while(*b)</code> increments $b$ until it reaches the null terminator <code>'\\0'</code>.<br>Finally, <code>return b - a;</code> calculates the difference between the end address and start address, which equals the string's length.<br><br><strong>Step 2: Evaluate the Statements</strong><br><strong>Statement (A):</strong> <code>fX(\"abcd\")</code> passes a valid string literal. The function calculates its length as $4$ and returns it properly. Hence, (A) is TRUE.<br><br><strong>Statement (B):</strong> Declaring <code>char c[] = \"abcd\"</code> creates a null-terminated character array. Passing <code>c</code> passes the base address of this array, returning $4$. Hence, (B) is TRUE.<br><br><strong>Statement (C):</strong> The code uses standard, valid C syntax for pointer arithmetic and string traversal. It compiles without any errors. Hence, (C) is FALSE.<br><br><strong>Statement (D):</strong> Declaring <code>char *c = \"abcd\"</code> points to a string literal. Passing <code>c</code> to <code>fX</code> works as expected and returns $4$. Hence, (D) is TRUE.<br><br><strong>Correct Options:</strong> <strong>A, B, D</strong>",
+  "videoUrl": null
+}

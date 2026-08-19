@@ -1,0 +1,26 @@
+{
+  "id": 11,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "Computer Organization and Architecture",
+    "Input-Output Organization"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider a processor operating at 4 MHz. A DMA controller transfers 8 bytes in 1 cycle from a device to main memory through cycle stealing at regular intervals. Which one of the following is the data transfer rate (<i>in bits per second</i>) of the DMA controller if 1% of the processor cycles are used for DMA?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "2,56,000",
+    "3,200",
+    "25,60,000",
+    "32,000"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Identify given parameters</strong><br>Processor frequency = $4\\text{ MHz} = 4 \\times 10^6\\text{ cycles/second}$<br>Data transferred per DMA cycle = $8\\text{ bytes} = 8 \\times 8 = 64\\text{ bits}$<br>Percentage of processor cycles used for DMA = $1\\%$<br><br><strong>Step 2: Calculate DMA cycles per second</strong><br>$\\text{DMA cycles per second} = 1\\% \\times (4 \\times 10^6) = 0.01 \\times 4,000,000 = 40,000\\text{ cycles/second}$<br><br><strong>Step 3: Calculate data transfer rate</strong><br>$\\text{Data Transfer Rate} = \\text{DMA cycles per second} \\times \\text{bits per cycle}$<br>$\\text{Data Transfer Rate} = 40,000 \\times 64 = 2,560,000\\text{ bits per second} = 25,60,000\\text{ bits per second}$<br><br>Therefore, the correct option is <strong>C</strong>.",
+  "videoUrl": null
+}

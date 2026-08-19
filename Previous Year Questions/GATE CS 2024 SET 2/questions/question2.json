@@ -1,0 +1,26 @@
+{
+  "id": 2,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "General Aptitude",
+    "Permutations and Combinations"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Two wizards try to create a spell using all the four elements, <i>water</i>, <i>air</i>, <i>fire</i>, and <i>earth</i>. For this, they decide to mix all these elements in all possible orders. They also decide to work independently. After trying all possible combination of elements, they conclude that the spell does not work.<br><br>How many attempts does each wizard make before coming to this conclusion, independently?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "24",
+    "48",
+    "16",
+    "12"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. There are $4$ distinct elements given: $water$, $air$, $fire$, and $earth$.<br>2. Mixing all $4$ elements in all possible orders corresponds to finding the total number of permutations of these $4$ items.<br>3. The total number of permutations is $4! = 4 \\times 3 \\times 2 \\times 1 = 24$.<br>4. Since each wizard tests all possible arrangements independently, each wizard makes <strong>24</strong> attempts.<br><br>Hence, the correct option is <strong>A</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,22 @@
+{
+  "id": 65,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "Compiler Design",
+    "Parsing"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the following augmented grammar, which is to be parsed with a SLR parser. The set of terminals is $\\{a, b, c, d, \\#, @\\}$<br><br>$S' \\rightarrow S$<br>$S \\rightarrow SS \\mid Aa \\mid bAc \\mid Bc \\mid bBa$<br>$A \\rightarrow d\\#$<br>$B \\rightarrow @$<br><br>Let $I_0 = CLOSURE(\\{S' \\rightarrow \\bullet S\\})$. The number of items in the set $GOTO(I_0, S)$ is ________",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 9,
+    "max": 9
+  },
+  "explanation": "<strong>Step 1: Compute state $I_0$.</strong><br>Given $I_0 = CLOSURE(\\{S' \\rightarrow \\bullet S\\})$.<br>Expanding closure by adding all productions of non-terminals following a dot:<br>1. $S' \\rightarrow \\bullet S$<br>2. $S \\rightarrow \\bullet SS$<br>3. $S \\rightarrow \\bullet Aa$<br>4. $S \\rightarrow \\bullet bAc$<br>5. $S \\rightarrow \\bullet Bc$<br>6. $S \\rightarrow \\bullet bBa$<br>7. $A \\rightarrow \\bullet d\\#$<br>8. $B \\rightarrow \\bullet @$<br><br><strong>Step 2: Find kernel items of $GOTO(I_0, S)$.</strong><br>Shift the dot over symbol $S$ for items in $I_0$ where dot precedes $S$:<br>1. $S' \\rightarrow S \\bullet$<br>2. $S \\rightarrow S \\bullet S$<br><br><strong>Step 3: Compute $CLOSURE(GOTO(I_0, S))$.</strong><br>Item $S \\rightarrow S \\bullet S$ has a dot before non-terminal $S$, so we add all $S$-productions with the dot at the beginning:<br>3. $S \\rightarrow \\bullet SS$<br>4. $S \\rightarrow \\bullet Aa$<br>5. $S \\rightarrow \\bullet bAc$<br>6. $S \\rightarrow \\bullet Bc$<br>7. $S \\rightarrow \\bullet bBa$<br><br>Because of $S \\rightarrow \\bullet Aa$ and $S \\rightarrow \\bullet Bc$, we add $A$ and $B$ productions:<br>8. $A \\rightarrow \\bullet d\\#$<br>9. $B \\rightarrow \\bullet @$<br><br><strong>Step 4: Count total items.</strong><br>Total number of items in $GOTO(I_0, S)$ is <strong>9</strong>.",
+  "videoUrl": null
+}

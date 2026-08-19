@@ -1,0 +1,26 @@
+{
+  "id": 22,
+  "year": "2024",
+  "set": "2",
+  "topics": [
+    "Theory of Computation",
+    "Regular Expressions"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Which one of the following regular expressions is equivalent to the language accepted by the DFA given below?",
+  "assetImage": "question22.png",
+  "codeBlock": null,
+  "options": [
+    "$0^*1(0 + 10^*1)^*$",
+    "$0^*(10^*11)^*0^*$",
+    "$0^*1(010^*1)^*0^*$",
+    "$0(1 + 0^*10^*1)^*0^*$"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "To find the regular expression corresponding to the language accepted by the given DFA, we can set up state equations using Arden's Theorem.<br><br>Let the left state (start state) be $q_0$ and the right state (final state) be $q_1$.<br><br>The state equations are:<br>$q_0 = q_0 0 + q_1 1 + \\epsilon$<br>$q_1 = q_0 1 + q_1 0$<br><br>Solving for $q_0$ using Arden's Theorem ($R = Q + RP \\implies R = QP^*$):<br>$q_0 = (\\epsilon + q_1 1)0^* = 0^* + q_1 1 0^*$<br><br>Substituting $q_0$ into the equation for $q_1$:<br>$q_1 = (0^* + q_1 1 0^*)1 + q_1 0$<br>$q_1 = 0^* 1 + q_1 1 0^* 1 + q_1 0$<br>$q_1 = 0^* 1 + q_1 (0 + 1 0^* 1)$<br><br>Applying Arden's Theorem again:<br>$q_1 = 0^* 1 (0 + 1 0^* 1)^*$<br><br>Since $q_1$ is the only final state, the regular expression accepted by the DFA is <strong>$0^*1(0 + 10^*1)^*$</strong>.",
+  "videoUrl": null
+}

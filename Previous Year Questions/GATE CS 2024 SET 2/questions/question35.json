@@ -1,0 +1,22 @@
+{
+  "id": 35,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "Algorithms",
+    "Dynamic Programming"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Let $A$ be an array containing integer values. The distance of $A$ is defined as the minimum number of elements in $A$ that must be replaced with another integer so that the resulting array is sorted in non-decreasing order. The distance of the array $[2, 5, 3, 1, 4, 2, 6]$ is ________",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 3,
+    "max": 3
+  },
+  "explanation": "<strong>Step 1: Understand the Problem</strong><br>The distance of array $A$ is the minimum number of elements that must be replaced to make the array sorted in non-decreasing order. To minimize the number of replacements, we need to maximize the number of elements that remain in their original positions.<br><br><strong>Step 2: Identify the Longest Non-Decreasing Subsequence (LNDS)</strong><br>The maximum number of elements that can be kept unchanged is equal to the length of the Longest Non-Decreasing Subsequence (LNDS) of array $A$.<br><br><strong>Step 3: Analyze the Given Array</strong><br>Given array $A = [2, 5, 3, 1, 4, 2, 6]$, with total length $n = 7$.<br><br>Let's find the longest non-decreasing subsequence:<br>Taking elements at indices $0, 2, 4, 6$ gives the subsequence $[2, 3, 4, 6]$.<br>Since $2 \\le 3 \\le 4 \\le 6$, this is a valid non-decreasing subsequence of length $4$.<br><br>No non-decreasing subsequence of length $5$ or greater exists in this array.<br>Thus, $\\text{Length of LNDS} = 4$.<br><br><strong>Step 4: Calculate Minimum Replacements</strong><br>$\\text{Distance} = n - \\text{Length of LNDS} = 7 - 4 = 3$.<br><br>Hence, the distance of the array is <strong>3</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 14,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "Computer Organization and Architecture",
+    "Data Representation"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "The format of a single-precision floating-point number as per the <strong>IEEE 754</strong> standard is:<br><br><table style=\"border-collapse: collapse; border: 1px solid white; margin: 12px 0;\"><tbody><tr><td style=\"border: 1px solid white; padding: 6px 16px; text-align: center;\">Sign<br>(1bit)</td><td style=\"border: 1px solid white; padding: 6px 16px; text-align: center;\">Exponent<br>(8 bits)</td><td style=\"border: 1px solid white; padding: 6px 16px; text-align: center;\">Mantissa<br>(23 bits)</td></tr></tbody></table><br>Choose the largest floating-point number among the following options.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "<table style=\"border-collapse: collapse; text-align: center; margin: 4px 0;\"><thead><tr><th style=\"padding: 2px 12px; font-weight: normal; border: none;\">Sign</th><th style=\"padding: 2px 12px; font-weight: normal; border: none;\">Exponent</th><th style=\"padding: 2px 12px; font-weight: normal; border: none;\">Mantissa</th></tr></thead><tbody><tr><td style=\"border: 1px solid white; padding: 4px 12px;\">0</td><td style=\"border: 1px solid white; padding: 4px 12px;\">0111 1111</td><td style=\"border: 1px solid white; padding: 4px 12px;\">1111 1111 1111 1111 1111 111</td></tr></tbody></table>",
+    "<table style=\"border-collapse: collapse; text-align: center; margin: 4px 0;\"><thead><tr><th style=\"padding: 2px 12px; font-weight: normal; border: none;\">Sign</th><th style=\"padding: 2px 12px; font-weight: normal; border: none;\">Exponent</th><th style=\"padding: 2px 12px; font-weight: normal; border: none;\">Mantissa</th></tr></thead><tbody><tr><td style=\"border: 1px solid white; padding: 4px 12px;\">0</td><td style=\"border: 1px solid white; padding: 4px 12px;\">1111 1110</td><td style=\"border: 1px solid white; padding: 4px 12px;\">1111 1111 1111 1111 1111 111</td></tr></tbody></table>",
+    "<table style=\"border-collapse: collapse; text-align: center; margin: 4px 0;\"><thead><tr><th style=\"padding: 2px 12px; font-weight: normal; border: none;\">Sign</th><th style=\"padding: 2px 12px; font-weight: normal; border: none;\">Exponent</th><th style=\"padding: 2px 12px; font-weight: normal; border: none;\">Mantissa</th></tr></thead><tbody><tr><td style=\"border: 1px solid white; padding: 4px 12px;\">0</td><td style=\"border: 1px solid white; padding: 4px 12px;\">1111 1111</td><td style=\"border: 1px solid white; padding: 4px 12px;\">1111 1111 1111 1111 1111 111</td></tr></tbody></table>",
+    "<table style=\"border-collapse: collapse; text-align: center; margin: 4px 0;\"><thead><tr><th style=\"padding: 2px 12px; font-weight: normal; border: none;\">Sign</th><th style=\"padding: 2px 12px; font-weight: normal; border: none;\">Exponent</th><th style=\"padding: 2px 12px; font-weight: normal; border: none;\">Mantissa</th></tr></thead><tbody><tr><td style=\"border: 1px solid white; padding: 4px 12px;\">0</td><td style=\"border: 1px solid white; padding: 4px 12px;\">0111 1111</td><td style=\"border: 1px solid white; padding: 4px 12px;\">0000 0000 0000 0000 0000 000</td></tr></tbody></table>"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "In IEEE 754 single-precision floating-point format:<br><strong>1. Sign bit ($S$):</strong> $0$ represents a positive number.<br><strong>2. Exponent ($E$):</strong> 8-bit field with a bias of $127$.<br>• $E = 1111\\ 1111_2 = 255$ is reserved for $\\infty$ (if Mantissa $= 0$) or NaN (Not a Number, if Mantissa $\\neq 0$). Option (C) has $E = 255$ and non-zero Mantissa, representing NaN.<br>• $E = 1111\\ 1110_2 = 254$ is the maximum valid exponent value for normalized numbers ($254 - 127 = 127$).<br><strong>3. Mantissa ($M$):</strong> 23-bit fractional part. All $1$s yields the maximum possible fractional value ($1 - 2^{-23}$).<br><br><strong>Evaluating the options:</strong><br>• <strong>Option (A):</strong> Exponent $127$, Mantissa all $1$s.<br>• <strong>Option (B):</strong> Maximum Exponent ($254$) and maximum Mantissa (all $1$s). This represents $M_{\\text{max}} = (2 - 2^{-23}) \\times 2^{127} \\approx 3.4028 \\times 10^{38}$, which is the largest finite single-precision number.<br>• <strong>Option (C):</strong> Represents NaN (Not a Number).<br>• <strong>Option (D):</strong> Exponent $127$, Mantissa $0$ (represents $1.0$).<br><br>Hence, <strong>Option (B)</strong> is the correct answer.",
+  "videoUrl": null
+}

@@ -1,0 +1,22 @@
+{
+  "id": 60,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "Discrete Mathematics",
+    "Graph Theory"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "The chromatic number of a graph is the minimum number of colours used in a *proper* colouring of the graph. The chromatic number of the following graph is ______.",
+  "assetImage": "question60.png",
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 2,
+    "max": 2
+  },
+  "explanation": "<strong>Step 1: Understand Chromatic Number</strong><br>The chromatic number $\\chi(G)$ of a graph $G$ is the minimum number of colors needed to color the vertices of $G$ such that no two adjacent vertices share the same color.<br><br><strong>Step 2: Check 2-Colorability</strong><br>A graph is 2-colorable if and only if it is bipartite (i.e., contains at least one edge and no odd length cycles).<br><br>Numbering the 8 vertices in clockwise order as $v_1, v_2, v_3, v_4, v_5, v_6, v_7, v_8$ starting from top-left:<br>- Set $A = \\{v_1, v_3, v_5, v_7\\}$<br>- Set $B = \\{v_2, v_4, v_6, v_8\\}$<br><br>Every edge in the given graph (both the boundary edges and internal cross-edges) connects a vertex in Set $A$ to a vertex in Set $B$. There are no edges connecting vertices within Set $A$ or within Set $B$.<br><br><strong>Step 3: Conclusion</strong><br>Since all edges connect vertices of Set $A$ to Set $B$, the graph is bipartite and can be properly colored with 2 colors. Thus, the chromatic number is <strong>2</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,23 @@
+{
+  "id": 15,
+  "year": 2024,
+  "set": 2,
+  "topics": ["Algorithms", "Recurrence Relations"],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Let $T(n)$ be the recurrence relation defined as follows:<br><br>$$T(0) = 1,$$<br>$$T(1) = 2, \\text{ and}$$<br>$$T(n) = 5T(n - 1) - 6T(n - 2) \\quad \\text{for } n \\ge 2$$<br><br>Which one of the following statements is TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$T(n) = \\Theta(2^n)$",
+    "$T(n) = \\Theta(n2^n)$",
+    "$T(n) = \\Theta(3^n)$",
+    "$T(n) = \\Theta(n3^n)$"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step 1: Write down the characteristic equation.</strong><br>The given linear homogeneous recurrence relation is:<br>$T(n) - 5T(n-1) + 6T(n-2) = 0$<br><br>The characteristic equation for this relation is:<br>$r^2 - 5r + 6 = 0$<br><br><strong>Step 2: Solve for the roots.</strong><br>Factoring the quadratic equation:<br>$(r - 2)(r - 3) = 0$<br>This gives roots $r_1 = 2$ and $r_2 = 3$.<br><br><strong>Step 3: Write the general solution.</strong><br>Since the roots are distinct, the general form of the solution is:<br>$T(n) = c_1 \\cdot 2^n + c_2 \\cdot 3^n$<br><br><strong>Step 4: Use initial conditions to find constants $c_1$ and $c_2$.</strong><br>For $n = 0$: $T(0) = c_1 + c_2 = 1$<br>For $n = 1$: $T(1) = 2c_1 + 3c_2 = 2$<br><br>From $c_1 = 1 - c_2$, substituting into the second equation:<br>$2(1 - c_2) + 3c_2 = 2$<br>$2 + c_2 = 2 \\implies c_2 = 0$<br><br>Thus, $c_1 = 1 - 0 = 1$.<br><br><strong>Step 5: Determine $T(n)$ and its asymptotic bound.</strong><br>Substituting $c_1$ and $c_2$ back into the solution:<br>$T(n) = 1 \\cdot 2^n + 0 \\cdot 3^n = 2^n$<br><br>Therefore, $T(n) = \\Theta(2^n)$.<br><br>Hence, option (A) is TRUE.",
+  "videoUrl": null
+}

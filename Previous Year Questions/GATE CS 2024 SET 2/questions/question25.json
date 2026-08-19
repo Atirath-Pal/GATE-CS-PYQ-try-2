@@ -1,0 +1,27 @@
+{
+  "id": 25,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "Operating Systems",
+    "Process Management"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider a process P running on a CPU. Which one or more of the following events will <i>always</i> trigger a context switch by the OS that results in process P moving to a non-running state (e.g., ready, blocked)?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "P makes a blocking system call to read a block of data from the disk",
+    "P tries to access a page that is in the swap space, triggering a page fault",
+    "An interrupt is raised by the disk to deliver data requested by some other process",
+    "A timer interrupt is raised by the hardware"
+  ],
+  "answer": [
+    "A",
+    "B"
+  ],
+  "explanation": "<strong>Option (A):</strong> When process $P$ makes a blocking system call, it cannot proceed until the requested I/O operation finishes. The OS transitions process $P$ to the <strong>blocked</strong> state and performs a context switch to run another process. Thus, this event <i>always</i> results in $P$ moving to a non-running state.<br><br><strong>Option (B):</strong> Accessing a page in the swap space causes a page fault. The OS must fetch the required page from disk (an I/O operation), forcing process $P$ into the <strong>blocked</strong> state while waiting for the page to load. Therefore, this event <i>always</i> causes $P$ to move to a non-running state.<br><br><strong>Option (C):</strong> When an interrupt is raised for another process, the CPU temporarily executes the Interrupt Service Routine (ISR). Once the ISR completes, the scheduler may decide to resume process $P$ directly without transitioning $P$ to a non-running state.<br><br><strong>Option (D):</strong> A timer interrupt triggers the scheduler, but if process $P$ is the only runnable process or has higher priority, the OS may immediately reschedule process $P$ to continue execution without moving it to the ready state.<br><br>Hence, options <strong>A</strong> and <strong>B</strong> are correct.",
+  "videoUrl": null
+}

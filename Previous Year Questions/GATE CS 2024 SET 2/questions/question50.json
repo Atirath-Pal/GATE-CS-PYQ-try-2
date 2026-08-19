@@ -1,0 +1,21 @@
+{
+  "id": 50,
+  "year": "2024",
+  "set": "2",
+  "topics": ["Digital Logic", "Boolean Algebra"],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider 4-variable functions $f1, f2, f3, f4$ expressed in sum-of-minterms form as given below.<br><br>$$f1 = \\sum(0,2,3,5,7,8,11,13)$$<br>$$f2 = \\sum(1,3,5,7,11,13,15)$$<br>$$f3 = \\sum(0,1,4,11)$$<br>$$f4 = \\sum(0,2,6,13)$$<br><br>With respect to the circuit given above, which of the following options is/are CORRECT?",
+  "assetImage": "question50.png",
+  "codeBlock": null,
+  "options": [
+    "$Y = \\sum(0,1,2,11,13)$",
+    "$Y = \\prod(3,4,5,6,7,8,9,10,12,14,15)$",
+    "$Y = \\sum(0,1,2,3,4,5,6,7)$",
+    "$Y = \\prod(8,9,10,11,12,13,14,15)$"
+  ],
+  "answer": ["C", "D"],
+  "explanation": "<strong>Step 1: Determine the output of the AND gate</strong><br>The AND gate performs a logical bitwise AND (intersection) between $f1$ and $f2$:<br>$g_1 = f1 \\cdot f2 = f1 \\cap f2$<br>$g_1 = \\sum(0,2,3,5,7,8,11,13) \\cap \\sum(1,3,5,7,11,13,15) = \\sum(3,5,7,11,13)$<br><br><strong>Step 2: Determine the output of the OR gate</strong><br>The OR gate performs a logical bitwise OR (union) between $f3$ and $f4$:<br>$g_2 = f3 + f4 = f3 \\cup f4$<br>$g_2 = \\sum(0,1,4,11) \\cup \\sum(0,2,6,13) = \\sum(0,1,2,4,6,11,13)$<br><br><strong>Step 3: Determine the output of the XOR gate ($Y$)</strong><br>The XOR gate outputs minterms present in $g_1$ or $g_2$, but not both:<br>$Y = g_1 \\oplus g_2$<br>Minterms in $g_1$: $\\{3, 5, 7, 11, 13\\}$<br>Minterms in $g_2$: $\\{0, 1, 2, 4, 6, 11, 13\\}$<br>Common minterms in both: $\\{11, 13\\}$<br>Removing the common minterms gives:<br>$Y = \\sum(0, 1, 2, 3, 4, 5, 6, 7)$<br><br><strong>Step 4: Verify the option forms</strong><br>1. <strong>Sum-of-Minterms (SOP):</strong> $Y = \\sum(0,1,2,3,4,5,6,7)$ (Matches Option C)<br>2. <strong>Product-of-Maxterms (POS):</strong> For a 4-variable function (16 total terms from 0 to 15), the maxterms are the remaining terms not present in the minterm expression: $Y = \\prod(8,9,10,11,12,13,14,15)$ (Matches Option D).<br><br>Therefore, options <strong>C</strong> and <strong>D</strong> are correct.",
+  "videoUrl": null
+}

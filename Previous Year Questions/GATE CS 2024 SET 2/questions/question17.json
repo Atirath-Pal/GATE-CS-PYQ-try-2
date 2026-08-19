@@ -1,0 +1,26 @@
+{
+  "id": 17,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "Discrete Mathematics",
+    "Graph Theory"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Let $A$ be the adjacency matrix of a simple undirected graph $G$. Suppose $A$ is its own inverse. Which one of the following statements is <i>always</i> TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$G$ is a cycle",
+    "$G$ is a perfect matching",
+    "$G$ is a complete graph",
+    "There is no such graph $G$"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step 1: Analyze the properties of graph $G$.</strong><br>Let $A$ be the adjacency matrix of a simple undirected graph $G$.<br>Because $G$ is simple and undirected:<br>1. $A$ is symmetric ($A = A^T$).<br>2. Diagonal entries are zero ($A_{ii} = 0$).<br>3. Entries $A_{ij} \\in \\{0, 1\\}$.<br><br><strong>Step 2: Analyze the condition $A = A^{-1}$.</strong><br>Since $A$ is its own inverse, we have $A^2 = I$, where $I$ is the identity matrix.<br><br><strong>Step 3: Relate $A^2$ to vertex degrees.</strong><br>The $(i, i)$-th entry of $A^2$ is computed as:<br>$(A^2)_{ii} = \\sum_{k=1}^{n} A_{ik} A_{ki} = \\sum_{k=1}^{n} A_{ik}^2$<br>Since $A_{ik} \\in \\{0, 1\\}$, we have $A_{ik}^2 = A_{ik}$. Therefore:<br>$(A^2)_{ii} = \\sum_{k=1}^{n} A_{ik} = \\text{deg}(v_i)$<br><br>Since $A^2 = I$, every diagonal entry $(A^2)_{ii} = 1$, which means:<br>$\\text{deg}(v_i) = 1$ for every vertex $v_i$.<br><br><strong>Step 4: Conclusion.</strong><br>A graph in which every vertex has degree $1$ consists entirely of independent, disjoint edges. This means $G$ is a <strong>perfect matching</strong>.<br><br>Hence, $G$ is a perfect matching.",
+  "videoUrl": null
+}

@@ -1,0 +1,27 @@
+{
+  "id": 26,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "Databases",
+    "File Organization"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Which of the following file organizations is/are I/O efficient for the scan operation in DBMS?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Sorted",
+    "Heap",
+    "Unclustered tree index",
+    "Unclustered hash index"
+  ],
+  "answer": [
+    "A",
+    "B"
+  ],
+  "explanation": "<strong>Explanation:</strong><br><br>A scan operation involves reading all records in a table/relation from the disk into main memory.<br><br>1. <strong>Sorted File:</strong> Records are stored sequentially in data blocks. Scanning the entire relation requires retrieving data blocks sequentially, taking $B$ page I/O operations (where $B$ is the number of blocks). This is optimal and I/O efficient.<br><br>2. <strong>Heap File:</strong> Data records are stored without any specific ordering. Reading all records simply requires scanning through all data blocks sequentially, which takes $B$ page I/O operations. Hence, it is also I/O efficient.<br><br>3. <strong>Unclustered Tree / Hash Index:</strong> In unclustered index organizations, the order of index entries does not match the physical layout of records on disk. Traversing an unclustered index to fetch every record can lead to multiple random I/O operations for the same block or reading a block repeatedly (up to $R$ I/O operations where $R$ is the number of records and $R \\gg B$). Thus, using unclustered indices for full scans is extremely I/O inefficient.<br><br>Therefore, <strong>(A)</strong> and <strong>(B)</strong> are the correct answers.",
+  "videoUrl": null
+}

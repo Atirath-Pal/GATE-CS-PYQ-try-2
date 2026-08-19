@@ -1,0 +1,22 @@
+{
+  "id": 62,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "Theory of Computation",
+    "Regular Expressions"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Let $L_1$ be the language represented by the regular expression $b^* a b^* (a b^* a b^*)^*$ and $L_2 = \\{ w \\in (a + b)^* \\mid |w| \\le 4 \\}$, where $|w|$ denotes the length of string $w$. The number of strings in $L_2$ which are also in $L_1$ is _________",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 15,
+    "max": 15
+  },
+  "explanation": "<strong>Step 1: Understand $L_1$</strong><br>The regular expression $b^* a b^* (a b^* a b^*)^*$ generates all strings over the alphabet $\\{a, b\\}$ that contain an <strong>odd number of $a$'s</strong>.<br><br><strong>Step 2: Understand $L_2$</strong><br>Language $L_2 = \\{ w \\in (a + b)^* \\mid |w| \\le 4 \\}$ consists of all strings over $\\{a, b\\}$ of length $0, 1, 2, 3,$ and $4$.<br><br><strong>Step 3: Count strings in $L_1 \\cap L_2$</strong><br>We need to count the strings of length $\\le 4$ that contain an odd number of $a$'s:<br>- <strong>Length 0:</strong> $0$ strings ($0$ $a$'s is even)<br>- <strong>Length 1:</strong> $2^{1-1} = 1$ string ($a$)<br>- <strong>Length 2:</strong> $2^{2-1} = 2$ strings ($ab, ba$)<br>- <strong>Length 3:</strong> $2^{3-1} = 4$ strings ($aaa, abb, bab, bba$)<br>- <strong>Length 4:</strong> $2^{4-1} = 8$ strings ($aaab, aaba, abaa, baaa, abbb, babb, bbab, bbba$)<br><br><strong>Total number of valid strings:</strong> $1 + 2 + 4 + 8 = 15$.",
+  "videoUrl": null
+}

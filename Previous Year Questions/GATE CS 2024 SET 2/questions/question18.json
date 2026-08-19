@@ -1,0 +1,26 @@
+{
+  "id": 18,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "Engineering Mathematics",
+    "Probability"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "When six unbiased dice are rolled simultaneously, the probability of getting all distinct numbers (i.e., $1, 2, 3, 4, 5$, and $6$) is",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\frac{1}{324}$",
+    "$\\frac{5}{324}$",
+    "$\\frac{7}{324}$",
+    "$\\frac{11}{324}$"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step 1: Calculate total possible outcomes</strong><br>When six unbiased dice are rolled, each die has $6$ possible outcomes.<br>Total outcomes = $6^6 = 46656$.<br><br><strong>Step 2: Calculate favorable outcomes</strong><br>To get all distinct numbers ($1, 2, 3, 4, 5,$ and $6$), the outcome must be a permutation of these $6$ numbers.<br>Number of favorable outcomes = $6! = 720$.<br><br><strong>Step 3: Compute the probability</strong><br>$\\text{Probability} = \\frac{6!}{6^6} = \\frac{5!}{6^5} = \\frac{120}{7776} = \\frac{5}{324}$.<br><br>Hence, option <strong>(B)</strong> is correct.",
+  "videoUrl": null
+}

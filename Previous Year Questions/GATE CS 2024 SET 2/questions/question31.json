@@ -1,0 +1,26 @@
+{
+  "id": 31,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "Computer Organization and Architecture",
+    "Pipelining"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "An instruction format has the following structure:<br><br>Instruction Number: <i>Opcode destination reg, source reg-1, source reg-2</i><br><br>Consider the following sequence of instructions to be executed in a pipelined processor:<br><br>I1: DIV R3, R1, R2<br>I2: SUB R5, R3, R4<br>I3: ADD R3, R5, R6<br>I4: MUL R7, R3, R8<br><br>Which of the following statements is/are TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "There is a RAW dependency on R3 between I1 and I2",
+    "There is a WAR dependency on R3 between I1 and I3",
+    "There is a RAW dependency on R3 between I2 and I3",
+    "There is a WAW dependency on R3 between I3 and I4"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "To determine data dependencies, let us list the destination (written) and source (read) registers for each instruction:<br><br>* <strong>I1:</strong> Writes to $R3$, Reads $R1, R2$<br>* <strong>I2:</strong> Writes to $R5$, Reads $R3, R4$<br>* <strong>I3:</strong> Writes to $R3$, Reads $R5, R6$<br>* <strong>I4:</strong> Writes to $R7$, Reads $R3, R8$<br><br>Now, evaluating each option:<br><br>1. <strong>Option A:</strong> $I1$ writes to $R3$ and $I2$ reads $R3$. This represents a Read-After-Write (RAW) dependency on $R3$ between $I1$ and $I2$. <strong>(TRUE)</strong><br><br>2. <strong>Option B:</strong> $I1$ writes to $R3$ and $I3$ writes to $R3$. This is a Write-After-Write (WAW) dependency on $R3$, not a WAR dependency. <strong>(FALSE)</strong><br><br>3. <strong>Option C:</strong> $I2$ reads $R3$ and $I3$ writes $R3$. This is a Write-After-Read (WAR) dependency on $R3$, not a RAW dependency. <strong>(FALSE)</strong><br><br>4. <strong>Option D:</strong> $I3$ writes $R3$ and $I4$ reads $R3$. This is a Read-After-Write (RAW) dependency on $R3$, not a WAW dependency (since $I4$ writes to $R7$). <strong>(FALSE)</strong><br><br>Hence, only statement <strong>(A)</strong> is correct.",
+  "videoUrl": null
+}

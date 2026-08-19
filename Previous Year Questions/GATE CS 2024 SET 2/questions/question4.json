@@ -1,0 +1,26 @@
+{
+  "id": 4,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "General Aptitude",
+    "Quantitative Aptitude"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "For positive non-zero real variables $x$ and $y$, if<br><br>$$\\ln\\left(\\frac{x + y}{2}\\right) = \\frac{1}{2}[\\ln (x) + \\ln (y)]$$<br><br>then, the value of $\\frac{x}{y} + \\frac{y}{x}$ is",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "1",
+    "1/2",
+    "2",
+    "4"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Given:</strong><br>$\\ln\\left(\\frac{x+y}{2}\\right) = \\frac{1}{2}[\\ln(x) + \\ln(y)]$<br><br><strong>Step 1: Apply logarithmic identity</strong><br>Using the identity $\\ln(a) + \\ln(b) = \\ln(ab)$:<br>$\\ln\\left(\\frac{x+y}{2}\\right) = \\frac{1}{2}\\ln(xy) = \\ln\\left(\\sqrt{xy}\\right)$<br><br><strong>Step 2: Eliminate logarithms</strong><br>Taking exponential on both sides gives:<br>$\\frac{x+y}{2} = \\sqrt{xy}$<br><br><strong>Step 3: Solve for relationship between $x$ and $y$</strong><br>Squaring both sides:<br>$\\frac{(x+y)^2}{4} = xy$<br>$(x+y)^2 = 4xy$<br>$x^2 + 2xy + y^2 = 4xy$<br>$x^2 - 2xy + y^2 = 0$<br>$(x - y)^2 = 0 \\implies x = y$<br><br><strong>Step 4: Calculate the required expression</strong><br>Since $x = y$:<br>$\\frac{x}{y} + \\frac{y}{x} = \\frac{x}{x} + \\frac{x}{x} = 1 + 1 = 2$<br><br>Hence, the correct option is <strong>C</strong>.",
+  "videoUrl": null
+}

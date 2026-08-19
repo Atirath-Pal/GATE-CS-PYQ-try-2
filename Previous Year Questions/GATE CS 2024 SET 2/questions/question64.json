@@ -1,0 +1,22 @@
+{
+  "id": 64,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "Operating Systems",
+    "Virtual Memory"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a 32-bit system with 4 KB page size and page table entries of size 4 bytes each. Assume $1\\text{ KB} = 2^{10}$ bytes. The OS uses a 2-level page table for memory management, with the page table containing an outer page directory and an inner page table. The OS allocates a page for the outer page directory upon process creation. The OS uses demand paging when allocating memory for the inner page table, i.e., a page of the inner page table is allocated only if it contains at least one valid page table entry.<br><br>An active process in this system accesses 2000 unique pages during its execution, and none of the pages are swapped out to disk. After it completes the page accesses, let $X$ denote the minimum and $Y$ denote the maximum number of pages across the two levels of the page table of the process.<br><br>The value of $X+Y$ is ________",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 1028,
+    "max": 1028
+  },
+  "explanation": "<strong>Step 1: Calculate Page Table Parameters</strong><br>Page size = $4\\text{ KB} = 2^{12}\\text{ bytes}$<br>Page Table Entry (PTE) size = $4\\text{ bytes}$<br>Number of entries per page table page = $\\frac{4\\text{ KB}}{4\\text{ bytes}} = \\frac{2^{12}}{2^2} = 2^{10} = 1024$ entries.<br>Address space = $32\\text{ bits}$. With $12\\text{ bits}$ for page offset, the remaining $20\\text{ bits}$ are split evenly into $10\\text{ bits}$ for outer page directory and $10\\text{ bits}$ for inner page table.<br>Thus, the outer page directory has $2^{10} = 1024$ entries (pointing to up to $1024$ inner page tables).<br><br><strong>Step 2: Calculate Minimum Pages ($X$)</strong><br>The process accesses $2000$ unique pages.<br>To minimize the number of inner page table pages allocated, as many entries as possible should fall within the same inner page tables.<br>Since each inner page table page holds $1024$ entries:<br>Minimum inner page table pages required = $\\lceil \\frac{2000}{1024} \\rceil = 2$<br>Including the $1$ page allocated for the outer page directory:<br>$X = 1 + 2 = 3$<br><br><strong>Step 3: Calculate Maximum Pages ($Y$)</strong><br>To maximize the inner page table pages allocated, each accessed page should ideally reside in a different inner page table.<br>Since $2000$ unique pages are accessed, we could potentially allocate up to $2000$ inner page table pages.<br>However, the outer page directory can only hold a maximum of $1024$ entries (inner page tables).<br>Therefore, maximum inner page table pages allocated = $\\min(2000, 1024) = 1024$<br>Including the $1$ page allocated for the outer page directory:<br>$Y = 1 + 1024 = 1025$<br><br><strong>Step 4: Calculate $X+Y$</strong><br>$X + Y = 3 + 1025 = 1028$",
+  "videoUrl": null
+}

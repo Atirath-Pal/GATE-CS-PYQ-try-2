@@ -1,0 +1,21 @@
+{
+  "id": 6,
+  "year": 2024,
+  "set": 2,
+  "topics": ["General Aptitude", "Verbal Aptitude"],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Sequence the following sentences in a coherent passage.<br><br>P: This fortuitous geological event generated a colossal amount of energy and heat that resulted in the rocks rising to an average height of 4 km across the contact zone.<br><br>Q: Thus, the geophysicists tend to think of the Himalayas as an active geological event rather than as a static geological feature.<br><br>R: The natural process of the cooling of this massive edifice absorbed large quantities of atmospheric carbon dioxide, altering the earth's atmosphere and making it better suited for life.<br><br>S: Many millennia ago, a breakaway chunk of bedrock from the Antarctic Plate collided with the massive Eurasian Plate.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "QPSR",
+    "QSPR",
+    "SPRQ",
+    "SRPQ"
+  ],
+  "answer": ["C"],
+  "explanation": "<strong>Step 1: Identify the opening sentence.</strong><br>Sentence <strong>S</strong> introduces the initial historical event (the collision between the Antarctic Plate and the Eurasian Plate). Therefore, <strong>S</strong> is the logical starting sentence of the passage.<br><br><strong>Step 2: Trace the direct consequence.</strong><br>Sentence <strong>P</strong> refers back to the collision as \"This fortuitous geological event...\", which generated heat and caused rocks to rise to a height of 4 km. Hence, <strong>P</strong> logically follows <strong>S</strong> ($S \\rightarrow P$).<br><br><strong>Step 3: Follow the subsequent phenomenon.</strong><br>Sentence <strong>R</strong> talks about the cooling of \"this massive edifice\" (referring to the 4 km high rock structure described in sentence P) and its effect on atmospheric carbon dioxide. Thus, <strong>R</strong> follows <strong>P</strong> ($P \\rightarrow R$).<br><br><strong>Step 4: Identify the concluding statement.</strong><br>Sentence <strong>Q</strong> begins with \"Thus...\", summarizing the conclusion geophysicists draw about the Himalayas based on this sequence of events. Thus, <strong>Q</strong> ends the passage.<br><br>The correct sequence is <strong>SPRQ</strong>, which corresponds to option <strong>(C)</strong>.",
+  "videoUrl": null
+}

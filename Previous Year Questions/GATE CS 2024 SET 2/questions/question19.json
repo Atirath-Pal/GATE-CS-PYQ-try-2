@@ -1,0 +1,26 @@
+{
+  "id": 19,
+  "year": 2024,
+  "set": 2,
+  "topics": [
+    "Databases",
+    "Transactions"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Once the DBMS informs the user that a transaction has been successfully completed, its effect should persist even if the system crashes before all its changes are reflected on disk. This property is called",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "durability",
+    "atomicity",
+    "consistency",
+    "isolation"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Durability</strong> guarantees that once a transaction is committed, its effects are saved permanently in non-volatile storage and will persist even in the event of a power outage or system crash.<br><br>Overview of ACID Properties:<br>• <strong>Atomicity:</strong> Ensures that all operations within a transaction are completed successfully; otherwise, the transaction is aborted entirely.<br>• <strong>Consistency:</strong> Ensures that a transaction transitions the database from one valid state to another while preserving all database rules and invariants.<br>• <strong>Isolation:</strong> Ensures that concurrent execution of transactions leaves the database in the same state as if they were executed sequentially.<br>• <strong>Durability:</strong> Guarantees that the changes of a committed transaction survive any system crash.",
+  "videoUrl": null
+}
