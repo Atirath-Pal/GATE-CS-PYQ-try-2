@@ -1,0 +1,21 @@
+{
+  "id": 58,
+  "year": 2022,
+  "set": null,
+  "topics": [
+    "Graph Theory"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Let $G(V,E)$ be a directed graph, where $V = \\{1,2,3,4,5\\}$ is the set of vertices and $E$ is the set of directed edges, as defined by the following adjacency matrix $A$.<br><br>$$A[i][j] = \\begin{cases} 1, & 1 \\le j \\le i \\le 5 \\\\ 0, & \\text{otherwise} \\end{cases}$$<br><br>$A[i][j] = 1$ indicates a directed edge from node $i$ to node $j$. A <i>directed spanning tree</i> of $G$, rooted at $r \\in V$, is defined as a subgraph $T$ of $G$ such that the undirected version of $T$ is a tree, and $T$ contains a directed path from $r$ to every other vertex in $V$. The number of such directed spanning trees rooted at vertex $5$ is _______.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 24,
+    "max": 24
+  },
+  "explanation": "<strong>Step 1: Analyze Graph Edges</strong><br>An edge $i \\to j$ exists if $i > j$ (excluding self-loops $i = j$). Edges only direct from higher-indexed vertices to lower-indexed vertices.<br><br><strong>Step 2: Requirements for Tree Rooted at 5</strong><br>In a directed spanning tree rooted at 5:<br>- Root vertex 5 has in-degree 0.<br>- Each vertex $v \\in \\{1, 2, 3, 4\\}$ must have an in-degree of 1 (a single parent $u > v$).<br>- Since edges strictly go from higher to lower indices, no cycles can form.<br><br><strong>Step 3: Calculate Parent Choices</strong><br>- Parent for vertex 4: $\\{5\\}$ (1 choice)<br>- Parent for vertex 3: $\\{4, 5\\}$ (2 choices)<br>- Parent for vertex 2: $\\{3, 4, 5\\}$ (3 choices)<br>- Parent for vertex 1: $\\{2, 3, 4, 5\\}$ (4 choices)<br><br><strong>Step 4: Total Trees</strong><br>Total directed spanning trees = $1 \\times 2 \\times 3 \\times 4 = 24$.",
+  "videoUrl": null
+}

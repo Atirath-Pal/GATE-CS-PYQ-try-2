@@ -1,0 +1,26 @@
+{
+  "id": 52,
+  "year": 2022,
+  "set": null,
+  "topics": [
+    "Graph Theory",
+    "Discrete Mathematics"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Which of the properties hold for the adjacency matrix $A$ of a simple undirected unweighted graph having $n$ vertices?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "The diagonal entries of $A^2$ are the degrees of the vertices of the graph.",
+    "If the graph is connected, then none of the entries of $A^{n-1} + I_n$ can be zero.",
+    "If the sum of all the elements of $A$ is at most $2(n-1)$, then the graph must be acyclic.",
+    "If there is at least a 1 in each of $A$'s rows and columns, then the graph must be connected."
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step-by-step evaluation of each option:</strong><br><br><strong>Option A:</strong><br>The $(i, i)$-th diagonal entry of $A^2$ is given by:<br>$(A^2)_{ii} = \\sum_{k=1}^{n} A_{ik} A_{ki}$<br>Since $A$ is symmetric for a simple undirected graph, $A_{ki} = A_{ik}$ and $A_{ik} \\in \\{0, 1\\}$.<br>Thus, $(A^2)_{ii} = \\sum_{k=1}^{n} A_{ik}^2 = \\sum_{k=1}^{n} A_{ik} = \\text{deg}(v_i)$.<br>Therefore, the diagonal entries of $A^2$ represent the degrees of the vertices. <strong>(Correct)</strong><br><br><strong>Option B:</strong><br>Consider a connected bipartite graph such as a path graph $P_3$ with 3 vertices ($1 - 2 - 3$). Here $n = 3$, so $n-1 = 2$.<br>The number of walks of length 2 between adjacent vertices $1$ and $2$ is 0 because all walks between $1$ and $2$ must have odd length.<br>Since $(I_3)_{12} = 0$, $(A^2 + I_3)_{12} = 0 + 0 = 0$.<br>Therefore, entries in $A^{n-1} + I_n$ can indeed be zero even if the graph is connected. <strong>(Incorrect)</strong><br><br><strong>Option C:</strong><br>The sum of all elements of $A$ equals the sum of degrees, which is $2|E|$.<br>The given condition $2|E| \\le 2(n-1) \\implies |E| \\le n-1$.<br>A graph with $|E| \\le n-1$ can still contain cycles if it is disconnected.<br>For example, with $n = 4$, take a graph consisting of a 3-cycle ($C_3$, 3 edges) and 1 isolated vertex. Here $|E| = 3 \\le 4-1 = 3$, but the graph contains a cycle. <strong>(Incorrect)</strong><br><br><strong>Option D:</strong><br>Having at least one '1' in each row and column means that every vertex has degree at least 1 (no isolated vertices).<br>This does not guarantee connectivity. For example, a graph composed of two disjoint edges ($1-2$ and $3-4$) has degree $\\ge 1$ for all vertices, yet is disconnected. <strong>(Incorrect)</strong><br><br>Hence, only option <strong>A</strong> is correct.",
+  "videoUrl": null
+}

@@ -1,0 +1,27 @@
+{
+  "id": 25,
+  "year": 2022,
+  "set": null,
+  "topics": [
+    "Database Management System",
+    "Relational Algebra"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider the following three relations in a relational database.<br><br>$Employee(\\underline{eId}, Name), Brand(\\underline{bId}, bName), Own(\\underline{eId},\\underline{bId})$<br><br>Which of the following relational algebra expressions return the set of $eIds$ who own all the brands?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\Pi_{eId}(\\Pi_{eId,bId}(Own) / \\Pi_{bId}(Brand))$",
+    "$\\Pi_{eId}(Own) - \\Pi_{eId}((\\Pi_{eId}(Own) \\times \\Pi_{bId}(Brand)) - \\Pi_{eId,bId}(Own))$",
+    "$\\Pi_{eId}(\\Pi_{eId,bId}(Own) / \\Pi_{bId}(Own))$",
+    "$\\Pi_{eId}((\\Pi_{eId}(Own) \\times \\Pi_{bId}(Own)) / \\Pi_{bId}(Brand))$"
+  ],
+  "answer": [
+    "A",
+    "B"
+  ],
+  "explanation": "To find all $eIds$ who own <strong>all</strong> the brands, we can use either the division operator or the universal quantification using set difference (double negation).<br><br><strong>1. Using Division Operator (Option A):</strong><br>The division operator $R / S$ finds tuples in $R$ that are associated with <i>all</i> tuples in $S$.<br>Here, $\\Pi_{eId, bId}(Own) / \\Pi_{bId}(Brand)$ returns the $eIds$ that are paired with every $bId$ in $Brand$. Outer projection $\\Pi_{eId}$ is redundant but mathematically correct.<br>Thus, <strong>Option A</strong> is correct.<br><br><strong>2. Using Cartesian Product & Set Difference (Option B):</strong><br>• $\\Pi_{eId}(Own) \\times \\Pi_{bId}(Brand)$: Represents all possible $(eId, bId)$ pairs for employees who own at least one brand.<br>• $(\\Pi_{eId}(Own) \\times \\Pi_{bId}(Brand)) - \\Pi_{eId,bId}(Own)$: Gives $(eId, bId)$ pairs representing brands that an employee <i>does not</i> own.<br>• $\\Pi_{eId}(\\dots)$: Gives the set of $eIds$ who fail to own at least one brand.<br>• $\\Pi_{eId}(Own) - \\dots$: Subtracting these from all employee $eIds$ yields the $eIds$ who own <strong>all</strong> brands.<br>Thus, <strong>Option B</strong> is correct.",
+  "videoUrl": null
+}

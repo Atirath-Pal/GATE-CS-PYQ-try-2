@@ -1,0 +1,22 @@
+{
+  "id": 29,
+  "year": 2022,
+  "set": null,
+  "topics": [
+    "Compiler Design",
+    "Parsing"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider the augmented grammar with $\\{+, *, (, ), id\\}$ as the set of terminals.<br><br>$$S' \\rightarrow S$$<br>$$S \\rightarrow S + R \\mid R$$<br>$$R \\rightarrow R * P \\mid P$$<br>$$P \\rightarrow (S) \\mid id$$<br><br>If $I_0$ is the set of two $LR(0)$ items $\\{[S' \\rightarrow S.], [S \\rightarrow S. + R]\\}$, then $goto(closure(I_0), +)$ contains exactly ________ items.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 5,
+    "max": 5
+  },
+  "explanation": "<strong>Step 1: Compute $closure(I_0)$</strong><br>Given $I_0 = \\{[S' \\rightarrow S.], [S \\rightarrow S. + R]\\}$.<br>Since no dot is directly before a non-terminal in any item of $I_0$, $closure(I_0) = I_0$.<br><br><strong>Step 2: Move dot past $+$</strong><br>Moving the dot over '$+$' in $[S \\rightarrow S. + R]$ yields:<br>$J = \\{[S \\rightarrow S + . R]\\}$<br><br><strong>Step 3: Compute $closure(J)$</strong><br>1. Include $[S \\rightarrow S + . R]$.<br>2. Since the dot precedes non-terminal $R$, add all $R$-productions with the dot at the start:<br>&nbsp;&nbsp;&nbsp;&nbsp;• $[R \\rightarrow . R * P]$<br>&nbsp;&nbsp;&nbsp;&nbsp;• $[R \\rightarrow . P]$<br>3. Since $[R \\rightarrow . P]$ has the dot preceding non-terminal $P$, add all $P$-productions with the dot at the start:<br>&nbsp;&nbsp;&nbsp;&nbsp;• $[P \\rightarrow . (S)]$<br>&nbsp;&nbsp;&nbsp;&nbsp;• $[P \\rightarrow . id]$<br><br>The set of items in $goto(closure(I_0), +)$ is:<br>$\\{[S \\rightarrow S + . R], [R \\rightarrow . R * P], [R \\rightarrow . P], [P \\rightarrow . (S)], [P \\rightarrow . id]\\}$<br><br>Therefore, the state contains exactly <strong>5</strong> items.",
+  "videoUrl": null
+}

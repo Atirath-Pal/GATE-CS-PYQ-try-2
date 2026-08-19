@@ -1,0 +1,26 @@
+{
+  "id": 16,
+  "year": "2022",
+  "set": null,
+  "topics": [
+    "Data Structures",
+    "Hashing"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Suppose we are given $n$ keys, $m$ hash table slots, and two simple uniform hash functions $h_1$ and $h_2$. Further suppose our hashing scheme uses $h_1$ for the odd keys and $h_2$ for the even keys. What is the expected number of keys in a slot?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\frac{m}{n}$",
+    "$\\frac{n}{m}$",
+    "$\\frac{2n}{m}$",
+    "$\\frac{n}{2m}$"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step 1: Understand Simple Uniform Hashing</strong><br>Under simple uniform hashing, any key is equally likely to hash into any of the $m$ slots, independently of where any other key has hashed.<br><br><strong>Step 2: Probability for each key</strong><br>Whether a key is odd (using $h_1$) or even (using $h_2$), since both $h_1$ and $h_2$ are simple uniform hash functions, the probability that any key hashes to a given slot is $\\frac{1}{m}$.<br><br><strong>Step 3: Calculate the expected value</strong><br>Let $X_i$ be an indicator random variable that key $i$ hashes to a particular slot.<br>$E[X_i] = \\frac{1}{m}$<br><br>By linearity of expectation, the expected number of keys in a slot is:<br>$E[X] = \\sum_{i=1}^{n} E[X_i] = n \\cdot \\frac{1}{m} = \\frac{n}{m}$.<br><br>Hence, option <strong>B</strong> is correct.",
+  "videoUrl": null
+}

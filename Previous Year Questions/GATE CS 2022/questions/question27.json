@@ -1,0 +1,28 @@
+{
+  "id": 27,
+  "year": 2022,
+  "set": null,
+  "topics": [
+    "Discrete Mathematics",
+    "Group Theory"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Which of the following statements is/are TRUE for a group $G$ ?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "If for all $x, y \\in G$, $(xy)^2 = x^2 y^2$, then $G$ is commutative.",
+    "If for all $x \\in G$, $x^2 = 1$, then $G$ is commutative. Here, $1$ is the identity element of $G$.",
+    "If the order of $G$ is $2$, then $G$ is commutative.",
+    "If $G$ is commutative, then a subgroup of $G$ need not be commutative."
+  ],
+  "answer": [
+    "A",
+    "B",
+    "C"
+  ],
+  "explanation": "<strong>Analysis of each statement:</strong><br><br><strong>Statement (A):</strong><br>Given $(xy)^2 = x^2 y^2$ for all $x, y \\in G$.<br>$(xy)(xy) = (xx)(yy)$<br>Pre-multiplying by $x^{-1}$ and post-multiplying by $y^{-1}$ on both sides:<br>$x^{-1}(xyxy)y^{-1} = x^{-1}(xxyy)y^{-1}$<br>$yx = xy$<br>Since $xy = yx$ for all $x, y \\in G$, $G$ is commutative. Hence, Statement (A) is <strong>TRUE</strong>.<br><br><strong>Statement (B):</strong><br>If $x^2 = 1$ for all $x \\in G$, then every element is its own inverse, i.e., $x = x^{-1}$.<br>For any $x, y \\in G$, we have $(xy) \\in G$, so $(xy)^{-1} = xy$.<br>Also, $(xy)^{-1} = y^{-1} x^{-1} = yx$.<br>Therefore, $xy = yx$, which means $G$ is commutative. Hence, Statement (B) is <strong>TRUE</strong>.<br><br><strong>Statement (C):</strong><br>Every group of prime order (such as order 2) is cyclic, and every cyclic group is commutative. Hence, Statement (C) is <strong>TRUE</strong>.<br><br><strong>Statement (D):</strong><br>If $G$ is commutative, then every subgroup $H \\subseteq G$ must also be commutative because the operation on $H$ is inherited from $G$, where commutativity already holds for all elements. Thus, a subgroup of a commutative group is always commutative. Hence, Statement (D) is <strong>FALSE</strong>.",
+  "videoUrl": null
+}

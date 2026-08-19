@@ -1,0 +1,26 @@
+{
+  "id": 10,
+  "year": "2022",
+  "set": null,
+  "topics": [
+    "General Aptitude",
+    "Spatial Aptitude"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "A plot of land must be divided between four families. They want their individual plots to be similar in shape, not necessarily equal in area. The land has equally spaced poles, marked as dots in the below figure. Two ropes, R1 and R2, are already present and cannot be moved.<br><br>What is the least number of <strong>additional</strong> straight ropes needed to create the desired plots? A single rope can pass through three poles that are aligned in a straight line.",
+  "assetImage": "question10.png",
+  "codeBlock": null,
+  "options": [
+    "2",
+    "4",
+    "5",
+    "3"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Step 1: Understand the Goal</strong><br>The objective is to divide the plot into 4 region-wise similar shapes for four families using the existing ropes $R_1$ and $R_2$ alongside the minimum number of new straight ropes.<br><br><strong>Step 2: Analyze Grid and Symmetry</strong><br>The existing ropes $R_1$ and $R_2$ form L-shaped boundary components of identical sub-plots. To divide the shape into 4 congruent/similar L-shaped regions, we need to place 3 additional straight ropes along the grid line segments connecting the poles.<br><br><strong>Step 3: Conclusion</strong><br>Therefore, the minimum number of additional straight ropes required is $3$.",
+  "videoUrl": null
+}

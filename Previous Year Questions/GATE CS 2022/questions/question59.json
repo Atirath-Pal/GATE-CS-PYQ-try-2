@@ -1,0 +1,22 @@
+{
+  "id": 59,
+  "year": 2022,
+  "set": null,
+  "topics": [
+    "Computer Networks",
+    "Data Link Layer"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a 100 Mbps link between an earth station (sender) and a satellite (receiver) at an altitude of 2100 km. The signal propagates at a speed of $3 \\times 10^8\\text{ m/s}$. The time taken (in milliseconds, <i>rounded off to two decimal places</i>) for the receiver to completely receive a packet of 1000 bytes transmitted by the sender is _________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 7.07,
+    "max": 7.09
+  },
+  "explanation": "<strong>Given data:</strong><br>Bandwidth ($B$) = $100\\text{ Mbps} = 100 \\times 10^6\\text{ bits/sec}$<br>Distance ($d$) = $2100\\text{ km} = 2100 \\times 10^3\\text{ m}$<br>Propagation speed ($v$) = $3 \\times 10^8\\text{ m/s}$<br>Packet size ($L$) = $1000\\text{ bytes} = 1000 \\times 8\\text{ bits} = 8000\\text{ bits}$<br><br><strong>Step 1: Calculate Transmission Delay ($T_t$)</strong><br>$T_t = \\frac{L}{B} = \\frac{8000}{100 \\times 10^6} = 80 \\times 10^{-6}\\text{ s} = 0.08\\text{ ms}$<br><br><strong>Step 2: Calculate Propagation Delay ($T_p$)</strong><br>$T_p = \\frac{d}{v} = \\frac{2100 \\times 10^3}{3 \\times 10^8} = 7 \\times 10^{-3}\\text{ s} = 7\\text{ ms}$<br><br><strong>Step 3: Calculate Total Time to completely receive the packet</strong><br>Total Time = Transmission Delay ($T_t$) + Propagation Delay ($T_p$)<br>Total Time = $0.08\\text{ ms} + 7\\text{ ms} = 7.08\\text{ ms}$<br><br>Hence, the required time is <strong>7.08</strong> ms.",
+  "videoUrl": null
+}

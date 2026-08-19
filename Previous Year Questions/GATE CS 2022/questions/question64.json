@@ -1,0 +1,19 @@
+{
+  "id": 64,
+  "year": 2022,
+  "set": null,
+  "topics": ["Operating Systems", "Virtual Memory"],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a demand paging system with four page frames (initially empty) and LRU page replacement policy. For the following page reference string<br><br>$$7, 2, 7, 3, 2, 5, 3, 4, 6, 7, 7, 1, 5, 6, 1$$<br><br>the page fault rate, defined as the ratio of number of page faults to the number of memory accesses (<i>rounded off to one decimal place</i>) is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 0.6,
+    "max": 0.6
+  },
+  "explanation": "<strong>Step-by-step trace of LRU Page Replacement (4 frames):</strong><br><br>Total Memory Accesses = 15<br><br>1. <strong>7</strong>: [7] — Page Fault (1)<br>2. <strong>2</strong>: [7, 2] — Page Fault (2)<br>3. <strong>7</strong>: [7, 2] — Hit<br>4. <strong>3</strong>: [7, 2, 3] — Page Fault (3)<br>5. <strong>2</strong>: [7, 2, 3] — Hit<br>6. <strong>5</strong>: [7, 2, 3, 5] — Page Fault (4)<br>7. <strong>3</strong>: [7, 2, 3, 5] — Hit<br>8. <strong>4</strong>: Replaces 7 $\\rightarrow$ [4, 2, 3, 5] — Page Fault (5)<br>9. <strong>6</strong>: Replaces 2 $\\rightarrow$ [4, 6, 3, 5] — Page Fault (6)<br>10. <strong>7</strong>: Replaces 5 $\\rightarrow$ [4, 6, 3, 7] — Page Fault (7)<br>11. <strong>7</strong>: [4, 6, 3, 7] — Hit<br>12. <strong>1</strong>: Replaces 3 $\\rightarrow$ [4, 6, 1, 7] — Page Fault (8)<br>13. <strong>5</strong>: Replaces 4 $\\rightarrow$ [5, 6, 1, 7] — Page Fault (9)<br>14. <strong>6</strong>: [5, 6, 1, 7] — Hit<br>15. <strong>1</strong>: [5, 6, 1, 7] — Hit<br><br>Total Page Faults = 9<br><br>$$\\text{Page Fault Rate} = \\frac{\\text{Total Page Faults}}{\\text{Total Memory Accesses}} = \\frac{9}{15} = 0.6$$",
+  "videoUrl": null
+}

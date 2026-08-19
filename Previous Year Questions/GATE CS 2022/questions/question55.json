@@ -1,0 +1,27 @@
+{
+  "id": 55,
+  "year": 2022,
+  "set": null,
+  "topics": [
+    "Computer Networks",
+    "IP Addressing"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider routing table of an organization’s router shown below:<br><br><table style=\"width: 100%; border-collapse: collapse; border: 1px solid #ffffff; margin: 12px 0;\"><thead><tr style=\"border-bottom: 1px solid #ffffff;\"><th style=\"border: 1px solid #ffffff; padding: 8px; text-align: left;\">Subnet Number</th><th style=\"border: 1px solid #ffffff; padding: 8px; text-align: left;\">Subnet Mask</th><th style=\"border: 1px solid #ffffff; padding: 8px; text-align: left;\">Next Hop</th></tr></thead><tbody><tr><td style=\"border: 1px solid #ffffff; padding: 8px;\">12.20.164.0</td><td style=\"border: 1px solid #ffffff; padding: 8px;\">255.255.252.0</td><td style=\"border: 1px solid #ffffff; padding: 8px;\">R1</td></tr><tr><td style=\"border: 1px solid #ffffff; padding: 8px;\">12.20.170.0</td><td style=\"border: 1px solid #ffffff; padding: 8px;\">255.255.254.0</td><td style=\"border: 1px solid #ffffff; padding: 8px;\">R2</td></tr><tr><td style=\"border: 1px solid #ffffff; padding: 8px;\">12.20.168.0</td><td style=\"border: 1px solid #ffffff; padding: 8px;\">255.255.254.0</td><td style=\"border: 1px solid #ffffff; padding: 8px;\">Interface 0</td></tr><tr><td style=\"border: 1px solid #ffffff; padding: 8px;\">12.20.166.0</td><td style=\"border: 1px solid #ffffff; padding: 8px;\">255.255.254.0</td><td style=\"border: 1px solid #ffffff; padding: 8px;\">Interface 1</td></tr><tr><td style=\"border: 1px solid #ffffff; padding: 8px;\">default</td><td style=\"border: 1px solid #ffffff; padding: 8px;\"></td><td style=\"border: 1px solid #ffffff; padding: 8px;\">R3</td></tr></tbody></table><br>Which of the following prefixes in CIDR notation can be collectively used to correctly aggregate all of the subnets in the routing table?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "12.20.164.0/20",
+    "12.20.164.0/22",
+    "12.20.164.0/21",
+    "12.20.168.0/22"
+  ],
+  "answer": [
+    "B",
+    "D"
+  ],
+  "explanation": "To determine which prefixes can collectively aggregate all subnets, let's find the IP address range for each entry in the routing table:<br><br><strong>1. Subnet Ranges:</strong><br>• <strong>Entry 1:</strong> $12.20.164.0$ with mask $255.255.252.0$ ($/22$)<br>$\\rightarrow$ IP Range: $12.20.164.0$ to $12.20.167.255$ (3rd octet: $164$–$167$)<br>• <strong>Entry 2:</strong> $12.20.170.0$ with mask $255.255.254.0$ ($/23$)<br>$\\rightarrow$ IP Range: $12.20.170.0$ to $12.20.171.255$ (3rd octet: $170$–$171$)<br>• <strong>Entry 3:</strong> $12.20.168.0$ with mask $255.255.254.0$ ($/23$)<br>$\\rightarrow$ IP Range: $12.20.168.0$ to $12.20.169.255$ (3rd octet: $168$–$169$)<br>• <strong>Entry 4:</strong> $12.20.166.0$ with mask $255.255.254.0$ ($/23$)<br>$\\rightarrow$ IP Range: $12.20.166.0$ to $12.20.167.255$ (3rd octet: $166$–$167$)<br><br><strong>2. Combined Range Required:</strong><br>The full IP space spanned by all subnets is from $12.20.164.0$ to $12.20.171.255$ (3rd octets from $164$ to $171$).<br><br><strong>3. Prefix Evaluation:</strong><br>• <strong>$12.20.164.0/22$ (Option B):</strong> Covers range $12.20.164.0$ to $12.20.167.255$.<br>• <strong>$12.20.168.0/22$ (Option D):</strong> Covers range $12.20.168.0$ to $12.20.171.255$.<br><br>Together, <strong>$12.20.164.0/22$</strong> and <strong>$12.20.168.0/22$</strong> precisely cover the entire contiguous block of subnets ($12.20.164.0$ to $12.20.171.255$) without covering extraneous addresses.<br><br>Hence, options <strong>(B)</strong> and <strong>(D)</strong> are correct.",
+  "videoUrl": null
+}

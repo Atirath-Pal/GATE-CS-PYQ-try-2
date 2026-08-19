@@ -1,0 +1,28 @@
+{
+  "id": 23,
+  "year": 2022,
+  "set": null,
+  "topics": [
+    "Theory of Computation",
+    "Closure Properties"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Which of the following statements is/are TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Every subset of a recursively enumerable language is recursive.",
+    "If a language $L$ and its complement $\\overline{L}$ are both recursively enumerable, then $L$ must be recursive.",
+    "Complement of a context-free language must be recursive.",
+    "If $L_1$ and $L_2$ are regular, then $L_1 \\cap L_2$ must be deterministic context-free."
+  ],
+  "answer": [
+    "B",
+    "C",
+    "D"
+  ],
+  "explanation": "<strong>Statement (A): False</strong><br>$\\Sigma^*$ is a recursively enumerable (and regular) language. Any non-recursive language is a subset of $\\Sigma^*$. Therefore, a subset of a recursively enumerable language is not necessarily recursive.<br><br><strong>Statement (B): True</strong><br>By Post's Theorem, if both a language $L$ and its complement $\\overline{L}$ are recursively enumerable, then $L$ must be recursive (decidable).<br><br><strong>Statement (C): True</strong><br>Every context-free language (CFL) is recursive. Since recursive languages are closed under complementation, the complement of a context-free language is always recursive.<br><br><strong>Statement (D): True</strong><br>Regular languages are closed under intersection, so if $L_1$ and $L_2$ are regular, $L_1 \\cap L_2$ is also regular. Since all regular languages are deterministic context-free languages (DCFLs), $L_1 \\cap L_2$ must be deterministic context-free.",
+  "videoUrl": null
+}

@@ -1,0 +1,22 @@
+{
+  "id": 32,
+  "year": 2022,
+  "set": null,
+  "topics": [
+    "Discrete Mathematics",
+    "Combinatorics"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "The number of arrangements of six identical balls in three identical bins is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 7,
+    "max": 7
+  },
+  "explanation": "<strong>Step 1: Understand the problem</strong><br>We need to arrange $6$ identical balls into $3$ identical bins.<br>Since both the balls and bins are identical, the arrangement depends only on the number of balls in each bin, where order does not matter. This is equivalent to finding the integer partitions of $6$ into at most $3$ parts ($x_1 + x_2 + x_3 = 6$ with $x_1 \\ge x_2 \\ge x_3 \\ge 0$).<br><br><strong>Step 2: List all unique combinations</strong><br>1. $(6, 0, 0)$<br>2. $(5, 1, 0)$<br>3. $(4, 2, 0)$<br>4. $(4, 1, 1)$<br>5. $(3, 3, 0)$<br>6. $(3, 2, 1)$<br>7. $(2, 2, 2)$<br><br><strong>Step 3: Count total arrangements</strong><br>There are $7$ unique arrangements possible.<br><br>Hence, the correct answer is <strong>7</strong>.",
+  "videoUrl": null
+}

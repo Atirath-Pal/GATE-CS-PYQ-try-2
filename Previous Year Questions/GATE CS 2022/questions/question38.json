@@ -1,0 +1,26 @@
+{
+  "id": 38,
+  "year": 2022,
+  "set": null,
+  "topics": [
+    "Operating Systems",
+    "Memory Management"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Which one of the following statements is FALSE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "The TLB performs an associative search in parallel on all its valid entries using page number of incoming virtual address.",
+    "If the virtual address of a word given by CPU has a TLB hit, but the subsequent search for the word results in a cache miss, then the word will always be present in the main memory.",
+    "The memory access time using a given inverted page table is always same for all incoming virtual addresses.",
+    "In a system that uses hashed page tables, if two distinct virtual addresses V1 and V2 map to the same value while hashing, then the memory access time of these addresses will not be the same."
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Statement (A) is TRUE:</strong><br>A Translation Lookaside Buffer (TLB) is built using associative memory (content-addressable memory), which allows all valid entries to be searched in parallel.<br><br><strong>Statement (B) is TRUE:</strong><br>A TLB hit guarantees that the translation exists and the page resides in main memory (i.e., no page fault). Thus, if the data is not in the CPU cache (cache miss), it will definitely be fetched from main memory.<br><br><strong>Statement (C) is FALSE:</strong><br>Inverted page tables typically index entries using a hash table structure or linear search array sorted by physical frame rather than virtual page number. Because searching through the inverted table or traversing collision lists takes a variable number of steps, memory access time is <strong>not</strong> the same for all incoming virtual addresses.<br><br><strong>Statement (D) is TRUE:</strong><br>In hashed page tables, collisions are handled via linked list chaining. If two distinct addresses $V_1$ and $V_2$ hash to the same bucket, one node will be located after the other in the chain, requiring different traversal steps and thus different access times.",
+  "videoUrl": null
+}

@@ -1,0 +1,22 @@
+{
+  "id": 57,
+  "year": 2022,
+  "set": null,
+  "topics": [
+    "Computer Networks",
+    "Routing Protocols"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a network with three routers P, Q, R shown in the figure below. All the links have cost of unity.<br><br>The routers exchange distance vector routing information and have converged on the routing tables, after which the link Q–R fails. Assume that P and Q send out routing updates at random times, each at the same average rate. The probability of a routing loop formation (rounded off to one decimal place) between P and Q, leading to count-to-infinity problem, is ____________.",
+  "assetImage": "question57.png",
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 0.5,
+    "max": 0.5
+  },
+  "explanation": "<strong>Step 1: Initial State before Failure</strong><br>Initially, the network has converged:<br>• $Q$ reaches $R$ directly with cost $1$.<br>• $P$ reaches $R$ via $Q$ with cost $1 + 1 = 2$.<br><br><strong>Step 2: Link Failure and Loop Formation Condition</strong><br>When link $Q-R$ fails:<br>• If <strong>$P$ sends its routing update to $Q$ first</strong> (before $Q$ sends its update to $P$), $P$ advertises its route to $R$ with cost $2$. Router $Q$ updates its table to route to $R$ through $P$ with cost $2 + 1 = 3$. This creates a routing loop between $P$ and $Q$ leading to the count-to-infinity problem.<br>• If <strong>$Q$ sends its routing update to $P$ first</strong>, $P$ recognizes that $R$ is no longer reachable through $Q$, preventing the loop.<br><br><strong>Step 3: Calculating Probability</strong><br>Since $P$ and $Q$ transmit routing updates independently at random times with the same average rate, the probability that $P$ transmits before $Q$ is:<br>$$P = \\frac{1}{2} = 0.5$$<br><br>Hence, the probability of a routing loop formation is <strong>0.5</strong>.",
+  "videoUrl": null
+}

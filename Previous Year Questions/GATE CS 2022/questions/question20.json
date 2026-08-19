@@ -1,0 +1,21 @@
+{
+  "id": 20,
+  "year": 2022,
+  "set": null,
+  "topics": ["Linear Algebra", "Matrix Algebra"],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the following two statements with respect to the matrices $A_{m \\times n}$, $B_{n \\times m}$, $C_{n \\times n}$ and $D_{n \\times n}$.<br><br>Statement 1: $tr(AB) = tr(BA)$<br>Statement 2: $tr(CD) = tr(DC)$<br><br>where $tr()$ represents the trace of a matrix. Which one of the following holds?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Statement 1 is correct and Statement 2 is wrong.",
+    "Statement 1 is wrong and Statement 2 is correct.",
+    "Both Statement 1 and Statement 2 are correct.",
+    "Both Statement 1 and Statement 2 are wrong."
+  ],
+  "answer": ["C"],
+  "explanation": "<strong>Statement 1:</strong><br>For matrix $A_{m \\times n}$ and matrix $B_{n \\times m}$, product $AB$ is a square matrix of size $m \\times m$, and product $BA$ is a square matrix of size $n \\times n$. By the cyclic property of trace, $\\text{tr}(AB) = \\text{tr}(BA)$ holds true for any rectangular matrices where the matrix products $AB$ and $BA$ are defined.<br>Hence, Statement 1 is <strong>correct</strong>.<br><br><strong>Statement 2:</strong><br>For square matrices $C_{n \\times n}$ and $D_{n \\times n}$, both $CD$ and $DC$ are $n \\times n$ square matrices. The trace identity $\\text{tr}(CD) = \\text{tr}(DC)$ always holds.<br>Hence, Statement 2 is <strong>correct</strong>.<br><br>Therefore, both Statement 1 and Statement 2 are correct.",
+  "videoUrl": null
+}

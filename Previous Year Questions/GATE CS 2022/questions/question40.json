@@ -1,0 +1,21 @@
+{
+  "id": 40,
+  "year": 2022,
+  "set": null,
+  "topics": ["Digital Logic", "Computer Organization"],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider a digital display system (DDS) shown in the figure that displays the contents of register X. A 16-bit code word is used to load a word in X, either from S or from R. S is a 1024-word memory segment and R is a 32-word register file. Based on the value of mode bit M, T selects an input word to load in X. P and Q interface with the corresponding bits in the code word to choose the addressed word. Which one of the following represents the functionality of P, Q, and T?",
+  "assetImage": "question40.png",
+  "codeBlock": null,
+  "options": [
+    "P is 10:1 multiplexer; Q is 5:1 multiplexer; T is 2:1 multiplexer",
+    "P is $10:2^{10}$ decoder; Q is $5:2^5$ decoder; T is 2:1 encoder",
+    "P is $10:2^{10}$ decoder; Q is $5:2^5$ decoder; T is 2:1 multiplexer",
+    "P is 1:10 de-multiplexer; Q is 1:5 de-multiplexer; T is 2:1 multiplexer"
+  ],
+  "answer": ["C"],
+  "explanation": "<strong>Step 1: Determine the address bits required for S and R</strong><br>Memory segment $S$ has 1024 words ($2^{10}$ words). To address one of these $1024$ locations, it requires $\\log_2(1024) = 10$ bits.<br>Register file $R$ has 32 words ($2^5$ words). To address one of these $32$ locations, it requires $\\log_2(32) = 5$ bits.<br><br><strong>Step 2: Identify the components P and Q</strong><br>Component $P$ takes 10 input address lines and decodes them into $2^{10}$ select lines to choose a location in $S$. Therefore, $P$ is a $10:2^{10}$ decoder.<br>Component $Q$ takes 5 input address lines and decodes them into $2^5$ select lines to choose a location in $R$. Therefore, $Q$ is a $5:2^5$ decoder.<br><br><strong>Step 3: Identify the component T</strong><br>Component $T$ receives input from two sources ($S$ and $R$) and uses the single mode bit $M$ to select which word to load into register $X$. Selecting one output from two input lines based on a control bit is the operation of a $2:1$ multiplexer.<br><br>Hence, $P$ is $10:2^{10}$ decoder, $Q$ is $5:2^5$ decoder, and $T$ is 2:1 multiplexer.",
+  "videoUrl": null
+}

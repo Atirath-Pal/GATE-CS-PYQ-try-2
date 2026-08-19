@@ -1,0 +1,28 @@
+{
+  "id": 24,
+  "year": 2022,
+  "set": null,
+  "topics": [
+    "Computer Organization and Architecture",
+    "Cache Memory"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Let WB and WT be two set associative cache organizations that use LRU algorithm for cache block replacement. WB is a write back cache and WT is a write through cache. Which of the following statements is/are FALSE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Each cache block in WB and WT has a dirty bit.",
+    "Every write hit in WB leads to a data transfer from cache to main memory.",
+    "Eviction of a block from WT will not lead to data transfer from cache to main memory.",
+    "A read miss in WB will never lead to eviction of a dirty block from WB."
+  ],
+  "answer": [
+    "A",
+    "B",
+    "D"
+  ],
+  "explanation": "<strong>Analysis of Options:</strong><br><br><strong>Statement (A): FALSE.</strong> Write-through (WT) cache updates main memory simultaneously with every write, so it does not need a dirty bit. A dirty bit is only required for write-back (WB) cache to track modified blocks.<br><br><strong>Statement (B): FALSE.</strong> In a write-back cache, a write hit updates the block in cache and sets its dirty bit to 1; data is not immediately written back to main memory.<br><br><strong>Statement (C): TRUE.</strong> In a write-through cache, main memory is always consistent with the cache. Therefore, evicting a block from WT never requires writing data back to main memory.<br><br><strong>Statement (D): FALSE.</strong> A read miss in a write-back cache requires fetching a missing block into a set. If that set is full, an existing block must be evicted. If the evicted block is dirty, it will trigger a write-back to main memory. Thus, a read miss can lead to the eviction of a dirty block.<br><br>Since the question asks for the <strong>FALSE</strong> statements, the correct options are <strong>A, B, and D</strong>.",
+  "videoUrl": null
+}

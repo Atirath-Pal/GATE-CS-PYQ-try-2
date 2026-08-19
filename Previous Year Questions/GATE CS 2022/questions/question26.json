@@ -1,0 +1,27 @@
+{
+  "id": 26,
+  "year": 2022,
+  "set": null,
+  "topics": [
+    "Operating Systems",
+    "Deadlocks"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Which of the following statements is/are TRUE with respect to deadlocks?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Circular wait is a necessary condition for the formation of deadlock.",
+    "In a system where each resource has more than one instance, a cycle in its wait-for graph indicates the presence of a deadlock.",
+    "If the current allocation of resources to processes leads the system to unsafe state, then deadlock will necessarily occur.",
+    "In the resource-allocation graph of a system, if every edge is an assignment edge, then the system is not in deadlock state."
+  ],
+  "answer": [
+    "A",
+    "D"
+  ],
+  "explanation": "<strong>Statement (A) is TRUE:</strong> Circular wait is one of the four Coffman conditions necessary for deadlock to occur (along with Mutual Exclusion, Hold and Wait, and No Preemption).<br><br><strong>Statement (B) is FALSE:</strong> In a system with multiple instances of resources, a cycle in the resource-allocation / wait-for graph is a necessary condition, but NOT a sufficient condition for a deadlock.<br><br><strong>Statement (C) is FALSE:</strong> An unsafe state means the system cannot guarantee that a deadlock will be avoided, but it does not mean that a deadlock will definitely occur.<br><br><strong>Statement (D) is TRUE:</strong> Assignment edges directed from resources to processes represent currently allocated resources. If every edge in the graph is an assignment edge, there are zero request edges (processes waiting for resources). With no process waiting, deadlock is impossible.",
+  "videoUrl": null
+}

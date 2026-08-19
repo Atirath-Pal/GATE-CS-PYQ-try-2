@@ -1,0 +1,22 @@
+{
+  "id": 62,
+  "year": 2022,
+  "set": null,
+  "topics": [
+    "Data Structures",
+    "Queue"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the queues $Q_1$ containing four elements and $Q_2$ containing none (shown as the Initial State in the figure). The only operations allowed on these two queues are `Enqueue(Q,element)` and `Dequeue(Q)`. The minimum number of `Enqueue` operations on $Q_1$ required to place the elements of $Q_1$ in $Q_2$ in reverse order (shown as the Final State in the figure) without using any additional storage is __________.",
+  "assetImage": "question62.png",
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 6,
+    "max": 6
+  },
+  "explanation": "To transfer elements from $Q_1$ to $Q_2$ in reverse order using only $Q_1$ and $Q_2$, we need to move elements to $Q_2$ starting with element 4 down to element 1.<br><br><strong>Step 1: Move element 4 to $Q_2$</strong><br>Dequeue elements 1, 2, and 3 from $Q_1$ and Enqueue them back into $Q_1$. This requires 3 `Enqueue` operations on $Q_1$. Then Dequeue 4 from $Q_1$ and Enqueue it into $Q_2$.<br><br><strong>Step 2: Move element 3 to $Q_2$</strong><br>Dequeue elements 1 and 2 from $Q_1$ and Enqueue them back into $Q_1$. This requires 2 `Enqueue` operations on $Q_1$. Then Dequeue 3 from $Q_1$ and Enqueue it into $Q_2$.<br><br><strong>Step 3: Move element 2 to $Q_2$</strong><br>Dequeue element 1 from $Q_1$ and Enqueue it back into $Q_1$. This requires 1 `Enqueue` operation on $Q_1$. Then Dequeue 2 from $Q_1$ and Enqueue it into $Q_2$.<br><br><strong>Step 4: Move element 1 to $Q_2$</strong><br>Dequeue element 1 from $Q_1$ and Enqueue it into $Q_2$. This requires 0 `Enqueue` operations on $Q_1$.<br><br><strong>Total Enqueue operations on $Q_1$:</strong><br>$3 + 2 + 1 + 0 = 6$.",
+  "videoUrl": null
+}

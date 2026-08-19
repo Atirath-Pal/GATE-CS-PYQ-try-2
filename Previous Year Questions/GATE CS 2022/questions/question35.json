@@ -1,0 +1,22 @@
+{
+  "id": 35,
+  "year": 2022,
+  "set": null,
+  "topics": [
+    "Computer Networks",
+    "Application Layer"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider the resolution of the domain name $\\texttt{www.gate.org.in}$ by a DNS resolver. Assume that no resource records are cached anywhere across the DNS servers and that iterative query mechanism is used in the resolution. The number of DNS query-response pairs involved in completely resolving the domain name is ____________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 4,
+    "max": 4
+  },
+  "explanation": "<strong>Step 1: Understand the Domain Hierarchy</strong><br>The domain name to be resolved is $\\texttt{www.gate.org.in}$. Since no resource records are cached anywhere across the DNS servers, the DNS resolver must start from the root server and perform iterative resolution step-by-step.<br><br><strong>Step 2: Trace the Iterative Query-Response Pairs</strong><br>1. <strong>Pair 1:</strong> Resolver queries the <strong>Root DNS Server</strong> and receives the address of the $\\texttt{.in}$ TLD server.<br>2. <strong>Pair 2:</strong> Resolver queries the <strong>$\\texttt{.in}$ TLD Server</strong> and receives the address of the $\\texttt{org.in}$ server.<br>3. <strong>Pair 3:</strong> Resolver queries the <strong>$\\texttt{org.in}$ Server</strong> and receives the address of the $\\texttt{gate.org.in}$ authoritative server.<br>4. <strong>Pair 4:</strong> Resolver queries the <strong>$\\texttt{gate.org.in}$ Authoritative Server</strong> and receives the actual IP address for $\\texttt{www.gate.org.in}$.<br><br><strong>Conclusion:</strong><br>The total number of DNS query-response pairs involved in completely resolving the domain name is $4$.",
+  "videoUrl": null
+}

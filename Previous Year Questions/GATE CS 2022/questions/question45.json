@@ -1,0 +1,26 @@
+{
+  "id": 45,
+  "year": 2022,
+  "set": null,
+  "topics": [
+    "Linear Algebra",
+    "Numerical Methods"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider solving the following system of simultaneous equations using LU decomposition.<br><br>$$\\begin{aligned} x_1 + x_2 - 2x_3 &= 4 \\\\ x_1 + 3x_2 - x_3 &= 7 \\\\ 2x_1 + x_2 - 5x_3 &= 7 \\end{aligned}$$<br><br>where $L$ and $U$ are denoted as<br>$$L = \\begin{pmatrix} L_{11} & 0 & 0 \\\\ L_{21} & L_{22} & 0 \\\\ L_{31} & L_{32} & L_{33} \\end{pmatrix}, \\quad U = \\begin{pmatrix} U_{11} & U_{12} & U_{13} \\\\ 0 & U_{22} & U_{23} \\\\ 0 & 0 & U_{33} \\end{pmatrix}$$<br><br>Which one of the following is the correct combination of values for $L_{32}$, $U_{33}$, and $x_1$?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$L_{32} = 2, \\, U_{33} = -\\frac{1}{2}, \\, x_1 = -1$",
+    "$L_{32} = 2, \\, U_{33} = 2, \\, x_1 = -1$",
+    "$L_{32} = -\\frac{1}{2}, \\, U_{33} = 2, \\, x_1 = 0$",
+    "$L_{32} = -\\frac{1}{2}, \\, U_{33} = -\\frac{1}{2}, \\, x_1 = 0$"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Step 1: Perform Gaussian elimination to find $L$ and $U$ matrices.</strong><br>The given coefficient matrix $A$ and vector $b$ are:<br>$$A = \\begin{pmatrix} 1 & 1 & -2 \\\\ 1 & 3 & -1 \\\\ 2 & 1 & -5 \\end{pmatrix}, \\quad b = \\begin{pmatrix} 4 \\\\ 7 \\\\ 7 \\end{pmatrix}$$<br><br>Using Doolittle's LU decomposition where diagonal elements of $L$ are $1$ ($L_{11} = L_{22} = L_{33} = 1$):<br><br>1. Eliminate first column entries below pivot $A_{11} = 1$:<br>- $R_2 \\leftarrow R_2 - 1 \\cdot R_1 \\implies L_{21} = 1$<br>- $R_3 \\leftarrow R_3 - 2 \\cdot R_1 \\implies L_{31} = 2$<br><br>The updated matrix is:<br>$$\\begin{pmatrix} 1 & 1 & -2 \\\\ 0 & 2 & 1 \\\\ 0 & -1 & -1 \\end{pmatrix}$$<br><br>2. Eliminate second column entry below pivot $A_{22} = 2$:<br>- $R_3 \\leftarrow R_3 - \\left(-\\frac{1}{2}\\right) R_2 \\implies L_{32} = -\\frac{1}{2}$<br><br>The resulting $U$ matrix is:<br>$$U = \\begin{pmatrix} 1 & 1 & -2 \\\\ 0 & 2 & 1 \\\\ 0 & 0 & -\\frac{1}{2} \\end{pmatrix}$$<br><br>From $L$ and $U$, we get $L_{32} = -\\frac{1}{2}$ and $U_{33} = -\\frac{1}{2}$.<br><br><strong>Step 2: Solve the system for $x_1$.</strong><br>Given equations:<br>1. $x_1 + x_2 - 2x_3 = 4$<br>2. $x_1 + 3x_2 - x_3 = 7$<br>3. $2x_1 + x_2 - 5x_3 = 7$<br><br>Subtract Equation (1) from Equation (2):<br>$$2x_2 + x_3 = 3 \\implies x_3 = 3 - 2x_2$$<br><br>Substitute $x_3$ into Equations (1) and (3):<br>$$x_1 + x_2 - 2(3 - 2x_2) = 4 \\implies x_1 + 5x_2 = 10$$<br>$$2x_1 + x_2 - 5(3 - 2x_2) = 7 \\implies 2x_1 + 11x_2 = 22$$<br><br>Solving these equations gives:<br>$$2(10 - 5x_2) + 11x_2 = 22 \\implies 20 + x_2 = 22 \\implies x_2 = 2$$<br>$$x_1 = 10 - 5(2) = 0$$<br><br>Thus, $L_{32} = -\\frac{1}{2}$, $U_{33} = -\\frac{1}{2}$, and $x_1 = 0$.",
+  "videoUrl": null
+}

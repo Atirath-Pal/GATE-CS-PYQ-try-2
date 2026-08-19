@@ -1,0 +1,21 @@
+{
+  "id": 4,
+  "year": 2022,
+  "set": null,
+  "topics": ["General Aptitude", "Logic"],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Given below are four statements.<br><br>Statement 1: All students are inquisitive.<br><br>Statement 2: Some students are inquisitive.<br><br>Statement 3: No student is inquisitive.<br><br>Statement 4: Some students are not inquisitive.<br><br>From the given four statements, find the two statements that <strong>CANNOT BE TRUE</strong> simultaneously, assuming that there is at least one student in the class.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Statement 1 and Statement 3",
+    "Statement 1 and Statement 2",
+    "Statement 2 and Statement 4",
+    "Statement 3 and Statement 4"
+  ],
+  "answer": ["A"],
+  "explanation": "<strong>Step 1: Analyze Statement 1 and Statement 3.</strong><br>Statement 1 asserts that every student in the class is inquisitive. Statement 3 asserts that no student in the class is inquisitive.<br><br><strong>Step 2: Check for simultaneous truth.</strong><br>Assuming there is at least one student in the class, Statement 1 and Statement 3 are contraries and direct opposites. It is logically impossible for all students to be inquisitive while simultaneously no student is inquisitive.<br><br><strong>Step 3: Verify remaining pairs.</strong><br>- Statement 1 and 2: If all students are inquisitive, it implies 'some students are inquisitive' is also true.<br>- Statement 2 and 4: Both can be true if some students are inquisitive and some are not.<br>- Statement 3 and 4: If no student is inquisitive, it implies 'some students are not inquisitive' is also true.<br><br>Therefore, <strong>Statement 1 and Statement 3</strong> cannot be true simultaneously.<br><br>Hence, option <strong>(A)</strong> is correct.",
+  "videoUrl": null
+}

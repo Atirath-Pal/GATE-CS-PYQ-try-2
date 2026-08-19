@@ -1,0 +1,26 @@
+{
+  "id": 18,
+  "year": 2022,
+  "set": null,
+  "topics": [
+    "Digital Logic",
+    "Computer Arithmetic"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Let R1 and R2 be two 4-bit registers that store numbers in 2's complement form. For the operation R1+R2, which one of the following values of R1 and R2 gives an arithmetic overflow?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "R1 = 1011 and R2 = 1110",
+    "R1 = 1100 and R2 = 1010",
+    "R1 = 0011 and R2 = 0100",
+    "R1 = 1001 and R2 = 1111"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "In a 4-bit 2's complement representation, the range of representable decimal numbers is $[-2^{3}, 2^{3} - 1] = [-8, 7]$.<br><br>An arithmetic overflow occurs when the sum of two numbers falls outside this valid range $[-8, 7]$.<br><br>Evaluating each option:<br><br><strong>Option A:</strong><br>$R1 = 1011_2 = -5$<br>$R2 = 1110_2 = -2$<br>$R1 + R2 = -5 + (-2) = -7$ (Within $[-8, 7]$, No Overflow)<br><br><strong>Option B:</strong><br>$R1 = 1100_2 = -4$<br>$R2 = 1010_2 = -6$<br>$R1 + R2 = -4 + (-6) = -10$ (Outside $[-8, 7]$, <strong>Overflow occurs</strong>)<br><br><strong>Option C:</strong><br>$R1 = 0011_2 = +3$<br>$R2 = 0100_2 = +4$<br>$R1 + R2 = +3 + 4 = +7$ (Within $[-8, 7]$, No Overflow)<br><br><strong>Option D:</strong><br>$R1 = 1001_2 = -7$<br>$R2 = 1111_2 = -1$<br>$R1 + R2 = -7 + (-1) = -8$ (Within $[-8, 7]$, No Overflow)<br><br>Therefore, Option B causes an arithmetic overflow.",
+  "videoUrl": null
+}

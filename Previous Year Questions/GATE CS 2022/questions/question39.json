@@ -1,0 +1,26 @@
+{
+  "id": 39,
+  "year": 2022,
+  "set": null,
+  "topics": [
+    "Database Management System",
+    "Transactions & Concurrency Control"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Let $R_i(z)$ and $W_i(z)$ denote read and write operations on a data element $z$ by a transaction $T_i$, respectively. Consider the schedule $S$ with four transactions.<br><br>$$S: R_4(x)R_2(x)R_3(x)R_1(y)W_1(y)W_2(x)W_3(y)R_4(y)$$<br><br>Which one of the following serial schedules is conflict equivalent to $S$?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$T_1 \\rightarrow T_3 \\rightarrow T_4 \\rightarrow T_2$",
+    "$T_1 \\rightarrow T_4 \\rightarrow T_3 \\rightarrow T_2$",
+    "$T_4 \\rightarrow T_1 \\rightarrow T_3 \\rightarrow T_2$",
+    "$T_3 \\rightarrow T_1 \\rightarrow T_4 \\rightarrow T_2$"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "To find the conflict equivalent serial schedule, we construct a precedence (precedence/serialization) graph by identifying all conflicting operations (operations on the same data item by different transactions where at least one operation is a write):<br><br><strong>1. Conflicting operations on data element $x$:</strong><br>• $R_4(x)$ followed by $W_2(x) \\Rightarrow T_4 \\rightarrow T_2$<br>• $R_3(x)$ followed by $W_2(x) \\Rightarrow T_3 \\rightarrow T_2$<br><br><strong>2. Conflicting operations on data element $y$:</strong><br>• $R_1(y)$ followed by $W_3(y) \\Rightarrow T_1 \\rightarrow T_3$<br>• $W_1(y)$ followed by $W_3(y) \\Rightarrow T_1 \\rightarrow T_3$<br>• $W_1(y)$ followed by $R_4(y) \\Rightarrow T_1 \\rightarrow T_4$<br>• $W_3(y)$ followed by $R_4(y) \\Rightarrow T_3 \\rightarrow T_4$<br><br><strong>Edges in Precedence Graph:</strong><br>• $T_1 \\rightarrow T_3$<br>• $T_1 \\rightarrow T_4$<br>• $T_3 \\rightarrow T_4$<br>• $T_3 \\rightarrow T_2$<br>• $T_4 \\rightarrow T_2$<br><br>Performing a topological sort on these edges:<br>• $T_1$ has an in-degree of 0, so it executes first: $T_1$<br>• $T_3$ now has an in-degree of 0, so it executes next: $T_3$<br>• $T_4$ now has an in-degree of 0, so it executes next: $T_4$<br>• $T_2$ executes last: $T_2$<br><br>Thus, the conflict equivalent serial schedule is $T_1 \\rightarrow T_3 \\rightarrow T_4 \\rightarrow T_2$.",
+  "videoUrl": null
+}

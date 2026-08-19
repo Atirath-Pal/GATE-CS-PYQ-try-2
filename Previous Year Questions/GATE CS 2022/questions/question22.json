@@ -1,0 +1,26 @@
+{
+  "id": 22,
+  "year": 2022,
+  "set": null,
+  "topics": [
+    "Computer Networks",
+    "Subnetting"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider an enterprise network with two Ethernet segments, a web server and a firewall, connected via three routers as shown below.<br><br>What is the number of subnets inside the enterprise network?",
+  "assetImage": "question22.png",
+  "codeBlock": null,
+  "options": [
+    "3",
+    "12",
+    "6",
+    "8"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "To find the total number of subnets inside the enterprise network, we count all distinct broadcast domains (networks/links) within the network boundary:<br><br>1. <strong>Left Ethernet Segment:</strong> $1$ subnet connecting the host PCs to the Left Router.<br>2. <strong>Right Ethernet Segment:</strong> $1$ subnet connecting the host PCs to the Right Router.<br>3. <strong>Web Server Segment:</strong> $1$ subnet connecting the Web Server to the Top Router.<br>4. <strong>Firewall to Left Router Link:</strong> $1$ subnet connecting the internal port of the Firewall to the Left Router.<br>5. <strong>Left Router to Top Router Link:</strong> $1$ point-to-point subnet connecting the Left Router and Top Router.<br>6. <strong>Right Router to Top Router Link:</strong> $1$ point-to-point subnet connecting the Right Router and Top Router.<br><br>Total subnets inside the enterprise network = $1 + 1 + 1 + 1 + 1 + 1 = 6$.",
+  "videoUrl": null
+}

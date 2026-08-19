@@ -1,0 +1,22 @@
+{
+  "id": 63,
+  "year": 2022,
+  "set": null,
+  "topics": [
+    "Operating Systems",
+    "File Systems"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider two files systems $A$ and $B$, that use contiguous allocation and linked allocation, respectively. A file of size 100 blocks is already stored in A and also in B. Now, consider inserting a new block in the middle of the file (between $50^{\\text{th}}$ and $51^{\\text{st}}$ block), whose data is already available in the memory. Assume that there are enough free blocks at the end of the file and that the file control blocks are already in memory. Let the number of disk accesses required to insert a block in the middle of the file in $A$ and $B$ are $n_A$ and $n_B$, respectively, then the value of $n_A + n_B$ is ______.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 153,
+    "max": 153
+  },
+  "explanation": "<strong>1. File System A (Contiguous Allocation):</strong><br>To insert a new block after the $50^{\\text{th}}$ block, the remaining $50$ blocks (from $51^{\\text{st}}$ to $100^{\\text{th}}$) must be shifted to make space.<br>- Read $50$ blocks ($51^{\\text{st}}$ to $100^{\\text{th}}$): $50$ disk reads.<br>- Write these $50$ blocks into their new positions: $50$ disk writes.<br>- Write the new block into position $51$: $1$ disk write.<br>Total disk accesses for $A$: $n_A = 50 + 50 + 1 = 101$.<br><br><strong>2. File System B (Linked Allocation):</strong><br>- Traverse from block $1$ to block $50$ to locate insertion point: $50$ disk reads.<br>- Write the new block to disk with pointer set to block $51$: $1$ disk write.<br>- Update block $50$'s pointer to point to the new block and write it back: $1$ disk write.<br>Total disk accesses for $B$: $n_B = 50 + 1 + 1 = 52$.<br><br><strong>Conclusion:</strong><br>$n_A + n_B = 101 + 52 = 153$.",
+  "videoUrl": null
+}

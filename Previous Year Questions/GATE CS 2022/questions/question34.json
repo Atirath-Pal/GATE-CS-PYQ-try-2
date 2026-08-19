@@ -1,0 +1,22 @@
+{
+  "id": 34,
+  "year": 2022,
+  "set": null,
+  "topics": [
+    "Calculus",
+    "Limits"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "The value of the following limit is ____________.<br><br>$$ \\lim_{x \\to 0+} \\frac{\\sqrt{x}}{1 - e^{2\\sqrt{x}}} $$",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": -0.5,
+    "max": -0.5
+  },
+  "explanation": "Let <strong>$L = \\lim_{x \\to 0+} \\frac{\\sqrt{x}}{1 - e^{2\\sqrt{x}}}$</strong>.<br><br>Let $t = \\sqrt{x}$. As $x \\to 0+$, $t \\to 0+$.<br>Substituting $t$ into the limit gives:<br>$$L = \\lim_{t \\to 0+} \\frac{t}{1 - e^{2t}}$$ <br><br>If we substitute $t = 0$ directly, we get the indeterminate form $\\frac{0}{0}$.<br>Applying L'Hôpital's rule by differentiating the numerator and the denominator with respect to $t$:<br>$$L = \\lim_{t \\to 0+} \\frac{\\frac{d}{dt}(t)}{\\frac{d}{dt}(1 - e^{2t})}$$<br>$$L = \\lim_{t \\to 0+} \\frac{1}{-2e^{2t}}$$<br><br>Now, substitute $t = 0$:<br>$$L = \\frac{1}{-2e^0} = \\frac{1}{-2(1)} = -0.5$$<br><br>Thus, the value of the limit is <strong>-0.5</strong>.",
+  "videoUrl": null
+}

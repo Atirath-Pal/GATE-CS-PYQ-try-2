@@ -1,0 +1,26 @@
+{
+  "id": 43,
+  "year": 2022,
+  "set": null,
+  "topics": [
+    "Programming and Data Structures",
+    "C Programming"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "What is printed by the following ANSI C program?",
+  "assetImage": null,
+  "codeBlock": "#include<stdio.h>\nint main(int argc, char *argv[])\n{\n    int a[3][3][3] =\n        {{1, 2, 3, 4, 5, 6, 7, 8, 9},\n         {10, 11, 12, 13, 14, 15, 16, 17, 18},\n         {19, 20, 21, 22, 23, 24, 25, 26, 27}};\n    int i = 0, j = 0, k = 0;\n    for( i = 0; i < 3; i++ ){\n        for( k = 0; k < 3; k++ )\n            printf(\"%d \", a[i][j][k]);\n        printf(\"\\n\");\n    }\n    return 0;\n}",
+  "options": [
+    "1 2 3 \n10 11 12 \n19 20 21",
+    "1 4 7 \n10 13 16 \n19 22 25",
+    "1 2 3 \n4 5 6 \n7 8 9",
+    "1 2 3 \n13 14 15 \n25 26 27"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step 1: Understanding Array Initialization</strong><br>The 3D array $a[3][3][3]$ is initialized as three 2D blocks of size $3 \\times 3$:<br>- Block $a[0]$ contains values from $1$ to $9$:<br>  $a[0][0][0] = 1, a[0][0][1] = 2, a[0][0][2] = 3$<br>  $a[0][1][0] = 4, a[0][1][1] = 5, a[0][1][2] = 6$<br>  $a[0][2][0] = 7, a[0][2][1] = 8, a[0][2][2] = 9$<br>- Block $a[1]$ contains values from $10$ to $18$, where $a[1][0][0] = 10, a[1][0][1] = 11, a[1][0][2] = 12$, etc.<br>- Block $a[2]$ contains values from $19$ to $27$, where $a[2][0][0] = 19, a[2][0][1] = 20, a[2][0][2] = 21$, etc.<br><br><strong>Step 2: Loop Execution Analysis</strong><br>The variable $j$ remains fixed at $0$ throughout execution.<br>1. <strong>For $i = 0$:</strong><br>The inner loop prints $a[0][0][k]$ for $k = 0, 1, 2$, which outputs: <strong>1 2 3</strong>, followed by a newline.<br>2. <strong>For $i = 1$:</strong><br>The inner loop prints $a[1][0][k]$ for $k = 0, 1, 2$, which outputs: <strong>10 11 12</strong>, followed by a newline.<br>3. <strong>For $i = 2$:</strong><br>The inner loop prints $a[2][0][k]$ for $k = 0, 1, 2$, which outputs: <strong>19 20 21</strong>, followed by a newline.<br><br>Hence, option <strong>(A)</strong> is correct.",
+  "videoUrl": null
+}

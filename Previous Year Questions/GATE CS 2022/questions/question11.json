@@ -1,0 +1,26 @@
+{
+  "id": 11,
+  "year": 2022,
+  "set": null,
+  "topics": [
+    "Algorithms",
+    "Asymptotic Analysis"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Which one of the following statements is TRUE for all positive functions $f(n)$?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$f(n^2) = \\Theta(f(n)^2)$, when $f(n)$ is a polynomial",
+    "$f(n^2) = o(f(n)^2)$",
+    "$f(n^2) = O(f(n)^2)$, when $f(n)$ is an exponential function",
+    "$f(n^2) = \\Omega(f(n)^2)$"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step-by-step analysis:</strong><br><br><strong>Option (A):</strong> Let $f(n) = c \\cdot n^k + \\dots$ be a polynomial of degree $k > 0$.<br>• $f(n^2) = c \\cdot (n^2)^k + \\dots = c \\cdot n^{2k} + \\dots$<br>• $(f(n))^2 = (c \\cdot n^k + \\dots)^2 = c^2 \\cdot n^{2k} + \\dots$<br>Since both $f(n^2)$ and $(f(n))^2$ are asymptotically bounded by $n^{2k}$, we have $f(n^2) = \\Theta(f(n)^2)$. Thus, statement (A) is <strong>TRUE</strong>.<br><br><strong>Option (B):</strong> Consider $f(n) = n$. Then $f(n^2) = n^2$ and $(f(n))^2 = n^2$, so $f(n^2) = \\Theta(f(n)^2)$, which contradicts $f(n^2) = o(f(n)^2)$. Thus, statement (B) is <strong>FALSE</strong>.<br><br><strong>Option (C):</strong> Consider $f(n) = 2^n$. Here $f(n^2) = 2^{n^2}$ and $(f(n))^2 = 2^{2n}$. Since $2^{n^2}$ grows strictly faster than $2^{2n}$, $f(n^2) \\neq O(f(n)^2)$. Thus, statement (C) is <strong>FALSE</strong>.<br><br><strong>Option (D):</strong> Consider $f(n) = 2^{-n}$. Here $f(n^2) = 2^{-n^2}$ and $(f(n))^2 = 2^{-2n}$. For $n > 2$, $2^{-n^2} < 2^{-2n}$, so $f(n^2) = o(f(n)^2)$, meaning $f(n^2) \\neq \\Omega(f(n)^2)$. Thus, statement (D) is <strong>FALSE</strong>.",
+  "videoUrl": null
+}

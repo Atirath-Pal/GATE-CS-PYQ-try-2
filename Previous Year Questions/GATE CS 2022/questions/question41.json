@@ -1,0 +1,21 @@
+{
+  "id": 41,
+  "year": "2022",
+  "set": null,
+  "topics": ["Computer Organization and Architecture", "Data Representation"],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider three floating point numbers $A$, $B$ and $C$ stored in registers $\\text{R}_\\text{A}$, $\\text{R}_\\text{B}$ and $\\text{R}_\\text{C}$, respectively as per IEEE-754 single precision floating point format. The 32-bit content stored in these registers (in hexadecimal form) are as follows.<br><br>| $\\text{R}_\\text{A} = \\text{0xC1400000}$ | $\\text{R}_\\text{B} = \\text{0x42100000}$ | $\\text{R}_\\text{C} = \\text{0x41400000}$ |<br><br>Which one of the following is FALSE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$A + C = 0$",
+    "$C = A + B$",
+    "$B = 3C$",
+    "$(B - C) > 0$"
+  ],
+  "answer": ["B"],
+  "explanation": "<strong>Step 1: Convert register values from IEEE-754 single precision format to decimal values.</strong><br><br>The IEEE-754 single precision floating point representation consists of:<br>• Sign bit ($S$): 1 bit<br>• Biased Exponent ($E$): 8 bits (Bias = 127)<br>• Mantissa/Fraction ($M$): 23 bits<br><br>Value $= (-1)^S \\times (1.M) \\times 2^{E - 127}$<br><br><strong>1. For Register $\\text{R}_\\text{A} = \\text{0xC1400000}$:</strong><br>• Binary: $1\\ 10000010\\ 10000000000000000000000$<br>• $S = 1$ (Negative)<br>• $E = 10000010_2 = 130 \\implies \\text{Actual Exponent} = 130 - 127 = 3$<br>• Mantissa = $0.1_2 = 0.5 \\implies 1.M = 1.5$<br>• $A = -1 \\times 1.5 \\times 2^3 = -12$<br><br><strong>2. For Register $\\text{R}_\\text{B} = \\text{0x42100000}$:</strong><br>• Binary: $0\\ 10000100\\ 00100000000000000000000$<br>• $S = 0$ (Positive)<br>• $E = 10000100_2 = 132 \\implies \\text{Actual Exponent} = 132 - 127 = 5$<br>• Mantissa = $0.001_2 = 0.125 \\implies 1.M = 1.125$<br>• $B = 1 \\times 1.125 \\times 2^5 = 36$<br><br><strong>3. For Register $\\text{R}_\\text{C} = \\text{0x41400000}$:</strong><br>• Binary: $0\\ 10000010\\ 10000000000000000000000$<br>• $S = 0$ (Positive)<br>• $E = 10000010_2 = 130 \\implies \\text{Actual Exponent} = 130 - 127 = 3$<br>• Mantissa = $0.1_2 = 0.5 \\implies 1.M = 1.5$<br>• $C = 1 \\times 1.5 \\times 2^3 = 12$<br><br><strong>Step 2: Check each option.</strong><br>• Option A: $A + C = -12 + 12 = 0$ (True)<br>• Option B: $C = A + B \\implies 12 = -12 + 36 = 24$ (False)<br>• Option C: $B = 3C \\implies 36 = 3 \\times 12 = 36$ (True)<br>• Option D: $(B - C) > 0 \\implies (36 - 12) = 24 > 0$ (True)<br><br>Hence, option B is FALSE.",
+  "videoUrl": null
+}

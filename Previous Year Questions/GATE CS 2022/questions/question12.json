@@ -1,0 +1,21 @@
+{
+  "id": 12,
+  "year": 2022,
+  "set": null,
+  "topics": ["Theory of Computation", "Regular Expressions"],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Which one of the following regular expressions correctly represents the language of the finite automaton given below?",
+  "assetImage": "question12.png",
+  "codeBlock": null,
+  "options": [
+    "$ab^*bab^* + ba^*aba^*$",
+    "$(ab^*b)^*ab^* + (ba^*a)^*ba^*$",
+    "$(ab^*b + ba^*a)^*(a^* + b^*)$",
+    "$(ba^*a + ab^*b)^*(ab^* + ba^*)$"
+  ],
+  "answer": ["D"],
+  "explanation": "Let $q_0$ be the initial state (middle state), $q_1$ be the top final state, and $q_2$ be the bottom final state.<br><br><strong>1. Loops returning to initial state $q_0$:</strong><br>- Path going through $q_1$ and returning to $q_0$: $ab^*b$<br>- Path going through $q_2$ and returning to $q_0$: $ba^*a$<br>Any combination of these loops returning to $q_0$ can be repeated zero or more times, represented as $(ba^*a + ab^*b)^*$.<br><br><strong>2. Reaching a final state from $q_0$:</strong><br>- Transition to top final state $q_1$: $ab^*$<br>- Transition to bottom final state $q_2$: $ba^*$<br>So, ending at either final state is represented as $(ab^* + ba^*)$.<br><br><strong>3. Combining both parts:</strong><br>The complete regular expression is $(ba^*a + ab^*b)^*(ab^* + ba^*)$.<br><br>Therefore, <strong>Option (D)</strong> is correct.",
+  "videoUrl": null
+}

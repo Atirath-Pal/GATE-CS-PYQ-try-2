@@ -1,0 +1,22 @@
+{
+  "id": 30,
+  "year": "2022",
+  "set": null,
+  "topics": [
+    "Graph Theory",
+    "Discrete Mathematics"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider a simple undirected graph of 10 vertices. If the graph is disconnected, then the maximum number of edges it can have is ____________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 36,
+    "max": 36
+  },
+  "explanation": "<strong>Step-by-step explanation:</strong><br><br><strong>1. Concept:</strong><br>To maximize the number of edges in a disconnected simple undirected graph with $n$ vertices, the graph should be partitioned into two components: one component containing a single isolated vertex, and the other component being a complete graph with the remaining $n - 1$ vertices.<br><br><strong>2. Formula:</strong><br>The maximum number of edges in a disconnected simple graph on $n$ vertices is given by:<br>$\\frac{(n-1)(n-2)}{2}$<br><br><strong>3. Calculation:</strong><br>Here, $n = 10$.<br>$\\text{Maximum Edges} = \\frac{(10 - 1)(10 - 2)}{2} = \\frac{9 \\times 8}{2} = 36$<br><br>Thus, the maximum number of edges the graph can have is <strong>36</strong>.",
+  "videoUrl": null
+}

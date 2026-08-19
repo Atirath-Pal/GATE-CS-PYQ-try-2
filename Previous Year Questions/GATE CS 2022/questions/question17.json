@@ -1,0 +1,21 @@
+{
+  "id": 17,
+  "year": 2022,
+  "set": null,
+  "topics": ["Computer Organization", "I/O Interface"],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Which one of the following facilitates transfer of bulk data from hard disk to main memory with the highest throughput?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "DMA based I/O transfer",
+    "Interrupt driven I/O transfer",
+    "Polling based I/O transfer",
+    "Programmed I/O transfer"
+  ],
+  "answer": ["A"],
+  "explanation": "<strong>Direct Memory Access (DMA)</strong> allows hardware subsystems, such as a hard disk controller, to access main memory directly without continuous CPU intervention.<br><br>In DMA-based transfer, after the CPU initializes the controller with the transfer details (memory address and word count), the transfer of bulk data occurs directly between the disk and main memory. This minimizes CPU overhead and achieves the highest throughput.<br><br>In contrast, <strong>Programmed I/O</strong>, <strong>Polling</strong>, and <strong>Interrupt driven I/O</strong> involve CPU interaction for every byte or word transferred, resulting in significant overhead and lower throughput.<br><br>Therefore, option <strong>(A)</strong> is correct.",
+  "videoUrl": null
+}

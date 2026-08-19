@@ -1,0 +1,26 @@
+{
+  "id": 1,
+  "year": 2022,
+  "set": null,
+  "topics": [
+    "General Aptitude",
+    "Verbal Ability"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "The __________ is too high for it to be considered __________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "fair / fare",
+    "faer / fair",
+    "fare / fare",
+    "fare / fair"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Step-by-Step Explanation:</strong><br><br>1. <strong>Fare</strong> refers to the price charged or money paid for a journey (e.g., transport cost or ticket price).<br>2. <strong>Fair</strong> means reasonable, acceptable, or equitable.<br><br>In the context of the sentence:<br>• The first blank specifies the cost being discussed, so <strong>fare</strong> is appropriate.<br>• The second blank specifies whether that cost is reasonable, so <strong>fair</strong> is appropriate.<br><br>The complete sentence is: \"The <strong>fare</strong> is too high for it to be considered <strong>fair</strong>.\"<br><br>Therefore, the correct choice is <strong>(D)</strong>.",
+  "videoUrl": null
+}

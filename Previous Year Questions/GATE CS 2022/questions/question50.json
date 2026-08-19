@@ -1,0 +1,28 @@
+{
+  "id": 50,
+  "year": 2022,
+  "set": null,
+  "topics": [
+    "Discrete Mathematics",
+    "Graph Theory"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "The following simple undirected graph is referred to as the Peterson graph.<br><br>Which of the following statements is/are TRUE?",
+  "assetImage": "question50.png",
+  "codeBlock": null,
+  "options": [
+    "The chromatic number of the graph is 3.",
+    "The graph has a Hamiltonian path.",
+    "The following graph is isomorphic to the Peterson graph.<br><br><img src=\"/Previous Year Questions/GATE CS 2022/assets/question50_option_c.png\" alt=\"Option C Graph\">",
+    "The size of the largest independent set of the given graph is 3. (A subset of vertices of a graph form an independent set if no two vertices of the subset are adjacent.)"
+  ],
+  "answer": [
+    "A",
+    "B",
+    "C"
+  ],
+  "explanation": "<strong>Analysis of Options:</strong><br><br><strong>Statement (A):</strong> The chromatic number $\\chi(G)$ of the Petersen graph is 3. Since it contains 5-cycles (odd cycles), it cannot be 2-colorable. Exactly 3 colors are sufficient to properly color all 10 vertices such that no adjacent vertices share the same color. Hence, Statement (A) is <strong>TRUE</strong>.<br><br><strong>Statement (B):</strong> The Petersen graph is famous for being non-Hamiltonian (it does not contain a Hamiltonian cycle). However, it does contain a Hamiltonian path that visits all 10 vertices sequentially without repeating. Hence, Statement (B) is <strong>TRUE</strong>.<br><br><strong>Statement (C):</strong> The given graph in Option (C) consists of 10 vertices, is 3-regular, has a girth of 5, and shares identical structural properties and vertex adjacency with the Petersen graph. Therefore, it is isomorphic to the Petersen graph. Hence, Statement (C) is <strong>TRUE</strong>.<br><br><strong>Statement (D):</strong> The independence number $\\alpha(G)$ (the size of the largest independent set) of the Petersen graph is 4, not 3. An independent set of 4 vertices can easily be formed (for instance, picking 4 non-adjacent vertices from the inner and outer cycles). Hence, Statement (D) is <strong>FALSE</strong>.<br><br>Therefore, the correct options are <strong>A, B, and C</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,21 @@
+{
+  "id": 9,
+  "year": 2022,
+  "set": null,
+  "topics": ["General Aptitude", "Spatial Aptitude"],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "The corners and mid-points of the sides of a triangle are named using the distinct letters P, Q, R, S, T and U, but not necessarily in the same order. Consider the following statements:<br><br>• The line joining P and R is parallel to the line joining Q and S.<br>• P is placed on the side opposite to the corner T.<br>• S and U cannot be placed on the same side.<br><br>Which one of the following statements is correct based on the above information?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "P cannot be placed at a corner",
+    "S cannot be placed at a corner",
+    "U cannot be placed at a mid-point",
+    "R cannot be placed at a corner"
+  ],
+  "answer": ["B"],
+  "explanation": "<strong>Step 1: Understand the positions on a triangle</strong><br>A triangle has 3 corner points (vertices) and 3 mid-points on its sides, giving a total of 6 positions for $P, Q, R, S, T, U$.<br><br><strong>Step 2: Analyze parallel line segments</strong><br>In a triangle, two line segments formed by these 6 points can only be parallel if one segment connects two mid-points (a mid-segment) and the other segment lies along the base side opposite to that mid-segment.<br><br><strong>Step 3: Analyze constraints on $S$</strong><br>Since the line joining $P$ and $R$ is parallel to the line joining $Q$ and $S$, one pair must consist of two mid-points and the other pair must lie on the base side.<br>If $S$ were at a corner, it would lie on a side. But given the conditions that $S$ and $U$ cannot be on the same side and $P$ is opposite to corner $T$, placing $S$ at a corner leads to a contradiction in placing the remaining points without violating side-exclusivity.<br><br>Therefore, <strong>S cannot be placed at a corner</strong> (it must be at a mid-point).",
+  "videoUrl": null
+}

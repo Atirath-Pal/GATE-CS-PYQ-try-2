@@ -1,0 +1,22 @@
+{
+  "id": 33,
+  "year": 2022,
+  "set": null,
+  "topics": [
+    "Computer Organization",
+    "Cache Memory"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "A cache memory that has a hit rate of 0.8 has an access latency 10 ns and miss penalty 100 ns. An optimization is done on the cache to reduce the miss rate. However, the optimization results in an increase of cache access latency to 15 ns, whereas the miss penalty is not affected. The minimum hit rate (<i>rounded off to two decimal places</i>) needed after the optimization such that it should not increase the average memory access time is __________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 0.85,
+    "max": 0.85
+  },
+  "explanation": "<strong>Step 1: Calculate initial Average Memory Access Time ($AMAT_1$)</strong><br>Initial hit rate ($h_1$) = $0.8$<br>Initial cache access latency ($t_{c1}$) = $10\\text{ ns}$<br>Miss penalty ($t_m$) = $100\\text{ ns}$<br>$AMAT_1 = t_{c1} + (1 - h_1) \\times t_m$<br>$AMAT_1 = 10 + (1 - 0.8) \\times 100 = 10 + 0.2 \\times 100 = 30\\text{ ns}$<br><br><strong>Step 2: Set up equation for optimized $AMAT_2$</strong><br>New cache access latency ($t_{c2}$) = $15\\text{ ns}$<br>Let $h_2$ be the new hit rate.<br>$AMAT_2 = t_{c2} + (1 - h_2) \\times t_m$<br>$AMAT_2 = 15 + (1 - h_2) \\times 100$<br><br><strong>Step 3: Calculate minimum hit rate $h_2$</strong><br>To ensure that the optimization does not increase the average memory access time:<br>$AMAT_2 \\le AMAT_1$<br>$15 + (1 - h_2) \\times 100 \\le 30$<br>$(1 - h_2) \\times 100 \\le 15$<br>$1 - h_2 \\le 0.15$<br>$h_2 \\ge 0.85$<br><br>Therefore, the minimum hit rate needed after optimization is <strong>0.85</strong>.",
+  "videoUrl": null
+}

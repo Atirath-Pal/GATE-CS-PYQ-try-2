@@ -1,0 +1,28 @@
+{
+  "id": 48,
+  "year": "2022",
+  "set": null,
+  "topics": [
+    "Theory of Computation",
+    "Context-Free Languages"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the following languages:<br><br>$L_1 = \\{ww \\mid w \\in \\{a,b\\}^*\\}$<br><br>$L_2 = \\{a^n b^n c^m \\mid m,n \\ge 0\\}$<br><br>$L_3 = \\{a^m b^n c^n \\mid m,n \\ge 0\\}$<br><br>Which of the following statements is/are FALSE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$L_1$ is not context-free but $L_2$ and $L_3$ are deterministic context-free.",
+    "Neither $L_1$ nor $L_2$ is context-free.",
+    "$L_2$, $L_3$ and $L_2 \\cap L_3$ all are context-free.",
+    "Neither $L_1$ nor its complement is context-free."
+  ],
+  "answer": [
+    "B",
+    "C",
+    "D"
+  ],
+  "explanation": "<strong>Analysis of the given languages:</strong><br>1. $L_1 = \\{ww \\mid w \\in \\{a,b\\}^*\\}$ is a well-known non-context-free language (CSL) because matching two identical variable strings requires memory beyond a single stack pushdown automaton. However, its complement $\\overline{L_1}$ IS context-free.<br>2. $L_2 = \\{a^n b^n c^m \\mid m,n \\ge 0\\}$ is a Deterministic Context-Free Language (DCFL) because a single stack PDA can push $a$'s, match them with $b$'s, and then read any number of $c$'s deterministicly.<br>3. $L_3 = \\{a^m b^n c^n \\mid m,n \\ge 0\\}$ is also a DCFL because it can ignore initial $a$'s and then match $b$'s with $c$'s using a single stack.<br><br><strong>Evaluation of Statements:</strong><br>• <strong>Statement (A):</strong> $L_1$ is not CFL, but $L_2$ and $L_3$ are DCFLs. This statement is <strong>TRUE</strong>.<br>• <strong>Statement (B):</strong> Claims $L_2$ is not CFL. Since $L_2$ is a DCFL (and thus CFL), this statement is <strong>FALSE</strong>.<br>• <strong>Statement (C):</strong> $L_2 \\cap L_3 = \\{a^n b^n c^n \\mid n \\ge 0\\}$, which is a classic non-context-free language. Thus, claiming $L_2 \\cap L_3$ is context-free makes this statement <strong>FALSE</strong>.<br>• <strong>Statement (D):</strong> Claims neither $L_1$ nor its complement is context-free. While $L_1$ is not CFL, its complement $\\overline{L_1}$ IS context-free, making this statement <strong>FALSE</strong>.<br><br>Since the question asks for statements that are <strong>FALSE</strong>, options <strong>B, C, and D</strong> are the correct answers.",
+  "videoUrl": null
+}

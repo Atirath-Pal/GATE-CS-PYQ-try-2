@@ -1,0 +1,22 @@
+{
+  "id": 61,
+  "year": 2022,
+  "set": null,
+  "topics": [
+    "Computer Organization",
+    "Pipelining"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "A processor $X_1$ operating at $2\\text{ GHz}$ has a standard 5-stage RISC instruction pipeline having a base CPI (cycles per instruction) of one without any pipeline hazards. For a given program P that has 30% branch instructions, control hazards incur 2 cycles stall for every branch. A new version of the processor $X_2$ operating at same clock frequency has an additional branch predictor unit (BPU) that completely eliminates stalls for correctly predicted branches. There is neither any savings nor any additional stalls for wrong predictions. There are no structural hazards and data hazards for $X_1$ and $X_2$. If the BPU has a prediction accuracy of 80%, the speed up (rounded off to two decimal places) obtained by $X_2$ over $X_1$ in executing P is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 1.42,
+    "max": 1.45
+  },
+  "explanation": "<strong>Step 1: Calculate the CPI for Processor $X_1$</strong><br>Base CPI = $1$<br>Percentage of branch instructions = $30\\% = 0.3$<br>Stalls per branch instruction = $2$ cycles<br>Average stall per instruction for $X_1 = 0.3 \\times 2 = 0.6$<br>$\\text{CPI}_{X_1} = \\text{Base CPI} + \\text{Average Stall} = 1 + 0.6 = 1.6$<br><br><strong>Step 2: Calculate the CPI for Processor $X_2$</strong><br>BPU prediction accuracy = $80\\% = 0.8$<br>Misprediction rate = $1 - 0.8 = 0.2$<br>For wrong predictions, stall cycles per branch = $2$<br>For correct predictions, stall cycles per branch = $0$<br>Stalls per branch instruction in $X_2 = 0.2 \\times 2 = 0.4$ cycles<br>Average stall per instruction for $X_2 = 0.3 \\times 0.4 = 0.12$<br>$\\text{CPI}_{X_2} = 1 + 0.12 = 1.12$<br><br><strong>Step 3: Calculate Speedup</strong><br>Since both processors operate at the same clock frequency ($2\\text{ GHz}$) and execute the same program P:<br>$\\text{Speedup} = \\frac{\\text{CPI}_{X_1}}{\\text{CPI}_{X_2}} = \\frac{1.6}{1.12} = \\frac{10}{7} \\approx 1.43$<br><br>Thus, the speedup obtained by $X_2$ over $X_1$ is approximately <strong>1.43</strong>.",
+  "videoUrl": null
+}

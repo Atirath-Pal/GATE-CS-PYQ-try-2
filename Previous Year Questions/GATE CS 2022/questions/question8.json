@@ -1,0 +1,26 @@
+{
+  "id": 8,
+  "year": "2022",
+  "set": null,
+  "topics": [
+    "General Aptitude",
+    "Probability"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "A box contains five balls of same size and shape. Three of them are green coloured balls and two of them are orange coloured balls. Balls are drawn from the box one at a time. If a green ball is drawn, it is not replaced. If an orange ball is drawn, it is replaced with another orange ball.<br><br>First ball is drawn. What is the probability of getting an orange ball in the next draw?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\frac{1}{2}$",
+    "$\\frac{8}{25}$",
+    "$\\frac{19}{50}$",
+    "$\\frac{23}{50}$"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Step-by-step solution:</strong><br><br><strong>Initial State:</strong><br>• Green balls = 3<br>• Orange balls = 2<br>• Total balls = 5<br><br>We need to find the total probability of drawing an orange ball on the second draw, $P(O_2)$. There are two mutually exclusive cases for the first draw:<br><br><strong>Case 1: First ball drawn is Green ($G_1$)</strong><br>• $P(G_1) = \\frac{3}{5}$<br>• Since the green ball is not replaced, remaining balls in the box are 2 green and 2 orange (Total = 4).<br>• Conditional probability of drawing an orange ball next: $P(O_2 | G_1) = \\frac{2}{4} = \\frac{1}{2}$<br>• Joint probability = $P(G_1) \\times P(O_2 | G_1) = \\frac{3}{5} \\times \\frac{1}{2} = \\frac{3}{10} = \\frac{15}{50}$<br><br><strong>Case 2: First ball drawn is Orange ($O_1$)</strong><br>• $P(O_1) = \\frac{2}{5}$<br>• Since the orange ball is replaced with another orange ball, the box contents remain 3 green and 2 orange (Total = 5).<br>• Conditional probability of drawing an orange ball next: $P(O_2 | O_1) = \\frac{2}{5}$<br>• Joint probability = $P(O_1) \\times P(O_2 | O_1) = \\frac{2}{5} \\times \\frac{2}{5} = \\frac{4}{25} = \\frac{8}{50}$<br><br><strong>Total Probability:</strong><br>$$P(O_2) = P(G_1 \\cap O_2) + P(O_1 \\cap O_2) = \\frac{15}{50} + \\frac{8}{50} = \\frac{23}{50}$$<br><br>Hence, option <strong>(D)</strong> is correct.",
+  "videoUrl": null
+}

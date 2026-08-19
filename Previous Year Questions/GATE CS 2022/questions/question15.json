@@ -1,0 +1,26 @@
+{
+  "id": 15,
+  "year": 2022,
+  "set": null,
+  "topics": [
+    "Data Structures",
+    "Linked List"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the problem of reversing a singly linked list. To take an example, given the linked list below,<br><br><img src=\"/Previous Year Questions/GATE CS 2022/assets/question15_1.png\" alt=\"Original Linked List\"><br><br>the reversed linked list should look like<br><br><img src=\"/Previous Year Questions/GATE CS 2022/assets/question15_2.png\" alt=\"Reversed Linked List\"><br><br>Which one of the following statements is TRUE about the time complexity of algorithms that solve the above problem in $O(1)$ space?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "The best algorithm for the problem takes $\\theta(n)$ time in the worst case.",
+    "The best algorithm for the problem takes $\\theta(n \\log n)$ time in the worst case.",
+    "The best algorithm for the problem takes $\\theta(n^2)$ time in the worst case.",
+    "It is not possible to reverse a singly linked list in $O(1)$ space."
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step 1: Algorithm Strategy</strong><br>A singly linked list can be reversed in-place using an iterative three-pointer approach (e.g., <code>prev</code>, <code>current</code>, and <code>next</code>).<br><br><strong>Step 2: Complexity Analysis</strong><br><strong>Time Complexity:</strong> The algorithm traverses through each node of the linked list of length $n$ exactly once. Pointer manipulations for each node take $O(1)$ time, yielding a total worst-case time complexity of $\\theta(n)$.<br><strong>Space Complexity:</strong> It only uses a few auxiliary pointer variables regardless of the size of the list, resulting in $O(1)$ extra space.<br><br><strong>Step 3: Conclusion</strong><br>Since it is possible to reverse a singly linked list in $O(1)$ auxiliary space within $\\theta(n)$ worst-case time, statement (A) is correct.",
+  "videoUrl": null
+}

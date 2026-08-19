@@ -1,0 +1,22 @@
+{
+  "id": 31,
+  "year": "2022",
+  "set": null,
+  "topics": [
+    "Database Management System",
+    "Functional Dependency"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider a relation $R(A, B, C, D, E)$ with the following three functional dependencies.<br><br>$AB \\rightarrow C; \\quad BC \\rightarrow D; \\quad C \\rightarrow E;$<br><br>The number of superkeys in the relation R is ____________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 8,
+    "max": 8
+  },
+  "explanation": "<strong>Step 1: Identify essential attributes</strong><br>The attributes $A$ and $B$ do not appear on the right-hand side of any given functional dependency ($AB \\rightarrow C$, $BC \\rightarrow D$, $C \\rightarrow E$). Therefore, $A$ and $B$ must be present in every candidate key.<br><br><strong>Step 2: Find the closure of $AB$</strong><br>$(AB)^+ = \\{A, B\\}$<br>Using $AB \\rightarrow C$, $(AB)^+ = \\{A, B, C\\}$<br>Using $BC \\rightarrow D$, $(AB)^+ = \\{A, B, C, D\\}$<br>Using $C \\rightarrow E$, $(AB)^+ = \\{A, B, C, D, E\\}$<br><br>Since $(AB)^+$ contains all attributes of relation $R$, $AB$ is a candidate key. Since $A$ and $B$ are essential, $AB$ is the only candidate key.<br><br><strong>Step 3: Calculate the number of superkeys</strong><br>A superkey is any set of attributes containing a candidate key. Since $AB$ is the only candidate key, any superkey must contain $A$ and $B$.<br><br>The remaining attributes are $C, D,$ and $E$ (3 attributes).<br>Number of superkeys = $2^3 = 8$.",
+  "videoUrl": null
+}

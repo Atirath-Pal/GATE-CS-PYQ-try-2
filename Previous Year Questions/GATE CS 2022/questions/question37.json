@@ -1,0 +1,26 @@
+{
+  "id": 37,
+  "year": 2022,
+  "set": null,
+  "topics": [
+    "Graph Theory",
+    "Discrete Mathematics"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider a simple undirected unweighted graph with at least three vertices. If $A$ is the adjacency matrix of the graph, then the number of 3-cycles in the graph is given by the trace of",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$A^3$",
+    "$A^3$ divided by 2",
+    "$A^3$ divided by 3",
+    "$A^3$ divided by 6"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Step-by-step explanation:</strong><br><br>1. Let $A$ be the adjacency matrix of a simple undirected graph $G$. The entry $(A^k)_{ij}$ gives the number of walks of length $k$ from vertex $i$ to vertex $j$.<br><br>2. Therefore, the diagonal entry $(A^3)_{ii}$ gives the number of closed walks of length 3 starting and ending at vertex $i$.<br><br>3. The trace of $A^3$, defined as $\\text{Tr}(A^3) = \\sum_{i} (A^3)_{ii}$, represents the total number of closed walks of length 3 in the entire graph.<br><br>4. In a simple undirected graph, a single 3-cycle (triangle) on vertices $\\{u, v, w\\}$ corresponds to 6 distinct directed closed walks of length 3:<br>- $u \\to v \\to w \\to u$<br>- $u \\to w \\to v \\to u$<br>- $v \\to w \\to u \\to v$<br>- $v \\to u \\to w \\to v$<br>- $w \\to u \\to v \\to w$<br>- $w \\to v \\to u \\to w$<br><br>5. Since each 3-cycle is counted 6 times in $\\text{Tr}(A^3)$, the total number of 3-cycles is equal to $\\frac{\\text{Tr}(A^3)}{6}$.<br><br>Therefore, the number of 3-cycles is given by the trace of $A^3$ divided by 6.",
+  "videoUrl": null
+}

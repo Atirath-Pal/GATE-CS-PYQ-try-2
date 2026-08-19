@@ -1,0 +1,26 @@
+{
+  "id": 44,
+  "year": 2022,
+  "set": null,
+  "topics": [
+    "Programming and Data Structures",
+    "C Programming"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "What is printed by the following ANSI C program?<br><br>ASCII encoding for relevant characters is given below:<br><br><div style=\"display: flex; gap: 24px; justify-content: center; align-items: flex-start; margin: 16px 0; flex-wrap: wrap;\"><table style=\"border-collapse: collapse; text-align: center; border: 1px solid #ffffff;\"><thead><tr style=\"border-bottom: 1px solid #ffffff;\"><th style=\"border: 1px solid #ffffff; padding: 6px 12px;\">A</th><th style=\"border: 1px solid #ffffff; padding: 6px 12px;\">B</th><th style=\"border: 1px solid #ffffff; padding: 6px 12px;\">C</th><th style=\"border: 1px solid #ffffff; padding: 6px 12px;\">...</th><th style=\"border: 1px solid #ffffff; padding: 6px 12px;\">Z</th></tr></thead><tbody><tr><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">65</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">66</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">67</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">...</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">90</td></tr></tbody></table><table style=\"border-collapse: collapse; text-align: center; border: 1px solid #ffffff;\"><thead><tr style=\"border-bottom: 1px solid #ffffff;\"><th style=\"border: 1px solid #ffffff; padding: 6px 12px;\">a</th><th style=\"border: 1px solid #ffffff; padding: 6px 12px;\">b</th><th style=\"border: 1px solid #ffffff; padding: 6px 12px;\">c</th><th style=\"border: 1px solid #ffffff; padding: 6px 12px;\">...</th><th style=\"border: 1px solid #ffffff; padding: 6px 12px;\">z</th></tr></thead><tbody><tr><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">97</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">98</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">99</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">...</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">122</td></tr></tbody></table></div><div style=\"display: flex; justify-content: center; margin: 16px 0;\"><table style=\"border-collapse: collapse; text-align: center; border: 1px solid #ffffff;\"><thead><tr style=\"border-bottom: 1px solid #ffffff;\"><th style=\"border: 1px solid #ffffff; padding: 6px 12px;\">*</th><th style=\"border: 1px solid #ffffff; padding: 6px 12px;\">+</th><th style=\"border: 1px solid #ffffff; padding: 6px 12px;\">-</th></tr></thead><tbody><tr><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">42</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">43</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">45</td></tr></tbody></table></div>",
+  "assetImage": null,
+  "codeBlock": "#include<stdio.h>\n\nint main(int argc, char *argv[]){\n    char a = 'P';\n    char b = 'x';\n    char c = (a & b) + '*';\n    char d = (a | b) - '-';\n    char e = (a ^ b) + '+';\n    printf(\"%c %c %c\\n\", c, d, e);\n    return 0;\n}",
+  "options": [
+    "z K S",
+    "122 75 83",
+    "* - +",
+    "P x +"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step 1: Determine the binary and ASCII representations of 'P' and 'x'</strong><br>- ASCII value of 'P' = $65 + 15 = 80$, which in binary is $01010000_2$.<br>- ASCII value of 'x' = $97 + 23 = 120$, which in binary is $01111000_2$.<br><br><strong>Step 2: Evaluate character variable $c$</strong><br>- Bitwise AND: $a \\& b = 01010000_2 \\& 01111000_2 = 01010000_2 = 80$.<br>- ASCII value of '*' is $42$.<br>- $c = 80 + 42 = 122$.<br>- ASCII $122$ corresponds to character <strong>'z'</strong>.<br><br><strong>Step 3: Evaluate character variable $d$</strong><br>- Bitwise OR: $a \\mid b = 01010000_2 \\mid 01111000_2 = 01111000_2 = 120$.<br>- ASCII value of '-' is $45$.<br>- $d = 120 - 45 = 75$.<br>- ASCII $75$ corresponds to character <strong>'K'</strong>.<br><br><strong>Step 4: Evaluate character variable $e$</strong><br>- Bitwise XOR: $a \\oplus b = 01010000_2 \\oplus 01111000_2 = 00101000_2 = 40$.<br>- ASCII value of '+' is $43$.<br>- $e = 40 + 43 = 83$.<br>- ASCII $83$ corresponds to character <strong>'S'</strong>.<br><br><strong>Step 5: Output format</strong><br>The `printf(\"%c %c %c\\n\", c, d, e);` function prints the characters corresponding to the computed ASCII values separated by spaces: <strong>z K S</strong>.<br><br>Therefore, option <strong>(A)</strong> is correct.",
+  "videoUrl": null
+}

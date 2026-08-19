@@ -1,0 +1,28 @@
+{
+  "id": 49,
+  "year": 2022,
+  "set": null,
+  "topics": [
+    "Algorithms",
+    "Graph Theory"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a simple undirected weighted graph $G$, all of whose edge weights are distinct. Which of the following statements about the minimum spanning trees of $G$ is/are TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "The edge with the second smallest weight is always part of any minimum spanning tree of $G$.",
+    "One or both of the edges with the third smallest and the fourth smallest weights are part of any minimum spanning tree of $G$.",
+    "Suppose $S \\subseteq V$ be such that $S \\neq \\phi$ and $S \\neq V$. Consider the edge with the minimum weight such that one of its vertices is in $S$ and the other in $V \\setminus S$. Such an edge will always be part of any minimum spanning tree of $G$.",
+    "$G$ can have multiple minimum spanning trees."
+  ],
+  "answer": [
+    "A",
+    "B",
+    "C"
+  ],
+  "explanation": "<strong>Statement (A) is TRUE:</strong><br>In a simple graph, the edge with the smallest weight $e_1$ never forms a cycle and is always in the MST. The edge with the second smallest weight $e_2$ can only form a cycle with $e_1$ if there are parallel edges. Since $G$ is a simple graph, $e_1$ and $e_2$ cannot form a cycle, so $e_2$ is always included in the MST.<br><br><strong>Statement (B) is TRUE:</strong><br>The edge with the third smallest weight $e_3$ is excluded from the MST only if $e_1, e_2, e_3$ form a cycle among 3 vertices. If $e_3$ is excluded, all pairs among these 3 vertices are already connected by $e_1$ and $e_2$. Since $G$ is simple, $e_4$ cannot connect two of these same 3 vertices (no multi-edges). Thus, $e_4$ cannot form a cycle solely using the previously processed edges and must be included. Therefore, $e_3$ and $e_4$ cannot both be excluded.<br><br><strong>Statement (C) is TRUE:</strong><br>This statement is the precise formulation of the <strong>Cut Property</strong> of Minimum Spanning Trees, which guarantees that the lightest edge crossing any cut $(S, V \\setminus S)$ must belong to the MST.<br><br><strong>Statement (D) is FALSE:</strong><br>When all edge weights in a connected undirected graph are distinct, the graph has a <strong>unique</strong> Minimum Spanning Tree. Therefore, $G$ cannot have multiple minimum spanning trees.",
+  "videoUrl": null
+}

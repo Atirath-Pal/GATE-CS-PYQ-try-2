@@ -1,0 +1,28 @@
+{
+  "id": 46,
+  "year": 2022,
+  "set": null,
+  "topics": [
+    "Theory of Computation",
+    "Undecidability"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Which of the following is/are undecidable?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Given two Turing machines $M_1$ and $M_2$, decide if $L(M_1) = L(M_2)$.",
+    "Given a Turing machine $M$, decide if $L(M)$ is regular.",
+    "Given a Turing machine $M$, decide if $M$ accepts all strings.",
+    "Given a Turing machine $M$, decide if $M$ takes more than 1073 steps on every string."
+  ],
+  "answer": [
+    "A",
+    "B",
+    "C"
+  ],
+  "explanation": "<strong>Analysis of Options:</strong><br><br><strong>(A) Equivalence Problem:</strong> Deciding whether $L(M_1) = L(M_2)$ for two arbitrary Turing machines is a well-known undecidable problem. Hence, Option A is <strong>undecidable</strong>.<br><br><strong>(B) Regularity Problem:</strong> Checking whether $L(M)$ is a regular language is a non-trivial semantic property of recursively enumerable languages. By Rice's Theorem, any non-trivial language property of Turing machines is undecidable. Hence, Option B is <strong>undecidable</strong>.<br><br><strong>(C) Universality Problem:</strong> Deciding if $L(M) = \\Sigma^*$ (i.e., whether $M$ accepts all strings) is the completeness/universality problem for Turing machines, which is undecidable. Hence, Option C is <strong>undecidable</strong>.<br><br><strong>(D) Bounded Step Execution:</strong> Deciding if $M$ takes more than $1073$ steps on every string requires simulating $M$ for at most $1073$ steps. Since $M$ can read at most $1073$ symbols in $1073$ steps, we only need to test a finite number of input configurations up to length $1073$. Since the process always halts in bounded time, this problem is <strong>decidable</strong>.<br><br>Thus, the correct undecidable options are <strong>A, B, and C</strong>.",
+  "videoUrl": null
+}

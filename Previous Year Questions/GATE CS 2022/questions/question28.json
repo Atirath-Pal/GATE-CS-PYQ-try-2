@@ -1,0 +1,19 @@
+{
+  "id": 28,
+  "year": 2022,
+  "set": null,
+  "topics": ["Data Structures", "Binary Search Trees"],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Suppose a binary search tree with 1000 distinct elements is also a complete binary tree. The tree is stored using the array representation of binary heap trees. Assuming that the array indices start with 0, the $3^{\\text{rd}}$ largest element of the tree is stored at index __________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 509,
+    "max": 509
+  },
+  "explanation": "<strong>Step 1: Understand Array Representation of Complete Binary Tree</strong><br>For 0-based indexing, the left child of node at index $i$ is at $2i + 1$, and the right child is at $2i + 2$.<br>The tree has $N = 1000$ elements, stored at array indices $0$ to $999$.<br><br><strong>Step 2: Trace the Rightmost Path (Largest Elements)</strong><br>In a Binary Search Tree (BST), larger elements reside in the right subtrees. Starting from the root (index 0), we follow the right children:<br>• Root: $0$<br>• Right child of $0$: $2(0) + 2 = 2$<br>• Right child of $2$: $2(2) + 2 = 6$<br>• Right child of $6$: $2(6) + 2 = 14$<br>• Right child of $14$: $2(14) + 2 = 30$<br>• Right child of $30$: $2(30) + 2 = 62$<br>• Right child of $62$: $2(62) + 2 = 126$<br>• Right child of $126$: $2(126) + 2 = 254$<br>• Right child of $254$: $2(254) + 2 = 510$<br><br>Node $510$ has no children because its left child would be at index $2(510) + 1 = 1021 > 999$.<br>Thus, node <strong>510</strong> is the rightmost leaf of the BST and holds the <strong>$1^{\\text{st}}$ largest element</strong>.<br><br><strong>Step 3: Determine $2^{\\text{nd}}$ and $3^{\\text{rd}}$ Largest Elements</strong><br>• Node $254$ is the parent of node $510$.<br>• The left child of node $254$ is at index $2(254) + 1 = 509$.<br>• Node $509$ is a leaf node since $2(509) + 1 = 1019 > 999$.<br><br>Within the subtree rooted at node $254$:<br>• $V_{509} < V_{254} < V_{510}$<br><br>All other nodes in the tree lie in the left subtrees of ancestors of $254$, so their values are strictly smaller than $V_{509}$.<br><br>Therefore, the three largest elements are:<br>• $1^{\\text{st}}$ largest element is at index <strong>510</strong><br>• $2^{\\text{nd}}$ largest element is at index <strong>254</strong><br>• $3^{\\text{rd}}$ largest element is at index <strong>509</strong>",
+  "videoUrl": null
+}

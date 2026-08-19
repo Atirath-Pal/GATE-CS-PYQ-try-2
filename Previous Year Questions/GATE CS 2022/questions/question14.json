@@ -1,0 +1,21 @@
+{
+  "id": 14,
+  "year": 2022,
+  "set": null,
+  "topics": ["Database Management Systems", "Normalization"],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "In a relational data model, which one of the following statements is TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "A relation with only two attributes is always in BCNF.",
+    "If all attributes of a relation are prime attributes, then the relation is in BCNF.",
+    "Every relation has at least one non-prime attribute.",
+    "BCNF decompositions preserve functional dependencies."
+  ],
+  "answer": ["A"],
+  "explanation": "<strong>Explanation:</strong><br><br><strong>Option A is TRUE:</strong> Any relation schema with only two attributes, say $R(A, B)$, is always in Boyce-Codd Normal Form (BCNF). The possible non-trivial functional dependencies are $A \\rightarrow B$, $B \\rightarrow A$, or both. In all these cases, the left-hand side determinant is a superkey, satisfying BCNF.<br><br><strong>Option B is FALSE:</strong> If all attributes in a relation are prime, the relation is guaranteed to be in 3NF, but not necessarily in BCNF. For example, consider $R(A, B, C)$ with $AB \\rightarrow C$ and $C \\rightarrow B$. The candidate keys are $AB$ and $AC$. All attributes are prime, but $C \\rightarrow B$ violates BCNF because $C$ is not a superkey.<br><br><strong>Option C is FALSE:</strong> A relation can have zero non-prime attributes if all of its attributes belong to at least one candidate key.<br><br><strong>Option D is FALSE:</strong> BCNF decomposition is always lossless, but it is not guaranteed to be dependency-preserving.",
+  "videoUrl": null
+}

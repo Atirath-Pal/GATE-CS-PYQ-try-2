@@ -1,0 +1,26 @@
+{
+  "id": 5,
+  "year": 2022,
+  "set": null,
+  "topics": [
+    "General Aptitude",
+    "Spatial Aptitude"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "A palindrome is a word that reads the same forwards and backwards. In a game of words, a player has the following two plates painted with letters.<br><br>From the additional plates given in the options, which one of the combinations of additional plates would allow the player to construct a five-letter palindrome. The player should use all the five plates exactly once. The plates can be rotated in their plane.",
+  "assetImage": "question5.png",
+  "codeBlock": null,
+  "options": [
+    "[IMG: question5_option_a.png]",
+    "[IMG: question5_option_b.png]",
+    "[IMG: question5_option_c.png]",
+    "[IMG: question5_option_d.png]"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step 1: Understand the objective</strong><br>We need to construct a 5-letter palindrome using the given 2 plates (containing letters <strong>A</strong> and <strong>D</strong>) along with 3 additional plates from one of the options. The plates can be rotated in their plane.<br><br><strong>Step 2: Analyze possible English palindromes</strong><br>A standard 5-letter palindrome with <strong>D</strong> in the middle and containing <strong>A</strong> is <strong>RADAR</strong>.<br><br><strong>Step 3: Evaluate Option (B)</strong><br>Option (B) provides three plates:<br>1. A plate with letter <strong>R</strong>.<br>2. A plate with an upside-down <strong>A</strong> (rotating this plate $180^\\circ$ in its plane gives <strong>A</strong>).<br>3. A plate with an inverted <strong>R</strong> (rotating this plate $180^\\circ$ in its plane gives <strong>R</strong>).<br><br>Combining these rotated plates with the initial plates <strong>A</strong> and <strong>D</strong> gives the set of letters {<strong>R, A, D, A, R</strong>}, which can be arranged to form the valid 5-letter palindrome word <strong>RADAR</strong>.<br><br>Hence, option <strong>(B)</strong> is correct.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 7,
+  "year": 2022,
+  "set": null,
+  "topics": [
+    "General Aptitude",
+    "Data Interpretation"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "In a recently conducted national entrance test, boys constituted 65% of those who appeared for the test. Girls constituted the remaining candidates and they accounted for 60% of the qualified candidates.<br><br>Which one of the following is the correct logical inference based on the information provided in the above passage?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Equal number of boys and girls qualified",
+    "Equal number of boys and girls appeared for the test",
+    "The number of boys who appeared for the test is less than the number of girls who appeared",
+    "The number of boys who qualified the test is less than the number of girls who qualified"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Given Information:</strong><br>• Boys constituted $65\\%$ of candidates who appeared.<br>• Girls constituted $100\\% - 65\\% = 35\\%$ of candidates who appeared.<br>• Girls constituted $60\\%$ of qualified candidates.<br>• Boys constituted $100\\% - 60\\% = 40\\%$ of qualified candidates.<br><br><strong>Analysis:</strong><br>• Since $40\\% < 60\\%$ among the qualified candidates, the number of boys who qualified is strictly less than the number of girls who qualified.<br><br>Hence, option (D) is the correct logical inference.",
+  "videoUrl": null
+}

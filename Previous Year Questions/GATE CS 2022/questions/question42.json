@@ -1,0 +1,26 @@
+{
+  "id": 42,
+  "year": 2022,
+  "set": null,
+  "topics": [
+    "Operating Systems",
+    "CPU Scheduling"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider four processes P, Q, R, and S scheduled on a CPU as per round robin algorithm with a time quantum of 4 units. The processes arrive in the order P, Q, R, S, all at time $t = 0$. There is exactly one context switch from S to Q, exactly one context switch from R to Q, and exactly two context switches from Q to R. There is no context switch from S to P. Switching to a ready process after the termination of another process is also considered a context switch. Which one of the following is NOT possible as CPU burst time (in time units) of these processes?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$P = 4, Q = 10, R = 6, S = 2$",
+    "$P = 2, Q = 9, R = 5, S = 1$",
+    "$P = 4, Q = 12, R = 5, S = 4$",
+    "$P = 3, Q = 7, R = 7, S = 3$"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Given:</strong><br>- Time Quantum = $4$ units.<br>- Arrival order at $t=0$: $P, Q, R, S$.<br>- Required Context Switches (CS):<br>  1. $S \\to Q = 1$<br>  2. $R \\to Q = 1$<br>  3. $Q \\to R = 2$<br>  4. $S \\to P = 0$<br><br><strong>Analyzing Option (D):</strong> $P = 3, Q = 7, R = 7, S = 3$<br>- $t = 0$ to $3$: $P$ runs for $3$ units and terminates. (Ready Queue: $Q, R, S$)<br>- $t = 3$ to $7$: $Q$ runs for $4$ units (Remaining $Q = 3$). Context Switch: $Q \\to R$ (1st $Q \\to R$). (Ready Queue: $R, S, Q$)<br>- $t = 7$ to $11$: $R$ runs for $4$ units (Remaining $R = 3$). Context Switch: $R \\to S$. (Ready Queue: $S, Q, R$)<br>- $t = 11$ to $14$: $S$ runs for $3$ units and terminates. Context Switch: $S \\to Q$ (1st $S \\to Q$). (Ready Queue: $Q, R$)<br>- $t = 14$ to $17$: $Q$ runs for $3$ units and terminates. Context Switch: $Q \\to R$ (2nd $Q \\to R$). (Ready Queue: $R$)<br>- $t = 17$ to $20$: $R$ runs for $3$ units and terminates.<br><br>In Option (D), there are $0$ context switches from $R \\to Q$, which violates the requirement of having exactly $1$ context switch from $R \\to Q$.<br><br>Therefore, Option (D) is NOT possible.",
+  "videoUrl": null
+}

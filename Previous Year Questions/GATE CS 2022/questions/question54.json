@@ -1,0 +1,28 @@
+{
+  "id": 54,
+  "year": 2022,
+  "set": null,
+  "topics": [
+    "Computer Organization",
+    "Cache Memory"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a system with 2 KB direct mapped data cache with a block size of 64 bytes. The system has a physical address space of 64 KB and a word length of 16 bits. During the execution of a program, four data words P, Q, R, and S are accessed in that order 10 times ($i.e.$, PQRSPQRS...). Hence, there are 40 accesses to data cache altogether. Assume that the data cache is initially empty and no other data words are accessed by the program. The addresses of the first bytes of P, Q, R, and S are 0xA248, 0xC28A, 0xCA8A, and 0xA262, respectively. For the execution of the above program, which of the following statements is/are TRUE with respect to the data cache?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Every access to S is a hit.",
+    "Once P is brought to the cache it is never evicted.",
+    "At the end of the execution only R and S reside in the cache.",
+    "Every access to R evicts Q from the cache."
+  ],
+  "answer": [
+    "A",
+    "B",
+    "D"
+  ],
+  "explanation": "<strong>Cache Specifications:</strong><br>- Cache Size = $2\\text{ KB} = 2048\\text{ bytes}$<br>- Block Size = $64\\text{ bytes}$<br>- Number of Cache Lines = $\\frac{2048}{64} = 32\\text{ lines}$ (Line index range: 0 to 31)<br><br><strong>Memory Block & Line Index Calculation:</strong><br>- <strong>P (0xA248):</strong> Block Address = $0\\text{xA240}$. Line Index = $(0\\text{xA240} / 64) \\pmod{32} = 9$.<br>- <strong>S (0xA262):</strong> Block Address = $0\\text{xA240}$. Line Index = $(0\\text{xA240} / 64) \\pmod{32} = 9$.<br><em>Note: Since P and S belong to the exact same memory block ($0\\text{xA240}$ to $0\\text{xA27F}$), loading P into cache automatically loads S as well.</em><br><br>- <strong>Q (0xC28A):</strong> Block Address = $0\\text{xC280}$. Line Index = $(0\\text{xC280} / 64) \\pmod{32} = 10$.<br>- <strong>R (0xCA8A):</strong> Block Address = $0\\text{xCA80}$. Line Index = $(0\\text{xCA80} / 64) \\pmod{32} = 10$.<br><em>Note: Q and R map to the exact same cache line (Line 10).</em><br><br><strong>Trace of Access Pattern (P -> Q -> R -> S):</strong><br>1. <strong>Access P:</strong> Miss -> Loads block containing P and S into Line 9.<br>2. <strong>Access Q:</strong> Miss -> Loads Q into Line 10.<br>3. <strong>Access R:</strong> Miss -> Loads R into Line 10, evicting Q.<br>4. <strong>Access S:</strong> Hit -> S is in the block brought in by P (Line 9).<br><br><strong>Evaluating Statements:</strong><br>- <strong>Statement (A) is TRUE:</strong> The block containing S is loaded during the very first access to P. Thus, all 10 accesses to S are hits.<br>- <strong>Statement (B) is TRUE:</strong> P and S reside in Line 9. Only Q and R are accessed alongside, and both map to Line 10. Thus, Line 9 is never overwritten, and P is never evicted.<br>- <strong>Statement (C) is FALSE:</strong> At the end of execution, Line 9 holds the block containing P and S, and Line 10 holds R. So P, S, and R reside in the cache.<br>- <strong>Statement (D) is TRUE:</strong> Q and R contend for Line 10. In every cycle, Q is accessed immediately before R, so every access to R finds Q in Line 10 and evicts it.",
+  "videoUrl": null
+}

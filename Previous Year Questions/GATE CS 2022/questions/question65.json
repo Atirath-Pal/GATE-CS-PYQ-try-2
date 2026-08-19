@@ -1,0 +1,22 @@
+{
+  "id": 65,
+  "year": 2022,
+  "set": null,
+  "topics": [
+    "Compiler Design",
+    "Syntax Directed Translation"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the following grammar along with translation rules.<br><br>$S \\rightarrow S_1 \\,\\#\\, T \\quad \\{S_{\\cdot val} = S_{1\\cdot val} * T_{\\cdot val}\\}$<br>$S \\rightarrow T \\quad \\{S_{\\cdot val} = T_{\\cdot val}\\}$<br>$T \\rightarrow T_1 \\,\\%\\, R \\quad \\{T_{\\cdot val} = T_{1\\cdot val} \\div R_{\\cdot val}\\}$<br>$T \\rightarrow R \\quad \\{T_{\\cdot val} = R_{\\cdot val}\\}$<br>$R \\rightarrow id \\quad \\{R_{\\cdot val} = id_{\\cdot val}\\}$<br><br>Here $\\#$ and $\\%$ are operators and $id$ is a token that represents an integer and $id_{\\cdot val}$ represents the corresponding integer value. The set of non-terminals is $\\{S, T, R, P\\}$ and a subscripted non-terminal indicates an instance of the non-terminal.<br><br>Using this translation scheme, the computed value of $S_{\\cdot val}$ for root of the parse tree for the expression $20\\#10\\%5\\#8\\%2\\%2$ is __________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 80,
+    "max": 80
+  },
+  "explanation": "<strong>Step 1: Analyze Precedence and Associativity</strong><br>From the given grammar:<br>1. $S \\rightarrow S_1 \\,\\#\\, T$ shows that $\\#$ is a left-associative operator that performs multiplication ($*$).<br>2. $T \\rightarrow T_1 \\,\\%\\, R$ shows that $\\%$ is a left-associative operator that performs division ($\\div$).<br>3. Since $T$ is derived lower in the grammar hierarchy than $S$, the operator $\\%$ has higher precedence than $\\#$.<br><br><strong>Step 2: Evaluate the Expression</strong><br>The expression is: $20 \\# 10 \\% 5 \\# 8 \\% 2 \\% 2$<br><br>1. First, evaluate the sub-expressions with the higher precedence operator $\\%$ from left to right:<br>- $10 \\% 5 = 10 \\div 5 = 2$<br>- $8 \\% 2 \\% 2 = (8 \\div 2) \\div 2 = 4 \\div 2 = 2$<br><br>2. Substitute these computed values back into the expression:<br>- The expression becomes: $20 \\# 2 \\# 2$<br><br>3. Evaluate the remaining operator $\\#$ from left to right:<br>- First step: $20 \\# 2 = 20 * 2 = 40$<br>- Second step: $40 \\# 2 = 40 * 2 = 80$<br><br><strong>Final Answer:</strong><br>The computed value of $S_{\\cdot val}$ at the root of the parse tree is 80.",
+  "videoUrl": null
+}

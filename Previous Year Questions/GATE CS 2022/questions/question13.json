@@ -1,0 +1,26 @@
+{
+  "id": 13,
+  "year": 2022,
+  "set": null,
+  "topics": [
+    "Compiler Design",
+    "Parsing"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Which one of the following statements is TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "The $LALR(1)$ parser for a grammar $G$ cannot have reduce-reduce conflict if the $LR(1)$ parser for $G$ does not have reduce-reduce conflict.",
+    "Symbol table is accessed only during the lexical analysis phase.",
+    "Data flow analysis is necessary for run-time memory management.",
+    "$LR(1)$ parsing is sufficient for deterministic context-free languages."
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Explanation:</strong><br><br><strong>Option A is FALSE:</strong> When merging states with identical cores to construct an $LALR(1)$ parser from an $LR(1)$ parser, reduce-reduce conflicts may be introduced (though shift-reduce conflicts are never introduced).<br><br><strong>Option B is FALSE:</strong> The symbol table is used throughout almost all phases of the compiler, including lexical analysis, syntax analysis, semantic analysis, optimization, and code generation.<br><br><strong>Option C is FALSE:</strong> Data flow analysis is used primarily for code optimization techniques (such as dead code elimination, constant propagation, etc.), not for run-time memory management.<br><br><strong>Option D is TRUE:</strong> The class of languages accepted by $LR(1)$ parsers is precisely the class of Deterministic Context-Free Languages (DCFLs). Therefore, $LR(1)$ parsing is sufficient for all deterministic context-free languages.",
+  "videoUrl": null
+}

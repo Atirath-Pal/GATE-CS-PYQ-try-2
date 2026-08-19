@@ -1,0 +1,26 @@
+{
+  "id": 21,
+  "year": 2022,
+  "set": null,
+  "topics": [
+    "Programming in C",
+    "Pointers"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "What is printed by the following ANSI C program?",
+  "assetImage": null,
+  "codeBlock": "#include<stdio.h>\n\nint main(int argc, char *argv[])\n{\n    int x = 1, z[2] = {10, 11};\n    int *p = NULL;\n\n    p = &x;\n    *p = 10;\n\n    p = &z[1];\n    *(&z[0] + 1) += 3;\n\n    printf(\"%d, %d, %d\\n\", x, z[0], z[1]);\n    return 0;\n}",
+  "options": [
+    "1, 10, 11",
+    "1, 10, 14",
+    "10, 14, 11",
+    "10, 10, 14"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Step 1: Variable Initialization</strong><br>Variables are initialized as: $x = 1$, $z[0] = 10$, and $z[1] = 11$.<br><br><strong>Step 2: Updating $x$ via Pointer</strong><br>$p = \\&x;$ assigns the address of $x$ to pointer $p$.<br>$*p = 10;$ modifies the value at address $p$ (i.e., $x$) to $10$. Thus, $x = 10$.<br><br><strong>Step 3: Array Pointer Arithmetic</strong><br>$p = \\&z[1];$ points $p$ to $z[1]$.<br>$*(\\&z[0] + 1)$ computes the address of $z[0]$ plus $1$ element offset, which is $\\&z[1]$, and dereferences it to access $z[1]$.<br>$*(\\&z[0] + 1) += 3;$ adds $3$ to $z[1]$, updating $z[1]$ from $11$ to $14$.<br><br><strong>Step 4: Output Evaluation</strong><br>The statement `printf(\"%d, %d, %d\\n\", x, z[0], z[1]);` prints $x = 10$, $z[0] = 10$, and $z[1] = 14$.<br>Therefore, the output is `10, 10, 14`.",
+  "videoUrl": null
+}

@@ -1,0 +1,27 @@
+{
+  "id": 53,
+  "year": 2022,
+  "set": null,
+  "topics": [
+    "Linear Algebra"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Which of the following is/are the eigenvector(s) for the matrix given below?<br><br>$$\\begin{pmatrix} -9 & -6 & -2 & -4 \\\\ -8 & -6 & -3 & -1 \\\\ 20 & 15 & 8 & 5 \\\\ 32 & 21 & 7 & 12 \\end{pmatrix}$$",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\begin{pmatrix} -1 \\\\ 1 \\\\ 0 \\\\ 1 \\end{pmatrix}$",
+    "$\\begin{pmatrix} 1 \\\\ 0 \\\\ -1 \\\\ 0 \\end{pmatrix}$",
+    "$\\begin{pmatrix} -1 \\\\ 0 \\\\ 2 \\\\ 2 \\end{pmatrix}$",
+    "$\\begin{pmatrix} 0 \\\\ 1 \\\\ -3 \\\\ 0 \\end{pmatrix}$"
+  ],
+  "answer": [
+    "A",
+    "C",
+    "D"
+  ],
+  "explanation": "<strong>Definition:</strong> A non-zero vector $v$ is an eigenvector of a matrix $A$ if $Av = \\lambda v$ for some scalar eigenvalue $\\lambda$.<br><br>Let $A = \\begin{pmatrix} -9 & -6 & -2 & -4 \\\\ -8 & -6 & -3 & -1 \\\\ 20 & 15 & 8 & 5 \\\\ 32 & 21 & 7 & 12 \\end{pmatrix}$.<br><br><strong>Checking Option A:</strong><br>$A \\begin{pmatrix} -1 \\\\ 1 \\\\ 0 \\\\ 1 \\end{pmatrix} = \\begin{pmatrix} (-9)(-1) + (-6)(1) + (-2)(0) + (-4)(1) \\\\ (-8)(-1) + (-6)(1) + (-3)(0) + (-1)(1) \\\\ (20)(-1) + (15)(1) + (8)(0) + (5)(1) \\\\ (32)(-1) + (21)(1) + (7)(0) + (12)(1) \\end{pmatrix} = \\begin{pmatrix} -1 \\\\ 1 \\\\ 0 \\\\ 1 \\end{pmatrix} = 1 \\cdot \\begin{pmatrix} -1 \\\\ 1 \\\\ 0 \\\\ 1 \\end{pmatrix}$<br>This satisfies $Av = 1 \\cdot v$. Thus, Option A is an eigenvector with eigenvalue $\\lambda = 1$.<br><br><strong>Checking Option B:</strong><br>$A \\begin{pmatrix} 1 \\\\ 0 \\\\ -1 \\\\ 0 \\end{pmatrix} = \\begin{pmatrix} (-9)(1) + (-2)(-1) \\\\ (-8)(1) + (-3)(-1) \\\\ (20)(1) + (8)(-1) \\\\ (32)(1) + (7)(-1) \\end{pmatrix} = \\begin{pmatrix} -7 \\\\ -5 \\\\ 12 \\\\ 25 \\end{pmatrix} \\neq \\lambda \\begin{pmatrix} 1 \\\\ 0 \\\\ -1 \\\\ 0 \\end{pmatrix}$<br>Thus, Option B is NOT an eigenvector.<br><br><strong>Checking Option C:</strong><br>$A \\begin{pmatrix} -1 \\\\ 0 \\\\ 2 \\\\ 2 \\end{pmatrix} = \\begin{pmatrix} (-9)(-1) + (-2)(2) + (-4)(2) \\\\ (-8)(-1) + (-3)(2) + (-1)(2) \\\\ (20)(-1) + (8)(2) + (5)(2) \\\\ (32)(-1) + (7)(2) + (12)(2) \\end{pmatrix} = \\begin{pmatrix} -3 \\\\ 0 \\\\ 6 \\\\ 6 \\end{pmatrix} = 3 \\cdot \\begin{pmatrix} -1 \\\\ 0 \\\\ 2 \\\\ 2 \\end{pmatrix}$<br>This satisfies $Av = 3 \\cdot v$. Thus, Option C is an eigenvector with eigenvalue $\\lambda = 3$.<br><br><strong>Checking Option D:</strong><br>$A \\begin{pmatrix} 0 \\\\ 1 \\\\ -3 \\\\ 0 \\end{pmatrix} = \\begin{pmatrix} (-6)(1) + (-2)(-3) \\\\ (-6)(1) + (-3)(-3) \\\\ (15)(1) + (8)(-3) \\\\ (21)(1) + (7)(-3) \\end{pmatrix} = \\begin{pmatrix} 0 \\\\ 3 \\\\ -9 \\\\ 0 \\end{pmatrix} = 3 \\cdot \\begin{pmatrix} 0 \\\\ 1 \\\\ -3 \\\\ 0 \\end{pmatrix}$<br>This satisfies $Av = 3 \\cdot v$. Thus, Option D is an eigenvector with eigenvalue $\\lambda = 3$.<br><br>Hence, options <strong>A, C, and D</strong> are correct.",
+  "videoUrl": null
+}
