@@ -1,0 +1,26 @@
+{
+  "id": 51,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "Algorithms",
+    "Graph Theory"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "An <i>articulation point</i> in a connected graph is a vertex such that removing the vertex and its incident edges disconnects the graph into two or more connected components.<br><br>Let $T$ be a DFS tree obtained by doing DFS in a connected undirected graph $G$. Which of the following options is/are correct?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Root of $T$ can never be an articulation point in $G$.",
+    "Root of $T$ is an articulation point in $G$ if and only if it has 2 or more children.",
+    "A leaf of $T$ can be an articulation point in $G$.",
+    "If $u$ is an articulation point in $G$ such that $x$ is an ancestor of $u$ in $T$ and $y$ is a descendent of $u$ in $T$, then all paths from $x$ to $y$ in $G$ must pass through $u$."
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Analysis of Statements:</strong><br><br><strong>1. Option (A) and Option (B):</strong><br>In a Depth-First Search (DFS) tree $T$ of a connected undirected graph $G$:<br>• The root of $T$ is an articulation point in $G$ <strong>if and only if</strong> it has at least 2 children in $T$.<br>• If the root has only 1 child, removing the root leaves the single subtree connected, so it is not an articulation point.<br>• If the root has 2 or more children, there can be no edge connecting the different subtrees (due to DFS tree properties in undirected graphs). Thus, removing the root disconnects these subtrees.<br>Hence, <strong>Option (A) is FALSE</strong> and <strong>Option (B) is CORRECT</strong>.<br><br><strong>2. Option (C):</strong><br>Let $v$ be a leaf in the DFS tree $T$.<br>• In an undirected graph, all non-tree edges are back-edges to ancestors.<br>• Since $v$ is a leaf, removing $v$ leaves $T \\setminus \\{v\\}$ as a connected spanning tree for all remaining vertices $V \\setminus \\{v\\}$.<br>• Therefore, removing a leaf can never disconnect $G \\setminus \\{v\\}$.<br>Hence, <strong>Option (C) is FALSE</strong>.<br><br><strong>3. Option (D):</strong><br>• Even if $u$ is an articulation point in $G$, it separates specific subtrees, but not necessarily <em>every</em> descendant $y$ from an ancestor $x$.<br>• If a descendant $y$ has a back-edge directly to $x$ (or an ancestor above $u$), there exists a path from $x$ to $y$ bypassing $u$. As long as $u$ separates another subtree from the rest of the graph, $u$ remains an articulation point, but the path between this specific $x$ and $y$ does not pass through $u$.<br>Hence, <strong>Option (D) is FALSE</strong>.<br><br><strong>Conclusion:</strong><br>Only <strong>Option (B)</strong> is correct.",
+  "videoUrl": null
+}

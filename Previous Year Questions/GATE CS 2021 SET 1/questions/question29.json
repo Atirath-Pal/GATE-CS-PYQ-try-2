@@ -1,0 +1,22 @@
+{
+  "id": 29,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "Discrete Mathematics",
+    "Combinatorics"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "There are 6 jobs with distinct difficulty levels, and 3 computers with distinct processing speeds. Each job is assigned to a computer such that:<br>- The fastest computer gets the toughest job and the slowest computer gets the easiest job.<br>- Every computer gets at least one job.<br>The number of ways in which this can be done is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 65,
+    "max": 65
+  },
+  "explanation": "<strong>Step 1: Fixed job assignments.</strong><br>Let the computers be $C_1$ (slowest), $C_2$ (medium), and $C_3$ (fastest).<br>Let the jobs be $J_1$ (easiest) through $J_6$ (toughest).<br>- $C_3$ must get $J_6$.<br>- $C_1$ must get $J_1$.<br>Because $C_1$ and $C_3$ already have at least 1 job assigned, they automatically satisfy the condition of getting at least one job.<br><br><strong>Step 2: Assign remaining jobs.</strong><br>There are 4 remaining jobs ($J_2, J_3, J_4, J_5$) to be distributed among the 3 computers ($C_1, C_2, C_3$).<br>Total ways to distribute 4 distinct jobs among 3 computers = $3^4 = 81$.<br><br><strong>Step 3: Ensure every computer gets at least one job.</strong><br>Since $C_1$ and $C_3$ already have jobs, we only need to subtract the cases where $C_2$ gets zero jobs.<br>Number of ways where $C_2$ gets no jobs (assigning all 4 remaining jobs to $C_1$ and $C_3$ only) = $2^4 = 16$.<br><br><strong>Step 4: Calculate final answer.</strong><br>Total valid assignments = $3^4 - 2^4 = 81 - 16 = 65$.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 20,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "Data Structures",
+    "Trees"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "A binary search tree $T$ contains $n$ distinct elements. What is the time complexity of picking an element in $T$ that is smaller than the maximum element in $T$?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\Theta(n \\log n)$",
+    "$\\Theta(n)$",
+    "$\\Theta(\\log n)$",
+    "$\\Theta(1)$"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "To pick an element smaller than the maximum element in a Binary Search Tree (BST) $T$ with $n$ distinct elements (assuming $n \\ge 2$):<br><br><strong>1. Root has a right child:</strong> If the root node has a right child, it means the maximum element resides somewhere in the right subtree. Therefore, the root itself is strictly smaller than the maximum element. We can simply pick the root node, which takes $\\Theta(1)$ time.<br><br><strong>2. Root has no right child:</strong> If the root node does not have a right child, it implies that the root itself is the maximum element in the BST. Since the tree contains $n \\ge 2$ distinct elements, the root must have a left child. By the properties of a BST, all elements in the left subtree are strictly smaller than the root. We can simply pick the left child of the root, which also takes $\\Theta(1)$ time.<br><br>In both possible scenarios, we only need to examine the root node and potentially its immediate left child. This requires only a constant number of operations. Therefore, the time complexity is $\\Theta(1)$.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 19,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "Algorithms",
+    "Sorting Algorithms"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the following array.<br><br><table border=\"1\" style=\"border-collapse: collapse; text-align: center;\"><tr><td style=\"padding: 4px 8px;\">23</td><td style=\"padding: 4px 8px;\">32</td><td style=\"padding: 4px 8px;\">45</td><td style=\"padding: 4px 8px;\">69</td><td style=\"padding: 4px 8px;\">72</td><td style=\"padding: 4px 8px;\">73</td><td style=\"padding: 4px 8px;\">89</td><td style=\"padding: 4px 8px;\">97</td></tr></table><br><br>Which algorithm out of the following options uses the least number of comparisons (among the array elements) to sort the above array in ascending order?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Selection sort",
+    "Mergesort",
+    "Insertion sort",
+    "Quicksort using the last element as pivot"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "The given array is already sorted in ascending order: $[23, 32, 45, 69, 72, 73, 89, 97]$ with $n = 8$ elements.<br><br>Let us analyze the number of element comparisons for each algorithm on an already sorted array:<br><br>1. <strong>Selection sort:</strong> Always performs $\\frac{n(n-1)}{2}$ comparisons regardless of initial array order. For $n = 8$, it takes $\\frac{8 \\times 7}{2} = 28$ comparisons.<br><br>2. <strong>Mergesort:</strong> Divides the array recursively and merges adjacent sub-lists. For $n = 8$, it takes $12$ comparisons ($O(n \\log n)$ comparisons).<br><br>3. <strong>Insertion sort:</strong> For an already sorted array (best-case scenario), insertion sort compares each element (from $2$nd to $n$-th) with its immediate predecessor once and makes no shifts. Total comparisons = $n - 1 = 8 - 1 = 7$.<br><br>4. <strong>Quicksort (with last element as pivot):</strong> On an already sorted array, choosing the last element as pivot leads to worst-case partitioning, requiring $\\frac{n(n-1)}{2} = 28$ comparisons.<br><br>Therefore, <strong>Insertion sort</strong> requires the least number of comparisons ($7$ comparisons).",
+  "videoUrl": null
+}

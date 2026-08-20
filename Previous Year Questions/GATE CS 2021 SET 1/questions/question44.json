@@ -1,0 +1,26 @@
+{
+  "id": 44,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "Discrete Mathematics",
+    "Group Theory"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Let $G$ be a group of order 6, and $H$ be a subgroup of $G$ such that $1 < |H| < 6$. Which one of the following options is correct?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Both $G$ and $H$ are always cyclic.",
+    "$G$ may not be cyclic, but $H$ is always cyclic.",
+    "$G$ is always cyclic, but $H$ may not be cyclic.",
+    "Both $G$ and $H$ may not be cyclic."
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "By Lagrange's theorem, the order of a subgroup $H$ must divide the order of the group $G$.<br><br>Given $|G| = 6$ and $1 < |H| < 6$, the possible order of $H$ is either $2$ or $3$.<br><br>Since $2$ and $3$ are prime numbers, and any group of prime order is always cyclic, $H$ is <strong>always cyclic</strong>.<br><br>For group $G$ of order 6, it can be isomorphic to $\\mathbb{Z}_6$ (which is cyclic) or $S_3$ (Symmetric group of degree 3, which is non-cyclic). Thus, $G$ <strong>may not be cyclic</strong>.<br><br>Therefore, option (B) is the correct choice.",
+  "videoUrl": null
+}

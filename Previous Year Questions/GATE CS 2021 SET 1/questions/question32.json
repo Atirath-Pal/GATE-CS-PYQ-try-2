@@ -1,0 +1,22 @@
+{
+  "id": 32,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "Computer Organization and Architecture",
+    "Cache Memory"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider a computer system with a byte-addressable primary memory of size $2^{32}$ bytes. Assume the computer system has a direct-mapped cache of size 32 KB ($1 \\text{ KB} = 2^{10}$ bytes), and each cache block is of size 64 bytes.<br><br>The size of the tag field is _________ bits.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 17,
+    "max": 17
+  },
+  "explanation": "<strong>Step 1: Determine total physical address bits</strong><br>Primary memory size = $2^{32}$ bytes.<br>Since memory is byte-addressable, Physical Address = 32 bits.<br><br><strong>Step 2: Calculate Block Offset bits</strong><br>Cache block size = $64\\text{ bytes} = 2^6\\text{ bytes}$.<br>Block offset bits = $\\log_2(64) = 6\\text{ bits}$.<br><br><strong>Step 3: Calculate Index bits</strong><br>Cache size = $32\\text{ KB} = 32 \\times 2^{10}\\text{ bytes} = 2^{15}\\text{ bytes}$.<br>Number of cache lines = $\\frac{\\text{Cache Size}}{\\text{Block Size}} = \\frac{2^{15}}{2^6} = 2^9$.<br>Index bits = $\\log_2(2^9) = 9\\text{ bits}$.<br><br><strong>Step 4: Calculate Tag bits</strong><br>Physical Address = Tag bits + Index bits + Block offset bits<br>$32 = \\text{Tag bits} + 9 + 6$<br>$\\text{Tag bits} = 32 - 15 = 17\\text{ bits}$.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 57,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "Data Structures",
+    "Hashing"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a <i>dynamic</i> hashing approach for 4-bit integer keys:<br>1. There is a main hash table of size 4.<br>2. The 2 least significant bits of a key is used to index into the main hash table.<br>3. Initially, the main hash table entries are empty.<br>4. Thereafter, when more keys are hashed into it, to resolve collisions, the set of all keys corresponding to a main hash table entry is organized as a binary tree that grows on demand.<br>5. First, the $3^{\\text{rd}}$ least significant bit is used to divide the keys into left and right subtrees.<br>6. To resolve more collisions, each node of the binary tree is further sub-divided into left and right subtrees based on the $4^{\\text{th}}$ least significant bit.<br>7. A split is done only if it is needed, i.e., only when there is a collision.<br><br>Consider the following state of the hash table.<br><br>Which of the following sequences of key insertions can cause the above state of the hash table (assume the keys are in decimal notation)?",
+  "assetImage": "question57.png",
+  "codeBlock": null,
+  "options": [
+    "5, 9, 4, 13, 10, 7",
+    "9, 5, 10, 6, 7, 1",
+    "10, 9, 6, 7, 5, 13",
+    "9, 5, 13, 6, 10, 14"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "To determine the correct sequence of insertions, let us convert the decimal keys to 4-bit binary representation ($b_4 b_3 b_2 b_1$):<br>• $1 = 0001_2$<br>• $4 = 0100_2$<br>• $5 = 0101_2$<br>• $6 = 0110_2$<br>• $7 = 0111_2$<br>• $9 = 1001_2$<br>• $10 = 1010_2$<br>• $13 = 1101_2$<br>• $14 = 1110_2$<br><br><strong>Analyzing Hash Table Indexing Rules:</strong><br>1. Index in main hash table is determined by the 2 LSBs ($b_2 b_1$).<br>2. Split at $3^{\\text{rd}}$ LSB ($b_3$): 0 goes Left, 1 goes Right.<br>3. Split at $4^{\\text{th}}$ LSB ($b_4$): 0 goes Left, 1 goes Right.<br><br><strong>Target Hash Table State:</strong><br>• <strong>Index 00:</strong> Empty.<br>• <strong>Index 01:</strong> Left subtree ($b_3=0$) contains 1 leaf (key 9). Right subtree ($b_3=1$) is split into $b_4=0$ (key 5) and $b_4=1$ (key 13).<br>• <strong>Index 10:</strong> Split at $b_3$ into $b_3=0$ (key 10) and $b_3=1$ (key 6).<br>• <strong>Index 11:</strong> Contains 1 leaf (key 7).<br><br><strong>Trace for Option C (10, 9, 6, 7, 5, 13):</strong><br>1. <strong>Insert 10 ($1010_2$):</strong> 2 LSBs = 10 $\\implies$ Placed at Index 10.<br>2. <strong>Insert 9 ($1001_2$):</strong> 2 LSBs = 01 $\\implies$ Placed at Index 01.<br>3. <strong>Insert 6 ($0110_2$):</strong> 2 LSBs = 10 $\\implies$ Collides with 10. Split on $b_3$: 10 ($b_3=0$) goes left, 6 ($b_3=1$) goes right.<br>4. <strong>Insert 7 ($0111_2$):</strong> 2 LSBs = 11 $\\implies$ Placed at Index 11.<br>5. <strong>Insert 5 ($0101_2$):</strong> 2 LSBs = 01 $\\implies$ Collides with 9. Split on $b_3$: 9 ($b_3=0$) goes left, 5 ($b_3=1$) goes right.<br>6. <strong>Insert 13 ($1101_2$):</strong> 2 LSBs = 01, $b_3=1 \\implies$ Collides with 5. Split on $b_4$: 5 ($b_4=0$) goes left, 13 ($b_4=1$) goes right.<br><br>This sequence exactly reproduces the given hash table state. Hence, <strong>Option C</strong> is correct.",
+  "videoUrl": null
+}

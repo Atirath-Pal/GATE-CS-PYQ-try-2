@@ -1,0 +1,28 @@
+{
+  "id": 56,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "Operating Systems",
+    "Process Synchronization"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the following pseudocode, where $S$ is a semaphore initialized to 5 in line#2 and counter is a shared variable initialized to 0 in line#1. Assume that the increment operation in line#7 is <strong>not</strong> atomic.<br><br>If five threads execute the function parop concurrently, which of the following program behavior(s) is/are possible?",
+  "assetImage": null,
+  "codeBlock": "1. int counter = 0;\n2. Semaphore S = init(5);\n3. void parop(void)\n4. {\n5.     wait(S);\n6.     wait(S);\n7.     counter++;\n8.     signal(S);\n9.     signal(S);\n10.}",
+  "options": [
+    "The value of counter is 5 after all the threads successfully complete the execution of parop.",
+    "The value of counter is 1 after all the threads successfully complete the execution of parop.",
+    "The value of counter is 0 after all the threads successfully complete the execution of parop.",
+    "There is a deadlock involving all the threads."
+  ],
+  "answer": [
+    "A",
+    "B",
+    "D"
+  ],
+  "explanation": "<strong>Step 1: Deadlock Analysis (Option D)</strong><br>Initial semaphore value $S = 5$. Each thread requires two <code>wait(S)</code> operations to enter its critical section.<br>If all 5 threads execute line 5 (their first <code>wait(S)</code>) once, $S$ becomes $5 - 5 = 0$.<br>When all 5 threads subsequently attempt to execute line 6 (their second <code>wait(S)</code>), none can proceed because $S = 0$. All 5 threads become permanently blocked, resulting in a deadlock. Thus, <strong>Option D is correct</strong>.<br><br><strong>Step 2: Maximum Counter Value (Option A)</strong><br>If all 5 threads execute sequentially without race condition interleaving, each thread increments <code>counter</code> by 1.<br>After all 5 threads finish, <code>counter = 5</code>. Thus, <strong>Option A is correct</strong>.<br><br><strong>Step 3: Minimum Counter Value for Successful Execution (Option B)</strong><br>Since <code>counter++</code> is not atomic (involving read, increment, and write operations), race conditions can occur.<br>Suppose Thread 1 reads <code>counter = 0</code> into its local context and is preempted before writing back.<br>Threads 2, 3, 4, and 5 then execute to completion sequentially, updating <code>counter</code> to 4.<br>Thread 1 is then rescheduled and completes its write operation, writing back its calculated value ($0 + 1 = 1$).<br>All threads complete execution with <code>counter = 1</code>. Thus, <strong>Option B is correct</strong>.<br><br><strong>Step 4: Counter Value 0 (Option C)</strong><br>Since every thread that completes execution performs an increment and writes a non-zero value back to <code>counter</code>, the value of <code>counter</code> can never remain 0 upon successful completion of all threads. Thus, <strong>Option C is incorrect</strong>.",
+  "videoUrl": null
+}

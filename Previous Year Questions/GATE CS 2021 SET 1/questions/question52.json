@@ -1,0 +1,28 @@
+{
+  "id": 52,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "Digital Logic",
+    "Boolean Algebra"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the following Boolean expression.<br><br>$$F = (X + Y + Z)(\\overline{X} + Y)(\\overline{Y} + Z)$$<br><br>Which of the following Boolean expressions is/are equivalent to $\\overline{F}$ (complement of $F$)?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$(\\overline{X} + \\overline{Y} + \\overline{Z})(X + \\overline{Y})(Y + \\overline{Z})$",
+    "$X \\overline{Y} + \\overline{Z}$",
+    "$(X + \\overline{Z})(\\overline{Y} + \\overline{Z})$",
+    "$X \\overline{Y} + Y \\overline{Z} + \\overline{X} \\overline{Y} \\overline{Z}$"
+  ],
+  "answer": [
+    "B",
+    "C",
+    "D"
+  ],
+  "explanation": "To find $\\overline{F}$, apply De Morgan's Law to $F = (X + Y + Z)(\\overline{X} + Y)(\\overline{Y} + Z)$:<br><br>$\\overline{F} = \\overline{(X + Y + Z)} + \\overline{(\\overline{X} + Y)} + \\overline{(\\overline{Y} + Z)}$<br>$\\overline{F} = \\overline{X} \\overline{Y} \\overline{Z} + X \\overline{Y} + Y \\overline{Z}$<br><br><strong>Analysis of Options:</strong><br><br><strong>Option D:</strong> $\\overline{F} = X \\overline{Y} + Y \\overline{Z} + \\overline{X} \\overline{Y} \\overline{Z}$, which is directly identical to the derived expression. Thus, <strong>D is correct</strong>.<br><br><strong>Option B:</strong> Consider $X \\overline{Y} + \\overline{Z}$:<br>$X \\overline{Y} + \\overline{Z} = X \\overline{Y} + \\overline{Z}(Y + \\overline{Y})$<br>$= X \\overline{Y} + Y \\overline{Z} + \\overline{Y} \\overline{Z}(X + \\overline{X})$<br>$= X \\overline{Y} + Y \\overline{Z} + X \\overline{Y} \\overline{Z} + \\overline{X} \\overline{Y} \\overline{Z}$<br>Since $X \\overline{Y} + X \\overline{Y} \\overline{Z} = X \\overline{Y}$, this simplifies to $X \\overline{Y} + Y \\overline{Z} + \\overline{X} \\overline{Y} \\overline{Z} = \\overline{F}$. Thus, <strong>B is correct</strong>.<br><br><strong>Option C:</strong> Expanding $(X + \\overline{Z})(\\overline{Y} + \\overline{Z})$ gives:<br>$(X + \\overline{Z})(\\overline{Y} + \\overline{Z}) = X \\overline{Y} + X \\overline{Z} + \\overline{Y} \\overline{Z} + \\overline{Z} = X \\overline{Y} + \\overline{Z}(X + \\overline{Y} + 1) = X \\overline{Y} + \\overline{Z}$.<br>Since this is equivalent to Option B, <strong>C is also correct</strong>.<br><br><strong>Option A:</strong> Does not evaluate to $\\overline{F}$.<br><br>Hence, the correct options are <strong>B, C, and D</strong>.",
+  "videoUrl": null
+}

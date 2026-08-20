@@ -1,0 +1,22 @@
+{
+  "id": 34,
+  "year": "2021",
+  "set": "1",
+  "topics": [
+    "Computer Organization",
+    "Data Representation"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider the following representation of a number in IEEE 754 single-precision floating point format with a bias of 127.<br><br>$$S : 1 \\quad E : 10000001 \\quad F : 11110000000000000000000$$<br><br>Here $S$, $E$ and $F$ denote the sign, exponent and fraction components of the floating point representation.<br><br>The decimal value corresponding to the above representation (rounded to 2 decimal places) is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": -7.75,
+    "max": -7.75
+  },
+  "explanation": "<strong>Step 1: Identify the components from the given representation.</strong><br>Sign bit ($S$) = $1$, which means the number is negative.<br>Exponent ($E$) = $10000001_2 = 128 + 1 = 129_{10}$<br>Fraction ($F$) = $11110000000000000000000_2$<br><br><strong>Step 2: Calculate the actual exponent.</strong><br>$\\text{Actual Exponent} = E - \\text{Bias} = 129 - 127 = 2$<br><br><strong>Step 3: Calculate the mantissa $(1.F)_2$.</strong><br>$(1.F)_2 = 1.1111_2 = 1 + 2^{-1} + 2^{-2} + 2^{-3} + 2^{-4} = 1 + 0.5 + 0.25 + 0.125 + 0.0625 = 1.9375$<br><br><strong>Step 4: Compute the decimal value.</strong><br>$\\text{Value} = (-1)^S \\times (1.F)_2 \\times 2^{\\text{Actual Exponent}}$<br>$\\text{Value} = (-1)^1 \\times 1.9375 \\times 2^2 = -1 \\times 1.9375 \\times 4 = -7.75$",
+  "videoUrl": null
+}

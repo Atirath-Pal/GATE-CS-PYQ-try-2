@@ -1,0 +1,26 @@
+{
+  "id": 53,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "Discrete Mathematics",
+    "Set Theory & Relations"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "A relation $\\mathbf{R}$ is said to be <strong>circular</strong> if $a\\mathbf{R}b$ and $b\\mathbf{R}c$ together imply $c\\mathbf{R}a$.<br><br>Which of the following options is/are correct?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "If a relation $\\mathbf{S}$ is reflexive and symmetric, then $\\mathbf{S}$ is an equivalence relation.",
+    "If a relation $\\mathbf{S}$ is circular and symmetric, then $\\mathbf{S}$ is an equivalence relation.",
+    "If a relation $\\mathbf{S}$ is reflexive and circular, then $\\mathbf{S}$ is an equivalence relation.",
+    "If a relation $\\mathbf{S}$ is transitive and circular, then $\\mathbf{S}$ is an equivalence relation."
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Given Definition:</strong><br>A relation $\\mathbf{R}$ is <em>circular</em> if $a\\mathbf{R}b \\text{ and } b\\mathbf{R}c \\implies c\\mathbf{R}a$.<br><br><strong>Analysis of Options:</strong><br><br><strong>Option (A): Incorrect</strong><br>Reflexive and symmetric properties alone do not guarantee transitivity.<br><em>Counterexample:</em> Let $A = \\{1, 2, 3\\}$ and $\\mathbf{S} = \\{(1,1), (2,2), (3,3), (1,2), (2,1), (2,3), (3,2)\\}$. Here, $\\mathbf{S}$ is reflexive and symmetric, but $(1,2) \\in \\mathbf{S}$ and $(2,3) \\in \\mathbf{S}$ while $(1,3) \\notin \\mathbf{S}$. Hence, $\\mathbf{S}$ is not transitive.<br><br><strong>Option (B): Incorrect</strong><br>A circular and symmetric relation is not necessarily reflexive.<br><em>Counterexample:</em> Consider the empty relation $\\mathbf{S} = \\emptyset$ on a non-empty set $A = \\{1\\}$. $\\mathbf{S}$ is vacuously circular and symmetric, but $(1,1) \\notin \\mathbf{S}$, so it is not reflexive.<br><br><strong>Option (C): Correct</strong><br>We prove that if $\\mathbf{S}$ is reflexive and circular, then it is an equivalence relation:<br>1. <strong>Reflexivity:</strong> Given directly that $\\mathbf{S}$ is reflexive.<br>2. <strong>Symmetry:</strong> Assume $a\\mathbf{S}b$. Since $\\mathbf{S}$ is reflexive, $b\\mathbf{S}b$. Applying circularity to $a\\mathbf{S}b$ and $b\\mathbf{S}b$, we get $b\\mathbf{S}a$. Thus, $\\mathbf{S}$ is symmetric.<br>3. <strong>Transitivity:</strong> Assume $a\\mathbf{S}b$ and $b\\mathbf{S}c$. By circularity, this implies $c\\mathbf{S}a$. Since $\\mathbf{S}$ is symmetric, $c\\mathbf{S}a \\implies a\\mathbf{S}c$. Thus, $\\mathbf{S}$ is transitive.<br>Since $\\mathbf{S}$ is reflexive, symmetric, and transitive, $\\mathbf{S}$ is an equivalence relation.<br><br><strong>Option (D): Incorrect</strong><br>Transitive and circular properties do not guarantee reflexivity.<br><em>Counterexample:</em> Consider $\\mathbf{S} = \\emptyset$ on $A = \\{1\\}$. It is transitive and circular but not reflexive.<br><br>Therefore, only <strong>Option C</strong> is correct.",
+  "videoUrl": null
+}

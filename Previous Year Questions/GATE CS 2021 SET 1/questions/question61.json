@@ -1,0 +1,22 @@
+{
+  "id": 61,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "Theory of Computation",
+    "Pushdown Automata"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "In a pushdown automaton $P = (Q, \\Sigma, \\Gamma, \\delta, q_0, F)$, a transition of the form,<br><br><img src=\"/Previous Year Questions/GATE CS 2021 SET 1/assets/question61_1.png\" alt=\"Transition Diagram\"><br><br>where $p, q \\in Q$, $a \\in \\Sigma \\cup \\{\\epsilon\\}$, and $X, Y \\in \\Gamma \\cup \\{\\epsilon\\}$, represents<br>$$(q, Y) \\in \\delta(p, a, X).$$<br><br>Consider the following pushdown automaton over the input alphabet $\\Sigma = \\{a, b\\}$ and stack alphabet $\\Gamma = \\{\\#, A\\}$.<br><br><img src=\"/Previous Year Questions/GATE CS 2021 SET 1/assets/question61_2.png\" alt=\"Pushdown Automaton\"><br><br>The number of strings of length 100 accepted by the above pushdown automaton is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 50,
+    "max": 50
+  },
+  "explanation": "<strong>Step 1: Analyze the PDA transitions</strong><br>1. From state $q_0$ to $q_1$: The transition $\\epsilon, \\epsilon \\to \\#$ pushes the initial stack symbol $\\#$ without consuming any input.<br>2. At state $q_1$: The self-loop $a, \\epsilon \\to A$ consumes an input symbol $a$ and pushes $A$ onto the stack. Reading $m$ occurrences of $a$ pushes $m$ symbols of $A$ ($m \\ge 0$).<br>3. From $q_1$ to $q_2$: The transition $\\epsilon, \\epsilon \\to \\epsilon$ transitions to $q_2$ without altering input or stack.<br>4. At state $q_2$: The self-loop $b, A \\to \\epsilon$ consumes an input symbol $b$ and pops one $A$ from the stack. Reading $n$ occurrences of $b$ pops $n$ symbols of $A$ ($n \\ge 0$).<br>5. From $q_2$ to $q_3$: The transition $\\epsilon, A \\to A$ moves to final state $q_3$ provided the top symbol of the stack is $A$.<br><br><strong>Step 2: Determine acceptance condition</strong><br>The accepted strings are of the form $w = a^m b^n$.<br>For the transition to $q_3$ to be possible, there must be at least one symbol $A$ remaining on the stack after processing all $b$'s.<br>Number of remaining $A$'s on stack = $m - n$.<br>Therefore, we require $m - n \\ge 1 \\implies m > n \\ge 0$.<br><br><strong>Step 3: Count strings of length 100</strong><br>Length of string $|w| = m + n = 100 \\implies m = 100 - n$.<br>Substituting into $m > n$:<br>$100 - n > n \\implies 2n < 100 \\implies n < 50$.<br>Since $n$ must be a non-negative integer, $n \\in \\{0, 1, 2, \\dots, 49\\}$.<br><br>There are $50$ valid integer values for $n$, each corresponding to a unique accepted string.",
+  "videoUrl": null
+}

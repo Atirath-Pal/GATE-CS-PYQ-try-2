@@ -1,0 +1,19 @@
+{
+  "id": 33,
+  "year": 2021,
+  "set": 1,
+  "topics": ["Database Management Systems", "Relational Algebra"],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "A relation $r(A,B)$ in a relational database has 1200 tuples. The attribute $A$ has integer values ranging from 6 to 20, and the attribute $B$ has integer values ranging from 1 to 20. Assume that the attributes $A$ and $B$ are independently distributed.<br><br>The estimated number of tuples in the output of $\\sigma_{(A>10)\\lor(B=18)}(r)$ is __________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 819,
+    "max": 820
+  },
+  "explanation": "<strong>Step 1:</strong> Attribute $A$ takes integer values from $6$ to $20$, giving $15$ possible values. The condition $A>10$ is satisfied by the values $11$ through $20$, giving $10$ values. Therefore, $P(A>10)=\\frac{10}{15}=\\frac{2}{3}$, and the estimated number of tuples satisfying this condition is $1200\\times\\frac{2}{3}=800$.<br><br><strong>Step 2:</strong> Attribute $B$ takes integer values from $1$ to $20$, so $P(B=18)=\\frac{1}{20}$. The estimated number of tuples satisfying $B=18$ is $1200\\times\\frac{1}{20}=60$.<br><br><strong>Step 3:</strong> Since $A$ and $B$ are independently distributed, $P(A>10\\land B=18)=\\frac{2}{3}\\times\\frac{1}{20}=\\frac{1}{30}$. Thus, the estimated number of tuples satisfying both conditions is $1200\\times\\frac{1}{30}=40$.<br><br><strong>Step 4:</strong> For the OR condition, use inclusion-exclusion: $P(A>10\\lor B=18)=P(A>10)+P(B=18)-P(A>10\\land B=18)$. Hence, the estimated number of tuples is $800+60-40=820$.<br><br><strong>Therefore, the answer is $820$.</strong>",
+  "videoUrl": null
+}

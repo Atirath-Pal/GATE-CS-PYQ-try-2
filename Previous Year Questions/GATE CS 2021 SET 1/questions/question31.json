@@ -1,0 +1,22 @@
+{
+  "id": 31,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "Data Structures",
+    "Stacks and Queues"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider the following sequence of operations on an empty stack.<br><br>$$\\text{push}(54); \\text{push}(52); \\text{pop}(); \\text{push}(55); \\text{push}(62); s = \\text{pop}();$$<br><br>Consider the following sequence of operations on an empty queue.<br><br>$$\\text{enqueue}(21); \\text{enqueue}(24); \\text{dequeue}(); \\text{enqueue}(28); \\text{enqueue}(32); q = \\text{dequeue}();$$<br><br>The value of $s + q$ is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 86,
+    "max": 86
+  },
+  "explanation": "<strong>Step 1: Trace Stack Operations (LIFO - Last In First Out)</strong><br>- $\\text{push}(54) \\rightarrow$ Stack: $[54]$<br>- $\\text{push}(52) \\rightarrow$ Stack: $[54, 52]$<br>- $\\text{pop}() \\rightarrow$ Stack: $[54]$ (removes $52$)<br>- $\\text{push}(55) \\rightarrow$ Stack: $[54, 55]$<br>- $\\text{push}(62) \\rightarrow$ Stack: $[54, 55, 62]$<br>- $s = \\text{pop}() \\rightarrow$ Pops the top element $62$, so $s = 62$.<br><br><strong>Step 2: Trace Queue Operations (FIFO - First In First Out)</strong><br>- $\\text{enqueue}(21) \\rightarrow$ Queue: $[21]$<br>- $\\text{enqueue}(24) \\rightarrow$ Queue: $[21, 24]$<br>- $\\text{dequeue}() \\rightarrow$ Queue: $[24]$ (removes $21$)<br>- $\\text{enqueue}(28) \\rightarrow$ Queue: $[24, 28]$<br>- $\\text{enqueue}(32) \\rightarrow$ Queue: $[24, 28, 32]$<br>- $q = \\text{dequeue}() \\rightarrow$ Removes the front element $24$, so $q = 24$.<br><br><strong>Step 3: Calculate $s + q$</strong><br>$s + q = 62 + 24 = 86$.",
+  "videoUrl": null
+}

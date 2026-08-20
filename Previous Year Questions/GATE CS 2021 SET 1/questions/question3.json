@@ -1,0 +1,26 @@
+{
+  "id": 3,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "General Aptitude",
+    "English Grammar"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the following sentences:<br><br>(i) Everybody in the class is prepared for the exam.<br>(ii) Babu invited Danish to his home because he enjoys playing chess.<br><br>Which of the following is the CORRECT observation about the above two sentences?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "(i) is grammatically correct and (ii) is unambiguous",
+    "(i) is grammatically incorrect and (ii) is unambiguous",
+    "(i) is grammatically correct and (ii) is ambiguous",
+    "(i) is grammatically incorrect and (ii) is ambiguous"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Sentence (i):</strong> \"Everybody in the class is prepared for the exam.\"<br>The subject \"Everybody\" is an indefinite singular pronoun, which correctly agrees with the singular verb \"is\". Therefore, sentence (i) is <strong>grammatically correct</strong>.<br><br><strong>Sentence (ii):</strong> \"Babu invited Danish to his home because he enjoys playing chess.\"<br>The pronoun \"he\" is pronoun-referent ambiguous because it is unclear whether \"he\" refers to Babu or Danish. Therefore, sentence (ii) is <strong>ambiguous</strong>.<br><br>Hence, option (C) is the correct observation.",
+  "videoUrl": null
+}

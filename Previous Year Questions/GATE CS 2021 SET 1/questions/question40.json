@@ -1,0 +1,26 @@
+{
+  "id": 40,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "Algorithms",
+    "Recurrence Relations"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the following recurrence relation.<br><br>$$T(n) = \\begin{cases} T(n/2) + T(2n/5) + 7n & \\text{if } n > 0 \\\\ 1 & \\text{if } n = 0 \\end{cases}$$<br><br>Which one of the following options is correct?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$T(n) = \\Theta(n^{5/2})$",
+    "$T(n) = \\Theta(n \\log n)$",
+    "$T(n) = \\Theta(n)$",
+    "$T(n) = \\Theta((\\log n)^{5/2})$"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Analyze the given recurrence relation.</strong><br>We are given the recurrence relation $T(n) = T(n/2) + T(2n/5) + 7n$ for $n > 0$.<br><br><strong>Step 2: Apply the Akra-Bazzi method.</strong><br>For recurrences of the form $T(n) = \\sum a_i T(b_i n) + g(n)$, we have $a_1 = 1, b_1 = 1/2$, $a_2 = 1, b_2 = 2/5$, and $g(n) = 7n$.<br><br><strong>Step 3: Find the value of $p$.</strong><br>Solve for $p$ in $a_1 b_1^p + a_2 b_2^p = 1$:<br>$(1/2)^p + (2/5)^p = 1$<br><br>Testing values for $p$:<br>For $p = 1$: $(1/2)^1 + (2/5)^1 = 0.5 + 0.4 = 0.9 < 1$.<br>For $p = 0$: $(1/2)^0 + (2/5)^0 = 1 + 1 = 2 > 1$.<br>Thus, $p$ lies in the range $0 < p < 1$.<br><br><strong>Step 4: Compute $T(n)$.</strong><br>By the Akra-Bazzi theorem:<br>$T(n) = \\Theta\\left(n^p \\left(1 + \\int_1^n \\frac{g(u)}{u^{p+1}} du\\right)\\right)$<br><br>Evaluating the integral:<br>$\\int_1^n \\frac{7u}{u^{p+1}} du = 7 \\int_1^n u^{-p} du = 7 \\left[ \\frac{u^{1-p}}{1-p} \\right]_1^n = \\Theta(n^{1-p})$<br><br>Substituting back into the formula:<br>$T(n) = \\Theta(n^p \\cdot n^{1-p}) = \\Theta(n)$<br><br>Therefore, the correct option is <strong>(C)</strong>.",
+  "videoUrl": null
+}

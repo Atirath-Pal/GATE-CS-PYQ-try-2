@@ -1,0 +1,26 @@
+{
+  "id": 39,
+  "year": "2021",
+  "set": "1",
+  "topics": [
+    "Computer Networks",
+    "Error Detection and Correction"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Assume that a 12-bit Hamming codeword consisting of 8-bit data and 4 check bits is $d_8d_7d_6d_5c_8d_4d_3d_2c_4d_1c_2c_1$, where the data bits and the check bits are given in the following tables:<br><br><div style=\"display: flex; gap: 16px; justify-content: center; align-items: flex-start; flex-wrap: wrap; margin: 16px 0;\"><table style=\"border-collapse: collapse; border: 1px solid #ffffff; text-align: center;\"><thead><tr style=\"border-bottom: 1px solid #ffffff;\"><th colspan=\"8\" style=\"border: 1px solid #ffffff; padding: 4px 8px;\">Data bits</th></tr><tr style=\"border-bottom: 1px solid #ffffff;\"><th style=\"border: 1px solid #ffffff; padding: 4px 8px;\">$d_8$</th><th style=\"border: 1px solid #ffffff; padding: 4px 8px;\">$d_7$</th><th style=\"border: 1px solid #ffffff; padding: 4px 8px;\">$d_6$</th><th style=\"border: 1px solid #ffffff; padding: 4px 8px;\">$d_5$</th><th style=\"border: 1px solid #ffffff; padding: 4px 8px;\">$d_4$</th><th style=\"border: 1px solid #ffffff; padding: 4px 8px;\">$d_3$</th><th style=\"border: 1px solid #ffffff; padding: 4px 8px;\">$d_2$</th><th style=\"border: 1px solid #ffffff; padding: 4px 8px;\">$d_1$</th></tr></thead><tbody><tr><td style=\"border: 1px solid #ffffff; padding: 4px 8px;\">1</td><td style=\"border: 1px solid #ffffff; padding: 4px 8px;\">1</td><td style=\"border: 1px solid #ffffff; padding: 4px 8px;\">0</td><td style=\"border: 1px solid #ffffff; padding: 4px 8px;\">$x$</td><td style=\"border: 1px solid #ffffff; padding: 4px 8px;\">0</td><td style=\"border: 1px solid #ffffff; padding: 4px 8px;\">1</td><td style=\"border: 1px solid #ffffff; padding: 4px 8px;\">0</td><td style=\"border: 1px solid #ffffff; padding: 4px 8px;\">1</td></tr></tbody></table><table style=\"border-collapse: collapse; border: 1px solid #ffffff; text-align: center;\"><thead><tr style=\"border-bottom: 1px solid #ffffff;\"><th colspan=\"4\" style=\"border: 1px solid #ffffff; padding: 4px 8px;\">Check bits</th></tr><tr style=\"border-bottom: 1px solid #ffffff;\"><th style=\"border: 1px solid #ffffff; padding: 4px 8px;\">$c_8$</th><th style=\"border: 1px solid #ffffff; padding: 4px 8px;\">$c_4$</th><th style=\"border: 1px solid #ffffff; padding: 4px 8px;\">$c_2$</th><th style=\"border: 1px solid #ffffff; padding: 4px 8px;\">$c_1$</th></tr></thead><tbody><tr><td style=\"border: 1px solid #ffffff; padding: 4px 8px;\">$y$</td><td style=\"border: 1px solid #ffffff; padding: 4px 8px;\">0</td><td style=\"border: 1px solid #ffffff; padding: 4px 8px;\">1</td><td style=\"border: 1px solid #ffffff; padding: 4px 8px;\">0</td></tr></tbody></table></div><br>Which one of the following choices gives the correct values of $x$ and $y$?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$x$ is 0 and $y$ is 0.",
+    "$x$ is 0 and $y$ is 1.",
+    "$x$ is 1 and $y$ is 0.",
+    "$x$ is 1 and $y$ is 1."
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step 1: Map codeword bits to 1-based positions.</strong><br>The 12-bit codeword sequence is $d_8d_7d_6d_5c_8d_4d_3d_2c_4d_1c_2c_1$. Assigning position numbers from right (1) to left (12):<br>- Position 1 ($2^0$): $c_1 = 0$<br>- Position 2 ($2^1$): $c_2 = 1$<br>- Position 3: $d_1 = 1$<br>- Position 4 ($2^2$): $c_4 = 0$<br>- Position 5: $d_2 = 0$<br>- Position 6: $d_3 = 1$<br>- Position 7: $d_4 = 0$<br>- Position 8 ($2^3$): $c_8 = y$<br>- Position 9: $d_5 = x$<br>- Position 10: $d_6 = 0$<br>- Position 11: $d_7 = 1$<br>- Position 12: $d_8 = 1$<br><br><strong>Step 2: Solve for $x$ using parity bit $c_1$.</strong><br>Check bit $c_1$ covers positions with $2^0$ bit set in binary (1, 3, 5, 7, 9, 11).<br>Assuming even parity:<br>$c_1 \\oplus d_1 \\oplus d_2 \\oplus d_4 \\oplus d_5 \\oplus d_7 = 0$<br>$0 \\oplus 1 \\oplus 0 \\oplus 0 \\oplus x \\oplus 1 = 0$<br>$x \\oplus 0 = 0 \\implies x = 0$<br><br><strong>Step 3: Solve for $y$ using parity bit $c_8$.</strong><br>Check bit $c_8$ covers positions with $2^3$ bit set in binary (8, 9, 10, 11, 12).<br>$c_8 \\oplus d_5 \\oplus d_6 \\oplus d_7 \\oplus d_8 = 0$<br>$y \\oplus x \\oplus 0 \\oplus 1 \\oplus 1 = 0$<br>$y \\oplus 0 \\oplus 0 \\oplus 1 \\oplus 1 = 0$<br>$y = 0$<br><br>Thus, $x = 0$ and $y = 0$, which corresponds to Option A.",
+  "videoUrl": null
+}

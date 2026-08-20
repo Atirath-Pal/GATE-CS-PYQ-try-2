@@ -1,0 +1,26 @@
+{
+  "id": 14,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "Compiler Design",
+    "Run-Time Environments"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the following statements.<br><br>$S_1 :$ The sequence of procedure calls corresponds to a preorder traversal of the activation tree.<br>$S_2 :$ The sequence of procedure returns corresponds to a postorder traversal of the activation tree.<br><br>Which one of the following options is correct?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$S_1$ is true and $S_2$ is false",
+    "$S_1$ is false and $S_2$ is true",
+    "$S_1$ is true and $S_2$ is true",
+    "$S_1$ is false and $S_2$ is false"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Statement $S_1$:</strong><br>In an activation tree, a node represents a procedure activation. A procedure is called before any of its sub-procedures are invoked. Therefore, the order in which procedure calls occur visits the parent node before its children, which corresponds to a <strong>preorder traversal</strong> of the activation tree. Thus, $S_1$ is <strong>true</strong>.<br><br><strong>Statement $S_2$:</strong><br>A procedure finishes and returns control back to its caller only after all of its called sub-procedures (children) have completed their execution and returned. Visiting all child nodes completely before returning to/finishing the parent node corresponds to a <strong>postorder traversal</strong> of the activation tree. Thus, $S_2$ is <strong>true</strong>.<br><br>Hence, both statements $S_1$ and $S_2$ are true.",
+  "videoUrl": null
+}

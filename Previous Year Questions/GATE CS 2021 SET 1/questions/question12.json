@@ -1,0 +1,26 @@
+{
+  "id": 12,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "Algorithms",
+    "Analysis of Algorithms"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Let $P$ be an array containing $n$ integers. Let $t$ be the lowest upper bound on the number of comparisons of the array elements, required to find the minimum and maximum values in an arbitrary array of $n$ elements. Which one of the following choices is correct?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$t > 2n - 2$",
+    "$t > 3 \\left\\lceil \\frac{n}{2} \\right\\rceil$ and $t \\le 2n - 2$",
+    "$t > n$ and $t \\le 3 \\left\\lceil \\frac{n}{2} \\right\\rceil$",
+    "$t > \\lceil \\log_2(n) \\rceil$ and $t \\le n$"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "To find both the minimum and maximum elements in an array of $n$ elements, the minimum number of comparisons $t$ required in the worst case is:<br><br><strong>1. For even $n$:</strong> $\\frac{3n}{2} - 2$<br><strong>2. For odd $n$:</strong> $\\frac{3(n - 1)}{2}$<br><br>In general, $t = \\left\\lceil \\frac{3n}{2} \\right\\rceil - 2$.<br><br>Evaluating the bounds:<br>- $t$ is strictly greater than $n$ (for $n > 2$).<br>- $t$ is clearly less than or equal to $3 \\left\\lceil \\frac{n}{2} \\right\\rceil$.<br><br>Therefore, the inequality $t > n$ and $t \\le 3 \\left\\lceil \\frac{n}{2} \\right\\rceil$ is correct. Option (C) is the right answer.",
+  "videoUrl": null
+}

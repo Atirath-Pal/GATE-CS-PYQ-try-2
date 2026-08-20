@@ -1,0 +1,26 @@
+{
+  "id": 17,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "Discrete Mathematics",
+    "Mathematical Logic"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Let $p$ and $q$ be two propositions. Consider the following two formulae in propositional logic.<br><br>$$S_1 : (\\neg p \\land (p \\lor q)) \\rightarrow q$$<br>$$S_2 : q \\rightarrow (\\neg p \\land (p \\lor q))$$<br><br>Which one of the following choices is correct?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Both $S_1$ and $S_2$ are tautologies.",
+    "$S_1$ is a tautology but $S_2$ is not a tautology.",
+    "$S_1$ is not a tautology but $S_2$ is a tautology.",
+    "Neither $S_1$ nor $S_2$ is a tautology."
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Evaluating Formula $S_1$:</strong><br>$S_1: (\\neg p \\land (p \\lor q)) \\rightarrow q$<br>Using the distributive law on the antecedent:<br>$\\neg p \\land (p \\lor q) \\equiv (\\neg p \\land p) \\lor (\\neg p \\land q)$<br>Since $(\\neg p \\land p) \\equiv \\text{False}$, this simplifies to:<br>$\\text{False} \\lor (\\neg p \\land q) \\equiv \\neg p \\land q$<br><br>Substituting back into $S_1$:<br>$(\\neg p \\land q) \\rightarrow q \\equiv \\neg (\\neg p \\land q) \\lor q$<br>$\\equiv (p \\lor \\neg q) \\lor q \\equiv p \\lor (\\neg q \\lor q) \\equiv p \\lor \\text{True} \\equiv \\text{True}$<br>Since $S_1$ evaluates to $\\text{True}$ under all truth assignments, $S_1$ is a <strong>tautology</strong>.<br><br><strong>Evaluating Formula $S_2$:</strong><br>$S_2: q \\rightarrow (\\neg p \\land (p \\lor q))$<br>Simplifying the consequent:<br>$\\neg p \\land (p \\lor q) \\equiv \\neg p \\land q$<br>So, $S_2 \\equiv q \\rightarrow (\\neg p \\land q)$<br><br>Consider the truth assignment where $p = \\text{True}$ and $q = \\text{True}$:<br>Antecedent: $q = \\text{True}$<br>Consequent: $\\neg \\text{True} \\land \\text{True} = \\text{False} \\land \\text{True} = \\text{False}$<br>Implication: $\\text{True} \\rightarrow \\text{False} = \\text{False}$<br><br>Since $S_2$ can evaluate to $\\text{False}$, $S_2$ is <strong>not a tautology</strong>.<br><br>Hence, $S_1$ is a tautology but $S_2$ is not a tautology.",
+  "videoUrl": null
+}

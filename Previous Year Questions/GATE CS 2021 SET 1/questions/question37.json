@@ -1,0 +1,26 @@
+{
+  "id": 37,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "Database Management Systems",
+    "Relational Algebra"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "The following relation records the age of 500 employees of a company, where $empNo$ (indicating the employee number) is the key:<br><br>$$empAge(\\underline{empNo}, age)$$<br><br>Consider the following relational algebra expression:<br><br>$$\\Pi_{empNo}(empAge \\bowtie_{(age > age1)} \\rho_{empNo1, age1}(empAge))$$<br><br>What does the above expression generate?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Employee numbers of only those employees whose age is the maximum.",
+    "Employee numbers of only those employees whose age is more than the age of exactly one other employee.",
+    "Employee numbers of all employees whose age is not the minimum.",
+    "Employee numbers of all employees whose age is the minimum."
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Analyze the Renaming Operation</strong><br>The expression $\\rho_{empNo1, age1}(empAge)$ renames the relation $empAge$ to have attributes $empNo1$ and $age1$.<br><br><strong>Step 2: Analyze the Theta Join</strong><br>The operation $empAge \\bowtie_{(age > age1)} \\rho_{empNo1, age1}(empAge)$ performs a Theta Join between $empAge$ and its renamed copy on the condition $age > age1$. This pairs each employee with all employees who have a strictly smaller age.<br><br><strong>Step 3: Analyze the Projection</strong><br>The projection $\\Pi_{empNo}(...)$ extracts the $empNo$ of employees who satisfy the condition $age > age1$. An employee $empNo$ will be present in this result if and only if there exists at least one employee in the company who is younger than them.<br><br><strong>Step 4: Conclusion</strong><br>The only employees excluded from the result are those who do not have any employee younger than them, i.e., those who have the minimum age.<br><br>Therefore, the expression returns the employee numbers of all employees whose age is <strong>not the minimum</strong>.<br><br>Hence, option <strong>(C)</strong> is correct.",
+  "videoUrl": null
+}

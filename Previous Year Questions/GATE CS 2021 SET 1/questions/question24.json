@@ -1,0 +1,27 @@
+{
+  "id": 24,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "Operating Systems",
+    "System Calls"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Which of the following standard C library functions will <i>always</i> invoke a system call when executed from a single-threaded process in a UNIX/Linux operating system?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "exit",
+    "malloc",
+    "sleep",
+    "strlen"
+  ],
+  "answer": [
+    "A",
+    "C"
+  ],
+  "explanation": "<strong>Explanation:</strong><br><br><strong>(A) exit:</strong> The <code>exit()</code> function performs user-space cleanup (such as flushing stdio streams) and then strictly invokes the <code>_exit</code> or <code>exit_group</code> system call to terminate the process. Therefore, it <i>always</i> invokes a system call.<br><br><strong>(B) malloc:</strong> <code>malloc()</code> manages dynamic memory in user space using a memory pool. It only issues a system call (such as <code>brk</code> or <code>mmap</code>) when the pre-allocated pool cannot satisfy the memory request. Thus, it does <i>not</i> always invoke a system call.<br><br><strong>(C) sleep:</strong> The <code>sleep()</code> library function suspends execution of the calling process by invoking underlying kernel kernel time/delay system calls such as <code>nanosleep()</code>. Thus, it <i>always</i> invokes a system call.<br><br><strong>(D) strlen:</strong> <code>strlen()</code> iterates over a null-terminated string to count its characters entirely within user-space memory, so it never invokes a system call.<br><br>Hence, the correct options are <strong>A</strong> and <strong>C</strong>.",
+  "videoUrl": null
+}

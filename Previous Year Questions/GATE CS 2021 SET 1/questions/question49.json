@@ -1,0 +1,26 @@
+{
+  "id": 49,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "Theory of Computation",
+    "Decidability"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "For a Turing machine $M$, $\\langle M \\rangle$ denotes an encoding of $M$. Consider the following two languages.<br><br>$$L_1 = \\{ \\langle M \\rangle \\mid M \\text{ takes more than } 2021 \\text{ steps on all inputs} \\}$$<br>$$L_2 = \\{ \\langle M \\rangle \\mid M \\text{ takes more than } 2021 \\text{ steps on some input} \\}$$<br><br>Which one of the following options is correct?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Both $L_1$ and $L_2$ are decidable.",
+    "$L_1$ is decidable and $L_2$ is undecidable.",
+    "$L_1$ is undecidable and $L_2$ is decidable.",
+    "Both $L_1$ and $L_2$ are undecidable."
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step 1: Analyzing machine step bounds</strong><br>In $2021$ steps, a Turing machine $M$ can scan at most $2021$ tape cells. Therefore, any input characters located beyond position $2021$ cannot affect whether $M$ halts or continues within $2021$ steps.<br><br><strong>Step 2: Testing Decidability</strong><br>Since the input alphabet $\\Sigma$ is finite, the set of all input strings of length at most $2021$ is also finite.<br>• <strong>For $L_1$:</strong> We simulate $M$ on all inputs of length $\\le 2021$ for up to $2022$ steps. If $M$ takes more than $2021$ steps on all such inputs, then $M \\in L_1$.<br>• <strong>For $L_2$:</strong> We simulate $M$ on all inputs of length $\\le 2021$ for up to $2022$ steps. If $M$ takes more than $2021$ steps on at least one input, then $M \\in L_2$.<br><br>Because both checking algorithms simulate a finite number of inputs for a bounded number of steps, both decision procedures always terminate. Thus, both $L_1$ and $L_2$ are decidable.",
+  "videoUrl": null
+}

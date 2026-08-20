@@ -1,0 +1,26 @@
+{
+  "id": 18,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "Computer Networks",
+    "Data Link Layer"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the following two statements.<br><br>$S_1 :$ Destination MAC address of an ARP reply is a broadcast address.<br>$S_2 :$ Destination MAC address of an ARP request is a broadcast address.<br><br>Which one of the following choices is correct?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Both $S_1$ and $S_2$ are true.",
+    "$S_1$ is true and $S_2$ is false.",
+    "$S_1$ is false and $S_2$ is true.",
+    "Both $S_1$ and $S_2$ are false."
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Statement 1 ($S_1$):</strong> Destination MAC address of an ARP reply is a broadcast address.<br>This statement is <strong>false</strong>. An ARP reply is sent as a <strong>unicast</strong> frame because the responding host already knows the unicast MAC address of the host that issued the request.<br><br><strong>Statement 2 ($S_2$):</strong> Destination MAC address of an ARP request is a broadcast address.<br>This statement is <strong>true</strong>. An ARP request is sent as a <strong>broadcast</strong> frame (MAC address <code>FF:FF:FF:FF:FF:FF</code>) because the sender does not know the destination host's MAC address.<br><br>Therefore, $S_1$ is false and $S_2$ is true.",
+  "videoUrl": null
+}

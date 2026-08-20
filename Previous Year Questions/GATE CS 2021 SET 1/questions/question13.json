@@ -1,0 +1,26 @@
+{
+  "id": 13,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "Algorithms",
+    "Asymptotic Analysis"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the following three functions.<br><br>$$f_1 = 10^n \\quad f_2 = n^{\\log n} \\quad f_3 = n^{\\sqrt{n}}$$<br><br>Which one of the following options arranges the functions in the increasing order of asymptotic growth rate?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$f_3, f_2, f_1$",
+    "$f_2, f_1, f_3$",
+    "$f_1, f_2, f_3$",
+    "$f_2, f_3, f_1$"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "To find the increasing order of asymptotic growth rate, we take the base-2 logarithm ($\\log_2$) of each function:<br><br><strong>1. For $f_1(n) = 10^n$:</strong><br>$\\log_2(f_1(n)) = \\log_2(10^n) = n \\log_2 10 = \\Theta(n)$<br><br><strong>2. For $f_2(n) = n^{\\log n}$:</strong><br>$\\log_2(f_2(n)) = \\log_2(n^{\\log_2 n}) = (\\log_2 n)^2 = \\Theta(\\log^2 n)$<br><br><strong>3. For $f_3(n) = n^{\\sqrt{n}}$:</strong><br>$\\log_2(f_3(n)) = \\log_2(n^{\\sqrt{n}}) = \\sqrt{n} \\log_2 n = \\Theta(\\sqrt{n} \\log n)$<br><br>Comparing the expressions obtained after taking logarithms:<br>$(\\log_2 n)^2 < \\sqrt{n} \\log_2 n < n$ for sufficiently large $n$.<br><br>Therefore, the growth rates follow the order: $f_2 < f_3 < f_1$, making $f_2, f_3, f_1$ the correct increasing order.",
+  "videoUrl": null
+}

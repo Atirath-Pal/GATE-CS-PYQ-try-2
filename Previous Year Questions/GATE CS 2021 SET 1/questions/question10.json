@@ -1,0 +1,21 @@
+{
+  "id": 10,
+  "year": 2021,
+  "set": 1,
+  "topics": ["General Aptitude", "Verbal Aptitude"],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Some people suggest anti-obesity measures (AOM) such as displaying calorie information in restaurant menus. Such measures sidestep addressing the core problems that cause obesity: poverty and income inequality.<br><br>Which one of the following statements summarizes the passage?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "The proposed AOM addresses the core problems that cause obesity.",
+    "If obesity reduces, poverty will naturally reduce, since obesity causes poverty.",
+    "AOM are addressing the core problems and are likely to succeed.",
+    "AOM are addressing the problem superficially."
+  ],
+  "answer": ["D"],
+  "explanation": "The passage argues that anti-obesity measures such as displaying calorie information do not address the underlying causes of obesity, namely poverty and income inequality.<br><br><strong>Step 1:</strong> The passage identifies poverty and income inequality as the core problems causing obesity.<br><br><strong>Step 2:</strong> It states that the proposed AOM sidestep these underlying issues.<br><br><strong>Step 3:</strong> Therefore, the measures address obesity only at a superficial level rather than its root causes.<br><br><strong>Hence, the correct answer is D.</strong>",
+  "videoUrl": null
+}

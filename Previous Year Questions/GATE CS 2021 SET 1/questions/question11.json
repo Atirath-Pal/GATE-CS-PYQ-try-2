@@ -1,0 +1,26 @@
+{
+  "id": 11,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "Theory of Computation",
+    "Context Free Languages"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Suppose that $L_1$ is a regular language and $L_2$ is a context-free language. Which one of the following languages is NOT necessarily context-free?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$L_1 \\cap L_2$",
+    "$L_1 \\cdot L_2$",
+    "$L_1 - L_2$",
+    "$L_1 \\cup L_2$"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Analyze given language types</strong><br>Given that $L_1$ is a regular language and $L_2$ is a context-free language (CFL).<br><br><strong>Step 2: Evaluate each option using closure properties</strong><br>1. <strong>$L_1 \\cap L_2$:</strong> The intersection of a regular language and a context-free language is always a context-free language.<br>2. <strong>$L_1 \\cdot L_2$:</strong> Regular languages are context-free, and context-free languages are closed under concatenation. Thus, $L_1 \\cdot L_2$ is always context-free.<br>3. <strong>$L_1 - L_2$:</strong> By set identity, $L_1 - L_2 = L_1 \\cap \\overline{L_2}$. Context-free languages are NOT closed under complementation, so $\\overline{L_2}$ is not necessarily context-free. If $L_1 = \\Sigma^*$, then $L_1 - L_2 = \\overline{L_2}$, which may not be context-free.<br>4. <strong>$L_1 \\cup L_2$:</strong> Since regular languages are context-free and context-free languages are closed under union, $L_1 \\cup L_2$ is always context-free.<br><br><strong>Conclusion:</strong><br>Thus, $L_1 - L_2$ is NOT necessarily context-free. Hence, option (C) is correct.",
+  "videoUrl": null
+}

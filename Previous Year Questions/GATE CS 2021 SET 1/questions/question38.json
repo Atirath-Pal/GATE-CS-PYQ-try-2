@@ -1,0 +1,26 @@
+{
+  "id": 38,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "Digital Logic",
+    "Sequential Circuits"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider a 3-bit counter, designed using T flip-flops, as shown below:<br><br>Assuming the initial state of the counter given by PQR as 000, what are the next three states?",
+  "assetImage": "question38.png",
+  "codeBlock": null,
+  "options": [
+    "011, 101, 000",
+    "001, 010, 111",
+    "011, 101, 111",
+    "001, 010, 000"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "To determine the next states of the counter, we first extract the flip-flop input equations from the given diagram:<br><br>$T_P = R$<br>$T_Q = P' = \\overline{P}$<br>$T_R = Q' = \\overline{Q}$<br><br>The next state for a T flip-flop is determined by $Q_{next} = Q \\oplus T$.<br><br><strong>Step-by-Step State Transitions:</strong><br><br><strong>1. Initial State ($PQR = 000$):</strong><br>Inputs: $T_P = 0$, $T_Q = \\overline{0} = 1$, $T_R = \\overline{0} = 1$<br>Next State:<br>$P = 0 \\oplus 0 = 0$<br>$Q = 0 \\oplus 1 = 1$<br>$R = 0 \\oplus 1 = 1$<br>First Next State = <strong>011</strong><br><br><strong>2. State ($PQR = 011$):</strong><br>Inputs: $T_P = 1$, $T_Q = \\overline{0} = 1$, $T_R = \\overline{1} = 0$<br>Next State:<br>$P = 0 \\oplus 1 = 1$<br>$Q = 1 \\oplus 1 = 0$<br>$R = 1 \\oplus 0 = 1$<br>Second Next State = <strong>101</strong><br><br><strong>3. State ($PQR = 101$):</strong><br>Inputs: $T_P = 1$, $T_Q = \\overline{1} = 0$, $T_R = \\overline{0} = 1$<br>Next State:<br>$P = 1 \\oplus 1 = 0$<br>$Q = 0 \\oplus 0 = 0$<br>$R = 1 \\oplus 1 = 0$<br>Third Next State = <strong>000</strong><br><br>Thus, the sequence of the next three states is <strong>011, 101, 000</strong>.",
+  "videoUrl": null
+}

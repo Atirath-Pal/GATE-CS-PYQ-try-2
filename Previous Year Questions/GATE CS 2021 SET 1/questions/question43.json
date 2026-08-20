@@ -1,0 +1,26 @@
+{
+  "id": 43,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "Database Management System",
+    "Relational Database Design"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the relation $R(P, Q, S, T, X, Y, Z, W)$ with the following functional dependencies.<br><br>$$PQ \\rightarrow X; \\quad P \\rightarrow YX; \\quad Q \\rightarrow Y; \\quad Y \\rightarrow ZW$$<br><br>Consider the decomposition of the relation $R$ into the constituent relations according to the following two decomposition schemes.<br><br>$$D_1 : \\quad R = [(P, Q, S, T); (P, T, X); (Q, Y); (Y, Z, W)]$$<br>$$D_2 : \\quad R = [(P, Q, S); (T, X); (Q, Y); (Y, Z, W)]$$<br><br>Which one of the following options is correct?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$D_1$ is a lossless decomposition, but $D_2$ is a lossy decomposition.",
+    "$D_1$ is a lossy decomposition, but $D_2$ is a lossless decomposition.",
+    "Both $D_1$ and $D_2$ are lossless decompositions.",
+    "Both $D_1$ and $D_2$ are lossy decompositions."
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "To determine whether decompositions $D_1$ and $D_2$ are lossless or lossy, we apply the Chase algorithm/attribute closure testing.<br><br><strong>Testing Scheme $D_1$:</strong><br>The decomposed relations are $R_1(P, Q, S, T)$, $R_2(P, T, X)$, $R_3(Q, Y)$, and $R_4(Y, Z, W)$.<br>1. Using $Y \\rightarrow ZW$: Since $R_4$ contains $Y, Z, W$ and $R_3$ contains $Y$, $R_3$ gains attributes $Z$ and $W$.<br>2. Using $Q \\rightarrow Y$: Since $R_3$ contains $Q, Y, Z, W$ and $R_1$ contains $Q$, $R_1$ gains attributes $Y, Z, W$.<br>3. Using $P \\rightarrow YX$: Since $R_2$ contains $P, X$ and $R_1$ contains $P$, $R_1$ gains attribute $X$.<br>Thus, $R_1$ contains all attributes $(P, Q, S, T, X, Y, Z, W)$, proving that $D_1$ is a <strong>lossless decomposition</strong>.<br><br><strong>Testing Scheme $D_2$:</strong><br>The decomposed relations are $R_1(P, Q, S)$, $R_2(T, X)$, $R_3(Q, Y)$, and $R_4(Y, Z, W)$.<br>1. Attribute $T$ appears only in $R_2(T, X)$.<br>2. No functional dependency has $T$ on the right-hand side, nor does $X$ determine $T$.<br>3. Consequently, $T$ cannot be propagated to any other relation, nor can $R_2$ gain the remaining attributes.<br>Therefore, $D_2$ is a <strong>lossy decomposition</strong>.<br><br>Hence, $D_1$ is lossless and $D_2$ is lossy.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 47,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "Programming and Data Structures",
+    "C Programming"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the following ANSI C program.<br><br>Which one of the following options is correct?",
+  "assetImage": null,
+  "codeBlock": "#include <stdio.h>\nint main()\n{\n    int i, j, count;\n    count = 0;\n    i = 0;\n    for (j = -3; j <= 3; j++)\n    {\n        if ((j >= 0) && (i++))\n            count = count + j;\n    }\n    count = count + i;\n    printf(\"%d\", count);\n    return 0;\n}",
+  "options": [
+    "The program will not compile successfully.",
+    "The program will compile successfully and output 10 when executed.",
+    "The program will compile successfully and output 8 when executed.",
+    "The program will compile successfully and output 13 when executed."
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step 1: Code Trace & Variables</strong><br>Initial values: $count = 0$, $i = 0$.<br>The loop runs for $j = -3$ to $3$.<br><br><strong>Step 2: Execution Trace</strong><br>• <strong>$j = -3, -2, -1$:</strong> The expression $(j \\ge 0)$ evaluates to <strong>false</strong>. Due to short-circuit evaluation of the logical AND operator (<code>&&</code>), the second sub-expression $(i++)$ is <strong>not evaluated</strong>. Thus, $i$ remains $0$ and $count$ remains $0$.<br>• <strong>$j = 0$:</strong> The expression $(j \\ge 0)$ evaluates to <strong>true</strong> ($0 \\ge 0$). The second expression $(i++)$ is now evaluated. The post-increment operator returns the current value $i = 0$ (which evaluates as false in boolean context) and then increments $i$ to $1$. Since $true \\&\\& false$ is false, the body of the <code>if</code> statement is skipped. ($i = 1$, $count = 0$).<br>• <strong>$j = 1$:</strong> $(j \\ge 0)$ is <strong>true</strong>. $(i++)$ returns $1$ (true) and increments $i$ to $2$. Since $true \\&\\& true$ is true, $count = count + j = 0 + 1 = 1$. ($i = 2$, $count = 1$).<br>• <strong>$j = 2$:</strong> $(j \\ge 0)$ is <strong>true</strong>. $(i++)$ returns $2$ (true) and increments $i$ to $3$. $count = count + j = 1 + 2 = 3$. ($i = 3$, $count = 3$).<br>• <strong>$j = 3$:</strong> $(j \\ge 0)$ is <strong>true</strong>. $(i++)$ returns $3$ (true) and increments $i$ to $4$. $count = count + j = 3 + 3 = 6$. ($i = 4$, $count = 6$).<br><br><strong>Step 3: Final Output Calculation</strong><br>After exiting the loop, the statement <code>count = count + i;</code> executes:<br>$count = 6 + 4 = 10$.<br><br>The program compiles successfully and prints <strong>10</strong>.<br><br>Therefore, option (B) is the correct answer.",
+  "videoUrl": null
+}

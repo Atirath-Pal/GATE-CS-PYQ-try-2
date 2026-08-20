@@ -1,0 +1,22 @@
+{
+  "id": 59,
+  "year": "2021",
+  "set": "1",
+  "topics": [
+    "Computer Networks",
+    "Flow Control Protocols"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the sliding window flow-control protocol operating between a sender and a receiver over a full-duplex error-free link. Assume the following:<br><br>• The time taken for processing the data frame by the receiver is negligible.<br>• The time taken for processing the acknowledgement frame by the sender is negligible.<br>• The sender has infinite number of frames available for transmission.<br>• The size of the data frame is 2,000 bits and the size of the acknowledgement frame is 10 bits.<br>• The link data rate in each direction is 1 Mbps ($= 10^6$ bits per second).<br>• One way propagation delay of the link is 100 milliseconds.<br><br>The minimum value of the sender’s window size in terms of the number of frames, (rounded to the nearest integer) needed to achieve a link utilization of 50% is ____________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 50,
+    "max": 52
+  },
+  "explanation": "<strong>Given Data:</strong><br>• Bandwidth ($B$) = $1\\text{ Mbps} = 10^6\\text{ bits/sec}$<br>• Data Frame Size ($L_d$) = $2000\\text{ bits}$<br>• Acknowledgement Size ($L_a$) = $10\\text{ bits}$<br>• One-way Propagation Delay ($T_p$) = $100\\text{ ms}$<br>• Target Link Utilization ($\\\\eta$) = $50\\% = 0.5$<br><br><strong>Step 1: Calculate Transmission Times</strong><br>Transmission time for Data Frame ($T_t$) = $\\\\frac{L_d}{B} = \\\\frac{2000}{10^6}\\text{ s} = 2\\text{ ms}$<br>Transmission time for ACK Frame ($T_a$) = $\\\\frac{L_a}{B} = \\\\frac{10}{10^6}\\text{ s} = 0.01\\text{ ms}$<br><br><strong>Step 2: Calculate Total Cycle Time for One Frame</strong><br>Total time ($T_{total}$) = $T_t + T_p + T_a + T_p$<br>$T_{total} = 2 + 100 + 0.01 + 100 = 202.01\\text{ ms}$<br><br><strong>Step 3: Calculate Sender's Window Size ($W$)</strong><br>Link Utilization ($\\\\eta$) = $\\\\frac{W \\\\times T_t}{T_{total}}$<br>$0.5 = \\\\frac{W \\\\times 2}{202.01}$<br>$W = \\\\frac{0.5 \\\\times 202.01}{2} = 50.5025$<br><br>Rounding to the nearest integer gives $W = 51$ (acceptable range: $50$ to $52$).",
+  "videoUrl": null
+}

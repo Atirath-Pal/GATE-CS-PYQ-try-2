@@ -1,0 +1,19 @@
+{
+  "id": 27,
+  "year": 2021,
+  "set": 1,
+  "topics": ["Algorithms", "Graph Theory"],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider the following undirected graph with edge weights as shown:<br><br>The number of minimum-weight spanning trees of the graph is ________.",
+  "assetImage": "question27.png",
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 3,
+    "max": 3
+  },
+  "explanation": "<strong>Step 1:</strong> A minimum-weight spanning tree should include as many edges of weight $0.1$ as possible.<br><br><strong>Step 2:</strong> The edges of weight $0.1$ form two connected components: the top row of three vertices and the remaining six vertices. The top component contributes $2$ edges, while the lower component contributes $5$ edges, giving a total of $7$ edges.<br><br><strong>Step 3:</strong> Since the graph has $9$ vertices, a spanning tree must contain $8$ edges. Therefore, exactly one edge of weight $0.9$ is required to connect the two components.<br><br><strong>Step 4:</strong> There are exactly $3$ edges of weight $0.9$ that connect the top component to the lower component. Any one of these three edges can be selected, and each choice produces a distinct minimum-weight spanning tree.<br><br><strong>Step 5:</strong> Hence, the number of minimum-weight spanning trees is $3$.<br><br><strong>Answer: $3$</strong>",
+  "videoUrl": null
+}

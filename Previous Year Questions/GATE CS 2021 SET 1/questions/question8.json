@@ -1,0 +1,26 @@
+{
+  "id": 8,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "General Aptitude",
+    "Probability"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "There are five bags each containing identical sets of ten distinct chocolates. One chocolate is picked from each bag.<br><br>The probability that at least two chocolates are identical is ___________",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "0.3024",
+    "0.4235",
+    "0.6976",
+    "0.8125"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Calculate total possible outcomes.</strong><br>There are $5$ bags, and each bag contains $10$ distinct chocolates. The total number of ways to pick $1$ chocolate from each bag is:<br>$$\\text{Total outcomes} = 10^5 = 100,000$$<br><br><strong>Step 2: Calculate outcomes where all chocolates are distinct.</strong><br>For all $5$ picked chocolates to be completely distinct:<br>- $1^{\\text{st}}$ bag has $10$ choices.<br>- $2^{\\text{nd}}$ bag has $9$ choices.<br>- $3^{\\text{rd}}$ bag has $8$ choices.<br>- $4^{\\text{th}}$ bag has $7$ choices.<br>- $5^{\\text{th}}$ bag has $6$ choices.<br><br>$$\\text{Favorable outcomes (all distinct)} = 10 \\times 9 \\times 8 \\times 7 \\times 6 = 30,240$$<br><br><strong>Step 3: Calculate the probability that all chocolates are distinct.</strong><br>$$P(\\text{all distinct}) = \\frac{30,240}{100,000} = 0.3024$$<br><br><strong>Step 4: Find the required probability.</strong><br>The probability that at least two chocolates are identical is the complement of all chocolates being distinct:<br>$$P(\\text{at least two identical}) = 1 - P(\\text{all distinct}) = 1 - 0.3024 = 0.6976$$<br><br>Hence, option <strong>(C)</strong> is the correct answer.",
+  "videoUrl": null
+}

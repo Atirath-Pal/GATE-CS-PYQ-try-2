@@ -1,0 +1,26 @@
+{
+  "id": 2,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "General Aptitude",
+    "Geometry"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "A polygon is convex if, for every pair of points, $P$ and $Q$ belonging to the polygon, the line segment $PQ$ lies completely inside or on the polygon.<br><br>Which one of the following is <u>NOT</u> a convex polygon?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "[IMG: question2_option_a.png]",
+    "[IMG: question2_option_b.png]",
+    "[IMG: question2_option_c.png]",
+    "[IMG: question2_option_d.png]"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Definition of Convex Polygon:</strong><br>A polygon is defined as convex if, for any two points $P$ and $Q$ within or on the polygon, the entire line segment $PQ$ remains completely inside or on the boundary of the polygon.<br><br><strong>Analysis of Options:</strong><br>• <strong>Option A:</strong> This polygon has an inward notch (a concave indentation). If two points $P$ and $Q$ are chosen near the left indent, the straight line segment connecting $PQ$ goes outside the polygon boundary. Thus, it is a concave (non-convex) polygon.<br>• <strong>Options B, C, and D:</strong> These shapes (triangle, square, and trapezoid) are convex polygons, as any line segment joining two interior/boundary points stays entirely within or on the polygon.<br><br>Therefore, <strong>Option A</strong> is NOT a convex polygon.",
+  "videoUrl": null
+}

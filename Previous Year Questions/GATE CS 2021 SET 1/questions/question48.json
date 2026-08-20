@@ -1,0 +1,26 @@
+{
+  "id": 48,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "Theory of Computation",
+    "Finite Automata"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the following language.<br><br>$$L = \\{w \\in \\{0, 1\\}^* \\mid w \\text{ ends with the substring } 011\\}$$<br><br>Which one of the following deterministic finite automata accepts $L$?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "[IMG: question48_option_a.png]",
+    "[IMG: question48_option_b.png]",
+    "[IMG: question48_option_c.png]",
+    "[IMG: question48_option_d.png]"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Step 1: Understand the Language</strong><br>The language $L = \\{w \\in \\{0,1\\}^* \\mid w \\text{ ends with } 011\\}$ consists of all binary strings that end with the pattern $011$.<br><br><strong>Step 2: Minimal DFA States</strong><br>A minimal DFA for recognizing strings that end in $011$ requires 4 states, representing the length of the longest prefix of $011$ matched as a suffix of the input read so far:<br>- $q_0$ (Start state): Longest matching suffix is $\\epsilon$<br>- $q_1$: Longest matching suffix is $0$<br>- $q_2$: Longest matching suffix is $01$<br>- $q_3$ (Accepting state): Longest matching suffix is $011$<br><br><strong>Step 3: Analyze Transitions for the Final State</strong><br>- From $q_3$, if a $0$ is read, the string ends in $0110$. The longest matching prefix of $011$ present as a suffix of $0110$ is $0$, so it transitions to state $q_1$.<br>- From $q_3$, if a $1$ is read, the string ends in $0111$. The longest matching prefix of $011$ present as a suffix of $0111$ is $\\epsilon$, so it transitions back to the initial state $q_0$.<br><br><strong>Conclusion:</strong> Only Automaton (D) correctly routes the transition on input $1$ from the final state back to the start state.",
+  "videoUrl": null
+}

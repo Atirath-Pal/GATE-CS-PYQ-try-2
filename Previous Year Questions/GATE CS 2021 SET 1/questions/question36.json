@@ -1,0 +1,21 @@
+{
+  "id": 36,
+  "year": 2021,
+  "set": 1,
+  "topics": ["Compiler Design", "Syntax-Directed Translation"],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the following grammar (that admits a series of declarations, followed by expressions) and the associated syntax directed translation (SDT) actions, given as pseudo-code:<br><br>With respect to the above grammar, which one of the following choices is correct?",
+  "assetImage": null,
+  "codeBlock": "P → D* E*\nD → int ID {record that ID.lexeme is of type int}\nD → bool ID {record that ID.lexeme is of type bool}\nE → E₁ + E₂ {check that E₁.type = E₂.type = int; set E.type := int}\nE → !E₁ {check that E₁.type = bool; set E.type := bool}\nE → ID {set E.type := int}",
+  "options": [
+    "The actions can be used to correctly type-check any syntactically correct program.",
+    "The actions can be used to type-check syntactically correct integer variable declarations and integer expressions.",
+    "The actions can be used to type-check syntactically correct boolean variable declarations and boolean expressions.",
+    "The actions will lead to an infinite loop."
+  ],
+  "answer": ["B"],
+  "explanation": "<strong>Step 1:</strong> The declaration productions correctly record the type of an identifier. For an integer declaration, $ID$ is recorded as having type $int$, and for a boolean declaration, $ID$ is recorded as having type $bool$.<br><br><strong>Step 2:</strong> For the expression $E_1 + E_2$, the SDT checks that both operands have type $int$ and assigns $E.type := int$. Thus, integer expressions using addition can be correctly type-checked.<br><br><strong>Step 3:</strong> For the expression $!E_1$, the SDT checks that $E_1.type = bool$ and assigns $E.type := bool$. This correctly handles the logical NOT operation when its operand is boolean.<br><br><strong>Step 4:</strong> However, the production $E \\rightarrow ID$ always sets $E.type := int$, irrespective of the actual declared type of $ID$. Therefore, boolean variables cannot be correctly type-checked when they occur as expressions.<br><br><strong>Step 5:</strong> Hence, the SDT cannot correctly type-check all programs or boolean expressions, but it can correctly type-check integer variable declarations and integer expressions.<br><br><strong>Therefore, the correct answer is B.</strong>",
+  "videoUrl": null
+}

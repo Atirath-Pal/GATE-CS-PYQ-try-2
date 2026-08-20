@@ -1,0 +1,27 @@
+{
+  "id": 25,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "Operating Systems",
+    "File Systems"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider a linear list based directory implementation in a file system. Each directory is a list of nodes, where each node contains the file name along with the file metadata, such as the list of pointers to the data blocks. Consider a given directory foo.<br><br>Which of the following operations will necessarily require a full scan of foo for successful completion?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Creation of a new file in foo",
+    "Deletion of an existing file from foo",
+    "Renaming of an existing file in foo",
+    "Opening of an existing file in foo"
+  ],
+  "answer": [
+    "A",
+    "C"
+  ],
+  "explanation": "<strong>Explanation:</strong><br><br>In a linear list implementation of a directory, entries are stored in a simple sequential list.<br><br>1. <strong>Creation of a new file in foo:</strong> To create a new file, the system must ensure that no existing file already uses the intended name (preventing duplicate file names in the same directory). Checking uniqueness requires scanning the entire directory list, which is a full scan.<br><br>2. <strong>Deletion of an existing file from foo:</strong> Searching stops as soon as the specified file is located in the list. A full scan is not required unless the file is at the very end or absent.<br><br>3. <strong>Renaming of an existing file in foo:</strong> To rename a file, the system must verify that the new file name does not already exist in the directory to avoid collisions. Checking the uniqueness of the new name necessitates a full scan of the directory.<br><br>4. <strong>Opening of an existing file in foo:</strong> Opening a file only requires finding its entry. The search stops as soon as the file is found.<br><br>Hence, options <strong>(A)</strong> and <strong>(C)</strong> necessarily require a full scan.",
+  "videoUrl": null
+}

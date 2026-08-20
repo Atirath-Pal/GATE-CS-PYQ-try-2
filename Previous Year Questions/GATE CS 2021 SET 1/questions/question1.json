@@ -1,0 +1,26 @@
+{
+  "id": 1,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "General Aptitude",
+    "Numerical Ability"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "The ratio of boys to girls in a class is 7 to 3.<br><br>Among the options below, an acceptable value for the total number of students in the class is:",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "21",
+    "37",
+    "50",
+    "73"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Given:</strong><br>Ratio of boys to girls = $7 : 3$<br><br><strong>Calculation:</strong><br>Let the number of boys be $7x$ and the number of girls be $3x$, where $x$ is a positive integer.<br><br>Total number of students = $7x + 3x = 10x$<br><br>Since the number of students must be a positive integer, $x$ must be an integer. This means the total number of students must be a multiple of $10$.<br><br>Checking the options:<br>• $21$ is not a multiple of $10$<br>• $37$ is not a multiple of $10$<br>• $50$ is a multiple of $10$ ($10 \\times 5 = 50$)<br>• $73$ is not a multiple of $10$<br><br>Hence, <strong>50</strong> (Option C) is the correct answer.",
+  "videoUrl": null
+}

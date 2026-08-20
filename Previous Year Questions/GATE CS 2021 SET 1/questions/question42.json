@@ -1,0 +1,26 @@
+{
+  "id": 42,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "Database Management System",
+    "Transactions & Concurrency Control"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Let $r_i(z)$ and $w_i(z)$ denote read and write operations respectively on a data item $z$ by a transaction $T_i$. Consider the following two schedules.<br><br>$$S_1 : r_1(x) r_1(y) r_2(x) r_2(y) w_2(y) w_1(x)$$<br><br>$$S_2 : r_1(x) r_2(x) r_2(y) w_2(y) r_1(y) w_1(x)$$<br><br>Which one of the following options is correct?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$S_1$ is conflict serializable, and $S_2$ is not conflict serializable.",
+    "$S_1$ is not conflict serializable, and $S_2$ is conflict serializable.",
+    "Both $S_1$ and $S_2$ are conflict serializable.",
+    "Neither $S_1$ nor $S_2$ is conflict serializable."
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "To determine conflict serializability, construct the precedence (serialization) graph for both schedules.<br><br><strong>Schedule $S_1$:</strong><br>Conflicting operations in $S_1$ are:<br>1. $r_1(y)$ and $w_2(y)$: Since $r_1(y)$ appears before $w_2(y)$, there is a directed edge $T_1 \\to T_2$.<br>2. $r_2(x)$ and $w_1(x)$: Since $r_2(x)$ appears before $w_1(x)$, there is a directed edge $T_2 \\to T_1$.<br>Since the precedence graph contains a cycle ($T_1 \\to T_2 \\to T_1$), <strong>$S_1$ is not conflict serializable</strong>.<br><br><strong>Schedule $S_2$:</strong><br>Conflicting operations in $S_2$ are:<br>1. $r_2(x)$ and $w_1(x)$: Since $r_2(x)$ appears before $w_1(x)$, there is an edge $T_2 \\to T_1$.<br>2. $w_2(y)$ and $r_1(y)$: Since $w_2(y)$ appears before $r_1(y)$, there is an edge $T_2 \\to T_1$.<br>The precedence graph contains only one directed edge ($T_2 \\to T_1$) and no cycles. Therefore, <strong>$S_2$ is conflict serializable</strong>.",
+  "videoUrl": null
+}

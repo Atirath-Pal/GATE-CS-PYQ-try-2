@@ -1,0 +1,26 @@
+{
+  "id": 46,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "Graph Theory",
+    "Algorithms"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Let $G = (V, E)$ be an undirected unweighted connected graph. The diameter of $G$ is defined as:<br><br>$$\\text{diam}(G) = \\max_{u,v \\in V} \\{\\text{the length of shortest path between } u \\text{ and } v\\}$$<br><br>Let $M$ be the adjacency matrix of $G$.<br>Define graph $G_2$ on the same set of vertices with adjacency matrix $N$, where<br><br>$$N_{ij} = \\begin{cases} 1 & \\text{if } M_{ij} > 0 \\text{ or } P_{ij} > 0, \\text{ where } P = M^2 \\\\ 0 & \\text{otherwise} \\end{cases}$$<br><br>Which one of the following statements is true?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\text{diam}(G_2) \\le \\lceil \\text{diam}(G)/2 \\rceil$",
+    "$\\lceil \\text{diam}(G)/2 \\rceil < \\text{diam}(G_2) < \\text{diam}(G)$",
+    "$\\text{diam}(G_2) = \\text{diam}(G)$",
+    "$\\text{diam}(G) < \\text{diam}(G_2) \\le 2 \\text{ diam}(G)$"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step 1: Understand the edge additions in graph $G_2$</strong><br>In graph $G$, $M_{ij} > 0$ means there is an edge (shortest path length 1) between vertex $i$ and vertex $j$.<br>The matrix $P = M^2$ gives the number of paths of length 2. Thus, $P_{ij} > 0$ indicates a path of length 2 exists between vertex $i$ and vertex $j$.<br><br><strong>Step 2: Relate distances in $G$ and $G_2$</strong><br>The adjacency matrix $N$ of $G_2$ sets $N_{ij} = 1$ whenever the shortest path distance in $G$, $d_G(i, j)$, is 1 or 2.<br>Thus, any path of distance $d$ in $G$ can be traversed in $G_2$ using at most $\\lceil d / 2 \\rceil$ edges.<br><br><strong>Step 3: Compare diameters</strong><br>Since the maximum shortest path distance in $G$ is $\\text{diam}(G)$, the maximum shortest path distance in $G_2$ satisfies:<br>$\\text{diam}(G_2) = \\lceil \\text{diam}(G)/2 \\rceil$.<br><br>Hence, $\\text{diam}(G_2) \\le \\lceil \\text{diam}(G)/2 \\rceil$ holds true.<br><br><strong>Conclusion:</strong><br>Option (A) is correct.",
+  "videoUrl": null
+}

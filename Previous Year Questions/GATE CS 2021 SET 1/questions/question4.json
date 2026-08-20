@@ -1,0 +1,26 @@
+{
+  "id": 4,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "General Aptitude",
+    "Spatial Aptitude"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "A circular sheet of paper is folded along the lines in the directions shown. The paper, after being punched in the final folded state as shown and unfolded in the reverse order of folding, will look like ________.",
+  "assetImage": "question4.png",
+  "codeBlock": null,
+  "options": [
+    "[IMG: question4_option_a.png]",
+    "[IMG: question4_option_b.png]",
+    "[IMG: question4_option_c.png]",
+    "[IMG: question4_option_d.png]"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step 1: Understand the folding steps.</strong><br>- First fold: The right half of the circle is folded over to the left half along the vertical line.<br>- Second fold: The bottom half of the remaining semi-circle is folded upward along the horizontal line into the top-left quadrant.<br><br><strong>Step 2: Trace the punches when unfolding.</strong><br>- <strong>Center Arc Cut:</strong> A quarter-circle cut at the origin vertex unfolds across both folds to form a complete <strong>circle</strong> at the center.<br>- <strong>Vertical Boundary Notch:</strong> The punch along the vertical axis lies directly on the vertical fold line. When unfolded horizontally, its width doubles, creating a <strong>horizontal rectangle</strong> at the top and bottom.<br>- <strong>Horizontal Boundary Notch:</strong> The punch along the horizontal axis lies on the horizontal fold line. When unfolded vertically, its height doubles, creating a <strong>vertical rectangle</strong> on the left and right sides.<br><br><strong>Conclusion:</strong> Unfolding in reverse order produces a central circle, horizontal rectangular slots at the top and bottom, and vertical rectangular slots on the left and right, which matches <strong>Option (A)</strong>.",
+  "videoUrl": null
+}

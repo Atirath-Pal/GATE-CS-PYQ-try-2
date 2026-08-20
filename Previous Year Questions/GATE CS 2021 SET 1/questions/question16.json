@@ -1,0 +1,26 @@
+{
+  "id": 16,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "Digital Logic",
+    "Number Representation"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Let the representation of a number in base 3 be 210. What is the hexadecimal representation of the number?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "15",
+    "21",
+    "D2",
+    "528"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step 1: Convert base-3 number to decimal (base-10).</strong><br>Given base-3 representation $= (210)_3$<br>$(210)_3 = 2 \\times 3^2 + 1 \\times 3^1 + 0 \\times 3^0$<br>$(210)_3 = 2 \\times 9 + 1 \\times 3 + 0 = 18 + 3 = 21_{10}$<br><br><strong>Step 2: Convert decimal number to hexadecimal (base-16).</strong><br>Divide $21$ by $16$:<br>$21 \\div 16 = 1$ with a remainder of $5$.<br>Therefore, $21_{10} = (15)_{16}$.<br><br>Thus, the correct hexadecimal representation is <strong>15</strong>.",
+  "videoUrl": null
+}

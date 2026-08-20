@@ -1,0 +1,26 @@
+{
+  "id": 5,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "General Aptitude",
+    "Verbal Ability"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "______ is to <i>surgery</i> as <i>writer</i> is to ______<br><br>Which one of the following options maintains a similar logical relation in the above sentence?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Plan, outline",
+    "Hospital, library",
+    "Doctor, book",
+    "Medicine, grammar"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Identify the relationship</strong><br>The given sentence establishes a relationship between a professional/person and their work or creation.<br><br><strong>Step 2: Analyze the options</strong><br>A <strong>Doctor</strong> is the person who performs a <strong>surgery</strong>.<br>Similarly, a <strong>writer</strong> is the person who creates a <strong>book</strong>.<br><br><strong>Step 3: Conclusion</strong><br>Substituting 'Doctor' and 'book' into the blanks yields: 'Doctor is to surgery as writer is to book', which maintains the exact logical parallel.<br><br>Hence, the correct answer is <strong>C</strong>.",
+  "videoUrl": null
+}

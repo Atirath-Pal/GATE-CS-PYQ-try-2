@@ -1,0 +1,27 @@
+{
+  "id": 21,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "Operating Systems",
+    "Memory Management"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "In the context of operating systems, which of the following statements is/are correct with respect to paging?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Paging helps solve the issue of external fragmentation.",
+    "Page size has no impact on internal fragmentation.",
+    "Paging incurs memory overheads.",
+    "Multi-level paging is necessary to support pages of different sizes."
+  ],
+  "answer": [
+    "A",
+    "C"
+  ],
+  "explanation": "<strong>Statement (A) is CORRECT:</strong> Paging allocates physical memory in fixed-size frames non-contiguously. Since any free frame can be allocated to a process's page, external fragmentation is eliminated.<br><br><strong>Statement (B) is INCORRECT:</strong> Internal fragmentation occurs on the last page of a process. On average, internal fragmentation per process is equal to half the page size ($\\frac{\\text{Page Size}}{2}$). Thus, larger page sizes lead to higher internal fragmentation.<br><br><strong>Statement (C) is CORRECT:</strong> Paging requires storing page tables in memory for address translation, which introduces additional memory overhead.<br><br><strong>Statement (D) is INCORRECT:</strong> Multi-level paging is designed to reduce the memory overhead of large, single-level contiguous page tables. It is not necessary to support pages of different sizes.",
+  "videoUrl": null
+}

@@ -1,0 +1,27 @@
+{
+  "id": 9,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "General Aptitude",
+    "Reasoning and Aptitude"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Given below are two statements 1 and 2, and two conclusions I and II.<br><br>Statement 1: All bacteria are microorganisms.<br>Statement 2: All pathogens are microorganisms.<br><br>Conclusion I: Some pathogens are bacteria.<br>Conclusion II: All pathogens are not bacteria.<br><br>Based on the above statements and conclusions, which one of the following options is logically CORRECT?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Only conclusion I is correct",
+    "Only conclusion II is correct",
+    "Either conclusion I or II is correct.",
+    "Neither conclusion I nor II is correct."
+  ],
+  "answer": [
+    "C",
+    "D"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br><strong>1. Given Statements:</strong><br>- Statement 1: All bacteria ($B$) are microorganisms ($M$). ($B \\subseteq M$)<br>- Statement 2: All pathogens ($P$) are microorganisms ($M$). ($P \\subseteq M$)<br><br>Since both sets $B$ and $P$ are subsets of $M$, there is no direct relation established between pathogens ($P$) and bacteria ($B$). They may intersect, one may contain the other, or they may be disjoint.<br><br><strong>2. Analysis of Conclusions:</strong><br>- <strong>Conclusion I:</strong> \"Some pathogens are bacteria.\" ($P \\cap B \\neq \\emptyset$). This is not guaranteed to be true in all possible Venn diagrams.<br>- <strong>Conclusion II:</strong> \"All pathogens are not bacteria.\"<br><br><strong>3. Dual Interpretation:</strong><br>- <strong>Interpretation A (Complementary Pair):</strong> If Conclusion II is interpreted as \"No pathogen is a bacterium\" ($P \\cap B = \\emptyset$), then Conclusion I and Conclusion II form a complementary pair. Either some pathogens are bacteria or no pathogen is a bacterium. Thus, either Conclusion I or II must hold, making <strong>Option C</strong> correct.<br>- <strong>Interpretation B (Individual Validity):</strong> Neither conclusion can be individually proven to be logically mandatory from the given statements alone. Thus, neither conclusion I nor II is strictly correct, making <strong>Option D</strong> correct.<br><br>Hence, both <strong>Option C</strong> and <strong>Option D</strong> are considered correct answers.",
+  "videoUrl": null
+}

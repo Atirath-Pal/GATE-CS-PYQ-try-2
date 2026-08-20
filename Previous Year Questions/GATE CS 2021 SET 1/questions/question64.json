@@ -1,0 +1,22 @@
+{
+  "id": 64,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "Engineering Mathematics",
+    "Probability"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "A sender (S) transmits a signal, which can be one of the two kinds: $H$ and $L$ with probabilities $0.1$ and $0.9$ respectively, to a receiver (R).<br><br>In the graph below, the weight of edge $(u, v)$ is the probability of receiving $v$ when $u$ is transmitted, where $u, v \\in \\{H, L\\}$. For example, the probability that the received signal is $L$ given the transmitted signal was $H$, is $0.7$.<br><br>If the received signal is $H$, the probability that the transmitted signal was $H$ (rounded to 2 decimal places) is ________.",
+  "assetImage": "question64.png",
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 0.04,
+    "max": 0.04
+  },
+  "explanation": "<strong>Given:</strong><br>- Prior probabilities of transmission:<br>$P(T = H) = 0.1$<br>$P(T = L) = 0.9$<br><br>- Conditional probabilities of reception from the given graph:<br>$P(R = H \\mid T = H) = 0.3$<br>$P(R = L \\mid T = H) = 0.7$<br>$P(R = H \\mid T = L) = 0.8$<br>$P(R = L \\mid T = L) = 0.2$<br><br><strong>Step 1: Calculate the total probability of receiving signal $H$, $P(R = H)$:</strong><br>By Total Probability Theorem:<br>$P(R = H) = P(R = H \\mid T = H) \\times P(T = H) + P(R = H \\mid T = L) \\times P(T = L)$<br>$P(R = H) = (0.3 \\times 0.1) + (0.8 \\times 0.9) = 0.03 + 0.72 = 0.75$<br><br><strong>Step 2: Calculate $P(T = H \\mid R = H)$ using Bayes' Theorem:</strong><br>$P(T = H \\mid R = H) = \\frac{P(R = H \\mid T = H) \\times P(T = H)}{P(R = H)}$<br>$P(T = H \\mid R = H) = \\frac{0.3 \\times 0.1}{0.75} = \\frac{0.03}{0.75} = 0.04$<br><br><strong>Answer:</strong><br>The probability that the transmitted signal was $H$ given that the received signal is $H$ is $0.04$.",
+  "videoUrl": null
+}

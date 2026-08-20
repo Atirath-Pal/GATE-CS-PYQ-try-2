@@ -1,0 +1,27 @@
+{
+  "id": 50,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "Algorithms",
+    "Dynamic Programming"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Define $R_n$ to be the maximum amount earned by cutting a rod of length $n$ meters into one or more pieces of integer length and selling them. For $i > 0$, let $p[i]$ denote the selling price of a rod whose length is $i$ meters. Consider the array of prices:<br><br>$$p[1] = 1, p[2] = 5, p[3] = 8, p[4] = 9, p[5] = 10, p[6] = 17, p[7] = 18$$<br><br>Which of the following statements is/are correct about $R_7$?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$R_7 = 18$",
+    "$R_7 = 19$",
+    "$R_7$ is achieved by three different solutions.",
+    "$R_7$ cannot be achieved by a solution consisting of three pieces."
+  ],
+  "answer": [
+    "A",
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Calculate the maximum price $R_7$</strong><br>We evaluate all possible integer partitions of length $7$ and their corresponding sum of prices:<br>• $p[7] = 18$<br>• $p[1] + p[6] = 1 + 17 = 18$<br>• $p[2] + p[5] = 5 + 10 = 15$<br>• $p[3] + p[4] = 8 + 9 = 17$<br>• $p[2] + p[2] + p[3] = 5 + 5 + 8 = 18$<br><br>All other combinations yield prices less than $18$.<br>Therefore, the maximum revenue $R_7 = 18$. This makes <strong>(A) correct</strong> and <strong>(B) incorrect</strong>.<br><br><strong>Step 2: Check the number of solutions achieving $R_7 = 18$</strong><br>The maximum value of $18$ is obtained from the following distinct solutions:<br>1. A single piece of length $7$ ($p[7] = 18$)<br>2. Two pieces of lengths $1$ and $6$ ($p[1] + p[6] = 18$)<br>3. Three pieces of lengths $2$, $2$, and $3$ ($p[2] + p[2] + p[3] = 18$)<br><br>Since there are exactly 3 solutions, <strong>(C) is correct</strong>.<br>Since solution #3 consists of three pieces, <strong>(D) is incorrect</strong>.",
+  "videoUrl": null
+}

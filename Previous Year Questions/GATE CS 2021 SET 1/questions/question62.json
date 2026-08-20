@@ -1,0 +1,22 @@
+{
+  "id": 62,
+  "year": "2021",
+  "set": "1",
+  "topics": [
+    "Linear Algebra",
+    "Engineering Mathematics"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the following matrix.<br><br>$$\\begin{pmatrix} 0 & 1 & 1 & 1 \\\\ 1 & 0 & 1 & 1 \\\\ 1 & 1 & 0 & 1 \\\\ 1 & 1 & 1 & 0 \\end{pmatrix}$$<br><br>The largest eigenvalue of the above matrix is _________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 3,
+    "max": 3
+  },
+  "explanation": "<strong>Step 1: Understand the given matrix structure</strong><br>The given matrix $A$ of order $4 \\times 4$ is:<br>$A = \\begin{pmatrix} 0 & 1 & 1 & 1 \\\\ 1 & 0 & 1 & 1 \\\\ 1 & 1 & 0 & 1 \\\\ 1 & 1 & 1 & 0 \\end{pmatrix}$<br><br><strong>Step 2: Observe row sums</strong><br>Notice that the sum of elements in each row is:<br>$0 + 1 + 1 + 1 = 3$<br>When the sum of elements in every row of a matrix is a constant $S$, then $S$ is always an eigenvalue of that matrix.<br>Here, $S = 3$ is an eigenvalue corresponding to the eigenvector $[1, 1, 1, 1]^T$.<br><br><strong>Step 3: Find the remaining eigenvalues</strong><br>Matrix $A$ can be written as $A = J - I$, where $J$ is a $4 \\times 4$ matrix with all entries equal to $1$, and $I$ is the identity matrix.<br>The eigenvalues of $J_{4 \\times 4}$ are $4, 0, 0, 0$.<br>Therefore, the eigenvalues of $A = J - I$ are:<br>$\\lambda_1 = 4 - 1 = 3$<br>$\\lambda_2 = 0 - 1 = -1$<br>$\\lambda_3 = 0 - 1 = -1$<br>$\\lambda_4 = 0 - 1 = -1$<br><br><strong>Step 4: Determine the largest eigenvalue</strong><br>The eigenvalues of the matrix are $3, -1, -1, -1$.<br>Thus, the largest eigenvalue is $3$.",
+  "videoUrl": null
+}

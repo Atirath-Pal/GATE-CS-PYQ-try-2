@@ -1,0 +1,22 @@
+{
+  "id": 35,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "Operating Systems",
+    "CPU Scheduling"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Three processes arrive at time zero with CPU bursts of 16, 20 and 10 milliseconds. If the scheduler has prior knowledge about the length of the CPU bursts, the minimum achievable average waiting time for these three processes in a non-preemptive scheduler (rounded to nearest integer) is ___________ milliseconds.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 12,
+    "max": 12
+  },
+  "explanation": "<strong>Step 1: Determine the Optimal Scheduling Algorithm</strong><br>To minimize the average waiting time when processes arrive simultaneously at time $t = 0$, the non-preemptive <strong>Shortest Job First (SJF)</strong> algorithm is optimal.<br><br><strong>Step 2: Identify Process Burst Times</strong><br>Let the processes be:<br>- $P_1$ with burst time $16\\text{ ms}$<br>- $P_2$ with burst time $20\\text{ ms}$<br>- $P_3$ with burst time $10\\text{ ms}$<br><br><strong>Step 3: Determine Execution Order</strong><br>Sorting the processes in ascending order of their CPU burst times:<br>$P_3 (10\\text{ ms}) \\rightarrow P_1 (16\\text{ ms}) \\rightarrow P_2 (20\\text{ ms})$<br><br><strong>Step 4: Calculate Individual Waiting Times</strong><br>- Waiting time for $P_3 = 0\\text{ ms}$<br>- Waiting time for $P_1 = 10\\text{ ms}$<br>- Waiting time for $P_2 = 10 + 16 = 26\\text{ ms}$<br><br><strong>Step 5: Calculate Average Waiting Time</strong><br>$$\\text{Total Waiting Time} = 0 + 10 + 26 = 36\\text{ ms}$$<br>$$\\text{Average Waiting Time} = \\frac{36}{3} = 12\\text{ ms}$$<br><br>Hence, the minimum achievable average waiting time is <strong>12</strong>.",
+  "videoUrl": null
+}

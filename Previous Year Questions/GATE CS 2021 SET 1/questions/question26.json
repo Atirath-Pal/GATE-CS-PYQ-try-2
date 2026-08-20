@@ -1,0 +1,22 @@
+{
+  "id": 26,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "Discrete Mathematics",
+    "Graph Theory"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "In an undirected connected planar graph $G$, there are eight vertices and five faces.<br><br>The number of edges in $G$ is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 11,
+    "max": 11
+  },
+  "explanation": "According to Euler's formula for a connected planar graph:<br>$V - E + F = 2$<br><br>Given:<br>• Vertices ($V$) = $8$<br>• Faces ($F$) = $5$<br><br>Substituting the given values into Euler's formula:<br>$8 - E + 5 = 2$<br>$13 - E = 2$<br>$E = 11$<br><br>Hence, the number of edges in $G$ is <strong>11</strong>.",
+  "videoUrl": null
+}

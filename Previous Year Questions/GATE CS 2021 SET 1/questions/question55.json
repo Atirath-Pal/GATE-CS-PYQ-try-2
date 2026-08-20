@@ -1,0 +1,27 @@
+{
+  "id": 55,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "Computer Networks",
+    "IP Fragmentation"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider two hosts $P$ and $Q$ connected through a router $R$. The maximum transfer unit (MTU) value of the link between $P$ and $R$ is 1500 bytes, and between $R$ and $Q$ is 820 bytes.<br><br>A TCP segment of size 1400 bytes was transferred from $P$ to $Q$ through $R$, with IP identification value as 0x1234. Assume that the IP header size is 20 bytes. Further, the packet is allowed to be fragmented, i.e., Don’t Fragment (DF) flag in the IP header is <i>not</i> set by $P$.<br><br>Which of the following statements is/are correct?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Two fragments are created at $R$ and the IP datagram size carrying the second fragment is 620 bytes.",
+    "If the second fragment is lost, $R$ will resend the fragment with the IP identification value 0x1234.",
+    "If the second fragment is lost, $P$ is required to resend the whole TCP segment.",
+    "TCP destination port can be determined by analysing <i>only</i> the second fragment."
+  ],
+  "answer": [
+    "A",
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Datagram size at host $P$</strong><br>TCP Payload size = $1400$ bytes<br>IP Header size = $20$ bytes<br>Total IP Datagram size = $1400 + 20 = 1420$ bytes<br>MTU of link $P-R = 1500$ bytes.<br>Since $1420 \\le 1500$, no fragmentation occurs on link $P-R$.<br><br><strong>Step 2: Fragmentation at Router $R$</strong><br>MTU of link $R-Q = 820$ bytes.<br>Max data payload per fragment = $820 - 20 = 800$ bytes (which is divisible by $8$).<br>- <strong>Fragment 1:</strong> Payload = $800$ bytes, Total IP datagram size = $800 + 20 = 820$ bytes.<br>- <strong>Fragment 2:</strong> Remaining payload = $1400 - 800 = 600$ bytes, Total IP datagram size = $600 + 20 = 620$ bytes.<br>Hence, two fragments are created at $R$ and the size of the second fragment is $620$ bytes. <strong>Statement (A) is correct.</strong><br><br><strong>Step 3: Handling lost fragments</strong><br>Routers do not store or retransmit individual lost fragments. If a fragment is lost, the entire TCP segment fails to reassemble at destination $Q$. Eventually, TCP at sender $P$ times out and retransmits the complete TCP segment. Thus, <strong>Statement (B) is incorrect</strong> and <strong>Statement (C) is correct.</strong><br><br><strong>Step 4: TCP header presence</strong><br>The TCP header (containing source and destination port numbers) is located only at the beginning of the payload in the first fragment. The second fragment contains payload bytes starting from offset $800$. Thus, port information cannot be determined from the second fragment alone. <strong>Statement (D) is incorrect.</strong>",
+  "videoUrl": null
+}

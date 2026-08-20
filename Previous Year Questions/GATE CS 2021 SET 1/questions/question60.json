@@ -1,0 +1,19 @@
+{
+  "id": 60,
+  "year": 2021,
+  "set": 1,
+  "topics": ["Compiler Design", "Code Optimization"],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the following C code segment:<br><br>In a compiler, this code segment is represented internally as a directed acyclic graph (DAG). The number of nodes in the DAG is __________.",
+  "assetImage": null,
+  "codeBlock": "a = b + c;\ne = a + 1;\nd = b + c;\nf = d + 1;\ng = e + f;",
+  "options": [],
+  "answer": {
+    "min": 6,
+    "max": 6
+  },
+  "explanation": "<strong>Step 1:</strong> The expression $b+c$ occurs twice, in the assignments to $a$ and $d$. Since a DAG represents common subexpressions only once, both $a$ and $d$ point to the same node representing $b+c$.<br><br><strong>Step 2:</strong> The expressions $a+1$ and $d+1$ therefore have the same value because $a$ and $d$ refer to the same $b+c$ node. Hence, these two expressions can also be represented by a single common node, representing $(b+c)+1$. Both $e$ and $f$ point to this node.<br><br><strong>Step 3:</strong> The distinct nodes are: $b$, $c$, constant $1$, the operation $b+c$, the operation $(b+c)+1$, and the final operation $e+f$.<br><br><strong>Step 4:</strong> Therefore, the total number of nodes is $2+1+1+1+1=6$.<br><br><strong>Hence, the answer is $6$.</strong>",
+  "videoUrl": null
+}

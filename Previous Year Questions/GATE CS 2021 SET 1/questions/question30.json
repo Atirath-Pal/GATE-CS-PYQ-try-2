@@ -1,0 +1,22 @@
+{
+  "id": 30,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "Engineering Mathematics",
+    "Calculus"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider the following expression.<br><br>$$\\lim_{x \\to -3} \\frac{\\sqrt{2x + 22} - 4}{x + 3}$$<br><br>The value of the above expression (rounded to 2 decimal places) is _______.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 0.25,
+    "max": 0.25
+  },
+  "explanation": "<strong>Step 1: Analyze the limit expression</strong><br>We need to evaluate the limit:<br>$\\lim_{x \\to -3} \\frac{\\sqrt{2x + 22} - 4}{x + 3}$<br><br><strong>Step 2: Check for indeterminate form</strong><br>Substituting $x = -3$ directly into the expression:<br>Numerator: $\\sqrt{2(-3) + 22} - 4 = \\sqrt{16} - 4 = 0$<br>Denominator: $-3 + 3 = 0$<br>This yields an indeterminate form of $\\frac{0}{0}$.<br><br><strong>Step 3: Apply L'Hôpital's Rule</strong><br>Differentiating the numerator and denominator with respect to $x$:<br>Derivative of numerator: $\\frac{d}{dx}(\\sqrt{2x + 22} - 4) = \\frac{2}{2\\sqrt{2x + 22}} = \\frac{1}{\\sqrt{2x + 22}}$<br>Derivative of denominator: $\\frac{d}{dx}(x + 3) = 1$<br><br><strong>Step 4: Compute the limit</strong><br>$\\lim_{x \\to -3} \\frac{1}{\\sqrt{2x + 22}} = \\frac{1}{\\sqrt{2(-3) + 22}} = \\frac{1}{\\sqrt{16}} = \\frac{1}{4} = 0.25$<br><br>Hence, the value of the expression is <strong>0.25</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,28 @@
+{
+  "id": 54,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "Computer Networks",
+    "Transport Layer"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "A TCP server application is programmed to listen on port number $P$ on host $S$. A TCP client is connected to the TCP server over the network.<br><br>Consider that while the TCP connection was active, the server machine $S$ crashed and rebooted. Assume that the client does not use the TCP keepalive timer.<br><br>Which of the following behaviors is/are possible?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "If the client was waiting to receive a packet, it may wait indefinitely.",
+    "The TCP server application on $S$ can listen on $P$ after reboot.",
+    "If the client sends a packet after the server reboot, it will receive a RST segment.",
+    "If the client sends a packet after the server reboot, it will receive a FIN segment."
+  ],
+  "answer": [
+    "A",
+    "B",
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Analyzing Option (A):</strong><br>When host $S$ crashes and reboots, its connection state in volatile memory is lost. If the client is sitting idle waiting to receive data and keepalive timers are disabled, it receives no notification of the crash and will wait indefinitely.<br><br><strong>Step 2: Analyzing Option (B):</strong><br>After host $S$ finishes rebooting, the TCP server application can be restarted and successfully bind to port $P$ to listen for new incoming connections.<br><br><strong>Step 3: Analyzing Option (C):</strong><br>If the client sends a packet to $S$ after reboot, $S$ receives a segment for a connection it has no record of. By standard TCP specifications, host $S$ responds with an RST (Reset) segment to signal the client to tear down its half-open connection.<br><br><strong>Step 4: Analyzing Option (D):</strong><br>A FIN segment is only used for orderly/graceful connection termination. Because the server crashed, it cannot initiate a normal FIN closure sequence; thus, option (D) is incorrect.",
+  "videoUrl": null
+}

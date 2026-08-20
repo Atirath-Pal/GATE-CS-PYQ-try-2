@@ -1,0 +1,22 @@
+{
+  "id": 28,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "Engineering Mathematics",
+    "Probability"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "The lifetime of a component of a certain type is a random variable whose probability density function is exponentially distributed with parameter 2. For a randomly picked component of this type, the probability that its lifetime exceeds the expected lifetime (rounded to 2 decimal places) is ________ .",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 0.35,
+    "max": 0.39
+  },
+  "explanation": "<strong>Step 1: Identify the given distribution parameters</strong><br>Let $X$ be the random variable representing the lifetime of the component.<br>It is given that $X$ is exponentially distributed with parameter $\\lambda = 2$.<br><br><strong>Step 2: Calculate the expected lifetime</strong><br>The expected value (mean) of an exponentially distributed random variable is:<br>$$E[X] = \\frac{1}{\\lambda} = \\frac{1}{2} = 0.5$$<br><br><strong>Step 3: Find the probability that lifetime exceeds expected lifetime</strong><br>We need to find $P(X > E[X]) = P(X > 0.5)$.<br>The survival function for an exponential distribution is:<br>$$P(X > x) = e^{-\\lambda x}$$<br>Substituting $\\lambda = 2$ and $x = 0.5$:<br>$$P(X > 0.5) = e^{-2 \\times 0.5} = e^{-1} = \\frac{1}{e} \\approx 0.367879$$<br><br>Rounding to two decimal places gives <strong>0.37</strong> (which falls in the range 0.35 to 0.39).",
+  "videoUrl": null
+}

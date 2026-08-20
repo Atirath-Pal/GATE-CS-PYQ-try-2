@@ -1,0 +1,26 @@
+{
+  "id": 15,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "Compiler Design",
+    "Parsing"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the following statements.<br><br>$S_1$ : Every SLR(1) grammar is unambiguous but there are certain unambiguous grammars that are not SLR(1).<br>$S_2$ : For any context-free grammar, there is a parser that takes at most $O(n^3)$ time to parse a string of length $n$.<br><br>Which one of the following options is correct?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$S_1$ is true and $S_2$ is false",
+    "$S_1$ is false and $S_2$ is true",
+    "$S_1$ is true and $S_2$ is true",
+    "$S_1$ is false and $S_2$ is false"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Statement $S_1$:</strong> Every SLR(1) grammar is unambiguous because all LR family grammars generate unambiguous languages and are deterministic. However, not all unambiguous context-free grammars are SLR(1) (for instance, LR(2) grammars or non-LR unambiguous grammars). Thus, $S_1$ is true.<br><br><strong>Statement $S_2$:</strong> Any context-free grammar can be parsed in worst-case time $O(n^3)$ for an input string of length $n$ using general parsing algorithms such as the CYK (Cocke-Younger-Kasami) algorithm or Earley's algorithm. Thus, $S_2$ is true.<br><br>Therefore, both $S_1$ and $S_2$ are true.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 22,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "Theory of Computation",
+    "Decidability"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Let $\\langle M \\rangle$ denote an encoding of an automaton $M$. Suppose that $\\Sigma = \\{0, 1\\}$. Which of the following languages is/are NOT recursive?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$L = \\{\\langle M \\rangle \\mid M \\text{ is a DFA such that } L(M) = \\emptyset\\}$",
+    "$L = \\{\\langle M \\rangle \\mid M \\text{ is a DFA such that } L(M) = \\Sigma^*\\}$",
+    "$L = \\{\\langle M \\rangle \\mid M \\text{ is a PDA such that } L(M) = \\emptyset\\}$",
+    "$L = \\{\\langle M \\rangle \\mid M \\text{ is a PDA such that } L(M) = \\Sigma^*\\}$"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Step 1: Understand Recursive Languages</strong><br>A language is recursive (decidable) if there exists a Turing Machine that halts on every input string and correctly decides membership.<br><br><strong>Step 2: Analyze Option (A)</strong><br>$L = \\{\\langle M \\rangle \\mid M \\text{ is a DFA such that } L(M) = \\emptyset\\}$<br>This is the Emptiness problem for DFAs ($E_{\\text{DFA}}$). Since we can check reachability of accepting states using graph traversal algorithms, this problem is decidable. Thus, this language is <strong>recursive</strong>.<br><br><strong>Step 3: Analyze Option (B)</strong><br>$L = \\{\\langle M \\rangle \\mid M \\text{ is a DFA such that } L(M) = \\Sigma^*\\}$<br>This is the Universality problem for DFAs ($ALL_{\\text{DFA}}$). Since the complement of a DFA is also a DFA, we can construct the complement automaton and test for emptiness. Hence, this problem is decidable, making the language <strong>recursive</strong>.<br><br><strong>Step 4: Analyze Option (C)</strong><br>$L = \\{\\langle M \\rangle \\mid M \\text{ is a PDA such that } L(M) = \\emptyset\\}$<br>This is the Emptiness problem for PDAs / Context-Free Languages ($E_{\\text{PDA}}$). We can test whether a CFG/PDA generates any string by checking generating variables. Thus, this problem is decidable and the language is <strong>recursive</strong>.<br><br><strong>Step 5: Analyze Option (D)</strong><br>$L = \\{\\langle M \\rangle \\mid M \\text{ is a PDA such that } L(M) = \\Sigma^*\\}$<br>This is the Universality problem for PDAs / Context-Free Languages ($ALL_{\\text{PDA}}$). The universality problem for CFLs is undecidable (provable via reduction from the Post Correspondence Problem). Therefore, this language is <strong>NOT recursive</strong>.<br><br>Hence, option <strong>D</strong> is the correct choice.",
+  "videoUrl": null
+}

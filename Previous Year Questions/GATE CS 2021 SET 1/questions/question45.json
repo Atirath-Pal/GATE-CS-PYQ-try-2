@@ -1,0 +1,26 @@
+{
+  "id": 45,
+  "year": "2021",
+  "set": "1",
+  "topics": [
+    "Engineering Mathematics",
+    "Probability"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the two statements.<br><br>$S_1 :$ There exist random variables $X$ and $Y$ such that<br>$$\\left(\\mathbb{E}\\left[(X - \\mathbb{E}(X))(Y - \\mathbb{E}(Y))\\right]\\right)^2 > \\text{Var}[X] \\text{Var}[Y]$$<br>$S_2 :$ For all random variables $X$ and $Y$,<br>$$\\text{Cov}[X, Y] = \\mathbb{E}\\left[|X - \\mathbb{E}[X]||Y - \\mathbb{E}[Y]|\\right]$$<br><br>Which one of the following choices is correct?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Both $S_1$ and $S_2$ are true.",
+    "$S_1$ is true, but $S_2$ is false.",
+    "$S_1$ is false, but $S_2$ is true.",
+    "Both $S_1$ and $S_2$ are false."
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Analysis of Statement $S_1$:</strong><br>By the Cauchy-Schwarz inequality for random variables, the covariance between two random variables $X$ and $Y$ satisfies:<br>$(\\text{Cov}[X, Y])^2 = \\left(\\mathbb{E}\\left[(X - \\mathbb{E}(X))(Y - \\mathbb{E}(Y))\\right]\\right)^2 \\le \\text{Var}[X]\\text{Var}[Y]$<br>Since the squared covariance can never strictly exceed $\\text{Var}[X]\\text{Var}[Y]$, there exist no such random variables. Thus, <strong>$S_1$ is false</strong>.<br><br><strong>Analysis of Statement $S_2$:</strong><br>Covariance is defined as $\\text{Cov}[X, Y] = \\mathbb{E}\\left[(X - \\mathbb{E}[X])(Y - \\mathbb{E}[Y])\\right]$.<br>If $X$ and $Y$ are negatively correlated (for instance, $Y = -X$ with $\\text{Var}[X] > 0$), then $\\text{Cov}[X, Y] < 0$.<br>However, $\\mathbb{E}\\left[|X - \\mathbb{E}[X]||Y - \\mathbb{E}[Y]|\\right]$ is an expectation of non-negative values and is always $\\ge 0$.<br>Therefore, the equality does not hold for all random variables. Thus, <strong>$S_2$ is false</strong>.<br><br>Hence, <strong>both $S_1$ and $S_2$ are false</strong>.",
+  "videoUrl": null
+}

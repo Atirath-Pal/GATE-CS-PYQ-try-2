@@ -1,0 +1,26 @@
+{
+  "id": 23,
+  "year": 2021,
+  "set": 1,
+  "topics": [
+    "Databases",
+    "Transactions & Recovery"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Suppose a database system crashes again while recovering from a previous crash.<br><br>Assume checkpointing is not done by the database either during the transactions or during recovery.<br><br>Which of the following statements is/are correct?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "The same undo and redo list will be used while recovering again.",
+    "The system cannot recover any further.",
+    "All the transactions that are already undone and redone will not be recovered again.",
+    "The database will become inconsistent."
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Analysis of Database Recovery:</strong><br><br><strong>1. Log-Based Recovery:</strong> When the database system crashes during recovery, it must restart the recovery process by re-reading the log file.<br><br><strong>2. Construction of Undo/Redo Lists:</strong> Since checkpointing is not performed during normal transaction processing or recovery, the log contents remain unchanged. Upon restarting, the recovery manager scans the log from the beginning and identifies the exact same committed and uncommitted transactions, thereby generating the <strong>same undo and redo lists</strong>.<br><br><strong>3. Idempotency:</strong> Recovery actions (Undo and Redo) are idempotent. Executing them multiple times produces the exact same consistent database state as executing them once.<br><br>Therefore, statement <strong>(A)</strong> is correct.",
+  "videoUrl": null
+}
