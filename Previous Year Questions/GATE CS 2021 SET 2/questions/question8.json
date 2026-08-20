@@ -1,0 +1,26 @@
+{
+  "id": 8,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "General Aptitude",
+    "Ratio and Proportion"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "The number of students in three classes is in the ratio 3:13:6. If 18 students are added to each class, the ratio changes to 15:35:21.<br><br>The total number of students in all the three classes in the beginning was:",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "22",
+    "66",
+    "88",
+    "110"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "Let the number of students in the three classes initially be $3x$, $13x$, and $6x$.<br><br><strong>Total initial students:</strong><br>$\\text{Total} = 3x + 13x + 6x = 22x$<br><br>After adding 18 students to each class, the new ratio becomes $15 : 35 : 21$.<br><br>Taking the ratio of the first two classes:<br>$\\frac{3x + 18}{13x + 18} = \\frac{15}{35} = \\frac{3}{7}$<br><br>Solving for $x$:<br>$7(3x + 18) = 3(13x + 18)$<br>$21x + 126 = 39x + 54$<br>$18x = 72$<br>$x = 4$<br><br><strong>Calculating initial total number of students:</strong><br>$\\text{Total} = 22 \\times 4 = 88$<br><br>Hence, <strong>C</strong> is the correct option.",
+  "videoUrl": null
+}

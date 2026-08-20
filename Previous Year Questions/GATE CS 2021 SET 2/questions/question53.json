@@ -1,0 +1,28 @@
+{
+  "id": 53,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "Operating Systems",
+    "Deadlock"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a computer system with multiple shared resource types, with one instance per resource type. Each instance can be owned by only one process at a time. Owning and freeing of resources are done by holding a global lock ($L$). The following scheme is used to own a resource instance :<br><br>Which of the following choice(s) about the above scheme is/are correct?",
+  "assetImage": null,
+  "codeBlock": "function OWNRESOURCE(Resource R)\n    Acquire lock L // a global lock\n    if R is available then\n        Acquire R\n        Release lock L\n    else\n        if R is owned by another process P then\n            Terminate P, after releasing all resources owned by P\n            Acquire R\n            Restart P\n            Release lock L\n        end if\n    end if\nend function",
+  "options": [
+    "The scheme ensures that deadlocks will not occur.",
+    "The scheme may lead to live-lock.",
+    "The scheme may lead to starvation.",
+    "The scheme violates the mutual exclusion property."
+  ],
+  "answer": [
+    "A",
+    "B",
+    "C"
+  ],
+  "explanation": "<strong>Correct Answer: A, B, C</strong><br><br><strong>Analysis of the Options:</strong><br><br>1. <strong>Option A (Deadlock Avoidance/Prevention):</strong> Deadlock requires four necessary conditions: Mutual Exclusion, Hold and Wait, No Preemption, and Circular Wait. In this scheme, if process $P_1$ requests resource $R$ held by process $P$, process $P$ is immediately terminated and forced to release all its held resources before being restarted. This breaks the 'No Preemption' and 'Hold and Wait' conditions, preventing any circular wait condition. Thus, <strong>deadlocks will not occur</strong>.<br><br>2. <strong>Option B (Live-lock):</strong> Two or more processes can continually preempt and restart each other in a loop without any process making meaningful computational progress. Because state changes (termination and restart) occur repeatedly, the system is actively running but stuck in a loop, which is a <strong>livelock</strong>.<br><br>3. <strong>Option C (Starvation):</strong> A low-priority or repeatedly targeted process may continuously have its resources preempted and forced to restart whenever another process requests its resource. Consequently, it may never complete execution, leading to <strong>starvation</strong>.<br><br>4. <strong>Option D (Mutual Exclusion):</strong> The acquisition and release of any resource instance are guarded by a global lock $L$, and each resource instance can only be held by one process at any given time. Therefore, <strong>mutual exclusion is preserved</strong>, making option D incorrect.",
+  "videoUrl": null
+}

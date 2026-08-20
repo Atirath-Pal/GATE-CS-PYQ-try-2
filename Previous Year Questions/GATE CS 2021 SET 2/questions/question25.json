@@ -1,0 +1,27 @@
+{
+  "id": 25,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "Discrete Mathematics",
+    "Mathematical Logic"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Choose the correct choice(s) regarding the following propositional logic assertion $S$:<br><br>$$S : ((P \\wedge Q) \\rightarrow R) \\rightarrow ((P \\wedge Q) \\rightarrow (Q \\rightarrow R))$$",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$S$ is neither a tautology nor a contradiction.",
+    "$S$ is a tautology.",
+    "$S$ is a contradiction.",
+    "The antecedent of $S$ is logically equivalent to the consequent of $S$."
+  ],
+  "answer": [
+    "B",
+    "D"
+  ],
+  "explanation": "<strong>Step 1: Analyze the Antecedent and Consequent of $S$</strong><br>The given assertion $S$ is in the form of an implication $A \\rightarrow B$, where:<br>• Antecedent $A = ((P \\wedge Q) \\rightarrow R)$<br>• Consequent $B = ((P \\wedge Q) \\rightarrow (Q \\rightarrow R))$<br><br><strong>Step 2: Simplify the Consequent ($B$)</strong><br>Using logical equivalences ($X \\rightarrow Y \\equiv \\neg X \\vee Y$):<br>$B \\equiv \\neg (P \\wedge Q) \\vee (Q \\rightarrow R)$<br>$B \\equiv (\\neg P \\vee \\neg Q) \\vee (\\neg Q \\vee R)$<br>Applying associativity and idempotence of OR ($\n\\vee$):<br>$B \\equiv \\neg P \\vee \\neg Q \\vee R$<br>$B \\equiv \\neg (P \\wedge Q) \\vee R$<br>$B \\equiv (P \\wedge Q) \\rightarrow R$<br><br><strong>Step 3: Evaluate Statement Equivalence and Tautology</strong><br>Since $B \\equiv (P \\wedge Q) \\rightarrow R$, we have $A \\equiv B$. Thus, the antecedent of $S$ is logically equivalent to the consequent of $S$. This makes option <strong>(D)</strong> correct.<br><br>Since $A \\equiv B$, the assertion $S: A \\rightarrow B$ becomes $A \\rightarrow A$, which is always True (a Tautology). This makes option <strong>(B)</strong> correct.",
+  "videoUrl": null
+}

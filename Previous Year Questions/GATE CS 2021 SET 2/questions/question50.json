@@ -1,0 +1,28 @@
+{
+  "id": 50,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "Database Management Systems",
+    "Functional Dependencies"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Suppose the following functional dependencies hold on a relation $U$ with attributes $P, Q, R, S$, and $T$:<br><br>$$P \\rightarrow QR$$<br>$$RS \\rightarrow T$$<br><br>Which of the following functional dependencies can be inferred from the above functional dependencies?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$PS \\rightarrow T$",
+    "$R \\rightarrow T$",
+    "$P \\rightarrow R$",
+    "$PS \\rightarrow Q$"
+  ],
+  "answer": [
+    "A",
+    "C",
+    "D"
+  ],
+  "explanation": "Given functional dependencies:<br>1. $P \\rightarrow QR$<br>2. $RS \\rightarrow T$<br><br>By applying the decomposition rule on $P \\rightarrow QR$, we get:<br>• $P \\rightarrow Q$<br>• $P \\rightarrow R$<br><br>Now let's test each option:<br><br>• <strong>Option A ($PS \\rightarrow T$):</strong><br>Find the attribute closure of $(PS)^+$:<br>$(PS)^+ = \\{P, S\\}$<br>Using $P \\rightarrow QR$, we add $Q$ and $R$: $(PS)^+ = \\{P, Q, R, S\\}$<br>Using $RS \\rightarrow T$, we add $T$: $(PS)^+ = \\{P, Q, R, S, T\\}$<br>Since $T \\in (PS)^+$, $PS \\rightarrow T$ is valid. <strong>(Correct)</strong><br><br>• <strong>Option B ($R \\rightarrow T$):</strong><br>Find the attribute closure of $R^+$:<br>$R^+ = \\{R\\}$<br>Since $T \\notin R^+$, $R \\rightarrow T$ cannot be inferred. <strong>(Incorrect)</strong><br><br>• <strong>Option C ($P \\rightarrow R$):</strong><br>From $P \\rightarrow QR$, by decomposition rule, $P \\rightarrow R$ holds directly. <strong>(Correct)</strong><br><br>• <strong>Option D ($PS \\rightarrow Q$):</strong><br>Since $P \\rightarrow Q$, by augmentation rule, $PS \\rightarrow QS$, which implies $PS \\rightarrow Q$. Also, $Q \\in (PS)^+$. <strong>(Correct)</strong>",
+  "videoUrl": null
+}

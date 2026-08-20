@@ -1,0 +1,26 @@
+{
+  "id": 5,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "General Aptitude",
+    "Verbal Analogy"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Pen : Write :: Knife : _________<br><br>Which one of the following options maintains a similar logical relation in the above?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Vegetables",
+    "Sharp",
+    "Cut",
+    "Blunt"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Analogy:</strong><br>A <strong>Pen</strong> is a tool whose primary function/action is to <strong>Write</strong>.<br><br>Similarly, a <strong>Knife</strong> is a tool whose primary function/action is to <strong>Cut</strong>.<br><br>Hence, option <strong>(C)</strong> correctly completes the logical relationship.",
+  "videoUrl": null
+}

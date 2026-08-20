@@ -1,0 +1,26 @@
+{
+  "id": 42,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "Database Management Systems",
+    "Transactions and Concurrency Control"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Let $S$ be the following schedule of operations of three transactions $T_1, T_2$ and $T_3$ in a relational database system:<br><br>$$R_2(Y), R_1(X), R_3(Z), R_1(Y), W_1(X), R_2(Z), W_2(Y), R_3(X), W_3(Z)$$<br><br>Consider the statements $P$ and $Q$ below:<br><br>P: $S$ is conflict-serializable.<br>Q: If $T_3$ commits before $T_1$ finishes, then $S$ is recoverable.<br><br>Which one of the following choices is correct?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Both P and Q are true.",
+    "P is true and Q is false.",
+    "P is false and Q is true.",
+    "Both P and Q are false."
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>1. Checking Statement P:</strong><br>To test for conflict serializability, construct the precedence graph (serialization graph) by examining conflicting operations on the same data item:<br>• <strong>Data item X:</strong> $W_1(X)$ precedes $R_3(X) \\implies$ Edge $T_1 \\rightarrow T_3$<br>• <strong>Data item Y:</strong> $R_1(Y)$ precedes $W_2(Y) \\implies$ Edge $T_1 \\rightarrow T_2$<br>• <strong>Data item Z:</strong> $R_2(Z)$ precedes $W_3(Z) \\implies$ Edge $T_2 \\rightarrow T_3$<br><br>The edges in the precedence graph are $T_1 \\rightarrow T_2$, $T_1 \\rightarrow T_3$, and $T_2 \\rightarrow T_3$. Since there are no cycles (topological ordering: $T_1, T_2, T_3$), the schedule $S$ is <strong>conflict-serializable</strong>.<br>Therefore, <strong>P is true</strong>.<br><br><strong>2. Checking Statement Q:</strong><br>A schedule is recoverable if any transaction $T_j$ that reads data written by transaction $T_i$ commits only <em>after</em> $T_i$ commits.<br>In schedule $S$, transaction $T_3$ reads $X$ written by $T_1$ ($W_1(X)$ occurs before $R_3(X)$).<br>For $S$ to be recoverable, $T_1$ must commit before $T_3$ commits.<br>If $T_3$ commits before $T_1$ finishes (commits), $S$ is unrecoverable.<br>Therefore, <strong>Q is false</strong>.<br><br>Hence, <strong>P is true and Q is false</strong>.",
+  "videoUrl": null
+}

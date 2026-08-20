@@ -1,0 +1,28 @@
+{
+  "id": 22,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "Theory of Computation",
+    "Closure Properties"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Let $L_1$ be a regular language and $L_2$ be a context-free language. Which of the following languages is/are context-free?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$L_1 \\cap \\overline{L_2}$",
+    "$\\overline{\\overline{L_1} \\cup \\overline{L_2}}$",
+    "$L_1 \\cup (L_2 \\cup \\overline{L_2})$",
+    "$(L_1 \\cap L_2) \\cup (\\overline{L_1} \\cap L_2)$"
+  ],
+  "answer": [
+    "B",
+    "C",
+    "D"
+  ],
+  "explanation": "<strong>Given:</strong> $L_1$ is a regular language and $L_2$ is a context-free language (CFL).<br><br><strong>Option A:</strong> $L_1 \\cap \\overline{L_2}$<br>Context-free languages are not closed under complementation, so $\\overline{L_2}$ is not guaranteed to be context-free. The intersection of a regular language and a non-context-free language is not necessarily a context-free language. Hence, Option A is not necessarily context-free.<br><br><strong>Option B:</strong> $\\overline{\\overline{L_1} \\cup \\overline{L_2}}$<br>By applying De Morgan's laws: $\\overline{\\overline{L_1} \\cup \\overline{L_2}} = L_1 \\cap L_2$. The intersection of a regular language and a context-free language is always context-free. Hence, Option B is context-free.<br><br><strong>Option C:</strong> $L_1 \\cup (L_2 \\cup \\overline{L_2})$<br>Note that $L_2 \\cup \\overline{L_2} = \\Sigma^*$. Therefore, $L_1 \\cup \\Sigma^* = \\Sigma^*$. Universal set $\\Sigma^*$ is regular, and every regular language is also context-free. Hence, Option C is context-free.<br><br><strong>Option D:</strong> $(L_1 \\cap L_2) \\cup (\\overline{L_1} \\cap L_2)$<br>By distributive law, $(L_1 \\cap L_2) \\cup (\\overline{L_1} \\cap L_2) = (L_1 \\cup \\overline{L_1}) \\cap L_2 = \\Sigma^* \\cap L_2 = L_2$. Since $L_2$ is context-free, Option D is context-free.<br><br>Therefore, the correct options are <strong>B, C, and D</strong>.",
+  "videoUrl": null
+}

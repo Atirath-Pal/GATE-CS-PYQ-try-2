@@ -1,0 +1,26 @@
+{
+  "id": 20,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "Programming and Data Structures",
+    "C Programming"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the following ANSI C program.<br><br>What is the output of the above program?",
+  "assetImage": null,
+  "codeBlock": "#include <stdio.h>\nint main(){\n    int arr[4][5];\n    int i, j;\n    for (i=0; i<4; i++){\n        for (j=0; j<5; j++){\n            arr[i][j] = 10*i + j;\n        }\n    }\n    printf(\"%d\", *(arr[1] + 9));\n    return 0;\n}",
+  "options": [
+    "14",
+    "20",
+    "24",
+    "30"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Array Initialization</strong><br>The array $arr$ is a $4 \\times 5$ two-dimensional array. The nested loops initialize the elements using $arr[i][j] = 10 \\times i + j$.<br><br><strong>Step 2: Pointer Arithmetic</strong><br>In C, multi-dimensional arrays are stored in contiguous memory in row-major order. Each row contains $5$ elements.<br>$arr[1]$ points to the first element of row $1$, i.e., $\\&arr[1][0]$.<br><br>Adding $9$ advances the pointer by $9$ integer elements:<br>$$arr[1] + 9 = \\&arr[1][0] + 9 = \\&arr[2][4]$$<br><br><strong>Step 3: Evaluate the Output</strong><br>Dereferencing $*(arr[1] + 9)$ accesses the value stored at $arr[2][4]$:<br>$$arr[2][4] = 10 \\times 2 + 4 = 24$$<br><br>Hence, the program prints <strong>24</strong>.",
+  "videoUrl": null
+}

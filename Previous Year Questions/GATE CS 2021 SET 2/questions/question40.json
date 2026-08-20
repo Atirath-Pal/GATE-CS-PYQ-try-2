@@ -1,0 +1,26 @@
+{
+  "id": 40,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "Compiler Design",
+    "Code Optimization"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the following ANSI C code segment:<br><br>Assume that the variable $y$ points to a $\\text{struct}$ (allocated on the heap) containing two fields $\\text{f1}$ and $\\text{f2}$, and the local variables $x$, $y$, $z$, $p$, $q$, and $i$ are allotted registers. Common sub-expression elimination (CSE) optimization is applied on the code. The number of addition and dereference operations (of the form $y\\rightarrow\\text{f1}$ or $y\\rightarrow\\text{f2}$) in the optimized code, respectively, are:",
+  "assetImage": null,
+  "codeBlock": "z = x + 3 + y->f1 + y->f2;\nfor (i = 0; i < 200; i = i + 2){\n    if (z > i) {\n        p = p + x + 3;\n        q = q + y->f1;\n    } else {\n        p = p + y->f2;\n        q = q + x + 3;\n    }\n}",
+  "options": [
+    "403 and 102",
+    "203 and 2",
+    "303 and 102",
+    "303 and 2"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>1. Common Sub-expression Elimination (CSE) & Loop Invariant Optimization:</strong><br>- The expression $x + 3$ is common across multiple places and neither $x$ nor $3$ is modified. It can be computed once before the loop: $t_1 = x + 3$ (1 addition).<br>- Neither $y$ nor the heap contents pointed to by $y\\rightarrow\\text{f1}$ and $y\\rightarrow\\text{f2}$ change. Thus, dereferences can be hoisted outside the loop: $t_{\\text{f1}} = y\\rightarrow\\text{f1}$ and $t_{\\text{f2}} = y\\rightarrow\\text{f2}$. This requires <strong>2 dereference operations</strong> in total.<br><br><strong>2. Calculation of Additions:</strong><br>- <strong>Before Loop:</strong><br>  - $t_1 = x + 3 \\rightarrow 1\\text{ addition}$<br>  - $z = t_1 + t_{\\text{f1}} + t_{\\text{f2}} \\rightarrow 2\\text{ additions}$<br>  - Subtotal before loop = $1 + 2 = 3\\text{ additions}$.<br><br>- <strong>Inside Loop:</strong><br>  - The loop condition is $i < 200$ with increment $i = i + 2$, running for $\\frac{200}{2} = 100$ iterations.<br>  - Loop variable increment $i = i + 2$ takes $1$ addition per iteration $\\rightarrow 100 \\times 1 = 100\\text{ additions}$.<br>  - In both the <code>if</code> and <code>else</code> branches, exactly 2 additions are performed per iteration ($p = p + \\dots$ and $q = q + \\dots$) $\\rightarrow 100 \\times 2 = 200\\text{ additions}$.<br>  - Subtotal inside loop = $100 + 200 = 300\\text{ additions}$.<br><br><strong>Total Additions:</strong> $3 + 300 = 303$<br><strong>Total Dereferences:</strong> $2$<br><br>Hence, the correct option is <strong>(D) 303 and 2</strong>.",
+  "videoUrl": null
+}

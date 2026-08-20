@@ -1,0 +1,22 @@
+{
+  "id": 58,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "Operating Systems",
+    "Memory Management"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a three-level page table to translate a 39-bit virtual address to a physical address as shown below.<br><br><div style=\"text-align: center; margin: 16px 0;\"><div style=\"margin-bottom: 6px;\">&lt;---------------- 39-bit virtual address ----------------&gt;</div><table style=\"width: 100%; border-collapse: collapse; border: 1px solid #ffffff;\"><tbody><tr><td style=\"border: 1px solid #ffffff; padding: 8px; text-align: center;\">Level 1<br>offset</td><td style=\"border: 1px solid #ffffff; padding: 8px; text-align: center;\">Level 2<br>offset</td><td style=\"border: 1px solid #ffffff; padding: 8px; text-align: center;\">Level 3<br>offset</td><td style=\"border: 1px solid #ffffff; padding: 8px; text-align: center;\">Page<br>offset</td></tr><tr><td style=\"border: 1px solid #ffffff; padding: 8px; text-align: center;\">9 bits</td><td style=\"border: 1px solid #ffffff; padding: 8px; text-align: center;\">9 bits</td><td style=\"border: 1px solid #ffffff; padding: 8px; text-align: center;\">9 bits</td><td style=\"border: 1px solid #ffffff; padding: 8px; text-align: center;\">12 bits</td></tr></tbody></table></div><br>The page size is 4KB ($1\\text{KB} = 2^{10}$ bytes) and page table entry size at every level is 8 bytes. A process $P$ is currently using 2GB ($1\\text{GB} = 2^{30}$ bytes) virtual memory which is mapped to 2GB of physical memory. The minimum amount of memory required for the page table of $P$ across all levels is ________ KB.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 4108,
+    "max": 4108
+  },
+  "explanation": "<strong>Given Data:</strong><br>- Page size = $4\\text{ KB} = 2^{12}\\text{ bytes}$<br>- Virtual address size = $39\\text{ bits}$<br>- Page Table Entry (PTE) size = $8\\text{ bytes}$<br>- Virtual memory used by process $P = 2\\text{ GB} = 2^{31}\\text{ bytes}$<br><br><strong>Size of a single Page Table at any level:</strong><br>- Number of entries per table = $2^9 = 512$<br>- Size of one page table = $512 \\times 8\\text{ bytes} = 4096\\text{ bytes} = 4\\text{ KB}$<br><br><strong>1. Level 1 Page Table:</strong><br>- Exactly $1$ Level 1 page table is needed.<br>- Memory required = $1 \\times 4\\text{ KB} = 4\\text{ KB}$<br><br><strong>2. Level 2 Page Tables:</strong><br>- Each entry in Level 1 page table addresses $512 \\times 512 \\times 4\\text{ KB} = 1\\text{ GB}$ of virtual space.<br>- To minimize the total page tables, the $2\\text{ GB}$ memory used by process $P$ must be contiguous.<br>- Number of Level 2 page tables required = $\\lceil \\frac{2\\text{ GB}}{1\\text{ GB}} \\rceil = 2$<br>- Memory required = $2 \\times 4\\text{ KB} = 8\\text{ KB}$<br><br><strong>3. Level 3 Page Tables:</strong><br>- Each Level 3 page table covers $512 \\times 4\\text{ KB} = 2\\text{ MB}$ of virtual memory.<br>- Number of Level 3 page tables required = $\\lceil \\frac{2\\text{ GB}}{2\\text{ MB}} \\rceil = 1024$<br>- Memory required = $1024 \\times 4\\text{ KB} = 4096\\text{ KB}$<br><br><strong>Total Minimum Page Table Memory Required:</strong><br>$\\text{Total Memory} = 4\\text{ KB} + 8\\text{ KB} + 4096\\text{ KB} = 4108\\text{ KB}$",
+  "videoUrl": null
+}

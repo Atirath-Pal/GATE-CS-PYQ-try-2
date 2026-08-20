@@ -1,0 +1,22 @@
+{
+  "id": 29,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "Computer Organization",
+    "Cache Memory"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider a set-associative cache of size $2\\text{ KB}$ ($1\\text{ KB} = 2^{10}$ bytes) with cache block size of $64\\text{ bytes}$. Assume that the cache is byte-addressable and a $32\\text{-bit}$ address is used for accessing the cache. If the width of the tag field is $22\\text{ bits}$, the associativity of the cache is ____________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 2,
+    "max": 2
+  },
+  "explanation": "<strong>Given Data:</strong><br>• Cache Size = $2\\text{ KB} = 2 \\times 1024\\text{ bytes} = 2048\\text{ bytes}$<br>• Block Size = $64\\text{ bytes} = 2^6\\text{ bytes}$<br>• Address Size = $32\\text{ bits}$<br>• Tag Width = $22\\text{ bits}$<br><br><strong>Step 1: Calculate Block Offset Bits</strong><br>Block offset = $\\log_2(64) = 6\\text{ bits}$<br><br><strong>Step 2: Calculate Set Index Bits</strong><br>Address Format: $\\text{Tag bits} + \\text{Set Index bits} + \\text{Block Offset bits} = 32\\text{ bits}$<br>$22 + \\text{Set Index bits} + 6 = 32$<br>$\\text{Set Index bits} = 32 - (22 + 6) = 4\\text{ bits}$<br><br><strong>Step 3: Calculate Number of Sets</strong><br>Number of sets = $2^4 = 16\\text{ sets}$<br><br><strong>Step 4: Calculate Total Number of Cache Lines (Blocks)</strong><br>Total Lines = $\\frac{\\text{Cache Size}}{\\text{Block Size}} = \\frac{2048}{64} = 32\\text{ lines}$<br><br><strong>Step 5: Calculate Associativity ($k$)</strong><br>Associativity ($k$) = $\\frac{\\text{Total Lines}}{\\text{Number of Sets}} = \\frac{32}{16} = 2$<br><br>Hence, the associativity of the cache is <strong>2</strong>.",
+  "videoUrl": null
+}

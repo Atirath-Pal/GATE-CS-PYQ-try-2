@@ -1,0 +1,26 @@
+{
+  "id": 2,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "General Aptitude",
+    "Spatial Aptitude"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "A transparent square sheet shown above is folded along the dotted line. The folded sheet will look like ________.",
+  "assetImage": "question2.png",
+  "codeBlock": null,
+  "options": [
+    "[IMG: question2_option_a.png]",
+    "[IMG: question2_option_b.png]",
+    "[IMG: question2_option_c.png]",
+    "[IMG: question2_option_d.png]"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step-by-step solution:</strong><br><br>1. <strong>Folding Operation:</strong> The left half of the transparent sheet is folded horizontally over the right half along the central vertical dotted line.<br><br>2. <strong>Reflection of Curves:</strong> The curve on the left side, when reflected horizontally, superimposes onto the curve on the right side to form a symmetrical lens-like (leaf) shape.<br><br>3. <strong>Reflection of Marks:</strong> The small vertical ticks on the left curve flip horizontally to meet the existing ticks on the right curve, creating chevron/V-shaped markings inside the lens.<br><br>4. <strong>Conclusion:</strong> This resulting pattern correctly matches <strong>Option B</strong>.",
+  "videoUrl": null
+}

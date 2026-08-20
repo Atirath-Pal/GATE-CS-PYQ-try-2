@@ -1,0 +1,22 @@
+{
+  "id": 27,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "Theory of Computation",
+    "Finite Automata"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider the following deterministic finite automaton (DFA).<br><br>The number of strings of length 8 accepted by the above automaton is _________.",
+  "assetImage": "question27.png",
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 256,
+    "max": 256
+  },
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. <strong>Analyze the DFA Transitions:</strong><br>- From the start state, reading any input ($0$ or $1$) takes the automaton to level 1.<br>- From level 1, reading any input ($0$ or $1$) takes it to level 2.<br>- From level 2, reading any input ($0$ or $1$) reaches the final accepting state.<br><br>2. <strong>Determine String Acceptance:</strong><br>- Any binary string of length $3$ reaches the final accepting state.<br>- The final state has a self-loop on both $0$ and $1$, so any string of length $\\ge 3$ will stay in the accepting state.<br><br>3. <strong>Calculate Total Strings of Length 8:</strong><br>- Since all binary strings of length $\\ge 3$ are accepted, every binary string of length $8$ is accepted by this DFA.<br>- Total number of binary strings of length $8 = 2^8 = 256$.<br><br>Thus, the correct answer is <strong>256</strong>.",
+  "videoUrl": null
+}

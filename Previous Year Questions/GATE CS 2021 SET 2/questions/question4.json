@@ -1,0 +1,26 @@
+{
+  "id": 4,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "General Aptitude",
+    "Quantitative Aptitude"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "If $\\left(x - \\frac{1}{2}\\right)^2 - \\left(x - \\frac{3}{2}\\right)^2 = x + 2$, then the value of $x$ is:",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "2",
+    "4",
+    "6",
+    "8"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Given Equation:</strong><br>$\\left(x - \\frac{1}{2}\\right)^2 - \\left(x - \\frac{3}{2}\\right)^2 = x + 2$<br><br><strong>Step 1: Simplify the left-hand side using the algebraic identity $a^2 - b^2 = (a - b)(a + b)$:</strong><br>Let $a = x - \\frac{1}{2}$ and $b = x - \\frac{3}{2}$.<br><br>$a - b = \\left(x - \\frac{1}{2}\\right) - \\left(x - \\frac{3}{2}\\right) = 1$<br>$a + b = \\left(x - \\frac{1}{2}\\right) + \\left(x - \\frac{3}{2}\\right) = 2x - 2$<br><br>Thus, LHS $= 1 \\times (2x - 2) = 2x - 2$.<br><br><strong>Step 2: Solve for $x$:</strong><br>$2x - 2 = x + 2$<br>$2x - x = 2 + 2$<br>$x = 4$<br><br>Hence, the value of $x$ is $4$.",
+  "videoUrl": null
+}

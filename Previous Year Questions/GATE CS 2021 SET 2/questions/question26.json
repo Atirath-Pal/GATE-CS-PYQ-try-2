@@ -1,0 +1,22 @@
+{
+  "id": 26,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "Data Structures",
+    "Trees"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider a complete binary tree with $7$ nodes. Let $A$ denote the set of first $3$ elements obtained by performing Breadth-First Search (BFS) starting from the root. Let $B$ denote the set of first $3$ elements obtained by performing Depth-First Search (DFS) starting from the root.<br><br>The value of $|A - B|$ is _______.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 1,
+    "max": 1
+  },
+  "explanation": "<strong>Step 1: Understand the structure of a complete binary tree with 7 nodes.</strong><br>A complete binary tree with $7$ nodes is a full binary tree of height $2$ (with the root at level $0$).<br>Let the nodes be labeled based on level-order indexing:<br>- Level 0: Node $1$ (Root)<br>- Level 1: Node $2$ (Left child), Node $3$ (Right child)<br>- Level 2: Node $4$, Node $5$ (Children of Node $2$), Node $6$, Node $7$ (Children of Node $3$)<br><br><strong>Step 2: Find the set $A$ (first 3 elements of BFS traversal).</strong><br>Breadth-First Search (BFS) traverses level by level from left to right:<br>- $1^{\\text{st}}$ node: $1$<br>- $2^{\\text{nd}}$ node: $2$<br>- $3^{\\text{rd}}$ node: $3$<br>Thus, $A = \\{1, 2, 3\\}$.<br><br><strong>Step 3: Find the set $B$ (first 3 elements of DFS traversal).</strong><br>Depth-First Search (DFS) explores as deep as possible along each branch before backtracking.<br>Starting at root Node $1$, it visits a child (Node $2$), and then a child of Node $2$ (Node $4$).<br>- First $3$ elements visited in DFS are $\\{1, 2, 4\\}$ (or $\\{1, 3, 6\\}$ if right subtree is visited first).<br>Thus, $B = \\{1, 2, 4\\}$.<br><br><strong>Step 4: Calculate $|A - B|$.</strong><br>Set difference $A - B = \\{1, 2, 3\\} \\setminus \\{1, 2, 4\\} = \\{3\\}$.<br>The cardinality of set $A - B$ is $|A - B| = 1$.<br><br><strong>Conclusion:</strong><br>The value of $|A - B|$ is $1$.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 37,
+  "year": "2021",
+  "set": "2",
+  "topics": [
+    "Computer Organization and Architecture",
+    "Cache Memory"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Assume a two-level inclusive cache hierarchy, L1 and L2, where L2 is the larger of the two. Consider the following statements.<br><br>$S_1$: Read misses in a write through L1 cache do not result in writebacks of dirty lines to the L2.<br>$S_2$: Write allocate policy <i>must</i> be used in conjunction with write through caches and no-write allocate policy is used with writeback caches.<br><br>Which of the following statements is correct?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$S_1$ is true and $S_2$ is false",
+    "$S_1$ is false and $S_2$ is true",
+    "$S_1$ is true and $S_2$ is true",
+    "$S_1$ is false and $S_2$ is false"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Statement $S_1$:</strong> In a write-through L1 cache, every write operation updates both the L1 cache and the L2 cache simultaneously. Therefore, blocks in a write-through cache never become dirty (there are no dirty lines/bits in L1). When a read miss occurs in L1 and a line must be replaced, no dirty line ever needs to be written back to L2. Hence, statement $S_1$ is <strong>true</strong>.<br><br><strong>Statement $S_2$:</strong> Write-through caches are typically paired with a <i>no-write allocate</i> (write-around) policy, whereas write-back caches are paired with a <i>write allocate</i> policy. Statement $S_2$ incorrectly asserts that write allocate must be used with write-through caches and no-write allocate with write-back caches. Hence, statement $S_2$ is <strong>false</strong>.<br><br>Therefore, $S_1$ is true and $S_2$ is false.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 1,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "General Aptitude",
+    "Verbal Ability"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Gauri said that she can play the keyboard ___________ her sister.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "as well as",
+    "as better as",
+    "as nicest as",
+    "as worse as"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Explanation:</strong><br><br>To compare two equal qualities or abilities, the structure <strong>as + positive degree + as</strong> is used.<br><br>Here, <strong>well</strong> is the positive degree of the adverb. <br>- <em>better</em> and <em>worse</em> are comparative forms.<br>- <em>nicest</em> is a superlative form.<br><br>Hence, <strong>as well as</strong> is grammatically correct.",
+  "videoUrl": null
+}

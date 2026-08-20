@@ -1,0 +1,26 @@
+{
+  "id": 7,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "General Aptitude",
+    "Spatial Aptitude"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "A jigsaw puzzle has 2 pieces. One of the pieces is shown above. Which one of the given options for the missing piece when assembled will form a rectangle?<br><br>The piece can be moved, rotated or flipped to assemble with the above piece.",
+  "assetImage": "question7.png",
+  "codeBlock": null,
+  "options": [
+    "[IMG: question7_option_a.png]",
+    "[IMG: question7_option_b.png]",
+    "[IMG: question7_option_c.png]",
+    "[IMG: question7_option_d.png]"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step 1: Understand the objective.</strong><br>We need to select the complementary piece that fits together with the given puzzle piece to form a complete rectangle. The piece can be moved, rotated, or flipped.<br><br><strong>Step 2: Analyze the given puzzle piece.</strong><br>The given piece has a flat vertical right edge and an intricate, jagged left boundary consisting of specific projections and indentations.<br><br><strong>Step 3: Complementary profile matching.</strong><br>To form a solid rectangle, the missing piece must have an inverse contour on its fitting side (protrusions where the given piece has notches, and notches where the given piece has protrusions) along with a flat bottom/outer edge.<br><br>By rotating or flipping Option (A), its jagged profile perfectly matches the inverse shape of the given piece to complete the rectangle.<br><br><strong>Conclusion:</strong><br>Hence, option <strong>(A)</strong> is the correct answer.",
+  "videoUrl": null
+}

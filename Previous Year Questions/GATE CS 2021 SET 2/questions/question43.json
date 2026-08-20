@@ -1,0 +1,26 @@
+{
+  "id": 43,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "Engineering Mathematics",
+    "Probability"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "A bag has $r$ red balls and $b$ black balls. All balls are identical except for their colours. In a trial, a ball is randomly drawn from the bag, its colour is noted and the ball is placed back into the bag along with another ball of the same colour. Note that the number of balls in the bag will increase by one, after the trial. A sequence of four such trials is conducted. Which one of the following choices gives the probability of drawing a red ball in the fourth trial?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\frac{r}{r+b}$",
+    "$\\frac{r}{r+b+3}$",
+    "$\\frac{r+3}{r+b+3}$",
+    "$\\left(\\frac{r}{r+b}\\right) \\left(\\frac{r+1}{r+b+1}\\right) \\left(\\frac{r+2}{r+b+2}\\right) \\left(\\frac{r+3}{r+b+3}\\right)$"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>This problem follows <strong>Pólya's Urn Model</strong>.<br><br>Initially, the bag contains $r$ red balls and $b$ black balls, making the total number of balls $r + b$.<br><br><strong>Trial 1:</strong><br>The probability of drawing a red ball in the 1st trial is:<br>$P(R_1) = \\frac{r}{r+b}$<br><br><strong>Trial 2:</strong><br>A red ball can be drawn in the 2nd trial under two conditions:<br>1. Red on 1st trial and Red on 2nd trial: $P(R_1 \\cap R_2) = \\left(\\frac{r}{r+b}\\right)\\left(\\frac{r+1}{r+b+1}\\right)$<br>2. Black on 1st trial and Red on 2nd trial: $P(B_1 \\cap R_2) = \\left(\\frac{b}{r+b}\\right)\\left(\\frac{r}{r+b+1}\\right)$<br><br>Summing these probabilities:<br>$P(R_2) = \\frac{r(r+1) + br}{(r+b)(r+b+1)} = \\frac{r(r+b+1)}{(r+b)(r+b+1)} = \\frac{r}{r+b}$<br><br><strong>Generalization:</strong><br>By mathematical induction, for any $k$-th trial, the probability of drawing a red ball remains constant and equal to the initial proportion of red balls:<br>$P(R_k) = \\frac{r}{r+b}$<br><br>Therefore, in the 4th trial ($k = 4$), the probability of drawing a red ball is $\\frac{r}{r+b}$.<br><br>Hence, Option (A) is correct.",
+  "videoUrl": null
+}

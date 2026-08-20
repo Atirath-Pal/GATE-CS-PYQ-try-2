@@ -1,0 +1,22 @@
+{
+  "id": 32,
+  "year": "2021",
+  "set": "2",
+  "topics": [
+    "Engineering Mathematics",
+    "Probability"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "For a given biased coin, the probability that the outcome of a toss is a head is $0.4$. This coin is tossed $1,000$ times. Let $X$ denote the random variable whose value is the number of times that head appeared in these $1,000$ tosses. The standard deviation of $X$ (rounded to 2 decimal places) is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 15.0,
+    "max": 16.0
+  },
+  "explanation": "<strong>Step 1: Identify the distribution parameters.</strong><br>The coin toss represents a sequence of Bernoulli trials, so $X$ follows a Binomial Distribution $X \\sim \\text{Binomial}(n, p)$ where:<br>- Number of trials $n = 1000$<br>- Probability of success (getting a head) $p = 0.4$<br>- Probability of failure $q = 1 - p = 0.6$<br><br><strong>Step 2: Calculate the Variance.</strong><br>The variance of a Binomial random variable is given by:<br>$$\\text{Var}(X) = n \\cdot p \\cdot q$$<br>$$\\text{Var}(X) = 1000 \\cdot 0.4 \\cdot 0.6 = 240$$<br><br><strong>Step 3: Calculate the Standard Deviation.</strong><br>The standard deviation $\\sigma$ is the square root of the variance:<br>$$\\sigma = \\sqrt{\\text{Var}(X)} = \\sqrt{240} \\approx 15.4919$$<br><br>Rounding to 2 decimal places gives <strong>15.49</strong>.",
+  "videoUrl": null
+}

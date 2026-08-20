@@ -1,0 +1,21 @@
+{
+  "id": 6,
+  "year": 2021,
+  "set": 2,
+  "topics": ["General Aptitude", "Logical Reasoning"],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Listening to music during exercise improves exercise performance and reduces discomfort. Scientists researched whether listening to music while studying can help students learn better and the results were inconclusive. Students who needed external stimulation for studying fared worse while students who did not need any external stimulation benefited from music.<br><br>Which one of the following statements is the CORRECT inference of the above passage?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Listening to music has no effect on learning and a positive effect on physical exercise.",
+    "Listening to music has a clear positive effect both on physical exercise and on learning.",
+    "Listening to music has a clear positive effect on physical exercise. Music has a positive effect on learning only in some students.",
+    "Listening to music has a clear positive effect on learning in all students. Music has a positive effect only in some students who exercise."
+  ],
+  "answer": ["C"],
+  "explanation": "<strong>Step 1:</strong> The passage states that listening to music clearly improves exercise performance and reduces discomfort. Therefore, music has a clear positive effect on physical exercise.<br><br><strong>Step 2:</strong> For studying, the results are not uniformly positive. Students who needed external stimulation performed worse with music, while students who did not need external stimulation benefited from it.<br><br><strong>Step 3:</strong> Hence, music benefits learning only for some students, not all students.<br><br><strong>Conclusion:</strong> Option C correctly captures both conclusions: music has a clear positive effect on physical exercise, while its positive effect on learning is limited to some students.",
+  "videoUrl": null
+}

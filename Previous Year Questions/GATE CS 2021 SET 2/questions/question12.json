@@ -1,0 +1,26 @@
+{
+  "id": 12,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "Data Structures",
+    "Heaps"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Let $H$ be a binary min-heap consisting of $n$ elements implemented as an array. What is the worst case time complexity of an optimal algorithm to find the maximum element in $H$?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\Theta(1)$",
+    "$\\Theta(\\log n)$",
+    "$\\Theta(n)$",
+    "$\\Theta(n \\log n)$"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Properties of a Min-Heap</strong><br>In a binary min-heap, the key at any given node is less than or equal to the keys of its children. Thus, the minimum element is always at the root.<br><br><strong>Step 2: Location of the Maximum Element</strong><br>Since parent nodes are always smaller than or equal to their children, the maximum element cannot be an internal node with children. It must be present in one of the leaf nodes.<br><br><strong>Step 3: Number of Leaves</strong><br>In a binary heap of $n$ elements implemented as an array, the leaf nodes occupy positions from index $\\lfloor n/2 \\rfloor + 1$ to $n$. There are $\\lceil n/2 \\rceil$ leaves in total.<br><br><strong>Step 4: Finding the Maximum</strong><br>Because the leaf nodes are not sorted among themselves, finding the maximum among these $\\lceil n/2 \\rceil$ elements requires a linear scan.<br>A linear scan over $\\lceil n/2 \\rceil$ elements takes $\\Theta(n)$ time in the worst case.<br><br><strong>Conclusion:</strong><br>The worst-case time complexity is $\\Theta(n)$, so option C is correct.",
+  "videoUrl": null
+}

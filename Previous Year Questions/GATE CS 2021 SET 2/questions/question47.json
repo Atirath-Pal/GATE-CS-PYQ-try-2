@@ -1,0 +1,26 @@
+{
+  "id": 47,
+  "year": "2021",
+  "set": "2",
+  "topics": [
+    "Engineering Mathematics",
+    "Linear Algebra"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "For two $n$-dimensional real vectors $P$ and $Q$, the operation $s(P,Q)$ is defined as follows:<br><br>$$s(P,Q) = \\sum_{i=1}^{n} (P[i] \\cdot Q[i])$$<br><br>Let $\\mathcal{L}$ be a set of 10-dimensional non-zero real vectors such that for every pair of distinct vectors $P, Q \\in \\mathcal{L}$, $s(P,Q) = 0$. What is the maximum cardinality possible for the set $\\mathcal{L}$?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "9",
+    "10",
+    "11",
+    "100"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Explanation:</strong><br><br>1. The given operation $s(P,Q) = \\sum_{i=1}^{n} (P[i] \\cdot Q[i])$ defines the standard inner product (dot product) of two vectors $P$ and $Q$.<br><br>2. The condition $s(P,Q) = 0$ for every pair of distinct vectors $P, Q \\in \\mathcal{L}$ means that all vectors in $\\mathcal{L}$ are pairwise orthogonal.<br><br>3. Any set of non-zero pairwise orthogonal vectors in $\\mathbb{R}^n$ is linearly independent.<br><br>4. In a $10$-dimensional vector space ($n = 10$), the maximum number of linearly independent vectors is $10$.<br><br>Thus, the maximum cardinality possible for the set $\\mathcal{L}$ is <strong>10</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 9,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "General Aptitude",
+    "Data Interpretation"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "The number of units of a product sold in three different years and the respective net profits are presented in the figure above. The cost/unit in Year 3 was ₹ 1, which was half the cost/unit in Year 2. The cost/unit in Year 3 was one-third of the cost/unit in Year 1. Taxes were paid on the selling price at 10%, 13% and 15% respectively for the three years. Net profit is calculated as the difference between the selling price and the sum of cost and taxes paid in that year.<br><br>The ratio of the selling price in Year 2 to the selling price in Year 3 is ________.",
+  "assetImage": "question9.png",
+  "codeBlock": null,
+  "options": [
+    "4:3",
+    "1:1",
+    "3:4",
+    "1:2"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Given Data from the Graph and Question:</strong><br>- Year 2: Number of units sold = $200$, Net profit = ₹ $296$, Tax rate = $13\\%$<br>- Year 3: Number of units sold = $300$, Net profit = ₹ $210$, Tax rate = $15\\%$<br>- Cost per unit in Year 3 = ₹ $1$<br>- Cost per unit in Year 2 = $2 \\times 1 = \\text{₹ } 2$<br><br><strong>Year 2 Total Selling Price ($SP_2$):</strong><br>Total Cost ($TC_2$) = $200 \\times 2 = \\text{₹ } 400$<br>Net Profit = $SP_2 - (TC_2 + \\text{Tax}_2)$<br>$296 = SP_2 - (400 + 0.13 \\times SP_2)$<br>$296 = 0.87 \\times SP_2 - 400$<br>$0.87 \\times SP_2 = 696 \\implies SP_2 = \\frac{696}{0.87} = 800$<br><br><strong>Year 3 Total Selling Price ($SP_3$):</strong><br>Total Cost ($TC_3$) = $300 \\times 1 = \\text{₹ } 300$<br>Net Profit = $SP_3 - (TC_3 + \\text{Tax}_3)$<br>$210 = SP_3 - (300 + 0.15 \\times SP_3)$<br>$210 = 0.85 \\times SP_3 - 300$<br>$0.85 \\times SP_3 = 510 \\implies SP_3 = \\frac{510}{0.85} = 600$<br><br><strong>Ratio of Selling Price (Year 2 to Year 3):</strong><br>$\\frac{SP_2}{SP_3} = \\frac{800}{600} = \\frac{4}{3} = 4:3$<br><br>Hence, option (A) is the correct answer.",
+  "videoUrl": null
+}

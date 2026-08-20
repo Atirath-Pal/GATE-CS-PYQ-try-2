@@ -1,0 +1,22 @@
+{
+  "id": 28,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "Digital Logic",
+    "Number Systems"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "If $x$ and $y$ are two decimal digits and $(0.1101)_2 = (0.8xy5)_{10}$, the decimal value of $x + y$ is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 3,
+    "max": 3
+  },
+  "explanation": "<strong>Step 1: Convert $(0.1101)_2$ to decimal system.</strong><br>$(0.1101)_2 = 1 \\cdot 2^{-1} + 1 \\cdot 2^{-2} + 0 \\cdot 2^{-3} + 1 \\cdot 2^{-4}$<br>$= 0.5 + 0.25 + 0 + 0.0625 = 0.8125$<br><br><strong>Step 2: Equate to $(0.8xy5)_{10}$ and find digits $x$ and $y$.</strong><br>Comparing $0.8125$ with $0.8xy5$ digit by digit:<br>$x = 1$<br>$y = 2$<br><br><strong>Step 3: Calculate $x + y$.</strong><br>$x + y = 1 + 2 = 3$",
+  "videoUrl": null
+}

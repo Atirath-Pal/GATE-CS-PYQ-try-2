@@ -1,0 +1,26 @@
+{
+  "id": 44,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "Computer Networks",
+    "Error Control"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the cyclic redundancy check (CRC) based error detecting scheme having the generator polynomial $X^3 + X + 1$. Suppose the message $m_4m_3m_2m_1m_0 = 11000$ is to be transmitted. Check bits $c_2c_1c_0$ are appended at the end of the message by the transmitter using the above CRC scheme. The transmitted bit string is denoted by $m_4m_3m_2m_1m_0c_2c_1c_0$. The value of the checkbit sequence $c_2c_1c_0$ is",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "101",
+    "110",
+    "100",
+    "111"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Determine the Generator Polynomial String</strong><br>The generator polynomial is $G(X) = X^3 + X + 1 = 1\\cdot X^3 + 0\\cdot X^2 + 1\\cdot X^1 + 1\\cdot X^0$, which corresponds to the binary divisor $1011$ (degree $k = 3$).<br><br><strong>Step 2: Append Zeros to the Message</strong><br>Since the degree of the generator polynomial is $3$, append $3$ zeros ($000$) to the message string $11000$, resulting in $11000000$.<br><br><strong>Step 3: Perform Modulo-2 Division</strong><br>Perform binary division (XOR operations) of $11000000$ by $1011$:<br>1. $1100 \\oplus 1011 = 0111$<br>2. Bring down next bit $0 \\rightarrow 1110 \\oplus 1011 = 0101$<br>3. Bring down next bit $0 \\rightarrow 1010 \\oplus 1011 = 0001$<br>4. Bring down next bit $0 \\rightarrow 0010 \\oplus 0000 = 0010$<br>5. Bring down last bit $0 \\rightarrow 0100 \\oplus 0000 = 0100$<br><br>The final $3$-bit remainder is $100$.<br><br>Therefore, the value of the checkbit sequence $c_2c_1c_0$ is $100$.",
+  "videoUrl": null
+}

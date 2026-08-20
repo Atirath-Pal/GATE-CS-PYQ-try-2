@@ -1,0 +1,26 @@
+{
+  "id": 39,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "Engineering Mathematics",
+    "Probability"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "In an examination, a student can choose the order in which two questions (QuesA and QuesB) must be attempted.<br>- If the first question is answered wrong, the student gets zero marks.<br>- If the first question is answered correctly and the second question is not answered correctly, the student gets the marks only for the first question.<br>- If both the questions are answered correctly, the student gets the sum of the marks of the two questions.<br><br>The following table shows the probability of correctly answering a question and the marks of the question respectively.<br><br><table style=\"width: 100%; border-collapse: collapse; border: 1px solid #ffffff; margin: 12px 0;\"><thead><tr style=\"border-bottom: 1px solid #ffffff;\"><th style=\"border: 1px solid #ffffff; padding: 8px; text-align: center;\">question</th><th style=\"border: 1px solid #ffffff; padding: 8px; text-align: center;\">probability of answering correctly</th><th style=\"border: 1px solid #ffffff; padding: 8px; text-align: center;\">marks</th></tr></thead><tbody><tr><td style=\"border: 1px solid #ffffff; padding: 8px; text-align: center;\">QuesA</td><td style=\"border: 1px solid #ffffff; padding: 8px; text-align: center;\">0.8</td><td style=\"border: 1px solid #ffffff; padding: 8px; text-align: center;\">10</td></tr><tr><td style=\"border: 1px solid #ffffff; padding: 8px; text-align: center;\">QuesB</td><td style=\"border: 1px solid #ffffff; padding: 8px; text-align: center;\">0.5</td><td style=\"border: 1px solid #ffffff; padding: 8px; text-align: center;\">20</td></tr></tbody></table><br>Assuming that the student always wants to maximize her expected marks in the examination, in which order should she attempt the questions and what is the expected marks for that order (assume that the questions are independent)?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "First QuesA and then QuesB. Expected marks 14.",
+    "First QuesB and then QuesA. Expected marks 14.",
+    "First QuesB and then QuesA. Expected marks 22.",
+    "First QuesA and then QuesB. Expected marks 16."
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Step 1: Identify given parameters.</strong><br>For QuesA: Probability of correct answer $P_A = 0.8$, Marks $M_A = 10$.<br>For QuesB: Probability of correct answer $P_B = 0.5$, Marks $M_B = 20$.<br><br><strong>Step 2: Calculate expected marks for attempting QuesA first, then QuesB ($A \\rightarrow B$).</strong><br>- Case 1: QuesA is wrong (Probability = $1 - P_A = 0.2$). Marks awarded = $0$.<br>- Case 2: QuesA is correct and QuesB is wrong (Probability = $P_A \\times (1 - P_B) = 0.8 \\times 0.5 = 0.4$). Marks awarded = $10$.<br>- Case 3: Both QuesA and QuesB are correct (Probability = $P_A \\times P_B = 0.8 \\times 0.5 = 0.4$). Marks awarded = $10 + 20 = 30$.<br><br>$$E[A \\rightarrow B] = (0.2 \\times 0) + (0.4 \\times 10) + (0.4 \\times 30) = 0 + 4 + 12 = 16$$<br><br><strong>Step 3: Calculate expected marks for attempting QuesB first, then QuesA ($B \\rightarrow A$).</strong><br>- Case 1: QuesB is wrong (Probability = $1 - P_B = 0.5$). Marks awarded = $0$.<br>- Case 2: QuesB is correct and QuesA is wrong (Probability = $P_B \\times (1 - P_A) = 0.5 \\times 0.2 = 0.1$). Marks awarded = $20$.<br>- Case 3: Both QuesB and QuesA are correct (Probability = $P_B \\times P_A = 0.5 \\times 0.8 = 0.4$). Marks awarded = $20 + 10 = 30$.<br><br>$$E[B \\rightarrow A] = (0.5 \\times 0) + (0.1 \\times 20) + (0.4 \\times 30) = 0 + 2 + 12 = 14$$<br><br><strong>Conclusion:</strong><br>Comparing $E[A \\rightarrow B] = 16$ and $E[B \\rightarrow A] = 14$, to maximize expected marks, the student should attempt <strong>First QuesA and then QuesB</strong>, yielding an expected mark of <strong>16</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,22 @@
+{
+  "id": 33,
+  "year": "2021",
+  "set": "2",
+  "topics": [
+    "Programming and Data Structures",
+    "Recursion"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider the following ANSI C function:<br><br>The value returned by SomeFunction(15, 255) is ________.",
+  "assetImage": null,
+  "codeBlock": "int SomeFunction(int x, int y)\n{\n    if ((x == 1) || (y == 1)) return 1;\n    if (x == y) return x;\n    if (x > y) return SomeFunction(x - y, y);\n    if (y > x) return SomeFunction(x, y - x);\n}",
+  "options": [],
+  "answer": {
+    "min": 15,
+    "max": 15
+  },
+  "explanation": "<strong>Step 1: Analyze the Function</strong><br>The function <code>SomeFunction(x, y)</code> implements the Euclidean algorithm to calculate the Greatest Common Divisor (GCD) of two numbers $x$ and $y$ using repeated subtraction.<br><br><strong>Step 2: Trace the Recursion</strong><br>For $x = 15$ and $y = 255$:<br>Since $y > x$, the condition <code>if (y > x)</code> triggers, calling <code>SomeFunction(15, 255 - 15)</code> = <code>SomeFunction(15, 240)</code>.<br>This process continues subtracting $15$ from $y$ until $y$ becomes $15$, leading to the call <code>SomeFunction(15, 15)</code>.<br><br><strong>Step 3: Base Case Evaluation</strong><br>For <code>SomeFunction(15, 15)</code>:<br>1. <code>if ((x == 1) || (y == 1))</code> is false.<br>2. <code>if (x == y)</code> is true ($15 == 15$), so it returns $x = 15$.<br><br>Therefore, <code>SomeFunction(15, 255)</code> returns <strong>15</strong>.",
+  "videoUrl": null
+}

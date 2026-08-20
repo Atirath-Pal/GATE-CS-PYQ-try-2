@@ -1,0 +1,22 @@
+{
+  "id": 34,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "Engineering Mathematics",
+    "Linear Algebra"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Suppose that $P$ is a $4 \\times 5$ matrix such that every solution of the equation $P\\mathbf{x} = \\mathbf{0}$ is a scalar multiple of $[2 \\quad 5 \\quad 4 \\quad 3 \\quad 1]^T$. The rank of $P$ is __________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 4,
+    "max": 4
+  },
+  "explanation": "According to the Rank-Nullity Theorem, for any $m \\times n$ matrix $P$:<br>$\\text{Rank}(P) + \\text{Nullity}(P) = n$<br><br><strong>Step 1: Identify the number of columns ($n$)</strong><br>The matrix $P$ is of dimension $4 \\times 5$, which means $n = 5$.<br><br><strong>Step 2: Determine the nullity of $P$</strong><br>The set of solutions to $P\\mathbf{x} = \\mathbf{0}$ forms the null space of matrix $P$. Since every solution is a scalar multiple of a single non-zero vector $[2 \\quad 5 \\quad 4 \\quad 3 \\quad 1]^T$, the null space is spanned by this single vector.<br>Thus, $\\text{Nullity}(P) = 1$.<br><br><strong>Step 3: Calculate the rank</strong><br>$\\text{Rank}(P) = n - \\text{Nullity}(P)$<br>$\\text{Rank}(P) = 5 - 1 = 4$<br><br>Therefore, the rank of $P$ is <strong>4</strong>.",
+  "videoUrl": null
+}

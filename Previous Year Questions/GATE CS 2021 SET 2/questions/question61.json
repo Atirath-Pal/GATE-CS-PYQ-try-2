@@ -1,0 +1,22 @@
+{
+  "id": 61,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "Compiler Design",
+    "LR Parsing"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the following augmented grammar with $\\{\\#, @, <, >, a, b, c\\}$ as the set of terminals.<br><br>$$S' \\rightarrow S$$<br>$$S \\rightarrow S \\# c S$$<br>$$S \\rightarrow S S$$<br>$$S \\rightarrow S @$$<br>$$S \\rightarrow < S >$$<br>$$S \\rightarrow a$$<br>$$S \\rightarrow b$$<br>$$S \\rightarrow c$$<br><br>Let $I_0 = \\text{CLOSURE}(\\{S' \\rightarrow \\bullet S\\})$. The number of items in the set $\\text{GOTO}(\\text{GOTO}(I_0, <), <)$ is _______",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 8,
+    "max": 8
+  },
+  "explanation": "<strong>Step 1: Compute $I_0 = \\text{CLOSURE}(\\{S' \\rightarrow \\bullet S\\})$</strong><br>Since the dot is before non-terminal $S$, we add all productions of $S$ with the dot at the beginning:<br>$I_0 = \\{$<br>$S' \\rightarrow \\bullet S$,<br>$S \\rightarrow \\bullet S \\# c S$,<br>$S \\rightarrow \\bullet S S$,<br>$S \\rightarrow \\bullet S @$,<br>$S \\rightarrow \\bullet < S >$,<br>$S \\rightarrow \\bullet a$,<br>$S \\rightarrow \\bullet b$,<br>$S \\rightarrow \\bullet c$<br>$\\}$<br><br><strong>Step 2: Compute $I_1 = \\text{GOTO}(I_0, <)$</strong><br>Looking at items in $I_0$ where the dot is immediately before '$<$':<br>Only $S \\rightarrow \\bullet < S >$ yields the kernel item $S \\rightarrow < \\bullet S$.<br>Taking closure gives:<br>$I_1 = \\text{CLOSURE}(\\{S \\rightarrow < \\bullet S\\}) = \\{$<br>$S \\rightarrow < \\bullet S$,<br>$S \\rightarrow \\bullet S \\# c S$,<br>$S \\rightarrow \\bullet S S$,<br>$S \\rightarrow \\bullet S @$,<br>$S \\rightarrow \\bullet < S >$,<br>$S \\rightarrow \\bullet a$,<br>$S \\rightarrow \\bullet b$,<br>$S \\rightarrow \\bullet c$<br>$\\}$<br><br><strong>Step 3: Compute $I_2 = \\text{GOTO}(I_1, <)$</strong><br>In $I_1$, the item with the dot before '$<$' is $S \\rightarrow \\bullet < S >$.<br>Moving the dot past '$<$' yields the kernel item $S \\rightarrow < \\bullet S$.<br>Thus, $I_2 = \\text{CLOSURE}(\\{S \\rightarrow < \\bullet S\\}) = I_1$.<br><br>Since $I_2$ contains 8 items, the size of $\\text{GOTO}(\\text{GOTO}(I_0, <), <)$ is <strong>8</strong>.",
+  "videoUrl": null
+}

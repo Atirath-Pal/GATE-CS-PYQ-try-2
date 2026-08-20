@@ -1,0 +1,22 @@
+{
+  "id": 60,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "Discrete Mathematics",
+    "Set Theory"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Let $S$ be a set consisting of $10$ elements. The number of tuples of the form $(A, B)$ such that $A$ and $B$ are subsets of $S$, and $A \\subseteq B$ is __________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 59049,
+    "max": 59049
+  },
+  "explanation": "<strong>Method 1: Element-wise Choice</strong><br>For each element $x \\in S$, there are 3 possible mutually exclusive cases regarding its membership in sets $A$ and $B$ such that $A \\subseteq B$ holds:<br>1. $x \\notin B$ (which forces $x \\notin A$)<br>2. $x \\in B$ and $x \\notin A$<br>3. $x \\in B$ and $x \\in A$<br><br>Since set $S$ contains 10 elements and each element's assignment is independent, the total number of valid tuples $(A, B)$ is:<br>$3^{10} = 59049$<br><br><strong>Method 2: Binomial Theorem</strong><br>If subset $B$ contains $k$ elements ($0 \\le k \\le 10$), the number of ways to select $B$ from $S$ is $\\binom{10}{k}$.<br>For a fixed $B$ with $k$ elements, the number of choices for subset $A \\subseteq B$ is $2^k$.<br><br>Summing over all possible values of $k$ from 0 to 10:<br>Total = $\\sum_{k=0}^{10} \\binom{10}{k} 2^k = (1 + 2)^{10} = 3^{10} = 59049$.",
+  "videoUrl": null
+}

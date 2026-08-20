@@ -1,0 +1,28 @@
+{
+  "id": 24,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "Operating Systems",
+    "CPU Scheduling"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Which of the following statement(s) is/are correct in the context of CPU scheduling?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Turnaround time includes waiting time.",
+    "The goal is to only maximize CPU utilization and minimize throughput.",
+    "Round-robin policy can be used even when the CPU time required by each of the processes is not known apriori.",
+    "Implementing preemptive scheduling needs hardware support."
+  ],
+  "answer": [
+    "A",
+    "C",
+    "D"
+  ],
+  "explanation": "<strong>Statement (A) is correct:</strong> Turnaround time is defined as $\\text{Turnaround Time} = \\text{Burst Time} + \\text{Waiting Time}$, which directly includes waiting time.<br><br><strong>Statement (B) is incorrect:</strong> The primary objective of CPU scheduling is to maximize both CPU utilization and throughput (not minimize throughput).<br><br><strong>Statement (C) is correct:</strong> Round-robin scheduling is a preemptive policy based on time slicing, so it does not require prior knowledge of the CPU burst time of each process.<br><br><strong>Statement (D) is correct:</strong> Preemptive scheduling requires hardware timer interrupts to periodically transfer control back to the operating system scheduler.<br><br>Therefore, statements <strong>A, C, and D</strong> are correct.",
+  "videoUrl": null
+}

@@ -1,0 +1,21 @@
+{
+  "id": 56,
+  "year": 2021,
+  "set": 2,
+  "topics": ["Algorithms", "Graph Theory"],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the following directed graph:<br><br>Which of the following is/are correct about the graph?",
+  "assetImage": "question56.png",
+  "codeBlock": null,
+  "options": [
+    "The graph does not have a topological order.",
+    "A depth-first traversal starting at vertex $S$ classifies three directed edges as back edges.",
+    "The graph does not have a strongly connected component.",
+    "For each pair of vertices $u$ and $v$, there is a directed path from $u$ to $v$."
+  ],
+  "answer": ["A", "B"],
+  "explanation": "<strong>Step 1:</strong> A directed graph has a topological order only if it is a directed acyclic graph (DAG). The given graph contains directed cycles. Therefore, it does not have a topological order, so <strong>option A is correct</strong>.<br><br><strong>Step 2:</strong> Perform a depth-first traversal starting from $S$. During DFS, an edge from a vertex to an ancestor that is still on the DFS recursion stack is classified as a back edge. For this graph, the DFS traversal identifies exactly three such back edges. Therefore, <strong>option B is correct</strong>.<br><br><strong>Step 3:</strong> Every vertex in a directed graph belongs to some strongly connected component (SCC), even if the SCC contains only a single vertex. Hence, the statement that the graph does not have a strongly connected component is false. Therefore, <strong>option C is incorrect</strong>.<br><br><strong>Step 4:</strong> The statement in option D would mean that every vertex is reachable from every other vertex, i.e., the entire graph is strongly connected. The given graph does not satisfy this condition. Therefore, <strong>option D is incorrect</strong>.<br><br><strong>Conclusion:</strong> The correct answers are <strong>A and B</strong>.",
+  "videoUrl": null
+}

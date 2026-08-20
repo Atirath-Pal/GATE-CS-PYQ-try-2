@@ -1,0 +1,26 @@
+{
+  "id": 49,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "Algorithms",
+    "Recurrence Relations"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "For constants $a \\ge 1$ and $b > 1$, consider the following recurrence defined on the non-negative integers:<br><br>$$T(n) = a \\cdot T\\left(\\frac{n}{b}\\right) + f(n)$$<br><br>Which one of the following options is correct about the recurrence $T(n)$?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "If $f(n)$ is $n \\log_2(n)$, then $T(n)$ is $\\Theta(n \\log_2(n))$.",
+    "If $f(n)$ is $\\frac{n}{\\log_2(n)}$, then $T(n)$ is $\\Theta(\\log_2(n))$.",
+    "If $f(n)$ is $O(n^{\\log_b(a) - \\epsilon})$ for some $\\epsilon > 0$, then $T(n)$ is $\\Theta(n^{\\log_b(a)})$.",
+    "If $f(n)$ is $\\Theta(n^{\\log_b(a)})$, then $T(n)$ is $\\Theta(n^{\\log_b(a)})$."
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "According to Case 1 of the Master Theorem for divide-and-conquer recurrences of the form $T(n) = a \\cdot T\\left(\\frac{n}{b}\\right) + f(n)$ where $a \\ge 1$ and $b > 1$:<br><br>If $f(n) = O(n^{\\log_b(a) - \\epsilon})$ for some constant $\\epsilon > 0$, then the work done at the leaves dominates the overall recurrence time complexity, giving:<br>$$T(n) = \\Theta(n^{\\log_b(a)})$$<br><br>Thus, statement (C) is a direct formulation of Case 1 of the Master Theorem and is correct.<br><br><strong>Analysis of other options:</strong><br>• <strong>Option (A) & (B):</strong> The exact growth order depends on the specific values of $a$ and $b$, so general statements cannot be made without knowing $a$ and $b$.<br>• <strong>Option (D):</strong> If $f(n) = \\Theta(n^{\\log_b(a)})$, this corresponds to Case 2 of the Master Theorem, which yields $T(n) = \\Theta(n^{\\log_b(a)} \\log n)$ instead of $\\Theta(n^{\\log_b(a)})$.",
+  "videoUrl": null
+}

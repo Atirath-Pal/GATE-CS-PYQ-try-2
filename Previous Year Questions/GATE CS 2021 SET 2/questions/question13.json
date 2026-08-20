@@ -1,0 +1,26 @@
+{
+  "id": 13,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "Compiler Design",
+    "Phases of Compiler"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the following ANSI C program:<br><br>Which one of the following phases in a seven-phase C compiler will throw an error?",
+  "assetImage": null,
+  "codeBlock": "int main() {\n    Integer x;\n    return 0;\n}",
+  "options": [
+    "Lexical analyzer",
+    "Syntax analyzer",
+    "Semantic analyzer",
+    "Machine dependent optimizer"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Lexical Analysis</strong><br>The lexical analyzer breaks the source code into a stream of tokens. Keywords, identifiers, and symbols like <code>int</code>, <code>main</code>, <code>Integer</code>, <code>x</code>, and <code>;</code> are all valid tokens. Therefore, no error is detected during lexical analysis.<br><br><strong>Step 2: Syntax Analysis</strong><br>The syntax analyzer checks whether the sequence of tokens follows the grammar rules (Context-Free Grammar) of the language. The statement <code>Integer x;</code> matches the structure of a variable declaration statement (<code>type_specifier identifier;</code>). The syntax analyzer cannot determine whether <code>Integer</code> is a valid type name; it only checks grammatical structure. Thus, no syntax error occurs.<br><br><strong>Step 3: Semantic Analysis</strong><br>The semantic analyzer performs type checking and checks symbol tables to ensure that types and variables are defined before use. Since <code>Integer</code> is neither a built-in type nor defined using <code>typedef</code> or <code>struct</code>, the compiler raises an undeclared type error during semantic analysis.<br><br>Hence, the <strong>Semantic analyzer</strong> phase will throw the error.",
+  "videoUrl": null
+}

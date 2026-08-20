@@ -1,0 +1,26 @@
+{
+  "id": 3,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "General Aptitude",
+    "Geometry"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "If $\\theta$ is the angle, in degrees, between the longest diagonal of the cube and any one of the edges of the cube, then, $\\cos \\theta=$",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\frac{1}{2}$",
+    "$\\frac{1}{\\sqrt{3}}$",
+    "$\\frac{1}{\\sqrt{2}}$",
+    "$\\frac{\\sqrt{3}}{2}$"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "Let the edge length of the cube be $a$.<br><br><strong>Step 1: Represent the edge and diagonal as vectors.</strong><br>Place the cube in a 3D Cartesian coordinate system with one corner at $(0,0,0)$.<br>An edge along the $x$-axis is given by vector $\\vec{e} = (a, 0, 0)$.<br>The longest diagonal (space diagonal) connecting $(0,0,0)$ to $(a,a,a)$ is given by vector $\\vec{d} = (a, a, a)$.<br><br><strong>Step 2: Apply the dot product formula.</strong><br>The angle $\\theta$ between $\\vec{e}$ and $\\vec{d}$ satisfies:<br>$\\cos \\theta = \\frac{\\vec{e} \\cdot \\vec{d}}{|\\vec{e}| |\\vec{d}|}$<br><br><strong>Step 3: Calculate components and simplify.</strong><br>$\\vec{e} \\cdot \\vec{d} = (a)(a) + (0)(a) + (0)(a) = a^2$<br>$|\\vec{e}| = \\sqrt{a^2 + 0^2 + 0^2} = a$<br>$|\\vec{d}| = \\sqrt{a^2 + a^2 + a^2} = a\\sqrt{3}$<br><br>$\\cos \\theta = \\frac{a^2}{a \\cdot a\\sqrt{3}} = \\frac{1}{\\sqrt{3}}$<br><br>Hence, the correct answer is <strong>(B)</strong>.",
+  "videoUrl": null
+}

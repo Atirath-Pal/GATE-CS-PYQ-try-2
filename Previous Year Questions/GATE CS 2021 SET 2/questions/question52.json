@@ -1,0 +1,27 @@
+{
+  "id": 52,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "Operating Systems",
+    "Process Synchronization"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the following multi-threaded code segment (in a mix of C and pseudo-code), invoked by two processes P1 and P2, and each of the processes spawns two threads T1 and T2:<br><br>Which of the following statement(s) is/are correct?",
+  "assetImage": null,
+  "codeBlock": "int x = 0;  // global\nLock L1;    // global\nmain() {\n  create a thread to execute foo();  // Thread T1\n  create a thread to execute foo();  // Thread T2\n  wait for the two threads to finish execution;\n  print (x);}\n\nfoo() {\n  int y = 0;\n  Acquire L1;\n  x = x + 1;\n  y = y + 1;\n  Release L1;\n  print (y);}",
+  "options": [
+    "Both P1 and P2 will print the value of x as 2.",
+    "At least one of P1 and P2 will print the value of x as 4.",
+    "At least one of the threads will print the value of y as 2.",
+    "Both T1 and T2, in both the processes, will print the value of y as 1."
+  ],
+  "answer": [
+    "A",
+    "D"
+  ],
+  "explanation": "<strong>Step 1: Process Memory Isolation</strong><br>Processes $P1$ and $P2$ run in independent address spaces. Therefore, global variables like $x$ and lock $L1$ are not shared between $P1$ and $P2$. Each process maintains its own separate copy of $x$ (initialized to $0$).<br><br><strong>Step 2: Local Variables in Threads</strong><br>Inside <code>foo()</code>, variable $y$ is declared locally as <code>int y = 0;</code>. Local variables are allocated on each thread's individual stack, meaning threads $T1$ and $T2$ each have a private copy of $y$.<br><br><strong>Step 3: Execution and Synchronization</strong><br>Within each process:<br>• Both threads $T1$ and $T2$ acquire lock $L1$ sequentially to execute the critical section.<br>• Each thread increments the process's global variable $x$ by $1$. Since there are $2$ threads, global $x$ becomes $2$.<br>• Each thread increments its own local $y$ from $0$ to $1$ and prints $y$. Thus, every thread prints $1$.<br>• The <code>main()</code> function waits for both threads to finish and prints $x$, which is $2$.<br><br><strong>Step 4: Option Analysis</strong><br>• <strong>Option A is correct:</strong> Both processes $P1$ and $P2$ print $x = 2$.<br>• <strong>Option B is incorrect:</strong> $x$ cannot reach $4$ because $P1$ and $P2$ do not share memory.<br>• <strong>Option C is incorrect:</strong> $y$ is private to each thread and initialized to $0$, so no thread prints $2$.<br>• <strong>Option D is correct:</strong> Both $T1$ and $T2$ in both processes print $y = 1$.",
+  "videoUrl": null
+}

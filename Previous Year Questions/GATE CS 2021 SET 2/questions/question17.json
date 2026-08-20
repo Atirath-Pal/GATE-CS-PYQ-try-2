@@ -1,0 +1,26 @@
+{
+  "id": 17,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "Computer Networks",
+    "Transport Layer"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the three-way handshake mechanism followed during TCP connection establishment between hosts $P$ and $Q$. Let $X$ and $Y$ be two random 32-bit starting sequence numbers chosen by $P$ and $Q$ respectively. Suppose $P$ sends a TCP connection request message to $Q$ with a TCP segment having SYN bit = 1, SEQ number = $X$, and ACK bit = 0. Suppose $Q$ accepts the connection request. Which one of the following choices represents the information present in the TCP segment header that is sent by $Q$ to $P$?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "SYN bit = 1, SEQ number = $X+1$, ACK bit = 0, ACK number = $Y$, FIN bit = 0",
+    "SYN bit = 0, SEQ number = $X+1$, ACK bit = 0, ACK number = $Y$, FIN bit = 1",
+    "SYN bit = 1, SEQ number = $Y$, ACK bit = 1, ACK number = $X+1$, FIN bit = 0",
+    "SYN bit = 1, SEQ number = $Y$, ACK bit = 1, ACK number = $X$, FIN bit = 0"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step 1: TCP Three-Way Handshake Mechanism</strong><br>In TCP connection establishment:<br>1. <strong>First Segment (SYN from P to Q):</strong> P sends a TCP segment with SYN bit = 1, ACK bit = 0, and SEQ number = $X$.<br>2. <strong>Second Segment (SYN-ACK from Q to P):</strong> Upon accepting the connection request, host Q responds with a segment that acknowledges P's SYN and establishes Q's own sequence number.<br><br><strong>Step 2: Field Values in the SYN-ACK Segment</strong><br>- <strong>SYN bit = 1:</strong> Q synchronizes its own sequence number with P.<br>- <strong>SEQ number = $Y$:</strong> Q sets its initial sequence number to $Y$.<br>- <strong>ACK bit = 1:</strong> Q acknowledges the receipt of P's connection request.<br>- <strong>ACK number = $X + 1$:</strong> Since a SYN control flag consumes 1 sequence number, Q expects sequence number $X + 1$ next from P.<br>- <strong>FIN bit = 0:</strong> No connection termination is being requested.<br><br>Therefore, the correct segment header information sent by Q to P is: SYN bit = 1, SEQ number = $Y$, ACK bit = 1, ACK number = $X + 1$, FIN bit = 0.<br><br>Hence, option (C) is correct.",
+  "videoUrl": null
+}

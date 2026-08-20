@@ -1,0 +1,26 @@
+{
+  "id": 36,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "Algorithms",
+    "Greedy Algorithms"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the string abbccddeee. Each letter in the string must be assigned a binary code satisfying the following properties:<br><br>1. For any two letters, the code assigned to one letter must not be a prefix of the code assigned to the other letter.<br>2. For any two letters of the same frequency, the letter which occurs earlier in the dictionary order is assigned a code whose length is at most the length of the code assigned to the other letter.<br><br>Among the set of all binary code assignments which satisfy the above two properties, what is the minimum length of the encoded string?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "21",
+    "23",
+    "25",
+    "30"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step 1: Find the frequency of each character.</strong><br>- $a: 1$<br>- $b: 2$<br>- $c: 2$<br>- $d: 2$<br>- $e: 3$<br><br><strong>Step 2: Understand the constraints.</strong><br>- <strong>Property 1:</strong> Requires a prefix-free code, which can be constructed using a binary Huffman tree.<br>- <strong>Property 2:</strong> For letters with the same frequency ($b, c, d$), dictionary order dictates that $L(b) \\le L(c) \\le L(d)$, where $L(x)$ is the code length of character $x$.<br><br><strong>Step 3: Construct the optimal tree.</strong><br>To minimize string length while satisfying $L(b) \\le L(c) \\le L(d)$, we pair $a(1)$ with $d(2)$ first:<br>1. Combine $a(1)$ and $d(2) \\rightarrow$ Node $N_1(3)$<br>2. Combine $b(2)$ and $c(2) \\rightarrow$ Node $N_2(4)$<br>3. Combine $e(3)$ and $N_1(3) \\rightarrow$ Node $N_3(6)$<br>4. Combine $N_2(4)$ and $N_3(6) \\rightarrow$ Root $(10)$<br><br><strong>Step 4: Determine code lengths and total encoded length.</strong><br>- $L(a) = 3$<br>- $L(b) = 2$<br>- $L(c) = 2$<br>- $L(d) = 3$<br>- $L(e) = 2$<br><br>Since $L(b) = 2 \\le L(c) = 2 \\le L(d) = 3$, Property 2 is satisfied.<br><br>$\\text{Total Length} = (1 \\times 3) + (2 \\times 2) + (2 \\times 2) + (2 \\times 3) + (3 \\times 2) = 3 + 4 + 4 + 6 + 6 = 23$.",
+  "videoUrl": null
+}

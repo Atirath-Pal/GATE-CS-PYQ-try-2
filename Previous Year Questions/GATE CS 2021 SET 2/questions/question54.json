@@ -1,0 +1,27 @@
+{
+  "id": 54,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "Computer Organization and Architecture",
+    "Data Representation"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "If the numerical value of a 2-byte unsigned integer on a little endian computer is 255 more than that on a big endian computer, which of the following choices represent(s) the unsigned integer on a little endian computer?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "0x6665",
+    "0x0001",
+    "0x4243",
+    "0x0100"
+  ],
+  "answer": [
+    "A",
+    "D"
+  ],
+  "explanation": "<strong>Step 1: Understand byte representation in Big Endian and Little Endian systems.</strong><br>Let the two bytes stored in memory at addresses $A$ and $A+1$ be $B_0$ and $B_1$ respectively.<br><br><strong>Step 2: Express the numerical values.</strong><br>• On a Big Endian system, address $A$ holds the Most Significant Byte (MSB) $B_0$ and address $A+1$ holds the Least Significant Byte (LSB) $B_1$:<br>$V_{BE} = 256 \\cdot B_0 + B_1$<br>• On a Little Endian system, address $A$ holds the LSB $B_0$ and address $A+1$ holds the MSB $B_1$:<br>$V_{LE} = 256 \\cdot B_1 + B_0$<br><br><strong>Step 3: Apply the given condition.</strong><br>Given $V_{LE} - V_{BE} = 255$:<br>$(256 \\cdot B_1 + B_0) - (256 \\cdot B_0 + B_1) = 255$<br>$255 \\cdot (B_1 - B_0) = 255 \\implies B_1 - B_0 = 1$<br><br>Thus, the upper byte $B_1$ (MSB) must be greater than the lower byte $B_0$ (LSB) by $1$.<br><br><strong>Step 4: Evaluate the options.</strong><br>For a 2-byte integer represented in hexadecimal as $0x[B_1][B_0]$:<br>• <strong>Option A (0x6665):</strong> $B_1 = 0x66$, $B_0 = 0x65$. $B_1 - B_0 = 0x66 - 0x65 = 1$. (Correct)<br>• <strong>Option B (0x0001):</strong> $B_1 = 0x00$, $B_0 = 0x01$. $B_1 - B_0 = -1 \\neq 1$. (Incorrect)<br>• <strong>Option C (0x4243):</strong> $B_1 = 0x42$, $B_0 = 0x43$. $B_1 - B_0 = -1 \\neq 1$. (Incorrect)<br>• <strong>Option D (0x0100):</strong> $B_1 = 0x01$, $B_0 = 0x00$. $B_1 - B_0 = 0x01 - 0x00 = 1$. (Correct)<br><br>Hence, options <strong>A</strong> and <strong>D</strong> are correct.",
+  "videoUrl": null
+}

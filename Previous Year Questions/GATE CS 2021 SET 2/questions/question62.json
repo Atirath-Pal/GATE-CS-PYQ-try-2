@@ -1,0 +1,19 @@
+{
+  "id": 62,
+  "year": 2021,
+  "set": 2,
+  "topics": ["Digital Logic", "Boolean Algebra"],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a Boolean function $f(w,x,y,z)$ such that<br><br>$$f(w,0,0,z)=1$$<br>$$f(1,x,1,z)=x+z$$<br>$$f(w,1,y,z)=wz+y$$<br><br>The number of literals in the minimal sum-of-products expression of $f$ is",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 6,
+    "max": 6
+  },
+  "explanation": "<strong>Step 1:</strong> From $f(w,0,0,z)=1$, whenever $x=0$ and $y=0$, the function is 1. This gives the product term $\\bar{x}\\bar{y}$.<br><br><strong>Step 2:</strong> From $f(1,x,1,z)=x+z$, for $w=1,y=1$, the function is 1 whenever $x=1$ or $z=1$. The corresponding implicant $wz$ can cover the required 1s.<br><br><strong>Step 3:</strong> From $f(w,1,y,z)=wz+y$, for $x=1$, the function is 1 whenever $y=1$ or both $w=1,z=1$. The implicant $xy$ covers the required cases where $x=1,y=1$.<br><br><strong>Step 4:</strong> Thus, a minimal sum-of-products expression is $f=wz+xy+\\bar{x}\\bar{y}$.<br><br><strong>Step 5:</strong> Each product term contains 2 literals: $wz$ has 2, $xy$ has 2, and $\\bar{x}\\bar{y}$ has 2.<br><br><strong>Therefore:</strong> Total number of literals $=2+2+2=6$.",
+  "videoUrl": null
+}

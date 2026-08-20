@@ -1,0 +1,22 @@
+{
+  "id": 63,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "Computer Organization and Architecture",
+    "Pipelining"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a pipelined processor with 5 stages, Instruction Fetch (IF), Instruction Decode (ID), Execute (EX), Memory Access (MEM), and Write Back (WB). Each stage of the pipeline, except the EX stage, takes one cycle. Assume that the ID stage merely decodes the instruction and the register read is performed in the EX stage. The EX stage takes one cycle for ADD instruction and two cycles for MUL instruction. Ignore pipeline register latencies.<br><br>Consider the following sequence of 8 instructions:<br><br>$$\\text{ADD, MUL, ADD, MUL, ADD, MUL, ADD, MUL}$$<br><br>Assume that every MUL instruction is data-dependent on the ADD instruction just before it and every ADD instruction (except the first ADD) is data-dependent on the MUL instruction just before it. The $Speedup$ is defined as follows:<br><br>$$Speedup = \\frac{\\text{Execution time without operand forwarding}}{\\text{Execution time with operand forwarding}}$$<br><br>The $Speedup$ achieved in executing the given instruction sequence on the pipelined processor (rounded to 2 decimal places) is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 1.87,
+    "max": 1.88
+  },
+  "explanation": "<strong>Step 1: Understand the pipeline stages and instruction execution</strong><br>• The 5 pipeline stages are IF, ID, EX, MEM, WB.<br>• Register read is performed in the EX stage.<br>• EX stage takes 1 cycle for ADD and 2 cycles for MUL ($EX_1, EX_2$).<br>• All other stages take 1 cycle.<br><br><strong>Step 2: Calculate execution time WITHOUT operand forwarding</strong><br>Without operand forwarding, an instruction must wait for its dependent instruction to complete the WB stage before it can perform its register read in the EX stage.<br>• $I_1$ (ADD): EX at C3, WB finishes at C5.<br>• $I_2$ (MUL): EX starts at C6 (after $I_1$'s WB at C5), $EX_2$ at C7, WB finishes at C9.<br>• $I_3$ (ADD): EX starts at C10 (after $I_2$'s WB at C9), WB finishes at C12.<br>• $I_4$ (MUL): EX starts at C13, WB finishes at C16.<br>• $I_5$ (ADD): EX starts at C17, WB finishes at C19.<br>• $I_6$ (MUL): EX starts at C20, WB finishes at C23.<br>• $I_7$ (ADD): EX starts at C24, WB finishes at C26.<br>• $I_8$ (MUL): EX starts at C27 ($EX_1$: C27, $EX_2$: C28), MEM at C29, WB finishes at C30.<br>Total execution time without forwarding = 30 cycles.<br><br><strong>Step 3: Calculate execution time WITH operand forwarding</strong><br>With operand forwarding, the result produced at the end of the EX stage can be directly forwarded to the EX stage of the next instruction.<br>• $I_1$ (ADD): EX at C3.<br>• $I_2$ (MUL): $EX_1$ at C4, $EX_2$ at C5.<br>• $I_3$ (ADD): EX at C6.<br>• $I_4$ (MUL): $EX_1$ at C7, $EX_2$ at C8.<br>• $I_5$ (ADD): EX at C9.<br>• $I_6$ (MUL): $EX_1$ at C10, $EX_2$ at C11.<br>• $I_7$ (ADD): EX at C12.<br>• $I_8$ (MUL): $EX_1$ at C13, $EX_2$ at C14, MEM at C15, WB at C16.<br>Total execution time with forwarding = 16 cycles.<br><br><strong>Step 4: Calculate Speedup</strong><br>$$Speedup = \\frac{30}{16} = 1.875$$<br>Rounding to 2 decimal places yields 1.88 (acceptable range: 1.87 to 1.88).",
+  "videoUrl": null
+}

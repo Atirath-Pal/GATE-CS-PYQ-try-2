@@ -1,0 +1,26 @@
+{
+  "id": 19,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "Theory of Computation",
+    "Finite Automata"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Let $L \\subseteq \\{0,1\\}^*$ be an arbitrary regular language accepted by a minimal DFA with $k$ states. Which one of the following languages must necessarily be accepted by a minimal DFA with $k$ states?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$L - \\{01\\}$",
+    "$L \\cup \\{01\\}$",
+    "$\\{0,1\\}^* - L$",
+    "$L \\cdot L$"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step 1:</strong> The complement of language $L$ over the alphabet $\\{0,1\\}$ is defined as $\\bar{L} = \\{0,1\\}^* - L$.<br><br><strong>Step 2:</strong> Given a minimal DFA $M = (Q, \\Sigma, \\delta, q_0, F)$ with $k$ states accepting $L$, the DFA for $\\bar{L}$ is constructed as $M' = (Q, \\Sigma, \\delta, q_0, Q \\setminus F)$. That is, we simply interchange the accepting and non-accepting states while keeping the set of states $Q$ and transitions $\\delta$ identical.<br><br><strong>Step 3:</strong> Swapping final and non-final states preserves state minimality because two states $p, q \\in Q$ are distinguishable in $M$ if and only if they are distinguishable in $M'$. Hence, the minimal DFA for $\\{0,1\\}^* - L$ must also have exactly $k$ states.<br><br><strong>Step 4:</strong> Operations in options (A), (B), and (D) can change the number of states required for the minimal DFA depending on the language $L$.",
+  "videoUrl": null
+}

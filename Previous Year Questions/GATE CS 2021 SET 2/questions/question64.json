@@ -1,0 +1,19 @@
+{
+  "id": 64,
+  "year": 2021,
+  "set": 2,
+  "topics": ["Computer Networks", "Multiple Access Protocols"],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a network using the pure ALOHA medium access control protocol, where each frame is of length 1,000 bits. The channel transmission rate is 1 Mbps (= $10^6$ bits per second). The aggregate number of transmissions across all the nodes (including new frame transmissions and retransmitted frames due to collisions) is modelled as a Poisson process with a rate of 1,000 frames per second. Throughput is defined as the average number of frames successfully transmitted per second. The throughput of the network (rounded to the nearest integer) is",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 135,
+    "max": 140
+  },
+  "explanation": "<strong>Step 1:</strong> The transmission time of one frame is $T = \\frac{1000}{10^6} = 0.001$ seconds.<br><br><strong>Step 2:</strong> The aggregate transmission rate is $\\lambda = 1000$ frames per second. Therefore, the offered load in frames per frame-time is $G = \\lambda T = 1000 \\times 0.001 = 1$.<br><br><strong>Step 3:</strong> For pure ALOHA, the probability that a transmitted frame is successful is $e^{-2G}$. Hence, the throughput in frames per frame-time is $S = Ge^{-2G}$.<br><br><strong>Step 4:</strong> Substituting $G=1$, we get $S=e^{-2}\\approx 0.135335$.<br><br><strong>Step 5:</strong> Converting this to frames per second, $S = \\frac{0.135335}{0.001} \\approx 135.335$ frames per second.<br><br><strong>Therefore:</strong> The throughput rounded to the nearest integer is $135$ frames per second.",
+  "videoUrl": null
+}

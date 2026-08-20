@@ -1,0 +1,28 @@
+{
+  "id": 57,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "Theory of Computation",
+    "Regular Expressions"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Which of the following regular expressions represent(s) the set of all binary numbers that are divisible by three? Assume that the string $\\epsilon$ is divisible by three.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$(0 + 1(01^*0)^*1)^*$",
+    "$(0 + 11 + 10(1 + 00)^*01)^*$",
+    "$(0^*(1(01^*0)^*1)^*)^*$",
+    "$(0 + 11 + 11(1 + 00)^*00)^*$"
+  ],
+  "answer": [
+    "A",
+    "B",
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Construct DFA for binary numbers divisible by 3</strong><br>Let states be $q_0, q_1, q_2$ representing remainders $0, 1, 2$ modulo $3$, respectively.<br>• Transitions from $q_0$: on '0' $\\to q_0$, on '1' $\\to q_1$<br>• Transitions from $q_1$: on '0' $\\to q_2$, on '1' $\\to q_0$<br>• Transitions from $q_2$: on '0' $\\to q_1$, on '1' $\\to q_2$<br>Here, $q_0$ is both the start state and the only final state.<br><br><strong>Step 2: State Elimination to find Regular Expressions</strong><br><br><strong>Case 1: Eliminating state $q_2$ first</strong><br>• The self-loop at $q_2$ is $1$.<br>• The path $q_1 \\to q_2 \\to q_1$ creates a loop at $q_1$ with expression $01^*0$.<br>• Total loop at $q_1$ becomes $(01^*0)^*$.<br>• The path $q_0 \\to q_1 \\dots \\to q_0$ gives $1(01^*0)^*1$.<br>• Combining with self-loop $0$ at $q_0$, the expression is $(0 + 1(01^*0)^*1)^*$.<br>This matches <strong>Option (A)</strong>.<br><br><strong>Case 2: Using standard regular expression equivalence</strong><br>Using the identity $(X + Y)^* = (X^* Y^*)^*$, with $X = 0$ and $Y = 1(01^*0)^*1$, we get:<br>$(0 + 1(01^*0)^*1)^* = (0^* (1(01^*0)^*1)^*)^*$.<br>This matches <strong>Option (C)</strong>.<br><br><strong>Case 3: Eliminating state $q_1$ first</strong><br>• Path $q_0 \\to q_1 \\to q_0$ gives loop $11$ at $q_0$.<br>• Path $q_0 \\to q_1 \\to q_2$ gives transition $10$.<br>• Path $q_2 \\to q_1 \\to q_0$ gives transition $01$.<br>• Self-loop at $q_2$ becomes $1 + 00$.<br>• Path $q_0 \\to q_2 \\dots \\to q_0$ gives $10(1+00)^*01$.<br>• Combining all loops at $q_0$ gives $(0 + 11 + 10(1+00)^*01)^*$.<br>This matches <strong>Option (B)</strong>.<br><br>Option (D) incorrectly has $00$ at the end instead of $01$, so it is incorrect.<br><br>Hence, options (A), (B), and (C) are correct.",
+  "videoUrl": null
+}

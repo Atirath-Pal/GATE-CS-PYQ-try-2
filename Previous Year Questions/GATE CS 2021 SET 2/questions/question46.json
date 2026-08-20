@@ -1,0 +1,26 @@
+{
+  "id": 46,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "Theory of Computation",
+    "Regular Languages"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the following two statements about regular languages:<br><br>$S_1$: Every infinite regular language contains an undecidable language as a subset.<br>$S_2$: Every finite language is regular.<br><br>Which one of the following choices is correct?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Only $S_1$ is true.",
+    "Only $S_2$ is true.",
+    "Both $S_1$ and $S_2$ are true.",
+    "Neither $S_1$ nor $S_2$ is true."
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Statement $S_1$:</strong> Every infinite regular language $L$ has $2^{\\aleph_0}$ (uncountably many) subsets. Since the set of all decidable languages is countably infinite, uncountably many subsets of $L$ must be undecidable. Therefore, $S_1$ is <strong>true</strong>.<br><br><strong>Statement $S_2$:</strong> Any finite language consists of a finite number of strings. Since a single string forms a regular language and regular languages are closed under finite union, every finite language is regular. Therefore, $S_2$ is <strong>true</strong>.<br><br>Hence, both $S_1$ and $S_2$ are true.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 45,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "Programming and Data Structures",
+    "C Programming"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the following ANSI C program:<br><br>Which one of the statements below is correct about the program?",
+  "assetImage": null,
+  "codeBlock": "#include &lt;stdio.h&gt;\n#include &lt;stdlib.h&gt;\nstruct Node{\n    int value;\n    struct Node *next;};\nint main(){\n    struct Node  *boxE, *head, *boxN; int index = 0;\n    boxE = head = (struct Node *) malloc(sizeof(struct Node));\n    head-&gt;value = index;\n    for (index = 1; index &lt;= 3; index++){\n        boxN = (struct Node *) malloc(sizeof(struct Node));\n        boxE-&gt;next = boxN;\n        boxN-&gt;value = index;\n        boxE = boxN; }\n    for (index = 0; index &lt;= 3; index++) {\n        printf(\"Value at index %d is %d\\n\", index, head-&gt;value);\n        head = head-&gt;next;\n        printf(\"Value at index %d is %d\\n\", index+1, head-&gt;value); } }",
+  "options": [
+    "Upon execution, the program creates a linked-list of five nodes.",
+    "Upon execution, the program goes into an infinite loop.",
+    "It has a missing return which will be reported as an error by the compiler.",
+    "It dereferences an uninitialized pointer that may result in a run-time error."
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Step 1: Node Creation</strong><br>The initial <code>malloc</code> creates node 0. The first <code>for</code> loop iterates for <code>index = 1, 2, 3</code>, creating 3 more nodes. In total, 4 nodes are created.<br><br><strong>Step 2: Uninitialized Next Pointer</strong><br>When the last node (node 3) is allocated, its <code>next</code> pointer is never set to <code>NULL</code> or pointing to any valid memory address. Thus, it contains garbage/uninitialized data.<br><br><strong>Step 3: Dereferencing Error</strong><br>In the second loop, when <code>index = 3</code>:<br>1. <code>head</code> points to node 3.<br>2. <code>head = head->next;</code> assigns the uninitialized garbage address to <code>head</code>.<br>3. <code>printf(\"... %d\\n\", index+1, head->value);</code> attempts to dereference <code>head</code> (accessing <code>head->value</code>).<br><br>Dereferencing an uninitialized/invalid pointer causes undefined behavior and typically results in a runtime error (Segmentation Fault). Therefore, statement (D) is correct.",
+  "videoUrl": null
+}

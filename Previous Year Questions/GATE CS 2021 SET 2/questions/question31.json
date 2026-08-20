@@ -1,0 +1,22 @@
+{
+  "id": 31,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "Database Management System",
+    "Indexing"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "A data file consisting of 1,50,000 student-records is stored on a hard disk with block size of 4096 bytes. The data file is sorted on the primary key RollNo. The size of a record pointer for this disk is 7 bytes. Each student-record has a candidate key attribute called ANum of size 12 bytes. Suppose an index file with records consisting of two fields, ANum value and the record pointer to the corresponding student record, is built and stored on the same disk. Assume that the records of data file and index file are not split across disk blocks. The number of blocks in the index file is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 698,
+    "max": 698
+  },
+  "explanation": "<strong>Step 1: Determine the index type</strong><br>The data file is sorted on $RollNo$ (primary key), but the index is constructed using $ANum$ (a non-ordering candidate key). This makes it a <strong>Secondary Index</strong>, which must be <strong>dense</strong> (containing one index entry for every data record).<br><br><strong>Step 2: Calculate index entry size</strong><br>$\\text{Index Entry Size} = \\text{Size of } ANum + \\text{Size of Record Pointer} = 12 \\text{ bytes} + 7 \\text{ bytes} = 19 \\text{ bytes}$<br><br><strong>Step 3: Calculate entries per block</strong><br>Since records cannot be split across blocks:<br>$\\text{Entries per Block} = \\lfloor \\frac{\\text{Block Size}}{\\text{Index Entry Size}} \\rfloor = \\lfloor \\frac{4096}{19} \\rfloor = \\lfloor 215.57 \\rfloor = 215$<br><br><strong>Step 4: Calculate total blocks for index file</strong><br>$\\text{Number of Index Blocks} = \\lceil \\frac{\\text{Total Index Entries}}{\\text{Entries per Block}} \\rceil = \\lceil \\frac{1,50,000}{215} \\rceil = \\lceil 697.67 \\rceil = 698$",
+  "videoUrl": null
+}

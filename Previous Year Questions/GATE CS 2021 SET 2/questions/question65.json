@@ -1,0 +1,22 @@
+{
+  "id": 65,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "Algorithms",
+    "Graph Theory"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "In a directed acyclic graph with a source vertex $s$, the <em>quality-score</em> of a directed path is defined to be the product of the weights of the edges on the path. Further, for a vertex $v$ other than $s$, the <em>quality-score</em> of $v$ is defined to be the maximum among the quality-scores of all the paths from $s$ to $v$. The quality-score of $s$ is assumed to be 1.<br><br>The sum of the quality-scores of all the vertices in the graph shown above is ___________.",
+  "assetImage": "question65.png",
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 929,
+    "max": 929
+  },
+  "explanation": "To find the quality-score $Q(v)$ for each vertex $v$, we use dynamic programming / topological order to compute the maximum product of edge weights along any path from source $s$ to $v$.<br><br><strong>Given:</strong><br>$Q(s) = 1$<br><br><strong>Step-by-step computation in topological order:</strong><br>1. <strong>Vertex $a$:</strong><br>Path: $s \\rightarrow a$ with weight $9$<br>$Q(a) = 1 \\times 9 = 9$<br><br>2. <strong>Vertex $c$:</strong><br>Path: $s \\rightarrow c$ with weight $1$<br>$Q(c) = 1 \\times 1 = 1$<br><br>3. <strong>Vertex $b$:</strong><br>Path: $a \\rightarrow b$ with weight $1$<br>$Q(b) = Q(a) \\times 1 = 9 \\times 1 = 9$<br><br>4. <strong>Vertex $d$:</strong><br>Incoming edges from $c$ (weight $1$) and $a$ (weight $1$):<br>$Q(d) = \\max(Q(c) \\times 1, Q(a) \\times 1) = \\max(1, 9) = 9$<br><br>5. <strong>Vertex $f$:</strong><br>Path: $c \\rightarrow f$ with weight $9$<br>$Q(f) = Q(c) \\times 9 = 1 \\times 9 = 9$<br><br>6. <strong>Vertex $g$:</strong><br>Incoming edges from $f$ (weight $1$) and $d$ (weight $9$):<br>$Q(g) = \\max(Q(f) \\times 1, Q(d) \\times 9) = \\max(9 \\times 1, 9 \\times 9) = \\max(9, 81) = 81$<br><br>7. <strong>Vertex $e$:</strong><br>Incoming edges from $d$ (weight $9$) and $b$ (weight $1$):<br>$Q(e) = \\max(Q(d) \\times 9, Q(b) \\times 1) = \\max(9 \\times 9, 9 \\times 1) = \\max(81, 9) = 81$<br><br>8. <strong>Vertex $t$:</strong><br>Incoming edges from $g$ (weight $1$) and $e$ (weight $9$):<br>$Q(t) = \\max(Q(g) \\times 1, Q(e) \\times 9) = \\max(81 \\times 1, 81 \\times 9) = \\max(81, 729) = 729$<br><br><strong>Sum of Quality-Scores of all vertices:</strong><br>$\\text{Sum} = Q(s) + Q(a) + Q(b) + Q(c) + Q(d) + Q(e) + Q(f) + Q(g) + Q(t)$<br>$\\text{Sum} = 1 + 9 + 9 + 1 + 9 + 81 + 9 + 81 + 729 = 929$",
+  "videoUrl": null
+}

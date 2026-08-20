@@ -1,0 +1,22 @@
+{
+  "id": 59,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "Programming and Data Structures",
+    "Recursion"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the following ANSI C program.<br><br>The output of the program upon execution is _____________",
+  "assetImage": null,
+  "codeBlock": "#include &lt;stdio.h&gt;\n\nint foo(int x, int y, int q)\n{\n    if ((x <= 0) && (y <= 0))\n        return q;\n    if (x <= 0)\n        return foo(x, y-q, q);\n    if (y <= 0)\n        return foo(x-q, y, q);\n    return foo(x, y-q, q) + foo(x-q, y, q);\n}\n\nint main()\n{\n    int r = foo(15,15,10);\n    printf(\"%d\", r);\n    return 0;\n}",
+  "options": [],
+  "answer": {
+    "min": 60,
+    "max": 60
+  },
+  "explanation": "<strong>Step 1: Understand the recursive function $foo(x, y, q)$</strong><br>We are given $q = 10$ and need to find the value returned by $foo(15, 15, 10)$.<br><br><strong>Step 2: Base rules for $foo(x, y, 10)$</strong><br>- If $x \\le 0$ and $y \\le 0$: returns $10$.<br>- If $x \\le 0$ and $y > 0$: returns $foo(x, y-10, 10)$.<br>- If $y \\le 0$ and $x > 0$: returns $foo(x-10, y, 10)$.<br>- If $x > 0$ and $y > 0$: returns $foo(x, y-10, 10) + foo(x-10, y, 10)$.<br><br><strong>Step 3: Bottom-up evaluation of recursive calls</strong><br>1. $foo(-5, -5, 10) = 10$<br>2. $foo(-5, 5, 10) = foo(-5, -5, 10) = 10$<br>3. $foo(5, -5, 10) = foo(-5, -5, 10) = 10$<br>4. $foo(5, 5, 10) = foo(5, -5, 10) + foo(-5, 5, 10) = 10 + 10 = 20$<br>5. $foo(15, -5, 10) = foo(5, -5, 10) = 10$<br>6. $foo(-5, 15, 10) = foo(-5, 5, 10) = 10$<br>7. $foo(15, 5, 10) = foo(15, -5, 10) + foo(5, 5, 10) = 10 + 20 = 30$<br>8. $foo(5, 15, 10) = foo(5, 5, 10) + foo(-5, 15, 10) = 20 + 10 = 30$<br><br><strong>Step 4: Compute final result</strong><br>$foo(15, 15, 10) = foo(15, 5, 10) + foo(5, 15, 10) = 30 + 30 = 60$.<br><br>Thus, the output of the program is <strong>60</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 10,
+  "year": "2021",
+  "set": "2",
+  "topics": [
+    "General Aptitude",
+    "Analytical Aptitude"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Six students $P, Q, R, S, T$ and $U$, with distinct heights, compare their heights and make the following observations.<br><br>Observation I: $S$ is taller than $R$.<br><br>Observation II: $Q$ is the shortest of all.<br><br>Observation III: $U$ is taller than only one student.<br><br>Observation IV: $T$ is taller than $S$ but is not the tallest.<br><br>The number of students that are taller than $R$ is the same as the number of students shorter than ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "T",
+    "R",
+    "S",
+    "P"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Determine positions from tallest (1) to shortest (6).</strong><br>Let the positions from tallest to shortest be numbered 1 through 6.<br><br><strong>Step 2: Analyze observations.</strong><br>- <strong>Observation II:</strong> $Q$ is the shortest of all $\\rightarrow$ Position 6 = $Q$.<br>- <strong>Observation III:</strong> $U$ is taller than only one student ($Q$) $\\rightarrow$ Position 5 = $U$.<br>- <strong>Observation IV:</strong> $T$ is taller than $S$ ($T > S$) but is not the tallest ($T \\neq 1$).<br>- <strong>Observation I:</strong> $S$ is taller than $R$ ($S > R$).<br><br>Combining these gives $T > S > R$. Since positions 5 and 6 are occupied and $T$ cannot be at position 1, $T$, $S$, and $R$ must occupy positions 2, 3, and 4 respectively.<br><br>The remaining student $P$ must be at position 1 (the tallest).<br><br><strong>Final Height Order (Tallest to Shortest):</strong><br>$P > T > S > R > U > Q$<br><br><strong>Step 3: Evaluate the question statement.</strong><br>- Number of students taller than $R$ (position 4) = 3 ($P, T, S$).<br>- Number of students shorter than $S$ (position 3) = 3 ($R, U, Q$).<br><br>Hence, the number of students taller than $R$ is the same as the number of students shorter than $S$.",
+  "videoUrl": null
+}

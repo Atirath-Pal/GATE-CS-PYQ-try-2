@@ -1,0 +1,22 @@
+{
+  "id": 35,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "Engineering Mathematics",
+    "Calculus"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Suppose that $f : \\mathbb{R} \\to \\mathbb{R}$ is a continuous function on the interval $[-3, 3]$ and a differentiable function in the interval $(-3, 3)$ such that for every $x$ in the interval, $f'(x) \\le 2$. If $f(-3) = 7$, then $f(3)$ is at most ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 19,
+    "max": 19
+  },
+  "explanation": "<strong>By Lagrange's Mean Value Theorem (LMVT):</strong><br>If a function $f(x)$ is continuous on $[a, b]$ and differentiable on $(a, b)$, then there exists at least one point $c \\in (a, b)$ such that:<br>$\\frac{f(b) - f(a)}{b - a} = f'(c)$<br><br>Here, $a = -3$ and $b = 3$.<br>So,<br>$\\frac{f(3) - f(-3)}{3 - (-3)} = f'(c)$<br>$\\frac{f(3) - 7}{6} = f'(c)$<br><br>Given that $f'(x) \\le 2$ for all $x \\in (-3, 3)$, we have:<br>$f'(c) \\le 2$<br>$\\frac{f(3) - 7}{6} \\le 2$<br>$f(3) - 7 \\le 12$<br>$f(3) \\le 19$<br><br>Therefore, the value of $f(3)$ is at most <strong>19</strong>.",
+  "videoUrl": null
+}

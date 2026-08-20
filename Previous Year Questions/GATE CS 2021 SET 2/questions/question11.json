@@ -1,0 +1,26 @@
+{
+  "id": 11,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "Algorithms",
+    "Graph Theory"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Let $G$ be a connected undirected weighted graph. Consider the following two statements.<br><br>$S_1$: There exists a minimum weight edge in $G$ which is present in every minimum spanning tree of $G$.<br>$S_2$: If every edge in $G$ has distinct weight, then $G$ has a unique minimum spanning tree.<br><br>Which one of the following options is correct?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Both $S_1$ and $S_2$ are true.",
+    "$S_1$ is true and $S_2$ is false.",
+    "$S_1$ is false and $S_2$ is true.",
+    "Both $S_1$ and $S_2$ are false."
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Analysis of Statement $S_1$:</strong><br>Consider a graph $G$ with 3 vertices forming a triangle where all 3 edges have equal weight $1$ (which is the minimum weight). Any minimum spanning tree (MST) will select 2 edges. There are 3 distinct MSTs, and no single edge appears in all of them. Thus, $S_1$ is <strong>false</strong>.<br><br><strong>Analysis of Statement $S_2$:</strong><br>It is a fundamental property of graphs that if all edge weights in a connected undirected graph are distinct, then the graph contains a unique minimum spanning tree. Thus, $S_2$ is <strong>true</strong>.<br><br>Hence, $S_1$ is false and $S_2$ is true.",
+  "videoUrl": null
+}

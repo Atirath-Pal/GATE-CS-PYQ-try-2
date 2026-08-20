@@ -1,0 +1,26 @@
+{
+  "id": 18,
+  "year": "2021",
+  "set": "2",
+  "topics": [
+    "Algorithms",
+    "Searching Algorithms"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "What is the worst-case number of arithmetic operations performed by recursive binary search on a sorted array of size $n$?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\Theta(\\sqrt{n})$",
+    "$\\Theta(\\log_2(n))$",
+    "$\\Theta(n^2)$",
+    "$\\Theta(n)$"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. In recursive binary search, a sorted array of size $n$ is divided in half at each step by computing the mid index.<br>2. The recurrence relation for the worst-case time complexity (and total arithmetic operations) is:<br>$$T(n) = T\\left(\\frac{n}{2}\\right) + O(1)$$<br>3. Solving this recurrence relation gives:<br>$$T(n) = \\Theta(\\log_2(n))$$<br><br>Therefore, the correct answer is <strong>(B)</strong>.",
+  "videoUrl": null
+}

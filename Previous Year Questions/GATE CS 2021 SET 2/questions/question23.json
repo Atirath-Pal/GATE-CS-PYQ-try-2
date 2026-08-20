@@ -1,0 +1,26 @@
+{
+  "id": 23,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "Compiler Design",
+    "Intermediate Code Generation"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "In the context of compilers, which of the following is/are NOT an intermediate representation of the source program?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Three address code",
+    "Abstract Syntax Tree (AST)",
+    "Control Flow Graph (CFG)",
+    "Symbol table"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Intermediate Representations (IR)</strong> in compilers are data structures or linearized forms used to represent the source program between the front-end analysis and back-end code generation phases.<br><br>1. <strong>Three address code (TAC):</strong> A linear intermediate representation where each statement has at most three operands.<br>2. <strong>Abstract Syntax Tree (AST):</strong> A tree-structured high-level intermediate representation representing the abstract syntactic structure of the source code.<br>3. <strong>Control Flow Graph (CFG):</strong> A graph-based intermediate representation illustrating all paths that might be traversed through a program during its execution.<br>4. <strong>Symbol table:</strong> A data structure used to store information about the occurrence of various entities such as variable names, function names, objects, and types. It is an auxiliary data structure rather than an intermediate code representation of the program itself.<br><br>Hence, <strong>Symbol table</strong> is NOT an intermediate representation.",
+  "videoUrl": null
+}

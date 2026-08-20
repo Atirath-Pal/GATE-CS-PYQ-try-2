@@ -1,0 +1,28 @@
+{
+  "id": 51,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "Theory of Computation",
+    "Context-Free Languages"
+  ],
+  "type": "MSQ",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "For a string $w$, we define $w^R$ to be the reverse of $w$. For example, if $w = 01101$ then $w^R = 10110$.<br><br>Which of the following languages is/are context-free?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\{w x w^R x^R \\mid w, x \\in \\{0, 1\\}^*\\}$",
+    "$\\{w w^R x x^R \\mid w, x \\in \\{0, 1\\}^*\\}$",
+    "$\\{w x w^R \\mid w, x \\in \\{0, 1\\}^*\\}$",
+    "$\\{w x x^R w^R \\mid w, x \\in \\{0, 1\\}^*\\}$"
+  ],
+  "answer": [
+    "B",
+    "C",
+    "D"
+  ],
+  "explanation": "<strong>Analysis of each language:</strong><br><br><strong>Option A:</strong> $L_A = \\{w x w^R x^R \\mid w, x \\in \\{0, 1\\}^*\\}$<br>This language requires cross-matching of components ($w$ with $w^R$ across $x$, and $x$ with $x^R$ across $w^R$). A Pushdown Automaton cannot maintain two independent push-pop dependencies simultaneously. Thus, $L_A$ is <strong>not context-free</strong>.<br><br><strong>Option B:</strong> $L_B = \\{w w^R x x^R \\mid w, x \\in \\{0, 1\\}^*\\}$<br>This is the concatenation of two context-free languages $L_1 = \\{w w^R \\mid w \\in \\{0, 1\\}^*\\}$ and $L_2 = \\{x x^R \\mid x \\in \\{0, 1\\}^*\\}$ (both are languages of even-length palindromes). Since CFLs are closed under concatenation, $L_B$ is <strong>context-free</strong>.<br><br><strong>Option C:</strong> $L_C = \\{w x w^R \\mid w, x \\in \\{0, 1\\}^*\\}$<br>By setting $w = \\epsilon$, $x$ can be any arbitrary string in $\\{0, 1\\}^*$. Thus, $L_C = \\{0, 1\\}^*$, which is regular and therefore <strong>context-free</strong>.<br><br><strong>Option D:</strong> $L_D = \\{w x x^R w^R \\mid w, x \\in \\{0, 1\\}^*\\}$<br>Let $y = wx$, then $y^R = x^R w^R$. Rewriting the expression yields $L_D = \\{y y^R \\mid y \\in \\{0, 1\\}^*\\}$, which is the standard context-free language of even-length palindromes. Thus, $L_D$ is <strong>context-free</strong>.<br><br>Therefore, the correct options are <strong>B, C, and D</strong>.",
+  "videoUrl": null
+}

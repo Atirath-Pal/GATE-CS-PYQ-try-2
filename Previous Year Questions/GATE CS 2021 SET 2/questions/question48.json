@@ -1,0 +1,26 @@
+{
+  "id": 48,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "Compiler Design",
+    "Data Flow Analysis"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "For a statement $S$ in a program, in the context of liveness analysis, the following sets are defined:<br><br>$USE(S)$ : the set of variables used in $S$<br>$IN(S)$ : the set of variables that are live at the entry of $S$<br>$OUT(S)$ : the set of variables that are live at the exit of $S$<br><br>Consider a basic block that consists of two statements, $S_1$ followed by $S_2$. Which one of the following statements is correct?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$OUT(S_1) = IN(S_2)$",
+    "$OUT(S_1) = IN(S_1) \\cup USE(S_1)$",
+    "$OUT(S_1) = IN(S_2) \\cup OUT(S_2)$",
+    "$OUT(S_1) = USE(S_1) \\cup IN(S_2)$"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Liveness Analysis Rules:</strong><br>In data-flow analysis, a variable is considered live at a point in the program if its current value will be read along some execution path before it is overwritten.<br><br><strong>Analysis of Sequential Statements:</strong><br>In a basic block, control flows sequentially from statement $S_1$ to statement $S_2$ with no branches in between.<br><br>The program state immediately after leaving statement $S_1$ (the exit of $S_1$) is precisely the program state immediately before entering statement $S_2$ (the entry of $S_2$).<br><br>Therefore, the set of variables live at the exit of $S_1$ is identical to the set of variables live at the entry of $S_2$:<br>$OUT(S_1) = IN(S_2)$<br><br>Thus, option <strong>(A)</strong> is correct.",
+  "videoUrl": null
+}

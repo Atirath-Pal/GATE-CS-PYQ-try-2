@@ -1,0 +1,26 @@
+{
+  "id": 41,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "Database Management System",
+    "SQL"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "The relation scheme given below is used to store information about the employees of a company, where empId is the key and deptId indicates the department to which the employee is assigned. Each employee is assigned to exactly one department.<br><br>$$\\text{emp}(\\underline{\\text{empId}}, \\text{name}, \\text{gender}, \\text{salary}, \\text{deptId})$$<br><br>Consider the following SQL query:<br><br>The above query gives, for each department in the company, the number of female employees whose salary is greater than the average salary of",
+  "assetImage": null,
+  "codeBlock": "select deptId, count(*)\nfrom emp\nwhere gender = \"female\" and salary > (select avg(salary) from emp)\ngroup by deptId;",
+  "options": [
+    "employees in the department.",
+    "employees in the company.",
+    "female employees in the department.",
+    "female employees in the company."
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step 1: Analyze the subquery</strong><br>The subquery <code>(select avg(salary) from emp)</code> executes independently without any correlation to the outer query. It computes the average salary of all rows in the <code>emp</code> table, representing the average salary of all <strong>employees in the company</strong>.<br><br><strong>Step 2: Analyze the WHERE clause</strong><br>The condition <code>where gender = \"female\" and salary > (...)</code> filters tuples to select only female employees whose individual salary exceeds the overall average salary of the company.<br><br><strong>Step 3: Analyze the GROUP BY clause</strong><br>The <code>group by deptId</code> clause aggregates these qualified female employees by department, and <code>count(*)</code> counts how many such female employees belong to each department.<br><br>Therefore, the query calculates the number of female employees whose salary is greater than the average salary of <strong>employees in the company</strong>.",
+  "videoUrl": null
+}

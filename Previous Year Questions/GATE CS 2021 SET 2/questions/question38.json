@@ -1,0 +1,26 @@
+{
+  "id": 38,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "Digital Logic",
+    "Finite State Machines"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Suppose we want to design a synchronous circuit that processes a string of 0's and 1's. Given a string, it produces another string by replacing the first 1 in any subsequence of consecutive 1's by a 0. Consider the following example.<br><br>Input sequence: &nbsp;&nbsp;&nbsp;&nbsp;00100011000011100<br>Output sequence: &nbsp;00000001000001100<br><br>A Mealy Machine is a state machine where both the next state and the output are functions of the present state and the current input.<br>The above mentioned circuit can be designed as a two-state Mealy machine. The states in the Mealy machine can be represented using Boolean values 0 and 1. We denote the current state, the next state, the next incoming bit, and the output bit of the Mealy machine by the variables $s$, $t$, $b$ and $y$ respectively.<br>Assume the initial state of the Mealy machine is 0.<br><br>What are the Boolean expressions corresponding to $t$ and $y$ in terms of $s$ and $b$?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$t = s + b$<br>$y = s b$",
+    "$t = b$<br>$y = s b$",
+    "$t = b$<br>$y = s \\bar{b}$",
+    "$t = s + b$<br>$y = s \\bar{b}$"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "To find the Boolean expressions for the next state $t$ and output $y$ in terms of the current state $s$ and input bit $b$:<br><br><strong>1. Understand the State Behaviors:</strong><br>- Initial state is $s = 0$.<br>- When $b = 0$, output $y = 0$ and next state $t = 0$.<br>- When the first $1$ in a sequence arrives ($s = 0, b = 1$), output $y$ must be $0$ (replacing the first $1$ with $0$), but state transitions to $t = 1$ to record that a $1$ was seen.<br>- For subsequent $1$'s in that sequence ($s = 1, b = 1$), output $y$ must be $1$ and state stays $t = 1$.<br>- When input $b = 0$ arrives after $1$'s ($s = 1, b = 0$), output $y = 0$ and state resets to $t = 0$.<br><br><strong>2. Transition and Output Table:</strong><br>- $s = 0, b = 0 \\implies t = 0, y = 0$<br>- $s = 0, b = 1 \\implies t = 1, y = 0$<br>- $s = 1, b = 0 \\implies t = 0, y = 0$<br>- $s = 1, b = 1 \\implies t = 1, y = 1$<br><br><strong>3. Derive Expressions:</strong><br>- <strong>Next State ($t$):</strong> $t = 1$ whenever $b = 1$, independent of $s$. Thus, $t = b$.<br>- <strong>Output ($y$):</strong> $y = 1$ only when both $s = 1$ and $b = 1$. Thus, $y = s \\cdot b$.<br><br>Therefore, Option (B) is correct.",
+  "videoUrl": null
+}

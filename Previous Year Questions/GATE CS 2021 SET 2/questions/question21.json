@@ -1,0 +1,27 @@
+{
+  "id": 21,
+  "year": 2021,
+  "set": 2,
+  "topics": [
+    "Discrete Mathematics",
+    "Set Theory"
+  ],
+  "type": "MSQ",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider the following sets, where $n \\ge 2$:<br><br>$S_1$: Set of all $n \\times n$ matrices with entries from the set $\\{a, b, c\\}$<br>$S_2$: Set of all functions from the set $\\{0, 1, 2, \\dots, n^2 - 1\\}$ to the set $\\{0, 1, 2\\}$<br><br>Which of the following choice(s) is/are correct?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "There does not exist a bijection from $S_1$ to $S_2$.",
+    "There exists a surjection from $S_1$ to $S_2$.",
+    "There exists a bijection from $S_1$ to $S_2$.",
+    "There does not exist an injection from $S_1$ to $S_2$."
+  ],
+  "answer": [
+    "B",
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Determine the size of set $S_1$.</strong><br>An $n \\times n$ matrix consists of $n^2$ elements.<br>Each element can be chosen from the set $\\{a, b, c\\}$, which has $3$ possible choices.<br>Therefore, the total number of matrices in $S_1$ is:<br>$|S_1| = 3^{n^2}$<br><br><strong>Step 2: Determine the size of set $S_2$.</strong><br>The domain set $A = \\{0, 1, 2, \\dots, n^2 - 1\\}$ has $|A| = n^2$ elements.<br>The codomain set $B = \\{0, 1, 2\\}$ has $|B| = 3$ elements.<br>The total number of functions from $A$ to $B$ is given by $|B|^{|A|}$:<br>$|S_2| = 3^{n^2}$<br><br><strong>Step 3: Analyze the options based on set cardinalities.</strong><br>Since $|S_1| = |S_2| = 3^{n^2}$ and both sets are finite, there exists a <strong>bijection</strong> (one-to-one and onto mapping) between $S_1$ and $S_2$. Thus, <strong>(C)</strong> is correct and <strong>(A)</strong> is false.<br><br>Since any bijective function is both surjective (onto) and injective (one-to-one), there also exists a <strong>surjection</strong> and an <strong>injection</strong> from $S_1$ to $S_2$. Thus, <strong>(B)</strong> is correct and <strong>(D)</strong> is false.<br><br><strong>Correct Answers:</strong> B and C",
+  "videoUrl": null
+}
