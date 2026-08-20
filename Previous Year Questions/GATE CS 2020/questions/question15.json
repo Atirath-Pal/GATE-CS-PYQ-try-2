@@ -1,0 +1,26 @@
+{
+  "id": 15,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "Data Structures",
+    "Trees"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "The preorder traversal of a binary search tree is $15, 10, 12, 11, 20, 18, 16, 19$.<br><br>Which one of the following is the postorder traversal of the tree?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "10, 11, 12, 15, 16, 18, 19, 20",
+    "11, 12, 10, 16, 19, 18, 20, 15",
+    "20, 19, 18, 16, 15, 12, 11, 10",
+    "19, 16, 18, 20, 11, 12, 10, 15"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step 1: Find the Inorder Traversal</strong><br>For any Binary Search Tree (BST), the Inorder traversal is always in strictly ascending order.<br>Sorting the given Preorder elements gives:<br>Inorder traversal = $10, 11, 12, 15, 16, 18, 19, 20$<br><br><strong>Step 2: Reconstruct the Binary Search Tree</strong><br>1. The first element in Preorder is $15$, so $15$ is the root of the tree.<br>2. Elements less than $15$ ($10, 11, 12$) form the left subtree.<br>3. Elements greater than $15$ ($20, 18, 16, 19$) form the right subtree.<br><br><strong>Left Subtree:</strong><br>- Preorder: $10, 12, 11$<br>- Root = $10$<br>- Right child = $12$, which has a left child = $11$<br>- Postorder of left subtree = $11, 12, 10$<br><br><strong>Right Subtree:</strong><br>- Preorder: $20, 18, 16, 19$<br>- Root = $20$<br>- Left child = $18$, which has left child = $16$ and right child = $19$<br>- Postorder of right subtree = $16, 19, 18, 20$<br><br><strong>Step 3: Combine Postorder Traversals</strong><br>Postorder traversal visits (Left Subtree, Right Subtree, Root):<br>Postorder = $11, 12, 10, 16, 19, 18, 20, 15$<br><br>Hence, option <strong>B</strong> is correct.",
+  "videoUrl": null
+}

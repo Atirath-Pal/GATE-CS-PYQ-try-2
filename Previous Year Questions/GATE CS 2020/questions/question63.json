@@ -1,0 +1,22 @@
+{
+  "id": 63,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "Operating Systems",
+    "Virtual Memory"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a paging system that uses 1-level page table residing in main memory and a TLB for address translation. Each main memory access takes $100\\text{ ns}$ and TLB lookup takes $20\\text{ ns}$. Each page transfer to/from the disk takes $5000\\text{ ns}$. Assume that the TLB hit ratio is $95\\%$, page fault rate is $10\\%$. Assume that for $20\\%$ of the total page faults, a dirty page has to be written back to disk before the required page is read in from disk. TLB update time is negligible. The average memory access time in ns (round off to 1 decimal places) is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 154.5,
+    "max": 155.5
+  },
+  "explanation": "<strong>Step 1: Given Data</strong><br>• TLB Hit Ratio ($h$) = $95\\% = 0.95$<br>• TLB Miss Ratio = $1 - 0.95 = 0.05$<br>• Main Memory Access Time ($m$) = $100\\text{ ns}$<br>• TLB Lookup Time ($c$) = $20\\text{ ns}$<br>• Page Fault Rate ($p$) = $10\\% = 0.10$<br>• Page Transfer Time ($S$) = $5000\\text{ ns}$<br><br><strong>Step 2: Calculate Average Page Fault Service Time</strong><br>• Dirty page probability = $20\\% = 0.20$ (requires 2 page transfers: $2 \\times 5000 = 10000\\text{ ns}$)<br>• Clean page probability = $80\\% = 0.80$ (requires 1 page transfer: $5000\\text{ ns}$)<br>Average Page Fault Service Time = $(0.80 \\times 5000) + (0.20 \\times 10000) = 4000 + 2000 = 6000\\text{ ns}$<br><br><strong>Step 3: Calculate Memory Access Time for TLB Hit and TLB Miss</strong><br>• <strong>TLB Hit ($95\\%$):</strong><br>Time = $c + m = 20 + 100 = 120\\text{ ns}$<br><br>• <strong>TLB Miss ($5\\%$):</strong><br>- <i>Page Hit ($90\\%$):</i> Time = $c + m (\\text{page table}) + m (\\text{data}) = 20 + 100 + 100 = 220\\text{ ns}$<br>- <i>Page Fault ($10\\%$):</i> Time = $c + m (\\text{page table}) + \\text{Page Fault Service Time} + m (\\text{data}) = 20 + 100 + 6000 + 100 = 6220\\text{ ns}$<br><br><strong>Step 4: Calculate Average Memory Access Time (AMAT)</strong><br>$\\text{AMAT} = (0.95 \\times 120) + 0.05 \\times [(0.90 \\times 220) + (0.10 \\times 6220)]$<br>$\\text{AMAT} = 114 + 0.05 \\times [198 + 622]$<br>$\\text{AMAT} = 114 + 0.05 \\times 820$<br>$\\text{AMAT} = 114 + 41 = 155\\text{ ns}$",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 21,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "Operating Systems",
+    "Memory Management"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider allocation of memory to a new process. Assume that none of the existing holes in the memory will exactly fit the process's memory requirement. Hence, a new hole of smaller size will be created if allocation is made in any of the existing holes. Which one of the following statements is TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "The hole created by worst fit is always larger than the hole created by best fit.",
+    "The hole created by worst fit is always larger than the hole created by first fit.",
+    "The hole created by best fit is never larger than the hole created by first fit.",
+    "The hole created by next fit is never larger than the hole created by best fit."
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Understand Memory Allocation Strategies</strong><br>Let $P$ be the memory size requested by the process.<br>When a process of size $P$ is allocated inside a hole of size $H$ ($H > P$), the size of the newly created hole is $(H - P)$.<br><br><strong>Step 2: Analyze Best Fit vs First Fit</strong><br>• <strong>Best Fit</strong> selects the <em>smallest</em> hole that is large enough to fit the process.<br>• Let $H_{best}$ be the hole selected by Best Fit and $H_{first}$ be the hole selected by First Fit.<br>• By definition of Best Fit, $H_{best} \\le H_{first}$.<br>• Subtracting $P$ from both sides gives: $(H_{best} - P) \\le (H_{first} - P)$.<br>• Hence, the hole created by Best Fit is <strong>never larger</strong> than the hole created by First Fit. This makes statement (C) <strong>TRUE</strong>.<br><br><strong>Step 3: Analyze Other Options</strong><br>• <strong>Option A:</strong> If all valid holes are of equal size, Worst Fit and Best Fit will choose holes of equal size, making the remaining hole sizes equal (not strictly larger).<br>• <strong>Option B:</strong> If First Fit happens to scan and pick the largest hole, the remaining hole created by First Fit will equal that of Worst Fit.<br>• <strong>Option D:</strong> Next Fit can pick a hole larger than Best Fit, creating a larger remaining hole.",
+  "videoUrl": null
+}

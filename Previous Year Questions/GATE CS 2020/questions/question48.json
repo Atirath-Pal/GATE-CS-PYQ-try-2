@@ -1,0 +1,21 @@
+{
+  "id": 48,
+  "year": 2020,
+  "set": null,
+  "topics": ["Computer Networks", "IP Addressing"],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "An organization requires a range of IP addresses to assign one to each of its 1500 computers. The organization has approached an Internet Service Provider (ISP) for this task. The ISP uses CIDR and serves the requests from the available IP address space $202.61.0.0/17$. The ISP wants to assign an address space to the organization which will minimize the number of routing entries in the ISP's router using route aggregation. Which of the following address spaces are potential candidates from which the ISP can allot any one to the organization?<br><br>I. $202.61.84.0/21$<br>II. $202.61.104.0/21$<br>III. $202.61.64.0/21$<br>IV. $202.61.144.0/21$",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "I and II only",
+    "II and III only",
+    "III and IV only",
+    "I and IV only"
+  ],
+  "answer": ["B"],
+  "explanation": "<strong>Step 1:</strong> The organization needs addresses for 1500 computers. The smallest CIDR block that can accommodate at least 1500 addresses is a $/21$ block, since a $/21$ network contains $2^{32-21} = 2048$ addresses.<br><br><strong>Step 2:</strong> The ISP owns the address space $202.61.0.0/17$, which spans from $202.61.0.0$ to $202.61.127.255$. Therefore, option IV ($202.61.144.0/21$) is outside the available address range and is invalid.<br><br><strong>Step 3:</strong> For a valid $/21$ network, the third octet must be a multiple of 8 because a $/21$ block spans 8 values of the third octet.<br><br>I. $202.61.84.0/21$: 84 is not divisible by 8, so this is not a valid $/21$ network boundary.<br>II. $202.61.104.0/21$: 104 is divisible by 8, so this is valid.<br>III. $202.61.64.0/21$: 64 is divisible by 8, so this is valid.<br>IV. $202.61.144.0/21$: Although 144 is divisible by 8, it lies outside the ISP's $/17$ address space.<br><br><strong>Conclusion:</strong> Only II and III are valid candidates. Therefore, the correct answer is <strong>Option B</strong>.",
+  "videoUrl": null
+}

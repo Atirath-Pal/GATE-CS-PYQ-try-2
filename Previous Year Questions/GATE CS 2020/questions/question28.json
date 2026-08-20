@@ -1,0 +1,22 @@
+{
+  "id": 28,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "Discrete Mathematics",
+    "Group Theory"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Let $G$ be a group of 35 elements. Then the largest possible size of a subgroup of $G$ other than $G$ itself is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 7,
+    "max": 7
+  },
+  "explanation": "<strong>Step 1: Apply Lagrange's Theorem</strong><br>By Lagrange's Theorem, the order (size) of any subgroup $H$ of a finite group $G$ must divide the order of $G$.<br><br><strong>Step 2: Identify the divisors</strong><br>The given order of group $G$ is $|G| = 35$.<br>The positive integer divisors of $35$ are $1, 5, 7,$ and $35$.<br><br><strong>Step 3: Determine the maximum proper subgroup size</strong><br>We are looking for the largest subgroup size strictly smaller than $|G| = 35$ (i.e., a proper subgroup).<br>The proper divisors of $35$ are $1, 5,$ and $7$.<br>Therefore, the largest possible size of a subgroup of $G$ other than $G$ itself is $7$.",
+  "videoUrl": null
+}

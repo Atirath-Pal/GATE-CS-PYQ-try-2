@@ -1,0 +1,26 @@
+{
+  "id": 45,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "Operating Systems",
+    "Disk Scheduling"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the following five disk access requests of the form (request id, cylinder number) that are present in the disk scheduler queue at a given time.<br><br>$$(P, 155), (Q, 85), (R, 110), (S, 30), (T, 115)$$<br><br>Assume the head is positioned at cylinder 100. The scheduler follows Shortest Seek Time First scheduling to service the requests.<br><br>Which one of the following statements is FALSE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "T is serviced before P.",
+    "Q is serviced after S, but before T.",
+    "The head reverses its direction of movement between servicing of Q and P.",
+    "R is serviced before P."
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Shortest Seek Time First (SSTF)</strong> scheduling services the request closest to the current head position.<br><br>Initial head position: $100$<br><br>1. From $100$, distances to remaining requests:<br>• $P(155): |155 - 100| = 55$<br>• $Q(85): |85 - 100| = 15$<br>• $R(110): |110 - 100| = 10$<br>• $S(30): |30 - 100| = 70$<br>• $T(115): |115 - 100| = 15$<br>Minimum distance is $10$ to $R$. <strong>Serviced: $R$ (110)</strong>.<br><br>2. From $110$, distances to remaining requests:<br>• $P(155): |155 - 110| = 45$<br>• $Q(85): |85 - 110| = 25$<br>• $S(30): |30 - 110| = 80$<br>• $T(115): |115 - 110| = 5$<br>Minimum distance is $5$ to $T$. <strong>Serviced: $T$ (115)</strong>.<br><br>3. From $115$, distances to remaining requests:<br>• $P(155): |155 - 115| = 40$<br>• $Q(85): |85 - 115| = 30$<br>• $S(30): |30 - 115| = 85$<br>Minimum distance is $30$ to $Q$. <strong>Serviced: $Q$ (85)</strong>.<br><br>4. From $85$, distances to remaining requests:<br>• $P(155): |155 - 85| = 70$<br>• $S(30): |30 - 85| = 55$<br>Minimum distance is $55$ to $S$. <strong>Serviced: $S$ (30)</strong>.<br><br>5. From $30$, only $P$ remains.<br>Minimum distance is $125$ to $P$. <strong>Serviced: $P$ (155)</strong>.<br><br>The servicing sequence is: <strong>$R \\rightarrow T \\rightarrow Q \\rightarrow S \\rightarrow P$</strong>.<br><br>Evaluating the statements:<br>• <strong>Statement A:</strong> $T$ is serviced before $P$ – <strong>TRUE</strong>.<br>• <strong>Statement B:</strong> $Q$ is serviced after $S$, but before $T$ – <strong>FALSE</strong> ($Q$ is serviced before $S$ and after $T$).<br>• <strong>Statement C:</strong> The head reverses its direction of movement between servicing of $Q$ and $P$ – <strong>TRUE</strong> (Head moves left to $85$ and $30$, then reverses right towards $155$).<br>• <strong>Statement D:</strong> $R$ is serviced before $P$ – <strong>TRUE</strong>.<br><br>Hence, option B is the FALSE statement.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 38,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "Digital Logic",
+    "Boolean Algebra"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the Boolean function $z(a, b, c)$.<br><br>Which one of the following minterm lists represents the circuit given above?",
+  "assetImage": "question38.png",
+  "codeBlock": null,
+  "options": [
+    "$z = \\sum (0, 1, 3, 7)$",
+    "$z = \\sum (1, 4, 5, 6, 7)$",
+    "$z = \\sum (2, 4, 5, 6, 7)$",
+    "$z = \\sum (2, 3, 5)$"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step 1: Determine the Boolean expression from the logic circuit.</strong><br>• Output of the NOT gate receiving input $b$: $\\overline{b}$<br>• Output of the AND gate receiving inputs $\\overline{b}$ and $c$: $\\overline{b}c$<br>• Output of the final OR gate ($z$): $z = a + \\overline{b}c$<br><br><strong>Step 2: Express the function in canonical SOP (minterm) form.</strong><br>Assuming $a$ is the MSB and $c$ is the LSB:<br>• $a = a(b + \\overline{b})(c + \\overline{c}) = abc + ab\\overline{c} + a\\overline{b}c + a\\overline{b}\\overline{c}$<br>&nbsp;&nbsp;Binary terms: $111_2(7), 110_2(6), 101_2(5), 100_2(4)$<br>• $\\overline{b}c = (a + \\overline{a})\\overline{b}c = a\\overline{b}c + \\overline{a}\\overline{b}c$<br>&nbsp;&nbsp;Binary terms: $101_2(5), 001_2(1)$<br><br><strong>Step 3: Combine all unique minterms.</strong><br>• $z = \\sum (1, 4, 5, 6, 7)$<br><br>Therefore, the correct option is <strong>(B)</strong>.",
+  "videoUrl": null
+}

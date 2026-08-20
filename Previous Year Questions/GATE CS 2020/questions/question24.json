@@ -1,0 +1,26 @@
+{
+  "id": 24,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "Database Management System",
+    "ER Diagram"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Which one of the following is used to represent the supporting many-one relationships of a weak entity set in an entity-relationship diagram?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Diamonds with double/bold border",
+    "Rectangles with double/bold border",
+    "Ovals with double/bold border",
+    "Ovals that contain underlined identifiers"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>In Entity-Relationship (ER) Diagrams:</strong><br><br>• <strong>Identifying / Supporting Relationship:</strong> Represented by <strong>diamonds with double/bold border</strong>.<br>• <strong>Weak Entity Set:</strong> Represented by <strong>rectangles with double/bold border</strong>.<br>• <strong>Multivalued Attribute:</strong> Represented by <strong>ovals with double/bold border</strong>.<br>• <strong>Primary Key Attribute:</strong> Represented by <strong>ovals containing underlined text</strong>.<br><br>Thus, the supporting relationship of a weak entity set is represented by diamonds with a double/bold border.",
+  "videoUrl": null
+}

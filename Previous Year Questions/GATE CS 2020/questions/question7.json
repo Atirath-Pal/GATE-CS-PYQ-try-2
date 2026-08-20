@@ -1,0 +1,26 @@
+{
+  "id": 7,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "General Aptitude",
+    "Numerical Ability"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "If $P = 3, R = 27, T = 243$, then $Q + S = $ _______.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "40",
+    "80",
+    "90",
+    "110"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "The values assigned to the consecutive English alphabets $P, Q, R, S, T$ follow increasing powers of $3$:<br><br>$P = 3^1 = 3$<br>$Q = 3^2 = 9$<br>$R = 3^3 = 27$<br>$S = 3^4 = 81$<br>$T = 3^5 = 243$<br><br>Calculating the value of $Q + S$:<br>$Q + S = 9 + 81 = 90$<br><br>Hence, option <strong>C</strong> is correct.",
+  "videoUrl": null
+}

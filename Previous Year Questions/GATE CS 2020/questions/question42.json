@@ -1,0 +1,26 @@
+{
+  "id": 42,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "Theory of Computation",
+    "Formal Languages"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the following languages.<br><br>$$L_1 = \\{wxyx \\mid w, x, y \\in (0 + 1)^+\\}$$<br><br>$$L_2 = \\{xy \\mid x, y \\in (a + b)^*, |x| = |y|, x \\neq y\\}$$<br><br>Which one of the following is TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$L_1$ is regular and $L_2$ is context-free.",
+    "$L_1$ is context-free but not regular and $L_2$ is context-free.",
+    "Neither $L_1$ nor $L_2$ is context-free.",
+    "$L_1$ is context-free but $L_2$ is not context-free."
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Analysis of $L_1$:</strong><br>Given $L_1 = \\{wxyx \\mid w, x, y \\in (0 + 1)^+\\}$.<br>By choosing $x$ to be a single symbol from $\\{0, 1\\}$, we can express $L_1$ as:<br>$L_1 = (0+1)^+ 0 (0+1)^+ 0 \\cup (0+1)^+ 1 (0+1)^+ 1$<br>Since $L_1$ can be represented by a valid regular expression, <strong>$L_1$ is a regular language</strong>.<br><br><strong>Analysis of $L_2$:</strong><br>Given $L_2 = \\{xy \\mid x, y \\in (a + b)^*, |x| = |y|, x \\neq y\\}$.<br>This language consists of strings of even length where the first half $x$ and second half $y$ differ in at least one position.<br>It can be rewritten as:<br>$\\{u a v w b z \\mid |u|=|w|, |v|=|z|\\} \\cup \\{u b v w a z \\mid |u|=|w|, |v|=|z|\\}$<br>A Non-deterministic Pushdown Automaton (NPDA) can non-deterministically guess the position where $x$ and $y$ differ and verify it using stack memory.<br>Thus, <strong>$L_2$ is Context-Free</strong> (but not regular).<br><br>Therefore, <strong>$L_1$ is regular and $L_2$ is context-free</strong>.",
+  "videoUrl": null
+}

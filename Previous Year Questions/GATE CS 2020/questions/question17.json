@@ -1,0 +1,26 @@
+{
+  "id": 17,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "Theory of Computation",
+    "Regular Expressions"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Which one of the following regular expressions represents the set of all binary strings with an odd number of 1's?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "((0 + 1)*1(0 + 1)*1)*10*",
+    "(0*10*10*)*0*1",
+    "10*(0*10*10*)*",
+    "(0*10*10*)*10*"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "To find the regular expression that represents the set of all binary strings with an <strong>odd number of 1's</strong>:<br><br><strong>Analysis of the terms:</strong><br>1. An odd number of $1$'s can be represented as $2k + 1$ $1$'s, where $k \\ge 0$.<br>2. The expression $(0^*10^*10^*)^*$ generates any number of pairs of $1$'s interspersed with any number of $0$'s. Since each iteration of $(0^*10^*10^*)$ contains exactly two $1$'s, $(0^*10^*10^*)^*$ always generates an <strong>even number</strong> ($2k$) of $1$'s.<br>3. Appending $10^*$ adds exactly one $1$ followed by any number of $0$'s.<br>4. Therefore, $(0^*10^*10^*)^*10^*$ generates an even number of $1$'s plus one more $1$, giving an <strong>odd number</strong> ($2k + 1$) of $1$'s in total.<br><br><strong>Evaluating Options:</strong><br>- <strong>Option A:</strong> $((0 + 1)^*1(0 + 1)^*1)^*10^*$ — The inner $(0+1)^*$ can contain additional $1$'s, which allows strings with an even number of $1$'s to be generated.<br>- <strong>Option B:</strong> $(0^*10^*10^*)^*0^*1$ — Requires every string to end with $1$, so it cannot generate strings ending with $0$ (e.g., $10$).<br>- <strong>Option C:</strong> $10^*(0^*10^*10^*)^*$ — Requires every string to start with $1$, so it cannot generate strings starting with $0$ (e.g., $01$).<br>- <strong>Option D:</strong> $(0^*10^*10^*)^*10^*$ — Correctly generates all binary strings with an odd number of $1$'s.<br><br>Hence, <strong>Option D</strong> is correct.",
+  "videoUrl": null
+}

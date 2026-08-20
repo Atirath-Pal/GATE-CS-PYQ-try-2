@@ -1,0 +1,26 @@
+{
+  "id": 18,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "Theory of Computation",
+    "Regular Languages"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the following statements.<br><br>I. If $L_1 \\cup L_2$ is regular, then both $L_1$ and $L_2$ must be regular.<br>II. The class of regular languages is closed under infinite union.<br><br>Which of the above statements is/are TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "I only",
+    "II only",
+    "Both I and II",
+    "Neither I nor II"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Statement I: False</strong><br>Consider $L_1 = \\{a^n b^n \\mid n \\ge 0\\}$ (which is non-regular) and $L_2 = \\Sigma^* \\setminus L_1$ (which is also non-regular). Their union $L_1 \\cup L_2 = \\Sigma^*$ is regular. Therefore, $L_1 \\cup L_2$ being regular does not imply that both $L_1$ and $L_2$ are regular.<br><br><strong>Statement II: False</strong><br>The class of regular languages is closed under finite union, but not under infinite union. For example, let $L_n = \\{a^n b^n\\}$ for each $n \\ge 0$. Each $L_n$ is a finite language and thus regular. However, their infinite union $\\bigcup_{n=0}^{\\infty} L_n = \\{a^n b^n \\mid n \\ge 0\\}$ is non-regular.<br><br>Hence, neither statement is true.",
+  "videoUrl": null
+}

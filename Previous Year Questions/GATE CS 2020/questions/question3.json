@@ -1,0 +1,26 @@
+{
+  "id": 3,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "General Aptitude",
+    "Verbal Ability"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Select the word that fits the analogy:<br><br>Cook : Cook :: Fly : _____",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Flyer",
+    "Flying",
+    "Flew",
+    "Flighter"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Analogy Breakdown:</strong><br>The word <strong>Cook</strong> acts as both a verb (the action of preparing food) and a noun (a person who cooks).<br><br>Similarly, for the verb <strong>Fly</strong>, the corresponding noun that represents a person or organism/thing that flies is <strong>Flyer</strong>.<br><br>Hence, the correct option is <strong>(A) Flyer</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,22 @@
+{
+  "id": 27,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "Discrete Mathematics",
+    "Relations"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Let $\\mathcal{R}$ be the set of all binary relations on the set $\\{1,2,3\\}$. Suppose a relation is chosen from $\\mathcal{R}$ at random. The probability that the chosen relation is reflexive (round off to 3 decimal places) is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 0.125,
+    "max": 0.125
+  },
+  "explanation": "<strong>Step 1: Total number of binary relations</strong><br>For a set $A$ with $n$ elements, the total number of possible binary relations is $2^{n^2}$.<br>Given $n = 3$, the total number of binary relations is $2^{3^2} = 2^9 = 512$.<br><br><strong>Step 2: Number of reflexive relations</strong><br>A relation is reflexive if it includes all elements of the form $(a, a)$ for all $a \\in A$.<br>The number of reflexive binary relations on a set with $n$ elements is given by $2^{n(n-1)}$.<br>For $n = 3$, the number of reflexive relations is $2^{3(3-1)} = 2^6 = 64$.<br><br><strong>Step 3: Calculate probability</strong><br>Probability = $\\frac{\\text{Number of reflexive relations}}{\\text{Total number of binary relations}} = \\frac{2^6}{2^9} = \\frac{1}{2^3} = \\frac{1}{8} = 0.125$.",
+  "videoUrl": null
+}

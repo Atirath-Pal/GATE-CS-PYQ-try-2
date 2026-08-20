@@ -1,0 +1,22 @@
+{
+  "id": 30,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "Digital Logic",
+    "Computer Organization"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "If there are $m$ input lines and $n$ output lines for a decoder that is used to uniquely address a byte addressable $1\\text{ KB}$ RAM, then the minimum value of $m + n$ is ______.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 1034,
+    "max": 1034
+  },
+  "explanation": "<strong>Step 1: Determine the total bytes to address</strong><br>The capacity of the RAM is $1\\text{ KB} = 1024\\text{ bytes} = 2^{10}\\text{ bytes}$.<br><br><strong>Step 2: Calculate output lines ($n$)</strong><br>Since the memory is byte-addressable, $1024$ unique locations need to be selected. Therefore, the decoder must have $n = 1024$ output lines.<br><br><strong>Step 3: Calculate input lines ($m$)</strong><br>To select among $1024$ output lines, a standard decoder requires $m = \\log_2(1024) = 10$ input lines.<br><br><strong>Step 4: Compute $m + n$</strong><br>$m + n = 10 + 1024 = 1034$.",
+  "videoUrl": null
+}

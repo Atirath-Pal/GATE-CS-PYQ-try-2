@@ -1,0 +1,26 @@
+{
+  "id": 9,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "General Aptitude",
+    "Geometry"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Two straight lines are drawn perpendicular to each other in X-Y plane. If $\\alpha$ and $\\beta$ are the acute angles the straight lines make with the X-axis, then $\\alpha + \\beta$ is ______.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$60^\\circ$",
+    "$90^\\circ$",
+    "$120^\\circ$",
+    "$180^\\circ$"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "Let two perpendicular lines be $L_1$ and $L_2$.<br><br>Let line $L_1$ make an acute angle $\\alpha$ ($0^\\circ < \\alpha < 90^\\circ$) with the positive X-axis.<br><br>Since line $L_2$ is perpendicular to $L_1$, its inclination with the positive X-axis is $90^\\circ + \\alpha$.<br><br>The acute angle $\\beta$ that $L_2$ makes with the X-axis is:<br>$\\beta = 180^\\circ - (90^\\circ + \\alpha) = 90^\\circ - \\alpha$<br><br>Adding both acute angles gives:<br>$\\alpha + \\beta = \\alpha + (90^\\circ - \\alpha) = 90^\\circ$<br><br>Hence, <strong>Option (B)</strong> is the correct answer.",
+  "videoUrl": null
+}

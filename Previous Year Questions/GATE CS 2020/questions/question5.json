@@ -1,0 +1,26 @@
+{
+  "id": 5,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "General Aptitude",
+    "Quantitative Aptitude"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "There are multiple routes to reach from node 1 to node 2, as shown in the network.<br><br>The cost of travel on an edge between two nodes is given in rupees. Nodes 'a', 'b', 'c', 'd', 'e', and 'f' are toll booths. The toll price at toll booths marked 'a' and 'e' is Rs. 200, and is Rs. 100 for the other toll booths. Which is the cheapest route from node 1 to node 2?",
+  "assetImage": "question5.png",
+  "codeBlock": null,
+  "options": [
+    "1-a-c-2",
+    "1-f-b-2",
+    "1-b-2",
+    "1-f-e-2"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "To find the cheapest route from node 1 to node 2, we calculate the total cost for each given route, including both the edge traversal costs and intermediate node toll prices.<br><br><strong>Toll Prices for Intermediate Nodes:</strong><br>• Nodes $a, e = \\text{Rs. } 200$<br>• Nodes $b, c, d, f = \\text{Rs. } 100$<br><br><strong>Cost Calculation for Options:</strong><br><br>1. <strong>Route 1-a-c-2:</strong><br>• Edge Costs: $200 (1\\rightarrow a) + 100 (a\\rightarrow c) + 100 (c\\rightarrow 2) = 400$<br>• Toll Costs: $200 (a) + 100 (c) = 300$<br>• Total Cost = $400 + 300 = \\text{Rs. } 700$<br><br>2. <strong>Route 1-f-b-2:</strong><br>• Edge Costs: $100 (1\\rightarrow f) + 0 (f\\rightarrow b) + 200 (b\\rightarrow 2) = 300$<br>• Toll Costs: $100 (f) + 100 (b) = 200$<br>• Total Cost = $300 + 200 = \\text{Rs. } 500$<br><br>3. <strong>Route 1-b-2:</strong><br>• Edge Costs: $300 (1\\rightarrow b) + 200 (b\\rightarrow 2) = 500$<br>• Toll Costs: $100 (b) = 100$<br>• Total Cost = $500 + 100 = \\text{Rs. } 600$<br><br>4. <strong>Route 1-f-e-2:</strong><br>• Edge Costs: $100 (1\\rightarrow f) + 100 (f\\rightarrow e) + 200 (e\\rightarrow 2) = 400$<br>• Toll Costs: $100 (f) + 200 (e) = 300$<br>• Total Cost = $400 + 300 = \\text{Rs. } 700$<br><br>Thus, the route <strong>1-f-b-2</strong> is the cheapest option with a total cost of <strong>Rs. 500</strong>.",
+  "videoUrl": null
+}

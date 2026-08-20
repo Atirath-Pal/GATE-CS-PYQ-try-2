@@ -1,0 +1,22 @@
+{
+  "id": 55,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "Engineering Mathematics",
+    "Probability"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "For $n > 2$, let $a \\in \\{0,1\\}^n$ be a non-zero vector. Suppose that $x$ is chosen uniformly at random from $\\{0,1\\}^n$. Then, the probability that $\\sum_{i=1}^n a_i x_i$ is an odd number is _________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 0.5,
+    "max": 0.5
+  },
+  "explanation": "<strong>Step 1: Understand the given problem</strong><br>We are given a non-zero vector $a \\in \\{0,1\\}^n$ where $n > 2$. A vector $x$ is chosen uniformly at random from $\\{0,1\\}^n$. We need to find the probability that the sum $S = \\sum_{i=1}^n a_i x_i$ is an odd number.<br><br><strong>Step 2: Analyze the sum structure</strong><br>Since $a$ is a non-zero vector, there exists at least one index $k \\in \\{1, 2, \\dots, n\\}$ such that $a_k = 1$.<br>We can isolate the term corresponding to $a_k$:<br>$S = a_k x_k + \\sum_{i \\neq k} a_i x_i = x_k + S'$, where $S' = \\sum_{i \\neq k} a_i x_i$.<br><br><strong>Step 3: Determine the probability</strong><br>Since $x$ is chosen uniformly at random, $x_k \\in \\{0, 1\\}$ is independent of $S'$ and takes values $0$ and $1$ with equal probability $0.5$.<br>- If $S'$ is even, $S = x_k + S'$ is odd if $x_k = 1$ (probability = $0.5$).<br>- If $S'$ is odd, $S = x_k + S'$ is odd if $x_k = 0$ (probability = $0.5$).<br><br>Thus, regardless of the value of $S'$, the probability that $S$ is odd is $0.5$.",
+  "videoUrl": null
+}

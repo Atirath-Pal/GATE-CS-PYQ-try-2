@@ -1,0 +1,22 @@
+{
+  "id": 62,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "Graph Theory",
+    "Discrete Mathematics"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Graph $G$ is obtained by adding vertex $s$ to $K_{3,4}$ and making $s$ adjacent to every vertex of $K_{3,4}$. The minimum number of colours required to edge-colour $G$ is _____.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 7,
+    "max": 7
+  },
+  "explanation": "<strong>Step 1: Understand the structure of graph $G$</strong><br>Graph $G$ is constructed by taking $K_{3,4}$ and adding a new vertex $s$ connected to all vertices of $K_{3,4}$.<br>Let the bipartite sets of $K_{3,4}$ be $A$ and $B$, where $|A| = 3$ and $|B| = 4$.<br>Total vertices in $K_{3,4} = 3 + 4 = 7$.<br>Since $s$ is connected to all 7 vertices of $K_{3,4}$, the degree of $s$ is $d(s) = 7$.<br><br><strong>Step 2: Determine the lower bound for edge-coloring</strong><br>The maximum degree of any vertex in $G$ is $\\Delta(G) = d(s) = 7$.<br>Since vertex $s$ has 7 incident edges, all 7 edges must receive distinct colors in any valid edge-coloring.<br>Therefore, the chromatic index $\\chi'(G) \\ge \\Delta(G) = 7$.<br><br><strong>Step 3: Construct a valid 7-edge-coloring</strong><br>Since $K_{3,4}$ is a bipartite graph, its chromatic index is $\\chi'(K_{3,4}) = \\Delta(K_{3,4}) = 4$.<br>We can color the edges of $K_{3,4}$ using 4 colors $\\{1, 2, 3, 4\\}$.<br>Each vertex in $B$ has degree 3 in $K_{3,4}$, so exactly 1 color among $\\{1, 2, 3, 4\\}$ is missing at each of the 4 vertices in $B$. We can assign these 4 colors to the edges connecting $s$ to $B$.<br>For the 3 vertices in $A$, we can use 3 new colors $\\{5, 6, 7\\}$ for the edges connecting $s$ to $A$.<br><br>Thus, all 7 edges incident to $s$ receive distinct colors from $\\{1, 2, 3, 4, 5, 6, 7\\}$ without any color conflict, making $G$ 7-edge-colorable.<br><br><strong>Conclusion:</strong><br>The minimum number of colours required to edge-colour $G$ is <strong>7</strong>.",
+  "videoUrl": null
+}

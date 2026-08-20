@@ -1,0 +1,22 @@
+{
+  "id": 56,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "Programming and Data Structures",
+    "C Programming"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the following C functions.<br><br>The return value of fun2(5) is ________.",
+  "assetImage": null,
+  "codeBlock": "int fun1(int n) {\n    static int i = 0;\n    if (n > 0) {\n        ++i;\n        fun1(n - 1);\n    }\n    return(i);\n}\n\nint fun2(int n) {\n    static int i = 0;\n    if (n > 0) {\n        i = i + fun1(n);\n        fun2(n - 1);\n    }\n    return(i);\n}",
+  "options": [],
+  "answer": {
+    "min": 55,
+    "max": 55
+  },
+  "explanation": "To find the return value of <strong>fun2(5)</strong>, we track the static variables in both functions.<br><br>Both functions define static variable $i$, which retains its value across function calls throughout execution.<br><br>Let $i_1$ be the static variable inside <strong>fun1</strong> (initialized to 0) and $i_2$ be the static variable inside <strong>fun2</strong> (initialized to 0).<br><br><strong>Execution Trace:</strong><br>1. <strong>fun2(5):</strong><br>&nbsp;&nbsp;• Calls <strong>fun1(5)</strong>: $i_1$ is incremented 5 times (for $n=5, 4, 3, 2, 1$). Thus $i_1 = 5$, and <strong>fun1(5)</strong> returns 5.<br>&nbsp;&nbsp;• Update $i_2$: $i_2 = 0 + 5 = 5$.<br>&nbsp;&nbsp;• Calls <strong>fun2(4)</strong>.<br><br>2. <strong>fun2(4):</strong><br>&nbsp;&nbsp;• Calls <strong>fun1(4)</strong>: $i_1$ is incremented 4 times (for $n=4, 3, 2, 1$). Thus $i_1 = 5 + 4 = 9$, and <strong>fun1(4)</strong> returns 9.<br>&nbsp;&nbsp;• Update $i_2$: $i_2 = 5 + 9 = 14$.<br>&nbsp;&nbsp;• Calls <strong>fun2(3)</strong>.<br><br>3. <strong>fun2(3):</strong><br>&nbsp;&nbsp;• Calls <strong>fun1(3)</strong>: $i_1$ is incremented 3 times (for $n=3, 2, 1$). Thus $i_1 = 9 + 3 = 12$, and <strong>fun1(3)</strong> returns 12.<br>&nbsp;&nbsp;• Update $i_2$: $i_2 = 14 + 12 = 26$.<br>&nbsp;&nbsp;• Calls <strong>fun2(2)</strong>.<br><br>4. <strong>fun2(2):</strong><br>&nbsp;&nbsp;• Calls <strong>fun1(2)</strong>: $i_1$ is incremented 2 times (for $n=2, 1$). Thus $i_1 = 12 + 2 = 14$, and <strong>fun1(2)</strong> returns 14.<br>&nbsp;&nbsp;• Update $i_2$: $i_2 = 26 + 14 = 40$.<br>&nbsp;&nbsp;• Calls <strong>fun2(1)</strong>.<br><br>5. <strong>fun2(1):</strong><br>&nbsp;&nbsp;• Calls <strong>fun1(1)</strong>: $i_1$ is incremented 1 time (for $n=1$). Thus $i_1 = 14 + 1 = 15$, and <strong>fun1(1)</strong> returns 15.<br>&nbsp;&nbsp;• Update $i_2$: $i_2 = 40 + 15 = 55$.<br>&nbsp;&nbsp;• Calls <strong>fun2(0)</strong>.<br><br>6. <strong>fun2(0):</strong><br>&nbsp;&nbsp;• Condition $n > 0$ is false.<br>&nbsp;&nbsp;• Returns $i_2 = 55$.<br><br>Thus, the final returned value of <strong>fun2(5)</strong> is <strong>55</strong>.",
+  "videoUrl": null
+}

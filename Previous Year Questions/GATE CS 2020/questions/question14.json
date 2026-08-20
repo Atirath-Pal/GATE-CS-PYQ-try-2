@@ -1,0 +1,26 @@
+{
+  "id": 14,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "Computer Organization and Architecture",
+    "Datapath and Control Unit"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the following data path diagram.<br><br>Consider an instruction: $R0 \\leftarrow R1 + R2$. The following steps are used to execute it over the given data path. Assume that PC is incremented appropriately. The subscripts $r$ and $w$ indicate read and write operations, respectively.<br><br>1. $R2_r, TEMP1_r, ALU_{add}, TEMP2_w$<br>2. $R1_r, TEMP1_w$<br>3. $PC_r, MAR_w, MEM_r$<br>4. $TEMP2_r, R0_w$<br>5. $MDR_r, IR_w$<br><br>Which one of the following is the correct order of execution of the above steps?",
+  "assetImage": "question14.png",
+  "codeBlock": null,
+  "options": [
+    "2, 1, 4, 5, 3",
+    "1, 2, 4, 3, 5",
+    "3, 5, 2, 1, 4",
+    "3, 5, 1, 2, 4"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Instruction Fetch Phase</strong><br>To execute the instruction, it must first be fetched from memory into the Instruction Register (IR):<br>• <strong>Step 3:</strong> $PC_r, MAR_w, MEM_r$ transfers the address from PC to MAR and reads memory.<br>• <strong>Step 5:</strong> $MDR_r, IR_w$ moves the instruction fetched into MDR to IR.<br>Thus, the fetch sequence is <strong>3, 5</strong>.<br><br><strong>Step 2: Instruction Execution Phase</strong><br>To perform $R0 \\leftarrow R1 + R2$ on the given datapath:<br>• One input to the ALU must come from register $TEMP1$. First, load $R1$ into $TEMP1$: <strong>Step 2</strong> ($R1_r, TEMP1_w$).<br>• Place $R2$ on the bus, read $TEMP1$, perform addition, and store the result into $TEMP2$: <strong>Step 1</strong> ($R2_r, TEMP1_r, ALU_{add}, TEMP2_w$).<br>• Transfer the result from $TEMP2$ into destination register $R0$: <strong>Step 4</strong> ($TEMP2_r, R0_w$).<br>Thus, the execution phase sequence is <strong>2, 1, 4</strong>.<br><br><strong>Conclusion:</strong><br>Combining both phases yields the complete order: <strong>3, 5, 2, 1, 4</strong>, which corresponds to option <strong>(C)</strong>.",
+  "videoUrl": null
+}

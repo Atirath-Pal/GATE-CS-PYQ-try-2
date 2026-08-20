@@ -1,0 +1,22 @@
+{
+  "id": 35,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "Computer Networks",
+    "Application Layer"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Assume that you have made a request for a web page through your web browser to a web server. Initially the browser cache is empty. Further, the browser is configured to send HTTP requests in non-persistent mode. The web page contains text and five very small images. The minimum number of TCP connections required to display the web page completely in your browser is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 6,
+    "max": 6
+  },
+  "explanation": "<strong>Step 1: Understanding Non-Persistent HTTP</strong><br>In non-persistent HTTP mode, a TCP connection is opened for sending a request, used to transfer one single object (e.g., base HTML or an image), and then closed immediately.<br><br><strong>Step 2: Breakdown of Requests</strong><br>1. <strong>Base HTML (Text):</strong> The initial request fetches the base HTML file containing the text. This requires $1$ TCP connection.<br>2. <strong>Embedded Images:</strong> The web page references $5$ distinct image objects. Since non-persistent HTTP requires a new connection for each object, fetching these $5$ images requires $5$ separate TCP connections.<br><br><strong>Step 3: Calculating Total Connections</strong><br>$$\\text{Total Connections} = 1 \\text{ (HTML file)} + 5 \\text{ (Images)} = 6$$<br><br>Therefore, the minimum number of TCP connections required is <strong>6</strong>.",
+  "videoUrl": null
+}

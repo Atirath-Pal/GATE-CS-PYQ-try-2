@@ -1,0 +1,26 @@
+{
+  "id": 44,
+  "year": "2020",
+  "set": null,
+  "topics": [
+    "Operating Systems",
+    "Process Synchronization"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Each of a set of $n$ processes executes the following code using two semaphores <code>a</code> and <code>b</code> initialized to 1 and 0, respectively. Assume that <code>count</code> is a shared variable initialized to 0 and not used in CODE SECTION P.<br><br><div style=\"font-family: monospace; margin: 16px 0; line-height: 1.8;\"><div style=\"border: 1px solid #ffffff; padding: 4px 12px; display: inline-block; font-weight: bold; margin-bottom: 12px;\">CODE SECTION P</div><br>wait(a); count=count+1;<br>if (count==n) signal(b);<br>signal(a); wait(b); signal(b);<br><br><div style=\"border: 1px solid #ffffff; padding: 4px 12px; display: inline-block; font-weight: bold; margin-top: 4px;\">CODE SECTION Q</div></div><br>What does the code achieve?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "It ensures that no process executes CODE SECTION Q before every process has finished CODE SECTION P.",
+    "It ensures that at most two processes are in CODE SECTION Q at any time.",
+    "It ensures that all processes execute CODE SECTION P mutually exclusively.",
+    "It ensures that at most $n-1$ processes are in CODE SECTION P at any time."
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step 1: Analyze initialization and variables</strong><br>Semaphore $a$ is initialized to $1$ (acts as a mutex for updating $count$).<br>Semaphore $b$ is initialized to $0$ (acts as a barrier turnstile).<br>Variable $count$ is initialized to $0$ to track how many processes have completed CODE SECTION P.<br><br><strong>Step 2: Trace process execution</strong><br>1. The first $n-1$ processes execute CODE SECTION P, acquire lock $a$, increment $count$, release $a$, and then call <code>wait(b)</code>. Since $b = 0$, all $n-1$ processes block at <code>wait(b)</code>.<br>2. When the $n^{\\text{th}}$ process finishes CODE SECTION P, it acquires lock $a$, increments $count$ to $n$, and triggers <code>if (count == n) signal(b);</code>.<br>3. This $n^{\\text{th}}$ process executes <code>signal(b)</code>, incrementing $b$ to $1$, then releases $a$.<br><br><strong>Step 3: Barrier release mechanism</strong><br>4. The $n^{\\text{th}}$ process passes <code>wait(b)</code> and immediately calls <code>signal(b)</code>, which unblocks another waiting process.<br>5. This creates a cascading chain reaction (turnstile pattern), allowing all $n$ processes to sequentially pass <code>wait(b)</code> and proceed to CODE SECTION Q.<br><br><strong>Conclusion:</strong><br>No process can execute CODE SECTION Q until all $n$ processes have completed CODE SECTION P and incremented $count$ to $n$. Thus, Option (A) is correct.",
+  "videoUrl": null
+}

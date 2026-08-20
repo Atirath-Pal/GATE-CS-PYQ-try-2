@@ -1,0 +1,26 @@
+{
+  "id": 40,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "Computer Organization and Architecture",
+    "Cache Memory"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "A computer system with a word length of 32 bits has a 16 MB byte-addressable main memory and a 64 KB, 4-way set associative cache memory with a block size of 256 bytes. Consider the following four physical addresses represented in hexadecimal notation.<br><br>A1 = 0x42C8A4, A2 = 0x546888, A3 = 0x6A289C, A4 = 0x5E4880<br><br>Which one of the following is TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "A1 and A4 are mapped to different cache sets.",
+    "A2 and A3 are mapped to the same cache set.",
+    "A3 and A4 are mapped to the same cache set.",
+    "A1 and A3 are mapped to the same cache set."
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step 1: Calculate the address bit partition</strong><br>Block Size = $256\\text{ bytes} = 2^8\\text{ bytes}$, which gives a Block Offset of $8\\text{ bits}$.<br>Cache Size = $64\\text{ KB} = 2^{16}\\text{ bytes}$.<br>Total Cache Lines = $\\frac{64\\text{ KB}}{256\\text{ B}} = \\frac{2^{16}}{2^8} = 2^8 = 256\\text{ lines}$.<br>Number of Cache Sets = $\\frac{256}{4} = 64 = 2^6\\text{ sets}$.<br>Therefore, Set Index = $6\\text{ bits}$.<br><br><strong>Step 2: Map address bits to fields</strong><br>Bits 0 to 7: Block Offset ($8\\text{ bits}$)<br>Bits 8 to 13: Set Index ($6\\text{ bits}$)<br><br><strong>Step 3: Extract Set Index bits (Bits 8 to 13) for each address</strong><br>- <strong>A1 (0x42C8A4):</strong> Bits 13–8 are `001000` (Decimal 8)<br>- <strong>A2 (0x546888):</strong> Bits 13–8 are `101000` (Decimal 40)<br>- <strong>A3 (0x6A289C):</strong> Bits 13–8 are `101000` (Decimal 40)<br>- <strong>A4 (0x5E4880):</strong> Bits 13–8 are `001000` (Decimal 8)<br><br>Both <strong>A2</strong> and <strong>A3</strong> are mapped to Set 40, making statement (B) TRUE.",
+  "videoUrl": null
+}

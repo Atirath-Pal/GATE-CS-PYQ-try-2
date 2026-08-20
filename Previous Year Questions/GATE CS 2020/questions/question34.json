@@ -1,0 +1,22 @@
+{
+  "id": 34,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "Compiler Design",
+    "Parsing"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider the following grammar.<br><br>$$S \\rightarrow aSB \\mid d$$<br>$$B \\rightarrow b$$<br><br>The number of reduction steps taken by a bottom-up parser while accepting the string $aaadbbb$ is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 7,
+    "max": 7
+  },
+  "explanation": "<strong>Step 1: Understand bottom-up parsing</strong><br>A bottom-up parser reduces the given input string back to the start symbol $S$. The total number of reduction steps corresponds to the total number of production steps used in deriving the string.<br><br><strong>Step 2: Trace the bottom-up parsing steps for $aaadbbb$</strong><br>1. Shift $a, a, a, d$<br>2. Reduce $d \\rightarrow S$ (1st reduction)<br>3. Shift $b$<br>4. Reduce $b \\rightarrow B$ (2nd reduction)<br>5. Reduce $aSB \\rightarrow S$ (3rd reduction)<br>6. Shift $b$<br>7. Reduce $b \\rightarrow B$ (4th reduction)<br>8. Reduce $aSB \\rightarrow S$ (5th reduction)<br>9. Shift $b$<br>10. Reduce $b \\rightarrow B$ (6th reduction)<br>11. Reduce $aSB \\rightarrow S$ (7th reduction)<br><br><strong>Conclusion:</strong><br>The total number of reduction steps taken by the parser is $7$.",
+  "videoUrl": null
+}

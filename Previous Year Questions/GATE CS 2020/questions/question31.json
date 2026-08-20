@@ -1,0 +1,22 @@
+{
+  "id": 31,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "Computer Organization",
+    "Cache Memory"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "A direct mapped cache memory of $1\\text{ MB}$ has a block size of $256\\text{ bytes}$. The cache has an access time of $3\\text{ ns}$ and a hit rate of $94\\%$. During a cache miss, it takes $20\\text{ ns}$ to bring the first word of a block from the main memory, while each subsequent word takes $5\\text{ ns}$. The word size is $64\\text{ bits}$. The average memory access time in $\\text{ns}$ (round off to $1$ decimal place) is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 13.5,
+    "max": 13.5
+  },
+  "explanation": "<strong>Step 1: Given Data</strong><br>Cache Hit Rate ($H$) = $94\\% = 0.94$<br>Cache Miss Rate ($M$) = $1 - 0.94 = 0.06$<br>Cache Access Time ($T_c$) = $3\\text{ ns}$<br>Block Size = $256\\text{ bytes}$<br>Word Size = $64\\text{ bits} = 8\\text{ bytes}$<br><br><strong>Step 2: Calculate Number of Words per Block</strong><br>$\\text{Number of words per block} = \\frac{256\\text{ bytes}}{8\\text{ bytes}} = 32\\text{ words}$<br><br><strong>Step 3: Calculate Miss Penalty ($T_{miss}$)</strong><br>Time for $1^{\\text{st}}$ word = $20\\text{ ns}$<br>Time for remaining $31$ words = $31 \\times 5\\text{ ns} = 155\\text{ ns}$<br>Total Miss Penalty ($T_{miss}$) = $20 + 155 = 175\\text{ ns}$<br><br><strong>Step 4: Calculate Average Memory Access Time ($T_{avg}$)</strong><br>$T_{avg} = T_c + (1 - H) \\times T_{miss}$<br>$T_{avg} = 3 + (0.06 \\times 175)$<br>$T_{avg} = 3 + 10.5 = 13.5\\text{ ns}$",
+  "videoUrl": null
+}

@@ -1,0 +1,25 @@
+{
+  "id": 37,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "Linear Algebra"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Let $A$ and $B$ be two $n \\times n$ matrices over real numbers. Let $\\text{rank}(M)$ and $\\text{det}(M)$ denote the rank and determinant of a matrix $M$, respectively. Consider the following statements.<br><br>I. $\\text{rank}(AB) = \\text{rank}(A) \\text{rank}(B)$<br>II. $\\text{det}(AB) = \\text{det}(A) \\text{det}(B)$<br>III. $\\text{rank}(A + B) \\le \\text{rank}(A) + \\text{rank}(B)$<br>IV. $\\text{det}(A + B) \\le \\text{det}(A) + \\text{det}(B)$<br><br>Which of the above statements are TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "I and II only",
+    "I and IV only",
+    "II and III only",
+    "III and IV only"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Statement I: False</strong><br>For $n \\times n$ identity matrices $A = I_n$ and $B = I_n$ (where $n > 1$), $\\text{rank}(A) = n$ and $\\text{rank}(B) = n$. However, $\\text{rank}(AB) = \\text{rank}(I_n) = n \\neq n \\cdot n$. Thus, this statement does not hold in general.<br><br><strong>Statement II: True</strong><br>By the multiplicative property of determinants for square matrices, $\\text{det}(AB) = \\text{det}(A)\\text{det}(B)$ is always true.<br><br><strong>Statement III: True</strong><br>By the subadditivity property of rank, $\\text{rank}(A + B) \\le \\text{rank}(A) + \\text{rank}(B)$ holds for any matrices $A$ and $B$ of the same dimension.<br><br><strong>Statement IV: False</strong><br>Consider $A = I_2$ and $B = I_2$. We have $\\text{det}(A) = 1$ and $\\text{det}(B) = 1$. But $\\text{det}(A + B) = \\text{det}(2I_2) = 2^2 = 4$. Here $4 \\le 1 + 1 = 2$ is false.<br><br>Therefore, statements II and III are TRUE.",
+  "videoUrl": null
+}

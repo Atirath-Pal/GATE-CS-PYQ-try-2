@@ -1,0 +1,26 @@
+{
+  "id": 41,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "Algorithms",
+    "Graph Algorithms"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Let $G = (V,E)$ be a weighted undirected graph and let $T$ be a Minimum Spanning Tree (MST) of $G$ maintained using adjacency lists. Suppose a new weighted edge $(u, v) \\in V \\times V$ is added to $G$. The worst case time complexity of determining if $T$ is still an MST of the resultant graph is",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\Theta(|E| + |V|)$",
+    "$\\Theta(|E||V|)$",
+    "$\\Theta(|E| \\log |V|)$",
+    "$\\Theta(|V|)$"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. When a new weighted edge $e = (u, v)$ is added to a graph $G$ with a known Minimum Spanning Tree (MST) $T$, a unique cycle is created within $T \\cup \\{e\\}$.<br><br>2. According to the <strong>Cycle Property</strong> of MSTs, $T$ remains an MST of the new graph if and only if the weight of the newly added edge $e$ is greater than or equal to the maximum weight of any edge on the path between $u$ and $v$ in $T$.<br><br>3. Since $T$ is a tree maintained using adjacency lists, it contains $|V|$ vertices and $|V| - 1$ edges. The unique simple path between $u$ and $v$ in $T$ can be found using standard graph traversal algorithms like Breadth-First Search (BFS) or Depth-First Search (DFS).<br><br>4. Traversing a tree with $|V|$ vertices takes $O(|V|)$ time. During this traversal, we can easily find the edge with the maximum weight along the path.<br><br>5. Therefore, the worst-case time complexity to check if $T$ remains an MST is $\\Theta(|V|)$.<br><br>Hence, option <strong>D</strong> is correct.",
+  "videoUrl": null
+}

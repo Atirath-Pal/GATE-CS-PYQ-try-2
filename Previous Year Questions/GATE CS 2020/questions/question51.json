@@ -1,0 +1,26 @@
+{
+  "id": 51,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "Data Structures",
+    "Binary Search Trees"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "In a balanced binary search tree with $n$ elements, what is the worst case time complexity of reporting all elements in range $[a, b]$? Assume that the number of reported elements is $k$.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\Theta(\\log n)$",
+    "$\\Theta(\\log n + k)$",
+    "$\\Theta(k \\log n)$",
+    "$\\Theta(n \\log k)$"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br>1. To perform a range query $[a, b]$ in a balanced Binary Search Tree (BST), we search for the smallest key $\\ge a$ or locate the split node where the search paths for $a$ and $b$ separate. Searching down the tree height takes $O(\\log n)$ time.<br><br>2. From that point, traversing and reporting all $k$ keys in the range $[a, b]$ takes $O(k)$ time since each reported element (and its intermediate tree edge) is visited in constant time.<br><br>3. Combining these operations gives a total worst-case time complexity of $\\Theta(\\log n + k)$.",
+  "videoUrl": null
+}

@@ -1,0 +1,22 @@
+{
+  "id": 53,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "Computer Organization and Architecture",
+    "Pipelining"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a non-pipelined processor operating at $2.5\\text{ GHz}$. It takes $5$ clock cycles to complete an instruction. You are going to make a $5$-stage pipeline out of this processor. Overheads associated with pipelining force you to operate the pipelined processor at $2\\text{ GHz}$. In a given program, assume that $30\\%$ are memory instructions, $60\\%$ are ALU instructions and the rest are branch instructions. $5\\%$ of the memory instructions cause stalls of $50$ clock cycles each due to cache misses and $50\\%$ of the branch instructions cause stalls of $2$ cycles each. Assume that there are no stalls associated with the execution of ALU instructions. For this program, the speedup achieved by the pipelined processor over the non-pipelined processor (round off to 2 decimal places) is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 2.15,
+    "max": 2.18
+  },
+  "explanation": "<strong>Step 1: Calculate execution time per instruction for Non-Pipelined Processor</strong><br>Frequency $(f_{\\text{non-pipe}}) = 2.5\\text{ GHz}$<br>Clock Cycle Time $(T_{\\text{non-pipe}}) = \\frac{1}{2.5\\text{ GHz}} = 0.4\\text{ ns}$<br>$\\text{CPI}_{\\text{non-pipe}} = 5$<br>Execution Time per instruction $(E_{\\text{non-pipe}}) = \\text{CPI}_{\\text{non-pipe}} \\times T_{\\text{non-pipe}} = 5 \\times 0.4\\text{ ns} = 2.0\\text{ ns}$<br><br><strong>Step 2: Calculate average CPI and execution time for Pipelined Processor</strong><br>Frequency $(f_{\\text{pipe}}) = 2\\text{ GHz}$<br>Clock Cycle Time $(T_{\\text{pipe}}) = \\frac{1}{2\\text{ GHz}} = 0.5\\text{ ns}$<br><br>Instruction Breakdown:<br>• Memory instructions: $30\\%$, with $5\\%$ causing $50$ stall cycles.<br>• ALU instructions: $60\\%$, with $0$ stall cycles.<br>• Branch instructions: $100\\% - (30\\% + 60\\%) = 10\\%$, with $50\\%$ causing $2$ stall cycles.<br><br>Average stall cycles per instruction:<br>$\\text{Stalls}_{\\text{avg}} = (0.30 \\times 0.05 \\times 50) + (0.60 \\times 0) + (0.10 \\times 0.50 \\times 2)$<br>$\\text{Stalls}_{\\text{avg}} = 0.75 + 0 + 0.10 = 0.85\\text{ cycles}$<br><br>$\\text{CPI}_{\\text{pipe}} = \\text{Ideal CPI} + \\text{Stalls}_{\\text{avg}} = 1 + 0.85 = 1.85$<br><br>Execution Time per instruction $(E_{\\text{pipe}}) = \\text{CPI}_{\\text{pipe}} \\times T_{\\text{pipe}} = 1.85 \\times 0.5\\text{ ns} = 0.925\\text{ ns}$<br><br><strong>Step 3: Calculate Speedup</strong><br>$\\text{Speedup} = \\frac{E_{\\text{non-pipe}}}{E_{\\text{pipe}}} = \\frac{2.0\\text{ ns}}{0.925\\text{ ns}} \\approx 2.16216$<br><br>Rounding off to 2 decimal places gives <strong>2.16</strong>.",
+  "videoUrl": null
+}

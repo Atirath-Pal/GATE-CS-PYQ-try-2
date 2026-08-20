@@ -1,0 +1,26 @@
+{
+  "id": 26,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "Data Structures",
+    "Linked List"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "What is the worst case time complexity of inserting $n$ elements into an empty linked list, if the linked list needs to be maintained in sorted order?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\Theta(n)$",
+    "$\\Theta(n \\log n)$",
+    "$\\Theta(n^2)$",
+    "$\\Theta(1)$"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Insertion in a Sorted Linked List</strong><br>To insert an element into a sorted linked list containing $k$ elements, we need to traverse the list to find the correct sorted position. In the worst-case scenario (e.g., inserting elements in descending order to a list kept in ascending order), the new element must be added at the end, requiring $k$ steps.<br><br><strong>Step 2: Total Operations for $n$ Elements</strong><br>When inserting $n$ elements one by one into an initially empty list:<br>- $1^{\\text{st}}$ element requires $0$ steps<br>- $2^{\\text{nd}}$ element requires $1$ step<br>- $3^{\\text{rd}}$ element requires $2$ steps<br>...<br>- $n^{\\text{th}}$ element requires $n - 1$ steps<br><br><strong>Step 3: Calculating Time Complexity</strong><br>Total work done is the sum of the first $n-1$ integers:<br>$$T(n) = 0 + 1 + 2 + \\dots + (n - 1) = \\frac{n(n - 1)}{2} = \\Theta(n^2)$$<br><br>Hence, the worst-case time complexity is $\\Theta(n^2)$.",
+  "videoUrl": null
+}

@@ -1,0 +1,22 @@
+{
+  "id": 29,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "Digital Logic",
+    "Multiplexers"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "A multiplexer is placed between a group of 32 registers and an accumulator to regulate data movement such that at any given point in time the content of only one register will move to the accumulator. The minimum number of select lines needed for the multiplexer is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 5,
+    "max": 5
+  },
+  "explanation": "<strong>Step 1: Multiplexer Concept</strong><br>A multiplexer (MUX) routes data from one of $N$ input lines to a single output line using $m$ select lines, where $2^m \\ge N$.<br><br><strong>Step 2: Calculate Select Lines</strong><br>Since there are 32 registers, the multiplexer must choose from 32 input lines ($N = 32$).<br>$2^m = 32$<br>$m = \\log_2(32) = 5$<br><br>Therefore, the minimum number of select lines required is <strong>5</strong>.",
+  "videoUrl": null
+}

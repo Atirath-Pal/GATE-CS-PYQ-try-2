@@ -1,0 +1,22 @@
+{
+  "id": 60,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "Operating Systems",
+    "CPU Scheduling"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the following set of processes, assumed to have arrived at time 0. Consider the CPU scheduling algorithms Shortest Job First (SJF) and Round Robin (RR). For RR, assume that the processes are scheduled in the order $P_1, P_2, P_3, P_4$.<br><br><div style=\"overflow-x: auto; max-width: 100%; margin: 8px 0;\"><table style=\"border-collapse: collapse; border: 1px solid #ffffff; text-align: center; font-size: 13px;\"><tbody><tr><td style=\"border: 1px solid #ffffff; padding: 6px 12px; text-align: left;\">Processes</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">$P_1$</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">$P_2$</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">$P_3$</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">$P_4$</td></tr><tr><td style=\"border: 1px solid #ffffff; padding: 6px 12px; text-align: left;\">Burst time (in ms)</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">8</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">7</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">2</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">4</td></tr></tbody></table></div><br>If the time quantum for RR is 4 ms, then the absolute value of the difference between the average turnaround times (in ms) of SJF and RR (round off to 2 decimal places) is _________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 5.25,
+    "max": 5.25
+  },
+  "explanation": "<strong>1. Shortest Job First (SJF) Scheduling:</strong><br>Since all processes arrive at time $t = 0$, the process with the shortest burst time is scheduled first.<br>Execution Order: $P_3 \\rightarrow P_4 \\rightarrow P_2 \\rightarrow P_1$<br><br>Timeline of execution:<br>- $P_3$: $0 \\text{ to } 2 \\text{ ms}$<br>- $P_4$: $2 \\text{ to } 6 \\text{ ms}$<br>- $P_2$: $6 \\text{ to } 13 \\text{ ms}$<br>- $P_1$: $13 \\text{ to } 21 \\text{ ms}$<br><br>Turnaround Times ($TAT = \\text{Completion Time} - \\text{Arrival Time}$):<br>- $TAT(P_1) = 21 - 0 = 21$<br>- $TAT(P_2) = 13 - 0 = 13$<br>- $TAT(P_3) = 2 - 0 = 2$<br>- $TAT(P_4) = 6 - 0 = 6$<br><br>Average $TAT_{\\text{SJF}} = \\frac{21 + 13 + 2 + 6}{4} = \\frac{42}{4} = 10.5 \\text{ ms}$<br><br><strong>2. Round Robin (RR) Scheduling (Quantum = 4 ms):</strong><br>Initial order of scheduling: $P_1, P_2, P_3, P_4$<br><br>Execution breakdown:<br>- $P_1$ runs from $0 \\text{ to } 4 \\text{ ms}$ (Remaining BT = 4)<br>- $P_2$ runs from $4 \\text{ to } 8 \\text{ ms}$ (Remaining BT = 3)<br>- $P_3$ runs from $8 \\text{ to } 10 \\text{ ms}$ (Completes)<br>- $P_4$ runs from $10 \\text{ to } 14 \\text{ ms}$ (Completes)<br>- $P_1$ runs from $14 \\text{ to } 18 \\text{ ms}$ (Completes)<br>- $P_2$ runs from $18 \\text{ to } 21 \\text{ ms}$ (Completes)<br><br>Completion / Turnaround Times:<br>- $TAT(P_1) = 18$<br>- $TAT(P_2) = 21$<br>- $TAT(P_3) = 10$<br>- $TAT(P_4) = 14$<br><br>Average $TAT_{\\text{RR}} = \\frac{18 + 21 + 10 + 14}{4} = \\frac{63}{4} = 15.75 \\text{ ms}$<br><br><strong>3. Absolute Difference:</strong><br>$|10.5 - 15.75| = 5.25 \\text{ ms}$",
+  "videoUrl": null
+}

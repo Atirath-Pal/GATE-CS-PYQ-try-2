@@ -1,0 +1,26 @@
+{
+  "id": 10,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "General Aptitude",
+    "Data Interpretation"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "The total revenue of a company during 2014-2018 is shown in the bar graph. If the total expenditure of the company in each year is 500 million rupees, then the aggregate profit or loss (in percentage) on the total expenditure of the company during 2014-2018 is _____.",
+  "assetImage": "question10.png",
+  "codeBlock": null,
+  "options": [
+    "16.67 % profit",
+    "16.67 % loss",
+    "20 % profit",
+    "20 % loss"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Calculate Total Expenditure</strong><br>Expenditure in each year = $500$ million rupees.<br>Total number of years (2014 to 2018) = $5$.<br>$\\text{Total Expenditure} = 5 \\times 500 = 2500$ million rupees.<br><br><strong>Step 2: Calculate Total Revenue</strong><br>From the given bar graph, revenues for each year are:<br>Revenue in 2014 = $500$ million rupees<br>Revenue in 2015 = $700$ million rupees<br>Revenue in 2016 = $800$ million rupees<br>Revenue in 2017 = $600$ million rupees<br>Revenue in 2018 = $400$ million rupees<br>$\\text{Total Revenue} = 500 + 700 + 800 + 600 + 400 = 3000$ million rupees.<br><br><strong>Step 3: Calculate Aggregate Profit Percentage</strong><br>Since Total Revenue ($3000$ million) is greater than Total Expenditure ($2500$ million), there is a profit.<br>$\\text{Profit} = 3000 - 2500 = 500$ million rupees.<br>$$\\text{Profit \\%} = \\left( \\frac{\\text{Total Profit}}{\\text{Total Expenditure}} \\right) \\times 100 = \\left( \\frac{500}{2500} \\right) \\times 100 = 20\\%$$<br>Hence, the correct answer is <strong>20 % profit</strong>.",
+  "videoUrl": null
+}

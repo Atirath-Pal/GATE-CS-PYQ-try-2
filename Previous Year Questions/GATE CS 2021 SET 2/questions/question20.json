@@ -11,7 +11,7 @@
   "negative marks": "0.33",
   "questionText": "Consider the following ANSI C program.<br><br>What is the output of the above program?",
   "assetImage": null,
-  "codeBlock": "#include <stdio.h>\nint main(){\n    int arr[4][5];\n    int i, j;\n    for (i=0; i<4; i++){\n        for (j=0; j<5; j++){\n            arr[i][j] = 10*i + j;\n        }\n    }\n    printf(\"%d\", *(arr[1] + 9));\n    return 0;\n}",
+  "codeBlock": "#include &lt;stdio.h&gt;\nint main(){\n    int arr[4][5];\n    int i, j;\n    for (i=0; i<4; i++){\n        for (j=0; j<5; j++){\n            arr[i][j] = 10*i + j;\n        }\n    }\n    printf(\"%d\", *(arr[1] + 9));\n    return 0;\n}",
   "options": [
     "14",
     "20",

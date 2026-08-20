@@ -1,0 +1,22 @@
+{
+  "id": 32,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "Programming and Data Structures",
+    "C Programming"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider the following C program.<br><br>The output of the program is __________.",
+  "assetImage": null,
+  "codeBlock": "#include &lt;stdio.h&gt;\n\nint main() {\n    int a[4][5]={{1, 2, 3, 4, 5},\n                {6, 7, 8, 9, 10},\n                {11, 12, 13, 14, 15},\n                {16, 17, 18 , 19, 20}};\n    printf(\"%d\\n\", *(*(a+**a+2)+3));\n    return(0);\n}",
+  "options": [],
+  "answer": {
+    "min": 19,
+    "max": 19
+  },
+  "explanation": "<strong>Step 1: Understand the array structure</strong><br>The array $a$ is a $4 \\times 5$ two-dimensional array of integers.<br><br><strong>Step 2: Evaluate **a</strong><br>In C, the array name $a$ decays to a pointer to its first row $a[0]$. Dereferencing once ($*a$) gives $a[0]$, which decays to a pointer to $a[0][0]$. Dereferencing again ($**a$) gives the value stored at $a[0][0]$, which is $1$.<br><br><strong>Step 3: Evaluate pointer arithmetic</strong><br>The sub-expression $**a + 2$ evaluates to $1 + 2 = 3$.<br>Therefore, $a + **a + 2$ simplifies to $a + 3$, which points to the 4th row (index 3) of the array.<br><br><strong>Step 4: Dereference row and add column offset</strong><br>$*(a + 3)$ yields $a[3]$, which is a pointer to the first element of the 4th row ($a[3][0]$ with value $16$).<br>Adding $3$ gives $*(a + 3) + 3$, which points to $a[3][3]$.<br><br><strong>Step 5: Final dereference</strong><br>Dereferencing $*(*(a + 3) + 3)$ retrieves the value at $a[3][3]$, which is $19$.<br><br>Therefore, the output of the program is <strong>19</strong>.",
+  "videoUrl": null
+}

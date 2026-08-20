@@ -1,0 +1,22 @@
+{
+  "id": 57,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "Data Structures",
+    "Heap"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the array representation of a binary min-heap containing 1023 elements.<br><br>The minimum number of comparisons required to find the maximum in the heap is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 511,
+    "max": 511
+  },
+  "explanation": "<strong>Step 1: Identify where the maximum element resides.</strong><br>In a binary min-heap, each parent node is less than or equal to its children. Hence, the maximum element must be located at one of the leaf nodes.<br><br><strong>Step 2: Calculate the number of leaf nodes.</strong><br>For a binary tree with $N = 1023$ elements (where $N = 2^{10} - 1$ is a perfect binary tree):<br>Number of leaf nodes $L = \\lceil N / 2 \\rceil = \\lceil 1023 / 2 \\rceil = 512$.<br><br><strong>Step 3: Calculate the required number of comparisons.</strong><br>Finding the maximum among $L$ unsorted leaf nodes requires $L - 1$ comparisons.<br>Number of comparisons $= 512 - 1 = 511$.",
+  "videoUrl": null
+}

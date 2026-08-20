@@ -1,0 +1,26 @@
+{
+  "id": 50,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "Algorithms",
+    "Graph Theory"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Let $G = (V, E)$ be a directed, weighted graph with weight function $w : E \\rightarrow \\mathbb{R}$.<br><br>For some function $f : V \\rightarrow \\mathbb{R}$, for each edge $(u,v) \\in E$, define $w'(u,v)$ as $w(u,v) + f(u) - f(v)$.<br><br>Which one of the options completes the following sentence so that it is TRUE?<br><br>\"The shortest paths in $G$ under $w$ are shortest paths under $w'$ too, ___________\".",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "for every $f : V \\rightarrow \\mathbb{R}$",
+    "if and only if $\\forall u \\in V, f(u)$ is positive",
+    "if and only if $\\forall u \\in V, f(u)$ is negative",
+    "if and only if $f(u)$ is the distance from $s$ to $u$ in the graph obtained by adding a new vertex $s$ to $G$ and edges of zero weight from $s$ to every vertex of $G$"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step-by-step explanation:</strong><br><br>Let $p = (v_0, v_1, v_2, \\dots, v_k)$ be any path from vertex $v_0$ to $v_k$ in $G$.<br><br>1. The total weight of path $p$ under the reweighted function $w'$ is:<br>$w'(p) = \\sum_{i=1}^{k} w'(v_{i-1}, v_i)$<br><br>2. Substituting $w'(v_{i-1}, v_i) = w(v_{i-1}, v_i) + f(v_{i-1}) - f(v_i)$:<br>$w'(p) = \\sum_{i=1}^{k} \\left( w(v_{i-1}, v_i) + f(v_{i-1}) - f(v_i) \\right)$<br><br>3. Expanding the telescoping sum:<br>$w'(p) = \\sum_{i=1}^{k} w(v_{i-1}, v_i) + (f(v_0) - f(v_1)) + (f(v_1) - f(v_2)) + \\dots + (f(v_{k-1}) - f(v_k))$<br>$w'(p) = w(p) + f(v_0) - f(v_k)$<br><br>4. For any fixed start vertex $v_0$ and end vertex $v_k$, the term $f(v_0) - f(v_k)$ is a constant for all paths between $v_0$ and $v_k$.<br><br>5. Since adding a constant to all path lengths between two fixed vertices does not change their relative ordering, a path $p$ is a shortest path under $w$ if and only if it is a shortest path under $w'$.<br><br>This property holds regardless of the values of $f$, meaning it holds <strong>for every $f : V \\rightarrow \\mathbb{R}$</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 43,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "Compiler Design",
+    "Syntax Directed Translation"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the productions $A \\rightarrow PQ$ and $A \\rightarrow XY$. Each of the five non-terminals $A, P, Q, X,$ and $Y$ has two attributes: $s$ is a synthesized attribute, and $i$ is an inherited attribute. Consider the following rules.<br><br>Rule 1: $P.i = A.i + 2$, $Q.i = P.i + A.i$, and $A.s = P.s + Q.s$<br><br>Rule 2: $X.i = A.i + Y.s$ and $Y.i = X.s + A.i$<br><br>Which one of the following is TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Both Rule 1 and Rule 2 are L-attributed.",
+    "Only Rule 1 is L-attributed.",
+    "Only Rule 2 is L-attributed.",
+    "Neither Rule 1 nor Rule 2 is L-attributed."
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Definition of L-attributed Definition:</strong><br>A Syntax-Directed Definition (SDD) is L-attributed if each attribute evaluation rule for a production $A \\rightarrow X_1 X_2 \\dots X_n$ computes:<br>1. A synthesized attribute of $A$.<br>2. An inherited attribute of $X_j$ using ONLY:<br>- Inherited attributes of the parent $A$.<br>- Any attributes (synthesized or inherited) of symbols $X_1, X_2, \\dots, X_{j-1}$ to the <strong>left</strong> of $X_j$.<br><br><strong>Evaluating Rule 1 ($A \\rightarrow PQ$):</strong><br>- $P.i = A.i + 2$: Inherited attribute of $P$ depends on parent's inherited attribute $A.i$. (Valid)<br>- $Q.i = P.i + A.i$: Inherited attribute of $Q$ depends on left sibling $P$ and parent's inherited attribute $A.i$. (Valid)<br>- $A.s = P.s + Q.s$: Synthesized attribute of head $A$ depends on attributes of children. (Valid)<br>Hence, <strong>Rule 1 is L-attributed</strong>.<br><br><strong>Evaluating Rule 2 ($A \\rightarrow XY$):</strong><br>- $X.i = A.i + Y.s$: Inherited attribute $X.i$ depends on $Y.s$, which is to the <strong>right</strong> of $X$ (right sibling). In L-attributed SDDs, dependence on right siblings is strictly prohibited.<br>Hence, <strong>Rule 2 is NOT L-attributed</strong>.<br><br>Thus, <strong>Only Rule 1 is L-attributed</strong>.",
+  "videoUrl": null
+}

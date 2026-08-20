@@ -1,0 +1,22 @@
+{
+  "id": 58,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "Programming and Data Structures",
+    "C Programming"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the following C functions.<br><br>The value returned by $\\text{pp}(3, 4)$ is ________.",
+  "assetImage": null,
+  "codeBlock": "int tob(int b, int* arr){\n    int i;\n    for(i=0; b>0; i++){\n        if(b%2) arr[i]=1;\n        else    arr[i]=0;\n        b = b/2;\n    }\n    return(i);\n}\n\nint pp(int a,int b) {\n    int arr[20];\n    int i, tot = 1, ex, len;\n    ex = a;\n    len = tob(b,arr);\n    for(i=0; i<len; i++){\n        if(arr[i]==1)\n            tot = tot * ex;\n        ex = ex * ex;\n    }\n    return(tot);\n}",
+  "options": [],
+  "answer": {
+    "min": 81,
+    "max": 81
+  },
+  "explanation": "<strong>Step 1: Execution of <code>tob(4, arr)</code></strong><br>The function <code>tob</code> stores the binary representation of $b = 4$ in array <code>arr</code> in LSB-first order and returns the total number of bits.<br><br>• <strong>$i = 0$:</strong> $b = 4 \\implies b \\% 2 = 0$, so $arr[0] = 0$. $b = 4/2 = 2$.<br>• <strong>$i = 1$:</strong> $b = 2 \\implies b \\% 2 = 0$, so $arr[1] = 0$. $b = 2/2 = 1$.<br>• <strong>$i = 2$:</strong> $b = 1 \\implies b \\% 2 = 1$, so $arr[2] = 1$. $b = 1/2 = 0$.<br><br>The loop ends when $b = 0$. Function returns $i = 3$, so $len = 3$ and $arr = [0, 0, 1]$.<br><br><strong>Step 2: Execution of <code>pp(3, 4)</code></strong><br>Initial values: $ex = a = 3$, $tot = 1$, $len = 3$.<br><br>• <strong>For $i = 0$:</strong> $arr[0] = 0$, $tot$ remains $1$. $ex = 3 \\times 3 = 9$.<br>• <strong>For $i = 1$:</strong> $arr[1] = 0$, $tot$ remains $1$. $ex = 9 \\times 9 = 81$.<br>• <strong>For $i = 2$:</strong> $arr[2] = 1$, $tot = tot \\times ex = 1 \\times 81 = 81$. $ex = 81 \\times 81 = 6561$.<br><br>The function returns $tot = 81$.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 39,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "Computer Organization",
+    "Data Representation"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider three registers R1, R2, and R3 that store numbers in IEEE-754 single precision floating point format. Assume that R1 and R2 contain the values (in hexadecimal notation) 0x42200000 and 0xC1200000, respectively.<br><br>If $R3 = \\frac{R1}{R2}$, what is the value stored in R3?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "0x40800000",
+    "0xC0800000",
+    "0x83400000",
+    "0xC8500000"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step 1: Convert value in R1 to decimal</strong><br>Value in R1 = 0x42200000<br>Binary: $0100\\ 0010\\ 0010\\ 0000\\ 0000\\ 0000\\ 0000\\ 0000_2$<br>Sign bit ($S$) = $0$ (Positive)<br>Biased Exponent ($E$) = $10000100_2 = 132$<br>Unbiased Exponent ($e$) = $132 - 127 = 5$<br>Mantissa ($M$) = $1.01_2 = 1.25$<br>Value = $+1.25 \\times 2^5 = 40$<br><br><strong>Step 2: Convert value in R2 to decimal</strong><br>Value in R2 = 0xC1200000<br>Binary: $1100\\ 0001\\ 0010\\ 0000\\ 0000\\ 0000\\ 0000\\ 0000_2$<br>Sign bit ($S$) = $1$ (Negative)<br>Biased Exponent ($E$) = $10000010_2 = 130$<br>Unbiased Exponent ($e$) = $130 - 127 = 3$<br>Mantissa ($M$) = $1.01_2 = 1.25$<br>Value = $-1.25 \\times 2^3 = -10$<br><br><strong>Step 3: Calculate value for R3</strong><br>$R3 = \\frac{R1}{R2} = \\frac{40}{-10} = -4$<br><br><strong>Step 4: Convert $-4$ to IEEE-754 single precision representation</strong><br>Sign bit ($S$) = $1$ (Negative)<br>$-4 = -1.0_2 \\times 2^2$<br>Unbiased Exponent ($e$) = $2$<br>Biased Exponent ($E$) = $2 + 127 = 129 = 10000001_2$<br>Mantissa ($M$) = $00000000000000000000000_2$<br><br>Combining sign, exponent, and mantissa bits:<br>Binary: $1100\\ 0000\\ 1000\\ 0000\\ 0000\\ 0000\\ 0000\\ 0000_2$<br>Hexadecimal: 0xC0800000",
+  "videoUrl": null
+}

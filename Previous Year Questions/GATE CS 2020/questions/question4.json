@@ -1,0 +1,26 @@
+{
+  "id": 4,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "General Aptitude",
+    "Verbal Aptitude"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "The dawn of the 21st century witnessed the melting glaciers oscillating between giving too much and too little to billions of people who depend on them for fresh water. The UN climate report estimates that without deep cuts to man-made emissions, at least 30% of the northern hemisphere’s surface permafrost could melt by the end of the century. Given this situation of imminent global exodus of billions of people displaced by rising seas, nation-states need to rethink their carbon footprint for political concerns, if not for environmental ones.<br><br>Which one of the following statements can be inferred from the given passage?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Nation-states do not have environmental concerns.",
+    "Nation-states are responsible for providing fresh water to billions of people.",
+    "Billions of people are responsible for man-made emissions.",
+    "Billions of people are affected by melting glaciers."
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Step 1: Analyze the passage text.</strong><br>The passage opens with: \"The dawn of the 21st century witnessed the melting glaciers oscillating between giving too much and too little to billions of people who depend on them for fresh water.\"<br><br><strong>Step 2: Evaluate option (D).</strong><br>Since billions of people depend on glaciers for fresh water and glaciers are melting, these billions of people are directly affected by the melting glaciers. Hence, statement (D) can be directly inferred.<br><br><strong>Step 3: Evaluate other options.</strong><br>• <strong>Option (A):</strong> The phrase \"for political concerns, if not for environmental ones\" implies political concerns are primary, but it does not state that nation-states completely lack environmental concerns.<br>• <strong>Option (B):</strong> The passage mentions people depend on glaciers, not that nation-states are responsible for providing water.<br>• <strong>Option (C):</strong> The passage mentions man-made emissions, but does not state that billions of people individually are responsible for them.<br><br>Therefore, <strong>(D)</strong> is the correct answer.",
+  "videoUrl": null
+}

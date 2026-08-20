@@ -1,0 +1,26 @@
+{
+  "id": 46,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "Database Management System",
+    "Normalization"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider a relational table $R$ that is in 3NF, but not in BCNF. Which one of the following statements is TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$R$ has a nontrivial functional dependency $X \\rightarrow A$, where $X$ is not a superkey and $A$ is a prime attribute.",
+    "$R$ has a nontrivial functional dependency $X \\rightarrow A$, where $X$ is not a superkey and $A$ is a non-prime attribute and $X$ is not a proper subset of any key.",
+    "$R$ has a nontrivial functional dependency $X \\rightarrow A$, where $X$ is not a superkey and $A$ is a non-prime attribute and $X$ is a proper subset of some key.",
+    "A cell in $R$ holds a set instead of an atomic value."
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "For a relation $R$ to be in <strong>3NF</strong>, every non-trivial functional dependency $X \\rightarrow A$ must satisfy at least one of the following conditions:<br>1. $X$ is a superkey.<br>2. $A$ is a prime attribute (part of a candidate key).<br><br>For a relation $R$ to be in <strong>BCNF</strong>, every non-trivial functional dependency $X \\rightarrow A$ must satisfy:<br>1. $X$ is a superkey.<br><br>Since the relation $R$ is in 3NF but <strong>not in BCNF</strong>, there must exist at least one non-trivial functional dependency $X \\rightarrow A$ where $X$ is <strong>not a superkey</strong>.<br><br>To satisfy the 3NF condition despite $X$ not being a superkey, $A$ <strong>must be a prime attribute</strong>.<br><br>Therefore, statement (A) is TRUE.",
+  "videoUrl": null
+}

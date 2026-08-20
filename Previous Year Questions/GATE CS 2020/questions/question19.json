@@ -1,0 +1,25 @@
+{
+  "id": 19,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "Compiler Design"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the following statements.<br><br>I. Symbol table is accessed only during lexical analysis and syntax analysis.<br>II. Compilers for programming languages that support recursion necessarily need heap storage for memory allocation in the run-time environment.<br>III. Errors violating the condition 'any variable must be declared before its use' are detected during syntax analysis.<br><br>Which of the above statements is/are TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "I only",
+    "I and III only",
+    "II only",
+    "None of I, II, and III"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Statement I is FALSE:</strong> Symbol table is used throughout almost all phases of a compiler, including semantic analysis, intermediate code generation, optimization, and code generation, not just during lexical and syntax analysis.<br><br><strong>Statement II is FALSE:</strong> Recursion requires a <strong>stack</strong> allocation (stack frames / activation records) for managing function calls and local variables. Heap storage is used for dynamically allocated memory (e.g., explicit dynamic memory allocation using malloc/new).<br><br><strong>Statement III is FALSE:</strong> Checking whether a variable is declared before its use requires context-sensitive analysis, which is performed during <strong>semantic analysis</strong>, not syntax analysis.<br><br>Hence, none of the statements I, II, and III are true.",
+  "videoUrl": null
+}

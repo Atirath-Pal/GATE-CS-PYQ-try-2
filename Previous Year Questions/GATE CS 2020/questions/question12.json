@@ -1,0 +1,26 @@
+{
+  "id": 12,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "Algorithms",
+    "Recurrence Relations"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "For parameters $a$ and $b$, both of which are $\\omega(1)$, $T(n) = T(n^{1/a}) + 1$, and $T(b) = 1$.<br><br>Then $T(n)$ is",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\Theta(\\log_a \\log_b n)$",
+    "$\\Theta(\\log_{ab} n)$",
+    "$\\Theta(\\log_b \\log_a n)$",
+    "$\\Theta(\\log_2 \\log_2 n)$"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "To solve the recurrence relation $T(n) = T(n^{1/a}) + 1$ with base case $T(b) = 1$:<br><br><strong>Step 1: Variable Substitution</strong><br>Let $n = b^{a^k}$.<br>Taking base-$b$ logarithm: $\\log_b n = a^k$<br>Taking base-$a$ logarithm: $k = \\log_a (\\log_b n)$<br><br><strong>Step 2: Recurrence Reduction</strong><br>Substitute $n = b^{a^k}$ into $T(n)$:<br>$T(b^{a^k}) = T\\left((b^{a^k})^{1/a}\\right) + 1 = T(b^{a^{k-1}}) + 1$<br><br>Let $S(k) = T(b^{a^k})$. The equation simplifies to:<br>$S(k) = S(k-1) + 1$<br><br><strong>Step 3: Solve Base Case and Term</strong><br>When $k = 0$, $n = b^{a^0} = b$.<br>Given $T(b) = 1$, we have $S(0) = 1$.<br>Solving $S(k) = S(k-1) + 1$ gives:<br>$S(k) = k + S(0) = k + 1$<br><br>Substituting $k = \\log_a (\\log_b n)$ back:<br>$T(n) = \\log_a (\\log_b n) + 1 = \\Theta(\\log_a \\log_b n)$<br><br>Therefore, option <strong>A</strong> is correct.",
+  "videoUrl": null
+}

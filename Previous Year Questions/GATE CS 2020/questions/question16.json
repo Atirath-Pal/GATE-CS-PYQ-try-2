@@ -1,0 +1,26 @@
+{
+  "id": 16,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "Data Structures",
+    "AVL Trees"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "What is the worst case time complexity of inserting $n^2$ elements into an AVL-tree with $n$ elements initially?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\Theta(n^4)$",
+    "$\\Theta(n^2)$",
+    "$\\Theta(n^2 \\log n)$",
+    "$\\Theta(n^3)$"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Time complexity of single insertion in an AVL tree</strong><br>An AVL tree with $k$ nodes has a height of $O(\\log k)$. Therefore, inserting a single element into an AVL tree containing $k$ nodes takes $O(\\log k)$ time in the worst case.<br><br><strong>Step 2: Calculate overall insertion time for $n^2$ elements</strong><br>Initially, the AVL tree contains $n$ elements. As $n^2$ elements are inserted, the tree size increases from $n$ to $n + n^2$.<br><br>For the $i$-th insertion (where $1 \\le i \\le n^2$), the number of nodes in the tree is $n + i - 1$. The time taken for this insertion is $\\Theta(\\log(n + i))$.<br><br>Since $\\log n \\le \\log(n + i) \\le \\log(n + n^2) = \\Theta(\\log n)$, each of the $n^2$ insertions takes $\\Theta(\\log n)$ time.<br><br><strong>Step 3: Total worst-case time complexity</strong><br>Total Time = $\\sum_{i=1}^{n^2} \\Theta(\\log(n + i)) = n^2 \\times \\Theta(\\log n) = \\Theta(n^2 \\log n)$.<br><br>Hence, the correct option is <strong>C</strong>.",
+  "videoUrl": null
+}

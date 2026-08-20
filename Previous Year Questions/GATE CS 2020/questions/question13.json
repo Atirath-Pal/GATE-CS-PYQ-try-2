@@ -1,0 +1,26 @@
+{
+  "id": 13,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "Computer Organization",
+    "I/O Interface"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the following statements.<br><br>I. Daisy chaining is used to assign priorities in attending interrupts.<br>II. When a device raises a vectored interrupt, the CPU does polling to identify the source of interrupt.<br>III. In polling, the CPU periodically checks the status bits to know if any device needs its attention.<br>IV. During DMA, both the CPU and DMA controller can be bus masters at the same time.<br><br>Which of the above statements is/are TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "I and II only",
+    "I and IV only",
+    "I and III only",
+    "III only"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Statement I is TRUE:</strong> Daisy chaining is a hardware priority scheme where devices are connected in series to determine interrupt servicing priority.<br><strong>Statement II is FALSE:</strong> In a vectored interrupt, the interrupting device directly provides its vector address to the CPU, so polling is not required.<br><strong>Statement III is TRUE:</strong> Polling is a software-driven method where the CPU continuously/periodically checks the status registers of I/O devices.<br><strong>Statement IV is FALSE:</strong> Only one bus master can control the system bus at any single instance to avoid bus conflict. During DMA transfer, the DMA controller takes control of the bus after the CPU relinquishes it.<br><br>Hence, statements <strong>I and III</strong> are correct.",
+  "videoUrl": null
+}

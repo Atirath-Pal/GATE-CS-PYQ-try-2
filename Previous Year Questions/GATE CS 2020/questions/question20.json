@@ -1,0 +1,26 @@
+{
+  "id": 20,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "Theory of Computation",
+    "Compiler Design"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the language $L = \\{a^n \\mid n \\ge 0\\} \\cup \\{a^n b^n \\mid n \\ge 0\\}$ and the following statements.<br><br>I. $L$ is deterministic context-free.<br>II. $L$ is context-free but not deterministic context-free.<br>III. $L$ is not $\\text{LL}(k)$ for any $k$.<br><br>Which of the above statements is/are TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "I only",
+    "II only",
+    "I and III only",
+    "III only"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Analyze Statements I and II</strong><br>The language $L = \\{a^n \\mid n \\ge 0\\} \\cup \\{a^n b^n \\mid n \\ge 0\\}$ can be accepted by a Deterministic Pushdown Automaton (DPDA) with an end-marker. As symbols are read, $a$'s are pushed onto the stack. If the end-marker is encountered immediately after $a$'s, the automaton accepts (matching $a^n$). If $b$'s are encountered, it pops an $a$ for each $b$ and accepts if the stack empties correctly (matching $a^n b^n$). Because a DPDA accepts $L$, $L$ is a Deterministic Context-Free Language (DCFL).<br>Therefore, <strong>Statement I is TRUE</strong> and <strong>Statement II is FALSE</strong>.<br><br><strong>Step 2: Analyze Statement III</strong><br>An $\\text{LL}(k)$ parser must decide which production to choose using a fixed lookahead of $k$ tokens. For any given $k$, looking at $k$ symbols of '$a$' is insufficient to know whether $b$'s will eventually follow or if the input will end. Hence, no finite lookahead $k$ allows top-down deterministic parsing.<br>Therefore, <strong>Statement III is TRUE</strong>.<br><br>Hence, <strong>I and III only</strong> are TRUE.",
+  "videoUrl": null
+}

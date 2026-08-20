@@ -1,0 +1,26 @@
+{
+  "id": 2,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "General Aptitude",
+    "Verbal Ability"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "His knowledge of the subject was excellent but his classroom performance was _______.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "extremely poor",
+    "good",
+    "desirable",
+    "praiseworthy"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step 1: Analyze sentence structure.</strong><br>The coordinating conjunction <strong>'but'</strong> is used to introduce a statement that contrasts with what has already been mentioned.<br><br><strong>Step 2: Determine tone of the sentence parts.</strong><br>The first part, <em>'His knowledge of the subject was excellent'</em>, expresses a clear positive evaluation. Therefore, the phrase following 'but' must express a contrasting, negative evaluation.<br><br><strong>Step 3: Evaluate the options.</strong><br>• <strong>(A) extremely poor:</strong> Negative evaluation, providing the correct contrast.<br>• <strong>(B) good:</strong> Positive evaluation.<br>• <strong>(C) desirable:</strong> Positive evaluation.<br>• <strong>(D) praiseworthy:</strong> Positive evaluation.<br><br>Thus, <strong>extremely poor</strong> is the correct choice.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 49,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "Discrete Mathematics",
+    "Predicate Logic"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Which one of the following predicate formulae is NOT logically valid?<br><br>Note that $W$ is a predicate formula without any free occurrence of $x$.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "\\forall x(p(x) \\lor W) \\equiv \\forall x \\ p(x) \\lor W",
+    "\\exists x(p(x) \\land W) \\equiv \\exists x \\ p(x) \\land W",
+    "\\forall x(p(x) \\rightarrow W) \\equiv \\forall x \\ p(x) \\rightarrow W",
+    "\\exists x(p(x) \\rightarrow W) \\equiv \\forall x \\ p(x) \\rightarrow W"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Understand quantifier movement rules when $W$ contains no free occurrences of $x$.</strong><br><br>Recall the logical equivalence for implication: $A \\rightarrow B \\equiv \\neg A \\lor B$.<br><br><strong>Step 2: Evaluate Option (C):</strong><br>LHS = $\\forall x (p(x) \\rightarrow W)$<br>$\\equiv \\forall x (\\neg p(x) \\lor W)$<br><br>Since $W$ has no free occurrences of $x$, the universal quantifier distributes over $\\neg p(x)$:<br>$\\equiv (\\forall x \\neg p(x)) \\lor W$<br>$\\equiv \\neg (\\exists x p(x)) \\lor W$<br>$\\equiv \\exists x p(x) \\rightarrow W$<br><br>Hence, $\\forall x (p(x) \\rightarrow W)$ is equivalent to $\\exists x p(x) \\rightarrow W$, NOT $\\forall x p(x) \\rightarrow W$. Thus, option (C) is <strong>NOT</strong> logically valid.<br><br><strong>Step 3: Verification of Option (D):</strong><br>$\\exists x (p(x) \\rightarrow W) \\equiv \\exists x (\\neg p(x) \\lor W) \\equiv (\\exists x \\neg p(x)) \\lor W \\equiv \\neg (\\forall x p(x)) \\lor W \\equiv \\forall x p(x) \\rightarrow W$, which is logically valid.",
+  "videoUrl": null
+}

@@ -1,0 +1,22 @@
+{
+  "id": 65,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "Computer Networks",
+    "TCP Congestion Control"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a TCP connection between a client and a server with the following specifications: the round trip time is $6\\text{ ms}$, the size of the receiver advertised window is $50\\text{ KB}$, slow-start threshold at the client is $32\\text{ KB}$, and the maximum segment size is $2\\text{ KB}$. The connection is established at time $t = 0$. Assume that there are no timeouts and errors during transmission. Then the size of the congestion window (in KB) at time $t + 60\\text{ ms}$ after all acknowledgements are processed is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 44,
+    "max": 44
+  },
+  "explanation": "<strong>Given Data:</strong><br>Round Trip Time (RTT) = $6\\text{ ms}$<br>Receiver Advertised Window ($rwnd$) = $50\\text{ KB}$<br>Slow-Start Threshold ($ssthresh$) = $32\\text{ KB}$<br>Maximum Segment Size ($MSS$) = $2\\text{ KB}$<br>Initial Congestion Window ($cwnd$) = $1\\text{ MSS} = 2\\text{ KB}$ at $t = 0$<br><br><strong>Step-by-Step Calculation:</strong><br>Total time elapsed = $60\\text{ ms}$, which corresponds to $\\frac{60}{6} = 10\\text{ RTTs}$.<br><br><strong>1. Slow-Start Phase ($cwnd < ssthresh$):</strong><br>During slow-start, $cwnd$ doubles every RTT.<br>- Initial $cwnd = 2\\text{ KB}$<br>- After 1st RTT ($t = 6\\text{ ms}$): $cwnd = 4\\text{ KB}$<br>- After 2nd RTT ($t = 12\\text{ ms}$): $cwnd = 8\\text{ KB}$<br>- After 3rd RTT ($t = 18\\text{ ms}$): $cwnd = 16\\text{ KB}$<br>- After 4th RTT ($t = 24\\text{ ms}$): $cwnd = 32\\text{ KB}$<br><br>At $t = 24\\text{ ms}$, $cwnd$ reaches $ssthresh = 32\\text{ KB}$.<br><br><strong>2. Congestion Avoidance Phase ($cwnd \\ge ssthresh$):</strong><br>In this phase, $cwnd$ increases linearly by $1\\text{ MSS} = 2\\text{ KB}$ for each RTT.<br>- After 5th RTT ($t = 30\\text{ ms}$): $cwnd = 32 + 2 = 34\\text{ KB}$<br>- After 6th RTT ($t = 36\\text{ ms}$): $cwnd = 34 + 2 = 36\\text{ KB}$<br>- After 7th RTT ($t = 42\\text{ ms}$): $cwnd = 36 + 2 = 38\\text{ KB}$<br>- After 8th RTT ($t = 48\\text{ ms}$): $cwnd = 38 + 2 = 40\\text{ KB}$<br>- After 9th RTT ($t = 54\\text{ ms}$): $cwnd = 40 + 2 = 42\\text{ KB}$<br>- After 10th RTT ($t = 60\\text{ ms}$): $cwnd = 42 + 2 = 44\\text{ KB}$<br><br>Since $cwnd = 44\\text{ KB} \\le rwnd = 50\\text{ KB}$, the size of the congestion window at time $t + 60\\text{ ms}$ is <strong>44</strong>.",
+  "videoUrl": null
+}

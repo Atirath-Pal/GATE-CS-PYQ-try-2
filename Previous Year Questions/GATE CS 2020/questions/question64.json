@@ -1,0 +1,22 @@
+{
+  "id": 64,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "Database Management Systems",
+    "B+ Trees"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a database implemented using B+ tree for file indexing and installed on a disk drive with block size of 4 KB. The size of search key is 12 bytes and the size of tree/disk pointer is 8 bytes. Assume that the database has one million records. Also assume that no node of the B+ tree and no records are present initially in main memory. Consider that each record fits into one disk block. The minimum number of disk accesses required to retrieve any record in the database is _____.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 4,
+    "max": 4
+  },
+  "explanation": "To calculate the minimum number of disk accesses, we need to maximize the capacity and fan-out of each node to achieve the minimum tree height.<br><br><strong>1. Internal Node Order Calculation:</strong><br>Let $p$ be the order (maximum number of tree pointers) of an internal node.<br>An internal node contains $p$ tree pointers and $(p - 1)$ search keys.<br>$p \\times P + (p - 1) \\times K \\le B$<br>$p \\times 8 + (p - 1) \\times 12 \\le 4096$<br>$20p - 12 \\le 4096 \\implies 20p \\le 4108 \\implies p = 205$<br><br><strong>2. Leaf Node Capacity Calculation:</strong><br>Let $x$ be the maximum number of record pointers in a leaf node.<br>A leaf node holds $x$ keys, $x$ record pointers, and 1 pointer to the next leaf node.<br>$x \\times (K + P) + P \\le B$<br>$x \\times (12 + 8) + 8 \\le 4096$<br>$20x + 8 \\le 4096 \\implies 20x \\le 4088 \\implies x = 204$<br><br><strong>3. Determining B+ Tree Height:</strong><br>- Number of leaf nodes = $\\lceil 1,000,000 / 204 \\rceil = 4902$<br>- Level 1 internal nodes = $\\lceil 4902 / 205 \\rceil = 24$<br>- Root node (Level 2) = $\\lceil 24 / 205 \\rceil = 1$<br><br>The B+ tree height is 3 (Root $\\rightarrow$ Level 1 $\\rightarrow$ Leaf level).<br><br><strong>4. Total Disk Accesses:</strong><br>- Traversing the 3 levels of the B+ tree: 3 disk accesses.<br>- Fetching the actual record from the data block: 1 disk access.<br><br><strong>Total disk accesses = $3 + 1 = 4$</strong>.",
+  "videoUrl": null
+}

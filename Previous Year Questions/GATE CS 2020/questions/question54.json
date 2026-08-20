@@ -1,0 +1,22 @@
+{
+  "id": 54,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "Computer Organization and Architecture",
+    "Instruction Formats"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "A processor has 64 registers and uses 16-bit instruction format. It has two types of instructions: I-type and R-type. Each I-type instruction contains an opcode, a register name, and a 4-bit immediate value. Each R-type instruction contains an opcode and two register names. If there are 8 distinct I-type opcodes, then the maximum number of distinct R-type opcodes is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 14,
+    "max": 14
+  },
+  "explanation": "<strong>Step 1: Determine bits required for registers.</strong><br>The processor has $64$ registers, so the number of bits required to address a register is $\\log_2(64) = 6$ bits.<br><br><strong>Step 2: Total instruction capacity.</strong><br>Instruction size = $16$ bits.<br>Total available instruction combinations = $2^{16} = 65536$.<br><br><strong>Step 3: Space consumed by I-type instructions.</strong><br>Each I-type instruction contains:<br>- 1 Register field = $6$ bits<br>- Immediate value field = $4$ bits<br>Total operand bits = $6 + 4 = 10$ bits.<br><br>Each I-type opcode consumes $2^{10} = 1024$ combinations.<br>Given $8$ distinct I-type opcodes, total space consumed = $8 \\times 1024 = 8192$.<br><br><strong>Step 4: Remaining space for R-type instructions.</strong><br>Remaining combinations = $65536 - 8192 = 57344$.<br><br><strong>Step 5: Calculate maximum R-type opcodes.</strong><br>Each R-type instruction contains:<br>- 2 Register fields = $6 + 6 = 12$ bits<br>Each R-type opcode requires $2^{12} = 4096$ combinations.<br><br>Maximum number of distinct R-type opcodes = $\\frac{57344}{4096} = 14$.",
+  "videoUrl": null
+}

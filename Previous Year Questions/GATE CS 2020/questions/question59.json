@@ -1,0 +1,22 @@
+{
+  "id": 59,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "Algorithms",
+    "Graph Theory"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a graph $G = (V,E)$, where $V = \\{v_1, v_2, ..., v_{100}\\}$, $E = \\{(v_i, v_j) \\mid 1 \\le i < j \\le 100\\}$, and weight of the edge $(v_i, v_j)$ is $|i - j|$. The weight of minimum spanning tree of $G$ is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 99,
+    "max": 99
+  },
+  "explanation": "To find the weight of the Minimum Spanning Tree (MST) of graph $G$:<br><br><strong>1. Graph Analysis:</strong><br>The graph $G = (V,E)$ has $|V| = 100$ vertices given by $V = \\{v_1, v_2, \\dots, v_{100}\\}$. It is a complete graph where the weight of an edge between any two vertices $v_i$ and $v_j$ is $w(v_i, v_j) = |i - j|$.<br><br><strong>2. Minimum Edge Weights:</strong><br>The minimum possible weight for any edge in this graph is $|i - j| = 1$, which occurs when $j = i + 1$ (i.e., between adjacent vertices).<br><br><strong>3. Constructing the Spanning Tree:</strong><br>A spanning tree for a graph with $100$ vertices requires exactly $100 - 1 = 99$ edges.<br>We can construct a spanning tree by selecting all $99$ edges between consecutive vertices: $(v_1, v_2), (v_2, v_3), \\dots, (v_{99}, v_{100})$.<br>Each of these edges has a weight of $1$.<br><br><strong>4. Total Weight Calculation:</strong><br>Total weight of MST = $99 \\times 1 = 99$.<br><br>Since $1$ is the lowest possible weight for any edge in $G$, no spanning tree can have a smaller sum. Hence, the minimum spanning tree weight is <strong>99</strong>.",
+  "videoUrl": null
+}

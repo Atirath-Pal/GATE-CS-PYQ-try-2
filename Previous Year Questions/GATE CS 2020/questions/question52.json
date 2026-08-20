@@ -1,0 +1,19 @@
+{
+  "id": 52,
+  "year": 2020,
+  "set": null,
+  "topics": ["Discrete Mathematics", "Combinatorics"],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "The number of permutations of the characters in LILAC so that no character appears in its original position, if the two L's are indistinguishable, is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 12,
+    "max": 12
+  },
+  "explanation": "<strong>Step 1:</strong> The original arrangement is $L\\ I\\ L\\ A\\ C$. The two $L$'s are indistinguishable, and neither $L$ can occupy its original positions 1 or 3. Therefore, the two $L$'s must occupy two positions chosen from positions 2, 4, and 5.<br><br><strong>Step 2:</strong> There are $\\binom{3}{2}=3$ possible choices for the positions of the two $L$'s: $(2,4)$, $(2,5)$, and $(4,5)$.<br><br><strong>Step 3:</strong> For each of these three choices, the remaining characters $I$, $A$, and $C$ can be arranged in the remaining three positions in exactly 4 ways while ensuring that $I$ is not in position 2, $A$ is not in position 4, and $C$ is not in position 5.<br><br><strong>Step 4:</strong> Hence, the total number of valid permutations is $3 \\times 4 = 12$.<br><br><strong>Therefore:</strong> The required number of permutations is $12$.",
+  "videoUrl": null
+}

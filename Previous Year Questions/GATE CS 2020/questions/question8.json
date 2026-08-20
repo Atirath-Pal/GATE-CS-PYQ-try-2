@@ -1,0 +1,26 @@
+{
+  "id": 8,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "General Aptitude",
+    "Geometry"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "The figure below shows an annular ring with outer and inner radii as $b$ and $a$, respectively. The annular space has been painted in the form of blue colour circles touching the outer and inner periphery of annular space. If maximum $n$ number of circles can be painted, then the unpainted area available in annular space is _______.",
+  "assetImage": "question8.png",
+  "codeBlock": null,
+  "options": [
+    "$\\pi \\left[ (b^2 - a^2) - \\frac{n}{4}(b - a)^2 \\right]$",
+    "$\\pi \\left[ (b^2 - a^2) - n(b - a)^2 \\right]$",
+    "$\\pi \\left[ (b^2 - a^2) + \\frac{n}{4}(b - a)^2 \\right]$",
+    "$\\pi \\left[ (b^2 - a^2) + n(b - a)^2 \\right]$"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step 1: Calculate the total area of the annular ring.</strong><br>The outer radius is $b$ and the inner radius is $a$.<br>Total area of the annular space = $\\pi b^2 - \\pi a^2 = \\pi (b^2 - a^2)$<br><br><strong>Step 2: Determine the radius and area of a single blue circle.</strong><br>Each blue circle touches both the outer and inner periphery of the annular space.<br>Diameter of each blue circle = $b - a$<br>Radius of each blue circle, $r = \\frac{b - a}{2}$<br>Area of one blue circle = $\\pi r^2 = \\pi \\left(\\frac{b - a}{2}\\right)^2 = \\frac{\\pi}{4}(b - a)^2$<br><br><strong>Step 3: Calculate the total area of $n$ blue circles.</strong><br>Total painted area = $n \\times \\frac{\\pi}{4}(b - a)^2 = \\frac{n\\pi}{4}(b - a)^2$<br><br><strong>Step 4: Find the unpainted area.</strong><br>Unpainted area = Total annular area - Total painted area<br>$= \\pi(b^2 - a^2) - \\frac{n\\pi}{4}(b - a)^2 = \\pi \\left[ (b^2 - a^2) - \\frac{n}{4}(b - a)^2 \\right]$<br><br>Hence, the correct option is <strong>(A)</strong>.",
+  "videoUrl": null
+}

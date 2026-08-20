@@ -1,0 +1,26 @@
+{
+  "id": 22,
+  "year": "2020",
+  "set": null,
+  "topics": [
+    "Operating Systems",
+    "Process Management"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the following statements about process state transitions for a system using preemptive scheduling.<br><br>I. A running process can move to ready state.<br>II. A ready process can move to running state.<br>III. A blocked process can move to running state.<br>IV. A blocked process can move to ready state.<br><br>Which of the above statements are TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "I, II, and III only",
+    "II and III only",
+    "I, II, and IV only",
+    "I, II, III, and IV"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Statement I is TRUE:</strong> In preemptive scheduling, a running process can be preempted (e.g., due to time quantum expiration or a higher priority process arriving) and moved back to the ready state.<br><strong>Statement II is TRUE:</strong> A process in the ready state is scheduled by the short-term scheduler and moved to the running state.<br><strong>Statement III is FALSE:</strong> A blocked process cannot transition directly to the running state; when its I/O or event completes, it moves to the ready state first.<br><strong>Statement IV is TRUE:</strong> A blocked/waiting process transitions to the ready state once the required event or I/O operation completes.<br><br>Therefore, statements <strong>I, II, and IV only</strong> are TRUE.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 11,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "Engineering Mathematics",
+    "Calculus"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the functions<br><br>I. $e^{-x}$<br>II. $x^2 - \\sin x$<br>III. $\\sqrt{x^3 + 1}$<br><br>Which of the above functions is/are increasing everywhere in $[0,1]$?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "III only",
+    "II only",
+    "II and III only",
+    "I and III only"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "To check if a function $f(x)$ is increasing in the interval $[0,1]$, we evaluate its derivative $f'(x)$:<br><br><strong>I. $f(x) = e^{-x}$</strong><br>$f'(x) = -e^{-x}$<br>Since $e^{-x} > 0$ for all real $x$, $f'(x) < 0$ for all $x \\in [0,1]$. Thus, Function I is decreasing everywhere in $[0,1]$.<br><br><strong>II. $f(x) = x^2 - \\sin x$</strong><br>$f'(x) = 2x - \\cos x$<br>At $x = 0$, $f'(0) = 2(0) - \\cos(0) = -1 < 0$. Since $f'(x)$ is negative at $x = 0$, Function II is not increasing everywhere in $[0,1]$.<br><br><strong>III. $f(x) = \\sqrt{x^3 + 1}$</strong><br>$f'(x) = \\frac{3x^2}{2\\sqrt{x^3 + 1}}$<br>For all $x \\in [0,1]$, $3x^2 \\ge 0$ and $\\sqrt{x^3 + 1} > 0$. Therefore, $f'(x) \\ge 0$ for all $x \\in [0,1]$, which means Function III is increasing everywhere in $[0,1]$.<br><br>Hence, only <strong>III</strong> is increasing everywhere in $[0,1]$.",
+  "videoUrl": null
+}

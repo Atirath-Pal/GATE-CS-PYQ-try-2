@@ -1,0 +1,26 @@
+{
+  "id": 1,
+  "year": 2020,
+  "set": null,
+  "topics": [
+    "General Aptitude",
+    "Verbal Ability"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Raman is confident of speaking English ______ six months as he has been practising regularly ______ the last three weeks.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "during, for",
+    "for, since",
+    "for, in",
+    "within, for"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Explanation:</strong><br><br>1. <strong>First blank:</strong> \"within\" is used to express that something will happen before a particular period of time has elapsed. Here, \"within six months\" indicates achieving the goal inside that time frame.<br><br>2. <strong>Second blank:</strong> \"for\" is used to denote a period or duration of time (e.g., \"for the last three weeks\").<br><br>Thus, the correct pair of prepositions to complete the sentence is <strong>within, for</strong>.",
+  "videoUrl": null
+}
