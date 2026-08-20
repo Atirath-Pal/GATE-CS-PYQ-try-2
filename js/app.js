@@ -2,6 +2,24 @@
 const appDiv = document.getElementById('app');
 let currentQuestionData = null;
 
+// --- BASE PATH FIX ---
+// Some question/explanation HTML has hardcoded absolute image paths
+// (e.g. src="/Previous Year Questions/.../img.png"). These work locally
+// (served from root) but break on GitHub Pages project sites, which are
+// served from a subpath like /repo-name/. This rewrites them at render time.
+const BASE_URL = (() => {
+  if (location.hostname.endsWith('github.io')) {
+    const firstSegment = location.pathname.split('/').filter(Boolean)[0];
+    return firstSegment ? `/${firstSegment}` : '';
+  }
+  return ''; // local dev — unchanged behavior
+})();
+
+function fixAssetPaths(html) {
+  if (!html) return html;
+  return html.replace(/(src|href)="\//g, `$1="${BASE_URL}/`);
+}
+
 function router() {
   const hash = window.location.hash;
   if (!hash || hash === '#/') {
@@ -230,7 +248,7 @@ async function loadQuestion(folderName, qNumber) {
 
     // Render Math text
     const textTarget = document.getElementById('q-text');
-    textTarget.innerHTML = qData.questionText;
+    textTarget.innerHTML = fixAssetPaths(qData.questionText);
     
     renderMathInElement(textTarget, {
       delimiters: [
@@ -347,7 +365,7 @@ function checkAnswer(folderName) {
     solutionBox.classList.remove('hidden');
     
     if (qData.explanation) {
-      expText.innerHTML = qData.explanation;
+      expText.innerHTML = fixAssetPaths(qData.explanation);
       renderMathInElement(expText, {
         delimiters: [
           {left: '$$', right: '$$', display: true},
