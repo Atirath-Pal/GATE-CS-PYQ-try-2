@@ -1,0 +1,22 @@
+{
+  "id": 27,
+  "year": 2018,
+  "set": null,
+  "topics": [
+    "Linear Algebra",
+    "Eigenvalues and Eigenvectors"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider a matrix $A = uv^T$ where $u = \\begin{pmatrix} 1 \\\\ 2 \\end{pmatrix}$, $v = \\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix}$. Note that $v^T$ denotes the transpose of $v$. The largest eigenvalue of $A$ is _____.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 3,
+    "max": 3
+  },
+  "explanation": "<strong>Given:</strong><br>$u = \\begin{pmatrix} 1 \\\\ 2 \\end{pmatrix}$ and $v = \\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix}$<br><br><strong>Step 1: Compute matrix $A = uv^T$</strong><br>$v^T = \\begin{pmatrix} 1 & 1 \\end{pmatrix}$<br><br>$A = \\begin{pmatrix} 1 \\\\ 2 \\end{pmatrix} \\begin{pmatrix} 1 & 1 \\end{pmatrix} = \\begin{pmatrix} 1 & 1 \\\\ 2 & 2 \\end{pmatrix}$<br><br><strong>Step 2: Find the eigenvalues of $A$</strong><br>For an outer product matrix $A = uv^T$, the non-zero eigenvalue is given by $v^T u$ (which is equal to the trace of $A$).<br><br>$\\text{Trace}(A) = 1 + 2 = 3$<br>$\\text{Determinant}(A) = 1(2) - 1(2) = 0$<br><br>Since the matrix has rank $1$, its eigenvalues are $\\lambda_1 = 3$ and $\\lambda_2 = 0$.<br><br>Thus, the largest eigenvalue of $A$ is $3$.",
+  "videoUrl": null
+}

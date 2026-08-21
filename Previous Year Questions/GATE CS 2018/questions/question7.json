@@ -1,0 +1,21 @@
+{
+  "id": 7,
+  "year": 2018,
+  "set": null,
+  "topics": ["General Aptitude", "Quantitative Aptitude"],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "If $p q r \\neq 0$ and $p^{-x} = \\frac{1}{q}, q^{-y} = \\frac{1}{r}, r^{-z} = \\frac{1}{p}$, what is the value of the product $x y z$?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$-1$",
+    "$\\frac{1}{p q r}$",
+    "$1$",
+    "$p q r$"
+  ],
+  "answer": ["C"],
+  "explanation": "<strong>Given:</strong><br>$p^{-x} = \\frac{1}{q} = q^{-1} \\implies q = p^x$<br>$q^{-y} = \\frac{1}{r} = r^{-1} \\implies r = q^y$<br>$r^{-z} = \\frac{1}{p} = p^{-1} \\implies p = r^z$<br><br><strong>Step-by-step substitution:</strong><br>Substitute $q = p^x$ into $r = q^y$:<br>$r = (p^x)^y = p^{x y}$<br><br>Substitute $r = p^{x y}$ into $p = r^z$:<br>$p = (p^{x y})^z = p^{x y z}$<br><br>Equating the exponents on both sides of $p^1 = p^{x y z}$ gives:<br>$x y z = 1$",
+  "videoUrl": null
+}

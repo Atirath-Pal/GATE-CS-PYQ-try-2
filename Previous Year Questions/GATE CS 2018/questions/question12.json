@@ -1,0 +1,26 @@
+{
+  "id": 12,
+  "year": 2018,
+  "set": null,
+  "topics": [
+    "Programming and Data Structures",
+    "C Programming"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the following C program.<br><br>The output of this program is:",
+  "assetImage": null,
+  "codeBlock": "#include &lt;stdio.h&gt;\nstruct Ournode{\n    char x,y,z;\n};\n\nint main(){\n    struct Ournode p = {'1', '0', 'a'+2};\n    struct Ournode *q = &p;\n    printf (\"%c, %c\", *((char*)q+1), *((char*)q+2));\n    return 0;\n}",
+  "options": [
+    "0, c",
+    "0, a+2",
+    "'0', 'a+2'",
+    "'0', 'c'"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step 1: Memory Layout Analysis</strong><br>The structure <code>struct Ournode</code> consists of three consecutive <code>char</code> variables: <code>x</code>, <code>y</code>, and <code>z</code>. Since each <code>char</code> occupies $1$ byte, the member variables are stored sequentially in memory.<br><br><strong>Step 2: Variable Initialization</strong><br>The structure variable $p$ is initialized as:<br>- $p.x = \text{'1'}$ (at byte offset $0$)<br>- $p.y = \text{'0'}$ (at byte offset $1$)<br>- $p.z = \text{'a'} + 2 = \text{'c'}$ (at byte offset $2$, since ASCII of $'a' + 2 = 'c'$)<br><br><strong>Step 3: Pointer Arithmetic & Dereferencing</strong><br>- Pointer $q$ points to structure $p$.<br>- Typecasting $q$ to <code>(char*)</code> allows byte-by-byte address arithmetic.<br>- <code>*((char*)q + 1)</code> accesses byte offset $1$, which holds $p.y = \text{'0'}$.<br>- <code>*((char*)q + 2)</code> accesses byte offset $2$, which holds $p.z = \text{'c'}$.<br><br><strong>Step 4: Output Evaluation</strong><br>The <code>printf</code> statement prints the two characters using format specifier <code>%c</code>, resulting in the output string: <strong>0, c</strong>.<br><br>Hence, option <strong>(A)</strong> is correct.",
+  "videoUrl": null
+}

@@ -1,0 +1,21 @@
+{
+  "id": 57,
+  "year": 2018,
+  "set": null,
+  "topics": [
+    "Algorithms",
+    "Graph Theory"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the following undirected graph G:<br><br>Choose a value for $x$ that will maximize the number of minimum weight spanning trees (MWSTs) of G. The number of MWSTs of G for this value of $x$ is _______.",
+  "assetImage": "question57.png",
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 4.0,
+    "max": 4.0
+  },
+  "explanation": "To find the number of Minimum Weight Spanning Trees (MWSTs) using Kruskal's algorithm:<br><br><strong>Step 1: Include mandatory minimum weight edges</strong><br>• Edge with weight 1: connects vertex $V_1$ and $V_3$.<br>• Edge with weight 3: connects vertex $V_1$ and $V_4$.<br>At this stage, vertices $\\{V_1, V_3, V_4\\}$ are connected.<br><br><strong>Step 2: Connect vertex $V_2$</strong><br>• The edges adjacent to $V_2$ have weights of 4: $(V_1, V_2)$ and $(V_2, V_3)$.<br>• We can choose either of these two edges to connect $V_2$ to the tree, which gives <strong>2 choices</strong>.<br><br><strong>Step 3: Connect vertex $V_5$ and maximize choices</strong><br>• $V_5$ is connected via edges $(V_1, V_5)$ with weight $x$ and $(V_4, V_5)$ with weight 5.<br>• If $x = 5$, then both $(V_1, V_5)$ and $(V_4, V_5)$ have weight 5.<br>• This gives <strong>2 choices</strong> to connect $V_5$ without introducing a cycle of smaller weight.<br><br><strong>Step 4: Calculate total MWSTs</strong><br>• Total MWSTs = (Choices for $V_2$) $\\times$ (Choices for $V_5$) = $2 \\times 2 = 4$.<br><br>Thus, setting $x = 5$ maximizes the number of MWSTs, and the total number of MWSTs for this value is <strong>4</strong>."
+}

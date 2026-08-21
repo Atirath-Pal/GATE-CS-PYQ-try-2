@@ -1,0 +1,26 @@
+{
+  "id": 52,
+  "year": 2018,
+  "set": null,
+  "topics": [
+    "Databases",
+    "Normalization"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the following four relational schemas. For each schema, all non-trivial functional dependencies are listed. The underlined attributes are the respective primary keys.<br><br>Schema I: $Registration(\\underline{rollno}, courses)$<br>Field '$courses$' is a set-valued attribute containing the set of courses a student has registered for.<br>Non-trivial functional dependency:<br>$rollno \\rightarrow courses$<br><br>Schema II: $Registration(\\underline{rollno, courseid}, email)$<br>Non-trivial functional dependencies:<br>$rollno, courseid \\rightarrow email$<br>$email \\rightarrow rollno$<br><br>Schema III: $Registration(\\underline{rollno, courseid}, marks, grade)$<br>Non-trivial functional dependencies:<br>$rollno, courseid \\rightarrow marks, grade$<br>$marks \\rightarrow grade$<br><br>Schema IV: $Registration(\\underline{rollno, courseid}, credit)$<br>Non-trivial functional dependencies:<br>$rollno, courseid \\rightarrow credit$<br>$courseid \\rightarrow credit$<br><br>Which one of the relational schemas above is in 3NF but not in BCNF?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Schema I",
+    "Schema II",
+    "Schema III",
+    "Schema IV"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "To determine which schema is in 3NF but not in BCNF, let's analyze each schema individually:<br><br><strong>Schema I:</strong><br>The attribute $courses$ is set-valued (non-atomic). Therefore, Schema I violates 1NF.<br><br><strong>Schema II:</strong><br>Given dependencies:<br>1. $rollno, courseid \\rightarrow email$<br>2. $email \\rightarrow rollno$<br><br>Finding Candidate Keys:<br>• $(rollno, courseid)^+ = \\{rollno, courseid, email\\}$, so $\\{rollno, courseid\\}$ is a candidate key.<br>• $(email, courseid)^+ = \\{email, courseid, rollno\\}$, so $\\{email, courseid\\}$ is also a candidate key.<br><br>Prime attributes: $rollno$, $courseid$, and $email$.<br>Non-prime attributes: None.<br><br>Checking Normal Forms:<br>• For FD 1 ($rollno, courseid \\rightarrow email$): $\\{rollno, courseid\\}$ is a superkey, satisfying BCNF and 3NF.<br>• For FD 2 ($email \\rightarrow rollno$): $email$ is not a superkey, so it violates BCNF. However, $rollno$ is a prime attribute, satisfying 3NF.<br>Thus, Schema II is in <strong>3NF but not in BCNF</strong>.<br><br><strong>Schema III:</strong><br>Candidate Key: $\\{rollno, courseid\\}$.<br>Non-prime attributes: $marks$, $grade$.<br>The FD $marks \\rightarrow grade$ represents a transitive dependency (non-prime determining non-prime), so it violates 3NF.<br><br><strong>Schema IV:</strong><br>Candidate Key: $\\{rollno, courseid\\}$.<br>The FD $courseid \\rightarrow credit$ represents a partial dependency (part of candidate key determining non-prime attribute), so it violates 2NF.<br><br>Hence, <strong>Schema II</strong> is in 3NF but not in BCNF.",
+  "videoUrl": null
+}

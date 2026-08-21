@@ -1,0 +1,22 @@
+{
+  "id": 64,
+  "year": "2018",
+  "set": null,
+  "topics": [
+    "Computer Networks",
+    "IP Fragmentation"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider an IP packet with a length of 4,500 bytes that includes a 20-byte IPv4 header and a 40-byte TCP header. The packet is forwarded to an IPv4 router that supports a Maximum Transmission Unit (MTU) of 600 bytes. Assume that the length of the IP header in all the outgoing fragments of this packet is 20 bytes. Assume that the fragmentation offset value stored in the first fragment is 0.<br><br>The fragmentation offset value stored in the third fragment is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 144,
+    "max": 144
+  },
+  "explanation": "<strong>Step-by-step solution:</strong><br><br>1. <strong>Calculate Total Data Payload:</strong><br>Total IP packet length = $4500$ bytes.<br>IP header = $20$ bytes.<br>Payload size = $4500 - 20 = 4480$ bytes.<br><br>2. <strong>Determine Data per Fragment:</strong><br>Maximum Transmission Unit (MTU) = $600$ bytes.<br>IP header per fragment = $20$ bytes.<br>Maximum data allowed per fragment = $600 - 20 = 580$ bytes.<br>Since fragmentation offset is measured in units of $8$ bytes, the data field length in each fragment (except the last) must be a multiple of $8$:<br>$$\\text{Data size per fragment} = \\lfloor 580 / 8 \\rfloor \\times 8 = 72 \\times 8 = 576 \\text{ bytes}$$<br><br>3. <strong>Calculate Offset for Each Fragment:</strong><br>• <strong>Fragment 1:</strong> Data = $576$ bytes (Bytes $0$ to $575$), Offset = $0 / 8 = 0$<br>• <strong>Fragment 2:</strong> Data = $576$ bytes (Bytes $576$ to $1151$), Offset = $576 / 8 = 72$<br>• <strong>Fragment 3:</strong> Data = $576$ bytes (Bytes $1152$ to $1727$), Offset = $1152 / 8 = 144$<br><br>Thus, the fragmentation offset value stored in the third fragment is <strong>144</strong>.",
+  "videoUrl": null
+}

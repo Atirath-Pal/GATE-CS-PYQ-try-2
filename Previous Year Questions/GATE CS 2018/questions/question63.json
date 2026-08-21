@@ -1,0 +1,22 @@
+{
+  "id": 63,
+  "year": 2018,
+  "set": null,
+  "topics": [
+    "Operating Systems",
+    "Disk Scheduling"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a storage disk with 4 platters (numbered as 0, 1, 2 and 3), 200 cylinders (numbered as 0, 1, ... , 199), and 256 sectors per track (numbered as 0, 1, ... , 255). The following 6 disk requests of the form [sector number, cylinder number, platter number] are received by the disk controller at the same time:<br><br>[120, 72, 2] , [180, 134, 1] , [60, 20, 0] , [212, 86, 3] , [56, 116, 2] , [118, 16, 1]<br><br>Currently the head is positioned at sector number 100 of cylinder 80, and is moving towards higher cylinder numbers. The average power dissipation in moving the head over 100 cylinders is 20 milliwatts and for reversing the direction of the head movement once is 15 milliwatts. Power dissipation associated with rotational latency and switching of head between different platters is negligible.<br><br>The total power consumption in milliwatts to satisfy all of the above disk requests using the Shortest Seek Time First disk scheduling algorithm is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 85,
+    "max": 85
+  },
+  "explanation": "<strong>Step 1: Identify disk requests and initial parameters.</strong><br>The 6 disk requests are given with their respective cylinder numbers:<br>• Request 1: Cylinder 72<br>• Request 2: Cylinder 134<br>• Request 3: Cylinder 20<br>• Request 4: Cylinder 86<br>• Request 5: Cylinder 116<br>• Request 6: Cylinder 16<br><br>Initial head position: Cylinder 80 (moving towards higher cylinder numbers).<br><br><strong>Step 2: Service requests using Shortest Seek Time First (SSTF).</strong><br>SSTF selects the pending request closest to the current head position:<br>1. From cylinder $80$, nearest is $86$ (Distance = $|80 - 86| = 6$). Direction: Right.<br>2. From cylinder $86$, nearest is $72$ (Distance = $|86 - 72| = 14$). Direction: Left (<strong>Reversal 1</strong>).<br>3. From cylinder $72$, nearest is $116$ (Distance = $|72 - 116| = 44$). Direction: Right (<strong>Reversal 2</strong>).<br>4. From cylinder $116$, nearest is $134$ (Distance = $|116 - 134| = 18$). Direction: Right.<br>5. From cylinder $134$, nearest is $20$ (Distance = $|134 - 20| = 114$). Direction: Left (<strong>Reversal 3</strong>).<br>6. From cylinder $20$, nearest is $16$ (Distance = $|20 - 16| = 4$). Direction: Left.<br><br><strong>Step 3: Calculate power dissipation.</strong><br>• Total seek distance = $6 + 14 + 44 + 18 + 114 + 4 = 200$ cylinders.<br>• Power dissipation for moving head = $\\left(\\frac{20\\text{ mW}}{100\\text{ cylinders}}\\right) \\times 200\\text{ cylinders} = 40\\text{ mW}$.<br>• Number of direction reversals = $3$.<br>• Power dissipation for direction reversals = $3 \\times 15\\text{ mW} = 45\\text{ mW}$.<br><br><strong>Total power consumption</strong> = $40\\text{ mW} + 45\\text{ mW} = 85\\text{ mW}$.",
+  "videoUrl": null
+}

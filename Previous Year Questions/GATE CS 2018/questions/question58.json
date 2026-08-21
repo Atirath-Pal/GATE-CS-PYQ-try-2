@@ -1,0 +1,21 @@
+{
+  "id": 58,
+  "year": 2018,
+  "set": null,
+  "topics": [
+    "Algorithms",
+    "Greedy Algorithms"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the weights and values of items listed below. Note that there is only one unit of each item.<br><br><div style=\"overflow-x: auto; margin: 12px 0;\"><table style=\"border-collapse: collapse; border: 1px solid #ffffff; text-align: center; margin: 0 auto;\"><thead><tr><th style=\"border: 1px solid #ffffff; padding: 6px 12px; font-weight: bold;\">Item number</th><th style=\"border: 1px solid #ffffff; padding: 6px 12px; font-weight: bold;\">Weight<br>(in Kgs)</th><th style=\"border: 1px solid #ffffff; padding: 6px 12px; font-weight: bold;\">Value<br>(in Rupees)</th></tr></thead><tbody><tr><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">1</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">10</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">60</td></tr><tr><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">2</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">7</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">28</td></tr><tr><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">3</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">4</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">20</td></tr><tr><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">4</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">2</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">24</td></tr></tbody></table></div><br>The task is to pick a subset of these items such that their total weight is no more than 11 Kgs and their total value is maximized. Moreover, no item may be split. The total value of items picked by an optimal algorithm is denoted by $V_{\\text{opt}}$. A greedy algorithm sorts the items by their value-to-weight ratios in descending order and packs them greedily, starting from the first item in the ordered list. The total value of items picked by the greedy algorithm is denoted by $V_{\\text{greedy}}$.<br><br>The value of $V_{\\text{opt}} - V_{\\text{greedy}}$ is __________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 16,
+    "max": 16
+  },
+  "explanation": "<strong>1. Calculate the Value-to-Weight Ratio for each item:</strong><br>• Item 1: $V/W = 60 / 10 = 6$<br>• Item 2: $V/W = 28 / 7 = 4$<br>• Item 3: $V/W = 20 / 4 = 5$<br>• Item 4: $V/W = 24 / 2 = 12$<br><br><strong>2. Greedy Selection ($V_{\\text{greedy}}$):</strong><br>Sorting items by value-to-weight ratio in descending order: Item 4 (12), Item 1 (6), Item 3 (5), Item 2 (4).<br>• Total Capacity = $11\\text{ Kgs}$<br>• Pick Item 4 ($W = 2\\text{ Kgs}$, $V = 24$). Remaining capacity = $9\\text{ Kgs}$.<br>• Consider Item 1 ($W = 10\\text{ Kgs}$): Exceeds remaining capacity ($10 > 9$), cannot be picked.<br>• Pick Item 3 ($W = 4\\text{ Kgs}$, $V = 20$). Remaining capacity = $5\\text{ Kgs}$.<br>• Consider Item 2 ($W = 7\\text{ Kgs}$): Exceeds remaining capacity ($7 > 5$), cannot be picked.<br><br>Total value obtained by Greedy Algorithm, $V_{\\text{greedy}} = 24 + 20 = 44$.<br><br><strong>3. Optimal Selection ($V_{\\text{opt}}$):</strong><br>For 0/1 Knapsack with capacity $11\\text{ Kgs}$, picking Item 1 alone yields $W = 10\\text{ Kgs}$ and $V = 60$, which is the maximum possible value.<br>Thus, $V_{\\text{opt}} = 60$.<br><br><strong>4. Calculating the Difference:</strong><br>$V_{\\text{opt}} - V_{\\text{greedy}} = 60 - 44 = 16$."
+}

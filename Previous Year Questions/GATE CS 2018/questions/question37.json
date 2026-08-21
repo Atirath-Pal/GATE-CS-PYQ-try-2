@@ -1,0 +1,26 @@
+{
+  "id": 37,
+  "year": 2018,
+  "set": null,
+  "topics": [
+    "Discrete Mathematics",
+    "Set Theory"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Let $N$ be the set of natural numbers. Consider the following sets.<br><br>$P$: Set of Rational numbers (positive and negative)<br>$Q$: Set of functions from $\\{0, 1\\}$ to $N$<br>$R$: Set of functions from $N$ to $\\{0, 1\\}$<br>$S$: Set of finite subsets of $N$.<br><br>Which of the sets above are countable?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$Q$ and $S$ only",
+    "$P$ and $S$ only",
+    "$P$ and $R$ only",
+    "$P$, $Q$ and $S$ only"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Analyzing each set for countability:</strong><br><br>1. <strong>Set $P$ (Set of Rational numbers):</strong> The set of all rational numbers $\\mathbb{Q}$ is countably infinite. Thus, $P$ is countable.<br><br>2. <strong>Set $Q$ (Functions from $\\{0, 1\\}$ to $N$):</strong> Each function $f: \\{0, 1\\} \\to N$ is uniquely identified by the pair $(f(0), f(1)) \\in N \\times N$. Since $N \\times N$ is countable ($|N \\times N| = |N| = \\aleph_0$), the set $Q$ is countable.<br><br>3. <strong>Set $R$ (Functions from $N$ to $\\{0, 1\\}$):</strong> A function $f: N \\to \\{0, 1\\}$ represents a characteristic function of a subset of $N$, which corresponds to the power set $\\mathcal{P}(N)$. Its cardinality is $2^{|N|} = 2^{\\aleph_0} = c$, which is uncountable. Thus, $R$ is uncountable.<br><br>4. <strong>Set $S$ (Set of finite subsets of $N$):</strong> The collection of all finite subsets of a countable set is countably infinite. Thus, $S$ is countable.<br><br>Therefore, sets $P$, $Q$, and $S$ are countable.",
+  "videoUrl": null
+}

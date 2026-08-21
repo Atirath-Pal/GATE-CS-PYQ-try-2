@@ -1,0 +1,22 @@
+{
+  "id": 35,
+  "year": 2018,
+  "set": null,
+  "topics": [
+    "Computer Networks",
+    "TCP"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a long-lived TCP session with an end-to-end bandwidth of $1\\text{ Gbps}$ ($= 10^9$ bits-per-second). The session starts with a sequence number of $1234$. The minimum time (in seconds, rounded to the closest integer) before this sequence number can be used again is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 34,
+    "max": 34
+  },
+  "explanation": "<strong>Step 1: Determine the size of the TCP sequence number space</strong><br>TCP uses a $32$-bit sequence number field to identify each byte of data transmitted. Therefore, the total number of unique sequence numbers before wrap-around is:<br>$\\text{Total Sequence Space} = 2^{32}\\text{ bytes} = 4,294,967,296\\text{ bytes}$<br><br><strong>Step 2: Calculate the bandwidth in bytes per second</strong><br>Given bandwidth $= 1\\text{ Gbps} = 10^9\\text{ bits/second}$.<br>Converting bits to bytes:<br>$\\text{Bandwidth in bytes/sec} = \\frac{10^9}{8} = 125,000,000\\text{ bytes/second}$<br><br><strong>Step 3: Calculate the wrap-around time</strong><br>The minimum time required to consume all $2^{32}$ sequence numbers and reuse sequence number $1234$ is:<br>$\\text{Time} = \\frac{2^{32}\\text{ bytes}}{125,000,000\\text{ bytes/sec}} = \\frac{4,294,967,296}{125,000,000} \\approx 34.3597\\text{ seconds}$<br><br><strong>Step 4: Round to the closest integer</strong><br>Rounding $34.3597$ to the nearest integer gives $34\\text{ seconds}$.",
+  "videoUrl": null
+}

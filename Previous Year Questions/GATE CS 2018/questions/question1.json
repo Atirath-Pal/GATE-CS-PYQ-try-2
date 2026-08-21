@@ -1,0 +1,26 @@
+{
+  "id": 1,
+  "year": 2018,
+  "set": null,
+  "topics": [
+    "General Aptitude",
+    "Verbal Ability"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "“From where are they bringing their books? _______ bringing _______ books from _______.”<br><br>The words that best fill the blanks in the above sentence are",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Their, they’re, there",
+    "They’re, their, there",
+    "There, their, they’re",
+    "They’re, there, there"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>First blank:</strong> Needs a subject + verb combination ('they are'), which is contracted as <strong>They're</strong>.<br><strong>Second blank:</strong> Needs a possessive pronoun to indicate ownership of the books, which is <strong>their</strong>.<br><strong>Third blank:</strong> Needs an adverb of place referring to a location, which is <strong>there</strong>.<br><br>Hence, the correct option is <strong>(B)</strong>.",
+  "videoUrl": null
+}

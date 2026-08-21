@@ -1,0 +1,26 @@
+{
+  "id": 42,
+  "year": 2018,
+  "set": null,
+  "topics": [
+    "Programming and Data Structures",
+    "C Programming"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the following C code. Assume that <code>unsigned long int</code> type length is 64 bits.<br><br>The value returned when we call <code>fun</code> with the input $2^{40}$ is",
+  "assetImage": null,
+  "codeBlock": "unsigned long int fun(unsigned long int n){\n    unsigned long int i, j = 0, sum = 0;\n    for (i = n; i > 1; i = i/2) j++;\n    for ( ; j > 1; j = j/2) sum++;\n    return(sum);\n}",
+  "options": [
+    "4",
+    "5",
+    "6",
+    "40"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step 1: Analyze the first loop.</strong><br>The first loop is <code>for (i = n; i > 1; i = i/2) j++;</code>.<br>Given $n = 2^{40}$, the value of $i$ starts at $2^{40}$ and is halved in each iteration until $i = 1$.<br>The loop executes $40$ times, so after this loop finishes, $j = 40$.<br><br><strong>Step 2: Analyze the second loop.</strong><br>The second loop is <code>for ( ; j > 1; j = j/2) sum++;</code> with initial $j = 40$ and $sum = 0$.<br>Tracing the execution step-by-step:<br>• Iteration 1: $j = 40 > 1$, $sum$ becomes $1$, $j$ updates to $\\lfloor 40/2 \\rfloor = 20$.<br>• Iteration 2: $j = 20 > 1$, $sum$ becomes $2$, $j$ updates to $\\lfloor 20/2 \\rfloor = 10$.<br>• Iteration 3: $j = 10 > 1$, $sum$ becomes $3$, $j$ updates to $\\lfloor 10/2 \\rfloor = 5$.<br>• Iteration 4: $j = 5 > 1$, $sum$ becomes $4$, $j$ updates to $\\lfloor 5/2 \\rfloor = 2$.<br>• Iteration 5: $j = 2 > 1$, $sum$ becomes $5$, $j$ updates to $\\lfloor 2/2 \\rfloor = 1$.<br>• Loop condition check: $j = 1 > 1$ evaluates to false, so the loop terminates.<br><br><strong>Step 3: Conclusion.</strong><br>The function returns $sum = 5$. Hence, option (B) is the correct answer.",
+  "videoUrl": null
+}

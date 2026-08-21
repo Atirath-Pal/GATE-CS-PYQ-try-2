@@ -1,0 +1,26 @@
+{
+  "id": 38,
+  "year": 2018,
+  "set": null,
+  "topics": [
+    "Mathematical Logic",
+    "Discrete Mathematics"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the first-order logic sentence<br><br>$$\\varphi \\equiv \\exists s \\exists t \\exists u \\forall v \\forall w \\forall x \\forall y \\psi(s, t, u, v, w, x, y)$$<br><br>where $\\psi(s, t, u, v, w, x, y)$ is a quantifier-free first-order logic formula using only predicate symbols, and possibly equality, but no function symbols. Suppose $\\varphi$ has a model with a universe containing 7 elements.<br><br>Which one of the following statements is necessarily true?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "There exists at least one model of $\\varphi$ with universe of size less than or equal to 3.",
+    "There exists no model of $\\varphi$ with universe of size less than or equal to 3.",
+    "There exists no model of $\\varphi$ with universe of size greater than 7.",
+    "Every model of $\\varphi$ has a universe of size equal to 7."
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Detailed Explanation:</strong><br><br><strong>1. Understanding the Prenex Form and Existential Witnesses</strong><br>The given formula is in Prenex Normal Form with an existential prefix followed by a universal prefix:<br>$$\\varphi \\equiv \\exists s \\exists t \\exists u \\forall v \\forall w \\forall x \\forall y \\psi(s, t, u, v, w, x, y)$$<br><br>We are given that $\\varphi$ is satisfied in a model $\\mathcal{M}$ with a universe $U$ of size $|U| = 7$. By the definition of existential quantification, there exist three specific elements in $U$—let us call them $s_0, t_0, u_0 \\in U$—such that for <em>every</em> choice of $v, w, x, y \\in U$, the quantifier-free predicate $\\psi(s_0, t_0, u_0, v, w, x, y)$ evaluates to <strong>True</strong>.<br><br><strong>2. Construction of a Submodel</strong><br>Let $U' = \\{s_0, t_0, u_0\\}$ be a subset of the original universe $U$.<br>• The cardinality of $U'$ satisfies $|U'| \\le 3$ (it is less than 3 if any of $s_0, t_0, u_0$ are equal to each other).<br>• Because $\\psi$ contains <strong>no function symbols</strong>, applying operations within $U'$ can never produce elements outside $U'$ (there are no functions $f(x)$ that could map elements out of $U'$).<br><br><strong>3. Preservation under Substructures</strong><br>Since $U' \\subseteq U$, any choice of elements for variables $v, w, x, y$ taken from $U'$ is also a choice taken from $U$.<br>Because $\\psi(s_0, t_0, u_0, v, w, x, y)$ holds for <em>all</em> $v, w, x, y \\in U$, it must hold for all $v, w, x, y \\in U'$.<br><br>Restricting the universe of $\\mathcal{M}$ to $U'$ yields a new model $\\mathcal{M}'$ with domain $U'$ where $s_0, t_0, u_0 \\in U'$ satisfy $\\varphi$. Hence, $\\mathcal{M}'$ is a valid model for $\\varphi$ with a universe size $|U'| \\le 3$.<br><br><strong>4. Theoretical Insight (Bernays–Schönfinkel Class)</strong><br>This problem is a classic instance of the <em>Bernays–Schönfinkel class</em> of formulas ($\\exists^* \\forall^*$ prefix with predicates and equality, but no function symbols). A key property of this class is that if an $\\exists^k \\forall^*$ sentence has a model, it always has a finite model of size at most $k$ (where $k$ is the number of existential quantifiers, here $k = 3$).<br><br><strong>5. Evaluation of Options</strong><br>• <strong>Option (A): Correct.</strong> We demonstrated that $U' = \\{s_0, t_0, u_0\\}$ forms a valid model of size $\\le 3$.<br>• <strong>Option (B): False.</strong> Contradicts (A).<br>• <strong>Option (C): False.</strong> We can easily construct models larger than 7 by adding elements to $U$ that satisfy the predicate identically.<br>• <strong>Option (D): False.</strong> Contradicted by the existence of a model of size $\\le 3$.",
+  "videoUrl": null
+}

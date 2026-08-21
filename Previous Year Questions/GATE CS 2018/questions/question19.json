@@ -1,0 +1,26 @@
+{
+  "id": 19,
+  "year": 2018,
+  "set": null,
+  "topics": [
+    "Operating Systems",
+    "Interrupts"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "The following are some events that occur after a device controller issues an interrupt while process $L$ is under execution.<br><br>(P) The processor pushes the process status of $L$ onto the control stack.<br>(Q) The processor finishes the execution of the current instruction.<br>(R) The processor executes the interrupt service routine.<br>(S) The processor pops the process status of $L$ from the control stack.<br>(T) The processor loads the new PC value based on the interrupt.<br><br>Which one of the following is the correct order in which the events above occur?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "QPTRS",
+    "PTRSQ",
+    "TRPQS",
+    "QTPRS"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step-by-step sequence of interrupt handling:</strong><br><br>1. <strong>Finish Current Instruction (Q):</strong> When an interrupt is signaled, the CPU completes the execution of the current instruction in process $L$.<br><br>2. <strong>Save Context (P):</strong> The process status (Program Counter, registers, status flags) of process $L$ is pushed onto the control stack to preserve execution state.<br><br>3. <strong>Load ISR Address into PC (T):</strong> The processor loads the starting address of the Interrupt Service Routine (ISR) into the Program Counter.<br><br>4. <strong>Execute ISR (R):</strong> The processor executes the Interrupt Service Routine to process the event.<br><br>5. <strong>Restore Context (S):</strong> Once the interrupt service routine finishes, the process status of $L$ is popped from the control stack back into the processor to resume execution of process $L$.<br><br>Therefore, the correct sequence is <strong>QPTRS</strong>.",
+  "videoUrl": null
+}

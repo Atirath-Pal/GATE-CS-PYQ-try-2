@@ -1,0 +1,22 @@
+{
+  "id": 59,
+  "year": 2018,
+  "set": null,
+  "topics": [
+    "Digital Logic",
+    "Boolean Algebra"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the minterm list form of a Boolean function $F$ given below.<br><br>$$F(P, Q, R, S) = \\sum m(0, 2, 5, 7, 9, 11) + d(3, 8, 10, 12, 14)$$<br><br>Here, $m$ denotes a minterm and $d$ denotes a don't care term. The number of essential prime implicants of the function $F$ is _____.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 3,
+    "max": 3
+  },
+  "explanation": "To find the number of essential prime implicants (EPIs), we plot the given minterms and don't care conditions on a 4-variable K-map for $F(P, Q, R, S)$:<br><br><strong>Minterms ($m$):</strong> $0, 2, 5, 7, 9, 11$<br><strong>Don't Cares ($d$):</strong> $3, 8, 10, 12, 14$<br><br><strong>Prime Implicants (PIs):</strong><br>1. $Q'S'$ covering cells $\\{0, 2, 8, 10\\}$<br>2. $PQ'$ covering cells $\\{8, 9, 10, 11\\}$<br>3. $P'QS$ covering cells $\\{5, 7\\}$<br>4. $Q'R$ covering cells $\\{2, 3, 10, 11\\}$<br>5. $PS'$ covering cells $\\{8, 10, 12, 14\\}$<br><br><strong>Essential Prime Implicants (EPIs):</strong><br>A Prime Implicant is essential if it covers at least one minterm that is not covered by any other Prime Implicant.<br>• Minterm $0$ is covered <strong>only</strong> by $Q'S'$.<br>• Minterm $5$ is covered <strong>only</strong> by $P'QS$.<br>• Minterm $9$ is covered <strong>only</strong> by $PQ'$.<br><br>These 3 EPIs ($Q'S'$, $P'QS$, and $PQ'$) also cover all other minterms ($2, 7, 11$). Therefore, the total number of essential prime implicants is <strong>3</strong>.",
+  "videoUrl": null
+}

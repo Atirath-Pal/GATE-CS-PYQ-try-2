@@ -1,0 +1,25 @@
+{
+  "id": 36,
+  "year": "2018",
+  "set": null,
+  "topics": [
+    "Linear Algebra"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider a matrix $P$ whose only eigenvectors are the multiples of $\\begin{bmatrix} 1 \\\\ 4 \\end{bmatrix}$.<br><br>Consider the following statements.<br><br>(I) $P$ does not have an inverse<br>(II) $P$ has a repeated eigenvalue<br>(III) $P$ cannot be diagonalized<br><br>Which one of the following options is correct?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Only I and III are necessarily true",
+    "Only II is necessarily true",
+    "Only I and II are necessarily true",
+    "Only II and III are necessarily true"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Step 1: Analyze the given matrix $P$.</strong><br>Matrix $P$ is a $2 \\times 2$ matrix because its eigenvector is a 2-dimensional vector $\\begin{bmatrix} 1 \\\\ 4 \\end{bmatrix}$. The problem states that its only eigenvectors are scalar multiples of this vector, meaning $P$ has only 1 linearly independent eigenvector.<br><br><strong>Step 2: Evaluate Statement (I) - $P$ does not have an inverse.</strong><br>A matrix is non-invertible if and only if 0 is an eigenvalue. However, $P$ can have non-zero eigenvalues (for example, $P = \\begin{bmatrix} 2 & 1 \\\\ 0 & 2 \\end{bmatrix}$ is invertible and has a single linearly independent eigenvector). Thus, $P$ can be invertible, making Statement (I) not necessarily true.<br><br><strong>Step 3: Evaluate Statement (II) - $P$ has a repeated eigenvalue.</strong><br>If a $2 \\times 2$ matrix had two distinct eigenvalues, it would necessarily have 2 linearly independent eigenvectors. Since $P$ has only 1 linearly independent eigenvector, it must have a repeated eigenvalue. Statement (II) is necessarily true.<br><br><strong>Step 4: Evaluate Statement (III) - $P$ cannot be diagonalized.</strong><br>A matrix of order $n$ is diagonalizable if and only if it has $n$ linearly independent eigenvectors. For matrix $P$, $n = 2$, but it only has 1 linearly independent eigenvector. Therefore, $P$ cannot be diagonalized. Statement (III) is necessarily true.<br><br>Hence, only Statements (II) and (III) are necessarily true.",
+  "videoUrl": null
+}

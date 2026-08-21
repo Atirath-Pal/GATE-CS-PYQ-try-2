@@ -1,0 +1,22 @@
+{
+  "id": 29,
+  "year": 2018,
+  "set": null,
+  "topics": [
+    "Discrete Mathematics",
+    "Group Theory"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Let $G$ be a finite group on $84$ elements. The size of a largest possible proper subgroup of $G$ is __________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 42,
+    "max": 42
+  },
+  "explanation": "<strong>By Lagrange's Theorem</strong>, the order (size) of any subgroup $H$ of a finite group $G$ must divide the order of $G$, i.e., $|H|$ divides $|G|$.<br><br>Given that $|G| = 84$.<br><br>A <strong>proper subgroup</strong> $H$ is a subgroup such that $H \\neq G$. Thus, $|H| < 84$.<br><br>The divisors of $84$ are $1, 2, 3, 4, 6, 7, 12, 14, 21, 28, 42,$ and $84$.<br><br>The largest proper divisor of $84$ is $42$. Therefore, the size of the largest possible proper subgroup of $G$ is $42$.",
+  "videoUrl": null
+}

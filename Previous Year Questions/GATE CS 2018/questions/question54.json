@@ -1,0 +1,22 @@
+{
+  "id": 54,
+  "year": 2018,
+  "set": null,
+  "topics": [
+    "Probability",
+    "Bayes' Theorem"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider Guwahati (G) and Delhi (D) whose temperatures can be classified as high ($H$), medium ($M$) and low ($L$). Let $P(H_G)$ denote the probability that Guwahati has high temperature. Similarly, $P(M_G)$ and $P(L_G)$ denotes the probability of Guwahati having medium and low temperatures respectively. Similarly, we use $P(H_D)$, $P(M_D)$ and $P(L_D)$ for Delhi.<br><br>The following table gives the conditional probabilities for Delhi's temperature given Guwahati's temperature.<br><br><div style=\"overflow-x: auto; margin: 12px 0;\"><table style=\"border-collapse: collapse; border: 1px solid #ffffff; text-align: center;\"><thead><tr><th style=\"border: 1px solid #ffffff; padding: 6px 12px;\"></th><th style=\"border: 1px solid #ffffff; padding: 6px 12px;\">$H_D$</th><th style=\"border: 1px solid #ffffff; padding: 6px 12px;\">$M_D$</th><th style=\"border: 1px solid #ffffff; padding: 6px 12px;\">$L_D$</th></tr></thead><tbody><tr><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">$H_G$</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">0.40</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">0.48</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">0.12</td></tr><tr><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">$M_G$</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">0.10</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">0.65</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">0.25</td></tr><tr><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">$L_G$</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">0.01</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">0.50</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">0.49</td></tr></tbody></table></div><br>Consider the first row in the table above. The first entry denotes that if Guwahati has high temperature ($H_G$) then the probability of Delhi also having a high temperature ($H_D$) is 0.40; i.e., $P(H_D|H_G)=0.40$. Similarly, the next two entries are $P(M_D|H_G)=0.48$ and $P(L_D|H_G)=0.12$. Similarly for the other rows.<br><br>If it is known that $P(H_G)=0.2$, $P(M_G)=0.5$, and $P(L_G)=0.3$, then the probability (correct to two decimal places) that Guwahati has high temperature given that Delhi has high temperature is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 0.60,
+    "max": 0.62
+  },
+  "explanation": "We need to find $P(H_G|H_D)$. Using Bayes' theorem,<br><br><strong>Step 1:</strong> $P(H_G|H_D)=\\frac{P(H_D|H_G)P(H_G)}{P(H_D)}$.<br><br><strong>Step 2:</strong> Calculate $P(H_D)$ using the law of total probability:<br>$P(H_D)=P(H_D|H_G)P(H_G)+P(H_D|M_G)P(M_G)+P(H_D|L_G)P(L_G)$.<br><br>$=0.40(0.20)+0.10(0.50)+0.01(0.30)$<br>$=0.08+0.05+0.003=0.133$.<br><br><strong>Step 3:</strong> Therefore,<br>$P(H_G|H_D)=\\frac{0.40(0.20)}{0.133}=\\frac{0.08}{0.133}\\approx0.6015$.<br><br><strong>Step 4:</strong> Correct to two decimal places, the probability is $0.60$. Hence the acceptable NAT answer range is $0.60$ to $0.62$.",
+  "videoUrl": null
+}

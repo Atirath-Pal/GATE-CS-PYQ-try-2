@@ -1,0 +1,21 @@
+{
+  "id": 13,
+  "year": 2018,
+  "set": null,
+  "topics": ["Data Structures", "Linked List"],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "A queue is implemented using a non-circular singly linked list. The queue has a head pointer and a tail pointer, as shown in the figure. Let $n$ denote the number of nodes in the queue. Let <code>enqueue</code> be implemented by inserting a new node at the head, and <code>dequeue</code> be implemented by deletion of a node from the tail.<br><br>Which one of the following is the time complexity of the most time-efficient implementation of <code>enqueue</code> and <code>dequeue</code>, respectively, for this data structure?",
+  "assetImage": "question13.png",
+  "codeBlock": null,
+  "options": [
+    "$\\Theta(1), \\Theta(1)$",
+    "$\\Theta(1), \\Theta(n)$",
+    "$\\Theta(n), \\Theta(1)$",
+    "$\\Theta(n), \\Theta(n)$"
+  ],
+  "answer": ["B"],
+  "explanation": "<strong>Enqueue operation:</strong><br>To enqueue an element, a new node is inserted at the head of the singly linked list.<br>1. Create a new node.<br>2. Set the next pointer of the new node to point to the current head node.<br>3. Update the head pointer to point to the new node.<br>Since this operation takes constant time regardless of $n$, the time complexity is $\\Theta(1)$.<br><br><strong>Dequeue operation:</strong><br>To dequeue an element, the node at the tail must be deleted.<br>1. To remove the tail node and update the tail pointer, we need a reference to the node immediately preceding the tail (the $(n-1)$-th node).<br>2. Because this is a singly linked list without backward pointers, we cannot traverse backward from the tail pointer.<br>3. We must start from the head pointer and traverse through $(n-1)$ nodes to reach the node before the tail, which takes $O(n)$ time.<br>4. After reaching the $(n-1)$-th node, its next pointer is set to <code>NULL</code> and the tail pointer is updated.<br>Thus, deleting the tail node takes $\\Theta(n)$ time.<br><br>Therefore, the time complexity of <code>enqueue</code> and <code>dequeue</code> are $\\Theta(1)$ and $\\Theta(n)$, respectively.",
+  "videoUrl": null
+}

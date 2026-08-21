@@ -1,0 +1,26 @@
+{
+  "id": 16,
+  "year": 2018,
+  "set": null,
+  "topics": [
+    "Theory of Computation",
+    "Finite Automata"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Let $N$ be an NFA with $n$ states. Let $k$ be the number of states of a minimal DFA which is equivalent to $N$. Which one of the following is necessarily true?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$k \\ge 2^n$",
+    "$k \\ge n$",
+    "$k \\le n^2$",
+    "$k \\le 2^n$"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Step 1: Subset Construction Method</strong><br>An NFA with $n$ states can be converted into an equivalent DFA using the subset construction method. Each state in the equivalent DFA represents a subset of states of the NFA.<br><br><strong>Step 2: Upper Bound on States</strong><br>Since a set with $n$ elements has a power set of size $2^n$, any equivalent DFA constructed from an $n$-state NFA can have at most $2^n$ states.<br><br><strong>Step 3: Minimal DFA Bound</strong><br>Since the minimal DFA has at most as many states as any other equivalent DFA, the number of states $k$ in the minimal DFA must satisfy $k \\le 2^n$.",
+  "videoUrl": null
+}

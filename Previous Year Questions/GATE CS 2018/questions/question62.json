@@ -1,0 +1,22 @@
+{
+  "id": 62,
+  "year": 2018,
+  "set": null,
+  "topics": [
+    "Theory of Computation",
+    "Formal Languages & Automata"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Given a language $L$, define $L^i$ as follows:<br><br>$$L^0 = \\{\\varepsilon\\}$$<br>$$L^i = L^{i-1} \\cdot L \\quad \\text{for all } i > 0$$<br><br>The order of a language $L$ is defined as the smallest $k$ such that $L^k = L^{k+1}$.<br>Consider the language $L_1$ (over alphabet 0) accepted by the following automaton.<br><br>The order of $L_1$ is ________.",
+  "assetImage": "question62.png",
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 2,
+    "max": 2
+  },
+  "explanation": "<strong>Step 1: Identify the language $L_1$ accepted by the given automaton.</strong><br>From the finite state automaton:<br>- The initial state $q_0$ is an accepting state, so the empty string $\\varepsilon$ is in $L_1$.<br>- From $q_0$, on input $0$, it reaches another accepting state $q_1$, so string $0 \\in L_1$.<br>- From $q_1$, every additional pair of $0$'s returns back to $q_1$. Thus, all odd length strings of $0$'s are accepted.<br><br>So, $L_1 = \\{\\varepsilon, 0, 0^3, 0^5, 0^7, \\dots\\} = \\{\\varepsilon\\} \\cup \\{0^n \\mid n \\ge 1 \\text{ and } n \\text{ is odd}\\}$.<br><br><strong>Step 2: Calculate the powers of $L_1$.</strong><br>- $L_1^0 = \\{\\varepsilon\\}$<br>- $L_1^1 = L_1 = \\{\\varepsilon, 0, 0^3, 0^5, 0^7, \\dots\\}$<br>- $L_1^2 = L_1 \\cdot L_1 = \\{\\varepsilon, 0, 0^2, 0^3, 0^4, 0^5, \\dots\\} = 0^*$ (all non-negative powers of $0$).<br>- $L_1^3 = L_1^2 \\cdot L_1 = 0^* \\cdot L_1 = 0^*$.<br><br><strong>Step 3: Determine the order of $L_1$.</strong><br>We see that $L_1^2 = L_1^3 = 0^*$.<br>The smallest non-negative integer $k$ such that $L_1^k = L_1^{k+1}$ is $k = 2$.<br><br>Therefore, the order of $L_1$ is <strong>2</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,21 @@
+{
+  "id": 43,
+  "year": 2018,
+  "set": null,
+  "topics": ["Digital Logic", "Number Representation"],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the unsigned 8-bit fixed point binary number representation below,<br><br>$$b_7 b_6 b_5 b_4 b_3 . b_2 b_1 b_0$$<br><br>where the position of the binary point is between $b_3$ and $b_2$. Assume $b_7$ is the most significant bit. Some of the decimal numbers listed below <strong>cannot</strong> be represented <strong>exactly</strong> in the above representation:<br>(i) $31.500$<br>(ii) $0.875$<br>(iii) $12.100$<br>(iv) $3.001$<br><br>Which one of the following statements is true?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "None of (i), (ii), (iii), (iv) can be exactly represented",
+    "Only (ii) cannot be exactly represented",
+    "Only (iii) and (iv) cannot be exactly represented",
+    "Only (i) and (ii) cannot be exactly represented"
+  ],
+  "answer": ["C"],
+  "explanation": "In the given 8-bit representation $b_7 b_6 b_5 b_4 b_3 . b_2 b_1 b_0$:<br>• The integer part uses 5 bits ($b_7$ to $b_3$), which can represent integers up to $2^5 - 1 = 31$.<br>• The fractional part uses 3 bits ($b_2, b_1, b_0$), where the resolution is $2^{-3} = 0.125$. Thus, a fractional part must be an exact multiple of $0.125$ to be represented.<br><br>Evaluating each number:<br><strong>(i) 31.500:</strong> Integer $31 \\le 31$ and fraction $0.500 = 4 \\times 0.125$. Can be represented exactly ($11111.100_2$).<br><strong>(ii) 0.875:</strong> Integer $0 \\le 31$ and fraction $0.875 = 7 \\times 0.125$. Can be represented exactly ($00000.111_2$).<br><strong>(iii) 12.100:</strong> The fractional part $0.100$ is not a multiple of $0.125$, so it cannot be represented exactly.<br><strong>(iv) 3.001:</strong> The fractional part $0.001$ is not a multiple of $0.125$, so it cannot be represented exactly.<br><br>Therefore, <strong>only (iii) and (iv) cannot be exactly represented</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,22 @@
+{
+  "id": 60,
+  "year": 2018,
+  "set": null,
+  "topics": [
+    "Computer Organization and Architecture",
+    "Pipelining"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "The instruction pipeline of a RISC processor has the following stages: Instruction Fetch (IF), Instruction Decode (ID), Operand Fetch (OF), Perform Operation (PO) and Writeback (WB). The IF, ID, OF and WB stages take 1 clock cycle each for every instruction. Consider a sequence of 100 instructions. In the PO stage, 40 instructions take 3 clock cycles each, 35 instructions take 2 clock cycles each, and the remaining 25 instructions take 1 clock cycle each. Assume that there are no data hazards and no control hazards.<br><br>The number of clock cycles required for completion of execution of the sequence of instructions is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 219,
+    "max": 219
+  },
+  "explanation": "<strong>Step-by-step Solution:</strong><br><br>1. <strong>Identify Stage Delays:</strong><br>The pipeline consists of 5 stages: IF, ID, OF, PO, and WB.<br>Stages before PO (IF, ID, OF): 3 stages, each taking 1 cycle.<br>Stage after PO (WB): 1 stage, taking 1 cycle.<br><br>2. <strong>Calculate Cycles in the Bottleneck (PO) Stage:</strong><br>Total cycles spent in PO = $(40 \\times 3) + (35 \\times 2) + (25 \\times 1) = 120 + 70 + 25 = 215$ clock cycles.<br><br>3. <strong>Calculate Total Execution Time:</strong><br>The first instruction takes 3 clock cycles (IF, ID, OF) to reach the PO stage.<br>All 100 instructions sequentially flow through the PO stage taking a combined 215 cycles.<br>The last instruction requires 1 final clock cycle (WB) to exit the pipeline.<br><br>Total clock cycles required = $3 + 215 + 1 = 219$.",
+  "videoUrl": null
+}

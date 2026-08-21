@@ -1,0 +1,26 @@
+{
+  "id": 40,
+  "year": 2018,
+  "set": null,
+  "topics": [
+    "Data Structures",
+    "Graph Theory"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Let $G$ be a simple undirected graph. Let $T_D$ be a depth first search tree of $G$. Let $T_B$ be a breadth first search tree of $G$. Consider the following statements.<br><br>(I) No edge of $G$ is a cross edge with respect to $T_D$. (A cross edge in $G$ is between two nodes neither of which is an ancestor of the other in $T_D$.)<br>(II) For every edge $(u,v)$ of $G$, if $u$ is at depth $i$ and $v$ is at depth $j$ in $T_B$, then $|i - j| = 1$.<br><br>Which of the statements above must necessarily be true?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "I only",
+    "II only",
+    "Both I and II",
+    "Neither I nor II"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Statement (I):</strong><br>In a Depth First Search (DFS) tree $T_D$ of a simple undirected graph $G$, edges can only be tree edges or back edges. There are no cross edges in an undirected graph's DFS tree because if an edge exists between two vertices, one must be an ancestor of the other in the tree. Thus, Statement (I) is <strong>TRUE</strong>.<br><br><strong>Statement (II):</strong><br>In a Breadth First Search (BFS) tree $T_B$ of an undirected graph, any edge $(u,v)$ of $G$ can connect vertices either at the same level ( where depth $i = j$, so $|i - j| = 0$) or at adjacent levels (where $|i - j| = 1$). Therefore, $|i - j| \\le 1$ holds for all edges, meaning $|i - j| = 1$ is not always true. Thus, Statement (II) is <strong>FALSE</strong>.<br><br>Hence, only Statement (I) is necessarily true.",
+  "videoUrl": null
+}

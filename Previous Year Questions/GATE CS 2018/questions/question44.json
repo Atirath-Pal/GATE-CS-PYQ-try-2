@@ -1,0 +1,26 @@
+{
+  "id": 44,
+  "year": 2018,
+  "set": null,
+  "topics": [
+    "Computer Organization and Architecture",
+    "Cache Memory"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "The size of the physical address space of a processor is $2^P$ bytes. The word length is $2^W$ bytes. The capacity of cache memory is $2^N$ bytes. The size of each cache block is $2^M$ words. For a $K$-way set-associative cache memory, the length (in number of bits) of the tag field is",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$P - N - \\log_2 K$",
+    "$P - N + \\log_2 K$",
+    "$P - N - M - W - \\log_2 K$",
+    "$P - N - M - W + \\log_2 K$"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step 1: Total Physical Address Bits</strong><br>Size of physical address space = $2^P$ bytes<br>Physical Address bits = $P$<br><br><strong>Step 2: Block Size and Offset Bits</strong><br>Word length = $2^W$ bytes<br>Block size = $2^M \\text{ words} = 2^M \\times 2^W = 2^{M+W} \\text{ bytes}$<br>Block offset bits = $M + W$<br><br><strong>Step 3: Number of Sets and Set Index Bits</strong><br>Cache capacity = $2^N$ bytes<br>Number of blocks in cache = $\\frac{\\text{Cache Capacity}}{\\text{Block Size}} = \\frac{2^N}{2^{M+W}} = 2^{N - M - W}$<br>Number of sets in $K$-way set-associative cache = $\\frac{2^{N - M - W}}{K} = 2^{N - M - W - \\log_2 K}$<br>Set Index bits = $N - M - W - \\log_2 K$<br><br><strong>Step 4: Tag Bits Calculation</strong><br>Physical Address = Tag bits + Set Index bits + Block Offset bits<br>$P = \\text{Tag} + (N - M - W - \\log_2 K) + (M + W)$<br>$P = \\text{Tag} + N - \\log_2 K$<br>$\\text{Tag} = P - N + \\log_2 K$",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 22,
+  "year": 2018,
+  "set": null,
+  "topics": [
+    "Database Management System",
+    "SQL"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the following two tables and four queries in SQL.<br><br><div style=\"text-align: center; font-size: 14px; margin: 12px 0;\">Book (<u>isbn</u>, bname), Stock (<u>isbn</u>, copies)</div><br><div style=\"overflow-x: auto; margin: 12px 0;\"><table style=\"border-collapse: collapse; border: none; font-size: 13px;\"><tbody><tr><td style=\"border: none; padding: 6px 24px 6px 0; vertical-align: top; font-weight: bold; white-space: nowrap;\">Query 1:</td><td style=\"border: none; padding: 6px 0; vertical-align: top; font-family: monospace; white-space: pre;\">SELECT B.isbn, S.copies\nFROM Book B INNER JOIN Stock S\nON B.isbn = S.isbn;</td></tr><tr><td style=\"border: none; padding: 6px 24px 6px 0; vertical-align: top; font-weight: bold; white-space: nowrap;\">Query 2:</td><td style=\"border: none; padding: 6px 0; vertical-align: top; font-family: monospace; white-space: pre;\">SELECT B.isbn, S.copies\nFROM Book B LEFT OUTER JOIN Stock S\nON B.isbn = S.isbn;</td></tr><tr><td style=\"border: none; padding: 6px 24px 6px 0; vertical-align: top; font-weight: bold; white-space: nowrap;\">Query 3:</td><td style=\"border: none; padding: 6px 0; vertical-align: top; font-family: monospace; white-space: pre;\">SELECT B.isbn, S.copies\nFROM Book B RIGHT OUTER JOIN Stock S\nON B.isbn = S.isbn;</td></tr><tr><td style=\"border: none; padding: 6px 24px 6px 0; vertical-align: top; font-weight: bold; white-space: nowrap;\">Query 4:</td><td style=\"border: none; padding: 6px 0; vertical-align: top; font-family: monospace; white-space: pre;\">SELECT B.isbn, S.copies\nFROM Book B FULL OUTER JOIN Stock S\nON B.isbn = S.isbn;</td></tr></tbody></table></div><br>Which one of the queries above is certain to have an output that is a superset of the outputs of the other three queries?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Query 1",
+    "Query 2",
+    "Query 3",
+    "Query 4"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Inner Join (Query 1):</strong> Returns rows where there is a match in both tables.<br><br><strong>Left Outer Join (Query 2):</strong> Returns all rows from the left table (Book) along with matching rows from the right table (Stock).<br><br><strong>Right Outer Join (Query 3):</strong> Returns all rows from the right table (Stock) along with matching rows from the left table (Book).<br><br><strong>Full Outer Join (Query 4):</strong> Returns all rows when there is a match in either left or right table, including unmatched rows from both tables.<br><br>Because Full Outer Join encompasses all matching tuples (Inner Join) as well as all unmatched tuples from both sides (Left Outer Join and Right Outer Join), the result of <strong>Query 4</strong> is guaranteed to be a superset of the outputs of Query 1, Query 2, and Query 3.",
+  "videoUrl": null
+}

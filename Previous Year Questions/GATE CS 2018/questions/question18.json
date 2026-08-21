@@ -1,0 +1,26 @@
+{
+  "id": 18,
+  "year": 2018,
+  "set": null,
+  "topics": [
+    "Compiler Design",
+    "Phases of Compiler"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Which one of the following statements is FALSE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Context-free grammar can be used to specify both lexical and syntax rules.",
+    "Type checking is done before parsing.",
+    "High-level language programs can be translated to different Intermediate Representations.",
+    "Arguments to a function can be passed using the program stack."
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Analysis of each statement:</strong><br><br><strong>Statement (A):</strong> Context-free grammar (CFG) can be used to specify both lexical and syntax rules.<br><em>Status: TRUE.</em> Regular languages are a subset of context-free languages. Since regular grammars describe lexical structures and CFGs are more expressive, a CFG can specify both lexical and syntax rules.<br><br><strong>Statement (B):</strong> Type checking is done before parsing.<br><em>Status: FALSE.</em> Type checking is a component of <strong>Semantic Analysis</strong>, which is executed <strong>after</strong> Syntax Analysis (Parsing).<br><br><strong>Statement (C):</strong> High-level language programs can be translated to different Intermediate Representations.<br><em>Status: TRUE.</em> Intermediate representations (IR) come in various formats such as Abstract Syntax Trees (AST), Postfix notation, and Three-Address Code (TAC).<br><br><strong>Statement (D):</strong> Arguments to a function can be passed using the program stack.<br><em>Status: TRUE.</em> Calling conventions commonly push function parameters onto the runtime program activation stack.<br><br>Therefore, statement <strong>(B)</strong> is the FALSE statement.",
+  "videoUrl": null
+}

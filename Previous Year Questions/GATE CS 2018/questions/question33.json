@@ -1,0 +1,22 @@
+{
+  "id": 33,
+  "year": "2018",
+  "set": null,
+  "topics": [
+    "Computer Organization and Architecture",
+    "Memory Hierarchy"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "A $32$-bit wide main memory unit with a capacity of $1\\text{ GB}$ is built using $256\\text{M} \\times 4$-bit DRAM chips. The number of rows of memory cells in the DRAM chip is $2^{14}$. The time taken to perform one refresh operation is $50\\text{ nanoseconds}$. The refresh period is $2\\text{ milliseconds}$. The percentage (rounded to the closest integer) of the time available for performing the memory read/write operations in the main memory unit is _________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 59.0,
+    "max": 60.0
+  },
+  "explanation": "<strong>Step-by-step Solution:</strong><br><br><strong>1. Identify given parameter values:</strong><br>- Number of rows in DRAM chip = $2^{14} = 16384$ rows.<br>- Time to refresh one row = $50\\text{ ns} = 50 \\times 10^{-9}\\text{ seconds}$.<br>- Refresh period = $2\\text{ ms} = 2 \\times 10^{-3}\\text{ seconds}$.<br><br><strong>2. Calculate total refresh time per refresh period:</strong><br>$\\text{Total Refresh Time} = 16384 \\times 50\\text{ ns} = 819,200\\text{ ns} = 0.8192\\text{ ms}$.<br><br><strong>3. Calculate percentage of time spent in refresh:</strong><br>$\\text{Refresh Overhead} = \\left( \\frac{0.8192\\text{ ms}}{2\\text{ ms}} \\right) \\times 100\\% = 40.96\\%$.<br><br><strong>4. Calculate percentage of time available for Read/Write:</strong><br>$\\text{Available Time} = 100\\% - 40.96\\% = 59.04\\%$.<br><br>Rounding $59.04\\%$ to the closest integer yields <strong>$59$</strong>.",
+  "videoUrl": null
+}

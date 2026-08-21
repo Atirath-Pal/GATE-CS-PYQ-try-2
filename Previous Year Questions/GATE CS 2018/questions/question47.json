@@ -1,0 +1,26 @@
+{
+  "id": 47,
+  "year": "2018",
+  "set": null,
+  "topics": [
+    "Compiler Design",
+    "Lexical Analysis"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "A lexical analyzer uses the following patterns to recognize three tokens $T_1, T_2$, and $T_3$ over the alphabet $\\{a,b,c\\}$.<br><br>$$T_1: a?(b|c)^*a$$<br>$$T_2: b?(a|c)^*b$$<br>$$T_3: c?(b|a)^*c$$<br><br>Note that ‘$x?$’ means 0 or 1 occurrence of the symbol $x$. Note also that the analyzer outputs the token that matches the longest possible prefix.<br><br>If the string $bbaacabc$ is processed by the analyzer, which one of the following is the sequence of tokens it outputs?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$T_1T_2T_3$",
+    "$T_1T_1T_3$",
+    "$T_2T_1T_3$",
+    "$T_3T_3$"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "To determine the sequence of tokens output by the lexical analyzer, we use the <strong>longest prefix matching</strong> rule on the input string $bbaacabc$.<br><br><strong>1. First Token Matching (Input: $bbaacabc$)</strong><br>• <strong>$T_1 = a?(b|c)^*a$:</strong> Matches $bba$ (length 3).<br>• <strong>$T_2 = b?(a|c)^*b$:</strong> Matches $bb$ (length 2).<br>• <strong>$T_3 = c?(b|a)^*c$:</strong> Matches $bbaac$ (length 5).<br>The longest matching prefix is $bbaac$ of length 5, which corresponds to token <strong>$T_3$</strong>.<br><br><strong>2. Second Token Matching (Remaining Input: $abc$)</strong><br>• <strong>$T_1 = a?(b|c)^*a$:</strong> No valid match.<br>• <strong>$T_2 = b?(a|c)^*b$:</strong> Matches $ab$ (length 2).<br>• <strong>$T_3 = c?(b|a)^*c$:</strong> Matches $abc$ (length 3).<br>The longest matching prefix is $abc$ of length 3, which corresponds to token <strong>$T_3$</strong>.<br><br>Thus, the sequence of tokens output is <strong>$T_3T_3$</strong>.",
+  "videoUrl": null
+}

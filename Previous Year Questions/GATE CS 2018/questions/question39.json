@@ -1,0 +1,26 @@
+{
+  "id": 39,
+  "year": 2018,
+  "set": null,
+  "topics": [
+    "Programming and Data Structures",
+    "C Programming"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the following C program:<br><br>The output of the program above is",
+  "assetImage": null,
+  "codeBlock": "#include &lt;stdio.h&gt;\n\nvoid fun1(char *s1, char *s2){\n    char *tmp;\n    tmp = s1;\n    s1 = s2;\n    s2 = tmp;\n}\nvoid fun2(char **s1, char **s2){\n    char *tmp;\n    tmp = *s1;\n    *s1 = *s2;\n    *s2 = tmp;\n}\nint main(){\n    char *str1 = \"Hi\", *str2 = \"Bye\";\n    fun1(str1, str2);    printf(\"%s %s \", str1, str2);\n    fun2(&str1, &str2);  printf(\"%s %s\", str1, str2);\n    return 0;\n}",
+  "options": [
+    "Hi Bye Bye Hi",
+    "Hi Bye Hi Bye",
+    "Bye Hi Hi Bye",
+    "Bye Hi Bye Hi"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step 1: Execution of fun1(str1, str2)</strong><br>In C, arguments are passed by value. Function <code>fun1</code> receives local copies of the pointer variables <code>str1</code> and <code>str2</code>. Swapping <code>s1</code> and <code>s2</code> inside <code>fun1</code> modifies only those local pointer copies and leaves <code>str1</code> and <code>str2</code> in <code>main()</code> untouched.<br>Therefore, the first <code>printf</code> statement prints: <code>Hi Bye </code>.<br><br><strong>Step 2: Execution of fun2(&str1, &str2)</strong><br>Function <code>fun2</code> receives double pointers holding the memory addresses of <code>str1</code> and <code>str2</code>. Dereferencing and swapping <code>*s1</code> and <code>*s2</code> inside <code>fun2</code> alters the actual pointers in <code>main()</code>, so <code>str1</code> now points to <code>\"Bye\"</code> and <code>str2</code> points to <code>\"Hi\"</code>.<br>Therefore, the second <code>printf</code> statement prints: <code>Bye Hi</code>.<br><br><strong>Conclusion:</strong><br>Combining both outputs gives <code>Hi Bye Bye Hi</code>, which matches Option (A).",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 9,
+  "year": "2018",
+  "set": null,
+  "topics": [
+    "General Aptitude",
+    "Geometry"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "In the figure below, $\\angle DEC + \\angle BFC$ is equal to _____________.",
+  "assetImage": "question9.png",
+  "codeBlock": null,
+  "options": [
+    "$\\angle BCD - \\angle BAD$",
+    "$\\angle BAD + \\angle BCF$",
+    "$\\angle BAD + \\angle BCD$",
+    "$\\angle CBA + \\angle ADC$"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step 1: Apply the Exterior Angle Theorem to $\\triangle ADF$.</strong><br>In $\\triangle ADF$, extending side $AD$ to point $E$ forms the exterior angle $\\angle EDC$.<br>By the exterior angle theorem, an exterior angle equals the sum of its opposite interior angles:<br>$\\angle EDC = \\angle BAD + \\angle BFC$<br><br><strong>Step 2: Apply the Exterior Angle Theorem to $\\triangle ECD$.</strong><br>In $\\triangle ECD$, extending side $EC$ to point $B$ forms the exterior angle $\\angle BCD$.<br>By the exterior angle theorem:<br>$\\angle BCD = \\angle DEC + \\angle EDC$<br><br><strong>Step 3: Substitute and simplify.</strong><br>Substituting $\\angle EDC$ from Step 1 into the equation from Step 2:<br>$\\angle BCD = \\angle DEC + (\\angle BAD + \\angle BFC)$<br><br>Rearranging the equation to solve for $\\angle DEC + \\angle BFC$ gives:<br>$\\angle DEC + \\angle BFC = \\angle BCD - \\angle BAD$<br><br>Therefore, the correct option is <strong>(A)</strong>.",
+  "videoUrl": null
+}

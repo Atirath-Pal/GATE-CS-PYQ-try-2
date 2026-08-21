@@ -1,0 +1,19 @@
+{
+  "id": 26,
+  "year": 2018,
+  "set": null,
+  "topics": ["Engineering Mathematics", "Calculus"],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "The value of $\\int_{0}^{\\pi/4} x \\cos(x^2)dx$ correct to three decimal places (assuming that $\\pi = 3.14$ ) is _______.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 0.27,
+    "max": 0.30
+  },
+  "explanation": "<strong>Given Integral:</strong><br>$I = \\int_{0}^{\\pi/4} x \\cos(x^2) dx$<br><br><strong>Step 1: Substitution</strong><br>Let $t = x^2$, then $dt = 2x dx \\implies x dx = \\frac{dt}{2}$.<br><br><strong>Step 2: Change of Limits</strong><br>When $x = 0$, $t = 0$.<br>When $x = \\frac{\\pi}{4}$, $t = \\left(\\frac{\\pi}{4}\\right)^2 = \\frac{\\pi^2}{16}$.<br><br><strong>Step 3: Integration</strong><br>$I = \\frac{1}{2} \\int_{0}^{\\pi^2/16} \\cos(t) dt = \\frac{1}{2} [\\sin(t)]_{0}^{\\pi^2/16} = \\frac{1}{2} \\sin\\left(\\frac{\\pi^2}{16}\\right)$<br><br><strong>Step 4: Calculation</strong><br>Given $\\pi = 3.14$,<br>$\\frac{\\pi^2}{16} = \\frac{(3.14)^2}{16} = \\frac{9.8596}{16} \\approx 0.616225 \\text{ radians}$<br><br>$\\sin(0.616225) \\approx 0.57796$<br><br>$I = \\frac{1}{2} \\times 0.57796 \\approx 0.289$<br><br>Hence, the answer is approximately <strong>0.289</strong> (acceptable range: 0.27 to 0.30).",
+  "videoUrl": null
+}

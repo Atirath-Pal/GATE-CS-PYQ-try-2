@@ -1,0 +1,22 @@
+{
+  "id": 61,
+  "year": 2018,
+  "set": null,
+  "topics": [
+    "Computer Organization",
+    "Instruction Format"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "A processor has 16 integer registers (R0, R1, .. , R15) and 64 floating point registers (F0, F1,.... , F63). It uses a 2-byte instruction format. There are four categories of instructions: Type-1, Type-2, Type-3, and Type-4. Type-1 category consists of four instructions, each with 3 integer register operands (3Rs). Type-2 category consists of eight instructions, each with 2 floating point register operands (2Fs). Type-3 category consists of fourteen instructions, each with one integer register operand and one floating point register operand (1R+1F). Type-4 category consists of N instructions, each with a floating point register operand (1F).<br><br>The maximum value of N is _________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 32,
+    "max": 32
+  },
+  "explanation": "<strong>Step 1: Calculate total possible instruction space.</strong><br>Instruction length = $2 \\text{ bytes} = 16 \\text{ bits}$.<br>Total combinations = $2^{16} = 65536$.<br><br><strong>Step 2: Determine register representation bits.</strong><br>Bits needed for an integer register (16 total) = $\\log_2(16) = 4 \\text{ bits}$.<br>Bits needed for a floating-point register (64 total) = $\\log_2(64) = 6 \\text{ bits}$.<br><br><strong>Step 3: Calculate combinations consumed by each category.</strong><br>• <strong>Type-1 (4 instructions, 3Rs):</strong><br>Operand bits = $3 \\times 4 = 12 \\text{ bits}$.<br>Combinations per instruction = $2^{12} = 4096$.<br>Total combinations = $4 \\times 4096 = 16384$.<br><br>• <strong>Type-2 (8 instructions, 2Fs):</strong><br>Operand bits = $2 \\times 6 = 12 \\text{ bits}$.<br>Combinations per instruction = $2^{12} = 4096$.<br>Total combinations = $8 \\times 4096 = 32768$.<br><br>• <strong>Type-3 (14 instructions, 1R + 1F):</strong><br>Operand bits = $4 + 6 = 10 \\text{ bits}$.<br>Combinations per instruction = $2^{10} = 1024$.<br>Total combinations = $14 \\times 1024 = 14336$.<br><br><strong>Step 4: Calculate remaining combinations for Type-4.</strong><br>Total used = $16384 + 32768 + 14336 = 63488$.<br>Remaining combinations = $65536 - 63488 = 2048$.<br><br><strong>Step 5: Determine maximum value of N.</strong><br>Type-4 instruction has 1 floating-point register operand = $6 \\text{ bits}$.<br>Combinations required per Type-4 instruction = $2^6 = 64$.<br>Maximum $N = \\frac{2048}{64} = 32$.",
+  "videoUrl": null
+}

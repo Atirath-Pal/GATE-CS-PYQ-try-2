@@ -1,0 +1,22 @@
+{
+  "id": 31,
+  "year": 2018,
+  "set": null,
+  "topics": [
+    "Programming and Data Structures",
+    "Recursion"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider the following C program:<br><br>The output of this program is ________.",
+  "assetImage": null,
+  "codeBlock": "#include &lt;stdio.h&gt;\nint counter = 0;\n\nint calc (int a, int b) {\n    int c;\n\n    counter++;\n    if (b==3) return (a*a*a);\n    else {\n        c = calc(a, b/3);\n        return (c*c*c);\n    }\n}\n\nint main (){\n    calc(4, 81);\n    printf (\"%d\", counter);\n}",
+  "options": [],
+  "answer": {
+    "min": 4,
+    "max": 4
+  },
+  "explanation": "<strong>Step 1:</strong> The program starts execution from <code>main()</code>, where the global variable <code>counter</code> is initialized to $0$.<br><br><strong>Step 2:</strong> <code>calc(4, 81)</code> is called. We trace the recursive execution and value of <code>counter</code>:<br>• Call 1: <code>calc(4, 81)</code> $\\rightarrow$ <code>counter</code> increments to $1$. Since $b = 81 \\neq 3$, it invokes <code>calc(4, 27)</code>.<br>• Call 2: <code>calc(4, 27)</code> $\\rightarrow$ <code>counter</code> increments to $2$. Since $b = 27 \\neq 3$, it invokes <code>calc(4, 9)</code>.<br>• Call 3: <code>calc(4, 9)</code> $\\rightarrow$ <code>counter</code> increments to $3$. Since $b = 9 \\neq 3$, it invokes <code>calc(4, 3)</code>.<br>• Call 4: <code>calc(4, 3)</code> $\\rightarrow$ <code>counter</code> increments to $4$. Since $b = 3$, the condition <code>b == 3</code> is true, returning $4^3 = 64$.<br><br><strong>Step 3:</strong> As the recursive call stack unwinds, execution finishes and returns to <code>main()</code>.<br><br><strong>Step 4:</strong> <code>main()</code> prints the value of <code>counter</code>, which is $4$.",
+  "videoUrl": null
+}

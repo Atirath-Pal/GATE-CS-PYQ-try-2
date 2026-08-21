@@ -1,0 +1,21 @@
+{
+  "id": 51,
+  "year": 2018,
+  "set": null,
+  "topics": ["Databases", "Relational Algebra"],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the relations $r(A, B)$ and $s(B, C)$, where $s.B$ is a primary key and $r.B$ is a foreign key referencing $s.B$. Consider the query<br><br>$$Q: r \\bowtie (\\sigma_{B < 5}(s))$$<br><br>Let $LOJ$ denote the natural left outer-join operation. Assume that $r$ and $s$ contain no null values.<br><br>Which one of the following queries is NOT equivalent to Q?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\sigma_{B < 5}(r \\bowtie s)$",
+    "$\\sigma_{B < 5}(r \\text{ LOJ } s)$",
+    "$r \\text{ LOJ } (\\sigma_{B < 5}(s))$",
+    "$\\sigma_{B < 5}(r) \\text{ LOJ } s$"
+  ],
+  "answer": ["C"],
+  "explanation": "<strong>Step 1: Understand the given relations and query Q</strong><br>We are given two relations $r(A, B)$ and $s(B, C)$. $s.B$ is a primary key, and $r.B$ is a foreign key referencing $s.B$. There are no null values.<br>Since $r.B$ is a foreign key referencing $s.B$, every tuple in $r$ has a matching tuple in $s$.<br><br>Query $Q = r \\bowtie (\\sigma_{B < 5}(s))$ performs a natural inner join between $r$ and the tuples of $s$ where $B < 5$. This keeps only those tuples from $r$ where $B < 5$ and joins them with $s$. Tuples in $r$ with $B \\ge 5$ are filtered out.<br><br><strong>Step 2: Analyze Option (A)</strong><br>$\\sigma_{B < 5}(r \\bowtie s)$<br>Since every tuple in $r$ has a matching tuple in $s$, $r \\bowtie s$ contains all tuples of $r$ joined with $s$. Applying $\\sigma_{B < 5}$ afterwards keeps only tuples where $B < 5$. This is equivalent to $Q$.<br><br><strong>Step 3: Analyze Option (B)</strong><br>$\\sigma_{B < 5}(r \\text{ LOJ } s)$<br>Since every foreign key value in $r$ exists in $s$, every tuple in $r$ matches with $s$. Thus, $r \\text{ LOJ } s = r \\bowtie s$. Filtering with $\\sigma_{B < 5}$ yields the exact same result as $Q$.<br><br><strong>Step 4: Analyze Option (C)</strong><br>$r \\text{ LOJ } (\\sigma_{B < 5}(s))$<br>Here, left outer join ($LOJ$) is performed between $r$ and $\\sigma_{B < 5}(s)$. For tuples in $r$ with $B \\ge 5$, they do not match any tuple in $\\sigma_{B < 5}(s)$. Because it is a <strong>left outer join</strong>, these tuples with $B \\ge 5$ are NOT filtered out; instead, they are included in the output padded with $NULL$ values for attribute $C$. Thus, option (C) returns extra tuples that $Q$ filters out, making it <strong>NOT equivalent to Q</strong>.<br><br><strong>Step 5: Analyze Option (D)</strong><br>$\\sigma_{B < 5}(r) \\text{ LOJ } s$<br>$\\sigma_{B < 5}(r)$ filters $r$ first, keeping only tuples with $B < 5$. Since all $B < 5$ values in $r$ have matching tuples in $s$, the left outer join with $s$ behaves identically to an inner join. No extra NULL-padded tuples are produced. This is equivalent to $Q$.<br><br>Hence, Option <strong>(C)</strong> is NOT equivalent to Q.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 5,
+  "year": 2018,
+  "set": null,
+  "topics": [
+    "General Aptitude",
+    "Numerical Ability"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "What is the missing number in the following sequence?<br><br>2, 12, 60, 240, 720, 1440, _____, 0",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "2880",
+    "1440",
+    "720",
+    "0"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step-by-step pattern analysis:</strong><br><br>Let us observe the pattern in the given sequence by dividing each term by its preceding term:<br>• $12 \\div 2 = 6$<br>• $60 \\div 12 = 5$<br>• $240 \\div 60 = 4$<br>• $720 \\div 240 = 3$<br>• $1440 \\div 720 = 2$<br><br>The multiplier decreases by $1$ at each step ($6, 5, 4, 3, 2$).<br><br>Following this pattern, the next multiplier must be $1$:<br>$\\text{Missing number} = 1440 \\times 1 = 1440$<br><br>Verifying the final term with multiplier $0$:<br>$1440 \\times 0 = 0$, which matches the given sequence.<br><br>Hence, the correct option is <strong>(B)</strong>.",
+  "videoUrl": null
+}

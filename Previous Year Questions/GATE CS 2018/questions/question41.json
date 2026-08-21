@@ -1,0 +1,21 @@
+{
+  "id": 41,
+  "year": "2018",
+  "set": null,
+  "topics": ["Algorithms", "Dynamic Programming"],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Assume that multiplying a matrix $G_1$ of dimension $p \\times q$ with another matrix $G_2$ of dimension $q \\times r$ requires $pqr$ scalar multiplications. Computing the product of $n$ matrices $G_1G_2G_3...G_n$ can be done by parenthesizing in different ways. Define $G_i G_{i+1}$ as an <strong>explicitly computed pair</strong> for a given parenthesization if they are directly multiplied. For example, in the matrix multiplication chain $G_1G_2G_3G_4G_5G_6$ using parenthesization $(G_1(G_2G_3))(G_4(G_5G_6))$, $G_2G_3$ and $G_5G_6$ are the only explicitly computed pairs.<br><br>Consider a matrix multiplication chain $F_1F_2F_3F_4F_5$, where matrices $F_1, F_2, F_3, F_4$ and $F_5$ are of dimensions $2\\times 25, 25\\times 3, 3\\times 16, 16\\times 1$ and $1\\times 1000$, respectively. In the parenthesization of $F_1F_2F_3F_4F_5$ that minimizes the total number of scalar multiplications, the explicitly computed pairs is/are",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$F_1F_2$ and $F_3F_4$ only",
+    "$F_2F_3$ only",
+    "$F_3F_4$ only",
+    "$F_1F_2$ and $F_4F_5$ only"
+  ],
+  "answer": ["C"],
+  "explanation": "To find the optimal parenthesization that minimizes the total number of scalar multiplications for the matrix chain $F_1 F_2 F_3 F_4 F_5$, we apply dynamic programming.<br><br><strong>Matrix Dimensions:</strong><br>- $F_1: 2 \\times 25$<br>- $F_2: 25 \\times 3$<br>- $F_3: 3 \\times 16$<br>- $F_4: 16 \\times 1$<br>- $F_5: 1 \\times 1000$<br><br><strong>Cost Computation:</strong><br>1. <strong>Chain Length 2:</strong><br>- $m[1,2] = 2 \\times 25 \\times 3 = 150$<br>- $m[2,3] = 25 \\times 3 \\times 16 = 1200$<br>- $m[3,4] = 3 \\times 16 \\times 1 = 48$<br>- $m[4,5] = 16 \\times 1 \\times 1000 = 16000$<br><br>2. <strong>Chain Length 3:</strong><br>- $m[1,3] = \\min(m[1,1] + m[2,3] + 2 \\times 25 \\times 16, m[1,2] + m[3,3] + 2 \\times 3 \\times 16) = \\min(2000, 246) = 246$ (split at $k=2$)<br>- $m[2,4] = \\min(m[2,2] + m[3,4] + 25 \\times 3 \\times 1, m[2,3] + m[4,4] + 25 \\times 16 \\times 1) = \\min(123, 1600) = 123$ (split at $k=2$)<br>- $m[3,5] = \\min(m[3,3] + m[4,5] + 3 \\times 16 \\times 1000, m[3,4] + m[5,5] + 3 \\times 1 \\times 1000) = \\min(64000, 3048) = 3048$ (split at $k=4$)<br><br>3. <strong>Chain Length 4:</strong><br>- $m[1,4] = \\min(m[1,1] + m[2,4] + 2 \\times 25 \\times 1, m[1,2] + m[3,4] + 2 \\times 3 \\times 1, m[1,3] + m[4,4] + 2 \\times 16 \\times 1) = \\min(173, 204, 278) = 173$ (split at $k=1$)<br><br>4. <strong>Chain Length 5:</strong><br>- $m[1,5] = \\min(m[1,1] + m[2,5] + 2 \\times 25 \\times 1000, m[1,2] + m[3,5] + 2 \\times 3 \\times 1000, m[1,3] + m[4,5] + 2 \\times 16 \\times 1000, m[1,4] + m[5,5] + 2 \\times 1 \\times 1000) = \\min(75123, 9198, 48246, 2173) = 2173$ (split at $k=4$)<br><br><strong>Optimal Parenthesization:</strong><br>Tracing back the optimal splits gives $((F_1 (F_2 (F_3 F_4))) F_5)$.<br><br>An <strong>explicitly computed pair</strong> is defined as two matrices that are directly multiplied. In the optimal parenthesization $((F_1 (F_2 (F_3 F_4))) F_5)$, $F_3$ and $F_4$ are directly multiplied together first. Therefore, $F_3F_4$ is the only explicitly computed pair.",
+  "videoUrl": null
+}

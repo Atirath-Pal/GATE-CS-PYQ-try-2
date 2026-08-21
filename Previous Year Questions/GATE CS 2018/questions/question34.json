@@ -1,0 +1,22 @@
+{
+  "id": 34,
+  "year": 2018,
+  "set": null,
+  "topics": [
+    "Operating Systems",
+    "Deadlocks"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider a system with 3 processes that share 4 instances of the same resource type. Each process can request a maximum of $K$ instances. Resource instances can be requested and released only one at a time. The largest value of $K$ that will always avoid deadlock is _____.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 2,
+    "max": 2
+  },
+  "explanation": "<strong>Given Data:</strong><br>Number of processes ($N$) = $3$<br>Total resource instances ($R$) = $4$<br>Maximum demand per process = $K$<br><br><strong>Condition to Avoid Deadlock:</strong><br>For a system with $N$ processes sharing $R$ identical resources, deadlock is guaranteed to be avoided if:<br>$R \\ge \\sum_{i=1}^{N} (Demand_i - 1) + 1$<br><br>Since all $N$ processes have the maximum demand of $K$ instances:<br>$R \\ge N \\times (K - 1) + 1$<br><br><strong>Calculation:</strong><br>Substituting the values into the formula:<br>$4 \\ge 3 \\times (K - 1) + 1$<br>$3 \\ge 3(K - 1)$<br>$1 \\ge K - 1$<br>$K \\le 2$<br><br>Thus, the largest value of $K$ that will always avoid deadlock is <strong>2</strong>.",
+  "videoUrl": null
+}

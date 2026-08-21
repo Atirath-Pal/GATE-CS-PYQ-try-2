@@ -1,0 +1,22 @@
+{
+  "id": 25,
+  "year": 2018,
+  "set": null,
+  "topics": [
+    "Probability",
+    "Engineering Mathematics"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Two people, P and Q, decide to independently roll two identical dice, each with 6 faces, numbered 1 to 6. The person with the lower number wins. In case of a tie, they roll the dice repeatedly until there is no tie. Define a trial as a throw of the dice by P and Q. Assume that all 6 numbers on each dice are equi-probable and that all trials are independent. The probability (rounded to 3 decimal places) that one of them wins on the third trial is _______.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 0.021,
+    "max": 0.024
+  },
+  "explanation": "<strong>Step 1: Calculate the total number of outcomes in a single trial.</strong><br>Since P and Q each roll a 6-faced die independently, the total number of possible outcomes in a single trial is $6 \\times 6 = 36$.<br><br><strong>Step 2: Find the probability of a tie.</strong><br>A tie occurs when both P and Q roll the same number, i.e., pairs $(1,1), (2,2), (3,3), (4,4), (5,5), (6,6)$.<br>Number of favorable outcomes for a tie $= 6$.<br>Probability of a tie in a single trial, $P(\\text{Tie}) = \\frac{6}{36} = \\frac{1}{6}$.<br><br><strong>Step 3: Find the probability of a win (no tie).</strong><br>Probability that someone wins in a single trial, $P(\\text{Win}) = 1 - P(\\text{Tie}) = 1 - \\frac{1}{6} = \\frac{5}{6}$.<br><br><strong>Step 4: Calculate the probability of winning on the third trial.</strong><br>For someone to win on the third trial, the first two trials must result in a tie, and the third trial must result in a win:<br>$P(\\text{Win on 3rd trial}) = P(\\text{Tie in 1st}) \\times P(\\text{Tie in 2nd}) \\times P(\\text{Win in 3rd})$<br>$P(\\text{Win on 3rd trial}) = \\frac{1}{6} \\times \\frac{1}{6} \\times \\frac{5}{6} = \\frac{5}{216} \\approx 0.023$.<br><br>Hence, the answer is <strong>0.023</strong> (acceptable range: 0.021 to 0.024).",
+  "videoUrl": null
+}

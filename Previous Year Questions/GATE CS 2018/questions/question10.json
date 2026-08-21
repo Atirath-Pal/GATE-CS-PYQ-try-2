@@ -1,0 +1,26 @@
+{
+  "id": 10,
+  "year": 2018,
+  "set": null,
+  "topics": [
+    "General Aptitude",
+    "Probability"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "A six sided unbiased die with four green faces and two red faces is rolled seven times. Which of the following combinations is the most likely outcome of the experiment?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Three green faces and four red faces.",
+    "Four green faces and three red faces.",
+    "Five green faces and two red faces.",
+    "Six green faces and one red face."
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step-by-step Explanation:</strong><br><br><strong>1. Identify single-roll probabilities:</strong><br>Probability of rolling a Green face ($p$) = $\\frac{4}{6} = \\frac{2}{3}$<br>Probability of rolling a Red face ($q$) = $\\frac{2}{6} = \\frac{1}{3}$<br><br><strong>2. Apply the Binomial Distribution:</strong><br>The die is rolled $n = 7$ times. The probability of obtaining $k$ green faces (and $7-k$ red faces) is:<br>$P(X = k) = \\binom{7}{k} \\left(\\frac{2}{3}\\right)^k \\left(\\frac{1}{3}\\right)^{7-k}$<br><br><strong>3. Calculate probabilities for each option:</strong><br>- <strong>Option A ($k = 3$):</strong> $P(X = 3) = \\binom{7}{3} \\left(\\frac{2}{3}\\right)^3 \\left(\\frac{1}{3}\\right)^4 = 35 \\times \\frac{8}{2187} = \\frac{280}{2187} \\approx 0.1280$<br>- <strong>Option B ($k = 4$):</strong> $P(X = 4) = \\binom{7}{4} \\left(\\frac{2}{3}\\right)^4 \\left(\\frac{1}{3}\\right)^3 = 35 \\times \\frac{16}{2187} = \\frac{560}{2187} \\approx 0.2560$<br>- <strong>Option C ($k = 5$):</strong> $P(X = 5) = \\binom{7}{5} \\left(\\frac{2}{3}\\right)^5 \\left(\\frac{1}{3}\\right)^2 = 21 \\times \\frac{32}{2187} = \\frac{672}{2187} \\approx 0.3072$<br>- <strong>Option D ($k = 6$):</strong> $P(X = 6) = \\binom{7}{6} \\left(\\frac{2}{3}\\right)^6 \\left(\\frac{1}{3}\\right)^1 = 7 \\times \\frac{64}{2187} = \\frac{448}{2187} \\approx 0.2048$<br><br><strong>4. Alternative Mode Method:</strong><br>The mode of a binomial distribution is given by $\\lfloor (n+1)p \\rfloor$.<br>$(n+1)p = (7+1) \\times \\frac{2}{3} = \\frac{16}{3} = 5.33$<br>Mode = $\\lfloor 5.33 \\rfloor = 5$.<br><br>Therefore, the most likely outcome is <strong>Five green faces and two red faces</strong>.",
+  "videoUrl": null
+}

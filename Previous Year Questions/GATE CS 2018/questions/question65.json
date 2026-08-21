@@ -1,0 +1,22 @@
+{
+  "id": 65,
+  "year": 2018,
+  "set": null,
+  "topics": [
+    "Computer Networks",
+    "Medium Access Control"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a simple communication system where multiple nodes are connected by a shared broadcast medium (like Ethernet or wireless). The nodes in the system use the following carrier-sense based medium access protocol. A node that receives a packet to transmit will carrier-sense the medium for 5 units of time. If the node does not detect any other transmission in this duration, it starts transmitting its packet in the next time unit. If the node detects another transmission, it waits until this other transmission finishes, and then begins to carrier-sense for 5 time units again. Once they start to transmit, nodes do not perform any collision detection and continue transmission even if a collision occurs. All transmissions last for 20 units of time. Assume that the transmission signal travels at the speed of 10 meters per unit time in the medium.<br><br>Assume that the system has two nodes P and Q, located at a distance $d$ meters from each other. P starts transmitting a packet at time $t=0$ after successfully completing its carrier-sense phase. Node Q has a packet to transmit at time $t=0$ and begins to carrier-sense the medium.<br><br>The maximum distance $d$ (in meters, rounded to the closest integer) that allows Q to successfully avoid a collision between its proposed transmission and P’s ongoing transmission is _____.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 50,
+    "max": 50
+  },
+  "explanation": "<strong>Step 1: Calculate the propagation delay.</strong><br>Node P starts transmitting at time $t = 0$.<br>The signal travels through the medium at a speed of $v = 10\\text{ meters/unit time}$.<br>For distance $d$, the propagation delay for P's signal to reach Q is:<br>$\\tau = \\frac{d}{10}\\text{ time units}$.<br><br><strong>Step 2: Determine condition for collision avoidance.</strong><br>Node Q starts carrier-sensing at time $t = 0$ for a duration of 5 time units (from $t = 0$ to $t = 5$).<br>To avoid a collision, Q must detect P's ongoing transmission within its 5-unit carrier-sensing window. Thus, P's signal must reach Q at or before $t = 5$.<br><br><strong>Step 3: Solve for $d$.</strong><br>$\\tau \\le 5 \\implies \\frac{d}{10} \\le 5 \\implies d \\le 50\\text{ meters}$.<br><br>Therefore, the maximum distance $d$ is <strong>50</strong> meters.",
+  "videoUrl": null
+}

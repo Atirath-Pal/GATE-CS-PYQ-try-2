@@ -1,0 +1,21 @@
+{
+  "id": 21,
+  "year": 2018,
+  "set": null,
+  "topics": ["Databases", "ER Diagram"],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "In an Entity-Relationship (ER) model, suppose $R$ is a many-to-one relationship from entity set E1 to entity set E2. Assume that E1 and E2 participate totally in $R$ and that the cardinality of E1 is greater than the cardinality of E2.<br><br>Which one of the following is true about $R$?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Every entity in E1 is associated with exactly one entity in E2.",
+    "Some entity in E1 is associated with more than one entity in E2.",
+    "Every entity in E2 is associated with exactly one entity in E1.",
+    "Every entity in E2 is associated with at most one entity in E1."
+  ],
+  "answer": ["A"],
+  "explanation": "<strong>Step 1: Understand Many-to-One Mapping Constraint</strong><br>In a many-to-one relationship $R$ from entity set $E1$ to entity set $E2$, any single entity in $E1$ can be associated with <strong>at most one</strong> entity in $E2$.<br><br><strong>Step 2: Apply Total Participation</strong><br>Total participation of $E1$ in $R$ means that <strong>every entity</strong> in $E1$ must participate in $R$. Therefore, each entity in $E1$ must be associated with <strong>at least one</strong> entity in $E2$.<br><br><strong>Step 3: Combine Constraints</strong><br>Combining 'at least one' (from total participation) and 'at most one' (from the many-to-one constraint), every entity in $E1$ must be associated with <strong>exactly one</strong> entity in $E2$.<br><br>Hence, option (A) is correct.",
+  "videoUrl": null
+}

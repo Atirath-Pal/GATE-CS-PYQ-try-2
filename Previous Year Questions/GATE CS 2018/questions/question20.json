@@ -1,0 +1,26 @@
+{
+  "id": 20,
+  "year": 2018,
+  "set": null,
+  "topics": [
+    "Operating Systems",
+    "Virtual Memory"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider a process executing on an operating system that uses demand paging. The average time for a memory access in the system is $M$ units if the corresponding memory page is available in memory, and $D$ units if the memory access causes a page fault. It has been experimentally measured that the average time taken for a memory access in the process is $X$ units.<br><br>Which one of the following is the correct expression for the page fault rate experienced by the process?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$(D - M) / (X - M)$",
+    "$(X - M) / (D - M)$",
+    "$(D - X) / (D - M)$",
+    "$(X - M) / (D - X)$"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "Let $p$ be the page fault rate.<br><br>The average memory access time ($X$) is given by:<br>$$X = (1 - p) \\cdot M + p \\cdot D$$<br><br>Expanding the equation:<br>$$X = M - p \\cdot M + p \\cdot D$$<br>$$X - M = p \\cdot (D - M)$$<br><br>Solving for $p$:<br>$$p = \\frac{X - M}{D - M}$$<br><br>Hence, the correct expression for the page fault rate is <strong>$(X - M) / (D - M)$</strong>.",
+  "videoUrl": null
+}

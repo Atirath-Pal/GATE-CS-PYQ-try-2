@@ -1,0 +1,26 @@
+{
+  "id": 14,
+  "year": 2018,
+  "set": null,
+  "topics": [
+    "Digital Logic",
+    "Boolean Algebra"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Let $\\oplus$ and $\\odot$ denote the Exclusive OR and Exclusive NOR operations, respectively.<br><br>Which one of the following is NOT CORRECT?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\overline{P \\oplus Q} = P \\odot Q$",
+    "$\\bar{P} \\oplus Q = P \\odot Q$",
+    "$\\bar{P} \\oplus \\bar{Q} = P \\oplus Q$",
+    "$(P \\oplus \\bar{P}) \\oplus Q = (P \\odot \\bar{P}) \\odot \\bar{Q}$"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "Let us analyze each option one by one:<br><br><strong>Option (A):</strong> $\\overline{P \\oplus Q} = P \\odot Q$<br>The complement of XOR is XNOR. Thus, $\\overline{P \\oplus Q} = P \\odot Q$. This statement is <strong>CORRECT</strong>.<br><br><strong>Option (B):</strong> $\\bar{P} \\oplus Q = P \\odot Q$<br>Complementing exactly one input of an XOR operation turns it into an XNOR operation. Thus, $\\bar{P} \\oplus Q = P \\odot Q$. This statement is <strong>CORRECT</strong>.<br><br><strong>Option (C):</strong> $\\bar{P} \\oplus \\bar{Q} = P \\oplus Q$<br>Complementing both inputs of an XOR operation leaves the function unchanged. Thus, $\\bar{P} \\oplus \\bar{Q} = P \\oplus Q$. This statement is <strong>CORRECT</strong>.<br><br><strong>Option (D):</strong> $(P \\oplus \\bar{P}) \\oplus Q = (P \\odot \\bar{P}) \\odot \\bar{Q}$<br>• <strong>LHS:</strong> $P \\oplus \\bar{P} = 1$, so $(1) \\oplus Q = \\bar{Q}$.<br>• <strong>RHS:</strong> $P \\odot \\bar{P} = 0$, so $(0) \\odot \\bar{Q} = \\overline{0 \\oplus \\bar{Q}} = \\overline{\\bar{Q}} = Q$.<br>Since $\\bar{Q} \\neq Q$, LHS $\\neq$ RHS. Therefore, this statement is <strong>NOT CORRECT</strong>.",
+  "videoUrl": null
+}

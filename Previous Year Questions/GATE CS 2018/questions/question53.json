@@ -1,0 +1,22 @@
+{
+  "id": 53,
+  "year": 2018,
+  "set": null,
+  "topics": [
+    "Discrete Mathematics",
+    "Graph Theory"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Let $G$ be a graph with $100!$ vertices, with each vertex labelled by a distinct permutation of the numbers $1, 2, \\dots, 100$. There is an edge between vertices $u$ and $v$ if and only if the label of $u$ can be obtained by swapping two adjacent numbers in the label of $v$. Let $y$ denote the degree of a vertex in $G$, and $z$ denote the number of connected components in $G$.<br><br>Then, $y + 10z = $ __________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 109,
+    "max": 109
+  },
+  "explanation": "<strong>Step 1: Finding $y$ (Degree of a vertex in $G$)</strong><br>Each vertex represents a distinct permutation of $100$ numbers: $(1, 2, \\dots, 100)$.<br>An edge exists between two vertices if one label can be obtained from the other by swapping two adjacent numbers.<br>For a sequence of length $100$, there are $100 - 1 = 99$ adjacent pairs that can be swapped.<br>Swapping each adjacent pair gives a unique permutation, so every vertex is connected to exactly $99$ neighbors.<br>Thus, the degree of a vertex $y = 99$.<br><br><strong>Step 2: Finding $z$ (Number of connected components in $G$)</strong><br>Any permutation of $100$ numbers can be transformed into any other permutation through a series of adjacent swaps (similar to the mechanism of Bubble Sort).<br>Since every vertex is reachable from every other vertex, the graph $G$ is connected.<br>Thus, the number of connected components $z = 1$.<br><br><strong>Step 3: Calculating $y + 10z$</strong><br>$y + 10z = 99 + 10(1) = 109$.",
+  "videoUrl": null
+}

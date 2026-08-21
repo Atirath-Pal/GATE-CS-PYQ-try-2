@@ -1,0 +1,26 @@
+{
+  "id": 8,
+  "year": 2018,
+  "set": null,
+  "topics": [
+    "General Aptitude",
+    "Ratio and Proportion"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "In a party, 60% of the invited guests are male and 40% are female. If 80% of the invited guests attended the party and if all the invited female guests attended, what would be the ratio of males to females among the attendees in the party?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "2:3",
+    "1:1",
+    "3:2",
+    "2:1"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step 1: Assume a total number of invited guests.</strong><br>Let the total number of invited guests be $100$.<br><br><strong>Step 2: Calculate the number of male and female invited guests.</strong><br>Invited male guests = $60\\% \\text{ of } 100 = 60$<br>Invited female guests = $40\\% \\text{ of } 100 = 40$<br><br><strong>Step 3: Calculate attendees.</strong><br>Total attendees = $80\\% \\text{ of } 100 = 80$<br>Since all invited female guests attended, female attendees = $40$.<br>Male attendees = $\\text{Total attendees} - \\text{Female attendees} = 80 - 40 = 40$.<br><br><strong>Step 4: Find the ratio of males to females among attendees.</strong><br>Ratio = $40 : 40 = 1 : 1$.<br><br>Hence, option <strong>(B)</strong> is the correct answer.",
+  "videoUrl": null
+}

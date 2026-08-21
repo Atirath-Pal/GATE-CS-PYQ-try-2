@@ -1,0 +1,22 @@
+{
+  "id": 28,
+  "year": 2018,
+  "set": null,
+  "topics": [
+    "Discrete Mathematics",
+    "Graph Theory"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "The chromatic number of the following graph is ________.",
+  "assetImage": "question28.png",
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 3,
+    "max": 3
+  },
+  "explanation": "<strong>Step 1: Understand Chromatic Number</strong><br>The chromatic number of a graph $G$, denoted by $\\chi(G)$, is the minimum number of colors required to color the vertices of $G$ such that no two adjacent vertices share the same color.<br><br><strong>Step 2: Determine Lower Bound</strong><br>The given graph contains a triangle formed by vertices $a$, $b$, and $c$ (a 3-clique $K_3$). Since all 3 vertices are mutually connected, at least 3 colors are required:<br>$\\chi(G) \\ge 3$<br><br><strong>Step 3: Verify 3-Colorability</strong><br>Let us assign 3 colors (Color 1, Color 2, Color 3) to the vertices:<br>- Assign <strong>Color 1</strong> to vertex $a$.<br>- Vertex $b$ is adjacent to $a$, so assign <strong>Color 2</strong> to $b$.<br>- Vertex $c$ is adjacent to $a$ (Color 1) and $b$ (Color 2), so assign <strong>Color 3</strong> to $c$.<br>- Vertex $e$ is adjacent to $a$ (Color 1) and $c$ (Color 3), so assign <strong>Color 2</strong> to $e$.<br>- Vertex $d$ is adjacent to $b$ (Color 2) and $c$ (Color 3), so assign <strong>Color 1</strong> to $d$.<br>- Vertex $f$ is adjacent to $b$ (Color 2), $d$ (Color 1), and $e$ (Color 2), so assign <strong>Color 3</strong> to $f$.<br><br>All adjacent vertex pairs have distinct colors. Hence, the graph is 3-colorable, and the chromatic number is <strong>3</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,25 @@
+{
+  "id": 15,
+  "year": 2018,
+  "set": null,
+  "topics": [
+    "Computer Organization and Architecture"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the following processor design characteristics.<br><br>I. Register-to-register arithmetic operations only<br>II. Fixed-length instruction format<br>III. Hardwired control unit<br><br>Which of the characteristics above are used in the design of a RISC processor?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "I and II only",
+    "II and III only",
+    "I and III only",
+    "I, II and III"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Characteristics of RISC (Reduced Instruction Set Computer) processors:</strong><br><br>1. <strong>Register-to-register arithmetic operations (Load/Store Architecture):</strong> In RISC processors, memory access is restricted to load and store instructions. All arithmetic and logic operations operate exclusively on register operands.<br><br>2. <strong>Fixed-length instruction format:</strong> Instructions are generally of uniform fixed size (e.g., 32-bit), which simplifies decoding and allows instruction execution to be easily pipelined.<br><br>3. <strong>Hardwired control unit:</strong> Hardwired control unit logic is used rather than microprogrammed control to maximize execution speed and minimize cycle times.<br><br>Therefore, all three statements (I, II, and III) are key design characteristics of a RISC processor.",
+  "videoUrl": null
+}

@@ -1,0 +1,22 @@
+{
+  "id": 56,
+  "year": 2018,
+  "set": null,
+  "topics": [
+    "Data Structures",
+    "Heaps"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "The number of possible min-heaps containing each value from $\\{1, 2, 3, 4, 5, 6, 7\\}$ exactly once is _____.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 80,
+    "max": 80
+  },
+  "explanation": "<strong>Step 1: Formula for number of min-heaps</strong><br>In a min-heap with $N$ distinct elements, the minimum element must always be placed at the root.<br>The remaining $N-1$ elements are divided between the left subtree of size $L$ and the right subtree of size $R$, where $N = 1 + L + R$.<br><br><strong>Step 2: Subtree sizes for $N = 7$</strong><br>A min-heap with 7 nodes forms a complete binary tree where:<br>Left subtree size, $L = 3$<br>Right subtree size, $R = 3$<br><br><strong>Step 3: Recurrence formula</strong><br>The total number of min-heaps $T(N)$ is given by:<br>$$T(N) = \\binom{N-1}{L} \\times T(L) \\times T(R)$$<br><br>For $N = 3$ ($L = 1, R = 1$):<br>$T(3) = \\binom{2}{1} \\times T(1) \\times T(1) = 2 \\times 1 \\times 1 = 2$<br><br>For $N = 7$ ($L = 3, R = 3$):<br>$T(7) = \\binom{6}{3} \\times T(3) \\times T(3) = 20 \\times 2 \\times 2 = 80$<br><br>Thus, the number of possible min-heaps is <strong>80</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,22 @@
+{
+  "id": 55,
+  "year": 2018,
+  "set": null,
+  "topics": [
+    "Programming and Data Structures",
+    "Recursion"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the following program written in pseudo-code. Assume that $x$ and $y$ are integers.<br><br>The number of times that the <code>print</code> statement is executed by the call <code>Count(1024,1024)</code> is _______.",
+  "assetImage": null,
+  "codeBlock": "Count(x,y) {\n    if (y != 1){\n        if (x != 1) {\n            print(\"*\");\n            Count(x/2, y);\n        }\n        else {\n            y = y-1;\n            Count(1024, y);\n        }\n    }\n}",
+  "options": [],
+  "answer": {
+    "min": 10230,
+    "max": 10230
+  },
+  "explanation": "<strong>Step-by-step explanation:</strong><br><br>1. <strong>Analyzing the outer condition ($y \\neq 1$):</strong><br>The function execution continues as long as $y \\neq 1$. Starting from $y = 1024$, $y$ is decremented by $1$ in the <code>else</code> block whenever $x$ reaches $1$. Thus, $y$ takes values from $1024$ down to $2$.<br>Total values of $y = 1024 - 2 + 1 = 1023$.<br><br>2. <strong>Analyzing the inner recursion ($x \\neq 1$):</strong><br>For each value of $y$, $x$ starts at $1024$. Inside the recursive calls, $x$ is divided by $2$ until it reaches $1$.<br>The values of $x$ for which <code>print(\"*\")</code> is executed are: $1024, 512, 256, 128, 64, 32, 16, 8, 4, 2$.<br>This results in $\\log_2(1024) = 10$ executions of the <code>print</code> statement for a single value of $y$.<br><br>3. <strong>Calculating total executions:</strong><br>Total executions $= (\\text{Number of } y \\text{ iterations}) \\times (\\text{Prints per } y \\text{ iteration}) = 1023 \\times 10 = 10230$.",
+  "videoUrl": null
+}

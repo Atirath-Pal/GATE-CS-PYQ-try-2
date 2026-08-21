@@ -1,0 +1,26 @@
+{
+  "id": 4,
+  "year": 2018,
+  "set": null,
+  "topics": [
+    "General Aptitude",
+    "Numerical Ability"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "What would be the smallest natural number which when divided either by 20 or by 42 or by 76 leaves a remainder of 7 in each case?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "3047",
+    "6047",
+    "7987",
+    "63847"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "To find the smallest natural number that leaves a remainder of $7$ when divided by $20$, $42$, and $76$, we first calculate the Least Common Multiple (LCM) of the given divisors and then add the remainder $7$.<br><br><strong>Step 1: Find the prime factorizations:</strong><br>$20 = 2^2 \\times 5$<br>$42 = 2 \\times 3 \\times 7$<br>$76 = 2^2 \\times 19$<br><br><strong>Step 2: Calculate the LCM:</strong><br>$\\text{LCM}(20, 42, 76) = 2^2 \\times 3 \\times 5 \\times 7 \\times 19 = 7980$<br><br><strong>Step 3: Add the remainder:</strong><br>Required Number $= \\text{LCM}(20, 42, 76) + 7 = 7980 + 7 = 7987$<br><br>Hence, option <strong>(C)</strong> is the correct answer.",
+  "videoUrl": null
+}

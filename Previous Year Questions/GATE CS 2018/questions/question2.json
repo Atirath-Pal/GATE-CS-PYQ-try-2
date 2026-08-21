@@ -1,0 +1,21 @@
+{
+  "id": 2,
+  "year": 2018,
+  "set": null,
+  "topics": ["General Aptitude", "Verbal Ability"],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "“A ________ investigation can sometimes yield new facts, but typically organized ones are more successful.”<br><br>The word that best fills the blank in the above sentence is",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "meandering",
+    "timely",
+    "consistent",
+    "systematic"
+  ],
+  "answer": ["A"],
+  "explanation": "<strong>Step 1: Analyze the sentence structure.</strong><br>The sentence uses the conjunction 'but' to contrast the missing word with 'organized': \"A _____ investigation... <i>but</i> typically organized ones are more successful.\"<br><br><strong>Step 2: Evaluate the options.</strong><br>• <strong>meandering</strong>: Wandering, indirect, or lacking a clear structure (contrasts directly with organized).<br>• <strong>timely</strong>: Occurring at a suitable time.<br>• <strong>consistent</strong>: Acting or done in the same way over time.<br>• <strong>systematic</strong>: Done according to a fixed plan or system (synonym of organized).<br><br><strong>Step 3: Conclusion.</strong><br>'Meandering' provides the exact contrast needed against 'organized'. Therefore, Option (A) is correct.",
+  "videoUrl": null
+}

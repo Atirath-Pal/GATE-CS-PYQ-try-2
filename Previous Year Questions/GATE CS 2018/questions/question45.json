@@ -1,0 +1,26 @@
+{
+  "id": 45,
+  "year": "2018",
+  "set": null,
+  "topics": [
+    "Theory of Computation",
+    "Context-Free Languages"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the following languages:<br><br>I. $\\{a^m b^n c^p d^q \\mid m + p = n + q, \\text{ where } m, n, p, q \\ge 0\\}$<br>II. $\\{a^m b^n c^p d^q \\mid m = n \\text{ and } p = q, \\text{ where } m, n, p, q \\ge 0\\}$<br>III. $\\{a^m b^n c^p d^q \\mid m = n = p \\text{ and } p \\neq q, \\text{ where } m, n, p, q \\ge 0\\}$<br>IV. $\\{a^m b^n c^p d^q \\mid mn = p + q, \\text{ where } m, n, p, q \\ge 0\\}$<br><br>Which of the languages above are context-free?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "I and IV only",
+    "I and II only",
+    "II and III only",
+    "II and IV only"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Language I:</strong> $\\{a^m b^n c^p d^q \\mid m + p = n + q, \\text{ where } m, n, p, q \\ge 0\\}$<br>Rewriting the condition gives $m - n = q - p$. A Pushdown Automaton (PDA) can push $a$'s onto the stack and pop them for $b$'s to keep track of $m - n$. Then, it can push $c$'s and pop $d$'s to verify $q - p = m - n$. Since a PDA can recognize this language, <strong>Language I is context-free</strong>.<br><br><strong>Language II:</strong> $\\{a^m b^n c^p d^q \\mid m = n \\text{ and } p = q, \\text{ where } m, n, p, q \\ge 0\\}$<br>This language is the concatenation of two context-free languages: $L_1 = \\{a^m b^m \\mid m \\ge 0\\}$ and $L_2 = \\{c^p d^p \\mid p \\ge 0\\}$. Since Context-Free Languages are closed under concatenation, <strong>Language II is context-free</strong>.<br><br><strong>Language III:</strong> $\\{a^m b^n c^p d^q \\mid m = n = p \\text{ and } p \\neq q, \\text{ where } m, n, p, q \\ge 0\\}$<br>This requires comparing three variables simultaneously ($m = n = p$). A single pushdown automaton cannot perform multiple independent stack comparisons. Thus, <strong>Language III is not context-free</strong>.<br><br><strong>Language IV:</strong> $\\{a^m b^n c^p d^q \\mid mn = p + q, \\text{ where } m, n, p, q \\ge 0\\}$<br>The non-linear product constraint $m \\times n = p + q$ cannot be recognized by a PDA stack. Thus, <strong>Language IV is not context-free</strong>.<br><br>Therefore, <strong>I and II only</strong> are context-free languages.",
+  "videoUrl": null
+}

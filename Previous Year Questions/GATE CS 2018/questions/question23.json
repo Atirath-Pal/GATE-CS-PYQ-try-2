@@ -1,0 +1,26 @@
+{
+  "id": 23,
+  "year": 2018,
+  "set": null,
+  "topics": [
+    "Computer Networks",
+    "Header Fields"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Match the following:<br><br><div style=\"overflow-x: auto; margin: 12px 0;\"><table style=\"border-collapse: collapse; border: 1px solid #ffffff; font-size: 13px;\"><thead><tr><th style=\"border: 1px solid #ffffff; padding: 6px 12px; text-align: left; font-weight: bold;\">Field</th><th style=\"border: 1px solid #ffffff; padding: 6px 12px; text-align: left; font-weight: bold;\">Length in bits</th></tr></thead><tbody><tr><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">P. UDP Header's Port Number</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">I. 48</td></tr><tr><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">Q. Ethernet MAC Address</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">II. 8</td></tr><tr><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">R. IPv6 Next Header</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">III. 32</td></tr><tr><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">S. TCP Header's Sequence Number</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">IV. 16</td></tr></tbody></table></div>",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "P-III, Q-IV, R-II, S-I",
+    "P-II, Q-I, R-IV, S-III",
+    "P-IV, Q-I, R-II, S-III",
+    "P-IV, Q-I, R-III, S-II"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Field lengths in networking protocols:</strong><br><br>• <strong>P. UDP Header's Port Number:</strong> Both source and destination port numbers in a UDP header are $16$ bits long (matches IV).<br>• <strong>Q. Ethernet MAC Address:</strong> An Ethernet MAC address is $6$ bytes or $48$ bits long (matches I).<br>• <strong>R. IPv6 Next Header:</strong> The Next Header field in IPv6 is $1$ byte or $8$ bits long (matches II).<br>• <strong>S. TCP Header's Sequence Number:</strong> The sequence number field in a TCP header is $32$ bits long (matches III).<br><br>Thus, the correct matching sequence is <strong>P-IV, Q-I, R-II, S-III</strong>.",
+  "videoUrl": null
+}

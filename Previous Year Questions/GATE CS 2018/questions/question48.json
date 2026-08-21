@@ -1,0 +1,21 @@
+{
+  "id": 48,
+  "year": 2018,
+  "set": null,
+  "topics": ["Compiler Design", "Expression Parsing"],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the following parse tree for the expression $a\\#b\\$c\\$d\\#e\\#f$, involving two binary operators $\\$$ and $\\#$.</br><br>Which one of the following is correct for the given parse tree?",
+  "assetImage": "question48.png",
+  "codeBlock": null,
+  "options": [
+    "$\\$$ has higher precedence and is left associative; $\\#$ is right associative",
+    "$\\#$ has higher precedence and is left associative; $\\$$ is right associative",
+    "$\\$$ has higher precedence and is left associative; $\\#$ is left associative",
+    "$\\#$ has higher precedence and is right associative; $\\$$ is left associative"
+  ],
+  "answer": ["A"],
+  "explanation": "From the parse tree, the root operator is $\\#$, with $a$ as its left operand and another $\\#$ expression as its right operand. Hence, $\\#$ is <strong>right associative</strong> because the same operator appears recursively on the right side.<br><br>The $\\$$ operators occur inside the operands of the $\\#$ operators, indicating that $\\$$ has <strong>higher precedence</strong> than $\\#$ . The subtree involving $b$, $c$, and $d$ is $((b\\$c)\\$d)$, showing that $\\$$ is <strong>left associative</strong>.<br><br>Therefore, the correct statement is: <strong>$\\$$ has higher precedence and is left associative; $\\#$ is right associative.</strong>",
+  "videoUrl": null
+}

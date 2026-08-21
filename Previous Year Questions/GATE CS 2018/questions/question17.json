@@ -1,0 +1,26 @@
+{
+  "id": 17,
+  "year": 2018,
+  "set": null,
+  "topics": [
+    "Theory of Computation",
+    "Closure Properties of Languages"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "The set of all recursively enumerable languages is",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "closed under complementation.",
+    "closed under intersection.",
+    "a subset of the set of all recursive languages.",
+    "an uncountable set."
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Analysis of Options:</strong><br><br><strong>Option (A): Incorrect.</strong> Recursively Enumerable (RE) languages are not closed under complementation. If a language $L$ and its complement $\\bar{L}$ are both RE, then $L$ is recursive.<br><br><strong>Option (B): Correct.</strong> RE languages are closed under intersection. If $L_1$ and $L_2$ are recognized by Turing machines $M_1$ and $M_2$, we can construct a Turing machine $M$ that simulates both $M_1$ and $M_2$. $M$ accepts if and only if both $M_1$ and $M_2$ accept. Thus, $L_1 \\cap L_2$ is also RE.<br><br><strong>Option (C): Incorrect.</strong> Every recursive language is recursively enumerable, which means recursive languages are a proper subset of RE languages ($\\text{Recursive} \\subset \\text{RE}$), not the other way around.<br><br><strong>Option (D): Incorrect.</strong> Every RE language is accepted by a Turing machine. Since every Turing machine can be uniquely encoded as a finite binary string, the set of all Turing machines—and consequently the set of all RE languages—is countably infinite, not uncountable.",
+  "videoUrl": null
+}

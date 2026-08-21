@@ -1,0 +1,26 @@
+{
+  "id": 24,
+  "year": "2018",
+  "set": null,
+  "topics": [
+    "Computer Networks",
+    "TCP Congestion Control"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the following statements regarding the slow start phase of the TCP congestion control algorithm. Note that $cwnd$ stands for the TCP congestion window and MSS denotes the Maximum Segment Size.<br><br>(i) The $cwnd$ increases by 2 MSS on every successful acknowledgment.<br>(ii) The $cwnd$ approximately doubles on every successful acknowledgement.<br>(iii) The $cwnd$ increases by 1 MSS every round trip time.<br>(iv) The $cwnd$ approximately doubles every round trip time.<br><br>Which one of the following is correct?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Only (ii) and (iii) are true",
+    "Only (i) and (iii) are true",
+    "Only (iv) is true",
+    "Only (i) and (iv) are true"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "In the TCP Slow Start phase:<br><br>1. For every successful ACK received, $cwnd$ increases by $1\\text{ MSS}$.<br>2. Because each ACK increases $cwnd$ by $1\\text{ MSS}$, receiving ACKs for all segments sent in one Round Trip Time (RTT) results in doubling the $cwnd$ every RTT (exponential growth).<br><br>Evaluating the statements:<br>• <strong>(i) Incorrect:</strong> $cwnd$ increases by $1\\text{ MSS}$ per ACK, not $2\\text{ MSS}$.<br>• <strong>(ii) Incorrect:</strong> $cwnd$ doubles per RTT, not per individual ACK.<br>• <strong>(iii) Incorrect:</strong> Increasing $cwnd$ by $1\\text{ MSS}$ per RTT is characteristic of the Congestion Avoidance phase, not Slow Start.<br>• <strong>(iv) Correct:</strong> $cwnd$ approximately doubles every round trip time during the Slow Start phase.<br><br>Hence, only (iv) is true.",
+  "videoUrl": null
+}

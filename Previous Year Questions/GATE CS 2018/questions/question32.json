@@ -1,0 +1,22 @@
+{
+  "id": 32,
+  "year": 2018,
+  "set": null,
+  "topics": [
+    "Digital Logic",
+    "Sequential Circuits"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider the sequential circuit shown in the figure, where both flip-flops used are positive edge-triggered D flip-flops.<br><br>The number of states in the state transition diagram of this circuit that have a transition back to the same state on some value of “in” is ________.",
+  "assetImage": "question32.png",
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 2,
+    "max": 2
+  },
+  "explanation": "Let the state of the two D flip-flops be represented by $(Q_1, Q_2)$, where $Q_1$ is the output of the first flip-flop and $Q_2$ is the output of the second flip-flop.<br><br>The next state equations are given by:<br>• $Q_1^+ = \\text{in}$<br>• $Q_2^+ = Q_1$<br><br>For a transition to return back to the same state $(Q_1, Q_2)$, we need $(Q_1^+, Q_2^+) = (Q_1, Q_2)$ for some value of $\\text{in} \\in \\{0, 1\\}$.<br>This gives two conditions:<br>1. $\\text{in} = Q_1$<br>2. $Q_1 = Q_2$<br><br>Thus, a state has a self-loop if and only if $Q_1 = Q_2$.<br><br>Checking all 4 possible states:<br>• <strong>State $(0, 0)$:</strong> Setting $\\text{in} = 0$ results in next state $(0, 0)$. (Valid self-loop)<br>• <strong>State $(1, 1)$:</strong> Setting $\\text{in} = 1$ results in next state $(1, 1)$. (Valid self-loop)<br>• <strong>State $(0, 1)$:</strong> Next states are $(0, 0)$ for $\\text{in}=0$ and $(1, 0)$ for $\\text{in}=1$. (No self-loop)<br>• <strong>State $(1, 0)$:</strong> Next states are $(0, 1)$ for $\\text{in}=0$ and $(1, 1)$ for $\\text{in}=1$. (No self-loop)<br><br>Therefore, the number of states that have a transition back to the same state is <strong>2</strong>.",
+  "videoUrl": null
+}

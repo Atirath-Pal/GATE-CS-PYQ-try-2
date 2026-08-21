@@ -1,0 +1,26 @@
+{
+  "id": 3,
+  "year": 2018,
+  "set": null,
+  "topics": [
+    "General Aptitude",
+    "Quantitative Aptitude"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "The area of a square is $d$. What is the area of the circle which has the diagonal of the square as its diameter?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\pi d$",
+    "$\\pi d^2$",
+    "$\\frac{1}{4} \\pi d^2$",
+    "$\\frac{1}{2} \\pi d$"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "Let the side of the square be $a$.<br><br><strong>Step 1: Find the side and diagonal of the square.</strong><br>Given that the area of the square is $d$:<br>$a^2 = d \\implies a = \\sqrt{d}$<br><br>The diagonal of the square ($D$) is given by:<br>$D = \\sqrt{2} a = \\sqrt{2d}$<br><br><strong>Step 2: Find the area of the circle.</strong><br>The diameter of the circle is equal to the diagonal of the square, so:<br>$\\text{Diameter} = \\sqrt{2d}$<br>$\\text{Radius } (r) = \\frac{\\sqrt{2d}}{2} = \\sqrt{\\frac{d}{2}}$<br><br>The area of the circle is:<br>$\\text{Area} = \\pi r^2 = \\pi \\left(\\sqrt{\\frac{d}{2}}\\right)^2 = \\frac{1}{2}\\pi d$<br><br>Hence, the correct option is <strong>(D)</strong>.",
+  "videoUrl": null
+}
