@@ -1,0 +1,21 @@
+{
+  "id": 50,
+  "year": "2019",
+  "set": null,
+  "topics": ["Data Structures", "Heaps"],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the following statements:<br><br>I. The smallest element in a max-heap is always at a leaf node<br>II. The second largest element in a max-heap is always a child of the root node<br>III. A max-heap can be constructed from a binary search tree in $\\Theta(n)$ time<br>IV. A binary search tree can be constructed from a max-heap in $\\Theta(n)$ time<br><br>Which of the above statements are TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "I, II and III",
+    "I, II and IV",
+    "I, III and IV",
+    "II, III and IV"
+  ],
+  "answer": ["A"],
+  "explanation": "<strong>Statement I is TRUE:</strong> In a max-heap, every parent node is greater than or equal to its children. Therefore, the minimum element cannot have any children, which implies it must be located at one of the leaf nodes.<br><br><strong>Statement II is TRUE:</strong> The largest element is always at the root. The second largest element must be one of the immediate children of the root node (left child or right child).<br><br><strong>Statement III is TRUE:</strong> An in-order traversal of a Binary Search Tree (BST) extracts elements in sorted order in $\\Theta(n)$ time. Constructing a max-heap from an array of $n$ elements using Floyd's build-heap algorithm takes $\\Theta(n)$ time. Thus, a max-heap can be constructed from a BST in $\\Theta(n)$ total time.<br><br><strong>Statement IV is FALSE:</strong> If a BST could be constructed from a max-heap in $\\Theta(n)$ time, then performing an in-order traversal on that BST would allow us to sort $n$ elements in $\\Theta(n)$ time. This contradicts the lower bound of $\\Omega(n \\log n)$ for comparison-based sorting algorithms.<br><br>Hence, statements <strong>I, II, and III</strong> are TRUE.",
+  "videoUrl": null
+}

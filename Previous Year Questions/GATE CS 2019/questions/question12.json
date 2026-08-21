@@ -1,0 +1,26 @@
+{
+  "id": 12,
+  "year": 2019,
+  "set": null,
+  "topics": [
+    "Computer Organization and Architecture",
+    "Memory Interface"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "The chip select logic for a certain DRAM chip in a memory system design is shown below. Assume that the memory system has 16 address lines denoted by $A_{15}$ to $A_{0}$. What is the range of addresses (in hexadecimal) of the memory system that can get enabled by the chip select (CS) signal?",
+  "assetImage": "question12.png",
+  "codeBlock": null,
+  "options": [
+    "C800 to CFFF",
+    "CA00 to CAFF",
+    "C800 to C8FF",
+    "DA00 to DFFF"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "To enable the chip select ($CS$) signal, the output of the 5-input AND gate must be $1$.<br><br>From the circuit diagram:<br>• $A_{15}$ is directly connected $\\implies A_{15} = 1$<br>• $A_{14}$ is directly connected $\\implies A_{14} = 1$<br>• $A_{13}$ is connected via an inverter (bubble) $\\implies A_{13} = 0$<br>• $A_{12}$ is connected via an inverter (bubble) $\\implies A_{12} = 0$<br>• $A_{11}$ is directly connected $\\implies A_{11} = 1$<br><br>Thus, the higher order bits are fixed as:<br>$A_{15} A_{14} A_{13} A_{12} A_{11} = 11001_2$<br><br>The remaining lower order address lines ($A_{10}$ to $A_0$) can vary from all $0$'s to all $1$'s.<br><br><strong>Minimum Address:</strong><br>Binary: $1100\\ 1000\\ 0000\\ 0000_2$<br>Hexadecimal: $\\text{C800}_{16}$<br><br><strong>Maximum Address:</strong><br>Binary: $1100\\ 1111\\ 1111\\ 1111_2$<br>Hexadecimal: $\\text{CFFF}_{16}$<br><br>Hence, the address range enabled by $CS$ is <strong>C800 to CFFF</strong>.",
+  "videoUrl": null
+}

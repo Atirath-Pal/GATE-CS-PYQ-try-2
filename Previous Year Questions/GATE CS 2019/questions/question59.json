@@ -1,0 +1,21 @@
+{
+  "id": 59,
+  "year": 2019,
+  "set": null,
+  "topics": [
+    "Computer Networks"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider that 15 machines need to be connected in a LAN using 8-port Ethernet switches. Assume that these switches do not have any separate uplink ports. The minimum number of switches needed is ___________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 3,
+    "max": 3
+  },
+  "explanation": "<strong>Step-by-step Solution:</strong><br><br>Let $N$ be the number of switches needed.<br><br>1. Each switch has $8$ ports, giving a total of $8N$ ports across $N$ switches.<br>2. To connect $N$ switches into a single connected network, at least $N - 1$ inter-switch links are required.<br>3. Each link connects two switches, consuming $1$ port on each end. Thus, $2(N - 1)$ ports are used for switch-to-switch connections.<br>4. The remaining ports available to connect machines is given by:<br>$\\text{Available Ports} = 8N - 2(N - 1) = 6N + 2$<br><br>Since we need to connect 15 machines:<br>$6N + 2 \\ge 15$<br>$6N \\ge 13$<br>$N \\ge \\frac{13}{6} \\approx 2.17$<br><br>Since the number of switches must be an integer, the minimum number of switches required is <strong>3</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,22 @@
+{
+  "id": 56,
+  "year": "2019",
+  "set": null,
+  "topics": [
+    "Data Structures",
+    "Trees"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Let $T$ be a full binary tree with 8 leaves. (A full binary tree has every level full.) Suppose two leaves $a$ and $b$ of $T$ are chosen uniformly and independently at random. The expected value of the distance between $a$ and $b$ in $T$ (i.e., the number of edges in the unique path between $a$ and $b$) is (rounded off to 2 decimal places) _________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 4.25,
+    "max": 4.25
+  },
+  "explanation": "<strong>Step 1: Understand the Structure of Tree $T$</strong><br>A full binary tree with every level full and $8$ leaves has height $h = \\log_2(8) = 3$.<br>The level distribution is:<br>- Level 0 (Root): $1$ node<br>- Level 1: $2$ nodes<br>- Level 2: $4$ nodes<br>- Level 3 (Leaves): $8$ nodes<br><br><strong>Step 2: Calculate Pairwise Distances</strong><br>Since $a$ and $b$ are chosen uniformly and independently at random, there are $8 \\times 8 = 64$ total ordered pairs $(a, b)$.<br><br>We categorize pairs based on their lowest common ancestor (LCA):<br><br>1. <strong>Same leaf ($a = b$):</strong><br>- LCA is at Level 3.<br>- Number of pairs = $8$.<br>- Distance = $0$.<br><br>2. <strong>LCA at Level 2:</strong><br>- Leaves are distinct and belong to the same parent at Level 2.<br>- Number of pairs = $4 \\text{ parents} \\times (2 \\times 1) = 8$.<br>- Distance = $2$.<br><br>3. <strong>LCA at Level 1:</strong><br>- Leaves belong to different children of a Level 1 node.<br>- Number of pairs = $2 \\text{ nodes} \\times (4 \\times 4 - 4) = 16$.<br>- Distance = $4$.<br><br>4. <strong>LCA at Level 0 (Root):</strong><br>- One leaf is in the left subtree of the root and the other is in the right subtree.<br>- Number of pairs = $2 \\times (4 \\times 4) = 32$.<br>- Distance = $6$.<br><br><strong>Step 3: Calculate Expected Value</strong><br>$$E[D] = \\frac{(8 \\times 0) + (8 \\times 2) + (16 \\times 4) + (32 \\times 6)}{64}$$<br>$$E[D] = \\frac{0 + 16 + 64 + 192}{64} = \\frac{272}{64} = 4.25$$<br><br>The expected distance between $a$ and $b$ is <strong>4.25</strong>.",
+  "videoUrl": null
+}

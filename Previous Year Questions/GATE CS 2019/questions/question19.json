@@ -1,0 +1,21 @@
+{
+  "id": 19,
+  "year": 2019,
+  "set": null,
+  "topics": ["Linear Algebra", "Matrices"],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Let $X$ be a square matrix. Consider the following two statements on $X$.<br><br>I. $X$ is invertible.<br>II. Determinant of $X$ is non-zero.<br><br>Which one of the following is TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "I implies II; II does not imply I.",
+    "II implies I; I does not imply II.",
+    "I does not imply II; II does not imply I.",
+    "I and II are equivalent statements."
+  ],
+  "answer": ["D"],
+  "explanation": "<strong>Step 1:</strong> For a square matrix $X$, a fundamental result of linear algebra states that $X$ is invertible if and only if its determinant is non-zero.<br><br><strong>Step 2:</strong> Therefore, if $X$ is invertible, then $\\det(X) \\ne 0$, so statement I implies statement II.<br><br><strong>Step 3:</strong> Conversely, if $\\det(X) \\ne 0$, then $X$ is invertible, so statement II implies statement I.<br><br><strong>Conclusion:</strong> Statements I and II are equivalent. Hence, the correct answer is <strong>(D)</strong>.",
+  "videoUrl": null
+}

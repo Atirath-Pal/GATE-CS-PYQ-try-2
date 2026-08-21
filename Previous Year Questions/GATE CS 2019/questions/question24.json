@@ -1,0 +1,26 @@
+{
+  "id": 24,
+  "year": 2019,
+  "set": null,
+  "topics": [
+    "Databases",
+    "B+ Trees"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Which one of the following statements is NOT correct about the B+ tree data structure used for creating an index of a relational database table?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "B+ Tree is a height-balanced tree",
+    "Non-leaf nodes have pointers to data records",
+    "Key values in each node are kept in sorted order",
+    "Each leaf node has a pointer to the next leaf node"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Option A:</strong> A B+ tree is always height-balanced, meaning all leaf nodes are located at the exact same level. Hence, statement (A) is correct.<br><br><strong>Option B:</strong> In a B+ tree, data record pointers are stored exclusively at the leaf nodes. Non-leaf (internal) nodes store only search keys and node pointers to direct tree traversal. Therefore, non-leaf nodes do not contain pointers to data records. Hence, statement (B) is <strong>NOT correct</strong>.<br><br><strong>Option C:</strong> Keys within each node are always maintained in sorted order to allow binary search during lookups. Hence, statement (C) is correct.<br><br><strong>Option D:</strong> Leaf nodes are linked sequentially using pointers to enable efficient range queries and sequential access. Hence, statement (D) is correct.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 47,
+  "year": 2019,
+  "set": null,
+  "topics": [
+    "Algorithms",
+    "Order Statistics"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "There are $n$ unsorted arrays: $A_1, A_2, \\ldots, A_n$. Assume that $n$ is odd. Each of $A_1, A_2, \\ldots, A_n$ contains $n$ distinct elements. There are no common elements between any two arrays. The worst-case time complexity of computing the median of the medians of $A_1, A_2, \\ldots, A_n$ is",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$O(n)$",
+    "$O(n \\log n)$",
+    "$O(n^2)$",
+    "$\\Omega(n^2 \\log n)$"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Finding the median of each array</strong><br>There are $n$ unsorted arrays $A_1, A_2, \\ldots, A_n$, each containing $n$ elements.<br>Using a linear-time selection algorithm (such as QuickSelect or Median-of-Medians), finding the median of an unsorted array of size $n$ takes $O(n)$ worst-case time.<br>For $n$ such arrays, finding all $n$ medians takes $n \\times O(n) = O(n^2)$ time.<br><br><strong>Step 2: Finding the median of the medians</strong><br>After computing the median of each array, we obtain a new list of $n$ medians.<br>Finding the median of this new list of $n$ elements takes $O(n)$ worst-case time using linear-time selection.<br><br><strong>Step 3: Total Worst-Case Time Complexity</strong><br>Total time complexity $= O(n^2) + O(n) = O(n^2)$.<br><br>Thus, the correct option is <strong>(C)</strong>.",
+  "videoUrl": null
+}

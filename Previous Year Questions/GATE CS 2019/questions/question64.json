@@ -1,0 +1,22 @@
+{
+  "id": 64,
+  "year": 2019,
+  "set": null,
+  "topics": [
+    "Computer Networks",
+    "Cryptography"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "In an RSA cryptosystem, the value of the public modulus parameter $n$ is 3007. If it is also known that $\\varphi(n) = 2880$, where $\\varphi()$ denotes Euler's Totient Function, then the prime factor of $n$ which is greater than 50 is _____.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 97,
+    "max": 97
+  },
+  "explanation": "In an RSA cryptosystem, $n = p \\times q$ where $p$ and $q$ are prime factors.<br>Euler's totient function is given by $\\varphi(n) = (p - 1)(q - 1)$.<br><br><strong>Step 1: Calculate $p + q$</strong><br>$\\varphi(n) = p \\cdot q - (p + q) + 1 = n - (p + q) + 1$<br>Rearranging the equation:<br>$p + q = n - \\varphi(n) + 1$<br>$p + q = 3007 - 2880 + 1 = 128$<br><br><strong>Step 2: Solve the quadratic equation for $p$ and $q$</strong><br>The roots of $x^2 - (p + q)x + pq = 0$ give the values of $p$ and $q$:<br>$x^2 - 128x + 3007 = 0$<br><br>Applying the quadratic formula:<br>$x = \\frac{128 \\pm \\sqrt{128^2 - 4(1)(3007)}}{2}$<br>$x = \\frac{128 \\pm \\sqrt{16384 - 12028}}{2}$<br>$x = \\frac{128 \\pm \\sqrt{4356}}{2}$<br>$x = \\frac{128 \\pm 66}{2}$<br><br>The two roots are:<br>$x_1 = \\frac{128 + 66}{2} = 97$<br>$x_2 = \\frac{128 - 66}{2} = 31$<br><br>Thus, the prime factors of $n$ are $31$ and $97$. The prime factor greater than 50 is <strong>97</strong>.",
+  "videoUrl": null
+}

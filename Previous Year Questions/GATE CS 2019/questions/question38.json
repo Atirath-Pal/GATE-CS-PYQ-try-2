@@ -1,0 +1,26 @@
+{
+  "id": 38,
+  "year": 2019,
+  "set": null,
+  "topics": [
+    "Computer Networks",
+    "IP Addressing"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider three machines M, N, and P with IP addresses 100.10.5.2, 100.10.5.5, and 100.10.5.6 respectively. The subnet mask is set to 255.255.255.252 for all the three machines. Which one of the following is true?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "M, N, and P all belong to the same subnet",
+    "Only M and N belong to the same subnet",
+    "Only N and P belong to the same subnet",
+    "M, N, and P belong to three different subnets"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "To determine which machines belong to the same subnet, perform a bitwise AND operation between each IP address and the subnet mask $255.255.255.252$.<br><br><strong>Subnet Mask Analysis:</strong><br>The last octet of the subnet mask is $252 = 11111100_2$.<br>The block size is $256 - 252 = 4$.<br>Thus, the subnet boundaries in the last octet occur in multiples of $4$ ($0, 4, 8, \\dots$).<br><br><strong>Network ID Calculation:</strong><br>1. <strong>Machine M ($100.10.5.2$):</strong><br>Last octet is $2$. $2 \\text{ AND } 252 = 0$.<br>Network ID = $100.10.5.0$<br><br>2. <strong>Machine N ($100.10.5.5$):</strong><br>Last octet is $5$. $5 \\text{ AND } 252 = 4$.<br>Network ID = $100.10.5.4$<br><br>3. <strong>Machine P ($100.10.5.6$):</strong><br>Last octet is $6$. $6 \\text{ AND } 252 = 4$.<br>Network ID = $100.10.5.4$<br><br><strong>Conclusion:</strong><br>Machine N and Machine P share the same Network ID ($100.10.5.4$), whereas Machine M has a different Network ID ($100.10.5.0$). Hence, only N and P belong to the same subnet.",
+  "videoUrl": null
+}

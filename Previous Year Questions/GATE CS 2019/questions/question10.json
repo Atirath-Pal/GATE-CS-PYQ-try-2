@@ -1,0 +1,26 @@
+{
+  "id": 10,
+  "year": 2019,
+  "set": null,
+  "topics": [
+    "General Aptitude",
+    "Logical Reasoning"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Three of the five students allocated to a hostel put in special requests to the warden. Given the floor plan of the vacant rooms, select the allocation plan that will accommodate all their requests.<br><br>Request by X: Due to pollen allergy, I want to avoid a wing next to the garden.<br>Request by Y: I want to live as far from the washrooms as possible, since I am very sensitive to smell.<br>Request by Z: I believe in Vaastu and so want to stay in the South-west wing.<br>The shaded rooms are already occupied. WR is washroom.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "[IMG: question10_option_a.png]",
+    "[IMG: question10_option_b.png]",
+    "[IMG: question10_option_c.png]",
+    "[IMG: question10_option_d.png]"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Step-by-step Evaluation:</strong><br><br>1. <strong>Request by Z:</strong> Z wants to stay in the South-west wing (bottom-left area).<br>- In Option (A) and (B), Z is in the West (middle-left) wing.<br>- In Option (C), Z is in the North-East wing.<br>- In Option (D), Z is located in the South-west (bottom) wing.<br>Thus, only Option (D) satisfies Z's request.<br><br>2. <strong>Request by X:</strong> X wants to avoid the garden (located along the East/right side). In Option (D), X is in the bottom-left wing, far from the garden.<br><br>3. <strong>Request by Y:</strong> Y wants to be as far as possible from the washrooms (WR), which are located at the top-left and bottom-left corners. In Option (D), Y is placed in the middle-right room, which maximizes the distance from both washrooms.<br><br>Therefore, <strong>Option (D)</strong> satisfies all three student requests.",
+  "videoUrl": null
+}

@@ -1,0 +1,21 @@
+{
+  "id": 23,
+  "year": 2019,
+  "set": null,
+  "topics": ["Engineering Mathematics", "Calculus"],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Compute $\\lim_{x \\to 3} \\frac{x^4 - 81}{2x^2 - 5x - 3}$",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "1",
+    "53/12",
+    "108/7",
+    "Limit does not exist"
+  ],
+  "answer": ["C"],
+  "explanation": "<strong>Step 1: Check for Indeterminate Form</strong><br>Directly substituting $x = 3$ into the given expression:<br>Numerator: $3^4 - 81 = 81 - 81 = 0$<br>Denominator: $2(3)^2 - 5(3) - 3 = 18 - 15 - 3 = 0$<br>Since the limit is in the indeterminate form $\\frac{0}{0}$, we factor the numerator and denominator.<br><br><strong>Step 2: Factorize</strong><br>Numerator: $x^4 - 81 = (x^2 - 9)(x^2 + 9) = (x - 3)(x + 3)(x^2 + 9)$<br>Denominator: $2x^2 - 5x - 3 = (x - 3)(2x + 1)$<br><br><strong>Step 3: Evaluate the Limit</strong><br>$\\lim_{x \\to 3} \\frac{(x - 3)(x + 3)(x^2 + 9)}{(x - 3)(2x + 1)} = \\lim_{x \\to 3} \\frac{(x + 3)(x^2 + 9)}{2x + 1}$<br><br>Substituting $x = 3$:<br>$\\frac{(3 + 3)(3^2 + 9)}{2(3) + 1} = \\frac{6 \\times 18}{7} = \\frac{108}{7}$<br><br>Hence, option <strong>C</strong> is the correct answer.",
+  "videoUrl": null
+}

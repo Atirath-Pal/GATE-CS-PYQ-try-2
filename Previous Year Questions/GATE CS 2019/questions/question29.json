@@ -1,0 +1,22 @@
+{
+  "id": 29,
+  "year": "2019",
+  "set": null,
+  "topics": [
+    "Compiler Design",
+    "Syntax Analysis"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider the grammar given below:<br><br>$S \\rightarrow Aa$<br>$A \\rightarrow BD$<br>$B \\rightarrow b \\mid \\epsilon$<br>$D \\rightarrow d \\mid \\epsilon$<br><br>Let a, b, d, and $\\$$ be indexed as follows:<br><br><div style=\"overflow-x: auto; max-width: 100%; margin: 8px 0;\"><table style=\"border-collapse: collapse; border: 1px solid #ffffff; text-align: center; font-size: 13px;\"><tbody><tr><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">a</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">b</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">d</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">$</td></tr><tr><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">3</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">2</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">1</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">0</td></tr></tbody></table></div><br>Compute the FOLLOW set of the non-terminal B and write the index values for the symbols in the FOLLOW set in the descending order. (For example, if the FOLLOW set is {a, b, d, $\\$$}, then the answer should be 3210)",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 31,
+    "max": 31
+  },
+  "explanation": "<strong>Step 1: Analyze the given grammar rules.</strong><br>$S \\rightarrow Aa$<br>$A \\rightarrow BD$<br>$B \\rightarrow b \\mid \\epsilon$<br>$D \\rightarrow d \\mid \\epsilon$<br><br><strong>Step 2: Find the FIRST sets.</strong><br>$FIRST(D) = \\{d, \\epsilon\\}$<br><br><strong>Step 3: Compute $FOLLOW(B)$.</strong><br>From production $A \\rightarrow BD$, non-terminal $B$ is followed by $D$.<br>So, $FOLLOW(B)$ contains $FIRST(D) \\setminus \\{\\epsilon\\} = \\{d\\}$.<br>Since $D \\rightarrow \\epsilon$ (i.e., $\\epsilon \\in FIRST(D)$), $FOLLOW(B)$ also contains $FOLLOW(A)$.<br><br>From production $S \\rightarrow Aa$, $A$ is followed by terminal $a$.<br>Therefore, $FOLLOW(A) = \\{a\\}$.<br><br>Combining these gives:<br>$FOLLOW(B) = \\{d\\} \\cup FOLLOW(A) = \\{a, d\\}$.<br><br><strong>Step 4: Map symbols to their given indices and arrange in descending order.</strong><br>Index of $a = 3$<br>Index of $d = 1$<br><br>Arranging the index values in descending order yields <strong>31</strong>.",
+  "videoUrl": null
+}

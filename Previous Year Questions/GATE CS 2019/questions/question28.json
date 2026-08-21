@@ -1,0 +1,22 @@
+{
+  "id": 28,
+  "year": 2019,
+  "set": null,
+  "topics": [
+    "Programming and Data Structures",
+    "C Programming"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider the following C program:<br><br>The value printed by the program is _________.",
+  "assetImage": null,
+  "codeBlock": "#include &lt;stdio.h&gt;\nint jumble(int x, int y){\n    x=2*x+y;\n    return x;\n}\nint main(){\n    int x=2, y=5;\n    y=jumble(y,x);\n    x=jumble(y,x);\n    printf(\"%d \\\\n\", x);\n    return 0;\n}",
+  "options": [],
+  "answer": {
+    "min": 26,
+    "max": 26
+  },
+  "explanation": "<strong>Step 1: Initial variable values in main</strong><br>In <code>main()</code>, $x = 2$ and $y = 5$.<br><br><strong>Step 2: First function call <code>y = jumble(y, x);</code></strong><br>Arguments are passed by value:<br>• The value of $y$ ($5$) is assigned to parameter $x$ in <code>jumble</code>.<br>• The value of $x$ ($2$) is assigned to parameter $y$ in <code>jumble</code>.<br>Inside <code>jumble</code>:<br>$x = 2 \\times 5 + 2 = 12$<br>The function returns $12$.<br>In <code>main()</code>, variable $y$ is updated to $12$, while local variable $x$ remains $2$.<br><br><strong>Step 3: Second function call <code>x = jumble(y, x);</code></strong><br>Current values in <code>main()</code> are $y = 12$ and $x = 2$.<br>• Parameter $x$ gets $12$.<br>• Parameter $y$ gets $2$.<br>Inside <code>jumble</code>:<br>$x = 2 \\times 12 + 2 = 26$<br>The function returns $26$.<br>In <code>main()</code>, variable $x$ is updated to $26$.<br><br><strong>Step 4: Output calculation</strong><br><code>printf(\"%d \\\\n\", x);</code> prints the value of $x$, which is <strong>26</strong>.",
+  "videoUrl": null
+}

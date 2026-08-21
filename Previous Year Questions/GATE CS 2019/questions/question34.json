@@ -1,0 +1,22 @@
+{
+  "id": 34,
+  "year": 2019,
+  "set": null,
+  "topics": [
+    "Programming and Data Structures",
+    "C Programming"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider the following C program:<br><br>The number that will be displayed on execution of the program is __________ .",
+  "assetImage": null,
+  "codeBlock": "#include &lt;stdio.h&gt;\nint main(){\n    int arr[]={1,2,3,4,5,6,7,8,9,0,1,2,5}, *ip=arr+4;\n    printf(\"%d\\n\", ip[1]);\n    return 0;\n}",
+  "options": [],
+  "answer": {
+    "min": 6,
+    "max": 6
+  },
+  "explanation": "<strong>Step 1: Array Initialization</strong><br>The array $arr$ contains elements indexed from $0$ as follows:<br>$arr[0] = 1, arr[1] = 2, arr[2] = 3, arr[3] = 4, arr[4] = 5, arr[5] = 6, \\dots$<br><br><strong>Step 2: Pointer Assignment</strong><br>The pointer variable $ip$ is initialized to $arr + 4$, which points to $arr[4]$ (value $5$).<br><br><strong>Step 3: Accessing Element via Pointer</strong><br>The expression $ip[1]$ is equivalent to $*(ip + 1)$.<br>Since $ip = arr + 4$, $ip[1]$ simplifies to $*(arr + 4 + 1) = arr[5]$.<br><br><strong>Step 4: Final Output</strong><br>The value stored at $arr[5]$ is $6$. Therefore, the program prints <strong>6</strong>.",
+  "videoUrl": null
+}

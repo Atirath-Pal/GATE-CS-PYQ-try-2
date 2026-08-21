@@ -1,0 +1,26 @@
+{
+  "id": 14,
+  "year": 2019,
+  "set": null,
+  "topics": [
+    "Digital Logic",
+    "Computer Arithmetic"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "In 16-bit 2’s complement representation, the decimal number $-28$ is:",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "1111 1111 0001 1100",
+    "0000 0000 1110 0100",
+    "1111 1111 1110 0100",
+    "1000 0000 1110 0100"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Convert $+28$ into 16-bit binary representation.</strong><br>$+28_{10} = 0000\\ 0000\\ 0001\\ 1100_2$<br><br><strong>Step 2: Find the 1's complement by inverting all bits.</strong><br>1's complement $= 1111\\ 1111\\ 1110\\ 0011_2$<br><br><strong>Step 3: Add $1$ to obtain the 2's complement representation for $-28$.</strong><br>$1111\\ 1111\\ 1110\\ 0011_2 + 1_2 = 1111\\ 1111\\ 1110\\ 0100_2$<br><br>Thus, the correct option is <strong>(C)</strong>.",
+  "videoUrl": null
+}

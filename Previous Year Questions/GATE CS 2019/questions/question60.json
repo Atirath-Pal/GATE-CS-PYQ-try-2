@@ -1,0 +1,22 @@
+{
+  "id": 60,
+  "year": 2019,
+  "set": null,
+  "topics": [
+    "Digital Logic",
+    "Combinational Circuits"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "What is the minimum number of 2-input NOR gates required to implement a 4-variable function expressed in sum-of-minterms form as $f = \\sum (0, 2, 5, 7, 8, 10, 13, 15)$? Assume that all the inputs and their complements are available.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 3,
+    "max": 3
+  },
+  "explanation": "<strong>Step 1: Simplify the given Boolean function.</strong><br><br>The given 4-variable function is:<br>$f(A, B, C, D) = \\sum m(0, 2, 5, 7, 8, 10, 13, 15)$<br><br>Grouping minterms on a K-map:<br>- Minterms $(0, 2, 8, 10)$ combine to give $B'D'$<br>- Minterms $(5, 7, 13, 15)$ combine to give $BD$<br><br>So, the simplified function is:<br>$f = B'D' + BD = (B \\oplus D)' = B \\odot D$<br><br><strong>Step 2: Implement using 2-input NOR gates.</strong><br><br>Since inputs and their complements ($B, B', D, D'$) are freely available:<br>1. Gate 1: $G_1 = \\text{NOR}(B, D') = (B + D')' = B'D$<br>2. Gate 2: $G_2 = \\text{NOR}(B', D) = (B' + D)' = BD'$<br>3. Gate 3: $G_3 = \\text{NOR}(G_1, G_2) = (B'D + BD')' = (B \\oplus D)' = f$<br><br>Thus, the minimum number of 2-input NOR gates required is <strong>3</strong>.",
+  "videoUrl": null
+}

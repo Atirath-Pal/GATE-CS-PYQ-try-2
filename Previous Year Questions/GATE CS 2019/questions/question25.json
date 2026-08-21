@@ -1,0 +1,26 @@
+{
+  "id": 25,
+  "year": 2019,
+  "set": null,
+  "topics": [
+    "Theory of Computation",
+    "Regular Languages"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "For $\\Sigma = \\{a, b\\}$, let us consider the regular language $L = \\{x \\mid x = a^{2+3k} \\text{ or } x = b^{10+12k}, k \\ge 0\\}$. Which one of the following can be a pumping length (the constant guaranteed by the pumping lemma) for $L$ ?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "3",
+    "5",
+    "9",
+    "24"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Pumping Lemma Definition:</strong><br>For a regular language $L$, there exists a pumping length $p$ such that any string $s \\in L$ with $|s| \\ge p$ can be written as $s = xyz$ satisfying:<br>1. $|y| > 0$<br>2. $|xy| \\le p$<br>3. $xy^i z \\in L$ for all $i \\ge 0$<br><br><strong>Given Language:</strong><br>$L = \\{a^{2+3k} \\mid k \\ge 0\\} \\cup \\{b^{10+12k} \\mid k \\ge 0\\}$<br><br><strong>Analyzing Options:</strong><br>If $p = 3, 5,$ or $9$, consider the string $s = b^{10} \\in L$. Here $|s| = 10 \\ge p$.<br>Any prefix $xy$ has length $|xy| \\le p$, so $y = b^m$ where $1 \\le m \\le p$.<br>Pumping $y$ once gives $xy^2 z$ with length $10 + m$.<br>- For $p = 3$, $1 \\le m \\le 3 \\implies 11 \\le |xy^2 z| \\le 13$, none of which are in $L$.<br>- For $p = 5$, $1 \\le m \\le 5 \\implies 11 \\le |xy^2 z| \\le 15$, none of which are in $L$.<br>- For $p = 9$, $1 \\le m \\le 9 \\implies 11 \\le |xy^2 z| \\le 19$, none of which are in $L$.<br>Thus, $3, 5,$ and $9$ cannot be valid pumping lengths.<br><br><strong>Testing $p = 24$:</strong><br>- For any string $s = a^{2+3k}$ with $|s| \\ge 24$, we can choose $y = a^3$ ($|xy| = 3 \\le 24$). Pumping $y$ produces lengths $2 + 3k + 3(i-1) = 2 + 3(k + i - 1)$, which is always in $L$.<br>- For any string $s = b^{10+12k}$ with $|s| \\ge 24$, we can choose $y = b^{12}$ ($|xy| = 12 \\le 24$). Pumping $y$ produces lengths $10 + 12k + 12(i-1) = 10 + 12(k + i - 1)$, which is always in $L$.<br><br>Hence, $24$ is a valid pumping length.",
+  "videoUrl": null
+}

@@ -1,0 +1,22 @@
+{
+  "id": 57,
+  "year": 2019,
+  "set": null,
+  "topics": [
+    "Probability",
+    "Engineering Mathematics"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Suppose $Y$ is distributed uniformly in the open interval $(1,6)$. The probability that the polynomial $3x^2 + 6xY + 3Y + 6$ has only real roots is (rounded off to 1 decimal place) ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 0.8,
+    "max": 0.8
+  },
+  "explanation": "<strong>Step 1: Condition for real roots</strong><br>For a quadratic equation $ax^2 + bx + c = 0$ to have real roots, its discriminant $D$ must be non-negative ($D \\ge 0$).<br><br><strong>Step 2: Express the discriminant in terms of $Y$</strong><br>The given quadratic equation is $3x^2 + (6Y)x + (3Y + 6) = 0$.<br>Here, $a = 3$, $b = 6Y$, and $c = 3Y + 6$.<br><br>Calculating the discriminant:<br>$D = b^2 - 4ac$<br>$D = (6Y)^2 - 4(3)(3Y + 6)$<br>$D = 36Y^2 - 36Y - 72$<br><br>Setting $D \\ge 0$:<br>$36Y^2 - 36Y - 72 \\ge 0$<br>$Y^2 - Y - 2 \\ge 0$<br>$(Y - 2)(Y + 1) \\ge 0$<br><br>This gives $Y \\ge 2$ or $Y \\le -1$.<br><br><strong>Step 3: Determine the favorable region for $Y$</strong><br>$Y$ is uniformly distributed in the interval $(1, 6)$.<br>Since $Y > 1$, the region $Y \\le -1$ is not possible.<br>Thus, $Y$ must satisfy $Y \\ge 2$, meaning $Y \\in [2, 6)$.<br><br><strong>Step 4: Calculate the probability</strong><br>Total length of interval $(1, 6) = 6 - 1 = 5$<br>Favorable length of interval $[2, 6) = 6 - 2 = 4$<br><br>$\text{Probability} = \\frac{4}{5} = 0.8$",
+  "videoUrl": null
+}

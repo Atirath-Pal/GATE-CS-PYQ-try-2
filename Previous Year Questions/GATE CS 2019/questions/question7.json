@@ -1,0 +1,26 @@
+{
+  "id": 7,
+  "year": 2019,
+  "set": null,
+  "topics": [
+    "General Aptitude",
+    "Venn Diagrams"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "In the given diagram, teachers are represented in the triangle, researchers in the circle and administrators in the rectangle. Out of the total number of the people, the percentage of administrators shall be in the range of __________.",
+  "assetImage": "question7.png",
+  "codeBlock": null,
+  "options": [
+    "0 to 15",
+    "16 to 30",
+    "31 to 45",
+    "46 to 60"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Calculate the total number of people:</strong><br>$$\\text{Total} = 70 + 10 + 20 + 20 + 40 = 160$$<br><br><strong>Step 2: Calculate the total number of administrators:</strong><br>Administrators are represented by the rectangle:<br>$$\\text{Administrators} = 10 + 20 + 20 = 50$$<br><br><strong>Step 3: Calculate the percentage of administrators:</strong><br>$$\\text{Percentage} = \\left(\\frac{50}{160}\\right) \\times 100\\% = 31.25\\%$$<br><br>The value $31.25\\%$ lies in the range of <strong>31 to 45</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,23 @@
+{
+  "id": 8,
+  "year": 2019,
+  "set": null,
+  "topics": ["General Aptitude", "Verbal Ability"],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "“A recent High Court judgement has sought to dispel the idea of begging as a disease — which leads to its stigmatization and criminalization — and to regard it as a symptom. The underlying disease is the failure of the state to protect citizens who fall through the social security net.”<br><br>Which one of the following statements can be inferred from the given passage?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Beggars are lazy people who beg because they are unwilling to work",
+    "Beggars are created because of the lack of social welfare schemes",
+    "Begging is an offence that has to be dealt with firmly",
+    "Begging has to be banned because it adversely affects the welfare of the state"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step-by-step explanation:</strong><br><br>1. The passage states that begging is a symptom, and the underlying cause ('disease') is the failure of the state to protect citizens who fall through the social security net.<br>2. This directly implies that the lack of social welfare schemes and safety nets leads to people turning to begging.<br>3. Therefore, statement <strong>(B)</strong> can be logically inferred from the passage.<br><br><strong>Correct Answer:</strong> <strong>(B)</strong>",
+  "videoUrl": null
+}

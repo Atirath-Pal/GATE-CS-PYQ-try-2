@@ -1,0 +1,22 @@
+{
+  "id": 51,
+  "year": 2019,
+  "set": null,
+  "topics": [
+    "Operating Systems",
+    "CPU Scheduling"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the following four processes with arrival times (in milliseconds) and their length of CPU bursts (in milliseconds) as shown below:<br><br><div style=\"overflow-x: auto; max-width: 100%; margin: 8px 0;\"><table style=\"border-collapse: collapse; border: 1px solid #ffffff; text-align: center; font-size: 13px;\"><tbody><tr><td style=\"border: 1px solid #ffffff; padding: 6px 12px; text-align: left;\">Process</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">P1</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">P2</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">P3</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">P4</td></tr><tr><td style=\"border: 1px solid #ffffff; padding: 6px 12px; text-align: left;\">Arrival time</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">0</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">1</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">3</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">4</td></tr><tr><td style=\"border: 1px solid #ffffff; padding: 6px 12px; text-align: left;\">CPU burst time</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">3</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">1</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">3</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">Z</td></tr></tbody></table></div><br>These processes are run on a single processor using preemptive Shortest Remaining Time First scheduling algorithm. If the average waiting time of the processes is 1 millisecond, then the value of $Z$ is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 2,
+    "max": 2
+  },
+  "explanation": "<strong>Step-by-step solution:</strong><br><br><strong>1. Given Information:</strong><br>We have 4 processes scheduled using the preemptive Shortest Remaining Time First (SRTF) algorithm.<br>Total number of processes = $4$.<br>Average waiting time = $1\\text{ ms} \\implies$ Total waiting time = $1 \\times 4 = 4\\text{ ms}$.<br><br><strong>2. Execution Analysis:</strong><br>• At $t = 0$, $P_1$ arrives with burst time $3$ and starts executing.<br>• At $t = 1$, $P_2$ arrives with burst time $1$. The remaining burst time of $P_1$ is $2$. Since $1 < 2$, $P_2$ preempts $P_1$.<br>• At $t = 2$, $P_2$ finishes execution.<br>  - Waiting time of $P_2 = \\text{Completion Time} - \\text{Arrival Time} - \\text{Burst Time} = 2 - 1 - 1 = 0\\text{ ms}$.<br>• From $t = 2$ to $t = 3$, $P_1$ resumes execution (remaining burst time becomes $1$).<br>• At $t = 3$, $P_3$ arrives with burst time $3$. Since remaining time of $P_1 (1) < 3$, $P_1$ continues and completes execution at $t = 4$.<br>  - Waiting time of $P_1 = 4 - 0 - 3 = 1\\text{ ms}$.<br><br><strong>3. Calculating $Z$:</strong><br>At $t = 4$, processes $P_1$ and $P_2$ are completed.<br>Sum of waiting times for $P_1$ and $P_2 = 1 + 0 = 1\\text{ ms}$.<br>Remaining total waiting time for $P_3$ and $P_4 = 4 - 1 = 3\\text{ ms}$.<br><br>If $Z < 3$, then at $t = 4$, $P_4$ (burst time $Z$) has shorter remaining time than $P_3$ (burst time $3$). Thus, $P_4$ executes first.<br>• $P_4$ executes from $t = 4$ to $t = 4 + Z$.<br>  - Waiting time of $P_4 = 4 - 4 = 0\\text{ ms}$.<br>• $P_3$ executes from $t = 4 + Z$ to $t = 7 + Z$.<br>  - Completion time of $P_3 = 7 + Z$<br>  - Waiting time of $P_3 = (7 + Z) - 3 - 3 = 1 + Z$.<br><br>Sum of waiting times for $P_3$ and $P_4$: $(1 + Z) + 0 = 3 \\implies Z = 2$.<br><br>Since $Z = 2 < 3$, this condition holds true.<br><br>Hence, the value of $Z$ is <strong>2</strong>.",
+  "videoUrl": null
+}

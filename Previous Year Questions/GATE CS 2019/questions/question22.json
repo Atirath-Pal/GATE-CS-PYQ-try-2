@@ -1,0 +1,27 @@
+{
+  "id": 22,
+  "year": 2019,
+  "set": null,
+  "topics": [
+    "Graph Theory",
+    "Discrete Mathematics"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Let $G$ be an undirected complete graph on $n$ vertices, where $n > 2$. Then, the number of different Hamiltonian cycles in $G$ is equal to",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$n!$",
+    "$(n - 1)!$",
+    "$1$",
+    "$\\frac{(n-1)!}{2}$"
+  ],
+  "answer": [
+    "C",
+    "D"
+  ],
+  "explanation": "For an undirected complete graph $G = K_n$ with $n$ vertices:<br><br>1. <strong>Total Vertices Permutations:</strong> There are $n!$ ways to order $n$ vertices.<br><br>2. <strong>Cycle Rotational Symmetry:</strong> In any cycle of length $n$, starting at any of the $n$ vertices gives the same cycle. Dividing by $n$ gives $\\frac{n!}{n} = (n-1)!$ directed Hamiltonian cycles.<br><br>3. <strong>Undirected Graph Symmetry:</strong> Since $G$ is an undirected graph, traversing a cycle clockwise or counter-clockwise yields the same cycle. Dividing by $2$ gives $\\frac{(n-1)!}{2}$ unique Hamiltonian cycles.<br><br>4. <strong>Special Case ($n = 3$):</strong> For $n = 3$, $\\frac{(3-1)!}{2} = \\frac{2}{2} = 1$. Since $n > 2$ includes $n = 3$, both Option (C) and Option (D) evaluate to $1$ for $n = 3$. Hence, both <strong>(C)</strong> and <strong>(D)</strong> are accepted as correct answers.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 4,
+  "year": 2019,
+  "set": null,
+  "topics": [
+    "General Aptitude",
+    "Numerical Ability"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Ten friends planned to share equally the cost of buying a gift for their teacher. When two of them decided not to contribute, each of the other friends had to pay Rs 150 more. The cost of the gift was Rs. _____.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "666",
+    "3000",
+    "6000",
+    "12000"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "Let $C$ be the total cost of the gift.<br><br>Initially, 10 friends planned to share the cost, so each friend's share was $\\frac{C}{10}$.<br><br>When 2 friends opted out, 8 friends remained. Each remaining friend's share became $\\frac{C}{8}$.<br><br>Given that each remaining friend had to pay Rs 150 more:<br>$\\frac{C}{8} - \\frac{C}{10} = 150$<br><br>Solving for $C$:<br>$\\frac{10C - 8C}{80} = 150$<br>$\\frac{2C}{80} = 150$<br>$\\frac{C}{40} = 150$<br>$C = 150 \\times 40 = 6000$<br><br>Therefore, the cost of the gift was Rs. <strong>6000</strong>.",
+  "videoUrl": null
+}

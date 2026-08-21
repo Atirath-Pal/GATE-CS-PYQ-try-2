@@ -1,0 +1,26 @@
+{
+  "id": 46,
+  "year": 2019,
+  "set": null,
+  "topics": [
+    "Compiler Design",
+    "Syntax Directed Translation"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the following grammar and the semantic actions to support the inherited type declaration attributes. Let $X_1, X_2, X_3, X_4, X_5$, and $X_6$ be the placeholders for the non-terminals D, T, L or $L_1$ in the following table:<br><br><div style=\"overflow-x: auto; max-width: 100%; margin: 8px 0;\"><table style=\"border-collapse: collapse; border: 1px solid #ffffff; text-align: left; font-size: 13px;\"><tbody><tr><td style=\"border: 1px solid #ffffff; padding: 6px 12px; font-weight: bold;\">Production rule</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px; font-weight: bold;\">Semantic action</td></tr><tr><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">D &rarr; T L</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">$X_1.\\text{type} = X_2.\\text{type}$</td></tr><tr><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">T &rarr; int</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">T.type = int</td></tr><tr><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">T &rarr; float</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">T.type = float</td></tr><tr><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">L &rarr; $L_1$ , id</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">$X_3.\\text{type} = X_4.\\text{type}$<br>addType(id.entry, $X_5.\\text{type}$)</td></tr><tr><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">L &rarr; id</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">addType(id.entry, $X_6.\\text{type}$)</td></tr></tbody></table></div><br>Which one of the following are the appropriate choices for $X_1, X_2, X_3$ and $X_4$?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$X_1 = L , X_2 = T , X_3 = L_1 , X_4 = L$",
+    "$X_1 = T , X_2 = L , X_3 = L_1 , X_4 = T$",
+    "$X_1 = L , X_2 = L , X_3 = L_1 , X_4 = T$",
+    "$X_1 = T , X_2 = L , X_3 = T , X_4 = L_1$"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step-by-step derivation:</strong><br><br>1. In type declaration processing using inherited attributes, the type is synthesized by non-terminal $T$ (from rules $T \\to \\text{int}$ or $T \\to \\text{float}$) and then passed as an inherited attribute down to non-terminal $L$.<br>For the production $D \\to T\\ L$, the type from $T$ is assigned to $L$:<br>$L.\\text{type} = T.\\text{type}$<br>Comparing this with $X_1.\\text{type} = X_2.\\text{type}$, we obtain <strong>$X_1 = L$</strong> and <strong>$X_2 = T$</strong>.<br><br>2. For the production $L \\to L_1 \\text{, id}$, the inherited type is propagated down to $L_1$ from its parent $L$:<br>$L_1.\\text{type} = L.\\text{type}$<br>Comparing this with $X_3.\\text{type} = X_4.\\text{type}$, we get <strong>$X_3 = L_1$</strong> and <strong>$X_4 = L$</strong>.<br><br>Thus, $X_1 = L, X_2 = T, X_3 = L_1, X_4 = L$, which corresponds to <strong>Option (A)</strong>.",
+  "videoUrl": null
+}

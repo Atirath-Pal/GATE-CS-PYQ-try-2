@@ -1,0 +1,26 @@
+{
+  "id": 26,
+  "year": 2019,
+  "set": null,
+  "topics": [
+    "Computer Networks",
+    "Application Layer Protocols"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Which of the following protocol pairs can be used to send and retrieve e-mails (in that order)?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "IMAP, POP3",
+    "SMTP, POP3",
+    "SMTP, MIME",
+    "IMAP, SMTP"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Sending E-mails:</strong> Simple Mail Transfer Protocol (SMTP) is used to push/send e-mails from a client to a server or between mail servers.<br><br><strong>Retrieving E-mails:</strong> Post Office Protocol version 3 (POP3) or Internet Message Access Protocol (IMAP) is used to pull/retrieve e-mails from a mail server.<br><br>Therefore, the pair used to send and retrieve e-mails in that order is <strong>SMTP</strong> and <strong>POP3</strong>.",
+  "videoUrl": null
+}

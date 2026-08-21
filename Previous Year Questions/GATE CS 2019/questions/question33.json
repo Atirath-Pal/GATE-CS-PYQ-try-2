@@ -1,0 +1,22 @@
+{
+  "id": 33,
+  "year": "2019",
+  "set": null,
+  "topics": [
+    "Operating Systems",
+    "Process Synchronization"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider three concurrent processes P1, P2 and P3 as shown below, which access a shared variable D that has been initialized to 100.<br><br><div style=\"overflow-x: auto; max-width: 100%; margin: 8px 0;\"><table style=\"border-collapse: collapse; border: 1px solid #ffffff; text-align: center; font-size: 13px;\"><tbody><tr><td style=\"border: 1px solid #ffffff; padding: 6px 24px; font-weight: bold;\">P1</td><td style=\"border: 1px solid #ffffff; padding: 6px 24px; font-weight: bold;\">P2</td><td style=\"border: 1px solid #ffffff; padding: 6px 24px; font-weight: bold;\">P3</td></tr><tr><td style=\"border: 1px solid #ffffff; padding: 8px 24px; text-align: center; line-height: 1.4;\">:<br>:<br>D = D + 20<br>:<br>:</td><td style=\"border: 1px solid #ffffff; padding: 8px 24px; text-align: center; line-height: 1.4;\">:<br>:<br>D = D - 50<br>:<br>:</td><td style=\"border: 1px solid #ffffff; padding: 8px 24px; text-align: center; line-height: 1.4;\">:<br>:<br>D = D + 10<br>:<br>:</td></tr></tbody></table></div><br>The processes are executed on a uniprocessor system running a time-shared operating system. If the minimum and maximum possible values of D after the three processes have completed execution are X and Y respectively, then the value of Y - X is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 80,
+    "max": 80
+  },
+  "explanation": "Each process performs a read-modify-write operation on the shared variable $D$ (initialized to $100$).<br><br><strong>1. Finding Minimum Value ($X$):</strong><br>To minimize $D$, the execution sequence must ensure that the final write overwrites higher values with the smallest possible calculated value.<br>- Since $D$ starts at $100$ and processes $P_1, P_3$ only increase $D$, the smallest value any process can calculate is $P_2$ reading $100$ and computing $100 - 50 = 50$.<br>- Sequence for $X = 50$:<br>1. $P_2$ reads $D = 100$ and computes $R_2 = 50$, then gets preempted before storing.<br>2. $P_1$ executes completely: $D = 100 + 20 = 120$.<br>3. $P_3$ executes completely: $D = 120 + 10 = 130$.<br>4. $P_2$ resumes and stores $R_2 = 50$ to $D$.<br>- Thus, the minimum possible value $X = 50$.<br><br><strong>2. Finding Maximum Value ($Y$):</strong><br>To maximize $D$, we want $P_3$ to add $10$ on top of $P_1$'s update ($120$), while making $P_2$'s subtraction ineffective.<br>- Sequence for $Y = 130$:<br>1. $P_1$ reads $D = 100$ and computes $R_1 = 120$, then gets preempted before storing.<br>2. $P_2$ executes completely: reads $D = 100$ and stores $D = 50$.<br>3. $P_1$ resumes and stores $R_1 = 120$ into $D$.<br>4. $P_3$ executes completely: reads $D = 120$ and stores $D = 120 + 10 = 130$.<br>- Thus, the maximum possible value $Y = 130$.<br><br><strong>3. Calculating $Y - X$:</strong><br>$$Y - X = 130 - 50 = 80$$",
+  "videoUrl": null
+}

@@ -1,0 +1,22 @@
+{
+  "id": 52,
+  "year": 2019,
+  "set": null,
+  "topics": [
+    "Operating Systems",
+    "File Systems"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "The index node (inode) of a Unix-like file system has 12 direct, one single-indirect and one double-indirect pointers. The disk block size is 4 kB, and the disk block address is 32-bits long. The maximum possible file size is (rounded off to 1 decimal place) ________ GB.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 3.7,
+    "max": 4.1
+  },
+  "explanation": "<strong>Given Data:</strong><br>- Number of direct pointers = $12$<br>- Number of single-indirect pointers = $1$<br>- Number of double-indirect pointers = $1$<br>- Disk block size = $4\\text{ kB} = 4096\\text{ bytes}$<br>- Disk block address size = $32\\text{ bits} = 4\\text{ bytes}$<br><br><strong>1. Pointers per Block:</strong><br>$\\text{Pointers per block} = \\frac{\\text{Block Size}}{\\text{Address Size}} = \\frac{4096\\text{ bytes}}{4\\text{ bytes}} = 1024 = 2^{10}$<br><br><strong>2. File Size Contributions:</strong><br>- <strong>Direct Pointers:</strong> $12 \\times 4\\text{ kB} = 48\\text{ kB}$<br>- <strong>Single-Indirect Pointer:</strong> $1024 \\times 4\\text{ kB} = 4096\\text{ kB} = 4\\text{ MB}$<br>- <strong>Double-Indirect Pointer:</strong> $1024 \\times 1024 \\times 4\\text{ kB} = 4194304\\text{ kB} = 4\\text{ GB}$<br><br><strong>3. Maximum File Size:</strong><br>$\\text{Total File Size} = 48\\text{ kB} + 4\\text{ MB} + 4\\text{ GB} \\approx 4.0\\text{ GB}$ (in binary notation $2^{30}\\text{ B}$) or $3.7\\text{ GB}$ to $3.8\\text{ GB}$ depending on decimal unit definition.",
+  "videoUrl": null
+}

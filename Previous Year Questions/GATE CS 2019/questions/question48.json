@@ -1,0 +1,26 @@
+{
+  "id": 48,
+  "year": 2019,
+  "set": null,
+  "topics": [
+    "Algorithms",
+    "Graph Theory"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Let $G$ be any connected, weighted, undirected graph.<br><br>I. $G$ has a unique minimum spanning tree, if no two edges of $G$ have the same weight.<br>II. $G$ has a unique minimum spanning tree, if, for every cut of $G$, there is a unique minimum-weight edge crossing the cut.<br><br>Which of the above two statements is/are TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "I only",
+    "II only",
+    "Both I and II",
+    "Neither I nor II"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Statement I:</strong><br>If all edge weights in a connected weighted graph $G$ are distinct (no two edges have the same weight), then $G$ is guaranteed to have a unique minimum spanning tree (MST). This is a well-known fundamental property of minimum spanning trees. Hence, <strong>Statement I is TRUE</strong>.<br><br><strong>Statement II:</strong><br>According to the Cut Property of MSTs, for any cut in graph $G$, if there is a unique minimum-weight edge crossing the cut, that edge must be present in every MST of $G$. Since every cut in $G$ has a unique minimum-weight edge, all such required edges are uniquely determined and forced into any MST, ensuring that $G$ has a unique MST. Hence, <strong>Statement II is TRUE</strong>.<br><br>Therefore, <strong>Both I and II are TRUE</strong>.",
+  "videoUrl": null
+}

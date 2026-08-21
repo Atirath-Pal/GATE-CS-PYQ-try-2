@@ -1,0 +1,26 @@
+{
+  "id": 15,
+  "year": 2019,
+  "set": null,
+  "topics": [
+    "Discrete Mathematics",
+    "Combinatorics"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Let $U = \\{1,2, ..., n\\}$. Let $A = \\{(x, X)|x \\in X, X \\subseteq U\\}$. Consider the following two statements on $|A|$.<br><br>I. $|A| = n2^{n-1}$<br>II. $|A| = \\sum_{k=1}^{n} k\\binom{n}{k}$<br><br>Which of the above statements is/are TRUE?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "(A) Only I",
+    "(B) Only II",
+    "(C) Both I and II",
+    "(D) Neither I nor II"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "To determine $|A|$, where $A = \\{(x, X) \\mid x \\in X, X \\subseteq U\\}$ and $U = \\{1, 2, \\dots, n\\}$:<br><br><strong>Statement II Verification (Summing over subsets):</strong><br>A subset $X \\subseteq U$ can have size $k$, where $1 \\le k \\le n$.<br>The number of subsets of size $k$ is $\\binom{n}{k}$.<br>For each such subset $X$ of size $k$, there are $k$ choices for $x \\in X$.<br>Summing over all possible subset sizes $k$ from $1$ to $n$:<br>$|A| = \\sum_{k=1}^{n} k \\binom{n}{k}$<br>Hence, Statement II is <strong>TRUE</strong>.<br><br><strong>Statement I Verification (Summing over elements):</strong><br>Alternatively, pick an element $x \\in U$ first. There are $n$ choices for $x$.<br>For a chosen $x$, the set $X$ must contain $x$ along with any subset of the remaining $n-1$ elements of $U$.<br>Thus, there are $2^{n-1}$ choices for $X$ containing $x$.<br>Total pairs $(x, X)$ = $n \\cdot 2^{n-1}$.<br>Hence, Statement I is <strong>TRUE</strong>.<br><br>Therefore, both statements I and II are TRUE.",
+  "videoUrl": null
+}

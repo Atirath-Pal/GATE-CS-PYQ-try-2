@@ -1,0 +1,22 @@
+{
+  "id": 58,
+  "year": 2019,
+  "set": null,
+  "topics": [
+    "Theory of Computation",
+    "Finite Automata"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Let $\\Sigma$ be the set of all bijections from $\\{1, \\dots, 5\\}$ to $\\{1, \\dots, 5\\}$, where $id$ denotes the identity function, i.e. $id(j) = j, \\forall j$. Let $\\circ$ denote composition on functions. For a string $x = x_1 x_2 \\cdots x_n \\in \\Sigma^n, n \\ge 0$, let $\\pi(x) = x_1 \\circ x_2 \\circ \\cdots \\circ x_n$.<br><br>Consider the language $L = \\{x \\in \\Sigma^* \\mid \\pi(x) = id\\}$. The minimum number of states in any DFA accepting $L$ is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 120,
+    "max": 120
+  },
+  "explanation": "<strong>Step 1: Understand the alphabet $\\Sigma$</strong><br>The set $\\Sigma$ consists of all bijections (permutations) from $\\{1, 2, 3, 4, 5\\}$ to itself. The number of such bijections is equal to the size of the symmetric group $S_5$, which is $5! = 120$.<br><br><strong>Step 2: Determine state equivalence</strong><br>For any input string $x = x_1 x_2 \\cdots x_n$, the string evaluates to a permutation $\\pi(x) = x_1 \\circ x_2 \\circ \\cdots \\circ x_n \\in S_5$.<br>To decide if $x \\in L$, the DFA must track the current composite permutation. Because $S_5$ forms a finite group under composition, two prefixes $u$ and $v$ lead to distinguishable future outcomes if $\\pi(u) \\neq \\pi(v)$. Thus, each permutation in $S_5$ corresponds to a distinct state in the minimal DFA.<br><br><strong>Step 3: Calculate total states</strong><br>Since there are $5! = 120$ distinct permutations in $S_5$, the minimal DFA requires exactly $120$ states.<br>The state corresponding to $id$ acts as the start state and is the only accepting state.",
+  "videoUrl": null
+}

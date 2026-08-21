@@ -1,0 +1,26 @@
+{
+  "id": 9,
+  "year": 2019,
+  "set": null,
+  "topics": [
+    "General Aptitude",
+    "Set Theory"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "In a college, there are three student clubs. Sixty students are only in the Drama club, 80 students are only in the Dance club, 30 students are only in the Maths club, 40 students are in both Drama and Dance clubs, 12 students are in both Dance and Maths clubs, 7 students are in both Drama and Maths clubs, and 2 students are in all the clubs. If 75% of the students in the college are not in any of these clubs, then the total number of students in the college is _______.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "1000",
+    "975",
+    "900",
+    "225"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Breakdown of students in the clubs</strong><br>• Only Drama = $60$<br>• Only Dance = $80$<br>• Only Maths = $30$<br>• All three clubs = $2$<br>• Only Drama and Dance = $40 - 2 = 38$<br>• Only Dance and Maths = $12 - 2 = 10$<br>• Only Drama and Maths = $7 - 2 = 5$<br><br><strong>Step 2: Calculate total students belonging to at least one club</strong><br>$\\text{Total in clubs} = 60 + 80 + 30 + 38 + 10 + 5 + 2 = 225$<br><br><strong>Step 3: Calculate total students in the college</strong><br>Given that $75\\%$ of the students are not in any club, the remaining $25\\%$ must belong to at least one club.<br>Let $N$ be the total number of students in the college.<br>$25\\% \\text{ of } N = 225$<br>$0.25 \\times N = 225 \\implies N = \\frac{225}{0.25} = 900$<br><br>Therefore, the total number of students in the college is <strong>900</strong>.",
+  "videoUrl": null
+}

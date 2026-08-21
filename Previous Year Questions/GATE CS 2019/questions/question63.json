@@ -1,0 +1,22 @@
+{
+  "id": 63,
+  "year": 2019,
+  "set": null,
+  "topics": [
+    "Programming and Data Structures",
+    "C Programming"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the following C program:<br><br>The output of the above C program is ________.",
+  "assetImage": null,
+  "codeBlock": "#include &lt;stdio.h&gt;\nint main()\n{\n    int a[] = {2, 4, 6, 8, 10};\n    int i, sum = 0, *b = a + 4;\n    for (i = 0; i < 5; i++)\n        sum = sum + (*b - i) - *(b - i);\n    printf (\"%d\\n\", sum);\n    return 0;\n}",
+  "options": [],
+  "answer": {
+    "min": 10,
+    "max": 10
+  },
+  "explanation": "<strong>Step 1: Variable Initialization</strong><br>- Array $a = \\{2, 4, 6, 8, 10\\}$ stored at indices $0$ to $4$.<br>- Pointer $b = a + 4$, which points to $a[4]$ (value $10$). Hence, $*b = 10$.<br>- Initial value of $sum = 0$.<br><br><strong>Step 2: Loop Execution ($i = 0$ to $4$)</strong><br>Inside the loop, the expression evaluated is: $sum = sum + (*b - i) - *(b - i)$<br>Note that $*b - i = 10 - i$ and $*(b - i) = a[4 - i]$.<br><br>- <strong>For $i = 0$:</strong><br>$*b - 0 = 10$, $*(b - 0) = a[4] = 10$<br>$sum = 0 + (10 - 10) = 0$<br><br>- <strong>For $i = 1$:</strong><br>$*b - 1 = 9$, $*(b - 1) = a[3] = 8$<br>$sum = 0 + (9 - 8) = 1$<br><br>- <strong>For $i = 2$:</strong><br>$*b - 2 = 8$, $*(b - 2) = a[2] = 6$<br>$sum = 1 + (8 - 6) = 3$<br><br>- <strong>For $i = 3$:</strong><br>$*b - 3 = 7$, $*(b - 3) = a[1] = 4$<br>$sum = 3 + (7 - 4) = 6$<br><br>- <strong>For $i = 4$:</strong><br>$*b - 4 = 6$, $*(b - 4) = a[0] = 2$<br>$sum = 6 + (6 - 2) = 10$<br><br><strong>Conclusion:</strong><br>The final printed output is $10$.",
+  "videoUrl": null
+}

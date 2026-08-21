@@ -1,0 +1,26 @@
+{
+  "id": 2,
+  "year": 2019,
+  "set": null,
+  "topics": [
+    "General Aptitude",
+    "Verbal Ability"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "The search engine’s business model ___________ around the fulcrum of trust.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "revolves",
+    "plays",
+    "sinks",
+    "bursts"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Correct Answer: (A) revolves</strong><br><br><strong>Explanation:</strong><br>The sentence describes a central pivot point using the metaphor of a 'fulcrum'. The idiom/phrasal verb <strong>'revolves around'</strong> means to center upon or turn around a specific point, which fits logically and grammatically in this context.<br><br>The other options ('plays', 'sinks', 'bursts') do not form a standard or meaningful collocation with 'around the fulcrum'.",
+  "videoUrl": null
+}

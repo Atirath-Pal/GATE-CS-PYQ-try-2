@@ -1,0 +1,26 @@
+{
+  "id": 49,
+  "year": 2019,
+  "set": null,
+  "topics": [
+    "Operating Systems",
+    "Deadlocks"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the following snapshot of a system running $n$ concurrent processes. Process $i$ is holding $X_i$ instances of a resource R, $1 \\le i \\le n$. Assume that all instances of R are currently in use. Further, for all $i$, process $i$ can place a request for at most $Y_i$ additional instances of R while holding the $X_i$ instances it already has. Of the $n$ processes, there are exactly two processes $p$ and $q$ such that $Y_p = Y_q = 0$. Which one of the following conditions guarantees that no other process apart from $p$ and $q$ can complete execution?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$X_p + X_q < \\text{Min } \\{Y_k \\mid 1 \\le k \\le n, k \\neq p, k \\neq q\\}$",
+    "$X_p + X_q < \\text{Max } \\{Y_k \\mid 1 \\le k \\le n, k \\neq p, k \\neq q\\}$",
+    "$\\text{Min } (X_p, X_q) \\ge \\text{Min } \\{Y_k \\mid 1 \\le k \\le n, k \\neq p, k \\neq q\\}$",
+    "$\\text{Min } (X_p, X_q) \\le \\text{Max } \\{Y_k \\mid 1 \\le k \\le n, k \\neq p, k \\neq q\\}$"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step 1: Analyze current state and available resources</strong><br>All instances of resource R are currently allocated, meaning the initial available count of R is $0$.<br>Processes $p$ and $q$ have additional requirement $Y_p = 0$ and $Y_q = 0$, meaning neither process requires any additional resources to finish.<br><br><strong>Step 2: Determine available resources after $p$ and $q$ execute</strong><br>Since $p$ and $q$ require $0$ additional instances, both can complete execution and release their held resources $X_p$ and $X_q$.<br>After $p$ and $q$ finish, the total available resources in the system become $X_p + X_q$.<br><br><strong>Step 3: Condition for other processes to execute</strong><br>Any remaining process $k$ ($k \\neq p, q$) requires $Y_k$ additional instances to complete.<br>Process $k$ can execute if $Y_k \\le X_p + X_q$.<br>To guarantee that <strong>no other process</strong> apart from $p$ and $q$ can complete execution, the requirement $Y_k$ for <em>every</em> remaining process $k$ must be strictly greater than the available resources $X_p + X_q$:<br>$Y_k > X_p + X_q \\quad \\text{for all } k \\neq p, q$<br><br><strong>Step 4: Conclusion</strong><br>For $Y_k > X_p + X_q$ to hold for all $k \\neq p, q$, the available resources must be strictly less than the minimum additional requirement among all other processes:<br>$X_p + X_q < \\text{Min } \\{Y_k \\mid 1 \\le k \\le n, k \\neq p, k \\neq q\\}$<br><br>Hence, option <strong>(A)</strong> is correct.",
+  "videoUrl": null
+}

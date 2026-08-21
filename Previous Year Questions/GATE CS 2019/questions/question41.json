@@ -1,0 +1,21 @@
+{
+  "id": 41,
+  "year": 2019,
+  "set": null,
+  "topics": ["Theory of Computation", "Context-Free Languages"],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Which one of the following languages over $\\Sigma = \\{a, b\\}$ is NOT context-free?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\{ww^R \\mid w \\in \\{a, b\\}^*\\}$",
+    "$\\{wa^n b^n w^R \\mid w \\in \\{a, b\\}^*, n \\ge 0\\}$",
+    "$\\{wa^n w^R b^n \\mid w \\in \\{a, b\\}^*, n \\ge 0\\}$",
+    "$\\{a^n b^i \\mid i \\in \\{n, 3n, 5n\\}, n \\ge 0\\}$"
+  ],
+  "answer": ["C"],
+  "explanation": "<strong>Step 1: Analyze Option (A)</strong><br>The language $L_1 = \\{ww^R \\mid w \\in \\{a, b\\}^*\\}$ is a classic Context-Free Language (CFL) representing even-length palindromes, accepted by a Pushdown Automaton (PDA).<br><br><strong>Step 2: Analyze Option (B)</strong><br>The language $L_2 = \\{wa^n b^n w^R \\mid w \\in \\{a, b\\}^*, n \\ge 0\\}$ can be accepted by a PDA as follows:<br>1. Push $w$ onto the stack.<br>2. Push $a^n$ onto the stack.<br>3. For each $b$, pop $a$ from the stack to match $a^n$ with $b^n$.<br>4. Match $w^R$ with the remaining $w$ on the stack.<br>Since stack operations (LIFO) naturally support this order, $L_2$ is a CFL.<br><br><strong>Step 3: Analyze Option (C)</strong><br>In $L_3 = \\{wa^n w^R b^n \\mid w \\in \\{a, b\\}^*, n \\ge 0\\}$, we need to match $w$ with $w^R$ while simultaneously maintaining the count of $a$'s to match with $b$'s after $w^R$. Since a PDA has only one stack, pushing $a^n$ on top of $w$ prevents matching $w$ with $w^R$ without losing the count of $a$'s. This requires tracking two independent/interleaved dependencies, which cannot be done with a single stack. Thus, $L_3$ is <strong>NOT</strong> context-free.<br><br><strong>Step 4: Analyze Option (D)</strong><br>The language $L_4 = \\{a^n b^i \\mid i \\in \\{n, 3n, 5n\\}, n \\ge 0\\}$ can be written as the union of three CFLs:<br>$L_4 = \\{a^n b^n \\mid n \\ge 0\\} \\cup \\{a^n b^{3n} \\mid n \\ge 0\\} \\cup \\{a^n b^{5n} \\mid n \\ge 0\\}$.<br>Since Context-Free Languages are closed under union, $L_4$ is a CFL.<br><br>Hence, option <strong>C</strong> is the correct choice.",
+  "videoUrl": null
+}

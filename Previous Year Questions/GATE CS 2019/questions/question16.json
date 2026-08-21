@@ -1,0 +1,26 @@
+{
+  "id": 16,
+  "year": 2019,
+  "set": null,
+  "topics": [
+    "Digital Logic",
+    "Boolean Algebra"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Which one of the following is NOT a valid identity?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$(x \\oplus y) \\oplus z = x \\oplus (y \\oplus z)$",
+    "$(x + y) \\oplus z = x \\oplus (y + z)$",
+    "$x \\oplus y = x + y$, if $xy = 0$",
+    "$x \\oplus y = (xy + x'y')'$"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "To determine which statement is NOT a valid identity, let us evaluate each option:<br><br><strong>Option A:</strong> $(x \\oplus y) \\oplus z = x \\oplus (y \\oplus z)$<br>The XOR operation is associative, making this a valid identity.<br><br><strong>Option B:</strong> $(x + y) \\oplus z = x \\oplus (y + z)$<br>Let $x = 1$, $y = 1$, and $z = 0$:<br>LHS = $(1 + 1) \\oplus 0 = 1 \\oplus 0 = 1$<br>RHS = $1 \\oplus (1 + 0) = 1 \\oplus 1 = 0$<br>Since LHS $\\neq$ RHS, this identity is <strong>NOT valid</strong>.<br><br><strong>Option C:</strong> $x \\oplus y = x + y$, if $xy = 0$<br>By definition, $x \\oplus y = x'y + xy'$. Expanding $x + y$ gives $x'y + xy' + xy$. When $xy = 0$, $x + y = x'y + xy' = x \\oplus y$. Thus, this is a valid identity.<br><br><strong>Option D:</strong> $x \\oplus y = (xy + x'y')'$<br>The expression $xy + x'y'$ represents the XNOR operation ($x \\odot y$). The negation of XNOR gives XOR, so $(xy + x'y')' = x \\oplus y$, which is a valid identity.<br><br>Hence, option <strong>B</strong> is the correct answer.",
+  "videoUrl": null
+}

@@ -1,0 +1,22 @@
+{
+  "id": 53,
+  "year": 2019,
+  "set": null,
+  "topics": [
+    "Compiler Design",
+    "Parsing"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the augmented grammar given below:<br><br>$S' \\rightarrow S$<br>$S \\rightarrow \\langle L \\rangle \\mid \\text{id}$<br>$L \\rightarrow L,S \\mid S$<br><br>Let $I_0 = \\text{CLOSURE}(\\{[S' \\rightarrow \\bullet S]\\})$. The number of items in the set $\\text{GOTO}(I_0, \\langle)$ is: ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 5,
+    "max": 5
+  },
+  "explanation": "<strong>Step 1: Determine the items in state $I_0$.</strong><br>$I_0 = \\text{CLOSURE}(\\{[S' \\rightarrow \\bullet S]\\})$<br>Items in $I_0$:<br>1. $[S' \\rightarrow \\bullet S]$<br>2. $[S \\rightarrow \\bullet \\langle L \\rangle]$<br>3. $[S \\rightarrow \\bullet \\text{id}]$<br><br><strong>Step 2: Compute $\\text{GOTO}(I_0, \\langle)$.</strong><br>Moving the dot past $\\langle$ in $[S \\rightarrow \\bullet \\langle L \\rangle]$ gives the initial kernel item:<br>$[S \\rightarrow \\langle \\bullet L \\rangle]$<br><br><strong>Step 3: Compute the closure to get all items in $\\text{GOTO}(I_0, \\langle)$.</strong><br>1. $[S \\rightarrow \\langle \\bullet L \\rangle]$ (Kernel item)<br>2. $[L \\rightarrow \\bullet L, S]$ (Added because dot is before non-terminal $L$)<br>3. $[L \\rightarrow \\bullet S]$ (Added because dot is before non-terminal $L$)<br>4. $[S \\rightarrow \\bullet \\langle L \\rangle]$ (Added because dot is before non-terminal $S$)<br>5. $[S \\rightarrow \\bullet \\text{id}]$ (Added because dot is before non-terminal $S$)<br><br>Therefore, the total number of items in $\\text{GOTO}(I_0, \\langle)$ is <strong>5</strong>.",
+  "videoUrl": null
+}

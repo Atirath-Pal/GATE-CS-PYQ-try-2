@@ -1,0 +1,26 @@
+{
+  "id": 5,
+  "year": 2019,
+  "set": null,
+  "topics": [
+    "General Aptitude",
+    "Verbal Ability"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "A court is to a judge as ______________ is to a teacher.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "a student",
+    "a punishment",
+    "a syllabus",
+    "a school"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Analogy: Workplace to Profession</strong><br><br>A <strong>court</strong> is the primary institution/place of work where a <strong>judge</strong> performs their professional duties.<br><br>Similarly, a <strong>school</strong> is the primary institution/place of work where a <strong>teacher</strong> performs their professional duties.<br><br>Hence, the correct option is <strong>(D)</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 45,
+  "year": 2019,
+  "set": null,
+  "topics": [
+    "Mathematical Logic",
+    "Discrete Mathematics"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the first order predicate formula $\\varphi$:<br><br>$\\forall x [(\\forall z \\ z|x \\Rightarrow ((z = x) \\lor (z = 1))) \\Rightarrow \\exists w \\ (w > x) \\land (\\forall z \\ z|w \\Rightarrow ((w = z) \\lor (z = 1)))]$<br><br>Here '$a|b$' denotes that '$a$ divides $b$', where $a$ and $b$ are integers. Consider the following sets:<br><br>S1. $\\{1,2,3, ..., 100\\}$<br>S2. Set of all positive integers<br>S3. Set of all integers<br><br>Which of the above sets satisfy $\\varphi$?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "S1 and S2",
+    "S1 and S3",
+    "S2 and S3",
+    "S1, S2 and S3"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Understand the sub-formula.</strong><br>The sub-formula $(\\forall z \\ z|y \\Rightarrow ((y = z) \\lor (z = 1)))$ states that any divisor $z$ of $y$ must be either $1$ or $y$ itself. Thus, this formula is true when $y$ is a prime number (or $1$).<br><br><strong>Step 2: Interpret the entire formula $\\varphi$.</strong><br>The formula $\\varphi$ translates to: \"For every prime $x$ in the domain, there exists a prime $w$ in the domain such that $w > x$.\" In other words, the set must contain infinitely many primes.<br><br><strong>Step 3: Analyze the given sets.</strong><br>1. <strong>Set S1 = $\\{1, 2, 3, ..., 100\\}$:</strong> The largest prime in S1 is $97$. For $x = 97$, there is no prime $w \\in S1$ such that $w > 97$. Thus, S1 does not satisfy $\\varphi$.<br>2. <strong>Set S2 (Positive integers):</strong> By Euclid's theorem, there are infinitely many primes among positive integers. For any prime $x$, there exists a larger prime $w$. Thus, S2 satisfies $\\varphi$.<br>3. <strong>Set S3 (All integers):</strong> Similarly, the set of all integers contains infinitely many positive primes. For any prime $x$, a larger prime $w$ always exists. Thus, S3 satisfies $\\varphi$.<br><br>Therefore, sets <strong>S2 and S3</strong> satisfy $\\varphi$.",
+  "videoUrl": null
+}

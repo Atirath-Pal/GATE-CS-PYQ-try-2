@@ -1,0 +1,26 @@
+{
+  "id": 39,
+  "year": 2019,
+  "set": null,
+  "topics": [
+    "Computer Networks",
+    "Data Link Layer"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Suppose that in an IP-over-Ethernet network, a machine X wishes to find the MAC address of another machine Y in its subnet. Which one of the following techniques can be used for this?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "X sends an ARP request packet to the local gateway’s IP address which then finds the MAC address of Y and sends to X",
+    "X sends an ARP request packet to the local gateway’s MAC address which then finds the MAC address of Y and sends to X",
+    "X sends an ARP request packet with broadcast MAC address in its local subnet",
+    "X sends an ARP request packet with broadcast IP address in its local subnet"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Address Resolution Protocol (ARP)</strong> is used to resolve a known IP address to an unknown physical (MAC) address within the same local network subnet.<br><br><strong>Step-by-step process:</strong><br>1. When machine $X$ needs to send data to machine $Y$ in the same subnet but lacks $Y$'s MAC address, it prepares an ARP request packet.<br>2. Because $X$ does not know which physical host corresponds to $Y$'s IP address, it encapsulates the ARP request into a link-layer frame addressed to the <strong>broadcast MAC address</strong> (<code>FF:FF:FF:FF:FF:FF</code>).<br>3. All hosts in the local subnet receive and inspect this broadcast frame. Machine $Y$ recognizes its IP address in the request and replies back to $X$ via a unicast ARP reply containing its MAC address.<br><br>Therefore, machine $X$ sends an ARP request packet with the broadcast MAC address in its local subnet.",
+  "videoUrl": null
+}

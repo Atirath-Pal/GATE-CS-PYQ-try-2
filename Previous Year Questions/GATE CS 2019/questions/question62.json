@@ -1,0 +1,22 @@
+{
+  "id": 62,
+  "year": "2019",
+  "set": null,
+  "topics": [
+    "Programming and Data Structures",
+    "C Programming"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the following C program:<br><br>The number of times the variable sum will be printed, when the above program is executed, is ____________.",
+  "assetImage": null,
+  "codeBlock": "#include &lt;stdio.h&gt;\nint main(){\n    float sum = 0.0, j = 1.0, i = 2.0;\n    while (i/j > 0.0625){\n        j = j + j;\n        sum = sum + i/j;\n        printf(\"%f\\n\", sum);\n    }\n    return 0;\n}",
+  "options": [],
+  "answer": {
+    "min": 5,
+    "max": 5
+  },
+  "explanation": "<strong>Step-by-step execution analysis:</strong><br><br>Given initial values: $i = 2.0$, $j = 1.0$, and note that $0.0625 = \\frac{1}{16} = 2^{-4}$.<br><br><strong>Iteration 1:</strong><br>Condition check: $i / j = 2.0 / 1.0 = 2.0 > 0.0625$ (True)<br>$j = 1.0 + 1.0 = 2.0$<br>$sum = 0.0 + (2.0 / 2.0) = 1.0$<br>Prints <code>sum</code> (1st print)<br><br><strong>Iteration 2:</strong><br>Condition check: $i / j = 2.0 / 2.0 = 1.0 > 0.0625$ (True)<br>$j = 2.0 + 2.0 = 4.0$<br>$sum = 1.0 + (2.0 / 4.0) = 1.5$<br>Prints <code>sum</code> (2nd print)<br><br><strong>Iteration 3:</strong><br>Condition check: $i / j = 2.0 / 4.0 = 0.5 > 0.0625$ (True)<br>$j = 4.0 + 4.0 = 8.0$<br>$sum = 1.5 + (2.0 / 8.0) = 1.75$<br>Prints <code>sum</code> (3rd print)<br><br><strong>Iteration 4:</strong><br>Condition check: $i / j = 2.0 / 8.0 = 0.25 > 0.0625$ (True)<br>$j = 8.0 + 8.0 = 16.0$<br>$sum = 1.75 + (2.0 / 16.0) = 1.875$<br>Prints <code>sum</code> (4th print)<br><br><strong>Iteration 5:</strong><br>Condition check: $i / j = 2.0 / 16.0 = 0.125 > 0.0625$ (True)<br>$j = 16.0 + 16.0 = 32.0$<br>$sum = 1.875 + (2.0 / 32.0) = 1.9375$<br>Prints <code>sum</code> (5th print)<br><br><strong>Iteration 6:</strong><br>Condition check: $i / j = 2.0 / 32.0 = 0.0625 > 0.0625$ (False)<br>The loop terminates.<br><br>Therefore, the variable <code>sum</code> is printed a total of <strong>5</strong> times.",
+  "videoUrl": null
+}

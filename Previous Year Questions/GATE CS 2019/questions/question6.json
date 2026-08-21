@@ -1,0 +1,26 @@
+{
+  "id": 6,
+  "year": 2019,
+  "set": null,
+  "topics": [
+    "General Aptitude",
+    "Logical Reasoning"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "The police arrested four criminals – P, Q, R and S. The criminals knew each other. They made the following statements:<br><br>P says “Q committed the crime.”<br>Q says “S committed the crime.”<br>R says “I did not do it.”<br>S says “What Q said about me is false.”<br><br>Assume only one of the arrested four committed the crime and only one of the statements made above is true. Who committed the crime?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "P",
+    "R",
+    "S",
+    "Q"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "To find out who committed the crime, analyze the statements:<br><br><strong>1. Analyze Q and S's statements:</strong><br>Q says \"S committed the crime.\"<br>S says \"What Q said about me is false.\"<br>Statements made by Q and S directly contradict each other. Therefore, exactly one statement between Q and S must be <strong>True</strong>, and the other must be <strong>False</strong>.<br><br><strong>2. Evaluate P and R's statements:</strong><br>Since it is given that <strong>only one</strong> of the four statements is true, and we know that true statement belongs to either Q or S, all other statements must be <strong>False</strong>.<br>This means both P's statement and R's statement are false.<br><br><strong>3. Identify the culprit:</strong><br>R's statement is \"I did not do it\".<br>Since R's statement is false, the opposite is true: <strong>R committed the crime</strong>.<br><br>Hence, option <strong>(B)</strong> is correct.",
+  "videoUrl": null
+}

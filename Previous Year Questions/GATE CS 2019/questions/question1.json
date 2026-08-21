@@ -1,0 +1,26 @@
+{
+  "id": 1,
+  "year": 2019,
+  "set": null,
+  "topics": [
+    "General Aptitude",
+    "Verbal Ability"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "The expenditure on the project ______ as follows: equipment Rs.20 lakhs, salaries Rs.12 lakhs, and contingency Rs.3 lakhs.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "break down",
+    "break",
+    "breaks down",
+    "breaks"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Grammar and Vocabulary Analysis:</strong><br><br>1. <strong>Subject-Verb Agreement:</strong> The subject of the sentence is 'The expenditure', which is an uncountable singular noun phrase. Therefore, it requires a singular verb form ending in '-s' (i.e., 'breaks'). This rules out options (A) and (B).<br><br>2. <strong>Meaning of Phrasal Verb:</strong> The phrasal verb <strong>'break down'</strong> means to divide or decompose a total amount into categorized components or itemized parts (equipment, salaries, and contingency).<br><br>3. Therefore, the singular phrasal verb form <strong>'breaks down'</strong> fits both grammatically and contextually.<br><br>Hence, option (C) is correct.",
+  "videoUrl": null
+}

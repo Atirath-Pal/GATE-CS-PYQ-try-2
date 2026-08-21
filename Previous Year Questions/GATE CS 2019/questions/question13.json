@@ -1,0 +1,26 @@
+{
+  "id": 13,
+  "year": 2019,
+  "set": null,
+  "topics": [
+    "Compiler Design",
+    "Parsing"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Which one of the following kinds of derivation is used by LR parsers?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Leftmost",
+    "Leftmost in reverse",
+    "Rightmost",
+    "Rightmost in reverse"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "An <strong>LR parser</strong> is a type of bottom-up parser.<br><br>In the term LR:<br>- <strong>L</strong> stands for Left-to-right scanning of the input.<br>- <strong>R</strong> stands for constructing a <strong>Rightmost derivation in reverse</strong>.<br><br>Because bottom-up parsers reduce the input string step-by-step back to the start symbol, the process traces a rightmost derivation backwards (in reverse order).<br><br>Hence, <strong>Option D</strong> is correct.",
+  "videoUrl": null
+}

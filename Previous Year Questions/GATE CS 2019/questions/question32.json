@@ -1,0 +1,19 @@
+{
+  "id": 32,
+  "year": 2019,
+  "set": null,
+  "topics": ["Engineering Mathematics", "Probability"],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Two numbers are chosen independently and uniformly at random from the set $\\{1, 2, \\dots, 13\\}$.<br><br>The probability (rounded off to 3 decimal places) that their 4-bit (unsigned) binary representations have the same most significant bit is _________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 0.502,
+    "max": 0.504
+  },
+  "explanation": "<strong>Step 1: Determine the MSB for each number in the given set.</strong><br>The given set is $\\{1, 2, \\dots, 13\\}$, containing 13 numbers.<br>- Numbers from $1$ to $7$ ($0001_2$ to $0111_2$) have a Most Significant Bit (MSB) equal to <strong>0</strong>. There are $7$ such numbers.<br>- Numbers from $8$ to $13$ ($1000_2$ to $1101_2$) have an MSB equal to <strong>1</strong>. There are $6$ such numbers.<br><br><strong>Step 2: Calculate total and favorable outcomes.</strong><br>Since two numbers are chosen independently and uniformly at random, the total number of outcomes is:<br>Total outcomes = $13 \\times 13 = 169$<br><br>Favorable outcomes where both numbers have the same MSB:<br>- Both numbers have MSB = 0: $7 \\times 7 = 49$<br>- Both numbers have MSB = 1: $6 \\times 6 = 36$<br><br>Total favorable outcomes = $49 + 36 = 85$<br><br><strong>Step 3: Calculate the probability.</strong><br>$\text{Probability} = \\frac{85}{169} \\approx 0.50296$<br><br>Rounding off to 3 decimal places gives <strong>0.503</strong>.",
+  "videoUrl": null
+}

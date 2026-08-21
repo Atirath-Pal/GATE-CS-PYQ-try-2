@@ -1,0 +1,26 @@
+{
+  "id": 18,
+  "year": 2019,
+  "set": null,
+  "topics": [
+    "Computer Organization",
+    "Digital Logic"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider $Z = X - Y$, where $X$, $Y$ and $Z$ are all in sign-magnitude form. $X$ and $Y$ are each represented in $n$ bits. To avoid overflow, the representation of $Z$ would require a minimum of:",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$n$ bits",
+    "$n - 1$ bits",
+    "$n + 1$ bits",
+    "$n + 2$ bits"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Range of $n$-bit Sign-Magnitude Representation</strong><br>In an $n$-bit sign-magnitude representation, $1$ bit is used for the sign and $n-1$ bits are used for the magnitude.<br>Thus, the representable range for $X$ and $Y$ is $[-(2^{n-1} - 1), 2^{n-1} - 1]$.<br><br><strong>Step 2: Find Maximum and Minimum Values of $Z = X - Y$</strong><br>• Maximum value: $Z_{\\text{max}} = X_{\\text{max}} - Y_{\\text{min}} = (2^{n-1} - 1) - (-(2^{n-1} - 1)) = 2 \\times (2^{n-1} - 1) = 2^n - 2$.<br>• Minimum value: $Z_{\\text{min}} = X_{\\text{min}} - Y_{\\text{max}} = -(2^{n-1} - 1) - (2^{n-1} - 1) = -(2^n - 2)$.<br>Therefore, $Z$ must be able to represent values in the range $[-(2^n - 2), 2^n - 2]$.<br><br><strong>Step 3: Determine Minimum Bits Required for $Z$</strong><br>Let $k$ be the number of bits used to represent $Z$ in sign-magnitude form.<br>The maximum magnitude representable using $k$ bits is $2^{k-1} - 1$.<br>To avoid overflow, we require:<br>$2^{k-1} - 1 \\ge 2^n - 2$<br><br>Testing $k = n + 1$:<br>Max magnitude = $2^{(n+1)-1} - 1 = 2^n - 1$.<br>Since $2^n - 1 \\ge 2^n - 2$, a minimum of $n + 1$ bits is sufficient to represent $Z$ without overflow.",
+  "videoUrl": null
+}

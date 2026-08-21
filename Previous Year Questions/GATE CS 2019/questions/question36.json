@@ -1,0 +1,26 @@
+{
+  "id": 36,
+  "year": 2019,
+  "set": null,
+  "topics": [
+    "Programming and Data Structures",
+    "Recursion"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the following C function:<br><br>Which one of the following will happen when the function convert is called with any positive integer $n$ as argument?",
+  "assetImage": null,
+  "codeBlock": "void convert(int n){\n    if(n<0)\n        printf(\"%d\",n);\n    else {\n        convert(n/2);\n        printf(\"%d\",n%2);\n    }\n}",
+  "options": [
+    "It will print the binary representation of $n$ and terminate",
+    "It will print the binary representation of $n$ in the reverse order and terminate",
+    "It will print the binary representation of $n$ but will not terminate",
+    "It will not print anything and will not terminate"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Step-by-step Analysis:</strong><br><br>1. When <code>convert(n)</code> is called with a positive integer $n$, the condition <code>if(n < 0)</code> evaluates to <strong>false</strong>.<br><br>2. The execution enters the <code>else</code> branch, where <code>convert(n/2)</code> is called recursively before any <code>printf</code> statement is reached.<br><br>3. As $n$ reduces via integer division ($n / 2$), it eventually reaches $0$.<br><br>4. When $n = 0$, the condition $0 < 0$ is still <strong>false</strong>, so it enters the <code>else</code> branch again and calls <code>convert(0 / 2)</code>, which is <code>convert(0)</code>.<br><br>5. This results in an infinite recursion where <code>convert(0)</code> endlessly calls <code>convert(0)</code>.<br><br>6. Since the recursive call occurs before the <code>printf(\"%d\", n%2)</code> line in the <code>else</code> block, no <code>printf</code> statement is ever executed. Thus, nothing is printed and the function never terminates.<br><br>Therefore, the correct option is <strong>(D)</strong>.",
+  "videoUrl": null
+}

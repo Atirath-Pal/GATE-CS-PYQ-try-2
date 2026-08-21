@@ -1,0 +1,19 @@
+{
+  "id": 30,
+  "year": 2019,
+  "set": null,
+  "topics": ["Algorithms", "Sorting"],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "An array of 25 distinct elements is to be sorted using quicksort. Assume that the pivot element is chosen uniformly at random. The probability that the pivot element gets placed in the worst possible location in the first round of partitioning (rounded off to 2 decimal places) is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 0.08,
+    "max": 0.08
+  },
+  "explanation": "<strong>Step 1: Understand worst-case partitioning in Quicksort.</strong><br>In Quicksort, the worst possible location for a pivot element during the first round of partitioning occurs when it is placed at either extreme end of the sorted array (index 0 or index $n-1$). This corresponds to choosing either the minimum or the maximum element of the array, resulting in an unbalanced split of $0$ and $n-1$ elements.<br><br><strong>Step 2: Identify total and favorable outcomes.</strong><br>The array contains $n = 25$ distinct elements.<br>Number of favorable pivot choices that lead to the worst location = 2 (the smallest element and the largest element).<br><br><strong>Step 3: Calculate the probability.</strong><br>Since the pivot is chosen uniformly at random, each element has an equal probability of $\\frac{1}{25}$ of being selected.<br>$$\\text{Probability} = \\frac{2}{25} = 0.08$$<br><br>Thus, the probability that the pivot element gets placed in the worst possible location is <strong>0.08</strong>.",
+  "videoUrl": null
+}

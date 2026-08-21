@@ -1,0 +1,22 @@
+{
+  "id": 54,
+  "year": 2019,
+  "set": null,
+  "topics": [
+    "Linear Algebra",
+    "Matrices"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the following matrix:<br><br>$$R = \\begin{bmatrix} 1 & 2 & 4 & 8 \\\\ 1 & 3 & 9 & 27 \\\\ 1 & 4 & 16 & 64 \\\\ 1 & 5 & 25 & 125 \\end{bmatrix}$$<br><br>The absolute value of the product of Eigen values of $R$ is __________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 12,
+    "max": 12
+  },
+  "explanation": "<strong>1. Product of Eigenvalues and Determinant:</strong><br>The product of the eigenvalues of a matrix $R$ is equal to its determinant, i.e., $\\prod \\lambda_i = \\det(R)$.<br><br><strong>2. Vandermonde Matrix Structure:</strong><br>The given matrix $R$ is a $4 \\times 4$ Vandermonde matrix of the form:<br>$R = \\begin{bmatrix} 1 & x_1 & x_1^2 & x_1^3 \\\\ 1 & x_2 & x_2^2 & x_2^3 \\\\ 1 & x_3 & x_3^2 & x_3^3 \\\\ 1 & x_4 & x_4^2 & x_4^3 \\end{bmatrix}$<br>where $x_1 = 2, x_2 = 3, x_3 = 4, x_4 = 5$.<br><br><strong>3. Determinant Calculation:</strong><br>The determinant of a Vandermonde matrix is given by the formula:<br>$\\det(R) = \\prod_{1 \\le i < j \\le 4} (x_j - x_i)$<br><br>Calculating all pairwise differences $(x_j - x_i)$ for $j > i$:<br>- $(x_2 - x_1) = 3 - 2 = 1$<br>- $(x_3 - x_1) = 4 - 2 = 2$<br>- $(x_4 - x_1) = 5 - 2 = 3$<br>- $(x_3 - x_2) = 4 - 3 = 1$<br>- $(x_4 - x_2) = 5 - 3 = 2$<br>- $(x_4 - x_3) = 5 - 4 = 1$<br><br>Multiplying these differences together:<br>$\\det(R) = 1 \\times 2 \\times 3 \\times 1 \\times 2 \\times 1 = 12$<br><br><strong>4. Absolute Value:</strong><br>The absolute value of the product of eigenvalues is $|\\det(R)| = |12| = 12$.",
+  "videoUrl": null
+}

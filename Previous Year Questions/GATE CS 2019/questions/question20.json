@@ -1,0 +1,26 @@
+{
+  "id": 20,
+  "year": 2019,
+  "set": null,
+  "topics": [
+    "Discrete Mathematics",
+    "Group Theory"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Let $G$ be an arbitrary group. Consider the following relations on $G$:<br><br>$$R_1: \\forall a,b \\in G, a R_1 b \\text{ if and only if } \\exists g \\in G \\text{ such that } a = g^{-1}bg$$<br>$$R_2: \\forall a,b \\in G, a R_2 b \\text{ if and only if } a = b^{-1}$$<br><br>Which of the above is/are equivalence relation/relations?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$R_1$ and $R_2$",
+    "$R_1$ only",
+    "$R_2$ only",
+    "Neither $R_1$ nor $R_2$"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Analysis of Relation $R_1$:</strong><br>Relation $R_1$ defines conjugacy in group $G$ ($a R_1 b \\iff a = g^{-1}bg$ for some $g \\in G$).<br>1. <strong>Reflexivity:</strong> For any $a \\in G$, $a = e^{-1}ae$ where $e$ is the identity element of $G$. Thus, $a R_1 a$ holds.<br>2. <strong>Symmetry:</strong> If $a R_1 b$, then $a = g^{-1}bg \\implies b = gag^{-1} = (g^{-1})^{-1}a(g^{-1})$. Since $g^{-1} \\in G$, $b R_1 a$ holds.<br>3. <strong>Transitivity:</strong> If $a R_1 b$ and $b R_1 c$, then $a = g^{-1}bg$ and $b = h^{-1}ch$ for $g, h \\in G$. Substituting $b$ gives $a = g^{-1}(h^{-1}ch)g = (hg)^{-1}c(hg)$. Since $hg \\in G$, $a R_1 c$ holds.<br>Since $R_1$ is reflexive, symmetric, and transitive, $R_1$ is an equivalence relation.<br><br><strong>Analysis of Relation $R_2$:</strong><br>Relation $R_2$ is defined as $a R_2 b \\iff a = b^{-1}$.<br>For $R_2$ to be reflexive, $a = a^{-1}$ must hold for all $a \\in G$. However, in an arbitrary group, elements do not necessarily equal their own inverse (e.g., in $(\\mathbb{Z}_3, +)$, $1^{-1} = 2 \\neq 1$). Thus, $R_2$ is not reflexive in general and cannot be an equivalence relation.<br><br>Therefore, only $R_1$ is an equivalence relation.",
+  "videoUrl": null
+}

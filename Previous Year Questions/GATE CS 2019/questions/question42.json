@@ -1,0 +1,21 @@
+{
+  "id": 42,
+  "year": 2019,
+  "set": null,
+  "topics": ["Databases", "Normalization"],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Let the set of functional dependencies $F = \\{QR \\rightarrow S, R \\rightarrow P, S \\rightarrow Q\\}$ hold on a relation schema $X = (PQRS)$. $X$ is not in BCNF. Suppose $X$ is decomposed into two schemas $Y$ and $Z$, where $Y = (PR)$ and $Z = (QRS)$.<br><br>Consider the two statements given below.<br><br>I. Both $Y$ and $Z$ are in BCNF<br>II. Decomposition of $X$ into $Y$ and $Z$ is dependency preserving and lossless<br><br>Which of the above statements is/are correct?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Both I and II",
+    "I only",
+    "II only",
+    "Neither I nor II"
+  ],
+  "answer": ["C"],
+  "explanation": "<strong>Given:</strong><br>Relation schema $X = (P, Q, R, S)$<br>Functional Dependencies $F = \\{QR \\rightarrow S, R \\rightarrow P, S \\rightarrow Q\\}$<br>Decomposed schemas: $Y = (P, R)$ and $Z = (Q, R, S)$<br><br><strong>Analysis of Statement I:</strong><br>1. For schema $Y = (P, R)$:<br>- Functional dependency $R \\rightarrow P$ holds in $Y$.<br>- $R^+ = \\{P, R\\}$, so $R$ is a key of $Y$. Thus, $Y$ is in BCNF.<br><br>2. For schema $Z = (Q, R, S)$:<br>- Functional dependencies $QR \\rightarrow S$ and $S \\rightarrow Q$ hold in $Z$.<br>- Candidate keys for $Z$ are $QR$ and $RS$.<br>- In dependency $S \\rightarrow Q$, $S$ is NOT a superkey for $Z$.<br>- Therefore, schema $Z$ is NOT in BCNF (it is in 3NF since $Q$ is a prime attribute).<br><br>Hence, Statement I is <strong>False</strong>.<br><br><strong>Analysis of Statement II:</strong><br>1. <strong>Lossless Join Check:</strong><br>- Common attribute $Y \\cap Z = (P, R) \\cap (Q, R, S) = \\{R\\}$.<br>- Since $R \\rightarrow P$ holds, $R \\rightarrow Y$. Thus, $Y \\cap Z$ contains a key for schema $Y$.<br>- Hence, the decomposition is <strong>lossless</strong>.<br><br>2. <strong>Dependency Preservation Check:</strong><br>- $R \\rightarrow P$ is covered by schema $Y$.<br>- $QR \\rightarrow S$ and $S \\rightarrow Q$ are covered by schema $Z$.<br>- All functional dependencies in $F$ are preserved.<br>- Hence, the decomposition is <strong>dependency preserving</strong>.<br><br>Therefore, Statement II is <strong>True</strong>.<br><br>Thus, <strong>II only</strong> is correct.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 17,
+  "year": 2019,
+  "set": null,
+  "topics": [
+    "Theory of Computation",
+    "Regular Languages"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "If $L$ is a regular language over $\\Sigma = \\{a, b\\}$, which one of the following languages is NOT regular ?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$L \\cdot L^R = \\{xy \\mid x \\in L, y^R \\in L\\}$",
+    "$\\{ww^R \\mid w \\in L\\}$",
+    "$\\text{Prefix }(L) = \\{x \\in \\Sigma^* \\mid \\exists y \\in \\Sigma^* \\text{ such that } xy \\in L\\}$",
+    "$\\text{Suffix }(L) = \\{y \\in \\Sigma^* \\mid \\exists x \\in \\Sigma^* \\text{ such that } xy \\in L\\}$"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Correct Option: B</strong><br><br>Let us analyze each option:<br><br>1. <strong>Option A ($L \\cdot L^R$):</strong> Regular languages are closed under reversal ($L^R$) and concatenation. Since $L$ is regular, $L^R$ is also regular, and their concatenation $L \\cdot L^R$ is regular.<br><br>2. <strong>Option B ($\\{ww^R \\mid w \\in L\\}$):</strong> Consider $L = \\Sigma^* = (a+b)^*$, which is regular. The language $L' = \\{ww^R \\mid w \\in (a+b)^*\\}$ is a well-known non-regular context-free language because a finite automaton cannot remember an arbitrarily long string $w$ to match $w^R$. Hence, this language is NOT guaranteed to be regular.<br><br>3. <strong>Option C (Prefix) & Option D (Suffix):</strong> Regular languages are closed under prefix and suffix operations. If $L$ is regular, $\\text{Prefix}(L)$ and $\\text{Suffix}(L)$ are always regular.<br><br>Therefore, <strong>Option B</strong> is NOT regular.",
+  "videoUrl": null
+}

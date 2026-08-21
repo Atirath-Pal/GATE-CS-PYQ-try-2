@@ -1,0 +1,22 @@
+{
+  "id": 27,
+  "year": 2019,
+  "set": null,
+  "topics": [
+    "Operating Systems",
+    "System Calls"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "The following C program is executed on a Unix/Linux system:<br><br>The total number of child processes created is __________.",
+  "assetImage": null,
+  "codeBlock": "#include &lt;unistd.h&gt;\nint main()\n{\n    int i;\n    for (i=0; i<10; i++)\n        if (i%2 == 0) fork();\n    return 0;\n}",
+  "options": [],
+  "answer": {
+    "min": 31,
+    "max": 31
+  },
+  "explanation": "<strong>Step-by-step Solution:</strong><br><br>1. The loop iterates $i$ from $0$ to $9$.<br>2. The condition <code>i % 2 == 0</code> is satisfied when $i = 0, 2, 4, 6, 8$, which means the <code>fork()</code> statement is encountered $5$ times in total.<br>3. Each call to <code>fork()</code> creates a clone of all currently active processes, doubling the total count of processes.<br>4. Starting with $1$ initial process, after $5$ fork operations, the total process count becomes $2^5 = 32$.<br>5. The total number of child processes created equals total final processes minus the initial parent process:<br>$$\\text{Child Processes} = 32 - 1 = 31$$<br><br>Hence, <strong>31</strong> child processes are created.",
+  "videoUrl": null
+}

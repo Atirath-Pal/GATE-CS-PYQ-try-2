@@ -1,0 +1,21 @@
+{
+  "id": 43,
+  "year": 2019,
+  "set": null,
+  "topics": ["Operating Systems", "Virtual Memory"],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Assume that in a certain computer, the virtual addresses are 64 bits long and the physical addresses are 48 bits long. The memory is word addressable. The page size is 8 kB and the word size is 4 bytes. The Translation Look-aside Buffer (TLB) in the address translation path has 128 valid entries. At most how many distinct virtual addresses can be translated without any TLB miss?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$16 \\times 2^{10}$",
+    "$256 \\times 2^{10}$",
+    "$4 \\times 2^{20}$",
+    "$8 \\times 2^{20}$"
+  ],
+  "answer": ["B"],
+  "explanation": "<strong>Given Data:</strong><br>- Virtual address length = 64 bits<br>- Physical address length = 48 bits<br>- Memory is word addressable<br>- Word size = $4\\text{ bytes}$<br>- Page size = $8\\text{ kB} = 8 \\times 1024\\text{ bytes} = 8192\\text{ bytes}$<br>- Number of TLB entries = $128$<br><br><strong>Step 1: Calculate Page Size in Words</strong><br>Since memory is word addressable, each address refers to one word.<br>$\\text{Page size in words} = \\frac{\\text{Page size in bytes}}{\\text{Word size in bytes}} = \\frac{8192\\text{ bytes}}{4\\text{ bytes}} = 2048\\text{ words} = 2^{11}\\text{ words}$<br><br><strong>Step 2: Calculate Maximum Addressable Space via TLB</strong><br>Each TLB entry stores mapping for one page.<br>$\\text{Total distinct virtual addresses translated} = \\text{TLB entries} \\times \\text{Page size in words}$<br>$\\text{Total addresses} = 128 \\times 2^{11} = 2^7 \\times 2^{11} = 2^{18}\\text{ addresses}$<br><br><strong>Step 3: Match with Options</strong><br>$2^{18} = 2^8 \\times 2^{10} = 256 \\times 2^{10}$<br><br>Hence, the correct option is <strong>(B)</strong>.",
+  "videoUrl": null
+}

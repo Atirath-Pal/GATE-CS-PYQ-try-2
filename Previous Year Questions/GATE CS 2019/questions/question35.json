@@ -1,0 +1,22 @@
+{
+  "id": 35,
+  "year": 2019,
+  "set": null,
+  "topics": [
+    "Algorithms",
+    "Divide and Conquer"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider a sequence of 14 elements: $A = [-5, -10, 6, 3, -1, -2, 13, 4, -9, -1, 4, 12, -3, 0]$.<br><br>The subsequence sum $S(i,j) = \\sum_{k=i}^{j} A[k]$. Determine the maximum of $S(i,j)$, where $0 \\le i \\le j < 14$. (Divide and conquer approach may be used.)",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 29,
+    "max": 29
+  },
+  "explanation": "To find the maximum subsequence sum $S(i,j)$, we need to identify the contiguous subarray that yields the highest total sum.<br><br><strong>Step-by-step Solution:</strong><br>Consider the contiguous subarray starting at index $i = 2$ and ending at index $j = 11$:<br>Subarray = $[6, 3, -1, -2, 13, 4, -9, -1, 4, 12]$<br><br>Sum $S(2, 11) = 6 + 3 + (-1) + (-2) + 13 + 4 + (-9) + (-1) + 4 + 12 = 29$.<br><br>No other contiguous subsequence gives a sum greater than 29. Hence, the maximum value of $S(i,j)$ is <strong>29</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,21 @@
+{
+  "id": 44,
+  "year": "2019",
+  "set": null,
+  "topics": ["Theory of Computation", "Decidability"],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the following sets:<br><br>S1. Set of all recursively enumerable languages over the alphabet $\\{0,1\\}$<br>S2. Set of all syntactically valid C programs<br>S3. Set of all languages over the alphabet $\\{0,1\\}$<br>S4. Set of all non-regular languages over the alphabet $\\{0,1\\}$<br><br>Which of the above sets are uncountable?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "S1 and S2",
+    "S3 and S4",
+    "S2 and S3",
+    "S1 and S4"
+  ],
+  "answer": ["B"],
+  "explanation": "<strong>Analysis of each set:</strong><br><br><strong>S1: Set of all recursively enumerable languages over $\\{0,1\\}$</strong><br>Every recursively enumerable language is accepted by a Turing machine. Since the set of all Turing machines is countably infinite, the set of recursively enumerable languages is <strong>countable</strong>.<br><br><strong>S2: Set of all syntactically valid C programs</strong><br>Every valid C program is a string of finite length over a finite alphabet (ASCII). The set of all finite length strings over a finite alphabet is countably infinite, so the set of syntactically valid C programs is <strong>countable</strong>.<br><br><strong>S3: Set of all languages over $\\{0,1\\}$</strong><br>The set of all strings $\\{0,1\\}^*$ is countably infinite. A language over $\\{0,1\\}$ is defined as any subset of $\\{0,1\\}^*$. The set of all languages is the power set $\\mathcal{P}(\\{0,1\\}^*)$, which is <strong>uncountable</strong> (cardinality $2^{\\aleph_0}$).<br><br><strong>S4: Set of all non-regular languages over $\\{0,1\\}$</strong><br>The set of all regular languages is countable because each regular language can be uniquely represented by a deterministic finite automaton (DFA). Since the total set of languages is uncountable and the set of regular languages is countable, the remaining set of non-regular languages must be <strong>uncountable</strong>.<br><br>Therefore, sets <strong>S3 and S4</strong> are uncountable, which corresponds to option <strong>(B)</strong>.",
+  "videoUrl": null
+}

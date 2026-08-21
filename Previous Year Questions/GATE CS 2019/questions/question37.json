@@ -1,0 +1,26 @@
+{
+  "id": 37,
+  "year": 2019,
+  "set": null,
+  "topics": [
+    "Programming and Data Structures",
+    "C Programming"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the following C program:<br><br>Which one of the following values will be displayed on execution of the programs?",
+  "assetImage": null,
+  "codeBlock": "#include &lt;stdio.h&gt;\nint r(){\n    static int num=7;\n    return num--;\n}\n\nint main(){\n    for (r();r();r())\n        printf(\"%d\",r());\n    return 0;\n}",
+  "options": [
+    "41",
+    "52",
+    "63",
+    "630"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step 1: Understand the function <code>r()</code></strong><br>The function <code>r()</code> uses a static variable <code>num</code> initialized to $7$. Each execution of <code>r()</code> returns the current value of <code>num</code> and then decrements it (post-decrement operation).<br><br><strong>Step 2: Trace the <code>for</code> loop execution step-by-step</strong><br><br>1. <strong>Initialization:</strong> <code>r()</code> is called.<br>Returns $7$, <code>num</code> becomes $6$.<br><br>2. <strong>Condition 1:</strong> <code>r()</code> is called.<br>Returns $6$ (non-zero / true condition), <code>num</code> becomes $5$.<br><br>3. <strong>Loop Body 1:</strong> <code>printf(\"%d\", r());</code> is called.<br>Inside <code>printf</code>, <code>r()</code> is executed, returning $5$, and <code>num</code> becomes $4$.<br><strong>Output printed so far: 5</strong><br><br>4. <strong>Increment 1:</strong> <code>r()</code> is called.<br>Returns $4$, <code>num</code> becomes $3$.<br><br>5. <strong>Condition 2:</strong> <code>r()</code> is called.<br>Returns $3$ (non-zero / true condition), <code>num</code> becomes $2$.<br><br>6. <strong>Loop Body 2:</strong> <code>printf(\"%d\", r());</code> is called.<br>Inside <code>printf</code>, <code>r()</code> is executed, returning $2$, and <code>num</code> becomes $1$.<br><strong>Output printed so far: 52</strong><br><br>7. <strong>Increment 2:</strong> <code>r()</code> is called.<br>Returns $1$, <code>num</code> becomes $0$.<br><br>8. <strong>Condition 3:</strong> <code>r()</code> is called.<br>Returns $0$ (false condition), <code>num</code> becomes $-1$.<br>The loop terminates.<br><br><strong>Final Output:</strong><br> execution displays <strong>52</strong>, corresponding to Option (B).",
+  "videoUrl": null
+}

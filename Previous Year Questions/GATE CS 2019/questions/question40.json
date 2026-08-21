@@ -1,0 +1,26 @@
+{
+  "id": 40,
+  "year": 2019,
+  "set": null,
+  "topics": [
+    "Digital Logic",
+    "Boolean Algebra"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider three 4-variable functions $f_1, f_2,$ and $f_3$, which are expressed in sum-of-minterms as<br><br>$$f_1 = \\sum (0, 2, 5, 8, 14), \\quad f_2 = \\sum (2, 3, 6, 8, 14, 15), \\quad f_3 = \\sum (2, 7, 11, 14)$$<br><br>For the following circuit with one AND gate and one XOR gate, the output function $f$ can be expressed as:",
+  "assetImage": "question40.png",
+  "codeBlock": null,
+  "options": [
+    "$\\sum (7, 8, 11)$",
+    "$\\sum (2, 7, 8, 11, 14)$",
+    "$\\sum (2, 14)$",
+    "$\\sum (0, 2, 3, 5, 6, 7, 8, 11, 14, 15)$"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step 1: Output of the AND gate.</strong><br>The output of the AND gate corresponds to the intersection of the minterms of $f_1$ and $f_2$:<br>$f_1 \\cdot f_2 = \\{0, 2, 5, 8, 14\\} \\cap \\{2, 3, 6, 8, 14, 15\\} = \\{2, 8, 14\\}$<br><br><strong>Step 2: Output of the XOR gate ($f$).</strong><br>The function $f$ is the XOR (symmetric difference) of $(f_1 \\cdot f_2)$ and $f_3$:<br>$f = (f_1 \\cdot f_2) \\oplus f_3 = \\{2, 8, 14\\} \\oplus \\{2, 7, 11, 14\\}$<br><br><strong>Step 3: Evaluate the XOR operation.</strong><br>Minterms present in both sets ($2$ and $14$) cancel out to $0$, while minterms present in only one of the sets ($7, 8, 11$) remain $1$.<br>Thus, $f = \\sum (7, 8, 11)$.<br><br>Hence, the correct option is <strong>(A)</strong>.",
+  "videoUrl": null
+}
