@@ -1,0 +1,22 @@
+{
+  "id": 22,
+  "year": 2017,
+  "set": 1,
+  "topics": [
+    "Theory of Computation",
+    "Finite Automata"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider the language $L$ given by the regular expression $(a+b)^*b(a+b)$ over the alphabet $\\{a,b\\}$. The smallest number of states needed in a deterministic finite-state automaton (DFA) accepting $L$ is ___________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 4.0,
+    "max": 4.0
+  },
+  "explanation": "<strong>Step 1: Understand the Language</strong><br>The regular expression $(a+b)^*b(a+b)$ represents the set of all strings over the alphabet $\\{a,b\\}$ whose second symbol from the right-hand side is $b$.<br><br><strong>Step 2: State Representation</strong><br>To determine whether the second symbol from the right is $b$, a DFA must keep track of the last 2 symbols received. The minimal DFA requires states corresponding to all possible suffixes of length 2:<br>• State $q_{aa}$: Represents the condition where the last two symbols read are $aa$ (also serves as the initial state).<br>• State $q_{ab}$: Represents the condition where the last two symbols read are $ab$.<br>• State $q_{ba}$: Represents the condition where the last two symbols read are $ba$ (Accepting state, since the 2nd symbol from the right is $b$).<br>• State $q_{bb}$: Represents the condition where the last two symbols read are $bb$ (Accepting state, since the 2nd symbol from the right is $b$).<br><br><strong>Step 3: General Formula</strong><br>For an alphabet of size $k$, a DFA accepting strings where the $n^{\\text{th}}$ symbol from the right end is a specific symbol requires $k^n$ states.<br>Here, $k = 2$ and $n = 2$, so the minimum number of states is $2^2 = 4$.",
+  "videoUrl": null
+}

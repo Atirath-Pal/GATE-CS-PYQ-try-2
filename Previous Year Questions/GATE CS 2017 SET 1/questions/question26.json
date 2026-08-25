@@ -1,0 +1,26 @@
+{
+  "id": 26,
+  "year": 2017,
+  "set": 1,
+  "topics": [
+    "Algorithms",
+    "Graph Theory"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Let $G = (V, E)$ be any connected undirected edge-weighted graph. The weights of the edges in $E$ are positive and distinct. Consider the following statements:<br><br>(I) Minimum Spanning Tree of $G$ is always unique.<br>(II) Shortest path between any two vertices of $G$ is always unique.<br><br>Which of the above statements is/are necessarily true?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "(I) only",
+    "(II) only",
+    "both (I) and (II)",
+    "neither (I) nor (II)"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Statement (I):</strong><br>If all edge weights in a connected undirected graph are distinct, the Minimum Spanning Tree (MST) is always <strong>unique</strong>. This is a fundamental property of MSTs because, during execution of Kruskal's or Prim's algorithm, the minimum weight edge considered at any step is strictly unique.<br><br><strong>Statement (II):</strong><br>The shortest path between two vertices is <strong>not necessarily unique</strong>, even if all edge weights are distinct.<br><em>Counterexample:</em> Consider a graph with vertices $u, v, w, x$ and distinct edge weights:<br>- $w(u, v) = 1$<br>- $w(v, w) = 3$<br>- $w(u, x) = 2.5$<br>- $w(x, w) = 1.5$<br>The path $u \\rightarrow v \\rightarrow w$ has total weight $1 + 3 = 4$.<br>The path $u \\rightarrow x \\rightarrow w$ has total weight $2.5 + 1.5 = 4$.<br>Both paths between $u$ and $w$ have equal weight, so the shortest path is not unique.<br><br>Therefore, only statement (I) is necessarily true.",
+  "videoUrl": null
+}

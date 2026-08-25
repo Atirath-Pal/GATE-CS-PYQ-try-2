@@ -1,0 +1,26 @@
+{
+  "id": 40,
+  "year": 2017,
+  "set": 1,
+  "topics": [
+    "Operating Systems",
+    "Virtual Memory"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Recall that Belady's anomaly is that the page-fault rate may <i>increase</i> as the number of allocated frames increases. Now, consider the following statements:<br><br>S1: <i>Random page replacement</i> algorithm (where a page chosen at random is replaced) suffers from Belady's anomaly<br>S2: <i>LRU page replacement</i> algorithm suffers from Belady's anomaly<br><br>Which of the following is CORRECT?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "S1 is true, S2 is true",
+    "S1 is true, S2 is false",
+    "S1 is false, S2 is true",
+    "S1 is false, S2 is false"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Statement S1:</strong> Random page replacement is a non-stack page replacement algorithm. Because page replacement decisions are made randomly, there exist reference strings and execution sequences where allocating more page frames results in an increased number of page faults. Therefore, Random page replacement suffers from Belady's anomaly, making S1 <strong>true</strong>.<br><br><strong>Statement S2:</strong> LRU (Least Recently Used) belongs to the class of <strong>stack algorithms</strong>. A page replacement algorithm is a stack algorithm if the set of pages in memory for $n$ frames is always a subset of the set of pages in memory for $n+1$ frames. Stack algorithms can never exhibit Belady's anomaly. Therefore, LRU does not suffer from Belady's anomaly, making S2 <strong>false</strong>.<br><br>Thus, the correct choice is <strong>(B) S1 is true, S2 is false</strong>.",
+  "videoUrl": null
+}

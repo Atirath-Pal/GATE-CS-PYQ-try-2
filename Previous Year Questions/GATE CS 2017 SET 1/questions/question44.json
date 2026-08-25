@@ -1,0 +1,22 @@
+{
+  "id": 44,
+  "year": 2017,
+  "set": 1,
+  "topics": [
+    "Computer Networks",
+    "Cryptography"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "In a RSA cryptosystem, a participant A uses two prime numbers $p = 13$ and $q = 17$ to generate her public and private keys. If the public key of A is 35, then the private key of A is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 11,
+    "max": 11
+  },
+  "explanation": "<strong>Given:</strong><br>$p = 13$<br>$q = 17$<br>Public key $e = 35$<br><br><strong>Step 1: Calculate Euler's Totient Function $\\phi(n)$</strong><br>$\\phi(n) = (p - 1) \\times (q - 1)$<br>$\\phi(n) = (13 - 1) \\times (17 - 1) = 12 \\times 16 = 192$<br><br><strong>Step 2: Find Private Key $d$</strong><br>The private key $d$ must satisfy:<br>$e \\times d \\equiv 1 \\pmod{\\phi(n)}$<br>$35 \\times d \\equiv 1 \\pmod{192}$<br><br>For $d = 11$:<br>$35 \\times 11 = 385 = 2 \\times 192 + 1 \\equiv 1 \\pmod{192}$<br><br>Hence, the private key of A is <strong>11</strong>.",
+  "videoUrl": null
+}

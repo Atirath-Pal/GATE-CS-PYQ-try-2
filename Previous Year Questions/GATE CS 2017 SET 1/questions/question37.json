@@ -1,0 +1,26 @@
+{
+  "id": 37,
+  "year": 2017,
+  "set": 1,
+  "topics": [
+    "Theory of Computation",
+    "Context-Free Grammars"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the context-free grammars over the alphabet $\\{a,b,c\\}$ given below. $S$ and $T$ are non-terminals.<br><br>$G_1: S \\rightarrow aSb|T, T \\rightarrow cT|\\epsilon$<br><br>$G_2: S \\rightarrow bSa|T, T \\rightarrow cT|\\epsilon$<br><br>The language $L(G_1) \\cap L(G_2)$ is",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Finite.",
+    "Not finite but regular.",
+    "Context-Free but not regular.",
+    "Recursive but not context-free."
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step 1: Determine $L(G_1)$</strong><br>The non-terminal $T$ generates $c^*$. The production $S \\rightarrow aSb | T$ surrounds $T$ with equal numbers of $a$'s on the left and $b$'s on the right.<br>Thus, $L(G_1) = \\{a^n c^m b^n \\mid n \\ge 0, m \\ge 0\\}$.<br><br><strong>Step 2: Determine $L(G_2)$</strong><br>Similarly, $S \\rightarrow bSa | T$ surrounds $T$ with equal numbers of $b$'s on the left and $a$'s on the right.<br>Thus, $L(G_2) = \\{b^n c^m a^n \\mid n \\ge 0, m \\ge 0\\}$.<br><br><strong>Step 3: Intersection $L(G_1) \\cap L(G_2)$</strong><br>For $n > 0$, any string in $L(G_1)$ begins with $a$ and ends with $b$, whereas any string in $L(G_2)$ begins with $b$ and ends with $a$. Hence, there are no common strings when $n > 0$.<br>For $n = 0$, both languages yield $c^*$.<br>Therefore, $L(G_1) \\cap L(G_2) = c^*$.<br><br><strong>Step 4: Classification</strong><br>The language $c^*$ is infinite (not finite) and can be described by a regular expression, so it is regular.<br><br>Hence, $L(G_1) \\cap L(G_2)$ is <strong>Not finite but regular</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 27,
+  "year": 2017,
+  "set": 1,
+  "topics": [
+    "Operating Systems",
+    "Deadlocks"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "A multithreaded program $P$ executes with $x$ number of threads and uses $y$ number of locks for ensuring mutual exclusion while operating on shared memory locations. All locks in the program are <strong>non-reentrant</strong>, i.e., if a thread holds a lock $l$, then it cannot re-acquire lock $l$ without releasing it. If a thread is unable to acquire a lock, it blocks until the lock becomes available. The <strong>minimum</strong> value of $x$ and the <strong>minimum</strong> value of $y$ together for which execution of $P$ can result in a deadlock are:",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$x = 1, y = 2$",
+    "$x = 2, y = 1$",
+    "$x = 2, y = 2$",
+    "$x = 1, y = 1$"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Step 1: Understand Non-reentrant Locks</strong><br>A non-reentrant lock cannot be re-acquired by the thread that currently holds it without first releasing it. If a thread holding a non-reentrant lock attempts to acquire the lock a second time before releasing it, it blocks waiting for the lock to become available, resulting in a self-deadlock.<br><br><strong>Step 2: Determine Minimum Threads ($x$) and Locks ($y$)</strong><br>Since a single thread can deadlock with itself on a single non-reentrant lock, the minimum number of threads required is $x = 1$ and the minimum number of locks required is $y = 1$.<br><br><strong>Conclusion</strong><br>The execution of $P$ can result in a deadlock with $x = 1$ and $y = 1$. Thus, option (D) is correct.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 11,
+  "year": 2017,
+  "set": 1,
+  "topics": [
+    "Computer Organization",
+    "Addressing Modes"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the C struct defined below:<br><br>The base address of <code>student</code> is available in register R1. The field <code>student.grade</code> can be accessed efficiently using",
+  "assetImage": null,
+  "codeBlock": "struct data {\n    int marks [100];\n    char grade;\n    int cnumber;\n};\nstruct data student;",
+  "options": [
+    "Post-increment addressing mode, (R1)+",
+    "Pre-decrement addressing mode, -(R1)",
+    "Register direct addressing mode, R1",
+    "Index addressing mode, X(R1), where X is an offset represented in 2's complement 16-bit representation."
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Step 1: Understand structure layout and offset calculation.</strong><br>The base address of the struct variable <code>student</code> is stored in register $R1$. The field <code>student.grade</code> is located at a fixed offset relative to the base address of the structure (immediately after the array <code>marks[100]</code>).<br><br><strong>Step 2: Identify the suitable addressing mode.</strong><br>To access an element located at a fixed displacement relative to a base address in a register, <strong>Index Addressing Mode</strong> (displacement addressing) represented as $X(R1)$ is used. Here, $X$ is the constant byte offset computed at compile-time.<br><br><strong>Step 3: Conclusion.</strong><br>Thus, <code>student.grade</code> can be accessed efficiently in a single instruction using <strong>Index addressing mode, $X(R1)$</strong>.<br>Hence, Option (D) is correct.",
+  "videoUrl": null
+}

@@ -1,0 +1,22 @@
+{
+  "id": 52,
+  "year": 2017,
+  "set": 1,
+  "topics": [
+    "Compiler Design",
+    "Code Generation"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the expression $(a - 1) * (((b + c) / 3) + d)$. Let X be the minimum number of registers required by an optimal code generation (without any register spill) algorithm for a load/store architecture, in which (i) <i>only load and store instructions can have memory operands</i> and (ii) <i>arithmetic instructions can have only register or immediate operands</i>. The value of X is _______.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 2,
+    "max": 2
+  },
+  "explanation": "To find the minimum number of registers required without any register spill, we evaluate the expression subtrees based on optimal evaluation order.<br><br><strong>1. Evaluating Right Subtree $T_2 = (((b + c) / 3) + d)$:</strong><br>- Load $b$ into $R_1$ and $c$ into $R_2$.<br>- Add them: $R_1 = R_1 + R_2$ ($R_2$ becomes free).<br>- Divide by immediate value $3$: $R_1 = R_1 / 3$.<br>- Load $d$ into $R_2$.<br>- Add them: $R_1 = R_1 + R_2$.<br>Thus, $T_2$ requires a minimum of $2$ registers and leaves the result in $R_1$.<br><br><strong>2. Evaluating Left Subtree $T_1 = (a - 1)$:</strong><br>- Load $a$ into $R_2$.<br>- Subtract immediate value $1$: $R_2 = R_2 - 1$.<br>Thus, $T_1$ requires $1$ register ($R_2$).<br><br><strong>3. Final Computation:</strong><br>- Multiply $R_1$ and $R_2$: $R_1 = R_1 * R_2$.<br><br><strong>Complete Instruction Sequence using 2 Registers ($R_1, R_2$):</strong><br>1. <code>LOAD R1, b</code><br>2. <code>LOAD R2, c</code><br>3. <code>ADD R1, R1, R2</code> &nbsp;&nbsp; ($R_1 = b + c$)<br>4. <code>DIV R1, R1, 3</code> &nbsp;&nbsp;&nbsp;&nbsp; ($R_1 = (b + c) / 3$)<br>5. <code>LOAD R2, d</code><br>6. <code>ADD R1, R1, R2</code> &nbsp;&nbsp; ($R_1 = ((b + c) / 3) + d$)<br>7. <code>LOAD R2, a</code><br>8. <code>SUB R2, R2, 1</code> &nbsp;&nbsp;&nbsp;&nbsp; ($R_2 = a - 1$)<br>9. <code>MUL R1, R1, R2</code> &nbsp;&nbsp; ($R_1 = (a - 1) * (((b + c) / 3) + d)$)<br><br>Therefore, the minimum number of registers required $X = 2$.",
+  "videoUrl": null
+}

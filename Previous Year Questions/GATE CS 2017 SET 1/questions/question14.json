@@ -1,0 +1,21 @@
+{
+  "id": 14,
+  "year": 2017,
+  "set": 1,
+  "topics": ["Computer Networks"],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider a TCP client and a TCP server running on two different machines. After completing data transfer, the TCP client calls <b>close</b> to terminate the connection and a FIN segment is sent to the TCP server. Server-side TCP responds by sending an ACK, which is received by the client-side TCP. As per the TCP connection state diagram (RFC 793), in which state does the client-side TCP connection wait for the FIN from the server-side TCP?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "LAST-ACK",
+    "TIME-WAIT",
+    "FIN-WAIT-1",
+    "FIN-WAIT-2"
+  ],
+  "answer": ["D"],
+  "explanation": "<strong>Step 1: Connection Closure Sequence</strong><br>When the client initiates active close by calling <b>close</b>, it sends a $FIN$ segment to the server and transitions from $ESTABLISHED$ to $FIN-WAIT-1$ state.<br><br><strong>Step 2: Processing Server ACK</strong><br>When the client receives the $ACK$ from the server in response to its $FIN$, it transitions from $FIN-WAIT-1$ to $FIN-WAIT-2$ state.<br><br><strong>Step 3: Waiting for Server FIN</strong><br>In the $FIN-WAIT-2$ state, the client-side TCP waits for the $FIN$ segment from the server-side TCP to complete the two-way closure.<br><br>Therefore, the correct answer is <strong>(D) FIN-WAIT-2</strong>.",
+  "videoUrl": null
+}

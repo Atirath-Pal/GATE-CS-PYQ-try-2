@@ -1,0 +1,26 @@
+{
+  "id": 36,
+  "year": 2017,
+  "set": 1,
+  "topics": [
+    "Programming and Data Structures",
+    "C Programming"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the C functions foo and bar given below:<br><br>Invocations of foo(3) and bar(3) will result in :",
+  "assetImage": null,
+  "codeBlock": "int foo(int val) {\n    int x = 0;\n    while(val > 0) {\n        x = x + foo(val--);\n    }\n    return val;\n}\n\nint bar(int val) {\n    int x = 0;\n    while(val > 0) {\n        x = x + bar(val-1);\n    }\n    return val;\n}",
+  "options": [
+    "Return of 6 and 6 respectively.",
+    "Infinite loop and abnormal termination respectively.",
+    "Abnormal termination and infinite loop respectively.",
+    "Both terminating abnormally."
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>1. Analysis of foo(3):</strong><br>In function <code>foo</code>, the recursive call uses <code>val--</code>. The post-decrement operator evaluates to $3$ before modifying <code>val</code>, so <code>foo(3)</code> is called recursively.<br>This creates new stack frames endlessly with <code>val = 3</code>, leading to infinite recursion. The function never reaches a termination condition, causing a stack overflow and resulting in <strong>abnormal termination</strong>.<br><br><strong>2. Analysis of bar(3):</strong><br>In function <code>bar</code>, calling <code>bar(3)</code> triggers a call chain <code>bar(3) -> bar(2) -> bar(1) -> bar(0)</code>.<br>When <code>bar(0)</code> is reached, $val = 0$, so the <code>while(val > 0)</code> condition fails and <code>bar(0)</code> returns $0$.<br>Control returns to <code>bar(1)</code>. Here, the expression <code>val - 1</code> did not modify <code>val</code> in the caller's stack frame, so <code>val</code> remains $1$.<br>As a result, <code>while(val > 0)</code> in <code>bar(1)</code> remains true indefinitely, repeatedly calling <code>bar(0)</code> and receiving $0$. Since stack frames do not grow unboundedly, this results in an <strong>infinite loop</strong>.<br><br>Therefore, <code>foo(3)</code> and <code>bar(3)</code> result in abnormal termination and infinite loop respectively.",
+  "videoUrl": null
+}

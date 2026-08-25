@@ -1,0 +1,22 @@
+{
+  "id": 25,
+  "year": 2017,
+  "set": 1,
+  "topics": [
+    "Computer Organization and Architecture",
+    "Cache Memory"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider a two-level cache hierarchy with L1 and L2 caches. An application incurs 1.4 memory accesses per instruction on average. For this application, the miss rate of L1 cache is 0.1; the L2 cache experiences, on average, 7 misses per 1000 instructions. The miss rate of L2 expressed correct to two decimal places is ___________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 0.05,
+    "max": 0.05
+  },
+  "explanation": "<strong>Step 1: Calculate total memory accesses per 1000 instructions.</strong><br>Given, memory accesses per instruction = $1.4$.<br>For $1000$ instructions, total memory accesses = $1000 \\times 1.4 = 1400$.<br><br><strong>Step 2: Calculate L1 cache misses (which go to L2).</strong><br>L1 miss rate = $0.1$.<br>Number of L1 misses = $1400 \\times 0.1 = 140$.<br>These $140$ misses are the total memory accesses sent to the L2 cache.<br><br><strong>Step 3: Calculate the L2 cache miss rate.</strong><br>Given, L2 cache experiences $7$ misses per $1000$ instructions.<br>Miss rate of L2 cache = $\\frac{\\text{L2 misses}}{\\text{L2 accesses}} = \\frac{7}{140} = 0.05$.<br><br>Thus, the L2 miss rate expressed correct to two decimal places is $0.05$.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 12,
+  "year": 2017,
+  "set": 1,
+  "topics": [
+    "Compiler Design",
+    "Code Optimization"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the following intermediate program in three address code<br><br>Which one of the following corresponds to a <i>static single assignment</i> form of the above code?",
+  "assetImage": null,
+  "codeBlock": "p = a - b\nq = p * c\np = u * v\nq = p + q",
+  "options": [
+    "$p_1 = a - b$<br>$q_1 = p_1 * c$<br>$p_1 = u * v$<br>$q_1 = p_1 + q_1$",
+    "$p_3 = a - b$<br>$q_4 = p_3 * c$<br>$p_4 = u * v$<br>$q_5 = p_4 + q_4$",
+    "$p_1 = a - b$<br>$q_1 = p_2 * c$<br>$p_3 = u * v$<br>$q_2 = p_4 + q_3$",
+    "$p_1 = a - b$<br>$q_1 = p * c$<br>$p_2 = u * v$<br>$q_2 = p + q$"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "In <strong>Static Single Assignment (SSA)</strong> form, every variable must be assigned a value exactly once, and every variable reference must use the version corresponding to its most recent assignment.<br><br>Analyzing the given three-address code step-by-step:<br>1. $p = a - b$: First assignment to $p$. Assign a new version tag (e.g., $p_3$).<br>2. $q = p * c$: First assignment to $q$. Uses the latest version of $p$ ($p_3$) and assigns a new tag to $q$ (e.g., $q_4$).<br>3. $p = u * v$: Second assignment to $p$. Requires a new version tag (e.g., $p_4$).<br>4. $q = p + q$: Second assignment to $q$. Uses the latest version of $p$ ($p_4$) and the latest version of $q$ ($q_4$), then assigns a new tag to $q$ (e.g., $q_5$).<br><br>Checking option (B):<br>$p_3 = a - b$<br>$q_4 = p_3 * c$<br>$p_4 = u * v$<br>$q_5 = p_4 + q_4$<br><br>Here, every variable ($p_3$, $q_4$, $p_4$, $q_5$) is assigned exactly once and uses the correct active versions. Thus, Option (B) correctly represents the SSA form.",
+  "videoUrl": null
+}

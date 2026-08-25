@@ -1,0 +1,26 @@
+{
+  "id": 4,
+  "year": 2017,
+  "set": 1,
+  "topics": [
+    "Algorithms",
+    "Asymptotic Analysis"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the following functions from positive integers to real numbers:<br><br>$$10, \\sqrt{n}, n, \\log_2 n, \\frac{100}{n}.$$<br><br>The CORRECT arrangement of the above functions in increasing order of asymptotic complexity is:",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\log_2 n, \\frac{100}{n}, 10, \\sqrt{n}, n$",
+    "$\\frac{100}{n}, 10, \\log_2 n, \\sqrt{n}, n$",
+    "$10, \\frac{100}{n}, \\sqrt{n}, \\log_2 n, n$",
+    "$\\frac{100}{n}, \\log_2 n, 10, \\sqrt{n}, n$"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "To arrange the functions in increasing order of asymptotic complexity, we evaluate their growth behavior as $n \\to \\infty$:<br><br>1. <strong>$\\frac{100}{n}$</strong>: As $n \\to \\infty$, $\\frac{100}{n} \\to 0$. This function approaches zero and has the smallest growth rate.<br>2. <strong>$10$</strong>: Constant complexity $O(1)$.<br>3. <strong>$\\log_2 n$</strong>: Logarithmic growth $O(\\log n)$, which grows slower than any positive power of $n$.<br>4. <strong>$\\sqrt{n}$</strong>: Polynomial growth $O(n^{0.5})$, which grows faster than logarithmic growth but slower than linear growth.<br>5. <strong>$n$</strong>: Linear growth $O(n)$, which grows faster than $\\sqrt{n}$.<br><br>Thus, the correct increasing order of asymptotic complexity is:<br>$\\frac{100}{n} < 10 < \\log_2 n < \\sqrt{n} < n$<br><br>Hence, option <strong>(B)</strong> is correct.",
+  "videoUrl": null
+}

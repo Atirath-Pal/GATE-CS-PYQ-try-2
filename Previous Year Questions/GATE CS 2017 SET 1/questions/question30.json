@@ -1,0 +1,26 @@
+{
+  "id": 30,
+  "year": 2017,
+  "set": 1,
+  "topics": [
+    "Linear Algebra",
+    "Engineering Mathematics"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Let $u$ and $v$ be two vectors in $\\mathbf{R}^2$ whose Euclidean norms satisfy $\\|u\\| = 2 \\|v\\|$. What is the value of $\\alpha$ such that $w = u + \\alpha v$ bisects the angle between $u$ and $v$?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "2",
+    "1/2",
+    "1",
+    "-1/2"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "The direction of the angle bisector of two non-zero vectors $u$ and $v$ is given by the sum of their unit vectors:<br><br><strong>Angle Bisector Direction:</strong> $\\hat{u} + \\hat{v} = \\frac{u}{\\|u\\|} + \\frac{v}{\\|v\\|}$<br><br>We are given that $\\|u\\| = 2\\|v\\|$, which implies $\\|v\\| = \\frac{\\|u\\|}{2}$. Substituting this into the equation:<br><br>$\\frac{u}{\\|u\\|} + \\frac{v}{\\|v\\|} = \\frac{u}{\\|u\\|} + \\frac{v}{\\|u\\|/2} = \\frac{u}{\\|u\\|} + \\frac{2v}{\\|u\\|} = \\frac{1}{\\|u\\|}(u + 2v)$<br><br>Since $w = u + \\alpha v$ must lie along the angle bisector, it must be a positive scalar multiple of $(u + 2v)$.<br><br>Comparing $u + \\alpha v$ with $u + 2v$, we obtain $\\alpha = 2$.",
+  "videoUrl": null
+}

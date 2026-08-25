@@ -1,0 +1,26 @@
+{
+  "id": 63,
+  "year": 2017,
+  "set": 1,
+  "topics": [
+    "General Aptitude",
+    "Quantitative Aptitude"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "The expression $\\frac{(x+y)-|x-y|}{2}$ is equal to",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "the maximum of $x$ and $y$",
+    "the minimum of $x$ and $y$",
+    "1",
+    "none of the above"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "To evaluate the expression $\\frac{(x+y)-|x-y|}{2}$, consider two cases:<br><br><strong>Case 1:</strong> When $x \\ge y$<br>In this case, $|x-y| = x-y$.<br>Substituting this into the expression:<br>$\\frac{(x+y)-(x-y)}{2} = \\frac{2y}{2} = y = \\min(x, y)$<br><br><strong>Case 2:</strong> When $x < y$<br>In this case, $|x-y| = -(x-y) = y-x$.<br>Substituting this into the expression:<br>$\\frac{(x+y)-(y-x)}{2} = \\frac{2x}{2} = x = \\min(x, y)$<br><br>In both cases, the given expression simplifies to the minimum of $x$ and $y$.<br><br>Hence, the correct option is <strong>B</strong>.",
+  "videoUrl": null
+}

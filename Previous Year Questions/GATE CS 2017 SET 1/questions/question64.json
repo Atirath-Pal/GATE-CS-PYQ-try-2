@@ -1,0 +1,26 @@
+{
+  "id": 64,
+  "year": 2017,
+  "set": 1,
+  "topics": [
+    "General Aptitude",
+    "Combinatorics"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Arun, Gulab, Neel and Shweta must choose one shirt each from a pile of four shirts coloured red, pink, blue and white respectively. Arun dislikes the colour red and Shweta dislikes the colour white. Gulab and Neel like all the colours. In how many different ways can they choose the shirts so that no one has a shirt with a colour he or she dislikes?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "21",
+    "18",
+    "16",
+    "14"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Step 1: Understand the given problem.</strong><br>There are 4 people (Arun, Gulab, Neel, Shweta) and 4 distinct shirts (Red, Pink, Blue, White).<br><br><strong>Step 2: Total possible distributions.</strong><br>The total number of ways to distribute 4 distinct shirts to 4 people without any restrictions is:<br>Total ways = $4! = 24$.<br><br><strong>Step 3: Calculate invalid distributions using Inclusion-Exclusion Principle.</strong><br>• Let $A$ be the condition where Arun gets the Red shirt. Remaining 3 shirts can be given to 3 people in $3! = 6$ ways.<br>• Let $S$ be the condition where Shweta gets the White shirt. Remaining 3 shirts can be given to 3 people in $3! = 6$ ways.<br>• Let $A \\cap S$ be the condition where Arun gets Red AND Shweta gets White. Remaining 2 shirts can be given in $2! = 2$ ways.<br><br><strong>Step 4: Compute valid distributions.</strong><br>Total invalid ways = $N(A) + N(S) - N(A \\cap S) = 6 + 6 - 2 = 10$.<br>Valid ways = $24 - 10 = 14$.<br><br>Therefore, the number of valid ways is <strong>14</strong>.",
+  "videoUrl": null
+}

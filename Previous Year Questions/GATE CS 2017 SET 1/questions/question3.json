@@ -1,0 +1,26 @@
+{
+  "id": 3,
+  "year": 2017,
+  "set": 1,
+  "topics": [
+    "Engineering Mathematics",
+    "Linear Algebra"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Let $c_1, \\dots, c_n$ be scalars, not all zero, such that $\\sum_{i=1}^{n} c_i a_i = 0$ where $a_i$ are column vectors in $\\mathbf{R}^n$.<br><br>Consider the set of linear equations<br>$$Ax = b$$<br>where $A = [a_1, \\dots, a_n]$ and $b = \\sum_{i=1}^{n} a_i$. The set of equations has",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "a unique solution at $x = J_n$ where $J_n$ denotes a $n$-dimensional vector of all 1",
+    "no solution",
+    "infinitely many solutions",
+    "finitely many solutions"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "Given that $c_1, \\dots, c_n$ are scalars, not all zero, such that $\\sum_{i=1}^{n} c_i a_i = 0$, the column vectors $a_1, \\dots, a_n$ are linearly dependent.<br><br>This means there exists a non-zero vector $c = [c_1, c_2, \\dots, c_n]^T \\neq \\mathbf{0}$ such that $Ac = 0$.<br><br>We are given $b = \\sum_{i=1}^{n} a_i = A J_n$, where $J_n = [1, 1, \\dots, 1]^T$. This shows that $x = J_n$ is a solution to $Ax = b$, meaning the system is consistent.<br><br>For any scalar $k \\in \\mathbb{R}$, $x = J_n + k c$ satisfies:<br>$$A(J_n + k c) = A J_n + k Ac = b + 0 = b$$<br><br>Since $c \\neq \\mathbf{0}$, varying $k$ gives <strong>infinitely many solutions</strong>.",
+  "videoUrl": null
+}

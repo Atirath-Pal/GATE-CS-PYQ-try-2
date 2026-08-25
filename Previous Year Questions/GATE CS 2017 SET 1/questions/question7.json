@@ -1,0 +1,21 @@
+{
+  "id": 7,
+  "year": 2017,
+  "set": 1,
+  "topics": ["Digital Logic", "Computer Organization"],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "The $n$-bit fixed-point representation of an unsigned real number $X$ uses $f$ bits for the fraction part. Let $i = n - f$. The range of decimal values for $X$ in this representation is",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$2^{-f}$ to $2^i$",
+    "$2^{-f}$ to $(2^i - 2^{-f})$",
+    "$0$ to $2^i$",
+    "$0$ to $(2^i - 2^{-f})$"
+  ],
+  "answer": ["D"],
+  "explanation": "<strong>Minimum Value:</strong><br>Since $X$ is an unsigned real number, the smallest value occurs when all $n$ bits are set to $0$. Therefore, the minimum decimal value is $0$.<br><br><strong>Maximum Value:</strong><br>The fixed-point format has $i = n - f$ bits for the integer part and $f$ bits for the fractional part.<br>The maximum integer part with $i$ bits (all 1s) is $2^i - 1$.<br>The maximum fractional part with $f$ bits (all 1s) is $1 - 2^{-f}$.<br>Combining both integer and fractional parts, the maximum decimal value is $(2^i - 1) + (1 - 2^{-f}) = 2^i - 2^{-f}$.<br><br><strong>Conclusion:</strong><br>The range of decimal values for $X$ is $0$ to $(2^i - 2^{-f})$.",
+  "videoUrl": null
+}

@@ -1,0 +1,19 @@
+{
+  "id": 47,
+  "year": "2017",
+  "set": "1",
+  "topics": ["Discrete Mathematics", "Set Theory"],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "The number of integers between 1 and 500 (both inclusive) that are divisible by 3 or 5 or 7 is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 271.0,
+    "max": 271.0
+  },
+  "explanation": "<strong>Step 1: Apply the Principle of Inclusion-Exclusion.</strong><br>Let $A$, $B$, and $C$ be the sets of integers between 1 and 500 divisible by 3, 5, and 7 respectively.<br><br><strong>Step 2: Compute individual set sizes.</strong><br>$|A| = \\lfloor \\frac{500}{3} \\rfloor = 166$<br>$|B| = \\lfloor \\frac{500}{5} \\rfloor = 100$<br>$|C| = \\lfloor \\frac{500}{7} \\rfloor = 71$<br><br><strong>Step 3: Compute pairwise intersection sizes.</strong><br>$|A \\cap B| = \\lfloor \\frac{500}{\\text{lcm}(3,5)} \\rfloor = \\lfloor \\frac{500}{15} \\rfloor = 33$<br>$|B \\cap C| = \\lfloor \\frac{500}{\\text{lcm}(5,7)} \\rfloor = \\lfloor \\frac{500}{35} \\rfloor = 14$<br>$|A \\cap C| = \\lfloor \\frac{500}{\\text{lcm}(3,7)} \\rfloor = \\lfloor \\frac{500}{21} \\rfloor = 23$<br><br><strong>Step 4: Compute three-way intersection size.</strong><br>$|A \\cap B \\cap C| = \\lfloor \\frac{500}{\\text{lcm}(3,5,7)} \\rfloor = \\lfloor \\frac{500}{105} \\rfloor = 4$<br><br><strong>Step 5: Calculate total count.</strong><br>$|A \\cup B \\cup C| = |A| + |B| + |C| - (|A \\cap B| + |B \\cap C| + |A \\cap C|) + |A \\cap B \\cap C|$<br>$|A \\cup B \\cup C| = 166 + 100 + 71 - (33 + 14 + 23) + 4$<br>$|A \\cup B \\cup C| = 337 - 70 + 4 = 271$",
+  "videoUrl": null
+}

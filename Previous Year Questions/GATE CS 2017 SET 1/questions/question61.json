@@ -1,0 +1,21 @@
+{
+  "id": 61,
+  "year": 2017,
+  "set": 1,
+  "topics": ["General Aptitude", "Verbal Ability"],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "“The hold of the nationalist imagination on our colonial past is such that anything inadequately or improperly nationalist is just not history.”<br><br>Which of the following statements best reflects the author’s opinion?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Nationalists are highly imaginative.",
+    "History is viewed through the filter of nationalism.",
+    "Our colonial past never happened.",
+    "Nationalism has to be both adequately and properly imagined."
+  ],
+  "answer": ["B"],
+  "explanation": "<strong>Explanation:</strong><br><br>The given statement implies that nationalist perspective heavily influences how colonial history is viewed and accepted. Any historical account that doesn't fit the nationalist narrative is dismissed as 'not history'.<br><br>This indicates that history is being filtered through the lens/perspective of nationalism.<br><br>Therefore, the statement that best reflects the author's opinion is <strong>(B) History is viewed through the filter of nationalism.</strong>",
+  "videoUrl": null
+}

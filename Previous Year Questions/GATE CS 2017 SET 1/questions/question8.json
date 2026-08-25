@@ -1,0 +1,26 @@
+{
+  "id": 8,
+  "year": "2017",
+  "set": "1",
+  "topics": [
+    "Data Structures",
+    "C Programming"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the C code fragment given below.<br><br>Assuming that $m$ and $n$ point to valid NULL-terminated linked lists, invocation of <code>join</code> will",
+  "assetImage": null,
+  "codeBlock": "typedef struct node {\n  int data;\n  node* next;\n} node;\n\nvoid join(node* m, node* n) {\n  node* p = n;\n  while(p->next != NULL) {\n    p = p->next;\n  }\n  p->next = m;\n}",
+  "options": [
+    "append list $m$ to the end of list $n$ for all inputs.",
+    "either cause a null pointer dereference or append list $m$ to the end of list $n$.",
+    "cause a null pointer dereference for all inputs.",
+    "append list $n$ to the end of list $m$ for all inputs."
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step 1: Analyze function behavior for non-empty list $n$.</strong><br>If list $n$ is not empty ($n \\neq \\text{NULL}$), $p$ is initialized to point to the head of list $n$. The <code>while</code> loop traverses until $p$ points to the last node of list $n$ (where $p \\rightarrow \\text{next} == \\text{NULL}$). The line $p \\rightarrow \\text{next} = m$ then links the last node of list $n$ to list $m$, appending list $m$ to the end of list $n$.<br><br><strong>Step 2: Analyze edge case for empty list $n$.</strong><br>If list $n$ is empty ($n == \\text{NULL}$), $p$ becomes $\\text{NULL}$. Evaluating $p \\rightarrow \\text{next}$ inside the <code>while</code> loop condition attempts to access memory through a null pointer, causing a <strong>null pointer dereference</strong>.<br><br><strong>Conclusion:</strong><br>The code will either cause a null pointer dereference (when list $n$ is empty) or successfully append list $m$ to the end of list $n$. Hence, option <strong>(B)</strong> is correct.",
+  "videoUrl": null
+}

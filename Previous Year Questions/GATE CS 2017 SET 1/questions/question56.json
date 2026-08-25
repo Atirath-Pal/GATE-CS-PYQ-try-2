@@ -1,0 +1,26 @@
+{
+  "id": 56,
+  "year": 2017,
+  "set": 1,
+  "topics": [
+    "General Aptitude",
+    "Verbal Ability"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "After Rajendra Chola returned from his voyage to Indonesia, he ______ to visit the temple in Thanjavur.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "was wishing",
+    "is wishing",
+    "wished",
+    "had wished"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "The sentence describes past actions occurring in sequence.<br><br>Since the action of returning from Indonesia is in the simple past tense (\"returned\"), the subsequent main verb should also be in the simple past tense (\"wished\") to indicate a completed past action.<br><br>Therefore, option <strong>(C) wished</strong> is correct.",
+  "videoUrl": null
+}

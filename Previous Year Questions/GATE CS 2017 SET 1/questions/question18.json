@@ -1,0 +1,26 @@
+{
+  "id": 18,
+  "year": "2017",
+  "set": "1",
+  "topics": [
+    "Operating Systems",
+    "Threads"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Threads of a process share",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "global variables but not heap.",
+    "heap but not global variables.",
+    "neither global variables nor heap.",
+    "both heap and global variables."
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Explanation:</strong><br><br>Threads belonging to the same process share the process's address space and resources.<br><br><strong>Shared Resources across Threads:</strong><br>• <strong>Global and Static Variables</strong> (Data Segment)<br>• <strong>Heap Memory</strong> (Dynamically allocated memory)<br>• <strong>Code / Text Segment</strong><br>• <strong>OS Resources</strong> (Open files, I/O devices, network sockets)<br><br><strong>Thread-Private (Unshared) Resources:</strong><br>• Program Counter (PC)<br>• Register Set<br>• Stack (for local variables and call history)<br><br>Therefore, threads of a process share <strong>both heap and global variables</strong>.<br><br>Hence, option <strong>(D)</strong> is correct.",
+  "videoUrl": null
+}

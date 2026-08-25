@@ -1,0 +1,22 @@
+{
+  "id": 20,
+  "year": 2017,
+  "set": 1,
+  "topics": [
+    "Discrete Mathematics",
+    "Graph Theory"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Let $T$ be a tree with $10$ vertices. The sum of the degrees of all the vertices in $T$ is __________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 18.0,
+    "max": 18.0
+  },
+  "explanation": "<strong>Step 1: Number of edges in a tree</strong><br>For any tree with $n$ vertices, the number of edges $|E|$ is given by $n - 1$.<br>Here, $n = 10$, so $|E| = 10 - 1 = 9$.<br><br><strong>Step 2: Handshaking Lemma</strong><br>By the Handshaking Lemma, the sum of the degrees of all vertices in any graph is equal to twice the number of edges:<br>$\\sum \\text{deg}(v) = 2 \\times |E|$<br><br><strong>Step 3: Calculation</strong><br>Sum of degrees $= 2 \\times 9 = 18$.<br><br>Hence, the correct answer is <strong>18</strong>.",
+  "videoUrl": null
+}

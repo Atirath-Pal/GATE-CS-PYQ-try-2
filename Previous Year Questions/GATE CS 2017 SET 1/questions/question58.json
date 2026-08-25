@@ -1,0 +1,26 @@
+{
+  "id": 58,
+  "year": 2017,
+  "set": 1,
+  "topics": [
+    "General Aptitude",
+    "Logical Reasoning"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Rahul, Murali, Srinivas and Arul are seated around a square table. Rahul is sitting to the left of Murali. Srinivas is sitting to the right of Arul. Which of the following pairs are seated opposite each other?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Rahul and Murali",
+    "Srinivas and Arul",
+    "Srinivas and Murali",
+    "Srinivas and Rahul"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Determine the seating layout around the square table (facing the center).</strong><br><br><strong>Step 2: Place Murali and Rahul.</strong><br>Assume Murali is seated at the Bottom position (facing North).<br>Since Rahul is sitting to the left of Murali, Rahul is placed at the Left position.<br><br><strong>Step 3: Place Arul and Srinivas.</strong><br>The remaining positions are Top and Right.<br>For Srinivas to be sitting to the right of Arul, Arul must be placed at the Right position (facing West), making the Top position to Arul's right. Thus, Srinivas is placed at the Top position.<br><br><strong>Step 4: Identify opposite pairs.</strong><br>• Rahul (Left) and Arul (Right) are opposite each other.<br>• Srinivas (Top) and Murali (Bottom) are opposite each other.<br><br>Therefore, <strong>Srinivas and Murali</strong> are seated opposite each other.",
+  "videoUrl": null
+}

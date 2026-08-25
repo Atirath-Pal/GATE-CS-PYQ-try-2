@@ -1,0 +1,26 @@
+{
+  "id": 2,
+  "year": "2017",
+  "set": "1",
+  "topics": [
+    "Mathematical Logic",
+    "First Order Logic"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the first-order logic sentence $F: \\forall x(\\exists y R(x, y))$. Assuming non-empty logical domains, which of the sentences below are <i>implied</i> by $F$? <br><br>I. $\\exists y(\\exists x R(x, y))$<br>II. $\\exists y(\\forall x R(x, y))$<br>III. $\\forall y(\\exists x R(x, y))$<br>IV. $\\neg \\exists x(\\forall y \\neg R(x, y))$",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "IV only",
+    "I and IV only",
+    "II only",
+    "II and III only"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "Given the sentence $F: \\forall x(\\exists y R(x, y))$.<br><br><strong>Statement I:</strong> $\\exists y(\\exists x R(x, y))$<br>Since the domain is non-empty, there is at least one element $x_0$. By $F$, for $x_0$, there exists some $y_0$ such that $R(x_0, y_0)$ is true. Thus, there exist $x$ and $y$ for which $R(x, y)$ holds. Therefore, $F \\implies \\text{I}$.<br><br><strong>Statement II:</strong> $\\exists y(\\forall x R(x, y))$<br>$F$ states that for every $x$ there exists a $y$ (where $y$ can depend on $x$). Statement II requires a single $y$ that works for all $x$, which is a stronger condition. Therefore, $F \\not\\implies \\text{II}$.<br><br><strong>Statement III:</strong> $\\forall y(\\exists x R(x, y))$<br>$F$ does not guarantee that every $y$ in the domain has some $x$ mapped to it. Therefore, $F \\not\\implies \\text{III}$.<br><br><strong>Statement IV:</strong> $\\neg \\exists x(\\forall y \\neg R(x, y))$<br>Applying logical equivalences:<br>$\\neg \\exists x(\\forall y \\neg R(x, y)) \\equiv \\forall x \\neg(\\forall y \\neg R(x, y)) \\equiv \\forall x(\\exists y R(x, y))$, which is logically equivalent to $F$. Therefore, $F \\implies \\text{IV}$.<br><br>Hence, statements <strong>I and IV only</strong> are implied by $F$.",
+  "videoUrl": null
+}

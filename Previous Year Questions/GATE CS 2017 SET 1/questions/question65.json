@@ -1,0 +1,21 @@
+{
+  "id": 65,
+  "year": 2017,
+  "set": 1,
+  "topics": ["General Aptitude", "Spatial Aptitude"],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "A contour line joins locations having the same height above the mean sea level. The following is a contour plot of a geographical region. Contour lines are shown at $25\\text{ m}$ intervals in this plot. If in a flood, the water level rises to $525\\text{ m}$, which of the villages P, Q, R, S, T get submerged?",
+  "assetImage": "question65.png",
+  "codeBlock": null,
+  "options": [
+    "P, Q",
+    "P, Q, T",
+    "R, S, T",
+    "Q, R, S"
+  ],
+  "answer": ["C"],
+  "explanation": "Any village at an elevation of less than $525\\text{ m}$ will get submerged when the water level rises to $525\\text{ m}$.<br><br><strong>Contour Analysis:</strong><br>1. <strong>Village P:</strong> Lies inside the $550\\text{ m}$ contour ring, so its height is $> 550\\text{ m}$. It remains safe.<br>2. <strong>Village Q:</strong> Lies in a high-elevation zone $> 525\\text{ m}$. It remains safe.<br>3. <strong>Village R:</strong> Situated below the $500\\text{ m}$ contour line ($< 525\\text{ m}$). It gets submerged.<br>4. <strong>Village S:</strong> Situated near the $450\\text{ m}$ contour line ($< 525\\text{ m}$). It gets submerged.<br>5. <strong>Village T:</strong> Situated near the $500\\text{ m}$ contour line ($< 525\\text{ m}$). It gets submerged.<br><br>Hence, villages <strong>R, S, and T</strong> get submerged.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 13,
+  "year": 2017,
+  "set": 1,
+  "topics": [
+    "Programming and Data Structures",
+    "C Programming"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the following C code:<br><br>The code suffers from which one of the following problems:",
+  "assetImage": null,
+  "codeBlock": "#include &lt;stdio.h&gt;\nint *assignval(int *x, int val) {\n    *x = val;\n    return x;\n}\n\nvoid main () {\n    int *x = malloc(sizeof(int));\n    if(NULL == x) return;\n    x = assignval(x,0);\n    if(x) {\n        x = (int *)malloc(sizeof(int));\n        if(NULL == x) return;\n        x = assignval(x, 10);\n    }\n    printf(\"%d\\n\", *x);\n    free(x);\n}",
+  "options": [
+    "compiler error as the return of malloc is not typecast appropriately",
+    "compiler error because the comparison should be made as x == NULL and not as shown",
+    "compiles successfully but execution may result in dangling pointer",
+    "compiles successfully but execution may result in memory leak"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>1. Compilation Check:</strong><br>• In C, <code>void*</code> returned by <code>malloc</code> is implicitly converted to any pointer type, so explicit typecasting is not mandatory.<br>• The comparison <code>NULL == x</code> is syntactically valid in C.<br>Hence, the code compiles without any compilation error.<br><br><strong>2. Memory Leak Analysis:</strong><br>• First allocation: <code>int *x = malloc(sizeof(int));</code> allocates dynamic memory block $M_1$ and stores its address in pointer $x$.<br>• Inside the <code>if(x)</code> block: <code>x = (int *)malloc(sizeof(int));</code> allocates a new memory block $M_2$ and reassigns pointer $x$ to point to $M_2$.<br>• The memory address of block $M_1$ is lost without being freed.<br>• Because block $M_1$ can no longer be accessed or deallocated, it causes a <strong>memory leak</strong>.<br><br>Therefore, the code compiles successfully but execution may result in a memory leak.",
+  "videoUrl": null
+}

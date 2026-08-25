@@ -1,0 +1,26 @@
+{
+  "id": 41,
+  "year": 2017,
+  "set": 1,
+  "topics": [
+    "Databases",
+    "Tuple Relational Calculus"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider a database that has the relation schemas EMP(EmpId, EmpName, DeptId), and DEPT(DeptName, DeptId). Note that the DeptId can be permitted to be NULL in the relation EMP. Consider the following queries on the database expressed in tuple relational calculus.<br><br>(I) $\\{ t \\mid \\exists u \\in \\text{EMP}(t[\\text{EmpName}] = u[\\text{EmpName}] \\land \\forall v \\in \\text{DEPT}(t[\\text{DeptId}] \\neq v[\\text{DeptId}])) \\}$<br>(II) $\\{ t \\mid \\exists u \\in \\text{EMP}(t[\\text{EmpName}] = u[\\text{EmpName}] \\land \\exists v \\in \\text{DEPT}(t[\\text{DeptId}] \\neq v[\\text{DeptId}])) \\}$<br>(III) $\\{ t \\mid \\exists u \\in \\text{EMP}(t[\\text{EmpName}] = u[\\text{EmpName}] \\land \\exists v \\in \\text{DEPT}(t[\\text{DeptId}] = v[\\text{DeptId}])) \\}$<br><br>Which of the above queries are safe?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "(I) and (II) only",
+    "(I) and (III) only",
+    "(II) and (III) only",
+    "(I), (II) and (III)"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "A expression in Tuple Relational Calculus (TRC) is said to be <strong>safe</strong> if it yields a finite result and all values that appear in the result are drawn from the domain of the expression ($\\text{dom}(P)$).<br><br>In all three queries, the tuple variable $t$ is bounded by existing attributes and values in the database relations ($\\text{EMP}$ and $\\text{DEPT}$):<br><br>1. <strong>Query (I):</strong> The condition $\\exists u \\in \\text{EMP}$ restricts $t[\\text{EmpName}]$ to values present in the $\\text{EMP}$ relation, while $\\forall v \\in \\text{DEPT}$ checks $t[\\text{DeptId}]$ against values in $\\text{DEPT}$. Since the output tuples are constrained to domain values of the relations, the query is safe.<br><br>2. <strong>Query (II):</strong> $t[\\text{EmpName}]$ is drawn from $\\text{EMP}$ and $t[\\text{DeptId}]$ is evaluated against existing tuples in $\\text{DEPT}$ ($t[\\text{DeptId}] \\neq v[\\text{DeptId}]$). The domain is bounded and finite, making it safe.<br><br>3. <strong>Query (III):</strong> $t[\\text{EmpName}]$ is drawn from $\\text{EMP}$ and $t[\\text{DeptId}]$ matches some $v[\\text{DeptId}]$ in $\\text{DEPT}$. Every component is explicitly bounded by finite database relations, making it safe.<br><br>Therefore, queries (I), (II), and (III) are all safe.",
+  "videoUrl": null
+}

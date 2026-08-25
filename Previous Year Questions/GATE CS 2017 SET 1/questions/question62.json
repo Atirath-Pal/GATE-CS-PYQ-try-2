@@ -1,0 +1,23 @@
+{
+  "id": 62,
+  "year": 2017,
+  "set": 1,
+  "topics": ["General Aptitude", "Logical Reasoning"],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Six people are seated around a circular table. There are at least two men and two women. There are at least three right-handed persons. Every woman has a left-handed person to her immediate right. None of the women are right-handed. The number of women at the table is",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "2",
+    "3",
+    "4",
+    "Cannot be determined"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step 1: Analyze the given constraints.</strong><br>• Total people seated = $6$.<br>• There are at least $2$ men ($M \\ge 2$) and at least $2$ women ($W \\ge 2$).<br>• There are at least $3$ right-handed persons.<br>• None of the women are right-handed, which means all women are left-handed.<br>• Since no women are right-handed, all right-handed persons must be men. Therefore, there are at least $3$ right-handed men ($M \\ge 3$).<br><br><strong>Step 2: Evaluate possible combinations for the number of men ($M$) and women ($W$).</strong><br>Since $M + W = 6$, $M \\ge 3$, and $W \\ge 2$, the possible cases are:<br>1. $M = 3, W = 3$<br>2. $M = 4, W = 2$<br><br><strong>Step 3: Test Case 1 ($W = 3, M = 3$).</strong><br>If $M = 3$, all $3$ men must be right-handed to satisfy the condition of at least $3$ right-handed persons.<br>This leaves only the $3$ women as left-handed persons.<br>The problem specifies that <em>every woman has a left-handed person to her immediate right</em>.<br>If only women are left-handed, then every woman must have another woman to her immediate right. On a circular table, this implies that every woman is immediately followed by a woman, which would force all $6$ seats to be occupied by women. This contradicts $M = 3$. Hence, $W = 3$ is impossible.<br><br><strong>Step 4: Test Case 2 ($W = 2, M = 4$).</strong><br>If $W = 2$ and $M = 4$, among the $4$ men, $3$ can be right-handed and $1$ can be left-handed.<br>This gives $3$ left-handed persons ($2$ women + $1$ man).<br>We can arrange them in circular order as: $W_2 \\rightarrow W_1 \\rightarrow M_{\\text{left}} \\rightarrow M_{\\text{right1}} \\rightarrow M_{\\text{right2}} \\rightarrow M_{\\text{right3}} \\rightarrow W_2$.<br>• $W_2$'s immediate right is $W_1$ (left-handed).<br>• $W_1$'s immediate right is $M_{\\text{left}}$ (left-handed).<br>All conditions are satisfied.<br><br>Therefore, the number of women at the table is <strong>2</strong>.",
+  "videoUrl": null
+}

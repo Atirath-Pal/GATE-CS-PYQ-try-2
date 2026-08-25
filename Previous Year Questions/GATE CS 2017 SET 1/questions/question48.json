@@ -1,0 +1,22 @@
+{
+  "id": 48,
+  "year": 2017,
+  "set": 1,
+  "topics": [
+    "Algorithms",
+    "Searching"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Let $A$ be an array of 31 numbers consisting of a sequence of 0's followed by a sequence of 1's. The problem is to find the smallest index $i$ such that $A[i]$ is 1 by probing the minimum number of locations in $A$. The worst case number of probes performed by an optimal algorithm is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 5,
+    "max": 5
+  },
+  "explanation": "<strong>Step 1: Understand the Problem</strong><br>We are given an array $A$ of 31 elements consisting of a sequence of 0's followed by a sequence of 1's. Since the array is sorted, an optimal algorithm to find the first index $i$ where $A[i] = 1$ uses binary search.<br><br><strong>Step 2: Number of Possible States</strong><br>For an array of size $N = 31$, the index of the first occurrence of 1 can range from $0$ to $30$, or 1 may not exist at all (all 0's). Thus, there are $31 + 1 = 32$ possible configurations/outcomes.<br><br><strong>Step 3: Calculate Worst-Case Probes</strong><br>Each probe in binary search divides the search space into half. The maximum number of probes required in the worst-case scenario is:<br>$$\\lceil \\log_2(32) \\rceil = 5$$<br><br>Thus, the worst-case number of probes performed by an optimal algorithm is <strong>5</strong>.",
+  "videoUrl": null
+}

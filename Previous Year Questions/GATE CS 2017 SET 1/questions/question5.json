@@ -1,0 +1,26 @@
+{
+  "id": 5,
+  "year": 2017,
+  "set": 1,
+  "topics": [
+    "Algorithms",
+    "Design Paradigms"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the following table:<br><br><div style=\"overflow-x: auto; margin: 12px 0;\"><table style=\"border-collapse: collapse; border: 1px solid #ffffff; text-align: left;\"><thead><tr><th style=\"border: 1px solid #ffffff; padding: 6px 12px; font-weight: bold;\">Algorithms</th><th style=\"border: 1px solid #ffffff; padding: 6px 12px; font-weight: bold;\">Design Paradigms</th></tr></thead><tbody><tr><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">(P) Kruskal</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">(i) Divide and Conquer</td></tr><tr><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">(Q) Quicksort</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">(ii) Greedy</td></tr><tr><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">(R) Floyd-Warshall</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">(iii) Dynamic Programming</td></tr></tbody></table></div><br>Match the algorithms to the design paradigms they are based on.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$(P) \\leftrightarrow (ii), (Q) \\leftrightarrow (iii), (R) \\leftrightarrow (i)$",
+    "$(P) \\leftrightarrow (iii), (Q) \\leftrightarrow (i), (R) \\leftrightarrow (ii)$",
+    "$(P) \\leftrightarrow (ii), (Q) \\leftrightarrow (i), (R) \\leftrightarrow (iii)$",
+    "$(P) \\leftrightarrow (i), (Q) \\leftrightarrow (ii), (R) \\leftrightarrow (iii)$"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step-by-step analysis:</strong><br><br>1. <strong>(P) Kruskal's algorithm</strong> is a minimum spanning tree algorithm that follows the <strong>Greedy algorithm (ii)</strong> paradigm.<br><br>2. <strong>(Q) Quicksort</strong> is a sorting algorithm that follows the <strong>Divide and Conquer (i)</strong> strategy.<br><br>3. <strong>(R) Floyd-Warshall algorithm</strong> is an all-pairs shortest path algorithm that uses <strong>Dynamic Programming (iii)</strong>.<br><br>Therefore, the correct matching is $(P) \\leftrightarrow (ii)$, $(Q) \\leftrightarrow (i)$, and $(R) \\leftrightarrow (iii)$, which corresponds to <strong>Option (C)</strong>.",
+  "videoUrl": null
+}

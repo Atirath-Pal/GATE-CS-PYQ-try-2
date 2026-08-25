@@ -1,0 +1,26 @@
+{
+  "id": 39,
+  "year": 2017,
+  "set": 1,
+  "topics": [
+    "Theory of Computation",
+    "Turing Machines"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Let $A$ and $B$ be finite alphabets and let $\\#$ be a symbol outside both $A$ and $B$. Let $f$ be a total function from $A^*$ to $B^*$. We say $f$ is computable if there exists a Turing machine $M$ which given an input $x$ in $A^*$, always halts with $f(x)$ on its tape. Let $L_f$ denote the language $\\{x \\# f(x) \\mid x \\in A^*\\}$.<br><br>Which of the following statements is true:",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$f$ is computable if and only if $L_f$ is recursive.",
+    "$f$ is computable if and only if $L_f$ is recursively enumerable.",
+    "If $f$ is computable then $L_f$ is recursive, but not conversely.",
+    "If $f$ is computable then $L_f$ is recursively enumerable, but not conversely."
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Direction 1: If $f$ is computable, then $L_f$ is recursive.</strong><br>To decide if an arbitrary input string $w \\in L_f$:<br>1. Check if $w$ is formatted as $x \\# y$ where $x \\in A^*$ and $y \\in B^*$. If not, reject.<br>2. Run the Turing machine $M$ that computes $f$ on input $x$. Since $f$ is a total computable function, $M$ always halts and produces $f(x)$.<br>3. Compare $f(x)$ with $y$. If $y = f(x)$, accept; otherwise, reject.<br>Since this procedure always halts, $L_f$ is recursive (decidable).<br><br><strong>Direction 2: If $L_f$ is recursive, then $f$ is computable.</strong><br>To compute $f(x)$ for a given $x \\in A^*$:<br>1. Systematically enumerate all strings $y \\in B^*$ in lexicographical order ($y_1, y_2, y_3, \\dots$).<br>2. For each candidate string $y_i$, check whether $x \\# y_i \\in L_f$ using the decider Turing machine for $L_f$.<br>3. Since $f$ is a total function, exactly one string $y$ exists such that $x \\# y \\in L_f$. Once found, output $y$ and halt.<br>Since the decider for $L_f$ always halts, this process is guaranteed to terminate and output $f(x)$. Hence, $f$ is computable.<br><br>Therefore, $f$ is computable if and only if $L_f$ is recursive.",
+  "videoUrl": null
+}

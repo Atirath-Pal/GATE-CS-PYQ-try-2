@@ -1,0 +1,19 @@
+{
+  "id": 43,
+  "year": 2017,
+  "set": 1,
+  "topics": ["Compiler Design"],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the following grammar:<br><br>$$stmt \\rightarrow \\mathbf{if}\\ expr\\ \\mathbf{then}\\ expr\\ \\mathbf{else}\\ expr;\\ stmt \\mid \\epsilon$$<br>$$expr \\rightarrow term\\ relop\\ term \\mid term$$<br>$$term \\rightarrow id \\mid number$$<br>$$id \\rightarrow a \\mid b \\mid c$$<br>$$number \\rightarrow [0-9]$$<br><br>where $\\mathbf{relop}$ is a relational operator (e.g., $<, >, \\dots$), $\\epsilon$ refers to the empty statement, and $\\mathbf{if}$, $\\mathbf{then}$, $\\mathbf{else}$ are terminals.<br><br>Consider a program $P$ following the above grammar containing ten $\\mathbf{if}$ terminals. The number of control flow paths in $P$ is ________. For example, the program<br><br>$$\\mathbf{if}\\ e_1\\ \\mathbf{then}\\ e_2\\ \\mathbf{else}\\ e_3$$<br><br>has 2 control flow paths, $e_1 \\rightarrow e_2$ and $e_1 \\rightarrow e_3$.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 1024.0,
+    "max": 1024.0
+  },
+  "explanation": "<strong>Step 1: Analyze individual conditional branching</strong><br>Each $\\mathbf{if}\\dots\\mathbf{then}\\dots\\mathbf{else}$ statement creates $2$ independent control flow paths (one through the $\\mathbf{then}$ branch and one through the $\\mathbf{else}$ branch).<br><br><strong>Step 2: Analyze sequential composition</strong><br>The production rule $stmt \\rightarrow \\mathbf{if}\\ expr\\ \\mathbf{then}\\ expr\\ \\mathbf{else}\\ expr;\\ stmt$ recursively chains statements sequentially. When statements are executed in sequence, the total number of control flow paths is the product of the number of paths in each statement.<br><br><strong>Step 3: Compute total control flow paths</strong><br>For a program $P$ containing $10$ $\\mathbf{if}$ statements in sequence, the total number of paths is:<br>$$\\text{Total Paths} = 2^{10} = 1024$$",
+  "videoUrl": null
+}

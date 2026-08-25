@@ -1,0 +1,22 @@
+{
+  "id": 45,
+  "year": 2017,
+  "set": 1,
+  "topics": [
+    "Computer Networks",
+    "Data Link Layer"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "The values of parameters for the Stop-and-Wait ARQ protocol are as given below:<br><br>Bit rate of the transmission channel = 1 Mbps.<br>Propagation delay from sender to receiver = 0.75 ms.<br>Time to process a frame = 0.25 ms.<br>Number of bytes in the information frame = 1980.<br>Number of bytes in the acknowledge frame = 20.<br>Number of overhead bytes in the information frame = 20.<br><br>Assume that there are no transmission errors. Then, the transmission efficiency (expressed in percentage) of the Stop-and-Wait ARQ protocol for the above parameters is _________ (correct to 2 decimal places).",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 86.5,
+    "max": 89.5
+  },
+  "explanation": "<strong>Given Data:</strong><br>Bit rate ($B$) = $1\\text{ Mbps} = 10^6\\text{ bits/s}$<br>Propagation delay ($T_p$) = $0.75\\text{ ms}$<br>Processing time ($T_{proc}$) = $0.25\\text{ ms}$<br>Information frame size = $1980\\text{ bytes}$<br>Acknowledgement frame size = $20\\text{ bytes}$<br>Overhead bytes in information frame = $20\\text{ bytes}$<br><br><strong>Step 1: Calculate Transmission Times</strong><br>Transmission time of Data Frame ($T_{t,data}$) = $\\frac{1980 \\times 8}{10^6}\\text{ s} = 15.84\\text{ ms}$<br>Transmission time of ACK Frame ($T_{t,ack}$) = $\\frac{20 \\times 8}{10^6}\\text{ s} = 0.16\\text{ ms}$<br><br><strong>Step 2: Calculate Total Cycle Time</strong><br>Total time for 1 frame cycle ($T_{total}$) = $T_{t,data} + T_p + T_{proc} + T_{t,ack} + T_p$<br>$T_{total} = 15.84 + 0.75 + 0.25 + 0.16 + 0.75 = 17.75\\text{ ms}$<br><br><strong>Step 3: Calculate Efficiency</strong><br>Useful payload size = $1980 - 20 = 1960\\text{ bytes}$<br>Useful transmission time ($T_{useful}$) = $\\frac{1960 \\times 8}{10^6}\\text{ s} = 15.68\\text{ ms}$<br><br>Efficiency ($\\\\eta$) = $\\frac{T_{useful}}{T_{total}} \\times 100 = \\frac{15.68}{17.75} \\times 100 \\approx 88.34\\%$<br><br>Alternatively, taking full data frame transmission time as useful time:<br>Efficiency ($\\\\eta$) = $\\frac{15.84}{17.75} \\times 100 \\approx 89.24\\%$<br><br>Both calculated values fall in the acceptable range of $86.5$ to $89.5$.",
+  "videoUrl": null
+}

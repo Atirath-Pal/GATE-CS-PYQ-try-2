@@ -1,0 +1,21 @@
+{
+  "id": 6,
+  "year": 2017,
+  "set": 1,
+  "topics": ["Data Structures", "Binary Search Trees"],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Let $T$ be a binary search tree with 15 nodes. The minimum and maximum possible heights of $T$ are:<br><br>Note: The height of a tree with a single node is 0.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "4 and 15 respectively",
+    "3 and 14 respectively",
+    "4 and 14 respectively",
+    "3 and 15 respectively"
+  ],
+  "answer": ["B"],
+  "explanation": "<strong>Step 1:</strong> For a binary tree with height $h$, the maximum number of nodes is $2^{h+1}-1$.<br><br><strong>Step 2:</strong> For 15 nodes, the minimum height satisfies $2^{h+1}-1 \\ge 15$. Thus, $2^{h+1} \\ge 16$, giving $h=3$. A perfectly balanced binary search tree can therefore have height 3.<br><br><strong>Step 3:</strong> The maximum height occurs when the binary search tree is completely skewed, with each node having only one child. For 15 nodes, the height is $15-1=14$.<br><br><strong>Therefore:</strong> The minimum and maximum possible heights are $3$ and $14$, respectively. Hence, the correct answer is <strong>Option B</strong>.",
+  "videoUrl": null
+}

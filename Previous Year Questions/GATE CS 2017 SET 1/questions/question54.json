@@ -1,0 +1,22 @@
+{
+  "id": 54,
+  "year": 2017,
+  "set": 1,
+  "topics": [
+    "Computer Organization and Architecture",
+    "Cache Memory"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "A cache memory unit with capacity of $N$ words and block size of $B$ words is to be designed. If it is designed as a direct mapped cache, the length of the TAG field is 10 bits. If the cache unit is now designed as a 16-way set-associative cache, the length of the TAG field is _________ bits.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 14,
+    "max": 14
+  },
+  "explanation": "<strong>Step 1: Determine total number of blocks</strong><br>Total cache capacity = $N$ words<br>Block size = $B$ words<br>Total number of blocks in cache = $N / B$<br><br><strong>Step 2: Direct Mapped Cache Analysis</strong><br>In a direct-mapped cache:<br>- Word offset bits = $\\log_2 B$<br>- Line index bits = $\\log_2 (N / B) = \\log_2 N - \\log_2 B$<br>- TAG field = $10$ bits<br><br>Total Main Memory Address Bits = $\\text{TAG} + \\text{Index} + \\text{Offset}$<br>$\\text{Address Bits} = 10 + (\\log_2 N - \\log_2 B) + \\log_2 B = 10 + \\log_2 N$<br><br><strong>Step 3: 16-Way Set-Associative Cache Analysis</strong><br>In a 16-way set-associative cache:<br>- Number of sets = $(N / B) / 16 = N / (16B)$<br>- Set index bits = $\\log_2 (N / (16B)) = \\log_2 N - \\log_2 B - 4$<br>- Word offset bits = $\\log_2 B$<br><br>Since the total main memory address length remains unchanged:<br>$\\text{TAG}_{16\\text{-way}} + \\text{Set Index Bits} + \\text{Offset Bits} = 10 + \\log_2 N$<br>$\\text{TAG}_{16\\text{-way}} + (\\log_2 N - \\log_2 B - 4) + \\log_2 B = 10 + \\log_2 N$<br>$\\text{TAG}_{16\\text{-way}} - 4 = 10$<br>$\\text{TAG}_{16\\text{-way}} = 14$ bits.<br><br><strong>Final Answer:</strong><br>14",
+  "videoUrl": null
+}

@@ -1,0 +1,21 @@
+{
+  "id": 59,
+  "year": "2017",
+  "set": "1",
+  "topics": ["Quantitative Aptitude", "Number Systems"],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Find the smallest number $y$ such that $y \\times 162$ is a perfect cube.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "24",
+    "27",
+    "32",
+    "36"
+  ],
+  "answer": ["D"],
+  "explanation": "<strong>Step 1: Express 162 in terms of its prime factors.</strong><br>$162 = 2^1 \\times 3^4$<br><br><strong>Step 2: Determine the required powers for a perfect cube.</strong><br>For a product to be a perfect cube, the exponent of each prime factor in its prime factorization must be a multiple of 3.<br><br><strong>Step 3: Calculate the smallest value of $y$.</strong><br>To complete the powers to the nearest higher multiples of 3:<br>- For prime factor $2$, current exponent is $1$. We need $2^{3-1} = 2^2 = 4$.<br>- For prime factor $3$, current exponent is $4$. We need $3^{6-4} = 3^2 = 9$.<br><br>Therefore, the smallest number $y$ is:<br>$y = 2^2 \\times 3^2 = 4 \\times 9 = 36$<br><br>Hence, the correct option is <strong>(D)</strong>.",
+  "videoUrl": null
+}

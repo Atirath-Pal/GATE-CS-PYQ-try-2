@@ -1,0 +1,26 @@
+{
+  "id": 29,
+  "year": 2017,
+  "set": 1,
+  "topics": [
+    "Discrete Mathematics",
+    "Propositional Logic"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Let $p, q,$ and $r$ be propositions and the expression $(p \\rightarrow q) \\rightarrow r$ be a contradiction. Then, the expression $(r \\rightarrow p) \\rightarrow q$ is",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "a tautology.",
+    "a contradiction.",
+    "always TRUE when $p$ is FALSE.",
+    "always TRUE when $q$ is TRUE."
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Step 1: Analyze the given condition.</strong><br>The expression $(p \\rightarrow q) \\rightarrow r$ is a contradiction (always FALSE).<br>An implication $A \\rightarrow B$ is FALSE if and only if $A$ is TRUE and $B$ is FALSE.<br>Therefore:<br>1. $p \\rightarrow q$ must be <strong>TRUE</strong>.<br>2. $r$ must be <strong>FALSE</strong>.<br><br><strong>Step 2: Evaluate the expression $(r \\rightarrow p) \\rightarrow q$.</strong><br>Since $r$ is FALSE, the sub-expression $(r \\rightarrow p)$ evaluates to $(\\text{FALSE} \\rightarrow p)$, which is always <strong>TRUE</strong> regardless of $p$.<br><br>Now, substitute this result back into the main expression:<br>$(r \\rightarrow p) \\rightarrow q \\equiv \\text{TRUE} \\rightarrow q \\equiv q$<br><br><strong>Step 3: Check the options.</strong><br>Since the expression simplifies directly to $q$, its truth value is equal to the truth value of $q$.<br>Therefore, the expression is always <strong>TRUE</strong> when $q$ is TRUE.<br><br>Hence, option (D) is correct.",
+  "videoUrl": null
+}

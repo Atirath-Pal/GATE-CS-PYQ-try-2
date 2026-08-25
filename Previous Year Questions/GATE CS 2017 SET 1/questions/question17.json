@@ -1,0 +1,26 @@
+{
+  "id": 17,
+  "year": 2017,
+  "set": 1,
+  "topics": [
+    "Compiler Design",
+    "Syntax Analysis"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Consider the following grammar:<br><br>$$P \\rightarrow xQRS$$<br>$$Q \\rightarrow yz \\mid z$$<br>$$R \\rightarrow w \\mid \\varepsilon$$<br>$$S \\rightarrow y$$<br><br>What is $\\text{FOLLOW}(Q)$?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$\\{R\\}$",
+    "$\\{w\\}$",
+    "$\\{w, y\\}$",
+    "$\\{w, \\$\\}$"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "To find $\\text{FOLLOW}(Q)$, we inspect the right-hand side of all productions to find occurrences of $Q$.<br><br><strong>Step 1: Identify productions where $Q$ appears on the RHS</strong><br>In the production rule $P \\rightarrow xQRS$, $Q$ is immediately followed by $RS$.<br>Therefore, $\\text{FOLLOW}(Q) = \\text{FIRST}(RS)$.<br><br><strong>Step 2: Calculate $\\text{FIRST}(RS)$</strong><br>1. $\\text{FIRST}(R) = \\{w, \\varepsilon\\}$ since $R \\rightarrow w \\mid \\varepsilon$.<br>2. Since $\\text{FIRST}(R)$ contains $\\varepsilon$, $\\text{FIRST}(RS)$ includes $(\\text{FIRST}(R) \\setminus \\{\\varepsilon\\}) \\cup \\text{FIRST}(S)$.<br>3. $\\text{FIRST}(S) = \\{y\\}$ since $S \\rightarrow y$.<br><br>Combining these gives:<br>$$\\text{FIRST}(RS) = \\{w\\} \\cup \\{y\\} = \\{w, y\\}$$<br><br><strong>Step 3: Conclusion</strong><br>$\\text{FOLLOW}(Q) = \\{w, y\\}$.<br><br>Hence, the correct option is <strong>C</strong>.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 1,
+  "year": 2017,
+  "set": 1,
+  "topics": [
+    "Discrete Mathematics",
+    "Mathematical Logic"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "The statement $(\\neg p) \\Rightarrow (\\neg q)$ is logically equivalent to which of the statements below?<br><br>I. $p \\Rightarrow q$<br>II. $q \\Rightarrow p$<br>III. $(\\neg q) \\lor p$<br>IV. $(\\neg p) \\lor q$",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "I only",
+    "I and IV only",
+    "II only",
+    "II and III only"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Given Statement:</strong><br>$(\\neg p) \\Rightarrow (\\neg q)$<br><br><strong>Step 1: Using the Implication Equivalence ($A \\Rightarrow B \\equiv \\neg A \\lor B$)</strong><br>$(\\neg p) \\Rightarrow (\\neg q) \\equiv \\neg(\\neg p) \\lor (\\neg q) \\equiv p \\lor (\\neg q) \\equiv (\\neg q) \\lor p$<br>This matches <strong>Statement III</strong>.<br><br><strong>Step 2: Using the Contrapositive Law ($A \\Rightarrow B \\equiv \\neg B \\Rightarrow \\neg A$)</strong><br>$(\\neg p) \\Rightarrow (\\neg q) \\equiv \\neg(\\neg q) \\Rightarrow \\neg(\\neg p) \\equiv q \\Rightarrow p$<br>This matches <strong>Statement II</strong>.<br><br>Therefore, the given statement is logically equivalent to <strong>II</strong> and <strong>III</strong>.<br><br>Hence, the correct option is <strong>(D)</strong>.",
+  "videoUrl": null
+}

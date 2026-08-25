@@ -1,0 +1,26 @@
+{
+  "id": 60,
+  "year": 2017,
+  "set": 1,
+  "topics": [
+    "General Aptitude",
+    "Probability"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "The probability that a $k$-digit number does NOT contain the digits 0, 5, or 9 is",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$0.3^k$",
+    "$0.6^k$",
+    "$0.7^k$",
+    "$0.9^k$"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Identify total possible digits</strong><br>There are $10$ possible digits in total: $\\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\\}$.<br><br><strong>Step 2: Identify favorable digits</strong><br>Excluding the digits $0$, $5$, and $9$ leaves $7$ allowed digits: $\\{1, 2, 3, 4, 6, 7, 8\\}$.<br><br><strong>Step 3: Calculate the overall probability</strong><br>The probability that a single position contains an allowed digit is $\\frac{7}{10} = 0.7$.<br>For a sequence of $k$ digits, the probability that all $k$ digits are chosen from the allowed set is:<br>$(0.7)^k = 0.7^k$.<br><br>Hence, the correct answer is <strong>(C)</strong>.",
+  "videoUrl": null
+}

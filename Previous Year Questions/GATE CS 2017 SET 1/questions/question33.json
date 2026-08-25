@@ -1,0 +1,26 @@
+{
+  "id": 33,
+  "year": 2017,
+  "set": 1,
+  "topics": [
+    "Digital Logic",
+    "Sequential Circuits"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider a combination of T and D flip-flops connected as shown below. The output of the D flip-flop is connected to the input of the T flip-flop and the output of the T flip-flop is connected to the input of the D flip-flop.<br><br>Initially, both $Q_0$ and $Q_1$ are set to 1 (before the $1^{\\text{st}}$ clock cycle). The outputs",
+  "assetImage": "question33.png",
+  "codeBlock": null,
+  "options": [
+    "$Q_1 Q_0$ after the $3^{\\text{rd}}$ cycle are $11$ and after the $4^{\\text{th}}$ cycle are $00$ respectively",
+    "$Q_1 Q_0$ after the $3^{\\text{rd}}$ cycle are $11$ and after the $4^{\\text{th}}$ cycle are $01$ respectively",
+    "$Q_1 Q_0$ after the $3^{\\text{rd}}$ cycle are $00$ and after the $4^{\\text{th}}$ cycle are $11$ respectively",
+    "$Q_1 Q_0$ after the $3^{\\text{rd}}$ cycle are $01$ and after the $4^{\\text{th}}$ cycle are $01$ respectively"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step 1: Determine Next-State Equations</strong><br>From the given circuit diagram:<br>- Input to T flip-flop is $T = Q_0$. Thus, $Q_1^+ = T \\oplus Q_1 = Q_0 \\oplus Q_1$.<br>- Input to D flip-flop is $D = Q_1$. Thus, $Q_0^+ = D = Q_1$.<br><br><strong>Step 2: Trace the State Transitions</strong><br>Initial state (before 1st clock cycle): $(Q_1, Q_0) = (1, 1)$<br><br>1. <strong>After $1^{\\text{st}}$ Clock Cycle:</strong><br>- $Q_1^+ = 1 \\oplus 1 = 0$<br>- $Q_0^+ = 1$<br>- State $(Q_1, Q_0) = (0, 1)$<br><br>2. <strong>After $2^{\\text{nd}}$ Clock Cycle:</strong><br>- $Q_1^+ = 1 \\oplus 0 = 1$<br>- $Q_0^+ = 0$<br>- State $(Q_1, Q_0) = (1, 0)$<br><br>3. <strong>After $3^{\\text{rd}}$ Clock Cycle:</strong><br>- $Q_1^+ = 0 \\oplus 1 = 1$<br>- $Q_0^+ = 1$<br>- State $(Q_1, Q_0) = (1, 1)$<br><br>4. <strong>After $4^{\\text{th}}$ Clock Cycle:</strong><br>- $Q_1^+ = 1 \\oplus 1 = 0$<br>- $Q_0^+ = 1$<br>- State $(Q_1, Q_0) = (0, 1)$<br><br><strong>Conclusion:</strong><br>After the $3^{\\text{rd}}$ cycle, $Q_1 Q_0 = 11$, and after the $4^{\\text{th}}$ cycle, $Q_1 Q_0 = 01$. Therefore, Option (B) is correct.",
+  "videoUrl": null
+}

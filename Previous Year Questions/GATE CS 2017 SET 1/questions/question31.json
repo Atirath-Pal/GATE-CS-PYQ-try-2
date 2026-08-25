@@ -1,0 +1,25 @@
+{
+  "id": 31,
+  "year": 2017,
+  "set": 1,
+  "topics": [
+    "Linear Algebra"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Let $A$ be $n \\times n$ real valued square symmetric matrix of rank 2 with $\\sum_{i=1}^{n} \\sum_{j=1}^{n} A_{ij}^2 = 50$. Consider the following statements.<br><br>(I) One eigenvalue must be in $[-5, 5]$<br>(II) The eigenvalue with the largest magnitude must be strictly greater than 5<br><br>Which of the above statements about eigenvalues of $A$ is/are necessarily CORRECT?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "Both (I) and (II)",
+    "(I) only",
+    "(II) only",
+    "Neither (I) nor (II)"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Step 1: Eigenvalue Properties of Matrix A</strong><br>Since $A$ is a real symmetric matrix of rank 2, all its eigenvalues are real. A rank of 2 means $A$ has exactly two non-zero eigenvalues, say $\\lambda_1$ and $\\lambda_2$, while all other $n-2$ eigenvalues are $0$.<br><br><strong>Step 2: Relation with Sum of Squares of Matrix Entries</strong><br>The sum of squares of all entries of matrix $A$ is equal to the trace of $A^T A$:<br>$$\\sum_{i=1}^{n} \\sum_{j=1}^{n} A_{ij}^2 = \\text{Tr}(A^T A)$$<br>Since $A$ is symmetric ($A^T = A$), we have:<br>$$\\text{Tr}(A^T A) = \\text{Tr}(A^2) = \\sum_{i=1}^{n} \\lambda_i^2 = 50$$<br>Since only $\\lambda_1$ and $\\lambda_2$ are non-zero:<br>$$\\lambda_1^2 + \\lambda_2^2 = 50$$<br><br><strong>Step 3: Evaluating Statement (I)</strong><br>Suppose both eigenvalues had absolute values strictly greater than 5, i.e., $|\\lambda_1| > 5$ and $|\\lambda_2| > 5$.<br>Then $\\lambda_1^2 > 25$ and $\\lambda_2^2 > 25$, which implies:<br>$$\\lambda_1^2 + \\lambda_2^2 > 50$$<br>This contradicts $\\lambda_1^2 + \\lambda_2^2 = 50$. Therefore, at least one eigenvalue must satisfy $|\\lambda| \\le 5$, meaning it lies within $[-5, 5]$. Hence, Statement (I) is <strong>CORRECT</strong>.<br><br><strong>Step 4: Evaluating Statement (II)</strong><br>Consider a case where $\\lambda_1 = 5$ and $\\lambda_2 = -5$.<br>Here, $\\lambda_1^2 + \\lambda_2^2 = 25 + 25 = 50$.<br>The largest magnitude among the eigenvalues is $|5| = 5$, which is NOT strictly greater than 5. Thus, Statement (II) is <strong>INCORRECT</strong>.<br><br><strong>Conclusion:</strong><br>Only statement (I) is necessarily correct. Hence, Option (B) is correct.",
+  "videoUrl": null
+}

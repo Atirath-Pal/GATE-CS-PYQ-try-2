@@ -1,0 +1,22 @@
+{
+  "id": 50,
+  "year": 2017,
+  "set": 1,
+  "topics": [
+    "Computer Organization and Architecture",
+    "Pipelining"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Instruction execution in a processor is divided into $5$ stages, <strong>Instruction Fetch</strong> (IF), <strong>Instruction Decode</strong> (ID), <strong>Operand Fetch</strong> (OF), <strong>Execute</strong> (EX), and <strong>Write Back</strong> (WB). These stages take $5$, $4$, $20$, $10$, and $3$ nanoseconds (ns) respectively. A pipelined implementation of the processor requires buffering between each pair of consecutive stages with a delay of $2\\text{ ns}$. Two pipelined implementations of the processor are contemplated:<br><br>(i) a naive pipeline implementation (NP) with $5$ stages and<br>(ii) an efficient pipeline (EP) where the OF stage is divided into stages OF1 and OF2 with execution times of $12\\text{ ns}$ and $8\\text{ ns}$ respectively.<br><br>The speedup (correct to two decimal places) achieved by EP over NP in executing $20$ independent instructions with no hazards is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 1.49,
+    "max": 1.52
+  },
+  "explanation": "<strong>Step 1: Naive Pipeline (NP) Analysis</strong><br>Stage delays: $\\text{IF} = 5\\text{ ns}$, $\\text{ID} = 4\\text{ ns}$, $\\text{OF} = 20\\text{ ns}$, $\\text{EX} = 10\\text{ ns}$, $\\text{WB} = 3\\text{ ns}$.<br>Buffer delay = $2\\text{ ns}$.<br>Clock cycle time ($T_{NP}$) = $\\max(5, 4, 20, 10, 3) + 2 = 20 + 2 = 22\\text{ ns}$.<br>Number of stages ($k_1$) = $5$.<br>Time taken to execute $N = 20$ instructions:<br>$T_{\\text{total, NP}} = (k_1 + N - 1) \\times T_{NP} = (5 + 20 - 1) \\times 22 = 24 \\times 22 = 528\\text{ ns}$.<br><br><strong>Step 2: Efficient Pipeline (EP) Analysis</strong><br>The OF stage is divided into $\\text{OF1} = 12\\text{ ns}$ and $\\text{OF2} = 8\\text{ ns}$.<br>Stage delays: $5, 4, 12, 8, 10, 3\\text{ ns}$.<br>Clock cycle time ($T_{EP}$) = $\\max(5, 4, 12, 8, 10, 3) + 2 = 12 + 2 = 14\\text{ ns}$.<br>Number of stages ($k_2$) = $6$.<br>Time taken to execute $N = 20$ instructions:<br>$T_{\\text{total, EP}} = (k_2 + N - 1) \\times T_{EP} = (6 + 20 - 1) \\times 14 = 25 \\times 14 = 350\\text{ ns}$.<br><br><strong>Step 3: Speedup Calculation</strong><br>$\\text{Speedup} = \\frac{T_{\\text{total, NP}}}{T_{\\text{total, EP}}} = \\frac{528}{350} \\approx 1.50857 \\approx 1.51$.",
+  "videoUrl": null
+}

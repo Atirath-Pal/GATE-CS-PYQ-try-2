@@ -1,0 +1,22 @@
+{
+  "id": 24,
+  "year": "2017",
+  "set": "1",
+  "topics": [
+    "Operating Systems",
+    "CPU Scheduling"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider the following CPU processes with arrival times (in milliseconds) and length of CPU bursts (in milliseconds) as given below :<br><br><div style=\"overflow-x: auto; margin: 12px 0;\"><table style=\"border-collapse: collapse; border: 1px solid #ffffff; text-align: center; margin: 0 auto;\"><thead><tr><th style=\"border: 1px solid #ffffff; padding: 6px 12px; font-weight: bold;\">Process</th><th style=\"border: 1px solid #ffffff; padding: 6px 12px; font-weight: bold;\">Arrival time</th><th style=\"border: 1px solid #ffffff; padding: 6px 12px; font-weight: bold;\">Burst time</th></tr></thead><tbody><tr><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">P1</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">0</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">7</td></tr><tr><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">P2</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">3</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">3</td></tr><tr><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">P3</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">5</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">5</td></tr><tr><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">P4</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">6</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">2</td></tr></tbody></table></div><br><br>If the pre-emptive shortest remaining time first scheduling algorithm is used to schedule the processes, then the average waiting time across all processes is ____________ milliseconds.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 3.0,
+    "max": 3.0
+  },
+  "explanation": "<strong>Step 1: Understand Shortest Remaining Time First (SRTF) Algorithm</strong><br>SRTF is a preemptive scheduling policy where the process with the shortest remaining burst time is selected for execution.<br><br><strong>Step 2: Track Execution Timeline (Gantt Chart)</strong><br>- <strong>At $t = 0$:</strong> Process $P_1$ arrives with burst time $7$ and starts running.<br>- <strong>At $t = 3$:</strong> Process $P_2$ arrives with burst time $3$. $P_1$ has run for $3$ ms, remaining burst time for $P_1 = 4$. Since remaining time for $P_2 (3) < P_1 (4)$, $P_2$ preempts $P_1$.<br>- <strong>At $t = 5$:</strong> Process $P_3$ arrives with burst time $5$. $P_2$ has remaining burst time $1$. Since $1 < 5$, $P_2$ continues.<br>- <strong>At $t = 6$:</strong> $P_2$ finishes. $P_4$ arrives with burst time $2$. Remaining burst times: $P_1 (4)$, $P_3 (5)$, $P_4 (2)$. $P_4$ has the shortest remaining time and executes.<br>- <strong>At $t = 8$:</strong> $P_4$ finishes. Remaining processes: $P_1 (4)$, $P_3 (5)$. $P_1$ executes.<br>- <strong>At $t = 12$:</strong> $P_1$ finishes. $P_3 (5)$ executes.<br>- <strong>At $t = 17$:</strong> $P_3$ finishes.<br><br><strong>Step 3: Calculate Waiting Times</strong><br>Waiting Time = Turnaround Time - Burst Time = (Completion Time - Arrival Time) - Burst Time<br>- <strong>P1:</strong> Completion Time = $12$, Waiting Time = $(12 - 0) - 7 = 5$<br>- <strong>P2:</strong> Completion Time = $6$, Waiting Time = $(6 - 3) - 3 = 0$<br>- <strong>P3:</strong> Completion Time = $17$, Waiting Time = $(17 - 5) - 5 = 7$<br>- <strong>P4:</strong> Completion Time = $8$, Waiting Time = $(8 - 6) - 2 = 0$<br><br><strong>Step 4: Average Waiting Time Calculation</strong><br>Average Waiting Time = $\\frac{5 + 0 + 7 + 0}{4} = \\frac{12}{4} = 3.0$ milliseconds.",
+  "videoUrl": null
+}

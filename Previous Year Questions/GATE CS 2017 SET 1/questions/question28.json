@@ -1,0 +1,26 @@
+{
+  "id": 28,
+  "year": 2017,
+  "set": 1,
+  "topics": [
+    "Engineering Mathematics",
+    "Calculus"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "The value of $\\lim_{x \\to 1} \\frac{x^7 - 2x^5 + 1}{x^3 - 3x^2 + 2}$",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "is $0$",
+    "is $-1$",
+    "is $1$",
+    "does not exist"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "The given limit is $\\lim_{x \\to 1} \\frac{x^7 - 2x^5 + 1}{x^3 - 3x^2 + 2}$.<br><br>Substituting $x = 1$ into the expression, we get:<br>$\\frac{(1)^7 - 2(1)^5 + 1}{(1)^3 - 3(1)^2 + 2} = \\frac{1 - 2 + 1}{1 - 3 + 2} = \\frac{0}{0}$<br><br>Since it is an indeterminate form of $\\frac{0}{0}$, we can apply <strong>L'Hôpital's Rule</strong> by differentiating the numerator and the denominator with respect to $x$:<br><br>$\\lim_{x \\to 1} \\frac{\\frac{d}{dx}(x^7 - 2x^5 + 1)}{\\frac{d}{dx}(x^3 - 3x^2 + 2)}$<br><br>$= \\lim_{x \\to 1} \\frac{7x^6 - 10x^4}{3x^2 - 6x}$<br><br>Now, substituting $x = 1$ again:<br><br>$= \\frac{7(1)^6 - 10(1)^4}{3(1)^2 - 6(1)}$<br><br>$= \\frac{7 - 10}{3 - 6}$<br><br>$= \\frac{-3}{-3} = 1$<br><br>Therefore, the value of the limit is $1$.",
+  "videoUrl": null
+}

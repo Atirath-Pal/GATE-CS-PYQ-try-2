@@ -1,0 +1,22 @@
+{
+  "id": 21,
+  "year": 2017,
+  "set": 1,
+  "topics": [
+    "Digital Logic",
+    "Combinational Circuits"
+  ],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Consider the Karnaugh map given below, where x represents “don't care” and blank represents 0.<br><br><div style=\"overflow-x: auto; margin: 12px 0;\"><table style=\"border-collapse: collapse; border: 1px solid #ffffff; text-align: center; margin: 0 auto;\"><thead><tr><th style=\"border: 1px solid #ffffff; position: relative; width: 60px; height: 50px; padding: 0;\"><svg style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;\"><line x1=\"0\" y1=\"0\" x2=\"100%\" y2=\"100%\" stroke=\"#ffffff\" stroke-width=\"1.5\"/></svg><div style=\"position: absolute; top: 4px; right: 8px; font-weight: normal; line-height: 1;\">$ba$</div><div style=\"position: absolute; bottom: 4px; left: 8px; font-weight: normal; line-height: 1;\">$dc$</div></th><th style=\"border: 1px solid #ffffff; padding: 6px 12px; font-weight: bold;\">00</th><th style=\"border: 1px solid #ffffff; padding: 6px 12px; font-weight: bold;\">01</th><th style=\"border: 1px solid #ffffff; padding: 6px 12px; font-weight: bold;\">11</th><th style=\"border: 1px solid #ffffff; padding: 6px 12px; font-weight: bold;\">10</th></tr></thead><tbody><tr><td style=\"border: 1px solid #ffffff; padding: 6px 12px; font-weight: bold;\">00</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\"></td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">x</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">x</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\"></td></tr><tr><td style=\"border: 1px solid #ffffff; padding: 6px 12px; font-weight: bold;\">01</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">1</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\"></td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\"></td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">x</td></tr><tr><td style=\"border: 1px solid #ffffff; padding: 6px 12px; font-weight: bold;\">11</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">1</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\"></td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\"></td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">1</td></tr><tr><td style=\"border: 1px solid #ffffff; padding: 6px 12px; font-weight: bold;\">10</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\"></td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">x</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\">x</td><td style=\"border: 1px solid #ffffff; padding: 6px 12px;\"></td></tr></tbody></table></div><br>Assume for all inputs $(a, b, c, d)$, the respective complements $(\\overline{a}, \\overline{b}, \\overline{c}, \\overline{d})$ are also available. The above logic is implemented using 2-input NOR gates only. The minimum number of gates required is _______.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 1.0,
+    "max": 1.0
+  },
+  "explanation": "<strong>Step 1: Analyze the K-map to simplify the Boolean expression.</strong><br>The cells with output $1$ are at $(dc, ba) = (01, 00)$, $(11, 00)$, and $(11, 10)$.<br>The cells with don't care ($x$) are at $(dc, ba) = (00, 01)$, $(00, 11)$, $(01, 10)$, $(10, 01)$, and $(10, 11)$.<br><br><strong>Step 2: Group the minterms.</strong><br>We can form a quad of size $4$ using the cells at $(dc, ba) \\in \\{(01,00), (01,10), (11,00), (11,10)\\}$, where $(01,10)$ is a don't care cell.<br>• Across rows $dc = 01$ and $11$, variable $c = 1$.<br>• Across columns $ba = 00$ and $10$, variable $a = 0$ (i.e., $\\overline{a}$).<br><br>Thus, the simplified Boolean expression is:<br>$F = \\overline{a}c$<br><br><strong>Step 3: Implement using 2-input NOR gates.</strong><br>The NOR operation is given by $\\text{NOR}(X, Y) = \\overline{X + Y} = \\overline{X} \\cdot \\overline{Y}$.<br>By passing inputs $X = a$ and $Y = \\overline{c}$ into a single NOR gate:<br>$\\text{NOR}(a, \\overline{c}) = \\overline{a + \\overline{c}} = \\overline{a} \\cdot \\overline{\\overline{c}} = \\overline{a}c$<br><br>Since $a$ and $\\overline{c}$ are both directly available as inputs, exactly <strong>1</strong> NOR gate is required.",
+  "videoUrl": null
+}

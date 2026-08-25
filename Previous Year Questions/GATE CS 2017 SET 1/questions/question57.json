@@ -1,0 +1,26 @@
+{
+  "id": 57,
+  "year": 2017,
+  "set": 1,
+  "topics": [
+    "General Aptitude",
+    "Verbal Ability"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "Research in the workplace reveals that people work for many reasons _______________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "money beside",
+    "beside money",
+    "money besides",
+    "besides money"
+  ],
+  "answer": [
+    "D"
+  ],
+  "explanation": "<strong>Meaning and Usage:</strong><br><br>• <strong>Beside:</strong> A preposition meaning 'at the side of' or 'next to' (e.g., 'Sit beside me').<br>• <strong>Besides:</strong> A preposition meaning 'in addition to' or 'apart from' (e.g., 'Besides money, they seek job satisfaction').<br><br>In this sentence, the context indicates that people work for reasons <i>in addition to</i> money. Therefore, the preposition <strong>besides</strong> should precede 'money'.<br><br>Hence, <strong>besides money</strong> is the grammatically correct choice.",
+  "videoUrl": null
+}

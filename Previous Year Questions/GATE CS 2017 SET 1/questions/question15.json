@@ -1,0 +1,26 @@
+{
+  "id": 15,
+  "year": 2017,
+  "set": 1,
+  "topics": [
+    "Computer Networks",
+    "Cryptography"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "A sender S sends a message $m$ to receiver R, which is digitally signed by S with its private key. In this scenario, one or more of the following security violations can take place.<br><br>(I) S can launch a birthday attack to replace $m$ with a fraudulent message.<br>(II) A third party attacker can launch a birthday attack to replace $m$ with a fraudulent message.<br>(III) R can launch a birthday attack to replace $m$ with a fraudulent message.<br><br>Which of the following are possible security violations?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "(I) and (II) only",
+    "(I) only",
+    "(II) only",
+    "(II) and (III) only"
+  ],
+  "answer": [
+    "B"
+  ],
+  "explanation": "<strong>Birthday Attack in Digital Signatures:</strong><br><br>A birthday attack exploits the Birthday Paradox to find two distinct messages $m$ and $m'$ such that $H(m) = H(m')$. Finding such a collision takes approximately $O(2^{n/2})$ operations for an $n$-bit hash function.<br><br><strong>Analysis of Statements:</strong><br><br>1. <strong>Statement (I):</strong> S (the sender/signer) creates the messages before signing. S can construct two messages $m$ and $m'$ that hash to the same digest using a birthday attack. S then sends $m$ with its digital signature $\\text{Sig}(H(m))$. Later, S can replace $m$ with $m'$, as the same signature remains valid for $m'$. Thus, <strong>(I) is a valid security violation</strong>.<br><br>2. <strong>Statements (II) and (III):</strong> For a third-party attacker or receiver R, the message $m$ is already fixed and signed by S. To replace $m$ with $m'$ such that $H(m') = H(m)$, they would need to perform a <strong>second pre-image attack</strong> (which requires $O(2^n)$ operations), not a birthday attack. Thus, <strong>neither (II) nor (III) can be executed via a birthday attack</strong>.<br><br>Hence, only (I) is a possible security violation.",
+  "videoUrl": null
+}

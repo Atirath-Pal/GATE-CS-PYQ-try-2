@@ -1,0 +1,19 @@
+{
+  "id": 51,
+  "year": 2017,
+  "set": 1,
+  "topics": ["Computer Organization", "Cache Memory"],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider a 2-way set associative cache with 256 blocks and uses LRU replacement. Initially the cache is empty. Conflict misses are those misses which occur due to contention of multiple blocks for the same cache set. Compulsory misses occur due to first time access to the block. The following sequence of accesses to memory blocks<br><br>$(0,128,256,128,0,128,256,128,1,129,257,129,1,129,257,129)$<br><br>is repeated 10 times. The number of <em>conflict misses</em> experienced by the cache is ________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 76.0,
+    "max": 76.0
+  },
+  "explanation": "<strong>Step 1:</strong> The cache has 256 blocks and is 2-way set associative, so the number of cache sets is $256/2=128$. Therefore, block numbers that differ by 128 map to the same cache set.<br><br><strong>Step 2:</strong> The blocks $0,128,256$ all map to set $0$, while $1,129,257$ all map to set $1$. Thus, each of these two sets has three competing blocks in a 2-way set.<br><br><strong>Step 3:</strong> Consider the first repetition for one set, for example $(0,128,256,128,0,128,256,128)$. The first accesses to $0$, $128$, and $256$ are compulsory misses. Because only two blocks can reside in the set, the later accesses to $0$ and $256$ cause conflict misses. Hence, there are $2$ conflict misses in the first repetition for each set.<br><br><strong>Step 4:</strong> After the first repetition, subsequent repetitions start with two blocks already present. Due to LRU replacement and the contention among three blocks, each subsequent repetition produces $4$ conflict misses for that set.<br><br><strong>Step 5:</strong> There are two such sets, set $0$ and set $1$. For each set over 10 repetitions, the number of conflict misses is $2+9\\times4=38$. Therefore, the total number of conflict misses is $2\\times38=76$.<br><br><strong>Therefore, the answer is $76$.</strong>",
+  "videoUrl": null
+}

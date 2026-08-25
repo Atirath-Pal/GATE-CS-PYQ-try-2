@@ -1,0 +1,26 @@
+{
+  "id": 38,
+  "year": 2017,
+  "set": 1,
+  "topics": [
+    "Theory of Computation",
+    "Context Free Languages"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the following languages over the alphabet $\\Sigma = \\{a, b, c\\}$.<br>Let $L_1 = \\{ a^n b^n c^m \\mid m, n \\ge 0 \\}$ and $L_2 = \\{ a^m b^n c^n \\mid m, n \\ge 0 \\}$.<br><br>Which of the following are context-free languages?<br><br>I. $L_1 \\cup L_2$<br>II. $L_1 \\cap L_2$",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "I only",
+    "II only",
+    "I and II",
+    "Neither I nor II"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "<strong>Step 1: Analyze Languages $L_1$ and $L_2$</strong><br>$L_1 = \\{ a^n b^n c^m \\mid m, n \\ge 0 \\}$ is a Context-Free Language (CFL) because a pushdown automaton can match equal numbers of $a$'s and $b$'s.<br>$L_2 = \\{ a^m b^n c^n \\mid m, n \\ge 0 \\}$ is also a CFL because a pushdown automaton can match equal numbers of $b$'s and $c$'s.<br><br><strong>Step 2: Evaluate Statement I ($L_1 \\cup L_2$)</strong><br>Context-Free Languages are closed under union. Since both $L_1$ and $L_2$ are CFLs, their union $L_1 \\cup L_2$ is guaranteed to be a CFL. Thus, statement I is context-free.<br><br><strong>Step 3: Evaluate Statement II ($L_1 \\cap L_2$)</strong><br> The intersection of $L_1$ and $L_2$ forces all three conditions simultaneously:<br>$L_1 \\cap L_2 = \\{ a^n b^n c^n \\mid n \\ge 0 \\}$<br>This is a standard non-context-free language (it is context-sensitive) as a single stack PDA cannot compare three independent counts simultaneously.<br><br>Therefore, only statement I is a context-free language.",
+  "videoUrl": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": 16,
+  "year": 2017,
+  "set": 1,
+  "topics": [
+    "Database Management System",
+    "Functional Dependencies"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "The following functional dependencies hold true for the relational schema $R\\{V, W, X, Y, Z\\}$:<br><br>$$V \\rightarrow W$$<br>$$VW \\rightarrow X$$<br>$$Y \\rightarrow VX$$<br>$$Y \\rightarrow Z$$<br><br>Which of the following is irreducible equivalent for this set of functional dependencies?",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "$V \\rightarrow W$<br>$V \\rightarrow X$<br>$Y \\rightarrow V$<br>$Y \\rightarrow Z$",
+    "$V \\rightarrow W$<br>$W \\rightarrow X$<br>$Y \\rightarrow V$<br>$Y \\rightarrow Z$",
+    "$V \\rightarrow W$<br>$V \\rightarrow X$<br>$Y \\rightarrow V$<br>$Y \\rightarrow X$<br>$Y \\rightarrow Z$",
+    "$V \\rightarrow W$<br>$W \\rightarrow X$<br>$Y \\rightarrow V$<br>$Y \\rightarrow X$<br>$Y \\rightarrow Z$"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "To find the irreducible equivalent set (canonical cover) for the given set of functional dependencies:<br><br><strong>Step 1: Ensure all RHS attributes are singletons.</strong><br>Decompose $Y \\rightarrow VX$ into $Y \\rightarrow V$ and $Y \\rightarrow X$.<br>The dependency set becomes:<br>1. $V \\rightarrow W$<br>2. $VW \\rightarrow X$<br>3. $Y \\rightarrow V$<br>4. $Y \\rightarrow X$<br>5. $Y \\rightarrow Z$<br><br><strong>Step 2: Remove extraneous attributes from the LHS.</strong><br>Consider $VW \\rightarrow X$. Test if $W$ is redundant on the LHS by computing $V^+$ using current dependencies:<br>$V^+ = \\{V, W\\}$ (since $V \\rightarrow W$).<br>Since $W \\in V^+$, $W$ is extraneous. Therefore, $VW \\rightarrow X$ reduces to $V \\rightarrow X$.<br><br><strong>Step 3: Remove redundant functional dependencies.</strong><br>Test if $Y \\rightarrow X$ is redundant using the remaining set $\\{V \\rightarrow W, V \\rightarrow X, Y \\rightarrow V, Y \\rightarrow Z\\}$:<br>Compute attribute closure $Y^+$ without using $Y \\rightarrow X$:<br>- $Y^+ = \\{Y\\}$<br>- Using $Y \\rightarrow V$: $Y^+ = \\{Y, V\\}$<br>- Using $V \\rightarrow W$: $Y^+ = \\{Y, V, W\\}$<br>- Using $V \\rightarrow X$: $Y^+ = \\{Y, V, W, X\\}$<br>Since $X \\in Y^+$, the dependency $Y \\rightarrow X$ is redundant and removed.<br><br><strong>Final Minimal Cover:</strong><br>$V \\rightarrow W$<br>$V \\rightarrow X$<br>$Y \\rightarrow V$<br>$Y \\rightarrow Z$<br><br>Hence, option (A) is correct.",
+  "videoUrl": null
+}

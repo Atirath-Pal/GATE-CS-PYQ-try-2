@@ -1,0 +1,19 @@
+{
+  "id": 19,
+  "year": 2017,
+  "set": 1,
+  "topics": ["Engineering Mathematics", "Probability"],
+  "type": "NAT",
+  "correct marks": 1,
+  "negative marks": "0",
+  "questionText": "Let $X$ be a Gaussian random variable with mean $0$ and variance $\\sigma^2$. Let $Y = \\max(X, 0)$ where $\\max(a, b)$ is the maximum of $a$ and $b$. The median of $Y$ is __________.",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [],
+  "answer": {
+    "min": 0.0,
+    "max": 0.0
+  },
+  "explanation": "<strong>Step 1: Understand the distribution of $X$.</strong><br>Given that $X$ is a Gaussian (normal) random variable with mean $\\mu = 0$ and variance $\\sigma^2$.<br>Since the Gaussian distribution is symmetric about its mean, the probability of $X$ being non-positive is:<br>$P(X \\le 0) = 0.5$<br><br><strong>Step 2: Analyze the random variable $Y$.</strong><br>$Y = \\max(X, 0)$<br>This means:<br>For $X \\le 0$, $Y = 0$.<br>For $X > 0$, $Y = X$.<br><br><strong>Step 3: Determine the median of $Y$.</strong><br>By definition, the median $m$ of a random variable $Y$ satisfies:<br>$P(Y \\le m) \\ge 0.5$ and $P(Y \\ge m) \\ge 0.5$<br><br>Since $P(Y \\le 0) = P(X \\le 0) = 0.5$, the cumulative probability reaches $0.5$ exactly at $m = 0$.<br><br>Therefore, the median of $Y$ is $0$.",
+  "videoUrl": null
+}

@@ -1,0 +1,22 @@
+{
+  "id": 53,
+  "year": 2017,
+  "set": 1,
+  "topics": [
+    "Programming and Data Structures",
+    "C Programming"
+  ],
+  "type": "NAT",
+  "correct marks": 2,
+  "negative marks": "0",
+  "questionText": "Consider the following C program.<br><br>Recall that strlen is defined in string.h as returning a value of type size_t, which is an unsigned int. The output of the program is __________.",
+  "assetImage": null,
+  "codeBlock": "#include &lt;stdio.h&gt;\n#include &lt;string.h&gt;\n\nvoid printlength(char *s, char *t) {\n    unsigned int c = 0;\n    int len = ((strlen(s) - strlen(t)) > c) ? strlen(s) : strlen(t);\n    printf(\"%d\\n\", len);\n}\n\nvoid main() {\n    char *x = \"abc\";\n    char *y = \"defgh\";\n    printlength(x, y);\n}",
+  "options": [],
+  "answer": {
+    "min": 3,
+    "max": 3
+  },
+  "explanation": "<strong>Step 1: Analyze return types and values</strong><br>The function <code>strlen</code> returns a value of type <code>size_t</code>, which is an <code>unsigned int</code>.<br>Here, <code>strlen(s)</code> for <code>\"abc\"</code> is $3$ and <code>strlen(t)</code> for <code>\"defgh\"</code> is $5$.<br><br><strong>Step 2: Evaluate the expression with unsigned arithmetic</strong><br>In the expression <code>strlen(s) - strlen(t)</code>, both operands are unsigned integers ($3$ and $5$). Subtracting $5$ from $3$ in unsigned integer arithmetic causes underflow, resulting in a very large positive unsigned integer.<br><br><strong>Step 3: Evaluate the condition</strong><br>The variable <code>c</code> is an <code>unsigned int</code> initialized to $0$.<br>Comparing a very large positive unsigned integer with $0$ in <code>(strlen(s) - strlen(t)) > c</code> evaluates to <strong>true</strong>.<br><br><strong>Step 4: Determine the result</strong><br>Since the condition is true, the ternary operator evaluates to <code>strlen(s)</code>, which is $3$.<br>Therefore, <code>len</code> is assigned $3$ and <code>printf(\"%d\\n\", len);</code> prints <strong>3</strong>.",
+  "videoUrl": null
+}

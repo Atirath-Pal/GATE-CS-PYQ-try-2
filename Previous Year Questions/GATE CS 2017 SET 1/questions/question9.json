@@ -1,0 +1,26 @@
+{
+  "id": 9,
+  "year": 2017,
+  "set": 1,
+  "topics": [
+    "Digital Logic",
+    "Number Representations"
+  ],
+  "type": "MCQ",
+  "correct marks": 1,
+  "negative marks": "0.33",
+  "questionText": "When two 8-bit numbers $A_7 \\cdots A_0$ and $B_7 \\cdots B_0$ in 2's complement representation (with $A_0$ and $B_0$ as the least significant bits) are added using a ripple-carry adder, the sum bits obtained are $S_7 \\cdots S_0$ and the carry bits are $C_7 \\cdots C_0$. An overflow is said to have occurred if",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "the carry bit $C_7$ is 1",
+    "all the carry bits ($C_7, \\cdots, C_0$) are 1",
+    "($(A_7 \\cdot B_7 \\cdot \\overline{S_7} + \\overline{A_7} \\cdot \\overline{B_7} \\cdot S_7$)) is 1",
+    "($(A_0 \\cdot B_0 \\cdot \\overline{S_0} + \\overline{A_0} \\cdot \\overline{B_0} \\cdot S_0$)) is 1"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Explanation:</strong><br><br>In 2's complement representation, an overflow occurs during addition if and only if two numbers of the same sign are added and the result has an opposite sign.<br><br><strong>Case 1: Adding Two Negative Numbers</strong><br>If both inputs are negative, their sign bits are $A_7 = 1$ and $B_7 = 1$. An overflow occurs if the sum bit becomes positive ($S_7 = 0$).<br>This condition is represented as: $A_7 \\cdot B_7 \\cdot \\overline{S_7} = 1$<br><br><strong>Case 2: Adding Two Positive Numbers</strong><br>If both inputs are positive, their sign bits are $A_7 = 0$ ($\\overline{A_7} = 1$) and $B_7 = 0$ ($\\overline{B_7} = 1$). An overflow occurs if the sum bit becomes negative ($S_7 = 1$).<br>This condition is represented as: $\\overline{A_7} \\cdot \\overline{B_7} \\cdot S_7 = 1$<br><br>Combining both conditions, an overflow occurs when:<br>$A_7 \\cdot B_7 \\cdot \\overline{S_7} + \\overline{A_7} \\cdot \\overline{B_7} \\cdot S_7 = 1$<br><br>Therefore, option <strong>(C)</strong> is the correct choice.",
+  "videoUrl": null
+}

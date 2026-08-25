@@ -1,0 +1,26 @@
+{
+  "id": 32,
+  "year": 2017,
+  "set": 1,
+  "topics": [
+    "Computer Networks",
+    "Error Control"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "A computer network uses polynomials over $GF(2)$ for error checking with 8 bits as information bits and uses $x^3 + x + 1$ as the generator polynomial to generate the check bits. In this network, the message 01011011 is transmitted as",
+  "assetImage": null,
+  "codeBlock": null,
+  "options": [
+    "01011011010",
+    "01011011011",
+    "01011011101",
+    "01011011100"
+  ],
+  "answer": [
+    "C"
+  ],
+  "explanation": "<strong>Step 1: Identify Generator Polynomial and Message Bits</strong><br>Generator polynomial $G(x) = x^3 + x + 1$, which corresponds to the binary divisor <strong>1011</strong> (degree $k = 3$).<br>Message $M = 01011011$.<br><br><strong>Step 2: Append $k = 3$ Zeros to Message</strong><br>Append 3 zero bits (equal to the degree of $G(x)$) to the message:<br>$M' = 01011011000$<br><br><strong>Step 3: Perform Modulo-2 Division</strong><br>Divide $1011011000$ by $1011$ using XOR operation:<br>• $1011 \\oplus 1011 = 0000$<br>• Bringing down the next bits yields $1100$<br>• $1100 \\oplus 1011 = 0111$<br>• Bringing down the next bit yields $1110$<br>• $1110 \\oplus 1011 = 0101$<br><br>The 3-bit remainder (CRC check bits) is <strong>101</strong>.<br><br><strong>Step 4: Form Transmitted Frame</strong><br>Transmitted frame = Original Message + Remainder<br>= $01011011$ + $101$ = <strong>01011011101</strong>.<br><br>Hence, option <strong>C</strong> is correct.",
+  "videoUrl": null
+}

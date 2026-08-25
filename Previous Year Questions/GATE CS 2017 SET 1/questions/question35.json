@@ -1,0 +1,26 @@
+{
+  "id": 35,
+  "year": 2017,
+  "set": 1,
+  "topics": [
+    "Programming and Data Structures",
+    "C Programming"
+  ],
+  "type": "MCQ",
+  "correct marks": 2,
+  "negative marks": "0.66",
+  "questionText": "Consider the following two functions.<br><br>The output printed when `fun1(5)` is called is",
+  "assetImage": null,
+  "codeBlock": "void fun1(int n) {\n    if (n == 0) return;\n    printf(\"%d\", n);\n    fun2(n - 2);\n    printf(\"%d\", n);\n}\n\nvoid fun2(int n) {\n    if (n == 0) return;\n    printf(\"%d\", n);\n    fun1(++n);\n    printf(\"%d\", n);\n}",
+  "options": [
+    "53423122233445",
+    "53423120112233",
+    "53423122132435",
+    "53423120213243"
+  ],
+  "answer": [
+    "A"
+  ],
+  "explanation": "To find the output printed by calling <strong>fun1(5)</strong>, we trace the execution step by step:<br><br><strong>1. fun1(5):</strong><br>- Prints $5$<br>- Calls <strong>fun2(3)</strong><br>- Prints $5$ after returning<br><br><strong>2. fun2(3):</strong><br>- Prints $3$<br>- Evaluates <strong>fun1(++n)</strong>: $n$ pre-increments from $3$ to $4$, calling <strong>fun1(4)</strong><br>- Prints $4$ (current value of local $n$) after returning<br><br><strong>3. fun1(4):</strong><br>- Prints $4$<br>- Calls <strong>fun2(2)</strong><br>- Prints $4$ after returning<br><br><strong>4. fun2(2):</strong><br>- Prints $2$<br>- Evaluates <strong>fun1(++n)</strong>: $n$ pre-increments from $2$ to $3$, calling <strong>fun1(3)</strong><br>- Prints $3$ after returning<br><br><strong>5. fun1(3):</strong><br>- Prints $3$<br>- Calls <strong>fun2(1)</strong><br>- Prints $3$ after returning<br><br><strong>6. fun2(1):</strong><br>- Prints $1$<br>- Evaluates <strong>fun1(++n)</strong>: $n$ pre-increments from $1$ to $2$, calling <strong>fun1(2)</strong><br>- Prints $2$ after returning<br><br><strong>7. fun1(2):</strong><br>- Prints $2$<br>- Calls <strong>fun2(0)</strong> which returns immediately ($0 == 0$)<br>- Prints $2$<br>- Output from <strong>fun1(2)</strong>: <strong>22</strong><br><br><strong>Unwinding the call stack:</strong><br>- Output of <strong>fun2(1)</strong>: $1 + 22 + 2 = $ <strong>1222</strong><br>- Output of <strong>fun1(3)</strong>: $3 + 1222 + 3 = $ <strong>312223</strong><br>- Output of <strong>fun2(2)</strong>: $2 + 312223 + 3 = $ <strong>23122233</strong><br>- Output of <strong>fun1(4)</strong>: $4 + 23122233 + 4 = $ <strong>4231222334</strong><br>- Output of <strong>fun2(3)</strong>: $3 + 4231222334 + 4 = $ <strong>342312223344</strong><br>- Output of <strong>fun1(5)</strong>: $5 + 342312223344 + 5 = $ <strong>53423122233445</strong><br><br>Thus, the final output string is <strong>53423122233445</strong>.",
+  "videoUrl": null
+}
